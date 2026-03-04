@@ -1,0 +1,229 @@
+/* ============================================================
+   STARTUP DAILY — Design Tokens
+   Prefix: --sd-
+   Aesthetic: Editorial Magazine + Instagram Sensibility
+   Mode: Light Mode Only
+   ============================================================ */
+
+:root {
+  /* ----------------------------------------------------------
+     COLOR — Base Palette (Light Mode)
+  ---------------------------------------------------------- */
+
+  /* Background layers */
+  --sd-bg-base:       #ffffff;
+  --sd-bg-surface:    #f8f8fc;
+  --sd-bg-elevated:   #f0f0f8;
+  --sd-bg-card:       #ffffff;
+  --sd-bg-card-hover: #f4f4fb;
+  --sd-bg-overlay:    #ffffff;
+  --sd-bg-input:      #f4f4fb;
+
+  /* Text */
+  --sd-text-primary:   #0f0f1a;
+  --sd-text-secondary: #4a4a6a;
+  --sd-text-muted:     #9898b8;
+  --sd-text-inverse:   #f0f0fa;
+
+  /* Border */
+  --sd-border-subtle:  rgba(0, 0, 0, 0.06);
+  --sd-border-default: rgba(0, 0, 0, 0.10);
+  --sd-border-strong:  rgba(0, 0, 0, 0.18);
+
+  /* ----------------------------------------------------------
+     COLOR — Category Accent System
+  ---------------------------------------------------------- */
+
+  /* AI — Violet / Purple */
+  --sd-accent-ai:            #7c3aed;
+  --sd-accent-ai-glow:       rgba(124, 58, 237, 0.2);
+  --sd-accent-ai-muted:      rgba(124, 58, 237, 0.08);
+  --sd-accent-ai-text:       #6d28d9;
+
+  /* FinTech — Emerald / Mint */
+  --sd-accent-fintech:       #059669;
+  --sd-accent-fintech-glow:  rgba(5, 150, 105, 0.2);
+  --sd-accent-fintech-muted: rgba(5, 150, 105, 0.08);
+  --sd-accent-fintech-text:  #047857;
+
+  /* HealthTech — Coral / Rose */
+  --sd-accent-health:        #e11d48;
+  --sd-accent-health-glow:   rgba(225, 29, 72, 0.2);
+  --sd-accent-health-muted:  rgba(225, 29, 72, 0.08);
+  --sd-accent-health-text:   #be123c;
+
+  /* CleanTech — Lime / Green */
+  --sd-accent-clean:         #65a30d;
+  --sd-accent-clean-glow:    rgba(101, 163, 13, 0.2);
+  --sd-accent-clean-muted:   rgba(101, 163, 13, 0.08);
+  --sd-accent-clean-text:    #4d7c0f;
+
+  /* SaaS — Cyan / Blue */
+  --sd-accent-saas:          #0284c7;
+  --sd-accent-saas-glow:     rgba(2, 132, 199, 0.2);
+  --sd-accent-saas-muted:    rgba(2, 132, 199, 0.08);
+  --sd-accent-saas-text:     #0369a1;
+
+  /* Web3 — Amber / Orange */
+  --sd-accent-web3:          #ea580c;
+  --sd-accent-web3-glow:     rgba(234, 88, 12, 0.2);
+  --sd-accent-web3-muted:    rgba(234, 88, 12, 0.08);
+  --sd-accent-web3-text:     #c2410c;
+
+  /* ----------------------------------------------------------
+     COLOR — Semantic / UI
+  ---------------------------------------------------------- */
+  --sd-color-success:   #059669;
+  --sd-color-warning:   #d97706;
+  --sd-color-error:     #dc2626;
+  --sd-color-info:      #2563eb;
+
+  /* ----------------------------------------------------------
+     GLASSMORPHISM
+  ---------------------------------------------------------- */
+  --sd-glass-bg:          rgba(255, 255, 255, 0.70);
+  --sd-glass-bg-strong:   rgba(255, 255, 255, 0.85);
+  --sd-glass-border:      rgba(0, 0, 0, 0.08);
+  --sd-glass-border-bright: rgba(0, 0, 0, 0.14);
+  --sd-glass-blur:        blur(16px);
+  --sd-glass-blur-heavy:  blur(32px);
+  --sd-glass-blur-light:  blur(8px);
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY
+  ---------------------------------------------------------- */
+  --sd-font-display:  'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sd-font-body:     'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --sd-font-mono:     'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Size scale */
+  --sd-text-xs:   0.75rem;
+  --sd-text-sm:   0.875rem;
+  --sd-text-base: 1rem;
+  --sd-text-lg:   1.125rem;
+  --sd-text-xl:   1.25rem;
+  --sd-text-2xl:  1.5rem;
+  --sd-text-3xl:  1.875rem;
+  --sd-text-4xl:  2.25rem;
+  --sd-text-5xl:  3rem;
+
+  /* Line height */
+  --sd-leading-none:    1;
+  --sd-leading-tight:   1.2;
+  --sd-leading-snug:    1.35;
+  --sd-leading-normal:  1.5;
+  --sd-leading-relaxed: 1.625;
+  --sd-leading-loose:   1.8;
+
+  /* Letter spacing */
+  --sd-tracking-tighter: -0.04em;
+  --sd-tracking-tight:   -0.02em;
+  --sd-tracking-normal:   0em;
+  --sd-tracking-wide:     0.025em;
+  --sd-tracking-wider:    0.06em;
+  --sd-tracking-widest:   0.12em;
+
+  /* Font weight */
+  --sd-font-light:    300;
+  --sd-font-regular:  400;
+  --sd-font-medium:   500;
+  --sd-font-semibold: 600;
+  --sd-font-bold:     700;
+  --sd-font-black:    900;
+
+  /* ----------------------------------------------------------
+     SPACING (4px base unit)
+  ---------------------------------------------------------- */
+  --sd-space-1:  0.25rem;
+  --sd-space-2:  0.5rem;
+  --sd-space-3:  0.75rem;
+  --sd-space-4:  1rem;
+  --sd-space-5:  1.25rem;
+  --sd-space-6:  1.5rem;
+  --sd-space-8:  2rem;
+  --sd-space-10: 2.5rem;
+  --sd-space-12: 3rem;
+  --sd-space-16: 4rem;
+  --sd-space-20: 5rem;
+
+  /* ----------------------------------------------------------
+     BORDER RADIUS
+  ---------------------------------------------------------- */
+  --sd-radius-xs:   4px;
+  --sd-radius-sm:   8px;
+  --sd-radius-md:   12px;
+  --sd-radius-lg:   16px;
+  --sd-radius-xl:   20px;
+  --sd-radius-2xl:  24px;
+  --sd-radius-3xl:  32px;
+  --sd-radius-full: 9999px;
+  --sd-card-radius:       var(--sd-radius-xl);
+  --sd-card-radius-large: var(--sd-radius-2xl);
+
+  /* ----------------------------------------------------------
+     ANIMATION & MOTION
+  ---------------------------------------------------------- */
+  --sd-duration-instant: 80ms;
+  --sd-duration-fast:    150ms;
+  --sd-duration-normal:  300ms;
+  --sd-duration-slow:    500ms;
+  --sd-duration-slower:  700ms;
+
+  --sd-ease-linear:     linear;
+  --sd-ease-in:         cubic-bezier(0.4, 0, 1, 1);
+  --sd-ease-out:        cubic-bezier(0, 0, 0.2, 1);
+  --sd-ease-in-out:     cubic-bezier(0.4, 0, 0.2, 1);
+  --sd-ease-spring:     cubic-bezier(0.34, 1.56, 0.64, 1);
+  --sd-ease-expo-out:   cubic-bezier(0.16, 1, 0.3, 1);
+
+  --sd-transition-fast:   all var(--sd-duration-fast) var(--sd-ease-out);
+  --sd-transition-normal: all var(--sd-duration-normal) var(--sd-ease-out);
+  --sd-transition-slow:   all var(--sd-duration-slow) var(--sd-ease-out);
+
+  /* ----------------------------------------------------------
+     SHADOWS
+  ---------------------------------------------------------- */
+  --sd-shadow-xs:   0 1px 2px rgba(0, 0, 0, 0.05);
+  --sd-shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.06);
+  --sd-shadow-md:   0 4px 16px rgba(0, 0, 0, 0.08);
+  --sd-shadow-lg:   0 8px 32px rgba(0, 0, 0, 0.10);
+  --sd-shadow-xl:   0 16px 48px rgba(0, 0, 0, 0.12);
+
+  --sd-shadow-card:
+    0 0 0 1px var(--sd-border-subtle),
+    0 2px 12px rgba(0, 0, 0, 0.06);
+
+  --sd-shadow-card-hover:
+    0 0 0 1px var(--sd-border-default),
+    0 8px 30px rgba(0, 0, 0, 0.10);
+
+  --sd-shadow-focus: 0 0 0 3px rgba(124, 58, 237, 0.3);
+
+  /* ----------------------------------------------------------
+     3D / PERSPECTIVE
+  ---------------------------------------------------------- */
+  --sd-perspective:      800px;
+  --sd-perspective-near: 400px;
+
+  /* ----------------------------------------------------------
+     LAYOUT
+  ---------------------------------------------------------- */
+  --sd-container-xl:  1280px;
+  --sd-container-padding: var(--sd-space-4);
+
+  /* Z-index */
+  --sd-z-base:    0;
+  --sd-z-raised:  10;
+  --sd-z-float:   20;
+  --sd-z-overlay: 40;
+  --sd-z-modal:   50;
+
+  /* Scrollbar */
+  --sd-scrollbar-width:  6px;
+  --sd-scrollbar-track:  #f0f0f8;
+  --sd-scrollbar-thumb:  rgba(0, 0, 0, 0.12);
+  --sd-scrollbar-hover:  rgba(0, 0, 0, 0.22);
+
+  /* Surface hover */
+  --sd-surface-hover: rgba(0, 0, 0, 0.03);
+}

@@ -1,0 +1,3486 @@
+[
+  {
+    "id": "simile-ai",
+    "date": "2026-03-04",
+    "name_en": "Simile",
+    "name_ko": "시밀레",
+    "tagline": "AI 디지털 트윈으로 인간 행동을 예측하는 Stanford 출신 스타트업",
+    "category": [
+      "AI",
+      "MarketTech"
+    ],
+    "founded_year": 2024,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "US",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://simile.com",
+    "logo_url": "https://cdn.sanity.io/images/bz52j8pw/production/7eda3233fe44682df9551bdc8a2b5024ad641a2b-1200x630.png?w=600&h=600&fit=crop&auto=format&q=90",
+    "logo_svg_description": "미확인 - 스텔스 출시 직후로 공개된 로고 정보 없음",
+    "founders": [
+      {
+        "name_en": "Joon Sung Park",
+        "name_ko": "박준성",
+        "role": "Co-Founder & CEO",
+        "background": "Stanford University 컴퓨터과학 박사. 'Generative Agents' 논문 제1저자로 AI 에이전트 시뮬레이션 분야 선구자.",
+        "linkedin": "",
+        "notable_achievement": "2023년 발표한 'Generative Agents: Interactive Simulacra of Human Behavior' 논문이 AI 커뮤니티에 큰 반향을 일으킴"
+      },
+      {
+        "name_en": "Michael Bernstein",
+        "name_ko": "미확인",
+        "role": "Co-Founder",
+        "background": "Stanford University 컴퓨터과학과 부교수. Human-Computer Interaction(HCI) 전문가.",
+        "linkedin": "",
+        "notable_achievement": "Stanford HAI(Human-Centered AI) 연구소 핵심 연구원"
+      },
+      {
+        "name_en": "Percy Liang",
+        "name_ko": "미확인",
+        "role": "Co-Founder",
+        "background": "Stanford University 컴퓨터과학과 교수. 대규모 언어 모델 평가 프레임워크 HELM 개발.",
+        "linkedin": "",
+        "notable_achievement": "Foundation Model 연구 및 벤치마킹 분야의 세계적 권위자"
+      },
+      {
+        "name_en": "Lainie Yallen",
+        "name_ko": "미확인",
+        "role": "Co-Founder",
+        "background": "미확인",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      }
+    ],
+    "team_highlights": "Stanford University 컴퓨터과학과 교수진과 박사 출신으로 구성된 창업팀. Generative Agents 논문의 원저자들이 학술 연구를 직접 상업화한 대표적 사례. AI 분야 저명 인사인 Fei-Fei Li와 Andrej Karpathy가 엔젤 투자자로 참여.",
+    "product": {
+      "summary": "Simile은 실제 사람의 심층 인터뷰 데이터를 바탕으로 고충실도 AI 디지털 트윈을 생성하여 인간의 의사결정과 행동을 시뮬레이션하는 플랫폼이다. 기업들은 이를 통해 소비자 반응을 사전에 예측하고, 전략적 의사결정을 데이터 기반으로 검증할 수 있다. 기존 포커스 그룹 방식을 AI 시뮬레이션으로 대체하는 것이 핵심 가치 제안이다.",
+      "problem_statement": "기업이 소비자 행동을 예측하기 위해 사용하는 기존 방법(포커스 그룹, 설문조사, A/B 테스트)은 비용이 높고, 시간이 오래 걸리며, 표본 크기에 한계가 있다. 실시간으로 변화하는 소비자 선호도를 반영하기 어렵고, 결과의 재현성도 낮다.",
+      "solution": "수백 명의 실제 인물에 대한 심층 인터뷰, 거래 이력 데이터, 행동과학 학술 연구를 결합하여 7개월에 걸쳐 학습된 AI 모델을 구축했다. 이 모델은 특정 인물 또는 인구통계 그룹의 의사결정 패턴, 선호도, 행동을 복제하는 디지털 트윈을 생성한다. 기업은 이 가상 소비자들을 다양한 시나리오에 배치하여 제품 배치, 마케팅 전략, 기업 공시 등에 대한 반응을 사전에 예측할 수 있다.",
+      "key_features": [
+        "실제 인간 데이터 기반 고충실도 디지털 트윈 생성",
+        "다양한 비즈니스 시나리오별 소비자 반응 시뮬레이션",
+        "실시간 행동 예측 및 의사결정 지원",
+        "어닝콜 질문 사전 예측 및 기업 공시 반응 분석"
+      ],
+      "tech_stack_or_innovation": "Generative Agents 기술을 기반으로 한 대규모 인간 행동 시뮬레이션 모델. 심층 인터뷰 데이터와 거래 이력, 행동과학 연구를 결합한 멀티모달 학습 방식이 핵심 혁신.",
+      "target_customer": "대형 소비재 기업(CVS Health 등), 투자은행, 컨설팅 회사, 소비자 리서치 기관",
+      "business_model": "엔터프라이즈 SaaS 모델 (시뮬레이션 규모 기반 과금 추정)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Listen Labs",
+          "comparison": "유사하게 실제 인간 데이터 기반 접근법을 사용하지만 Simile 대비 학술적 기반과 모델 규모에서 차이"
+        },
+        {
+          "name": "Aaru",
+          "comparison": "인간 피드백 없이 순수 AI 생성 인사이트로 대체하는 접근법. Simile은 실제 데이터 기반의 'grounded' 방식을 강조"
+        },
+        {
+          "name": "Expected Parrot (YC F2025)",
+          "comparison": "인간 및 AI 인터뷰 데이터의 오픈소스 리포지토리 운영. 사회과학 연구 시뮬레이션에 특화"
+        },
+        {
+          "name": "Constellation Systems",
+          "comparison": "신경 신호와 생리학적 데이터를 결합한 '인간 상태' 파운데이션 모델 구축. $10M 시드 라운드 유치"
+        }
+      ],
+      "key_differentiator": "Stanford Generative Agents 논문의 원저자들이 직접 창업한 팀. 학술 연구에서 검증된 기술을 상업화하며, 실제 인간 인터뷰 데이터에 기반한 'grounded simulation' 접근법으로 순수 AI 기반 경쟁사 대비 예측 정확도를 강조.",
+      "moat": "원천 기술 논문 저자 팀의 독점적 노하우, Stanford 학술 네트워크, 7개월간 축적된 인간 행동 학습 데이터셋, Fei-Fei Li와 Andrej Karpathy 등 AI 분야 최고 인사들의 지지",
+      "competitive_position_summary": "합성 소비자(synthetic consumer) 시장은 'grounded simulators'(Simile, Listen Labs)와 'pure-AI'(Aaru) 진영으로 양분되고 있으며, Simile은 전자의 선두주자. Andreessen Horowitz는 이 시장의 TAM을 연간 약 $1,400억으로 추산."
+    },
+    "trending_reason": {
+      "summary": "2023년 AI 커뮤니티를 뒤흔든 Generative Agents 논문의 저자들이 직접 창업하여 Index Ventures 주도의 $100M 규모 Series A를 유치했다. AI 디지털 트윈이라는 새로운 시장 카테고리를 개척하며 기존 $1,400억 규모 시장 리서치 산업의 혁신을 시도하고 있다.",
+      "catalysts": [
+        "2026년 2월 12일 Index Ventures 주도 $100M Series A 발표",
+        "Fei-Fei Li, Andrej Karpathy 등 AI 분야 저명 인사들의 투자 참여",
+        "CVS Health 등 Fortune 100 기업과의 파일럿 진행"
+      ],
+      "media_mentions": [
+        {
+          "source": "Bloomberg",
+          "title": "AI Startup Nabs $100 Million to Help Firms Predict Human Behavior",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-12/ai-startup-nabs-100-million-to-help-firms-predict-human-behavior",
+          "date": "2026-02-12"
+        },
+        {
+          "source": "SiliconANGLE",
+          "title": "AI digital twin startup Simile raises $100M in funding",
+          "url": "https://siliconangle.com/2026/02/12/ai-digital-twin-startup-simile-raises-100m-funding/",
+          "date": "2026-02-12"
+        },
+        {
+          "source": "TechCrunch",
+          "title": "Here are the 17 US-based AI companies that have raised $100M or more in 2026",
+          "url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+          "date": "2026-02-17"
+        }
+      ],
+      "growth_metrics": "미확인 - 스텔스 모드에서 출시 직후이므로 공개된 성장 지표 없음"
+    },
+    "funding": {
+      "total_raised": "$100M+",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$100M",
+        "date": "2026-02-12",
+        "lead_investor": "Index Ventures",
+        "notable_investors": [
+          "Bain Capital Ventures",
+          "A*",
+          "Hanabi Capital",
+          "Fei-Fei Li",
+          "Andrej Karpathy"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$100M",
+          "date": "2026-02-12",
+          "investors": [
+            "Index Ventures",
+            "Bain Capital Ventures",
+            "A*",
+            "Hanabi Capital"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: 연간 약 $1,400억 (Andreessen Horowitz 추산, 전통 시장 리서치 + 소비자 인사이트 산업 합산)",
+      "market_trend": "기업들의 AI 기반 의사결정 도구 도입이 가속화되고 있으며, 포커스 그룹과 설문조사 시장의 디지털 전환이 본격화. Synthetic consumer 시장이 새로운 카테고리로 급부상 중.",
+      "growth_potential": "높음 - 기존 레거시 시장 리서치 기업들(연 매출 $10억 이상 규모)을 AI로 대체할 수 있는 잠재력이 크나, 시장 초기 단계로 기술 검증이 진행 중.",
+      "risks": [
+        "AI 디지털 트윈의 예측 정확도에 대한 신뢰성 검증 필요",
+        "윤리적 우려 - 개인 행동 시뮬레이션에 따른 프라이버시 이슈",
+        "순수 AI 기반 경쟁사들의 저비용 대안 등장 가능성",
+        "기업 고객의 기존 리서치 프로세스 전환에 대한 저항"
+      ],
+      "risk_mitigation": "Stanford 학술 기반의 투명한 연구 방법론, 실제 인간 데이터 기반 접근법으로 정확도 차별화, Fortune 100 기업 레퍼런스 확보 추진"
+    },
+    "related_links": [
+      {
+        "label": "Index Ventures 투자 발표",
+        "url": "https://www.indexventures.com/perspectives/life-the-universe-and-simile-leading-similes-series-a/"
+      },
+      {
+        "label": "Bloomberg 보도",
+        "url": "https://www.bloomberg.com/news/articles/2026-02-12/ai-startup-nabs-100-million-to-help-firms-predict-human-behavior"
+      },
+      {
+        "label": "Tech Funding News 기사",
+        "url": "https://techfundingnews.com/100m-for-stanford-spinout-simile-ai-that-simulates-human-decisions/"
+      }
+    ],
+    "editor_pick_comment": "Generative Agents 논문이 학술 세계에서 던진 충격이 이제 상업 세계로 확장되고 있다. '인간을 시뮬레이션한다'는 대담한 비전이 실제 비즈니스 가치로 전환될 수 있을지가 관건이며, $100M의 자금력과 Stanford 출신 팀이 그 가능성을 높인다."
+  },
+  {
+    "id": "rowspace",
+    "date": "2026-03-04",
+    "name_en": "Rowspace",
+    "name_ko": "로우스페이스",
+    "tagline": "투자 기관의 비정형 데이터를 AI로 통합하여 의사결정 우위를 제공하는 핀테크 플랫폼",
+    "category": [
+      "FinTech",
+      "AI",
+      "SaaS"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "US",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://rowspace.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인 - 스텔스 출시 직후로 공개된 로고 정보 없음",
+    "founders": [
+      {
+        "name_en": "Michael Manapat",
+        "name_ko": "미확인",
+        "role": "Co-Founder & CEO",
+        "background": "MIT 대학원 출신. Stripe에서 수십억 건 트랜잭션을 처리하는 프로덕션급 ML 시스템 구축. 이후 Notion CTO로서 AI 기능 확장에 기여.",
+        "linkedin": "",
+        "notable_achievement": "Stripe, Notion에서 CTO급 기술 리더십 경험. 대규모 데이터 인프라와 AI 시스템 구축 전문가."
+      },
+      {
+        "name_en": "Yibo Ling",
+        "name_ko": "미확인",
+        "role": "Co-Founder & CFO",
+        "background": "MIT 대학원 출신. Uber, Binance에서 CFO 및 재무 리더 역할. 2회 CFO 경험의 금융 전문가.",
+        "linkedin": "https://www.linkedin.com/in/yibo-ling-2511a34/",
+        "notable_achievement": "Uber와 Binance에서의 CFO 경험으로 대규모 금융 데이터와 운영에 대한 깊은 이해"
+      }
+    ],
+    "team_highlights": "MIT 동문인 두 창업자가 기술(Stripe, Notion)과 금융(Uber, Binance) 양쪽에서 최고 수준의 경력을 쌓은 후 합류. 엔지니어링 팀은 Notion, Stripe 출신의 테크 인재와 사모펀드/크레딧 분야 금융 전문가로 구성.",
+    "product": {
+      "summary": "Rowspace는 사모펀드(PE), 헤지펀드 등 기관투자자들이 보유한 수년간의 비정형 독점 데이터를 AI로 통합 분석하여 투자 의사결정의 우위를 제공하는 플랫폼이다. 딜 문서, CRM, 회계 소프트웨어 등 분산된 데이터 소스를 하나의 검색 가능한 뷰로 통합한다. 투자 기관의 '신경계(nervous system)' 역할을 하며 리스크 분석과 의사결정을 개선한다.",
+      "problem_statement": "기관투자자들은 수백억~수천억 달러의 자산을 운용하면서 딜 문서, CRM, 회계 시스템 등에 데이터가 분산되어 있다. 기존 AI 도구들은 적절한 금융 맥락 없이는 듀 딜리전스 업무를 효과적으로 수행하지 못한다.",
+      "solution": "Rowspace는 투자 기관의 전체 이력에 걸친 정형/비정형 데이터를 연결하고, 해당 기관 고유의 정보 해석 방식과 의사결정 프로세스를 반영하는 'finance-native' AI 렌즈를 적용한다. 불일치 데이터를 자동으로 식별하고, 기관의 축적된 지식을 복리(compounding) 자산으로 전환하여 수백~수천 억 달러 규모 자산 운용의 효율을 극대화한다.",
+      "key_features": [
+        "분산된 딜 문서, CRM, 회계 데이터의 통합 검색 뷰 제공",
+        "기관 고유의 의사결정 프로세스를 학습하는 finance-native AI",
+        "데이터 불일치 자동 탐지 및 리스크 분석",
+        "독점 데이터 기반 투자 인사이트 생성"
+      ],
+      "tech_stack_or_innovation": "기관투자자의 독점 데이터에 특화된 AI 모델. 범용 LLM과 달리 금융 맥락을 이해하고 기관별 의사결정 패턴을 학습하는 것이 핵심 혁신.",
+      "target_customer": "사모펀드(PE), 헤지펀드, 크레딧 펀드 등 기관투자자",
+      "business_model": "엔터프라이즈 SaaS (기관 단위 연간 구독 모델 추정)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Canoe Intelligence",
+          "comparison": "대체 투자 데이터 관리에 특화되어 있으나 AI 기반 인사이트 생성보다는 데이터 추출/정리에 초점"
+        },
+        {
+          "name": "Addepar",
+          "comparison": "자산관리 플랫폼으로 포트폴리오 관리에 강하나 비정형 데이터 통합과 AI 분석에서 Rowspace가 차별화"
+        },
+        {
+          "name": "Palantir AIP",
+          "comparison": "범용 데이터 분석 플랫폼으로 금융 외 다양한 산업 대상. Rowspace는 금융 기관에 특화된 깊이를 강조"
+        }
+      ],
+      "key_differentiator": "Stripe/Notion 수준의 프로덕션 ML 역량과 Uber/Binance CFO 경험의 금융 전문성을 결합한 팀. 기관투자자의 독점 데이터와 의사결정 프로세스를 학습하는 'finance-native' AI 접근법.",
+      "moat": "기관투자자의 민감한 독점 데이터를 다룸으로써 생기는 높은 전환 비용, 기관별로 축적되는 학습 데이터의 네트워크 효과, Sequoia와 Emergence Capital의 전략적 지원",
+      "competitive_position_summary": "기존 금융 데이터 관리 도구들이 데이터 정리 및 시각화에 머무는 반면, Rowspace는 AI를 활용한 인사이트 생성과 의사결정 지원으로 한 단계 상위 가치를 제공하려 함."
+    },
+    "trending_reason": {
+      "summary": "Notion CTO와 Uber/Binance CFO 출신 창업자가 합류한 화제의 팀 구성과 Sequoia Capital 주도의 $50M 펀딩이 핀테크/AI 업계에서 큰 주목을 받았다. 기관투자자들의 AI 전환 수요가 급증하는 시점에 스텔스 모드에서 공개되어 화제를 모았다.",
+      "catalysts": [
+        "2026년 2월 25일 Sequoia Capital/Emergence Capital 공동 주도 $50M 펀딩 발표",
+        "Notion CTO + Uber/Binance CFO의 '드림팀' 창업",
+        "Stripe 참여 등 전략적 투자자 라인업"
+      ],
+      "media_mentions": [
+        {
+          "source": "Fortune",
+          "title": "Exclusive: AI financial platform Rowspace raises $50 million led by Sequoia to help investment firms take on messy data",
+          "url": "https://fortune.com/2026/02/25/rowspace-sequoia-ai-financial-platform-private-equity-investment-venture-capital/",
+          "date": "2026-02-25"
+        },
+        {
+          "source": "Crowdfund Insider",
+          "title": "Financial Data Firm Rowspace Celebrates $50M Round",
+          "url": "https://www.crowdfundinsider.com/2026/03/264428-financial-data-firm-rowspace-celebrates-50m-round/",
+          "date": "2026-03-01"
+        },
+        {
+          "source": "Tech Startups",
+          "title": "Rowspace emerges from stealth with $50M led by Sequoia to tame messy data for investment firms using AI",
+          "url": "https://techstartups.com/2026/02/25/rowspace-emerges-from-stealth-with-50m-led-by-sequoia-to-tame-messy-data-for-investment-firms-using-ai/",
+          "date": "2026-02-25"
+        }
+      ],
+      "growth_metrics": "미확인 - 스텔스 모드에서 출시 직후이므로 공개된 매출/고객 지표 없음"
+    },
+    "funding": {
+      "total_raised": "$50M",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$50M (Seed + Series A 합산)",
+        "date": "2026-02-25",
+        "lead_investor": "Sequoia Capital / Emergence Capital (공동 리드)",
+        "notable_investors": [
+          "Basis Set Ventures",
+          "Stripe",
+          "Conviction"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "미확인 (총 $50M에 포함)",
+          "date": "미확인",
+          "investors": [
+            "Sequoia Capital"
+          ]
+        },
+        {
+          "stage": "Series A",
+          "amount": "미확인 (총 $50M에 포함)",
+          "date": "2026-02-25",
+          "investors": [
+            "Sequoia Capital",
+            "Emergence Capital",
+            "Basis Set Ventures",
+            "Stripe",
+            "Conviction"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 대체투자 운용자산(AUM)은 $20조 이상이며, 이들의 데이터 관리 및 AI 분석 시장은 빠르게 성장 중",
+      "market_trend": "사모펀드, 헤지펀드 등 기관투자자들의 AI 도입이 가속화되고 있으며, 특히 비정형 데이터 분석과 의사결정 자동화에 대한 수요가 급증. 2026년 2월 글로벌 VC 투자의 90%가 AI 관련 기업에 집중.",
+      "growth_potential": "높음 - 기관투자자 시장은 보수적이지만 일단 도입하면 전환 비용이 높아 장기 계약 확보 가능. 데이터 기반 투자 의사결정의 필수 인프라로 자리잡을 잠재력.",
+      "risks": [
+        "기관투자자의 보수적 IT 도입 문화로 인한 영업 사이클 장기화",
+        "민감한 금융 데이터 취급에 따른 보안 및 규제 리스크",
+        "Palantir, Bloomberg 등 대형 기업의 유사 서비스 진출 가능성",
+        "AI 환각(hallucination) 문제로 인한 금융 의사결정 신뢰도 우려"
+      ],
+      "risk_mitigation": "창업자들의 Stripe(금융 보안), Uber/Binance(규제 대응) 경험을 기반으로 한 보안 및 컴플라이언스 역량. Sequoia의 네트워크를 통한 초기 고객 확보."
+    },
+    "related_links": [
+      {
+        "label": "Fortune 독점 기사",
+        "url": "https://fortune.com/2026/02/25/rowspace-sequoia-ai-financial-platform-private-equity-investment-venture-capital/"
+      },
+      {
+        "label": "PR Newswire 공식 발표",
+        "url": "https://www.prnewswire.com/news-releases/rowspace-launches-with-50m-to-turn-institutional-knowledge-into-compounding-edge-for-finance-302696312.html"
+      },
+      {
+        "label": "The SaaS News",
+        "url": "https://www.thesaasnews.com/news/rowspace-ai-secures-50-million-in-funding"
+      }
+    ],
+    "editor_pick_comment": "기술과 금융 양쪽에서 최정상급 경력을 쌓은 두 창업자의 만남이 인상적이다. 기관투자자 시장은 진입 장벽이 높지만, 한번 안착하면 높은 전환 비용과 장기 계약으로 안정적 성장이 가능한 시장이다. Sequoia의 확신에 찬 베팅이 그 가능성을 뒷받침한다."
+  },
+  {
+    "id": "ease-health",
+    "date": "2026-03-04",
+    "name_en": "Ease Health",
+    "name_ko": "이즈 헬스",
+    "tagline": "행동건강 의료기관을 위한 AI 네이티브 통합 운영 시스템",
+    "category": [
+      "HealthTech",
+      "AI",
+      "SaaS"
+    ],
+    "founded_year": 2024,
+    "headquarters": {
+      "city": "New York",
+      "country": "US",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://easehealth.com",
+    "logo_url": "https://cdn.prod.website-files.com/695e9a68cbb30934aee8c039/696d2f18f27713a354aa6713_Ease%20Wordmark.svg",
+    "logo_svg_description": "미확인 - 스텔스 출시 직후로 공개된 로고 정보 없음",
+    "founders": [
+      {
+        "name_en": "Zach Cohen",
+        "name_ko": "미확인",
+        "role": "Co-Founder & CEO",
+        "background": "Andreessen Horowitz(a16z) 전 투자 파트너. 헬스케어 및 기술 투자 분야에서의 경험을 바탕으로 창업.",
+        "linkedin": "https://www.linkedin.com/in/zach-cohen-762b73128/",
+        "notable_achievement": "a16z에서 헬스케어 투자를 담당하며 업계의 핵심 과제와 기회를 깊이 파악한 후 직접 창업에 뛰어듦"
+      },
+      {
+        "name_en": "Steve Gold",
+        "name_ko": "미확인",
+        "role": "Co-Founder & President",
+        "background": "Refresh Mental Health 창업자 및 CEO. Refresh Mental Health는 2022년 UnitedHealth Group의 Optum에 인수됨.",
+        "linkedin": "",
+        "notable_achievement": "행동건강 기업 Refresh Mental Health를 창업하여 UnitedHealth Group 산하 Optum에 성공적으로 엑싯"
+      },
+      {
+        "name_en": "Raymond Wang",
+        "name_ko": "미확인",
+        "role": "CTO",
+        "background": "대규모 기술팀 구축 및 스케일링 경험을 가진 엔지니어링 리더.",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      }
+    ],
+    "team_highlights": "a16z 투자 파트너 출신 CEO와 행동건강 기업 엑싯(Optum 인수) 경험의 President가 결합한 팀. 헬스케어 투자와 운영 양쪽의 깊은 경험을 보유하여 시장의 구조적 문제를 정확히 이해하고 있다는 평가.",
+    "product": {
+      "summary": "Ease Health는 행동건강(정신건강, 중독 치료 등) 의료기관을 위한 AI 네이티브 통합 운영 플랫폼이다. CRM(환자 관계 관리), EHR(전자건강기록), RCM(수익주기 관리)을 하나의 시스템으로 통합하여 의료기관의 운영 효율을 근본적으로 개선한다. 기존의 분절된 레거시 소프트웨어 스택을 AI 기반의 단일 플랫폼으로 대체한다.",
+      "problem_statement": "행동건강 의료기관들은 입원 상담팀용 CRM, 임상의용 EHR, 청구팀용 RCM이 모두 분리된 레거시 시스템을 사용하고 있다. 종이 기반 워크플로를 디지털화한 수준의 EHR, 수작업에 의존하는 오류 잦은 청구 프로세스가 의료 접근성, 임상 경험, 운영 수익성을 동시에 저해하고 있다.",
+      "solution": "Ease는 CRM, EHR, RCM을 하나의 AI 네이티브 플랫폼으로 통합하여 행동건강 의료기관의 전체 운영 워크플로를 자동화한다. 입원 상담부터 임상 기록, 청구까지의 전 과정을 하나의 시스템에서 관리하며, AI가 문서화, 코딩, 청구 프로세스를 자동화하여 임상의의 행정 부담을 줄이고 수익 회수율을 높인다.",
+      "key_features": [
+        "CRM, EHR, RCM 통합 AI 네이티브 플랫폼",
+        "AI 기반 임상 문서 자동화",
+        "자동화된 청구 및 수익주기 관리",
+        "행동건강 특화 워크플로 엔진"
+      ],
+      "tech_stack_or_innovation": "처음부터 AI를 핵심으로 설계된 'AI-native' 아키텍처. 기존 EHR이 종이 기반 워크플로를 단순히 디지털화한 것과 달리, AI 자동화를 전제로 처음부터 설계된 시스템이 핵심 혁신.",
+      "target_customer": "대형 행동건강 의료기관(정신건강 클리닉, 중독 치료 센터, 행동건강 그룹 프랙티스)",
+      "business_model": "엔터프라이즈 SaaS (의료기관 규모 기반 구독 모델 추정)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Kipu Health",
+          "comparison": "행동건강 EHR 시장의 기존 강자이나 레거시 아키텍처 기반. CRM/RCM 통합과 AI 자동화에서 Ease가 차별화"
+        },
+        {
+          "name": "Sunwave Health",
+          "comparison": "행동건강 특화 CRM+EHR 솔루션을 제공하나 AI 네이티브 접근에서 Ease가 기술적 우위 주장"
+        },
+        {
+          "name": "Eleos Health",
+          "comparison": "행동건강 AI 문서화에 특화되어 있으나 Ease는 CRM/EHR/RCM 전체를 통합하는 풀스택 접근"
+        }
+      ],
+      "key_differentiator": "처음부터 AI를 핵심으로 설계한 풀스택 통합 플랫폼. 기존 경쟁사들이 레거시 시스템에 AI를 추가(bolt-on)하는 방식인 반면, Ease는 AI-native로 처음부터 설계.",
+      "moat": "a16z 투자 파트너의 네트워크와 Refresh Mental Health 엑싯 경험에서 축적된 의료기관 네트워크, CRM+EHR+RCM 풀스택 통합에 따른 높은 전환 비용",
+      "competitive_position_summary": "행동건강 소프트웨어 시장은 분절된 레거시 솔루션이 지배하고 있어 AI 네이티브 통합 플랫폼의 진입 여지가 크다. Ease는 a16z의 강력한 지원과 업계 경험을 갖춘 팀으로 이 시장의 재편을 시도하고 있다."
+    },
+    "trending_reason": {
+      "summary": "a16z 전 투자 파트너가 직접 창업하여 a16z로부터 $41M의 대규모 Series A를 유치하며 스텔스 모드에서 공개됐다. 미국 행동건강 위기가 사회적 이슈로 부각되는 시점에 기술 솔루션으로 구조적 문제를 해결하려는 시도가 주목받고 있다.",
+      "catalysts": [
+        "2026년 2월 27일 a16z 주도 $41M Series A 발표 및 스텔스 모드 공개",
+        "미국 정신건강/행동건강 위기 심화에 따른 사회적 관심 증가",
+        "Co-Founder Steve Gold의 행동건강 기업 엑싯(Optum 인수) 경험이 실행력에 대한 신뢰를 제공"
+      ],
+      "media_mentions": [
+        {
+          "source": "BusinessWire",
+          "title": "Ease Health Emerges from Stealth with $41M from Andreessen Horowitz to Redefine the Operating System for Behavioral Health",
+          "url": "https://www.businesswire.com/news/home/20260227368260/en/Ease-Health-Emerges-from-Stealth-with-41M-from-Andreessen-Horowitz-to-Redefine-the-Operating-System-for-Behavioral-Health",
+          "date": "2026-02-27"
+        },
+        {
+          "source": "SiliconANGLE",
+          "title": "Behavioral health software startup Ease Health launches with $41M",
+          "url": "https://siliconangle.com/2026/03/02/behavioral-health-software-startup-ease-health-launches-41m/",
+          "date": "2026-03-02"
+        },
+        {
+          "source": "VentureBeat",
+          "title": "Ease Health Emerges from Stealth with $41M from Andreessen Horowitz",
+          "url": "https://venturebeat.com/business/ease-health-emerges-from-stealth-with-41m-from-andreessen-horowitz-to-redefine-the-operating-system-for-behavioral-health",
+          "date": "2026-03-02"
+        }
+      ],
+      "growth_metrics": "미확인 - 스텔스 모드에서 출시 직후이므로 공개된 성장 지표 없음"
+    },
+    "funding": {
+      "total_raised": "$41M",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$41M",
+        "date": "2026-02-27",
+        "lead_investor": "Andreessen Horowitz (a16z)",
+        "notable_investors": []
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$41M",
+          "date": "2026-02-27",
+          "investors": [
+            "Andreessen Horowitz"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "미국 행동건강 시장 규모는 연간 $3,000억 이상. 관련 소프트웨어 시장도 수십억 달러 규모로 빠르게 성장 중.",
+      "market_trend": "미국 내 정신건강 서비스 수요 급증(특히 COVID-19 이후), 행동건강 의료기관의 디지털 전환 가속화, 보험사의 행동건강 보장 확대 등이 시장 성장을 견인.",
+      "growth_potential": "높음 - 행동건강 소프트웨어 시장은 아직 레거시 솔루션이 지배하고 있어 AI 기반 통합 플랫폼의 교체 수요가 큼. 미국 정신건강 위기 심화로 정부 및 보험사의 투자가 증가하는 추세.",
+      "risks": [
+        "의료 소프트웨어의 규제 인증(HIPAA 등) 및 컴플라이언스 부담",
+        "기존 EHR 벤더들의 행동건강 특화 기능 강화 대응",
+        "의료기관의 시스템 전환에 대한 저항과 긴 영업 사이클",
+        "AI 기반 임상 문서화의 정확도 및 법적 책임 이슈"
+      ],
+      "risk_mitigation": "Co-Founder Steve Gold의 행동건강 기관 운영 및 엑싯 경험으로 시장 진입 장벽 극복. a16z의 헬스케어 포트폴리오 네트워크 활용."
+    },
+    "related_links": [
+      {
+        "label": "Ease Health 공식 사이트",
+        "url": "https://easehealth.com/about"
+      },
+      {
+        "label": "a16z 투자 발표",
+        "url": "https://www.a16z.news/p/investing-in-ease"
+      },
+      {
+        "label": "Behavioral Health Business 기사",
+        "url": "https://bhbusiness.com/2026/03/02/ease-health-exits-stealth-with-41m-for-a-unified-ehr-rcm-crm-system/"
+      }
+    ],
+    "editor_pick_comment": "a16z 투자 파트너가 업계의 구조적 문제를 직접 해결하기 위해 뛰어든 사례. 미국 행동건강 위기라는 사회적 필요와 레거시 소프트웨어 교체 수요가 맞물리는 타이밍이 인상적이다. 풀스택 AI 통합 접근이 시장에서 검증될지 주목할 만하다."
+  },
+  {
+    "id": "copla",
+    "date": "2026-03-04",
+    "name_en": "Copla",
+    "name_ko": "코플라",
+    "tagline": "유럽 금융기관의 DORA, EU AI Act 등 규제 준수를 실시간으로 자동화하는 레그테크 플랫폼",
+    "category": [
+      "RegTech",
+      "SaaS",
+      "FinTech"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "Vilnius",
+      "country": "LT",
+      "country_ko": "리투아니아"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://copla.com",
+    "logo_url": "https://copla.com/wp-content/uploads/2024/09/copla-logo.svg",
+    "logo_svg_description": "미확인 - 공식 웹사이트에서 확인 필요",
+    "founders": [
+      {
+        "name_en": "Aurimas Bakas",
+        "name_ko": "아우리마스 바카스",
+        "role": "Co-Founder & CEO",
+        "background": "코어 뱅킹 플랫폼 Paysolut 공동 창업. Paysolut은 2021년 유럽 핀테크 유니콘 SumUp에 인수됨.",
+        "linkedin": "",
+        "notable_achievement": "핀테크 스타트업을 유럽 유니콘 SumUp에 성공적으로 엑싯한 연쇄 창업가"
+      },
+      {
+        "name_en": "Andrius Minkevicius",
+        "name_ko": "안드리우스 민케비치우스",
+        "role": "Co-Founder & CTO",
+        "background": "Paysolut 공동 창업자. 코어 뱅킹 시스템 아키텍처 및 규제 기술 전문가.",
+        "linkedin": "",
+        "notable_achievement": "Paysolut에서 규제 준수 은행 인프라 구축 경험"
+      },
+      {
+        "name_en": "Nojus Bendoraitis",
+        "name_ko": "노유스 벤도라이티스",
+        "role": "CLO & Director of Regulatory Compliance Solutions",
+        "background": "컴플라이언스 및 사이버보안 전문 법률가.",
+        "linkedin": "",
+        "notable_achievement": "금융 규제 및 사이버보안 법률 분야 전문성"
+      }
+    ],
+    "team_highlights": "Paysolut(SumUp에 인수) 출신의 연쇄 창업팀으로 코어 뱅킹, 규제 기술, 사이버보안 법률 전문성을 결합. 리투아니아의 발틱 핀테크 생태계에서 성장한 팀으로 유럽 규제 환경에 대한 깊은 이해를 보유.",
+    "product": {
+      "summary": "Copla는 DORA(디지털 운영 복원력법), EU AI Act, Cyber Resilience Act 등 복잡한 유럽 규제 프레임워크를 실시간 자동화된 컴플라이언스 워크플로로 전환하는 플랫폼이다. 규제 요구사항을 구체적 업무로 분해하고, 이행 상황을 지속적으로 추적하며, 관련 증거를 자동으로 수집 및 저장한다. 100개 이상의 유럽 금융기관이 사용 중이다.",
+      "problem_statement": "유럽 금융기관들은 DORA, EU AI Act, Cyber Resilience Act 등 급증하는 디지털 규제에 직면해 있다. 기존의 컴플라이언스 방식은 주기적 문서화 작업에 의존하며, 규제 변경 추적과 증거 관리가 수작업에 기반하여 비효율적이고 오류가 발생하기 쉽다.",
+      "solution": "Copla는 복잡한 규제 프레임워크를 구체적이고 실행 가능한 업무(task)로 자동 분해한다. 각 업무의 이행 상황을 실시간으로 추적하고, 컴플라이언스 증거를 자동으로 수집 및 저장한다. 주기적 감사 대비가 아닌 상시(continuous) 컴플라이언스를 실현하여 금융기관의 규제 리스크를 최소화한다.",
+      "key_features": [
+        "DORA, EU AI Act, Cyber Resilience Act 등 다중 규제 프레임워크 지원",
+        "규제 요구사항의 자동 업무 분해 및 담당자 할당",
+        "실시간 이행 상황 추적 및 컴플라이언스 대시보드",
+        "컴플라이언스 증거 자동 수집 및 저장"
+      ],
+      "tech_stack_or_innovation": "규제 텍스트를 실행 가능한 워크플로로 자동 전환하는 규제 해석 엔진. 주기적(periodic) 컴플라이언스에서 지속적(continuous) 컴플라이언스로의 패러다임 전환이 핵심 혁신.",
+      "target_customer": "유럽 규제 대상 금융기관(은행, 보험사, 투자회사, 핀테크 기업)",
+      "business_model": "SaaS 구독 모델 (금융기관 규모 및 적용 규제 프레임워크 수 기반 과금 추정)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Vanta",
+          "comparison": "SOC 2 등 글로벌 보안 컴플라이언스에 강하나 DORA 등 유럽 금융 특화 규제의 깊이에서 Copla가 차별화"
+        },
+        {
+          "name": "Drata",
+          "comparison": "보안 컴플라이언스 자동화의 글로벌 리더이나 유럽 금융 규제에 대한 전문성에서 Copla가 우위"
+        },
+        {
+          "name": "OneTrust",
+          "comparison": "개인정보 보호 및 GRC 분야의 대형 벤더이나 DORA/EU AI Act 등 신규 디지털 규제 특화에서 Copla가 민첩하게 대응"
+        }
+      ],
+      "key_differentiator": "DORA, EU AI Act 등 2025-2026년 새로 시행되는 유럽 디지털 규제에 특화된 최초의 전문 플랫폼. 발틱 핀테크 생태계에서 성장하며 축적한 유럽 규제에 대한 깊은 이해도.",
+      "moat": "100개 이상의 유럽 금융기관 고객 기반, SumUp 엑싯 경험에서 비롯된 시장 신뢰성, 유럽 규제 전문성, 빠르게 변하는 EU 규제 환경에 대한 선점 우위",
+      "competitive_position_summary": "글로벌 컴플라이언스 자동화 시장에서 Vanta, Drata가 범용 솔루션을 제공하는 반면, Copla는 유럽 금융 규제에 깊이 특화하여 니치 시장에서의 우위를 확보. 유럽 규제 복잡성의 지속적 증가가 성장 동력."
+    },
+    "trending_reason": {
+      "summary": "2025년 1월 DORA(디지털 운영 복원력법) 시행과 EU AI Act 발효로 유럽 금융기관의 컴플라이언스 수요가 폭발적으로 증가하면서 Copla가 주목받고 있다. 시드 라운드 후 1년여 만에 100+ 고객, 7자리(100만 유로 이상) ARR을 달성한 빠른 성장세가 화제.",
+      "catalysts": [
+        "2025년 1월 DORA 시행으로 유럽 금융기관의 ICT 컴플라이언스 의무화",
+        "EU AI Act 발효에 따른 AI 규제 준수 수요 급증",
+        "2026년 2월 Iron Wolf Capital 주도 €6M Series A 발표",
+        "1년 내 100+ 고객, 7자리 ARR 달성의 빠른 트랙션"
+      ],
+      "media_mentions": [
+        {
+          "source": "ArcticStartup",
+          "title": "Lithuanian regtech Copla bags €6 million to scale compliance infrastructure beyond the EU",
+          "url": "https://arcticstartup.com/copla-raises-e6m-series-a/",
+          "date": "2026-02-19"
+        },
+        {
+          "source": "Nordic Fintech Magazine",
+          "title": "RegTech Copla Raises €6M Series A to Help Financial Institutions Navigate A New Wave of European Regulation",
+          "url": "https://nordicfintechmagazine.com/regtech-copla-raises-e6m-series-a-to-help-financial-institutions-navigate-a-new-wave-of-european-regulation/",
+          "date": "2026-02-19"
+        },
+        {
+          "source": "Tech.eu",
+          "title": "Copla raises €6M Series A to support EU regulatory compliance",
+          "url": "https://tech.eu/2026/02/19/copla-raises-eur6m-series-a-to-support-eu-regulatory-compliance/",
+          "date": "2026-02-19"
+        }
+      ],
+      "growth_metrics": "100+ 규제 금융기관 고객, 7자리(€1M 이상) 연간 반복 수익(ARR), 시드 라운드 후 약 1년 내 달성"
+    },
+    "funding": {
+      "total_raised": "€6M+ (Series A 기준, 시드 금액 미공개)",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "€6M",
+        "date": "2026-02-19",
+        "lead_investor": "Iron Wolf Capital",
+        "notable_investors": [
+          "Operator Stack",
+          "Specialist VC",
+          "SuperHero Capital",
+          "FirstPick",
+          "NGL Ventures",
+          "Loggerhead Partners"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "미확인",
+          "date": "미확인",
+          "investors": [
+            "Specialist VC",
+            "SuperHero Capital",
+            "FirstPick",
+            "NGL Ventures",
+            "Loggerhead Partners"
+          ]
+        },
+        {
+          "stage": "Series A",
+          "amount": "€6M",
+          "date": "2026-02-19",
+          "investors": [
+            "Iron Wolf Capital",
+            "Operator Stack"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 레그테크 시장은 2030년까지 $50B 이상 규모로 성장 전망. 유럽 금융 컴플라이언스 소프트웨어 시장은 DORA/EU AI Act 시행으로 급성장 중.",
+      "market_trend": "유럽의 디지털 규제 프레임워크가 지속적으로 확장되고 있으며(DORA, EU AI Act, Cyber Resilience Act, NIS2 등), 금융기관의 컴플라이언스 비용이 급증하면서 자동화 솔루션 수요가 폭발적으로 증가.",
+      "growth_potential": "높음 - 규제는 줄어들지 않고 계속 늘어나는 구조적 트렌드. EU 규제가 글로벌 스탠다드로 확산(Brussels Effect)되면서 유럽 외 시장 확장의 잠재력도 존재.",
+      "risks": [
+        "€6M 규모의 상대적으로 작은 펀딩으로 글로벌 확장 자금 부족 가능성",
+        "Vanta, Drata 등 대형 컴플라이언스 플랫폼의 유럽 규제 대응 강화",
+        "규제 프레임워크 변경에 따른 지속적 제품 업데이트 부담",
+        "유럽 금융기관의 보수적 벤더 선정 문화"
+      ],
+      "risk_mitigation": "유럽 규제 전문성과 100+ 고객 기반으로 선점 우위 확보. EU 외 확장을 위한 추가 펀딩 가능성. Paysolut 엑싯 경험을 바탕으로 한 실행력."
+    },
+    "related_links": [
+      {
+        "label": "Copla 공식 사이트",
+        "url": "https://copla.com/"
+      },
+      {
+        "label": "ArcticStartup 기사",
+        "url": "https://arcticstartup.com/copla-raises-e6m-series-a/"
+      },
+      {
+        "label": "Finextra 기사",
+        "url": "https://www.finextra.com/pressarticle/108953/european-regtech-copla-raises-6-million"
+      }
+    ],
+    "editor_pick_comment": "규제는 줄어들지 않는다. DORA, EU AI Act 등 유럽 디지털 규제의 파도가 거세지는 가운데 Copla는 정확히 필요한 시점에 필요한 솔루션을 제공하고 있다. 발틱 출신의 작지만 민첩한 팀이 100+ 고객을 빠르게 확보한 실행력이 인상적이며, 규제 확장이라는 구조적 순풍이 성장을 뒷받침한다."
+  },
+  {
+    "id": "portkey-ai",
+    "date": "2026-03-04",
+    "name_en": "Portkey",
+    "name_ko": "포트키",
+    "tagline": "1,600개 이상의 AI 모델을 단일 제어 플레인으로 통합 관리하는 LLMOps 인프라 플랫폼",
+    "category": [
+      "AI Infrastructure",
+      "SaaS",
+      "DevTools"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "US",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://portkey.ai",
+    "logo_url": "https://portkey.ai/blog/content/images/size/w1200/2026/02/SM-Post.png",
+    "logo_svg_description": "미확인 - 공식 웹사이트에서 확인 필요",
+    "founders": [
+      {
+        "name_en": "Rohit Agarwal",
+        "name_ko": "로힛 아가르왈",
+        "role": "Co-Founder & CEO",
+        "background": "Pepper Content 출신. AI 인프라 및 개발자 도구 전문가. 인도 출신으로 San Francisco에서 글로벌 AI 인프라 기업 구축.",
+        "linkedin": "https://www.linkedin.com/in/1rohitagarwal/",
+        "notable_achievement": "Portkey를 24,000개 이상의 조직이 사용하는 LLMOps 플랫폼으로 성장시킴"
+      },
+      {
+        "name_en": "Ayush Garg",
+        "name_ko": "아유쉬 가르그",
+        "role": "Co-Founder",
+        "background": "Pepper Content 출신. Rohit Agarwal과 함께 Portkey를 공동 창업.",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      }
+    ],
+    "team_highlights": "인도 출신 창업자들이 San Francisco에서 글로벌 AI 인프라 기업을 구축. Pepper Content에서의 협업 경험을 바탕으로 빠르게 LLMOps 시장에서 입지를 확립. 인도에도 개발 조직(Portkey AI Software India)을 운영하며 글로벌 팀 구성.",
+    "product": {
+      "summary": "Portkey는 기업이 프로덕션 환경에서 AI 시스템을 안정적으로 운영할 수 있게 하는 통합 제어 플레인이다. 1,600개 이상의 AI 모델에 대한 통합 API 게이트웨이를 제공하며, 일일 1.25억 건의 요청과 5,000억 개의 LLM 토큰을 처리한다. 거버넌스, 옵저버빌리티, 신뢰성, 비용 관리 기능을 하나의 플랫폼에서 제공한다.",
+      "problem_statement": "기업들이 다수의 AI 모델을 프로덕션에 배포하면서 모델 관리, 비용 통제, 성능 모니터링, 보안 거버넌스가 복잡해지고 있다. 각 AI 모델 제공업체마다 다른 API, 과금 체계, 성능 특성을 가지고 있어 통합 관리가 어렵다.",
+      "solution": "Portkey는 모든 AI 모델에 대한 단일 API 게이트웨이를 제공하여 멀티 모델 라우팅, 캐싱, 가드레일을 통합한다. 기업은 하나의 인터페이스에서 다양한 AI 모델의 성능을 모니터링하고, 비용을 추적하며, 보안 정책을 적용할 수 있다. AI 에이전트 기반 시스템을 위한 권한, ID, 예산 관리 기능도 제공한다.",
+      "key_features": [
+        "1,600개 이상 AI 모델 지원 통합 API 게이트웨이",
+        "실시간 LLM 옵저버빌리티 및 비용 추적",
+        "멀티 모델 라우팅, 폴백, 로드밸런싱",
+        "AI 에이전트 시스템용 거버넌스(권한, ID, 예산 관리)"
+      ],
+      "tech_stack_or_innovation": "프록시 기반 통합으로 코드 변경 없이 기존 AI 워크로드에 적용 가능한 아키텍처. 일일 1.25억 건 요청을 처리하는 고성능 게이트웨이와 실시간 비용/성능 분석이 핵심.",
+      "target_customer": "AI를 프로덕션에 배포하는 중대형 기업, AI 네이티브 스타트업, 엔터프라이즈 개발팀",
+      "business_model": "프리미엄 SaaS (무료 티어 + 사용량 기반 과금 + 엔터프라이즈 플랜)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Helicone",
+          "comparison": "LLM 옵저버빌리티에 특화된 오픈소스 플랫폼. Portkey가 게이트웨이+거버넌스까지 포함하는 풀스택 접근인 반면, Helicone은 모니터링에 집중"
+        },
+        {
+          "name": "LangSmith (LangChain)",
+          "comparison": "LangChain 에코시스템에 최적화된 트레이싱 도구. LangChain 사용자에게 강하나 Portkey는 프레임워크 독립적 범용 솔루션"
+        },
+        {
+          "name": "Langfuse",
+          "comparison": "오픈소스 LLM 옵저버빌리티 플랫폼. SDK 기반 통합 방식으로 Portkey의 프록시 기반 방식 대비 초기 설정이 더 필요"
+        },
+        {
+          "name": "LiteLLM",
+          "comparison": "경량 오픈소스 AI 게이트웨이. 단순성과 비용 통제에 강하나 Portkey 대비 엔터프라이즈 거버넌스 기능이 부족"
+        }
+      ],
+      "key_differentiator": "게이트웨이 + 옵저버빌리티 + 거버넌스를 하나로 결합한 엔터프라이즈급 통합 제어 플레인. 24,000개 이상의 조직, 일일 1.25억 요청의 대규모로 검증된 트래픽.",
+      "moat": "24,000개 이상 조직의 기존 사용자 기반, 일일 5,000억 토큰 처리의 대규모 운영 실적, 프록시 기반 무중단 통합의 낮은 도입 장벽",
+      "competitive_position_summary": "LLMOps 시장에서 옵저버빌리티(Helicone, Langfuse), 트레이싱(LangSmith), 게이트웨이(LiteLLM) 등 각 영역의 경쟁자가 존재하지만, Portkey는 이를 통합한 '올인원 제어 플레인'으로 차별화. 빠른 시장 성장과 함께 시장 리더십 경쟁이 진행 중."
+    },
+    "trending_reason": {
+      "summary": "AI 에이전트 시대가 본격화되면서 기업들의 LLM 운영 비용과 복잡성이 급증하고 있다. Portkey는 이 '엔터프라이즈 AI 혼란(chaos)'을 통제하는 인프라로 24,000개 이상 조직에서 채택되었으며, Elevation Capital 주도의 $15M Series A로 성장을 가속화하고 있다.",
+      "catalysts": [
+        "2026년 2월 20일 Elevation Capital 주도 $15M Series A 발표",
+        "AI 에이전트 시스템의 급부상으로 LLMOps 인프라 수요 폭증",
+        "24,000개 이상 조직, 일일 1.25억 요청의 빠른 성장세",
+        "일일 $500K 이상의 AI 비용을 관리하는 검증된 실적"
+      ],
+      "media_mentions": [
+        {
+          "source": "Inc42",
+          "title": "Portkey Bags $15 Mn To Help Enterprises Manage AI Spending",
+          "url": "https://inc42.com/buzz/portkey-bags-15-mn-to-help-enterprises-manage-ai-spending/",
+          "date": "2026-02-20"
+        },
+        {
+          "source": "YourStory",
+          "title": "AI application infra startup Portkey raises $15M in Series A",
+          "url": "https://yourstory.com/2026/02/ai-application-infra-startup-portkey-raises-series-a-round-elevation-capital",
+          "date": "2026-02-20"
+        },
+        {
+          "source": "Entrepreneur India",
+          "title": "Portkey Raises USD 15 Mn in Series A Led by Elevation Capital",
+          "url": "https://india.entrepreneur.com/news-and-trends/portkey-raises-usd-15-mn-in-series-a-led-by-elevation/502850",
+          "date": "2026-02-20"
+        }
+      ],
+      "growth_metrics": "24,000+ 조직 사용, 일일 1.25억 요청 처리, 5,000억 LLM 토큰 처리, 일일 $500K+ AI 비용 관리"
+    },
+    "funding": {
+      "total_raised": "$18M",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$15M",
+        "date": "2026-02-20",
+        "lead_investor": "Elevation Capital",
+        "notable_investors": [
+          "Lightspeed Venture Partners"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$3M",
+          "date": "2023-08",
+          "investors": [
+            "Lightspeed Venture Partners"
+          ]
+        },
+        {
+          "stage": "Series A",
+          "amount": "$15M",
+          "date": "2026-02-20",
+          "investors": [
+            "Elevation Capital",
+            "Lightspeed Venture Partners"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 LLMOps 및 AI 인프라 시장은 AI 도입 확산과 함께 수십억 달러 규모로 급성장 중. 기업들의 AI 지출이 2026년 기준 전년 대비 2~3배 증가하는 추세.",
+      "market_trend": "AI 에이전트 시대 진입으로 기업당 사용하는 AI 모델 수가 급증. 멀티 모델 관리, AI 비용 최적화, AI 거버넌스에 대한 수요가 폭발적으로 증가. 2026년 2월 글로벌 VC 투자의 90%가 AI 관련에 집중.",
+      "growth_potential": "매우 높음 - AI 인프라는 AI 도입이 확산될수록 필수적으로 함께 성장하는 '곡괭이와 삽(picks and shovels)' 사업. 기업의 AI 지출 규모가 커질수록 관리 도구의 가치도 비례하여 증가.",
+      "risks": [
+        "클라우드 대기업(AWS, Azure, GCP)의 자체 AI 관리 도구 출시 가능성",
+        "오픈소스 대안(LiteLLM, Langfuse)의 기능 고도화",
+        "AI 모델 제공업체들의 자체 관리 도구 통합",
+        "LLMOps 시장의 표준화 미확립에 따른 불확실성"
+      ],
+      "risk_mitigation": "24,000개 이상 조직의 대규모 사용자 기반과 프로덕션 검증 실적. 프레임워크 및 모델 독립적 중립 포지셔닝. Lightspeed/Elevation의 전략적 지원."
+    },
+    "related_links": [
+      {
+        "label": "Portkey 공식 사이트",
+        "url": "https://portkey.ai"
+      },
+      {
+        "label": "Lightspeed 포트폴리오 페이지",
+        "url": "https://lsvp.com/company/portkey/"
+      },
+      {
+        "label": "Inc42 펀딩 기사",
+        "url": "https://inc42.com/buzz/portkey-bags-15-mn-to-help-enterprises-manage-ai-spending/"
+      }
+    ],
+    "editor_pick_comment": "AI의 '곡괭이와 삽' 전략의 전형적 사례. AI 모델을 만드는 것이 아니라 AI를 사용하는 기업들의 운영 인프라를 제공한다는 점에서 안정적인 성장 경로를 가진다. 24,000개 이상 조직의 채택은 Product-Market Fit의 강력한 증거이며, 인도 출신 팀이 글로벌 AI 인프라 시장에서 경쟁력을 입증하고 있다."
+  },
+  {
+    "id": "goodfire",
+    "date": "2026-03-03",
+    "name_en": "Goodfire",
+    "name_ko": "굿파이어",
+    "tagline": "AI 모델의 내부 작동 원리를 해석하여 안전하고 제어 가능한 AI를 구현하는 해석가능성(Interpretability) 연구 기업",
+    "category": [
+      "AI",
+      "AI Safety",
+      "DevTools"
+    ],
+    "founded_year": 2024,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "US",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "11-50",
+    "website": "https://www.goodfire.ai",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Eric Ho",
+        "name_ko": "에릭 호",
+        "role": "Co-Founder & CEO",
+        "background": "RippleMatch 공동 창업자. 응용 AI 스타트업을 $10M 이상 ARR로 성장시킨 경험. 제품, 엔지니어링, GTM 전반에 걸친 리더십 역량 보유.",
+        "linkedin": "",
+        "notable_achievement": "RippleMatch를 $10M+ ARR 스타트업으로 성장시킨 후, AI 해석가능성 분야로 전환하여 Goodfire를 유니콘으로 성장시킴"
+      },
+      {
+        "name_en": "Daniel Balsam",
+        "name_ko": "다니엘 발삼",
+        "role": "Co-Founder & CTO",
+        "background": "NYU 컴퓨터과학 석사. RippleMatch에서 AI 부문 총괄(Head of AI)을 맡아 고성과 AI 엔지니어링 팀 이끔. 학계에서 NLP 및 해석가능성 연구 수행.",
+        "linkedin": "",
+        "notable_achievement": "RippleMatch에서의 AI 리더십과 학술 해석가능성 연구 경험을 결합하여 Goodfire의 기술 기반 구축"
+      },
+      {
+        "name_en": "Tom McGrath",
+        "name_ko": "톰 맥그래스",
+        "role": "Co-Founder & Chief Scientist",
+        "background": "Stanford University 머신러닝 박사. Google DeepMind 시니어 리서치 사이언티스트. DeepMind에서 해석가능성(Interpretability) 팀을 창설.",
+        "linkedin": "",
+        "notable_achievement": "Google DeepMind 해석가능성 팀 창설자. Sparse Autoencoders, Autointerpretability 프레임워크 등 핵심 해석가능성 방법론 개발"
+      }
+    ],
+    "team_highlights": "OpenAI와 Google DeepMind 해석가능성 연구의 핵심 인력이 합류한 팀. Nick Cammarata(OpenAI 해석가능성 팀 핵심 기여자)도 참여. RippleMatch에서의 실전 스타트업 스케일링 경험과 세계 최고 수준의 AI 연구 역량을 겸비한 독보적 구성.",
+    "product": {
+      "summary": "Goodfire는 메커니스틱 해석가능성(Mechanistic Interpretability) 기술을 활용하여 AI 모델 내부의 뉴런 수준 작동 원리를 해독하는 연구 기업이다. 주력 제품 'Ember'는 개발자와 연구자가 AI 모델의 행동을 이해하고, 정밀하게 제어하며, 성능을 개선할 수 있는 도구를 제공한다. 텍스트, 비전, 오디오, 유전체, 로보틱스 등 다양한 모달리티를 지원한다.",
+      "problem_statement": "현재 AI 모델은 '블랙박스'로 작동하여 내부에서 어떤 의사결정이 이루어지는지 알 수 없다. 이로 인해 환각(hallucination), 편향, 보안 취약점 등의 문제를 사전에 감지하거나 해결하기 어렵다. AI 규제(EU AI Act 등) 강화로 모델 투명성에 대한 요구도 급증하고 있다.",
+      "solution": "Goodfire는 메커니스틱 해석가능성 기법으로 신경망 내부의 개별 뉴런과 특성(feature)을 해독하여 모델이 '왜' 특정 출력을 생성하는지 이해할 수 있게 한다. Ember 플랫폼을 통해 모델 행동을 정밀 제어하고, PII(개인식별정보) 감사, 안전성 벤치마크 향상, 새로운 과학적 인사이트 추출 등을 가능케 한다.",
+      "key_features": [
+        "AI 모델 내부 뉴런/특성(feature) 수준의 해석 및 시각화",
+        "모델 행동의 정밀 제어(steering) 및 맞춤 조정",
+        "다중 모달리티 지원(텍스트, 비전, 오디오, 유전체, 로보틱스 등)",
+        "PII 감사, 안전성 벤치마크, 성능 최적화 도구"
+      ],
+      "tech_stack_or_innovation": "Sparse Autoencoders, Autointerpretability 프레임워크 등 자체 개발 메커니스틱 해석가능성 기법. 특정 모델에 종속되지 않고 다양한 AI 모델과 모달리티에 범용 적용 가능한 것이 핵심 혁신.",
+      "target_customer": "AI 모델 개발 기업, 대형 테크 기업, 금융/의료 등 규제 산업, AI 안전성 연구 기관",
+      "business_model": "연구 파트너십 + 엔터프라이즈 SaaS (Ember 플랫폼 구독)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Anthropic (자체 해석가능성 연구)",
+          "comparison": "Anthropic은 자체 모델에 대한 해석가능성 연구를 수행하지만, Goodfire는 모델 독립적으로 다양한 모델에 범용 적용 가능"
+        },
+        {
+          "name": "Weights & Biases",
+          "comparison": "MLOps 및 실험 추적에 강하나, 뉴런 수준의 메커니스틱 해석가능성은 Goodfire의 고유 영역"
+        },
+        {
+          "name": "Arize AI",
+          "comparison": "AI 옵저버빌리티 및 모니터링에 초점. Goodfire는 모델 내부 메커니즘 해독이라는 더 깊은 수준의 분석 제공"
+        }
+      ],
+      "key_differentiator": "AI 해석가능성만을 전문으로 하는 유일한 대규모 기업. OpenAI와 DeepMind 해석가능성 팀의 원조 연구자들이 직접 창업하여 학술 연구를 상업화. Anthropic의 첫 외부 투자 대상이라는 상징적 의미.",
+      "moat": "OpenAI/DeepMind 출신 해석가능성 연구 핵심 인력, $1.25B 밸류에이션의 자금력, Anthropic/Salesforce/Eric Schmidt 등 전략적 투자자, Rakuten/Apollo Research 등 초기 엔터프라이즈 고객",
+      "competitive_position_summary": "AI 해석가능성은 아직 초기 시장이지만, AI 규제 강화와 안전성 요구 증가로 급성장이 예상된다. Goodfire는 이 분야의 사실상 선두주자로, 학술 연구와 상업적 적용을 동시에 추진하는 독보적 포지션을 확보하고 있다."
+    },
+    "trending_reason": {
+      "summary": "AI 안전성과 규제가 글로벌 핵심 의제로 부상하는 가운데, Goodfire는 AI의 '블랙박스' 문제를 근본적으로 해결하는 해석가능성 기술로 $1.25B 밸류에이션의 유니콘에 등극했다. Anthropic의 첫 외부 투자 대상이라는 점이 기술력에 대한 강력한 신뢰 신호로 작용했다.",
+      "catalysts": [
+        "2026년 2월 5일 B Capital 주도 $150M Series B 발표, $1.25B 밸류에이션으로 유니콘 등극",
+        "Anthropic의 첫 번째 외부 투자 대상으로 선정 - AI 안전성 분야 최고 권위 기관의 인정",
+        "EU AI Act 시행으로 AI 모델 투명성에 대한 규제 요구 급증",
+        "Rakuten, Apollo Research 등 초기 엔터프라이즈 고객 확보"
+      ],
+      "media_mentions": [
+        {
+          "source": "PYMNTS",
+          "title": "Goodfire Raises $150 Million to Better Understand AI",
+          "url": "https://www.pymnts.com/news/investment-tracker/2026/goodfire-raises-150-million-to-better-understand-ai/",
+          "date": "2026-02-05"
+        },
+        {
+          "source": "SiliconANGLE",
+          "title": "Goodfire raises $150M in funding to enhance its AI interpretability platform",
+          "url": "https://siliconangle.com/2026/02/05/goodfire-raises-150m-funding-enhance-ai-interpretability-platform/",
+          "date": "2026-02-05"
+        },
+        {
+          "source": "Tech Funding News",
+          "title": "Ex-OpenAI DeepMinders bag $150M for tools that debug AI hallucination",
+          "url": "https://techfundingnews.com/goodfire-150m-series-b-1-25b-interpretability-ai/",
+          "date": "2026-02-05"
+        }
+      ],
+      "growth_metrics": "미확인 - 구체적 매출/고객 수는 비공개. 초기 파트너인 Rakuten, Apollo Research, Haize Labs가 안전성 벤치마크 향상, PII 감사 가속화 등의 성과를 보고"
+    },
+    "funding": {
+      "total_raised": "$200M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$150M",
+        "date": "2026-02-05",
+        "lead_investor": "B Capital",
+        "notable_investors": [
+          "Juniper Ventures",
+          "DFJ Growth",
+          "Salesforce Ventures",
+          "Menlo Ventures",
+          "Lightspeed Venture Partners",
+          "Eric Schmidt",
+          "Anthropic"
+        ]
+      },
+      "valuation_estimate": "$1.25B (유니콘)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$50M",
+          "date": "2025-04",
+          "investors": [
+            "Menlo Ventures",
+            "Lightspeed Venture Partners",
+            "Anthropic",
+            "South Park Commons",
+            "Wing Venture Capital"
+          ]
+        },
+        {
+          "stage": "Series B",
+          "amount": "$150M",
+          "date": "2026-02-05",
+          "investors": [
+            "B Capital",
+            "Juniper Ventures",
+            "DFJ Growth",
+            "Salesforce Ventures",
+            "Menlo Ventures",
+            "Lightspeed Venture Partners",
+            "Eric Schmidt"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "AI 안전성 및 거버넌스 시장은 2030년까지 $30B 이상 규모로 성장 전망. AI 해석가능성은 이 시장의 핵심 기술 기반.",
+      "market_trend": "EU AI Act, 미국 AI 행정명령 등 글로벌 AI 규제가 본격화되면서 모델 투명성과 설명 가능성에 대한 법적/비즈니스적 요구가 급증. 모든 AI 모델 제공 기업이 해석가능성 도구를 필요로 하는 구조적 수요 형성.",
+      "growth_potential": "매우 높음 - AI 모델의 복잡성이 증가할수록 해석가능성의 가치도 비례하여 증가. AI 규제 강화라는 구조적 순풍과 함께, 모든 AI 기업의 필수 인프라로 자리잡을 잠재력.",
+      "risks": [
+        "대형 AI 기업들(Google, Meta, OpenAI)의 자체 해석가능성 연구 투자 확대",
+        "메커니스틱 해석가능성 기술의 상업적 적용 가능성이 아직 초기 단계",
+        "오픈소스 해석가능성 도구(InterpretML, Eleuther AI 등)의 발전",
+        "AI 모델 아키텍처의 급격한 변화에 따른 기술 적응 부담"
+      ],
+      "risk_mitigation": "모델 독립적 범용 접근법으로 특정 아키텍처 변화에 대한 리스크 분산. Anthropic 투자로 AI 안전성 분야 최고 기관과의 협력 관계 확보. $200M+ 자금력으로 연구 지속 투자 가능."
+    },
+    "related_links": [
+      {
+        "label": "Goodfire 공식 사이트",
+        "url": "https://www.goodfire.ai"
+      },
+      {
+        "label": "Series B 발표 블로그",
+        "url": "https://www.goodfire.ai/blog/our-series-b"
+      },
+      {
+        "label": "PR Newswire 공식 발표",
+        "url": "https://www.prnewswire.com/news-releases/ai-lab-goodfire-raises-150m-at-1-25b-valuation-to-design-models-with-interpretability-302680120.html"
+      }
+    ],
+    "editor_pick_comment": "AI가 강력해질수록 '왜 이런 답을 내놓는가'를 이해하는 것이 더 중요해진다. Goodfire는 이 근본적 질문에 답하는 기업이다. Anthropic이 자사 최초의 외부 투자를 Goodfire에 집행했다는 것 자체가 기술력에 대한 최고의 증명이며, AI 규제 시대의 필수 인프라가 될 잠재력을 보여준다."
+  },
+  {
+    "id": "duna",
+    "date": "2026-03-03",
+    "name_en": "Duna",
+    "name_ko": "두나",
+    "tagline": "Stripe 출신 창업자들이 만든 기업 디지털 신원 인프라 - '비즈니스를 위한 여권'",
+    "category": [
+      "FinTech",
+      "Identity",
+      "RegTech"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "Amsterdam",
+      "country": "NL",
+      "country_ko": "네덜란드"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://duna.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Duco van Lanschot",
+        "name_ko": "두코 반 란스홋",
+        "role": "Co-Founder & CEO",
+        "background": "Stripe에서 3년간 Benelux 및 DACH 지역 총괄. 유럽 결제 시장과 규제 환경에 대한 깊은 이해를 바탕으로 창업.",
+        "linkedin": "",
+        "notable_achievement": "Stripe 유럽 지역 핵심 리더로서 결제 인프라와 기업 온보딩의 복잡성을 직접 경험한 후 Duna 창업"
+      },
+      {
+        "name_en": "David Schreiber",
+        "name_ko": "데이비드 슈라이버",
+        "role": "Co-Founder & CTO",
+        "background": "Stripe에서 6년간 근무하며 회사 최대 글로벌 사업부를 총괄. 핵심 카드 결제 플랫폼을 포함한 기술 인프라 구축 리더.",
+        "linkedin": "",
+        "notable_achievement": "Stripe의 최대 글로벌 사업부를 운영한 경험으로 대규모 결제/신원 인프라 설계 역량 보유"
+      }
+    ],
+    "team_highlights": "Stripe에서 유럽 시장과 글로벌 결제 인프라를 직접 구축한 두 핵심 리더가 합류한 팀. Stripe, Adyen, Snowflake 경영진이 엔젤 투자자로 참여하여 결제/핀테크 업계의 강력한 네트워크 확보. '결제의 Stripe가 있었다면, 기업 신원의 Duna가 되겠다'는 비전.",
+    "product": {
+      "summary": "Duna는 기업(비즈니스)을 위한 디지털 신원 인프라를 구축하는 핀테크 플랫폼이다. 모든 기업에 '디지털 여권'을 부여하여, 은행, 핀테크, 플랫폼 등이 기업 고객을 온보딩할 때 필요한 KYB(Know Your Business) 절차를 자동화한다. 장기적으로 검증된 기업 신원을 공유하고 재사용할 수 있는 네트워크를 구축하여 '원클릭 온보딩'을 실현하는 것이 목표.",
+      "problem_statement": "기업이 은행 계좌를 개설하거나 금융 서비스에 가입할 때 필요한 KYB(기업 신원 확인) 절차는 수일에서 수주가 소요되며, 수작업에 의존하여 비효율적이다. 각 금융기관이 동일한 확인 작업을 반복하며, AMLD5/6, PSD2/3, DAC7 등 유럽 규제 준수도 복잡하다.",
+      "solution": "Duna의 AI 네이티브 플랫폼은 기업 온보딩에 필요한 데이터 수집, 검증, 지속적 모니터링을 자동화한다. API 기반으로 기존 시스템에 통합되며, 검증된 기업 신원을 네트워크 내에서 공유/재사용할 수 있어 반복적인 확인 작업을 제거한다. 고객사 기준 온보딩 시간 10.6배 단축, 생산성 4.8배 향상 실적.",
+      "key_features": [
+        "AI 기반 자동 기업 온보딩 및 KYB 검증",
+        "공유 가능한 기업 디지털 신원 네트워크",
+        "AMLD5/6, PSD2/3, DAC7 등 유럽 규제 자동 준수",
+        "지속적 모니터링 및 수명주기 관리"
+      ],
+      "tech_stack_or_innovation": "자체 검증 데이터를 생성하는 AI 기반 분석 엔진. 정적 데이터 집계에 의존하는 기존 KYB 솔루션과 달리, 검증된 신원의 네트워크 효과를 활용한 '공유 가능한 신원' 인프라가 핵심 혁신.",
+      "target_customer": "대형 은행, 핀테크 기업, 결제 플랫폼, 마켓플레이스 (Plaid, CCV/Fiserv, Moss, Bol, SVEA Bank 등이 현재 고객)",
+      "business_model": "B2B SaaS (API 사용량 기반 과금 추정)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Veriff",
+          "comparison": "에스토니아 기반 신원 확인 선두 기업. 개인(KYC) 중심이며 6초 평균 결정 시간이 강점이나, 기업 신원(KYB) 특화에서 Duna가 차별화"
+        },
+        {
+          "name": "Sumsub",
+          "comparison": "KYC/KYB/AML 통합 솔루션 제공. 범용적 접근이나 Duna의 공유 가능한 신원 네트워크 모델과는 접근 방식이 상이"
+        },
+        {
+          "name": "Middesk",
+          "comparison": "미국 시장의 기업 신원 확인 선두 기업. 미국에 특화되어 있어 유럽 규제 대응에서 Duna가 우위"
+        }
+      ],
+      "key_differentiator": "Stripe에서 기업 온보딩의 복잡성을 직접 경험한 창업팀이 '기업 신원의 인터넷 인프라'를 구축한다는 비전. 단순한 검증 도구가 아닌, 검증된 신원을 공유/재사용할 수 있는 네트워크 효과를 추구.",
+      "moat": "Plaid, CCV(Fiserv), Moss 등 대형 고객 레퍼런스, Stripe/Adyen 핵심 인력의 네트워크, CapitalG(Google/Alphabet) 및 Index Ventures의 전략적 지원, 유럽 규제 전문성",
+      "competitive_position_summary": "기업 신원 확인(KYB) 시장은 개인 신원 확인(KYC) 대비 아직 표준화되지 않은 초기 시장. Duna는 '비즈니스를 위한 Stripe'를 지향하며 이 시장의 표준 인프라가 되려는 전략으로, 유럽에서의 선점 우위를 확보 중."
+    },
+    "trending_reason": {
+      "summary": "Stripe의 핵심 인력 두 명이 '기업 신원'이라는 인터넷의 빠진 레이어를 구축하기 위해 창업하여 CapitalG(Alphabet) 주도의 €30M Series A를 유치했다. 유럽 금융 규제 강화와 디지털 온보딩 수요 증가가 맞물리며 급성장 중이다.",
+      "catalysts": [
+        "2026년 2월 5일 CapitalG(Alphabet) 주도 €30M Series A 발표",
+        "Stripe, Adyen 핵심 경영진의 엔젤 투자 참여",
+        "AMLD6, PSD3 등 유럽 금융 규제 강화에 따른 KYB 자동화 수요 급증",
+        "고객사 기준 온보딩 시간 10.6배 단축이라는 검증된 실적"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Stripe alumni raise €30M Series A for Duna, backed by Stripe and Adyen execs",
+          "url": "https://techcrunch.com/2026/02/04/stripe-alumni-raise-e30m-series-a-for-duna-backed-by-stripe-and-adyen-execs/",
+          "date": "2026-02-04"
+        },
+        {
+          "source": "EU-Startups",
+          "title": "Dutch FinTech startup Duna raises €30 million to expand compliant AI for business identity and onboarding",
+          "url": "https://www.eu-startups.com/2026/02/dutch-fintech-startup-duna-raises-e30-million-to-expand-compliant-ai-for-business-identity-and-onboarding/",
+          "date": "2026-02-05"
+        },
+        {
+          "source": "Fintech Futures",
+          "title": "Identity fintech Duna raises €30m in Series A round",
+          "url": "https://www.fintechfutures.com/venture-capital-funding/duna-raises-30m-in-series-a-round",
+          "date": "2026-02-06"
+        }
+      ],
+      "growth_metrics": "총 €40M+ 누적 유치. 온보딩 시간 10.6배 단축, 생산성 4.8배 향상 실적. Plaid, CCV(Fiserv), Moss, Bol, SVEA Bank 등 대형 고객 확보."
+    },
+    "funding": {
+      "total_raised": "€40M+",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "€30M",
+        "date": "2026-02-05",
+        "lead_investor": "CapitalG (Alphabet)",
+        "notable_investors": [
+          "Index Ventures",
+          "Puzzle Ventures"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "€10.7M",
+          "date": "2025-05",
+          "investors": [
+            "Index Ventures",
+            "Puzzle Ventures"
+          ]
+        },
+        {
+          "stage": "Series A",
+          "amount": "€30M",
+          "date": "2026-02-05",
+          "investors": [
+            "CapitalG",
+            "Index Ventures",
+            "Puzzle Ventures"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 KYB/기업 신원 확인 시장은 연간 $10B 이상 규모. 유럽 금융 규제 강화로 관련 소프트웨어 시장 급성장 중.",
+      "market_trend": "AMLD6, PSD3 등 유럽 금융 규제의 지속적 강화로 기업 온보딩 자동화 수요 급증. 핀테크, 마켓플레이스, 결제 플랫폼의 성장으로 기업 신원 확인 건수 자체가 증가하는 구조적 성장.",
+      "growth_potential": "높음 - 개인 신원 확인(KYC) 시장이 이미 수십억 달러 규모로 성장한 것처럼, 기업 신원 확인(KYB)도 유사한 성장 경로를 밟을 전망. Duna의 네트워크 효과가 작동하면 시장 지배적 위치 확보 가능.",
+      "risks": [
+        "Veriff, Sumsub 등 기존 KYC 기업의 KYB 시장 진출 확대",
+        "유럽 중심 사업으로 글로벌 확장 시 현지 규제 적응 필요",
+        "기업 신원 네트워크의 네트워크 효과가 임계 규모에 도달하기까지의 시간",
+        "금융기관의 보수적 벤더 선정 문화와 긴 영업 사이클"
+      ],
+      "risk_mitigation": "Stripe/Adyen 출신의 결제 인프라 전문성과 네트워크. CapitalG(Alphabet)의 글로벌 리소스 지원. Plaid, Fiserv 등 검증된 대형 고객 레퍼런스 활용."
+    },
+    "related_links": [
+      {
+        "label": "Duna 공식 사이트",
+        "url": "https://duna.com"
+      },
+      {
+        "label": "Series A 공식 발표",
+        "url": "https://duna.com/news/series-a"
+      },
+      {
+        "label": "TechCrunch 기사",
+        "url": "https://techcrunch.com/2026/02/04/stripe-alumni-raise-e30m-series-a-for-duna-backed-by-stripe-and-adyen-execs/"
+      }
+    ],
+    "editor_pick_comment": "Stripe가 온라인 결제의 인프라를 구축했다면, Duna는 기업 신원의 인프라를 구축하려 한다. Stripe에서 이 문제를 직접 경험한 두 창업자가 만든 솔루션이라는 점에서 설득력이 높으며, CapitalG와 Index Ventures의 연속 투자가 시장 잠재력에 대한 확신을 보여준다. 유럽 규제 강화라는 순풍을 타고 있다."
+  },
+  {
+    "id": "secfix",
+    "date": "2026-03-03",
+    "name_en": "Secfix",
+    "name_ko": "섹피크스",
+    "tagline": "유럽 중소기업의 보안 인증(ISO 27001)과 컴플라이언스를 AI로 90% 자동화하는 사이버보안 플랫폼",
+    "category": [
+      "Cybersecurity",
+      "SaaS",
+      "AI"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Munich",
+      "country": "DE",
+      "country_ko": "독일"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://www.secfix.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Fabiola Munguia",
+        "name_ko": "파비올라 문기아",
+        "role": "Co-Founder & CEO",
+        "background": "Siemens, BMW에서 B2B 영업 및 성장 경험. 사이버보안 및 컴플라이언스 자동화 분야 5년 이상 경력.",
+        "linkedin": "",
+        "notable_achievement": "Forbes 30 Under 30 Europe (Tech) 선정. 유럽 사이버보안 스타트업 생태계의 차세대 리더로 주목"
+      },
+      {
+        "name_en": "Grigory Emelianov",
+        "name_ko": "그리고리 에멜리아노프",
+        "role": "Co-Founder & CTO",
+        "background": "Amazon, MAN에서 제품 개발 경험. 대규모 기술 기업에서의 프로덕션 시스템 구축 역량 보유.",
+        "linkedin": "",
+        "notable_achievement": "Amazon과 MAN에서 엔터프라이즈급 제품 구축 경험을 Secfix의 기술 아키텍처에 적용"
+      },
+      {
+        "name_en": "Branko Dzakula",
+        "name_ko": "브란코 자쿨라",
+        "role": "Co-Founder & CISO",
+        "background": "15년 이상의 사이버보안 리더십 경험을 보유한 보안 전문가.",
+        "linkedin": "",
+        "notable_achievement": "15년+ 사이버보안 경력으로 Secfix의 보안 전략과 CISO-as-a-Service 모델의 핵심 역할"
+      }
+    ],
+    "team_highlights": "Forbes 30 Under 30 선정 CEO, Amazon/MAN 출신 CTO, 15년 경력의 CISO가 결합한 팀. Munich, Berlin, London 등 유럽 주요 도시에 분산 팀 운영. B2B 영업(Siemens, BMW), 제품 엔지니어링(Amazon), 보안 전문성의 균형 잡힌 구성.",
+    "product": {
+      "summary": "Secfix는 유럽 중소기업(SMB)을 위한 엔드투엔드 보안 컴플라이언스 플랫폼이다. ISO 27001, NIS2, GDPR, SOC 2 등 보안 인증과 규제 준수를 AI로 최대 90% 자동화하며, 'CISO-as-a-Service' 모델로 전담 보안 전문가 지원까지 제공한다. 자동화 기술과 전문가 서비스를 결합한 하이브리드 접근법이 특징.",
+      "problem_statement": "유럽 중소기업들은 ISO 27001, NIS2, GDPR 등 증가하는 보안 인증과 규제 요구에 직면해 있으나, 전담 보안 팀이나 CISO를 고용할 여력이 없다. 기존 컴플라이언스 솔루션(Vanta, Drata 등)은 미국 시장 중심으로 설계되어 유럽 규제 환경에 최적화되지 않았다.",
+      "solution": "Secfix는 AI 기반 자동화로 지속적 보안 모니터링, 인시던트 관리, 보안 설문 대응, 갭 분석, 정책 검토, 접근 권한 관리, 클라우드 보안 스캐닝, 침투 테스트를 통합 제공한다. 여기에 'CISO-as-a-Service'로 전담 보안 전문가 자문을 함께 제공하여 기술 + 전문가 하이브리드 모델을 구현.",
+      "key_features": [
+        "ISO 27001, NIS2, GDPR, SOC 2 등 다중 프레임워크 지원",
+        "AI 기반 90% 컴플라이언스 작업 자동화",
+        "CISO-as-a-Service (전담 보안 전문가 지원)",
+        "지속적 보안 모니터링, 침투 테스트, 클라우드 스캐닝"
+      ],
+      "tech_stack_or_innovation": "독일 기술 기반(German-built) 실시간 보안 점검 엔진. AI 자동화와 전문가 서비스를 결합한 하이브리드 모델이 핵심 혁신. 유럽 규제 환경에 최적화된 컴플라이언스 엔진.",
+      "target_customer": "유럽 중소기업(SMB), SaaS 스타트업, 핀테크 기업 등 보안 인증이 필요하지만 전담 보안팀이 없는 기업",
+      "business_model": "SaaS 구독 + CISO-as-a-Service 수수료",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Vanta",
+          "comparison": "미국 시장 중심의 컴플라이언스 자동화 리더. 300+ 통합 지원이 강점이나 유럽 규제(NIS2, GDPR 심화) 대응에서 Secfix가 현지화 우위"
+        },
+        {
+          "name": "Drata",
+          "comparison": "자동 제어 추적에 강한 미국 기반 플랫폼. 가격이 높아($15K+/년) 유럽 SMB에는 부담이며, Secfix는 유럽 SMB에 최적화된 가격과 서비스"
+        },
+        {
+          "name": "Sprinto",
+          "comparison": "SaaS 스타트업 대상 빠른 인증 지원. 아시아 시장에 강하나 유럽 규제 전문성에서 Secfix가 차별화"
+        }
+      ],
+      "key_differentiator": "유럽 시장에 특화된 유일한 대규모 보안 컴플라이언스 플랫폼. AI 자동화 + CISO-as-a-Service의 하이브리드 모델로 전담 보안팀이 없는 중소기업의 니즈를 정확히 충족.",
+      "moat": "유럽 규제(NIS2, GDPR, ISO 27001) 전문성, CISO-as-a-Service의 인적 네트워크, Forbes 30 Under 30 선정 리더십, Alstin Capital/Bayern Kapital의 독일 생태계 지원",
+      "competitive_position_summary": "Vanta와 Drata가 미국 시장을 지배하는 반면, 유럽 SMB 시장은 아직 확실한 리더가 없다. Secfix는 유럽 규제 전문성과 CISO-as-a-Service 모델로 이 공백을 공략하며, NIS2 시행에 따른 수요 급증의 수혜가 예상된다."
+    },
+    "trending_reason": {
+      "summary": "EU NIS2 지시문 시행으로 유럽 수십만 기업에 보안 컴플라이언스 의무가 부과되면서 자동화 솔루션 수요가 폭발하고 있다. Secfix는 유럽 SMB 시장에 특화된 솔루션으로 빠르게 성장하며 Alstin Capital 주도의 $12M Series A를 유치했다.",
+      "catalysts": [
+        "2026년 2월 25일 Alstin Capital 주도 $12M Series A 발표",
+        "EU NIS2 지시문 시행으로 유럽 중소기업의 보안 컴플라이언스 의무화",
+        "Forbes 30 Under 30 Europe 선정 CEO의 리더십",
+        "AI 자동화로 컴플라이언스 작업 90% 절감이라는 검증된 실적"
+      ],
+      "media_mentions": [
+        {
+          "source": "Tech.eu",
+          "title": "Secfix raises $12M Series A to build end-to-end security compliance platform",
+          "url": "https://tech.eu/2026/02/25/secfix-raises-12m-series-a-to-build-end-to-end-security-compliance-platform/",
+          "date": "2026-02-25"
+        },
+        {
+          "source": "Tech Funding News",
+          "title": "Secfix raises $12M to cut compliance work 90% for European SMBs",
+          "url": "https://techfundingnews.com/secfix-raises-12m-to-cut-compliance-work-90-for-european-smbs/",
+          "date": "2026-02-25"
+        },
+        {
+          "source": "Munich Startup",
+          "title": "Secfix receives over 10 million euros for compliance AI",
+          "url": "https://www.munich-startup.de/en/117668/secfix-series-a/",
+          "date": "2026-02-25"
+        }
+      ],
+      "growth_metrics": "미확인 - 구체적 고객 수/매출 비공개. 컴플라이언스 작업 90% 자동화 실적 공개."
+    },
+    "funding": {
+      "total_raised": "$12M+",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$12M",
+        "date": "2026-02-25",
+        "lead_investor": "Alstin Capital",
+        "notable_investors": [
+          "Bayern Kapital",
+          "neosfer"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "€3.6M",
+          "date": "2023",
+          "investors": [
+            "neosfer"
+          ]
+        },
+        {
+          "stage": "Series A",
+          "amount": "$12M",
+          "date": "2026-02-25",
+          "investors": [
+            "Alstin Capital",
+            "Bayern Kapital",
+            "neosfer"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 보안 컴플라이언스 자동화 시장은 2030년까지 $15B 이상 성장 전망. 유럽 시장은 NIS2, GDPR 등 규제로 특히 빠르게 성장.",
+      "market_trend": "EU NIS2 지시문으로 유럽 내 수십만 중소기업에 새로운 보안 컴플라이언스 의무 부과. ISO 27001 인증 수요가 급증하며, AI 기반 자동화 솔루션에 대한 시장 수요가 구조적으로 증가하는 추세.",
+      "growth_potential": "높음 - NIS2로 인한 규제 수요가 구조적 성장 동력. 유럽 SMB 시장은 아직 확실한 리더가 없어 선점 기회가 크며, CISO-as-a-Service 모델로 고객 고착도를 높일 수 있다.",
+      "risks": [
+        "Vanta, Drata 등 미국 대형 플레이어의 유럽 시장 공략 확대",
+        "$12M의 상대적으로 작은 펀딩 규모로 글로벌 경쟁 대응 자금 부족 가능",
+        "CISO-as-a-Service 모델의 인력 의존도에 따른 스케일링 한계",
+        "유럽 SMB의 보안 투자 우선순위가 낮은 경우 영업 난이도 상승"
+      ],
+      "risk_mitigation": "유럽 규제 전문성으로 현지화 우위 확보. Bayern Kapital 등 독일 생태계 투자자의 전략적 지원. AI 자동화 비율 확대로 CISO-as-a-Service의 스케일링 한계 극복."
+    },
+    "related_links": [
+      {
+        "label": "Secfix 공식 사이트",
+        "url": "https://www.secfix.com"
+      },
+      {
+        "label": "Tech.eu Series A 기사",
+        "url": "https://tech.eu/2026/02/25/secfix-raises-12m-series-a-to-build-end-to-end-security-compliance-platform/"
+      },
+      {
+        "label": "Munich Startup 기사",
+        "url": "https://www.munich-startup.de/en/117668/secfix-series-a/"
+      }
+    ],
+    "editor_pick_comment": "유럽의 보안 규제(NIS2)가 Vanta/Drata가 아닌 유럽 토종 솔루션에 기회를 열어주고 있다. Secfix는 Forbes 30 Under 30 CEO의 리더십 아래 AI 자동화와 전문가 서비스를 결합한 독특한 모델로 유럽 SMB 시장의 빈자리를 공략한다. 규제가 곧 기회인 유럽 사이버보안 시장의 성장주."
+  },
+  {
+    "id": "spintly",
+    "date": "2026-03-03",
+    "name_en": "Spintly",
+    "name_ko": "스핀틀리",
+    "tagline": "세계 최초 BLE 메시 기반 무선 출입통제 플랫폼 - 스마트 빌딩의 물리 보안을 혁신하는 인도 PropTech",
+    "category": [
+      "PropTech",
+      "IoT",
+      "AI"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "Goa",
+      "country": "IN",
+      "country_ko": "인도"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://spintly.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Rohin Parkar",
+        "name_ko": "로힌 파르카르",
+        "role": "Co-Founder & CEO",
+        "background": "IoT 및 물리 보안 기술 전문가. BLE 메시 기반 무선 출입통제 기술의 선구자.",
+        "linkedin": "",
+        "notable_achievement": "세계 최초 BLE 메시 기반 출입통제 플랫폼을 구축하고 7건의 특허를 확보"
+      },
+      {
+        "name_en": "Malcolm D'Souza",
+        "name_ko": "말콤 드수자",
+        "role": "Co-Founder",
+        "background": "미확인",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      }
+    ],
+    "team_highlights": "인도 고아(Goa) 기반의 IoT 전문 팀. 7건의 핵심 특허를 보유한 기술 중심 조직으로, BLE 메시 기반 무선 출입통제 분야에서 세계 최초의 상용 플랫폼을 구축. 인도, 미국, 중동에 걸친 글로벌 영업 조직 운영.",
+    "product": {
+      "summary": "Spintly는 스마트폰 기반 무선 출입통제 및 스마트 빌딩 솔루션 플랫폼이다. 특허 받은 BLE(Bluetooth Low Energy) 메시 아키텍처로 기존 유선 출입통제 인프라를 완전히 대체하며, 모바일 크레덴셜을 통한 키리스 엔트리, 출석 추적, 방문자 관리를 통합 제공한다. 7건의 특허로 보호되는 독자적 무선 메시 기술이 핵심.",
+      "problem_statement": "기존 출입통제 시스템은 복잡한 유선 설치, 높은 설치 비용, 물리적 카드/키 관리의 불편함이 있다. 건물 리모델링이나 확장 시 재배선이 필요하며, IoT와 AI 기반의 스마트 빌딩 트렌드에 대응하기 어렵다.",
+      "solution": "Spintly의 무선 BLE 메시 아키텍처는 배선 없이 출입통제 장치를 설치하고 연결한다. 스마트폰을 크레덴셜로 사용하여 물리적 카드나 키 없이 출입이 가능하며, 클라우드 기반 관리로 원격 제어와 실시간 모니터링을 지원한다. AI 기능을 추가하여 이상 패턴 감지와 스마트 빌딩 자동화를 확장 중.",
+      "key_features": [
+        "특허 받은 BLE 메시 무선 출입통제 아키텍처 (7건 특허)",
+        "스마트폰 기반 키리스 엔트리 (Bluetooth, NFC)",
+        "클라우드 기반 원격 관리 및 실시간 모니터링",
+        "지문 인식, 방문자 관리, 출석 추적 통합"
+      ],
+      "tech_stack_or_innovation": "세계 최초의 BLE 메시 기반 상용 출입통제 플랫폼. 7건의 특허로 보호되는 무선 메시 스택을 제3자에게 라이선싱도 가능. AI 기반 이상 탐지 및 스마트 빌딩 자동화 기능 확장 중.",
+      "target_customer": "기업 사무실, 코워킹 스페이스, 피트니스 센터, 교육기관, 스마트 빌딩",
+      "business_model": "하드웨어(리더기, 게이트웨이) 판매 + 클라우드 SaaS 구독 + BLE 메시 기술 라이선싱",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Kisi",
+          "comparison": "클라우드 기반 출입통제의 글로벌 리더. 소프트웨어-하드웨어 통합에 강하나, Spintly의 완전 무선 BLE 메시 아키텍처와 특허 포트폴리오로 차별화"
+        },
+        {
+          "name": "Proxy",
+          "comparison": "모바일 크레덴셜 기반 출입통제. 미국 시장 중심이며, Spintly는 인도/중동/미국에 걸친 다지역 전략"
+        },
+        {
+          "name": "Brivo",
+          "comparison": "클라우드 기반 물리 보안 대형 벤더. 엔터프라이즈에 강하나 중소기업 및 신흥시장에서 Spintly가 가격 경쟁력 보유"
+        }
+      ],
+      "key_differentiator": "세계 최초이자 유일한 BLE 메시 기반 완전 무선 출입통제 플랫폼. 7건의 특허로 기술적 진입 장벽 확보. 인도/중동/미국의 다지역 전략으로 신흥시장과 선진시장을 동시 공략.",
+      "moat": "7건의 핵심 특허(BLE 메시 무선 스택), 500+ 인도 고객 기반, Accel의 전략적 투자, 완전 무선 아키텍처의 설치 비용 우위",
+      "competitive_position_summary": "물리 보안의 클라우드 전환이 가속화되는 가운데, Spintly는 '완전 무선'이라는 극단적 차별화로 배선 비용과 설치 시간을 대폭 줄이며 신흥시장에서 빠르게 성장 중. 특허 포트폴리오와 라이선싱 모델이 장기적 수익 다변화 기반."
+    },
+    "trending_reason": {
+      "summary": "스마트 빌딩과 물리 보안의 디지털 전환이 글로벌 트렌드로 부상하는 가운데, Spintly가 세계 최초의 BLE 메시 무선 출입통제 기술로 Accel 주도의 $8M Series A를 유치했다. 인도에서 500+ 고객을 확보한 후 미국과 중동으로 글로벌 확장에 나서고 있다.",
+      "catalysts": [
+        "2026년 2월 26일 Accel 주도 $8M Series A 발표",
+        "인도 500+ 고객, 미국 약 100 고객, 중동 10-15 고객의 다지역 트랙션",
+        "7건의 핵심 특허 확보로 기술적 진입 장벽 구축",
+        "스마트 빌딩 시장의 구조적 성장과 물리 보안의 디지털 전환 가속"
+      ],
+      "media_mentions": [
+        {
+          "source": "India Hood",
+          "title": "Spintly Raises $8 Million Series A Led by Accel to Expand AI-Powered Smart Building Security Platform",
+          "url": "https://www.indiahood.com/spintly-raises-8-million-series-a-led-by-accel-to-expand-ai-powered-smart-building-security-platform/",
+          "date": "2026-02-26"
+        },
+        {
+          "source": "Entrepreneur India",
+          "title": "Goa-Based Spintly Raises USD 8 Mn in Series A Round Led by Accel",
+          "url": "https://www.entrepreneur.com/en-in/news-and-trends/goa-based-spintly-raises-usd-8-mn-in-series-a-round-led-by/503023",
+          "date": "2026-02-26"
+        },
+        {
+          "source": "PropTech Connect",
+          "title": "PropTech Startup Spintly Raises $8 Million to Scale Smart Building Systems",
+          "url": "https://proptechconnect.com/proptech-startup-spintly-raises-8-million-to-scale-smart-building-systems/",
+          "date": "2026-02-26"
+        }
+      ],
+      "growth_metrics": "인도 500+ 고객, 미국 약 100 고객, 중동 10-15 고객. 글로벌 615+ 고객 기반."
+    },
+    "funding": {
+      "total_raised": "$8M+",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$8M",
+        "date": "2026-02-26",
+        "lead_investor": "Accel",
+        "notable_investors": [
+          "Chakra Growth Fund",
+          "Alumni Ventures",
+          "Spyre VC",
+          "ENRISSION India Capital",
+          "SucSEED Ventures"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Pre-Series A",
+          "amount": "미확인",
+          "date": "미확인",
+          "investors": [
+            "미확인"
+          ]
+        },
+        {
+          "stage": "Series A",
+          "amount": "$8M",
+          "date": "2026-02-26",
+          "investors": [
+            "Accel",
+            "Chakra Growth Fund",
+            "Alumni Ventures",
+            "Spyre VC",
+            "ENRISSION India Capital",
+            "SucSEED Ventures"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 물리 보안/출입통제 시장은 2030년까지 $15B 이상 성장 전망. 스마트 빌딩 시장은 $100B+ 규모.",
+      "market_trend": "물리 보안의 클라우드 전환, 모바일 크레덴셜 도입, IoT 기반 스마트 빌딩 통합이 가속화. 코로나 이후 비접촉 출입통제 수요 지속. 인도, 중동, 동남아 등 신흥시장의 스마트 빌딩 투자 급증.",
+      "growth_potential": "높음 - 기존 유선 출입통제 시장의 무선 전환이라는 거대한 교체 수요. 신흥시장(인도, 중동)에서의 가격 경쟁력과 선진시장(미국)에서의 기술력을 동시에 활용 가능.",
+      "risks": [
+        "Kisi, Brivo 등 자금력 있는 글로벌 경쟁사의 무선 기술 도입",
+        "하드웨어 사업의 마진 압박과 공급망 리스크",
+        "인도 중심 매출 구조에서 글로벌 확장 실행 리스크",
+        "$8M의 상대적으로 작은 펀딩으로 글로벌 경쟁 대응 한계 가능"
+      ],
+      "risk_mitigation": "7건의 핵심 특허로 기술적 진입 장벽 확보. Accel의 인도/글로벌 네트워크 활용. BLE 메시 기술 라이선싱으로 하드웨어 의존도 분산. 60% 자금을 영업/마케팅에 투입하여 글로벌 확장 가속."
+    },
+    "related_links": [
+      {
+        "label": "Spintly 공식 사이트",
+        "url": "https://spintly.com"
+      },
+      {
+        "label": "Entrepreneur India 기사",
+        "url": "https://www.entrepreneur.com/en-in/news-and-trends/goa-based-spintly-raises-usd-8-mn-in-series-a-round-led-by/503023"
+      },
+      {
+        "label": "PropTech Connect 기사",
+        "url": "https://proptechconnect.com/proptech-startup-spintly-raises-8-million-to-scale-smart-building-systems/"
+      }
+    ],
+    "editor_pick_comment": "인도 고아라는 뜻밖의 도시에서 세계 최초의 완전 무선 출입통제 기술이 탄생했다. 7건의 특허가 뒷받침하는 기술적 해자와 인도 500+ 고객의 검증된 트랙션이 인상적이다. PropTech의 디지털 전환이 선진국에서 신흥국으로 확산되는 물결 위에 서 있는 스타트업."
+  },
+  {
+    "id": "rlwrld",
+    "date": "2026-03-03",
+    "name_en": "RLWRLD",
+    "name_ko": "알엘월드",
+    "tagline": "한국의 제조업 강점을 AI로 결합한 산업용 로보틱스 파운데이션 모델 기업",
+    "category": [
+      "Robotics",
+      "AI",
+      "Manufacturing"
+    ],
+    "founded_year": 2024,
+    "headquarters": {
+      "city": "Seoul",
+      "country": "KR",
+      "country_ko": "한국"
+    },
+    "company_stage": "Seed",
+    "employee_count": "11-50",
+    "website": "https://rlwrld.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Junghee Ryu",
+        "name_ko": "류정희",
+        "role": "Founder & CEO",
+        "background": "KAIST 전기전자컴퓨터공학(EECS) 박사. 연쇄 창업가이자 투자자로 19년 이상의 비즈니스/학술 경력. 이전 창업 기업 Olaworks가 Intel에 인수됨(Intel의 첫 한국 스타트업 인수 사례).",
+        "linkedin": "https://www.linkedin.com/in/junghee-ryu-5376623",
+        "notable_achievement": "이전 창업 기업 Olaworks를 Intel에 매각(Intel의 첫 한국 스타트업 인수). KAIST, SNU, POSTECH 교수 6명과 연구팀을 영입하여 RLWRLD 연구 기반 구축."
+      }
+    ],
+    "team_highlights": "Intel에 엑싯한 연쇄 창업가가 KAIST, 서울대(SNU), 포항공대(POSTECH) 교수 6명과 연구팀을 영입하여 구성한 학술-산업 융합 팀. 한국, 미국, 일본에 걸쳐 운영되며, 한국과 일본의 제조업 강점을 AI와 결합하는 전략적 포지셔닝.",
+    "product": {
+      "summary": "RLWRLD는 산업 현장에서 직접 학습하는 로보틱스 파운데이션 모델(RFM)을 개발하는 Physical AI 기업이다. 핵심 제품 'RLDX'는 15자유도 로봇 손을 제어하여 인간 수준의 정밀한 조작 작업을 수행할 수 있는 파운데이션 모델이다. 독자적 4D+ 멀티모달 산업 데이터 수집 시스템으로 실제 제조/물류 현장의 데이터를 학습에 활용한다.",
+      "problem_statement": "현재 산업용 로봇은 사전 프로그래밍된 반복 작업만 수행할 수 있으며, 환경 변화에 적응하지 못한다. 제조업과 물류에서 인간의 정밀한 손 작업(조립, 포장, 검사 등)을 로봇으로 대체하려면 인간 수준의 인지와 조작 능력을 갖춘 AI가 필요하다.",
+      "solution": "RLWRLD는 독자적 멀티센서 캡처 시스템으로 실제 산업 현장의 고정밀 4D+ 멀티모달 데이터를 수집하고, 이를 기반으로 로보틱스 파운데이션 모델(RLDX)을 학습시킨다. RLDX는 15자유도 로봇 손을 제어하여 보기(see), 느끼기(sense), 행동하기(act)를 인간과 유사한 수준으로 수행한다.",
+      "key_features": [
+        "RLDX: 15자유도 로봇 손 제어 가능한 로보틱스 파운데이션 모델",
+        "독자적 4D+ 멀티모달 산업 데이터 수집 시스템",
+        "실제 산업 현장(공장, 물류센터)에서의 학습 및 배포",
+        "인간 수준의 정밀 조작(dexterity) 및 인지 능력"
+      ],
+      "tech_stack_or_innovation": "실제 산업 환경에서 수집된 고정밀 4D+ 멀티모달 데이터로 학습되는 로보틱스 파운데이션 모델. 실험실이 아닌 실제 산업 현장의 가변성과 복잡성을 학습 데이터에 반영하는 것이 핵심 혁신.",
+      "target_customer": "제조업(자동차, 전자, 식품), 물류(CJ Logistics, Lotte 등), 산업 자동화 기업",
+      "business_model": "파운데이션 모델 라이선싱 + 산업용 AI 솔루션 SaaS (추정)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Figure AI",
+          "comparison": "OpenAI, NVIDIA 지원의 휴머노이드 로봇 기업. $40B 밸류에이션의 대형 플레이어이나 범용 휴머노이드에 초점. RLWRLD는 산업 현장 특화 파운데이션 모델에 집중"
+        },
+        {
+          "name": "Physical Intelligence (Pi)",
+          "comparison": "범용 로보틱스 파운데이션 모델 개발. RLWRLD는 제조/물류 산업에 특화하여 실제 현장 데이터 기반의 차별화"
+        },
+        {
+          "name": "Skild AI",
+          "comparison": "로보틱스 파운데이션 모델 스타트업. RLWRLD는 한국/일본 제조업 생태계와의 전략적 파트너십이 차별점"
+        }
+      ],
+      "key_differentiator": "실험실이 아닌 '실제 산업 현장'의 데이터로 학습한다는 접근법. 한국/일본 제조업 강국의 생태계(CJ Logistics, Lotte, Kakao 등)와의 전략적 파트너십. Intel 엑싯 경험의 연쇄 창업가와 KAIST/SNU/POSTECH 교수진의 결합.",
+      "moat": "독자적 4D+ 멀티모달 산업 데이터셋, CJ Logistics/Lotte/Kakao 등 한국 대기업 전략적 투자자, KAIST/SNU/POSTECH 교수 6명의 연구 역량, Nebius Robotics & Physical AI Awards 수상 실적",
+      "competitive_position_summary": "글로벌 로보틱스 파운데이션 모델 시장에서 Figure AI, Physical Intelligence 등 미국 대형 기업이 범용 접근을 추구하는 반면, RLWRLD는 산업 현장 특화와 한일 제조업 생태계 연계라는 차별화된 전략으로 니치 시장에서 두각을 나타내고 있다."
+    },
+    "trending_reason": {
+      "summary": "Physical AI(물리적 AI)가 2026년 최대 기술 트렌드로 부상하는 가운데, RLWRLD가 $26M Seed 2 라운드로 총 $41M 누적 유치에 성공했다. Intel 엑싯 경험의 한국 창업자가 KAIST 교수진과 함께 한국/일본의 제조업 강점을 AI로 혁신하려는 시도가 글로벌 투자자의 주목을 받고 있다.",
+      "catalysts": [
+        "2026년 2월 26일 $26M Seed 2 라운드 발표, 누적 $41M 유치",
+        "CJ Logistics, Lotte, Kakao 등 한국 대기업의 전략적 투자 참여",
+        "Nebius Robotics & Physical AI Awards 파운데이션 모델 부문 수상",
+        "2026년 상반기 로보틱스 파운데이션 모델 공식 공개 예정"
+      ],
+      "media_mentions": [
+        {
+          "source": "GlobeNewswire",
+          "title": "RLWRLD Raises $26M Seed 2, Bringing Total Funding to $41M to Scale Industrial Robotics AI",
+          "url": "https://www.globenewswire.com/news-release/2026/02/26/3245146/0/en/RLWRLD-Raises-26M-Seed-2-Bringing-Total-Funding-to-41M-to-Scale-Industrial-Robotics-AI.html",
+          "date": "2026-02-26"
+        },
+        {
+          "source": "The Robot Report",
+          "title": "Physical AI startup RLWRLD raises $26M",
+          "url": "https://www.therobotreport.com/physical-ai-startup-rlwrld-raises-26m/",
+          "date": "2026-02-26"
+        },
+        {
+          "source": "Asia Tech Daily",
+          "title": "Beyond the Lab: Why RLWRLD's $26M Seed 2 Is a Bet on Industrial Variability",
+          "url": "https://asiatechdaily.com/beyond-the-lab-why-rlwrlds-26m-seed-2-is-a-bet-on-industrial-variability/",
+          "date": "2026-02-26"
+        }
+      ],
+      "growth_metrics": "미확인 - 2026년 상반기 파운데이션 모델 공식 공개 예정. 누적 $41M 유치. CJ Logistics, Lotte 등과 전략적 파트너십 체결."
+    },
+    "funding": {
+      "total_raised": "$41M",
+      "latest_round": {
+        "stage": "Seed 2",
+        "amount": "$26M",
+        "date": "2026-02-26",
+        "lead_investor": "Headline Asia",
+        "notable_investors": [
+          "Z Venture Capital (Yahoo Japan/LINE)",
+          "CJ Logistics",
+          "Kakao Investment",
+          "Lotte Ventures",
+          "Hanwha Asset Management"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$15M",
+          "date": "2025-04",
+          "investors": [
+            "미확인"
+          ]
+        },
+        {
+          "stage": "Seed 2",
+          "amount": "$26M",
+          "date": "2026-02-26",
+          "investors": [
+            "Headline Asia",
+            "Z Venture Capital",
+            "CJ Logistics",
+            "Kakao Investment",
+            "Lotte Ventures",
+            "Hanwha Asset Management"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 산업용 로보틱스 시장은 2030년까지 $80B 이상 성장 전망. Physical AI/로보틱스 파운데이션 모델 시장은 초기이나 수십억 달러 규모 잠재력.",
+      "market_trend": "Physical AI가 2026년 최대 기술 트렌드로 부상. NVIDIA, Google, OpenAI 등 빅테크의 로보틱스 투자 급증. 제조업 인력 부족과 인건비 상승으로 자동화 수요가 구조적으로 증가. 한국/일본 제조업의 AI 전환 가속.",
+      "growth_potential": "매우 높음 - '로봇의 GPT 모먼트'가 다가오고 있다는 업계 전망. 제조업 자동화는 수조 달러 규모의 기회이며, 파운데이션 모델 접근법이 성공하면 기하급수적 확장 가능.",
+      "risks": [
+        "Figure AI, Physical Intelligence 등 수십억 달러 규모 경쟁사와의 자원 격차",
+        "로보틱스 파운데이션 모델의 실제 산업 현장 적용 시 기술적 불확실성",
+        "제조업 고객의 보수적 기술 도입 문화와 긴 검증 주기",
+        "하드웨어(로봇 본체) 파트너십 의존도"
+      ],
+      "risk_mitigation": "CJ Logistics, Lotte 등 실사용 고객이 전략적 투자자로 참여하여 PoC에서 상업화까지의 경로 확보. 한국/일본 제조업 생태계의 지정학적 우위 활용. 실험실이 아닌 실제 현장 데이터 기반 학습으로 배포 실효성 강화."
+    },
+    "related_links": [
+      {
+        "label": "RLWRLD 공식 발표",
+        "url": "https://www.globenewswire.com/news-release/2026/02/26/3245146/0/en/RLWRLD-Raises-26M-Seed-2-Bringing-Total-Funding-to-41M-to-Scale-Industrial-Robotics-AI.html"
+      },
+      {
+        "label": "The Robot Report 기사",
+        "url": "https://www.therobotreport.com/physical-ai-startup-rlwrld-raises-26m/"
+      },
+      {
+        "label": "Asia Tech Daily 분석",
+        "url": "https://asiatechdaily.com/beyond-the-lab-why-rlwrlds-26m-seed-2-is-a-bet-on-industrial-variability/"
+      }
+    ],
+    "editor_pick_comment": "'LLM의 시대가 있었다면, 다음은 로보틱스 파운데이션 모델의 시대다.' RLWRLD는 Intel 엑싯 경험의 한국 창업자가 KAIST 교수진과 함께 한국/일본의 세계적 제조업 역량을 AI와 결합하는 대담한 시도이다. CJ Logistics, Lotte 등 실수요 기업이 투자자로 참여한 것은 기술의 현장 적용 가능성에 대한 강력한 신호다."
+  },
+  {
+    "id": "tyme-group",
+    "date": "2026-03-02",
+    "name_en": "Tyme Group",
+    "name_ko": "타임 그룹",
+    "tagline": "남아공에서 시작해 아시아까지 확장한 세계 최빠른 흑자 달성 디지털 은행 그룹",
+    "category": [
+      "FinTech",
+      "Digital Banking"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "Singapore",
+      "country": "SG",
+      "country_ko": "싱가포르"
+    },
+    "company_stage": "Series D",
+    "employee_count": "501-1000",
+    "website": "https://www.tyme.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Coenraad Jonker",
+        "name_ko": "쿤라드 용커",
+        "role": "Co-Founder & Executive Chairman",
+        "background": "남아프리카공화국 출신의 연쇄 창업가. 디지털 뱅킹과 핀테크 분야에서 수십 년간의 경험을 보유한 금융 혁신가.",
+        "linkedin": "",
+        "notable_achievement": "TymeBank을 남아공 최초의 독립 디지털 은행으로 출범시키고, 5년 이내 흑자를 달성하여 세계 최빠른 흑자 디지털 은행이라는 기록을 수립"
+      },
+      {
+        "name_en": "Tjaart van der Walt",
+        "name_ko": "미확인",
+        "role": "Co-Founder",
+        "background": "Tyme Group 공동 창업자. 디지털 뱅킹 인프라 및 운영 전문가.",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      }
+    ],
+    "team_highlights": "남아프리카공화국에서 디지털 뱅킹을 개척한 창업팀이 싱가포르로 본사를 이전하며 글로벌 확장을 주도. 남아공, 필리핀, 인도네시아, 베트남에 걸친 다국적 운영 경험 보유. Nubank(브라질 최대 디지털 은행)과 전략적 파트너십 체결.",
+    "product": {
+      "summary": "Tyme Group은 신흥 시장의 금융 소외 계층에게 디지털 뱅킹 서비스를 제공하는 글로벌 디지털 은행 그룹이다. 온라인과 오프라인을 결합한 'phygital(피지탈)' 모델을 통해 남아공에서는 슈퍼마켓 내 키오스크를, 필리핀에서는 Robinsons 매장 네트워크를 활용하여 대면과 디지털을 결합한 접근성을 제공한다. 2026년 1월 TymeBank에서 GoTyme Bank으로 리브랜딩을 완료했다.",
+      "problem_statement": "신흥 시장의 수억 명의 사람들이 전통 은행 서비스에 접근하지 못하고 있다. 기존 은행들은 높은 수수료와 복잡한 가입 절차, 물리적 지점 부족으로 저소득층과 금융 소외 계층을 효과적으로 서비스하지 못한다.",
+      "solution": "Tyme은 완전한 디지털 뱅킹 플랫폼과 소매점 네트워크(슈퍼마켓, 백화점 등)를 결합한 'phygital' 모델을 통해 디지털 경험이 부족한 고객도 쉽게 계좌를 개설하고 금융 서비스를 이용할 수 있게 한다. 5분 이내 계좌 개설, 저비용 거래, 상인 대출 등 포괄적 금융 서비스를 제공한다.",
+      "key_features": [
+        "5분 이내 디지털 계좌 개설 (키오스크 또는 앱)",
+        "소매점 네트워크 기반 phygital 뱅킹 모델",
+        "상인 대출(Merchant Lending) 플랫폼",
+        "다국가 디지털 뱅킹 인프라 (남아공, 필리핀, 인도네시아)"
+      ],
+      "tech_stack_or_innovation": "자체 개발 클라우드 네이티브 뱅킹 인프라와 소매점 키오스크를 결합한 phygital 모델이 핵심 혁신. 기존 디지털 은행들이 앱 전용인 반면, Tyme은 오프라인 접점을 통해 디지털 경험이 적은 고객층까지 포용.",
+      "target_customer": "남아프리카공화국, 필리핀, 인도네시아, 베트남의 금융 소외 계층 및 소상공인",
+      "business_model": "거래 수수료, 상인 대출 이자 수익, 프리미엄 계좌 서비스, 보험/투자 상품 수수료",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Discovery Bank (남아공)",
+          "comparison": "보험 기반 디지털 은행으로 프리미엄 고객층 대상. Tyme은 대중 시장과 금융 소외 계층에 집중하여 차별화"
+        },
+        {
+          "name": "Maya (필리핀)",
+          "comparison": "필리핀 디지털 결제 및 뱅킹 플랫폼. GoTyme은 월 25만 신규 고객으로 Maya 대비 약 2.5배 빠른 성장세"
+        },
+        {
+          "name": "Nubank (브라질/멕시코)",
+          "comparison": "중남미 최대 디지털 은행이자 Tyme의 전략적 투자자. 경쟁자이자 파트너로서 글로벌 디지털 뱅킹 노하우를 공유"
+        }
+      ],
+      "key_differentiator": "온라인-오프라인 결합 'phygital' 모델로 디지털 경험이 부족한 신흥 시장 고객까지 포용. 5년 이내 흑자 달성이라는 검증된 운영 효율성.",
+      "moat": "20M+ 글로벌 고객 기반, 소매점 네트워크 파트너십(남아공 Pick n Pay, 필리핀 Robinsons), Nubank의 전략적 투자 및 노하우 공유, 다국가 디지털 뱅킹 라이선스",
+      "competitive_position_summary": "신흥 시장 디지털 뱅킹 분야에서 phygital 모델의 성공을 입증한 유일한 글로벌 플레이어. 남아공에서의 성공 모델을 아시아로 복제하며 빠르게 확장 중."
+    },
+    "trending_reason": {
+      "summary": "세계 최빠른 독립 디지털 은행 흑자 달성 기록을 세운 Tyme Group이 Nubank 주도의 $250M Series D로 유니콘 기업 반열에 올랐다. 2026년 GoTyme으로 리브랜딩하며 아시아 확장을 가속화하고, 2028년 뉴욕 IPO를 목표로 하고 있다.",
+      "catalysts": [
+        "2024년 12월 Nubank 주도 $250M Series D 유치, 기업가치 $1.5B 달성",
+        "2026년 1월 TymeBank에서 GoTyme Bank으로 글로벌 리브랜딩",
+        "2025년 6월 인도네시아 상인 대출 플랫폼 출시",
+        "글로벌 고객 수 2,000만 명 돌파, 월 45만 명 신규 가입"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "African digital bank Tyme raises $250M round led by Nubank at $1.5B valuation",
+          "url": "https://techcrunch.com/2024/12/16/nubank-leads-250m-round-in-african-digital-bank-tyme-at-1-5b-valuation/",
+          "date": "2024-12-16"
+        },
+        {
+          "source": "BusinessTech",
+          "title": "Say goodbye to South Africa's billionaire-backed banking giant as you know it",
+          "url": "https://businesstech.co.za/news/banking/849782/say-goodbye-to-south-africas-billionaire-backed-banking-giant-as-you-know-it/",
+          "date": "2025-10-21"
+        },
+        {
+          "source": "Moneyweb",
+          "title": "TymeBank completes rebrand to GoTyme Bank",
+          "url": "https://www.moneyweb.co.za/news/companies-and-deals/tymebank-completes-rebrand-to-gotyme-bank/",
+          "date": "2026-01-15"
+        }
+      ],
+      "growth_metrics": "글로벌 고객 2,000만+, 남아공 1,500만+ 고객, 필리핀 230만+ 고객(14개월 만에 달성), 월 45만 명 신규 가입, 연환산 매출 $215M 이상, 남아공 ROE 30% 이상 목표"
+    },
+    "funding": {
+      "total_raised": "약 $641M",
+      "latest_round": {
+        "stage": "Series D",
+        "amount": "$250M",
+        "date": "2024-12-16",
+        "lead_investor": "Nu Holdings (Nubank)",
+        "notable_investors": [
+          "M&G Catalyst Fund",
+          "Norrsken22",
+          "African Rainbow Capital",
+          "Tencent",
+          "British International Investment"
+        ]
+      },
+      "valuation_estimate": "$1.5B (유니콘)",
+      "funding_history": [
+        {
+          "stage": "Series C (Pre-Series C)",
+          "amount": "$77.8M",
+          "date": "2023",
+          "investors": [
+            "미확인"
+          ]
+        },
+        {
+          "stage": "Series D",
+          "amount": "$250M",
+          "date": "2024-12-16",
+          "investors": [
+            "Nu Holdings (Nubank)",
+            "M&G Catalyst Fund",
+            "Norrsken22",
+            "African Rainbow Capital"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 디지털 뱅킹 시장은 2030년까지 $1.5조 규모로 성장 전망. 아프리카 및 동남아 금융 소외 인구는 약 17억 명으로 잠재 시장이 막대.",
+      "market_trend": "신흥 시장의 스마트폰 보급률 증가와 함께 디지털 뱅킹 수요가 급증. 전통 은행의 디지털 전환 속도가 느려 디지털 네이티브 뱅크에 기회. 2028년 뉴욕 IPO를 목표로 글로벌 투자자 관심 집중.",
+      "growth_potential": "매우 높음 - 남아공에서 입증된 phygital 모델을 필리핀, 인도네시아, 베트남으로 복제 중. 각 시장에서 현지 소매 파트너와의 조인트벤처로 빠른 고객 확보 가능.",
+      "risks": [
+        "다국가 운영에 따른 규제 복잡성 및 라이선스 리스크",
+        "각 시장별 현지 디지털 은행과의 치열한 경쟁",
+        "신흥 시장 통화 변동에 따른 환율 리스크",
+        "저소득층 고객 대상 대출의 신용 리스크"
+      ],
+      "risk_mitigation": "각 시장에서 현지 대형 소매 그룹과의 조인트벤처로 리스크 분산. 남아공에서의 5년간 운영 경험과 흑자 달성 실적이 리스크 관리 역량 입증. Nubank의 전략적 지원."
+    },
+    "related_links": [
+      {
+        "label": "Tyme Group 공식 사이트",
+        "url": "https://www.tyme.com"
+      },
+      {
+        "label": "TechCrunch Series D 보도",
+        "url": "https://techcrunch.com/2024/12/16/nubank-leads-250m-round-in-african-digital-bank-tyme-at-1-5b-valuation/"
+      },
+      {
+        "label": "GoTyme 리브랜딩 기사",
+        "url": "https://businesstech.co.za/news/banking/849782/say-goodbye-to-south-africas-billionaire-backed-banking-giant-as-you-know-it/"
+      }
+    ],
+    "editor_pick_comment": "신흥 시장 디지털 뱅킹의 교과서적 성공 사례. 순수 디지털이 아닌 'phygital' 접근으로 금융 소외 계층의 실제 접근성 문제를 해결한 것이 핵심이다. Nubank의 투자는 단순 자본 이상으로, 브라질에서 검증된 디지털 뱅킹 노하우의 전수라는 전략적 의미를 가진다. 2028년 IPO가 현실화된다면 아프리카/아시아 핀테크의 새로운 이정표가 될 것이다."
+  },
+  {
+    "id": "ocochem",
+    "date": "2026-03-02",
+    "name_en": "OCOchem",
+    "name_ko": "오코켐",
+    "tagline": "CO₂와 물을 전기화학적으로 전환하여 포름산 및 포메이트 화학물질을 생산하는 클린테크 스타트업",
+    "category": [
+      "CleanTech",
+      "Climate",
+      "GreenChemistry"
+    ],
+    "founded_year": 2017,
+    "headquarters": {
+      "city": "Richland",
+      "country": "US",
+      "country_ko": "미국"
+    },
+    "company_stage": "Seed",
+    "employee_count": "11-50",
+    "website": "https://ocochem.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Todd Brix",
+        "name_ko": "토드 브릭스",
+        "role": "Co-Founder & CEO",
+        "background": "Harvard Business School MBA. University of Washington 화학공학 학사. Microsoft 전 임원 출신으로 기술 상용화 경험이 풍부한 경영자.",
+        "linkedin": "https://www.linkedin.com/in/todd-brix-518693",
+        "notable_achievement": "Microsoft에서의 임원 경험을 기반으로 CO₂ 전기분해 기술을 산업 규모로 상용화하는 데 성공. 세계 최대 CO₂ 전기분해 장치(Carbon Flux Electrolyzer) 완성을 주도"
+      },
+      {
+        "name_en": "Arun Agarwal",
+        "name_ko": "아룬 아가르왈",
+        "role": "Chief Technologist",
+        "background": "전기화학 및 CO₂ 전환 기술 전문가. OCOchem의 핵심 전기분해 기술 개발을 주도.",
+        "linkedin": "",
+        "notable_achievement": "세계 최초로 산업 규모의 CO₂ 전기분해 파일럿 플랜트를 성공적으로 가동"
+      }
+    ],
+    "team_highlights": "Microsoft 전 임원(CEO)과 전기화학 전문 과학자(CTO)의 결합. 워싱턴주 리치랜드의 Pacific Northwest National Laboratory(PNNL) 인근에 위치하여 국립연구소 인프라와 인재 풀을 활용. 미국 에너지부(DOE) $2.5M 'Hydrogen Shot' 보조금 수상.",
+    "product": {
+      "summary": "OCOchem은 자체 개발한 Carbon Flux Electrolyzer를 사용하여 포집된 CO₂와 물, 재생에너지 전력을 결합해 포름산(formic acid) 및 포타슘 포메이트(potassium formate) 등 유용한 화학물질로 직접 전환한다. 이 화학물질들은 청정 수소 연료, 핵심 광물 회수용 산(acid), 제빙제(deicer), 단백질 원료 등 다양한 산업에 활용된다. 2025년 10월 세계 최초로 CO₂ 유래 1메트릭톤의 포타슘 포메이트를 고객에게 출하하는 데 성공했다.",
+      "problem_statement": "글로벌 산업에서 배출되는 CO₂는 기후변화의 주범이지만, 대부분의 탄소 포집 기술은 CO₂를 단순히 지하에 저장하는 방식(CCS)에 그치고 있다. 이는 비용이 높고 경제적 인센티브가 부족하여 대규모 확산이 어렵다.",
+      "solution": "OCOchem은 CO₂를 '폐기물'이 아닌 '원료'로 바꾸는 접근법을 채택했다. 독자 개발한 전기분해 셀을 통해 CO₂와 물을 포름산과 포메이트 화합물로 직접 전환하며, 이 화학물질들은 기존 석유화학 제품을 대체할 수 있는 시장 가치를 가진다. 미국 탄소 포집 세액공제($85/톤)와 결합하면 경제성이 더욱 강화된다.",
+      "key_features": [
+        "세계 최대 CO₂ 전기분해 장치 Carbon Flux Electrolyzer 보유",
+        "CO₂ + 물 → 포름산, 포타슘 포메이트 등 직접 전환",
+        "연산 60톤 규모 파일럿 플랜트 가동 중",
+        "청정 수소 캐리어, 제빙제, 핵심 광물 회수 등 다중 응용"
+      ],
+      "tech_stack_or_innovation": "독자 개발 전기화학 셀 기술로 CO₂와 물을 저온·저압 조건에서 유기 분자로 직접 전환. 기존 열화학 방식 대비 에너지 효율이 높고, 재생에너지 전력으로 구동 가능하여 탄소 중립 화학 생산이 핵심 혁신.",
+      "target_customer": "화학 산업(포름산/포메이트 수요), 청정 에너지 기업(수소 캐리어), 광업(핵심 광물 회수), 제설/제빙 서비스 기업",
+      "business_model": "CO₂ 유래 화학물질 직접 판매 + 미국 탄소 포집 세액공제(45Q) 수익 + 기술 라이선싱",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Carbon Clean",
+          "comparison": "탄소 포집 기술에 집중하나 CO₂ 활용(전환)보다는 포집·분리 자체에 특화. OCOchem은 포집된 CO₂의 '활용'에 집중"
+        },
+        {
+          "name": "Climeworks",
+          "comparison": "직접 공기 포집(DAC) 분야 선두주자이나 포집한 CO₂를 지하 저장하는 CCS 모델. OCOchem은 CO₂를 유용한 제품으로 전환하는 CCU 모델로 차별화"
+        },
+        {
+          "name": "Twelve (구 Opus 12)",
+          "comparison": "CO₂ 전기분해로 CO를 생산한 뒤 추가 공정으로 제품화. OCOchem은 포름산/포메이트를 단일 단계로 직접 생산하여 공정이 단순"
+        }
+      ],
+      "key_differentiator": "CO₂ 전기분해로 포름산/포메이트를 단일 단계로 직접 생산하는 독자 기술. 2025년 세계 최초 산업 규모 CO₂ 유래 화학물질 출하 달성으로 기술 상용화를 입증.",
+      "moat": "세계 최초·최대 CO₂ 전기분해 파일럿 플랜트 운영 실적, 미국 DOE 보조금 및 45Q 세액공제 정책 적합성, 독일 b.fab·미국 ADM 등 글로벌 파트너십, PNNL 인접 입지의 연구 인프라 접근성",
+      "competitive_position_summary": "CCU(Carbon Capture & Utilization) 시장에서 CO₂를 실제 판매 가능한 화학물질로 전환하는 기술을 산업 규모로 입증한 소수의 기업 중 하나. 초기 단계이나 기술 리스크를 대폭 줄인 상태."
+    },
+    "trending_reason": {
+      "summary": "미국 'One Big Beautiful Bill Act'에서 CO₂ 재활용 탄소 포집 세액공제가 톤당 $60에서 $85로 인상되면서 OCOchem의 비즈니스 모델이 더욱 경제적으로 유리해졌다. 2025년 세계 최초 산업 규모 CO₂ 유래 화학물질 출하에 성공하며 기술 상용화를 입증했다.",
+      "catalysts": [
+        "2025년 10월 세계 최초 CO₂ 유래 1메트릭톤 포타슘 포메이트 고객 출하",
+        "미국 탄소 포집 세액공제(45Q) $60→$85/톤 인상(One Big Beautiful Bill Act)",
+        "2026년 $2.15M 추가 펀딩 유치",
+        "독일 b.fab, 미국 ADM 등 글로벌 파트너십 확대"
+      ],
+      "media_mentions": [
+        {
+          "source": "GeekWire",
+          "title": "Forget burying unwanted carbon — this Washington startup is turning it into protein, fuel and a frost deicer",
+          "url": "https://www.geekwire.com/2026/how-this-co2-disposal-startup-raised-investment-despite-funding-and-political-headwinds/",
+          "date": "2026-02-28"
+        },
+        {
+          "source": "Canary Media",
+          "title": "A new, low-carbon way to make chemicals, without the big dirty factories",
+          "url": "https://www.canarymedia.com/articles/clean-industry/a-new-low-carbon-way-to-make-chemicals-without-the-big-dirty-factories",
+          "date": "2025-06-01"
+        },
+        {
+          "source": "Washington State Dept. of Commerce",
+          "title": "Turning carbon into opportunity: OCOchem's bold mission",
+          "url": "https://www.commerce.wa.gov/turning-carbon-into-opportunity-ocochems-bold-mission/",
+          "date": "2025-10-01"
+        }
+      ],
+      "growth_metrics": "파일럿 플랜트 연산 60톤 생산 능력, 세계 최초 CO₂ 유래 1메트릭톤 제품 출하 달성, DOE $2.5M 보조금 수상"
+    },
+    "funding": {
+      "total_raised": "약 $7.95M",
+      "latest_round": {
+        "stage": "추가 투자 라운드",
+        "amount": "$2.15M",
+        "date": "2026-02",
+        "lead_investor": "미확인",
+        "notable_investors": []
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$5M",
+          "date": "2023-11",
+          "investors": [
+            "TO VC",
+            "INPEX Corporation",
+            "LCY Lee Family Office",
+            "MIH Capital Management"
+          ]
+        },
+        {
+          "stage": "기타 라운드",
+          "amount": "$2.15M",
+          "date": "2026-02",
+          "investors": [
+            "미확인"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 탄소 포집·활용·저장(CCUS) 시장은 2032년까지 $120B 규모로 성장 전망(Fortune Business Insights). 포름산 시장은 연간 약 $1B, 포메이트 시장은 연간 약 $500M 규모.",
+      "market_trend": "미국, EU의 탄소 세액공제 및 탄소세 정책 강화로 CCU 기술의 경제성이 급격히 개선. 글로벌 기후테크 투자가 2025년 $40.5B에 도달하며 증가 추세. 기업들의 Scope 3 탄소 감축 의무화가 수요 견인.",
+      "growth_potential": "높음 - 기술 상용화를 입증한 상태에서 정책 순풍(45Q 인상)과 글로벌 파트너십으로 스케일업 가능성이 높아졌다. 다만 대규모 상업 생산까지는 추가 자본 투입이 필요.",
+      "risks": [
+        "초기 단계 기업으로 대규모 상업 생산까지 추가 자금 필요",
+        "정치적 환경 변화에 따른 탄소 포집 세액공제(45Q) 정책 불확실성",
+        "포름산/포메이트 시장의 기존 석유화학 기반 생산자와의 가격 경쟁",
+        "전기분해 기술의 장기 내구성 및 대규모 효율 검증 필요"
+      ],
+      "risk_mitigation": "One Big Beautiful Bill Act로 45Q 인상 확보. 다양한 최종 제품(수소 캐리어, 제빙제, 광물 회수 등)으로 수요처 다변화. DOE 보조금과 글로벌 파트너십으로 자금 부담 완화."
+    },
+    "related_links": [
+      {
+        "label": "OCOchem 공식 사이트",
+        "url": "https://ocochem.com/"
+      },
+      {
+        "label": "GeekWire 2026 기사",
+        "url": "https://www.geekwire.com/2026/how-this-co2-disposal-startup-raised-investment-despite-funding-and-political-headwinds/"
+      },
+      {
+        "label": "세계 최대 CO₂ 전기분해 장치 완성 발표",
+        "url": "https://ocochem.com/ocochem-announces-completion-of-worlds-largest-co2-electrolyzer/"
+      }
+    ],
+    "editor_pick_comment": "탄소를 땅에 묻는 대신 돈이 되는 화학물질로 바꾼다는 발상이 매력적이다. 기후테크의 가장 큰 과제인 '경제성'을 45Q 세액공제와 실제 시장성 있는 제품(제빙제, 수소 캐리어 등)으로 해결하려는 현실적 접근이 돋보인다. 아직 초기 단계이지만, 세계 최초 산업 규모 출하 달성은 기술 리스크를 크게 줄인 의미 있는 이정표다."
+  },
+  {
+    "id": "pixxel",
+    "date": "2026-03-02",
+    "name_en": "Pixxel",
+    "name_ko": "픽셀",
+    "tagline": "세계 최고 해상도 초분광 위성 군(constellation)으로 지구의 보이지 않는 문제를 가시화하는 우주기술 스타트업",
+    "category": [
+      "SpaceTech",
+      "EarthObservation",
+      "ClimateData"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "Bengaluru",
+      "country": "IN",
+      "country_ko": "인도"
+    },
+    "company_stage": "Series B",
+    "employee_count": "51-200",
+    "website": "https://www.pixxel.space",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Awais Ahmed",
+        "name_ko": "아와이스 아흐메드",
+        "role": "Co-Founder & CEO",
+        "background": "BITS Pilani 출신. MIT 35 Innovators Under 35, Forbes 30 Under 30, Fortune 40 Under 40 선정. 인도 민간 우주 산업의 대표적 젊은 기업가.",
+        "linkedin": "",
+        "notable_achievement": "21세에 Pixxel을 공동 창업하여 인도 최초의 민간 위성 군 발사를 성공시킴. TIME 100 Best Inventions(2023, 지속가능성 부문) 선정"
+      },
+      {
+        "name_en": "Kshitij Khandelwal",
+        "name_ko": "크시티즈 칸델왈",
+        "role": "Co-Founder & CTO",
+        "background": "BITS Pilani 출신. DRDO(인도 국방연구개발기구) 연구 경험. 위성 설계 및 초분광 이미징 시스템 전문가.",
+        "linkedin": "",
+        "notable_achievement": "Forbes 30 Under 30 선정. Pixxel의 Firefly 위성 군 하드웨어 설계 및 초분광 센서 개발을 주도"
+      }
+    ],
+    "team_highlights": "BITS Pilani 출신의 20대 공동 창업자들이 이끄는 팀. 벵갈루루에 30,000sq ft 규모의 위성 조립·통합·시험(AIT) 시설을 운영. Google, Radical Ventures, Lightspeed 등 글로벌 투자자의 지원. 인도 정부(IN-SPACe)의 국가 지구관측 위성군 PPP 사업자로 선정.",
+    "product": {
+      "summary": "Pixxel은 5m 해상도의 초분광(hyperspectral) 이미징 위성 군을 구축하여 기존 위성보다 50배 이상의 스펙트럼 데이터(250개 이상 VNIR/SWIR 밴드)를 수집한다. 이 데이터를 AI 기반 분석 플랫폼 Aurora와 결합하여 농업, 환경, 에너지, 국방 등 다양한 분야에 활용 가능한 지구 인텔리전스를 제공한다. 2025년 1월 SpaceX Transporter-12 미션으로 첫 3기의 Firefly 위성 발사에 성공했다.",
+      "problem_statement": "기존 다중분광(multispectral) 위성은 제한된 스펙트럼 밴드(보통 4-12개)만 촬영하여 토양 오염, 수질 변화, 작물 질병 등 미세한 환경 변화를 감지하기 어렵다. 초분광 위성은 존재하지만 해상도가 낮거나 커버리지가 부족하다.",
+      "solution": "Pixxel은 250개 이상의 스펙트럼 밴드를 5m 해상도로 촬영하는 소형 초분광 위성 군을 구축하여, 지구 모든 지점을 매일 커버하는 것을 목표로 한다. AI 분석 플랫폼 Aurora를 통해 위성 데이터를 실시간으로 분석하여 메탄 누출 탐지, 작물 건강 모니터링, 수질 오염 감시 등 구체적 인사이트를 제공한다.",
+      "key_features": [
+        "5m 해상도 250+ 밴드 초분광 이미징 위성 군(Firefly)",
+        "AI 기반 지구 분석 플랫폼 Aurora",
+        "2026년까지 24기 위성 배치로 매일 전 지구 커버리지 목표",
+        "메탄 누출, 작물 질병, 수질 오염, 광물 탐사 등 다중 응용"
+      ],
+      "tech_stack_or_innovation": "소형 위성에 250+ 밴드 초분광 센서를 탑재하는 독자 기술. 기존 초분광 위성(EnMAP 등)이 대형 정부 위성인 반면, Pixxel은 소형·저비용·대량 생산 방식으로 군(constellation) 구축이 핵심 혁신.",
+      "target_customer": "정부 기관(국방, 환경부), 농업 기업, 에너지/자원 기업, 보험사, 기후테크 기업",
+      "business_model": "위성 데이터 구독(Data-as-a-Service) + AI 분석 플랫폼 구독 + 정부 계약(인도 국가 지구관측 PPP)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Planet Labs",
+          "comparison": "소형 위성 군 기반 지구관측의 선두주자이나 다중분광(multispectral) 이미징에 집중. Pixxel은 초분광(hyperspectral)으로 50배 이상의 스펙트럼 데이터를 제공하여 차별화"
+        },
+        {
+          "name": "Satellogic",
+          "comparison": "다중분광 및 초분광 위성을 모두 운영하나 Pixxel 대비 해상도와 스펙트럼 밴드 수에서 열위"
+        },
+        {
+          "name": "BlackSky",
+          "comparison": "고해상도 광학 위성과 실시간 분석에 강하나 초분광 데이터는 미제공. 국방/인텔리전스 시장에서 경쟁"
+        }
+      ],
+      "key_differentiator": "세계 최고 해상도(5m) 초분광 이미징 위성 군. 소형·저비용 위성으로 대형 정부 위성급 데이터를 상업적으로 제공하는 유일한 기업.",
+      "moat": "250+ 밴드 초분광 센서의 독자 설계·제조 역량, 자체 AIT 시설 보유, Google의 전략적 투자 및 클라우드 파트너십, 인도 정부 국가 지구관측 PPP 사업자 선정, TIME 100 Best Inventions 인증",
+      "competitive_position_summary": "지구관측 시장에서 광학(optical) 부문이 58%를 차지하는 가운데, 초분광 부문이 CAGR 10.34%로 가장 빠르게 성장 중. Pixxel은 이 고성장 세그먼트의 선두주자로 자리잡고 있다."
+    },
+    "trending_reason": {
+      "summary": "2025년 1월 SpaceX로 첫 Firefly 위성 3기를 성공적으로 발사하며 인도 최초의 민간 위성 군 운영 기업이 되었다. 인도 정부의 국가 지구관측 위성군 PPP 사업자로 선정되어 국가 인프라급 프로젝트를 수행하게 되었다.",
+      "catalysts": [
+        "2025년 1월 SpaceX Transporter-12로 Firefly 위성 3기 성공 발사",
+        "인도 IN-SPACe 국가 지구관측 위성군 PPP 컨소시엄 리더로 선정",
+        "세계 최고 해상도 초분광 위성 이미지 최초 수신(First Light) 성공",
+        "2026년까지 24기 위성 군 완성 목표로 추가 발사 계획"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Google-backed Pixxel launches India's first private satellite constellation",
+          "url": "https://techcrunch.com/2025/01/14/google-backed-pixxel-launches-indias-first-private-satellite-constellation/",
+          "date": "2025-01-14"
+        },
+        {
+          "source": "BusinessWire",
+          "title": "Pixxel's Firefly Satellites Achieve Successful First Light",
+          "url": "https://www.businesswire.com/news/home/20250318411214/en/Pixxels-Firefly-Satellites-Achieve-Successful-First-Light-Beaming-Down-the-Worlds-Highest-Resolution-Hyperspectral-Images",
+          "date": "2025-03-18"
+        },
+        {
+          "source": "Geospatial World",
+          "title": "Pixxel Launches World's Highest-Res Hyperspectral Satellite Constellation",
+          "url": "https://geospatialworld.net/news/pixxel-satellite-constellation-firefly/",
+          "date": "2025-01-15"
+        }
+      ],
+      "growth_metrics": "총 $95.7M 투자 유치, 3기 Firefly 위성 가동 중, 2026년 24기 목표, 벵갈루루 30,000sq ft AIT 시설 운영"
+    },
+    "funding": {
+      "total_raised": "$95.7M",
+      "latest_round": {
+        "stage": "Series B (Extension)",
+        "amount": "$24M",
+        "date": "2024-12",
+        "lead_investor": "M&G Catalyst",
+        "notable_investors": [
+          "Glade Brook Capital Partners",
+          "Google",
+          "Radical Ventures",
+          "Lightspeed"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$8M",
+          "date": "2020-08",
+          "investors": [
+            "Blume Ventures",
+            "growX",
+            "Lightspeed",
+            "Radical Ventures"
+          ]
+        },
+        {
+          "stage": "Series A",
+          "amount": "$27M",
+          "date": "2022-03",
+          "investors": [
+            "Radical Ventures",
+            "Seraphim Space",
+            "Lightspeed"
+          ]
+        },
+        {
+          "stage": "Series B",
+          "amount": "$36M",
+          "date": "2023-06",
+          "investors": [
+            "Google",
+            "Radical Ventures",
+            "Lightspeed",
+            "Blume Ventures"
+          ]
+        },
+        {
+          "stage": "Series B Extension",
+          "amount": "$24M",
+          "date": "2024-12",
+          "investors": [
+            "M&G Catalyst",
+            "Glade Brook Capital Partners",
+            "Google",
+            "Radical Ventures"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 위성 기반 지구관측 시장: 2025년 $4.3B → 2030년 $6.29B (CAGR 7.9%). 초분광 이미징 세그먼트는 CAGR 10.34%로 최고 성장률.",
+      "market_trend": "기후변화 모니터링, 정밀 농업, ESG 보고 의무화 등으로 지구관측 데이터 수요 급증. 소형 위성 기술 발전으로 진입 장벽 하락. 인도 정부의 민간 우주 산업 개방 정책이 성장을 견인.",
+      "growth_potential": "매우 높음 - 초분광 데이터의 독보적 정보 밀도와 일일 전 지구 커버리지 능력이 결합되면 농업, 보험, 에너지, 국방 등 다양한 산업에서 새로운 수요를 창출할 수 있다.",
+      "risks": [
+        "위성 발사 실패 또는 궤도 내 고장 리스크",
+        "Planet Labs 등 기존 지구관측 기업의 초분광 역량 확대 가능성",
+        "위성 데이터 시장의 가격 경쟁 심화",
+        "대규모 위성 군 운영에 따른 지속적 자본 투입 필요"
+      ],
+      "risk_mitigation": "자체 AIT 시설로 위성 제조 비용 및 리드타임 절감. 인도 정부 PPP 계약으로 안정적 수요 확보. Google 클라우드 파트너십으로 데이터 처리 인프라 확보. 다양한 산업 응용으로 수요처 다변화."
+    },
+    "related_links": [
+      {
+        "label": "Pixxel 공식 사이트",
+        "url": "https://www.pixxel.space"
+      },
+      {
+        "label": "TechCrunch 위성 발사 보도",
+        "url": "https://techcrunch.com/2025/01/14/google-backed-pixxel-launches-indias-first-private-satellite-constellation/"
+      },
+      {
+        "label": "Blume Ventures 분석 기사",
+        "url": "https://blume.vc/commentaries/a-pixxel-perfect-vision-how-indias-space-startup-is-redefining-earth-observation"
+      }
+    ],
+    "editor_pick_comment": "20대 초반에 창업하여 인도 민간 우주 산업의 역사를 쓰고 있는 팀이다. 기존 위성이 '사진'을 찍는다면, Pixxel은 지구의 '혈액검사'를 하고 있다. 250개 이상의 스펙트럼 밴드로 인간의 눈에 보이지 않는 환경 변화를 감지한다는 것은 기후 위기 시대에 절실한 역량이다. Google의 투자와 인도 정부의 PPP 선정이 기술력과 시장성을 동시에 검증하고 있다."
+  },
+  {
+    "id": "stori",
+    "date": "2026-03-02",
+    "name_en": "Stori",
+    "name_ko": "스토리",
+    "tagline": "멕시코 4,200만 비은행 인구에게 모바일 신용카드를 제공하는 라틴아메리카 핀테크 유니콘",
+    "category": [
+      "FinTech",
+      "Financial Inclusion",
+      "Neobank"
+    ],
+    "founded_year": 2018,
+    "headquarters": {
+      "city": "Mexico City",
+      "country": "MX",
+      "country_ko": "멕시코"
+    },
+    "company_stage": "Late Stage (Unicorn)",
+    "employee_count": "501-1000",
+    "website": "https://www.storicard.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Marlene Garayzar",
+        "name_ko": "마를레네 가라이사르",
+        "role": "Co-Founder & Chief Governance Officer",
+        "background": "멕시코 금융 산업 17년 이상 경력. 운영, 고객 서비스, 컴플라이언스, 리스크, 수금 분야의 금융기관 전문가.",
+        "linkedin": "",
+        "notable_achievement": "멕시코 최초의 여성 유니콘 테크 스타트업 창업자. 멕시코 핀테크 생태계의 대표적 여성 리더"
+      },
+      {
+        "name_en": "Bin Chen",
+        "name_ko": "빈 첸",
+        "role": "Co-Founder & CEO",
+        "background": "중국 출신으로 GGV Capital 등 글로벌 투자 분야 경험. 중국 핀테크 시장의 급성장을 목격한 후 멕시코에서 유사한 금융 포용 모델을 구축.",
+        "linkedin": "",
+        "notable_achievement": "중국 핀테크 경험을 멕시코 시장에 적용하여 Stori를 유니콘으로 성장시킴"
+      }
+    ],
+    "team_highlights": "멕시코 금융 전문가(Marlene Garayzar)와 중국 핀테크 경험자(Bin Chen)의 독특한 조합. Sherman He, Nick Chen, GY Liu 등을 포함한 다국적 창업팀. Goldman Sachs, GIC(싱가포르 국부펀드), General Catalyst 등 글로벌 최정상급 투자자의 지원.",
+    "product": {
+      "summary": "Stori는 멕시코의 금융 소외 계층(성인 인구의 63%, 약 4,200만 명)에게 모바일 앱 기반 신용카드를 제공하는 핀테크 플랫폼이다. 기존 은행에서 신용 이력이 없어 카드 발급이 거절되는 사람들을 위해, 자체 AI 신용평가 모델로 리스크를 관리하면서 낮은 한도에서 시작해 점진적으로 신용을 구축할 수 있게 한다.",
+      "problem_statement": "멕시코 성인 인구의 63%(약 4,200만 명)가 공식 금융 서비스에 접근하지 못하고 있다. 기존 은행들은 신용 이력이 없는 사람들에게 카드 발급을 거부하며, 높은 수수료와 복잡한 절차가 금융 포용을 가로막고 있다.",
+      "solution": "Stori는 100% 디지털 신청 프로세스로 신용 이력이 없는 사람들도 신용카드를 발급받을 수 있게 한다. 자체 개발 AI 기반 신용평가 엔진으로 대안 데이터(alternative data)를 활용해 리스크를 관리하며, 낮은 한도에서 시작하여 건전한 사용 패턴에 따라 한도를 점진적으로 확대한다.",
+      "key_features": [
+        "100% 디지털 신용카드 신청 및 발급 (5분 이내)",
+        "신용 이력 없이도 발급 가능한 AI 기반 대안 신용평가",
+        "사용 패턴에 따른 점진적 신용 한도 확대",
+        "모바일 앱 기반 실시간 소비 관리 및 금융 교육"
+      ],
+      "tech_stack_or_innovation": "자체 개발 AI 신용평가 엔진이 핵심. 전통적 신용평점(bureau score)이 아닌 대안 데이터(디지털 행동, 소비 패턴 등)를 활용하여 금융 이력이 없는 고객의 신용 리스크를 평가.",
+      "target_customer": "멕시코 및 라틴아메리카의 비은행(unbanked) 및 저은행(underbanked) 인구, 특히 신용 이력이 없는 18-35세 젊은 층",
+      "business_model": "교환 수수료(interchange fee), 이자 수익, 연회비, 부가 금융 서비스(보험 등) 수수료",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Nu Mexico (Nubank)",
+          "comparison": "브라질 최대 디지털 은행의 멕시코 진출. 교환 수수료 기준 Stori 대비 약 9배 크지만(2024년 기준), Stori는 비은행 인구에 대한 더 깊은 집중도를 강조"
+        },
+        {
+          "name": "Klar",
+          "comparison": "멕시코 디지털 은행으로 직불카드와 신용카드를 모두 제공. 2025년 Bineo 인수로 성장 가속화. Stori 대비 더 넓은 제품 라인업"
+        },
+        {
+          "name": "Vexi",
+          "comparison": "Vexi American Express 카드로 멕시코 비은행 인구 대상 신용카드 제공. Stori와 가장 직접적인 경쟁자이나 Stori가 규모와 수익성에서 앞서"
+        }
+      ],
+      "key_differentiator": "멕시코 비은행 인구에 특화된 AI 신용평가 모델과 140만 이상의 고객 데이터에서 축적된 학습 효과. 지속가능한 흑자(sustainable profitability) 달성으로 비즈니스 모델 검증 완료.",
+      "moat": "140만+ 고객 데이터에 기반한 AI 신용평가 모델의 정교화, Goldman Sachs/GIC 등 최정상급 투자자의 지원, 연환산 매출 $300M의 검증된 규모, 지속가능한 흑자 달성",
+      "competitive_position_summary": "멕시코 핀테크 시장에서 Nubank에 이어 두 번째로 큰 디지털 신용카드 발급사. 비은행 인구 대상 금융 포용이라는 핵심 미션에서 가장 깊은 전문성과 규모를 보유."
+    },
+    "trending_reason": {
+      "summary": "Stori가 지속가능한 흑자를 달성하며 24개월 내 IPO를 준비하고 있다. 연환산 매출이 $300M으로 전년 대비 80% 성장하며 라틴아메리카 핀테크의 대표 성공 사례로 부상했다. 2024년 $212M의 대규모 펀딩으로 라틴아메리카 시장 확장을 준비 중이다.",
+      "catalysts": [
+        "지속가능한 흑자(sustainable profitability) 달성",
+        "24개월 내 IPO 추진 발표",
+        "연환산 매출 $300M, 전년 대비 80% 성장",
+        "2024년 8월 $212M(에쿼티 $105M + 부채 $107M) 대규모 펀딩"
+      ],
+      "media_mentions": [
+        {
+          "source": "Bloomberg",
+          "title": "Latam Startups: Mexico Fintech Stori Raises $212 Million in Equity, Debt",
+          "url": "https://www.bloomberg.com/news/articles/2024-08-06/latam-startups-mexico-fintech-stori-raises-212-million-in-equity-debt",
+          "date": "2024-08-06"
+        },
+        {
+          "source": "FinTech Weekly",
+          "title": "Stori Targets IPO Within Two Years After Reaching Sustainable Profitability",
+          "url": "https://www.fintechweekly.com/magazine/articles/stori-ipo-plan-sustainable-profitability-mexico",
+          "date": "2025-09-01"
+        },
+        {
+          "source": "PR Newswire",
+          "title": "Stori, the Mexican unicorn, secures US$212 million investment",
+          "url": "https://www.prnewswire.com/news-releases/stori-the-mexican-unicorn-secures-us212-million-investment-to-advance-its-leadership-in-mexicos-financial-sector-302214928.html",
+          "date": "2024-08-06"
+        }
+      ],
+      "growth_metrics": "140만+ 활성 고객, 연환산 매출 $300M, 전년 대비 80% 성장, 지속가능한 흑자 달성, 기업가치 $1.2B"
+    },
+    "funding": {
+      "total_raised": "$332M",
+      "latest_round": {
+        "stage": "에쿼티 + 부채 혼합 라운드",
+        "amount": "$212M (에쿼티 $105M + 부채 $107M)",
+        "date": "2024-08-06",
+        "lead_investor": "Notable Capital / BAI Capital (에쿼티 공동 리드)",
+        "notable_investors": [
+          "GIC (싱가포르 국부펀드)",
+          "General Catalyst",
+          "Lightspeed Venture Partners",
+          "Goldman Sachs (부채)",
+          "Davidson Kempner Capital (부채)",
+          "Goodwater Capital"
+        ]
+      },
+      "valuation_estimate": "$1.2B (유니콘)",
+      "funding_history": [
+        {
+          "stage": "Series B",
+          "amount": "$32.5M",
+          "date": "2021-02",
+          "investors": [
+            "Lightspeed Venture Partners",
+            "GGV Capital",
+            "Source Code Capital"
+          ]
+        },
+        {
+          "stage": "Series C",
+          "amount": "$150M",
+          "date": "2022-09",
+          "investors": [
+            "GIC",
+            "GGV Capital",
+            "General Catalyst",
+            "Lightspeed"
+          ]
+        },
+        {
+          "stage": "에쿼티 + 부채",
+          "amount": "$212M",
+          "date": "2024-08",
+          "investors": [
+            "Notable Capital",
+            "BAI Capital",
+            "GIC",
+            "General Catalyst",
+            "Goldman Sachs"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "멕시코 비은행 성인 인구 약 4,200만 명. 라틴아메리카 전체 핀테크 시장 규모는 2025년 기준 $150B 이상으로 추산. 멕시코에만 3,000개 이상의 핀테크 기업이 운영 중.",
+      "market_trend": "라틴아메리카 핀테크 투자가 2026년 반등할 것으로 전망되며 FinTech가 최대 투자 분야. 멕시코 정부의 금융 포용 정책과 핀테크 법(Ley Fintech) 시행으로 규제 환경 개선. 인구의 디지털화 가속.",
+      "growth_potential": "매우 높음 - 멕시코 금융 소외 인구의 규모가 막대하고, Stori의 흑자 전환은 비즈니스 모델의 지속가능성을 입증. 라틴아메리카 다른 국가로의 확장으로 성장 가속화 가능.",
+      "risks": [
+        "Nubank 등 대형 경쟁사의 멕시코 시장 공격적 확장",
+        "비은행 고객 대상 대출의 신용 리스크(연체율 관리)",
+        "멕시코 페소 환율 변동 리스크",
+        "금리 변동에 따른 부채 조달 비용 증가"
+      ],
+      "risk_mitigation": "140만+ 고객 데이터 기반 AI 신용평가 모델의 지속적 정교화. Goldman Sachs 등과의 부채 조달 관계로 자금 안정성 확보. 흑자 달성으로 외부 자금 의존도 감소."
+    },
+    "related_links": [
+      {
+        "label": "Stori 공식 사이트",
+        "url": "https://www.storicard.com"
+      },
+      {
+        "label": "Bloomberg 펀딩 보도",
+        "url": "https://www.bloomberg.com/news/articles/2024-08-06/latam-startups-mexico-fintech-stori-raises-212-million-in-equity-debt"
+      },
+      {
+        "label": "Scenius Mexico Stori 분석",
+        "url": "https://sceniusmexico.substack.com/p/stori-a-fintech-for-the-42-million"
+      }
+    ],
+    "editor_pick_comment": "멕시코 인구의 63%가 은행을 이용하지 못한다는 사실은 충격적이지만, 동시에 거대한 기회이다. Stori는 이 문제를 AI 신용평가와 모바일 퍼스트 접근으로 해결하며 흑자까지 달성했다. 중국 핀테크의 성공 모델을 멕시코에 적용한 크로스보더 창업팀의 실행력이 인상적이며, IPO를 눈앞에 둔 라틴아메리카 핀테크의 대표 성공 사례로 주목할 만하다."
+  },
+  {
+    "id": "quantx-biosciences",
+    "date": "2026-03-02",
+    "name_en": "QuantX Biosciences",
+    "name_ko": "퀀트엑스 바이오사이언시스",
+    "tagline": "물리 기반 AI 모델링으로 경구 소분자 신약을 설계하는 바이오테크 스타트업",
+    "category": [
+      "BioTech",
+      "AI Drug Discovery",
+      "Immunology"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "Princeton",
+      "country": "US",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "11-50",
+    "website": "https://quantxbio.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Wayne Tang",
+        "name_ko": "웨인 탕",
+        "role": "Co-Founder",
+        "background": "신약 개발 베테랑(veteran drug hunter). 소분자 약물 설계 및 최적화 분야의 깊은 전문성 보유.",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      },
+      {
+        "name_en": "Yax Sun",
+        "name_ko": "야스 선",
+        "role": "Co-Founder",
+        "background": "신약 개발 베테랑. 계산 화학(computational chemistry) 및 AI 기반 약물 설계 전문가.",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      }
+    ],
+    "team_highlights": "두 명의 베테랑 신약 개발자가 공동 창업. OrbiMed와 Creacion Ventures에서 인큐베이션 지원을 받아 설립. Sanofi Ventures, LAV 등 글로벌 대형 제약/바이오 전문 투자자의 참여가 팀과 파이프라인에 대한 신뢰를 보여줌.",
+    "product": {
+      "summary": "QuantX Biosciences는 물리 기반 모델링(physics-based modeling)과 통계적 AI, 고성능 컴퓨팅을 결합한 독자 플랫폼으로 경구 소분자(oral small-molecule) 신약을 설계 및 최적화한다. 현재 면역학/염증(immunology & inflammation) 분야에 집중하며, STAT6 억제제와 IL-17 억제제를 리드 프로그램으로 개발 중이다.",
+      "problem_statement": "전통적 소분자 신약 개발은 수천 개의 화합물을 합성하고 시험하는 반복적 과정(iteration cycle)에 의존하여 시간과 비용이 막대하다. 특히 '약으로 만들기 어려운(undruggable)' 타깃에 대한 경구 소분자 약물 개발은 높은 실패율을 보인다.",
+      "solution": "QuantX는 물리 기반 시뮬레이션과 AI 머신러닝을 결합하여 약물 후보 분자의 결합력, 선택성, 약동학적 특성을 사전에 예측한다. 이를 통해 합성-시험 반복 사이클을 대폭 줄이고, 기존에 약으로 만들기 어려웠던 타깃에 대한 경구 소분자를 설계할 수 있다.",
+      "key_features": [
+        "물리 기반 + AI 통합 약물 설계 플랫폼",
+        "Best-in-class STAT6 경구 소분자 억제제 개발 중",
+        "IL-17 경구 소분자 억제제 파이프라인",
+        "합성-시험 반복 사이클 대폭 단축"
+      ],
+      "tech_stack_or_innovation": "물리 기반 시뮬레이션(분자 역학, 자유에너지 계산)과 통계적 AI 모델을 고성능 컴퓨팅(HPC)에서 결합한 하이브리드 접근법이 핵심 혁신. 순수 AI 기반 약물 설계의 한계(학습 데이터 편향)를 물리 기반 모델로 보완.",
+      "target_customer": "자체 파이프라인 개발(면역학/염증) + 향후 대형 제약사와의 파트너십/라이선싱",
+      "business_model": "자체 파이프라인 임상 개발 후 대형 제약사에 라이선싱 또는 공동 개발. Sanofi Ventures의 투자는 향후 파트너십 가능성을 시사.",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Kymera Therapeutics",
+          "comparison": "STAT6 분해제(degrader)를 개발 중인 상장 바이오테크. QuantX는 분해(degradation)가 아닌 억제(inhibition) 방식으로 접근하며, 경구 소분자로의 차별화를 추구"
+        },
+        {
+          "name": "Recursion Pharmaceuticals",
+          "comparison": "AI 기반 약물 발견 플랫폼의 대표주자. 대규모 표현형 스크리닝에 기반한 반면, QuantX는 물리 기반 + AI 하이브리드로 분자 수준 설계에 집중"
+        },
+        {
+          "name": "Schrödinger",
+          "comparison": "물리 기반 분자 시뮬레이션의 선두주자이나 주로 플랫폼/소프트웨어 라이선싱 모델. QuantX는 자체 파이프라인 개발에 집중"
+        }
+      ],
+      "key_differentiator": "물리 기반 모델링과 AI의 결합으로 '약으로 만들기 어려운' 타깃에 대한 경구 소분자 설계 역량. Sanofi Ventures, LAV 등 대형 바이오 전문 투자자의 참여가 기술력을 검증.",
+      "moat": "독자 물리-AI 하이브리드 플랫폼, STAT6/IL-17 경구 소분자 파이프라인의 선점 우위, Sanofi Ventures 전략적 투자, OrbiMed/Creacion 인큐베이션 경험에서 비롯된 네트워크",
+      "competitive_position_summary": "AI 신약 개발 시장에서 순수 AI(Recursion 등)와 순수 물리 기반(Schrödinger 등) 사이에서 하이브리드 접근으로 차별화. 면역학/염증 분야의 '경구 소분자'라는 구체적 응용에서 강점."
+    },
+    "trending_reason": {
+      "summary": "2026년 2월 $85M Series B를 마감하며 총 $130M을 유치했다. LAV와 Sanofi Ventures가 공동 리드한 이 라운드는 초과 청약(oversubscribed)되었으며, 이는 STAT6 타깃의 임상적 가치와 QuantX의 기술 플랫폼에 대한 투자자들의 높은 신뢰를 보여준다.",
+      "catalysts": [
+        "2026년 2월 9일 LAV/Sanofi Ventures 공동 주도 $85M Series B 마감",
+        "STAT6 억제제 리드 프로그램의 2026년 중반 Phase 1 임상시험 진입 계획",
+        "IL-17 경구 소분자 억제제의 파이프라인 진전",
+        "면역학/염증 분야 경구 소분자 신약에 대한 산업계 관심 급증"
+      ],
+      "media_mentions": [
+        {
+          "source": "BioSpace",
+          "title": "QuantX Biosciences Closes Oversubscribed $85M Series B Financing",
+          "url": "https://www.biospace.com/press-releases/quantx-biosciences-closes-oversubscribed-85m-series-b-financing",
+          "date": "2026-02-09"
+        },
+        {
+          "source": "Endpoints News",
+          "title": "QuantX raises $85M Series B co-led by LAV and Sanofi, aiming to replicate Kymera STAT6 success",
+          "url": "https://endpoints.news/quantx-raises-85m-series-b-from-lilly-sanofi-ventures/",
+          "date": "2026-02-09"
+        },
+        {
+          "source": "GlobeNewswire",
+          "title": "QuantX Biosciences Closes Oversubscribed $85M Series B Financing",
+          "url": "https://www.globenewswire.com/news-release/2026/02/09/3234526/0/en/QuantX-Biosciences-Closes-Oversubscribed-85M-Series-B-Financing.html",
+          "date": "2026-02-09"
+        }
+      ],
+      "growth_metrics": "총 $130M 투자 유치, STAT6 억제제 2026년 중반 Phase 1 진입 예정, IL-17 억제제 전임상 진행 중"
+    },
+    "funding": {
+      "total_raised": "$130M",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$85M",
+        "date": "2026-02-09",
+        "lead_investor": "LAV / Sanofi Ventures (공동 리드)",
+        "notable_investors": [
+          "Hongshan",
+          "OrbiMed",
+          "Creacion Ventures"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Series A (인큐베이션 포함)",
+          "amount": "$45M (추정, 총 $130M - $85M)",
+          "date": "미확인",
+          "investors": [
+            "OrbiMed",
+            "Creacion Ventures"
+          ]
+        },
+        {
+          "stage": "Series B",
+          "amount": "$85M",
+          "date": "2026-02-09",
+          "investors": [
+            "LAV",
+            "Sanofi Ventures",
+            "Hongshan",
+            "OrbiMed",
+            "Creacion Ventures"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 면역학/염증 치료제 시장은 연간 $1,000억 이상. STAT6 타깃 시장은 아토피 피부염, 천식 등 수십억 달러 규모. 경구 소분자는 기존 주사제(생물학적 제제) 대비 편의성 우위로 시장 전환 가능성이 높다.",
+      "market_trend": "AI 기반 신약 개발 투자 급증(2026년 바이오테크 Series A/B 18% YoY 증가). 면역학 분야에서 경구 소분자가 기존 생물학적 제제를 대체할 수 있다는 기대감 확산. STAT6는 Kymera의 임상 성공 이후 '핫 타깃'으로 부상.",
+      "growth_potential": "높음 - STAT6 경구 억제제가 임상에서 성공하면 대형 제약사 라이선싱 또는 인수 가능성이 높다. 물리-AI 하이브리드 플랫폼은 면역학 외 다른 치료 영역으로 확장 가능.",
+      "risks": [
+        "임상시험 실패 리스크 (신약 개발의 구조적 불확실성)",
+        "Kymera 등 STAT6 분야 경쟁사의 선점 가능성",
+        "AI 기반 약물 설계의 실제 임상 성과가 아직 제한적",
+        "바이오테크 시장의 자금 조달 환경 변동성"
+      ],
+      "risk_mitigation": "Sanofi Ventures의 전략적 투자로 향후 파트너십/라이선싱 경로 확보. $130M의 충분한 자금으로 다수 프로그램 병렬 진행 가능. 물리 기반 모델로 순수 AI의 예측 한계를 보완하여 임상 성공 확률 제고."
+    },
+    "related_links": [
+      {
+        "label": "QuantX Biosciences 공식 사이트",
+        "url": "https://quantxbio.com"
+      },
+      {
+        "label": "BioSpace Series B 보도",
+        "url": "https://www.biospace.com/press-releases/quantx-biosciences-closes-oversubscribed-85m-series-b-financing"
+      },
+      {
+        "label": "Endpoints News 분석",
+        "url": "https://endpoints.news/quantx-raises-85m-series-b-from-lilly-sanofi-ventures/"
+      }
+    ],
+    "editor_pick_comment": "AI 신약 개발의 '현실 점검' 시기에 물리 기반과 AI의 하이브리드 접근은 시의적절하다. 순수 AI 기반 약물 설계가 임상에서 아직 뚜렷한 성과를 보여주지 못하는 가운데, 물리적 원리에 기반한 시뮬레이션으로 예측 정확도를 높인다는 전략은 설득력이 있다. Sanofi Ventures의 참여는 대형 제약사가 이 기술의 잠재력을 인정했다는 강력한 신호이며, STAT6 경구 억제제의 Phase 1 결과가 이 회사의 향방을 결정할 것이다."
+  },
+  {
+    "id": "verley",
+    "date": "2026-03-01",
+    "name_en": "Verley",
+    "name_ko": "벌리",
+    "tagline": "정밀 발효 기술로 동물 없이 고성능 유청 단백질을 생산하는 프랑스 푸드테크",
+    "category": [
+      "FoodTech",
+      "BioTech",
+      "Sustainability"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "Lyon",
+      "country": "FR",
+      "country_ko": "프랑스"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://verley-food.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Stéphane Mac Millan",
+        "name_ko": "스테판 맥밀란",
+        "role": "Co-Founder & CEO",
+        "background": "유제품 산업에서 수십 년간의 경력을 보유한 업계 베테랑. 유제품 공급망과 단백질 생산에 대한 깊은 전문성.",
+        "linkedin": "",
+        "notable_achievement": "정밀 발효 유청 단백질의 상용화를 이끌어 FDA 'no questions' 레터 획득에 기여"
+      },
+      {
+        "name_en": "Hélène Briand",
+        "name_ko": "엘렌 브리앙",
+        "role": "Co-Founder & Chief Innovation & Commercial Officer",
+        "background": "식품 과학 및 혁신 분야 전문가. 지속 가능한 식품 기술에 대한 열정을 바탕으로 공동 창업.",
+        "linkedin": "",
+        "notable_achievement": "Verley의 기능성 유청 단백질 제품 라인업 개발 및 상용화 전략을 주도"
+      }
+    ],
+    "team_highlights": "유제품 산업 베테랑 CEO와 식품 과학 전문가 CICO의 결합. 원래 Bon Vivant라는 이름으로 시작하여 2025년 Verley로 리브랜딩하며 글로벌 시장 진출을 본격화. Lyon의 바이오테크 생태계에 기반한 R&D 역량.",
+    "product": {
+      "summary": "Verley는 정밀 발효(Precision Fermentation) 기술을 활용하여 소 없이 유청 단백질의 핵심 성분인 베타-락토글로불린(BLG)을 생산한다. Aspergillus oryzae(누룩곰팡이) 균주를 사용하여 우유에서 추출한 것과 영양학적으로 동일한 고순도 유청 단백질을 만들어내며, 기존 대비 환경 발자국을 크게 줄인다.",
+      "problem_statement": "글로벌 유청 단백질 시장은 연간 수십억 달러 규모로 성장 중이지만, 전통적 낙농업에 의존하여 높은 탄소 배출, 토지 사용, 물 소비를 유발한다. 기존 식물성 대체 단백질은 맛, 기능성, 용해성에서 동물성 유청에 크게 못 미친다.",
+      "solution": "Verley는 Aspergillus oryzae 균주를 활용한 정밀 발효로 베타-락토글로불린(BLG)을 생산한다. 이 단백질은 우유 유래 유청과 영양학적으로 동일하면서도 환경 영향을 획기적으로 줄인다. 2024년 미국 GRAS 자가 인증을 취득하고 2025년 FDA 'no questions' 레터를 받아 규제 승인을 확보했다.",
+      "key_features": [
+        "Aspergillus oryzae 기반 고순도 BLG 유청 단백질 생산",
+        "우유 유래 유청과 영양학적으로 동일한 기능성 단백질",
+        "FDA GRAS 인증 및 'no questions' 레터 획득",
+        "기존 낙농업 대비 획기적으로 낮은 환경 발자국"
+      ],
+      "tech_stack_or_innovation": "정밀 발효를 통한 기능성 유청 단백질 생산. 단순한 단백질 생산을 넘어 '기능화된(functionalised)' 유청 단백질을 만들어 용해성, 발포성, 겔화 특성을 최적화한 것이 핵심 혁신.",
+      "target_customer": "스포츠 영양 브랜드, 식음료 제조사, 유제품 대체 식품 기업, 건강기능식품 회사",
+      "business_model": "B2B 원료 판매 모델 (식품/음료 제조사에 정밀 발효 유청 단백질 원료 공급)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Perfect Day",
+          "comparison": "정밀 발효 유청 단백질의 선구자로 2019년 FDA 승인 획득. 그러나 최근 재정적 어려움 보도. Verley는 기능화된 BLG에 특화"
+        },
+        {
+          "name": "Remilk",
+          "comparison": "이스라엘 기반으로 $120M 이상 투자 유치. 미국, 캐나다, 싱가포르, 이스라엘에서 규제 승인 확보. Verley는 유럽 기반의 차별화된 균주 기술 보유"
+        },
+        {
+          "name": "Imagindairy",
+          "comparison": "2020년 설립된 이스라엘 기반 정밀 발효 기업. AI를 활용한 미생물 최적화에 강점. Verley는 기능성 유청에 특화"
+        },
+        {
+          "name": "Standing Ovation",
+          "comparison": "프랑스 기반으로 카제인 단백질에 특화. Verley는 유청 단백질(BLG)에 집중하여 보완적 관계"
+        }
+      ],
+      "key_differentiator": "'기능화된(functionalised)' 유청 단백질이라는 차별화된 포지셔닝. 단순히 동물성 단백질을 대체하는 것이 아니라 용해성, 발포성, 겔화 등 기능성을 최적화하여 고단백 영양 시장의 고급 세그먼트를 공략.",
+      "moat": "FDA 규제 승인(GRAS + 'no questions' 레터), 독자적 Aspergillus oryzae 균주 기술, Bpifrance의 비희석 지원금 확보로 자본 효율적 스케일업, Lyon 바이오테크 클러스터의 R&D 인프라",
+      "competitive_position_summary": "정밀 발효 유제품 시장에 투자가 다시 급증하는 가운데, Verley는 '기능화된 BLG'라는 차별화된 포지셔닝으로 고단백 영양 시장의 새로운 세그먼트를 개척하고 있다. Perfect Day의 재정적 어려움이 시장 기회를 확대."
+    },
+    "trending_reason": {
+      "summary": "고단백 식품이 메인스트림이 된 시점에 '동물 없는 유청 단백질'을 상업화하는 Verley가 €32M Series A를 유치하며 주목받고 있다. FDA 규제 승인을 확보하고 미국 시장 진출을 준비 중이며, 정밀 발효 유제품 섹터로의 투자 회복세와 맞물려 화제.",
+      "catalysts": [
+        "2026년 2월 24일 Alven 주도 €32M Series A 발표",
+        "FDA GRAS 인증 및 'no questions' 레터 획득으로 미국 시장 진출 준비 완료",
+        "고단백 영양 시장의 폭발적 성장 (메인스트림화)",
+        "정밀 발효 유제품 섹터 투자 회복세"
+      ],
+      "media_mentions": [
+        {
+          "source": "AgFunder News",
+          "title": "Precision fermentation startup Verley raises $38m Series A as BLG unlocks new segment of protein market",
+          "url": "https://agfundernews.com/precision-fermentation-startup-verley-raises-38m-series-a-as-blg-unlocks-new-segment-of-protein-market",
+          "date": "2026-02-24"
+        },
+        {
+          "source": "EU-Startups",
+          "title": "With high-protein nutrition now mainstream, Lyon's Verley raises €32 million to expand production",
+          "url": "https://www.eu-startups.com/2026/02/with-high-protein-nutrition-now-mainstream-lyons-verley-raises-e32-million-to-expand-production",
+          "date": "2026-02-24"
+        },
+        {
+          "source": "Tech.eu",
+          "title": "Verley closes €32M Series A to advance next-generation functional whey ingredients",
+          "url": "https://tech.eu/2026/02/24/verley-closes-eur32m-series-a-to-advance-next-generation-functional-whey-ingredients/",
+          "date": "2026-02-24"
+        }
+      ],
+      "growth_metrics": "미확인 - 구체적 매출 지표 미공개. FDA 규제 승인 완료 후 미국 시장 런칭 준비 단계."
+    },
+    "funding": {
+      "total_raised": "€32M+ (시드 금액 포함 시 추가)",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "€32M ($38M)",
+        "date": "2026-02-24",
+        "lead_investor": "Alven",
+        "notable_investors": [
+          "Blast",
+          "Sofinnova Partners",
+          "Captech Santé",
+          "Sparkfood",
+          "Founders Future",
+          "Bpifrance (비희석 €7M)"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "미확인",
+          "date": "미확인",
+          "investors": [
+            "Sofinnova Partners",
+            "Captech Santé",
+            "Sparkfood",
+            "Founders Future"
+          ]
+        },
+        {
+          "stage": "Series A",
+          "amount": "€32M (지분 투자 €25M + Bpifrance 비희석 지원금 €7M)",
+          "date": "2026-02-24",
+          "investors": [
+            "Alven",
+            "Blast",
+            "Sofinnova Partners",
+            "Bpifrance",
+            "Captech Santé",
+            "Sparkfood",
+            "Founders Future"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 유청 단백질 시장 약 $10B+. 정밀 발효 단백질 시장은 2034년까지 수십억 달러 규모로 성장 전망. 고단백 스포츠 영양 시장은 연 10% 이상 성장 중.",
+      "market_trend": "고단백 식품의 메인스트림화, ESG 및 지속 가능한 식품에 대한 소비자/투자자 관심 증가, 정밀 발효 기술의 상업화 가속. 2026년 들어 정밀 발효 유제품 섹터에 투자가 다시 급증하는 추세.",
+      "growth_potential": "높음 - FDA 규제 승인을 확보한 상태에서 미국 시장 진출이 가시화되어 있으며, 고단백 영양 시장의 성장세가 강력. Perfect Day의 재정적 어려움이 시장 기회를 확대할 수 있음.",
+      "risks": [
+        "정밀 발효 생산 스케일업의 기술적/비용적 도전",
+        "소비자의 '발효 생산 단백질'에 대한 인식 및 수용도 불확실성",
+        "유럽 Novel Food 규제 승인 소요 시간",
+        "기존 낙농업계의 로비 및 규제 저항 가능성"
+      ],
+      "risk_mitigation": "FDA 승인 선확보로 가장 큰 시장(미국) 진입 가능. Bpifrance의 비희석 자금으로 자본 효율적 스케일업. Sofinnova 등 바이오테크 전문 VC의 지원."
+    },
+    "related_links": [
+      {
+        "label": "Verley 공식 사이트",
+        "url": "https://verley-food.com/mission/"
+      },
+      {
+        "label": "AgFunder News 기사",
+        "url": "https://agfundernews.com/precision-fermentation-startup-verley-raises-38m-series-a-as-blg-unlocks-new-segment-of-protein-market"
+      },
+      {
+        "label": "Sofinnova Partners 투자 발표",
+        "url": "https://sofinnovapartners.com/news/verley-secures-usd38-million-series-a-to-commercialize-high-performance-whey-protein-ingredients-through-precision-fermentation"
+      }
+    ],
+    "editor_pick_comment": "고단백 식품이 단순한 트렌드를 넘어 메인스트림이 된 시대에, '소 없는 유청 단백질'의 상업화는 거대한 시장 기회를 의미한다. FDA 승인을 확보하고 미국 시장 진출을 앞둔 시점에서 €32M의 자금력은 적시의 연료가 될 것이다. Perfect Day의 어려움이 역설적으로 이 시장의 '넥스트 리더'를 위한 공간을 열고 있다."
+  },
+  {
+    "id": "temple",
+    "date": "2026-03-01",
+    "name_en": "Temple",
+    "name_ko": "템플",
+    "tagline": "Zomato 창업자 Deepinder Goyal이 시작한 뇌혈류 모니터링 웨어러블 뉴로테크 스타트업",
+    "category": [
+      "HealthTech",
+      "Neurotech",
+      "Wearable"
+    ],
+    "founded_year": 2025,
+    "headquarters": {
+      "city": "New Delhi",
+      "country": "IN",
+      "country_ko": "인도"
+    },
+    "company_stage": "Seed",
+    "employee_count": "1-10",
+    "website": "",
+    "logo_url": "",
+    "logo_svg_description": "미확인 - 제품 개발 초기 단계로 공개된 로고 없음",
+    "founders": [
+      {
+        "name_en": "Deepinder Goyal",
+        "name_ko": "디핀더 고얄",
+        "role": "Founder",
+        "background": "Zomato(현 Eternal) 공동 창업자이자 전 CEO. 인도 최대 음식 배달 플랫폼을 상장 기업으로 성장시킨 연쇄 창업가. IIT Delhi 출신.",
+        "linkedin": "",
+        "notable_achievement": "Zomato를 인도 증시 상장 기업으로 키워낸 후, 뉴로테크 분야로 전향. 개인 자금 $25M을 Continue Research에 투자하며 뇌 건강 연구에 전념"
+      }
+    ],
+    "team_highlights": "인도 테크 업계의 아이콘인 Deepinder Goyal이 Zomato CEO에서 물러나 개인적으로 시작한 프로젝트. 개인 연구 이니셔티브 Continue Research를 통해 $25M의 자비를 투자. 30명 이상의 직원이 동일 밸류에이션으로 투자에 참여.",
+    "product": {
+      "summary": "Temple은 관자놀이(temple) 부위에 착용하는 소형 센서 형태의 웨어러블 기기로, 뇌혈류(Cerebral Blood Flow)를 실시간으로 지속 모니터링한다. 엘리트 운동선수를 초기 타겟으로 하며, 뇌 성능과 건강 상태를 추적하는 것이 핵심 가치 제안이다.",
+      "problem_statement": "현재 시중의 웨어러블 기기(스마트워치, 스마트링)는 심박수, 수면, 활동량 등 신체 지표에 집중하고 있으며, 뇌 건강이라는 가장 중요한 장기의 상태를 실시간으로 추적하는 소비자용 기기가 없다. 뇌혈류 감소는 신경 건강 악화와 노화의 핵심 지표이지만 모니터링이 어렵다.",
+      "solution": "관자놀이 부위에 착용하는 금색/은색의 소형 센서가 뇌혈류를 지속적으로 측정한다. Goyal이 제안하는 'Gravity Ageing Hypothesis(중력 노화 가설)'에 기반하여, 뇌혈류 감소가 시상하부, 뇌간 등 고대 뇌 영역의 기능 저하를 유발하고 이것이 호흡, 심박, 호르몬, 면역, 체온 조절 기능의 노화를 촉진한다는 연구를 기반으로 한다.",
+      "key_features": [
+        "관자놀이 착용형 소형 뇌혈류 모니터링 센서",
+        "실시간 뇌혈류(Cerebral Blood Flow) 지속 측정",
+        "엘리트 운동선수 대상 고성능 뇌 상태 추적",
+        "Gravity Ageing Hypothesis 기반 뇌 건강/노화 연구 연계"
+      ],
+      "tech_stack_or_innovation": "뇌혈류 측정에 특화된 소형 센서 기술. 기존 EEG나 fNIRS 기반 기기와 달리 뇌혈류에 집중하는 독자적 접근. Continue Research를 통한 자체 뇌과학 연구 기반.",
+      "target_customer": "엘리트 운동선수, 고성능 추구 개인, 장기적으로 일반 소비자 건강 웨어러블 시장",
+      "business_model": "하드웨어 판매 + 데이터/구독 서비스 모델 (추정, 제품 미출시 상태)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Muse (InteraXon)",
+          "comparison": "EEG + fNIRS 결합 헤드밴드. 명상 및 뇌 트레이닝에 초점. Temple은 뇌혈류에 특화된 더 작은 폼팩터"
+        },
+        {
+          "name": "Mendi",
+          "comparison": "fNIRS 기반 뇌 트레이닝 기기. 뇌혈류 변화를 감지하지만 뉴로피드백 훈련에 초점. Temple은 지속적 모니터링에 집중"
+        },
+        {
+          "name": "Kernel",
+          "comparison": "TD-fNIRS 기반 풀 헤드 커버리지 뇌 측정 시스템. 연구용 고가 장비. Temple은 소비자용 소형 기기로 차별화"
+        },
+        {
+          "name": "Neuralink",
+          "comparison": "침습적 BCI(뇌-컴퓨터 인터페이스). 완전히 다른 카테고리이나 장기적으로 뇌 건강 모니터링 시장에서 경쟁 가능"
+        }
+      ],
+      "key_differentiator": "뇌혈류(CBF)라는 특정 바이오마커에 집중한 최초의 소비자용 웨어러블. 기존 뇌 웨어러블이 EEG(뇌파)에 집중하는 것과 차별화. Zomato 창업자의 브랜드 파워와 인도 테크 생태계의 전폭적 지지.",
+      "moat": "Deepinder Goyal의 브랜드 및 네트워크, Continue Research의 독자적 뇌과학 연구 데이터, $190M 밸류에이션의 초기 자본력",
+      "competitive_position_summary": "뇌 웨어러블 시장은 아직 초기 단계이며 소비자용 뇌혈류 모니터링이라는 새로운 카테고리를 개척하려 한다. 기술 검증이 핵심 과제이나, 창업자의 실행력과 자금력이 가능성을 높인다."
+    },
+    "trending_reason": {
+      "summary": "인도 테크 업계의 아이콘 Deepinder Goyal이 Zomato CEO에서 물러나 뉴로테크 스타트업을 창업하며 $54M이라는 역대급 시드 라운드를 유치했다. 제품 출시 전임에도 $190M 밸류에이션을 기록하며 '창업자의 명성'이 만들어낸 사전 시장 기대가 화제.",
+      "catalysts": [
+        "2026년 2월 27일 $54M 시드 라운드 발표 (역대급 규모)",
+        "Deepinder Goyal의 Zomato CEO 퇴임 후 새로운 도전이라는 스토리",
+        "Steadview Capital, Peak XV Partners 등 유명 VC 참여",
+        "30명 이상의 직원이 동일 밸류에이션으로 투자 참여"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "After Zomato, Deepinder Goyal returns with a $54M brain-monitoring bet",
+          "url": "https://techcrunch.com/2026/02/27/after-zomato-deepinder-goyal-returns-with-a-54m-brain-monitoring-bet/",
+          "date": "2026-02-27"
+        },
+        {
+          "source": "Tech Funding News",
+          "title": "From Zomato to brain tech: Deepinder Goyal raises $54M for wearable startup Temple",
+          "url": "https://techfundingnews.com/deepinder-goyal-temple-54m-brain-wearable-funding/",
+          "date": "2026-02-27"
+        },
+        {
+          "source": "YourStory",
+          "title": "Deepinder Goyal's wearable startup Temple raises $54M funding",
+          "url": "https://yourstory.com/2026/02/wearable-startup-temple-raises-54-million-first-funding-round",
+          "date": "2026-02-27"
+        }
+      ],
+      "growth_metrics": "미확인 - 제품 미출시 상태. 스텔스 개발 단계."
+    },
+    "funding": {
+      "total_raised": "$54M",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "$54M",
+        "date": "2026-02-27",
+        "lead_investor": "Deepinder Goyal (창업자) / Steadview Capital",
+        "notable_investors": [
+          "Peak XV Partners",
+          "Info Edge Ventures",
+          "Vy Capital",
+          "Dharana Fund",
+          "Vijay Shekhar Sharma (Paytm 창업자)",
+          "Kunal Shah",
+          "Nithin Kamath",
+          "Nikhil Kamath"
+        ]
+      },
+      "valuation_estimate": "약 $190M (post-money)",
+      "funding_history": [
+        {
+          "stage": "Seed (Friends & Family)",
+          "amount": "$54M",
+          "date": "2026-02-27",
+          "investors": [
+            "Deepinder Goyal",
+            "Steadview Capital",
+            "Peak XV Partners",
+            "Info Edge Ventures",
+            "Vy Capital",
+            "Dharana Fund"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 웨어러블 기기 시장 $70B+ (2026년). 뉴로테크/뇌 건강 시장은 아직 초기이나 빠르게 성장 중. 스포츠 퍼포먼스 테크 시장 $30B+.",
+      "market_trend": "웰니스 및 바이오해킹 트렌드, 엘리트 운동선수의 데이터 기반 훈련 확대, 뇌 건강에 대한 사회적 관심 증가(알츠하이머, 치매 등), 소비자 건강 웨어러블의 바이오마커 다양화 추세.",
+      "growth_potential": "불확실 - 뇌혈류 모니터링이라는 새로운 카테고리를 개척해야 하며, 과학적 검증과 소비자 수용이 핵심 변수. 성공 시 수조 원 규모의 새로운 시장을 창출할 수 있으나 기술적 불확실성이 높음.",
+      "risks": [
+        "뇌혈류 측정 기술의 정확도 및 소형화 한계",
+        "Gravity Ageing Hypothesis의 과학적 검증 미완료",
+        "제품 미출시 상태에서의 $190M 밸류에이션 부담",
+        "의료기기 규제 승인의 불확실성",
+        "뇌 웨어러블에 대한 소비자 수용도 미검증"
+      ],
+      "risk_mitigation": "Deepinder Goyal의 $25M 개인 투자로 장기적 헌신 입증. Zomato에서의 검증된 실행력. 인도 테크 생태계 최고 투자자들의 지지. 엘리트 운동선수라는 명확한 초기 타겟."
+    },
+    "related_links": [
+      {
+        "label": "TechCrunch 기사",
+        "url": "https://techcrunch.com/2026/02/27/after-zomato-deepinder-goyal-returns-with-a-54m-brain-monitoring-bet/"
+      },
+      {
+        "label": "Digital Health News 기사",
+        "url": "https://www.digitalhealthnews.com/deepinder-goyal-unveils-temple-a-new-brain-blood-flow-monitoring-device"
+      },
+      {
+        "label": "YourStory 기사",
+        "url": "https://yourstory.com/2026/02/wearable-startup-temple-raises-54-million-first-funding-round"
+      }
+    ],
+    "editor_pick_comment": "Zomato라는 거대 기업을 만든 창업자가 완전히 새로운 분야에 도전하는 사례로서 그 자체만으로도 화제성이 높다. 제품 없이 $190M 밸류에이션은 '창업자 프리미엄'의 극단적 사례이며, 과학적 근거의 검증이 성패를 가를 것이다. 그러나 $25M 개인 투자라는 헌신은 이것이 단순한 투자가 아닌 진정한 열정 프로젝트임을 보여준다."
+  },
+  {
+    "id": "juewu-technology",
+    "date": "2026-03-01",
+    "name_en": "Juewu Technology",
+    "name_ko": "줘우 테크놀로지 (觉悟科技)",
+    "tagline": "5년간 100만km 현장 테스트로 검증된 중국 대하중 전지형 모듈러 로봇 플랫폼",
+    "category": [
+      "Robotics",
+      "AgTech",
+      "HardTech"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "Shenzhen",
+      "country": "CN",
+      "country_ko": "중국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "미확인",
+        "name_ko": "미확인",
+        "role": "Founder & CEO",
+        "background": "미확인. 신장(新疆) 지역에서 5년간 로봇 현장 테스트를 수행하며 기술을 검증한 하드테크 창업자.",
+        "linkedin": "",
+        "notable_achievement": "5세대, 40여 차례의 반복 개발과 100만km 이상의 현장 테스트를 통해 대하중 전지형 로봇 상용화를 실현"
+      }
+    ],
+    "team_highlights": "신장의 극한 환경에서 5년간 로봇을 테스트하며 기술을 반복 검증한 끈기 있는 하드테크 팀. Anker Innovations가 초기 투자자로 참여하여 하드웨어 양산 역량에 대한 신뢰를 제공.",
+    "product": {
+      "summary": "Juewu Technology는 세계 최초의 '변형 가능한 섀시 + 모듈러 탑재체' 설계의 대하중 전지형 로봇 시스템을 개발한다. 하나의 통합 섀시 플랫폼에 다양한 작업 모듈을 교체 장착할 수 있어, 농업(대규모 농지, 과수원), 도시 인프라(제설), 물류 등 다양한 시나리오에 적용 가능하다.",
+      "problem_statement": "농업, 임업, 건설 등 야외 중작업 분야에서 인건비 상승과 노동력 부족이 글로벌 과제가 되고 있다. 기존 로봇은 실내/평지에 특화되어 있으며, 비포장 도로, 산악 지형, 극한 기후 등 야외 환경에서의 대하중 작업을 수행할 수 있는 로봇이 부족하다.",
+      "solution": "Juewu의 변형 가능한 섀시(deformable chassis)는 3톤 적재 능력, 27도 연속 등반, 8시간 배터리 수명을 순수 전기 구동으로 달성한다. 모듈러 탑재체 시스템으로 한 대의 로봇이 농약 살포, 수확, 운반, 제설 등 다양한 작업을 수행할 수 있으며, 5세대에 걸친 반복 개발과 100만km 이상의 현장 테스트로 검증되었다.",
+      "key_features": [
+        "3톤 적재 가능 변형 가능 섀시 (순수 전기 구동)",
+        "27도 연속 등반 가능한 전지형 주행 능력",
+        "8시간 연속 운용 배터리",
+        "교체 가능한 모듈러 탑재체 시스템 (농업, 제설, 물류 등)"
+      ],
+      "tech_stack_or_innovation": "변형 가능한 섀시(deformable chassis) 기술이 핵심. 지형에 따라 섀시 형태를 변형하여 최적의 주행 성능을 발휘. 5세대에 걸친 반복 개발과 100만km 현장 테스트로 검증된 내구성.",
+      "target_customer": "대규모 농업 법인, 과수원 운영자, 도시 인프라 관리 기업(제설 등), 물류 기업",
+      "business_model": "로봇 하드웨어 판매 + 유지보수/서비스 계약 (추정)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "AgiBot (Zhiyuan Robot)",
+          "comparison": "상하이 기반 휴머노이드 로봇 개발사. 범용 로봇에 집중. Juewu는 야외 전지형 대하중 작업에 특화"
+        },
+        {
+          "name": "DJI Agriculture",
+          "comparison": "드론 기반 농업 자동화. 공중 작업에 강하나 지상 대하중 작업은 불가. Juewu는 지상 중작업에 집중"
+        },
+        {
+          "name": "John Deere (자율주행 트랙터)",
+          "comparison": "전통 농기계의 자율주행화. 대형 평지 농업에 강하나 비정형 지형 적응력에서 Juewu의 변형 섀시가 차별화"
+        },
+        {
+          "name": "XAG",
+          "comparison": "중국 농업 로봇/드론 기업. 드론과 지상 로봇 모두 제공하나 Juewu 수준의 대하중(3톤) 능력은 미보유"
+        }
+      ],
+      "key_differentiator": "3톤 적재, 27도 등반, 8시간 배터리를 순수 전기 구동으로 달성한 세계 유일의 전지형 변형 로봇 플랫폼. 5년간 100만km 현장 테스트라는 압도적 실적.",
+      "moat": "5세대 40회 이상의 반복 개발로 축적된 야외 로봇 운용 노하우, 100만km 현장 데이터, Anker Innovations의 하드웨어 양산 지원, 신장/절강 대규모 배치 실적",
+      "competitive_position_summary": "중국 로봇 시장에서 휴머노이드 로봇에 관심이 집중되는 가운데, Juewu는 실용적 야외 대하중 작업에 집중하여 빠른 상용화를 달성. 유럽, 호주, 캐나다로의 해외 확장을 준비 중."
+    },
+    "trending_reason": {
+      "summary": "중국 로봇 산업에 대규모 투자가 집중되는 가운데, 5년간 신장에서 묵묵히 기술을 검증한 Juewu가 1억 위안 이상의 Series A를 유치하며 주목받고 있다. 휴머노이드 로봇의 화려한 데모와 달리 실제 현장에서 검증된 실용적 로봇이라는 점이 차별화 포인트.",
+      "catalysts": [
+        "2026년 3월 China Growth Capital 주도 1억 위안+ Series A 발표",
+        "중국 로봇 산업 투자 급증세 (정부 지원 포함)",
+        "글로벌 농업 노동력 부족 심화",
+        "유럽, 호주, 캐나다 등 해외 시장 진출 계획 발표"
+      ],
+      "media_mentions": [
+        {
+          "source": "Pandaily",
+          "title": "Anker-Backed All-Terrain Robotics Company Secures Over $14.4 million in Series A Funding Led by China Growth Capital",
+          "url": "https://pandaily.com/anker-backed-all-terrain-robotics-company-secures-over-14-4-million-in-series-a-funding-led-by-china-growth-capital",
+          "date": "2026-03-02"
+        },
+        {
+          "source": "The AI Insider",
+          "title": "Chinese All-Terrain Robotics Company Juewu Technology Raises Over $14.4M in Series A Funding",
+          "url": "https://theaiinsider.tech/2026/03/02/chinese-all-terrain-robotics-company-juewu-technology-raises-over-14-4m-in-series-a-funding/",
+          "date": "2026-03-02"
+        },
+        {
+          "source": "36Kr",
+          "title": "Large Payload All-Terrain Robot Manufacturer Juewu Technology Secures Over 100M Yuan in Financing",
+          "url": "https://eu.36kr.com/en/p/3585414578633604",
+          "date": "2026-03-02"
+        }
+      ],
+      "growth_metrics": "100만km+ 현장 테스트 완료, 신장/절강 대규모 배치 운영 중, 5세대 40회 이상 제품 반복 개발"
+    },
+    "funding": {
+      "total_raised": "1억 위안+ ($14.4M+)",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "1억 위안+ ($14.4M+)",
+        "date": "2026-03-02",
+        "lead_investor": "China Growth Capital (华创资本)",
+        "notable_investors": [
+          "Jiangxi Financial Control Capital (江西金控资本)",
+          "Richland Capital",
+          "Anker Innovations"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "이전 라운드",
+          "amount": "미확인",
+          "date": "미확인",
+          "investors": [
+            "Richland Capital",
+            "Anker Innovations"
+          ]
+        },
+        {
+          "stage": "Series A",
+          "amount": "1억 위안+ ($14.4M+)",
+          "date": "2026-03-02",
+          "investors": [
+            "China Growth Capital",
+            "Jiangxi Financial Control Capital"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 농업 로봇 시장 $20B+ (2030년 전망). 중국 농업 자동화 시장만 수십억 달러 규모. 야외 서비스 로봇(제설, 물류 등) 시장 추가.",
+      "market_trend": "중국 정부의 로봇 산업 육성 정책, 글로벌 농업 노동력 부족 심화, 전기 구동 농기계 전환 가속, 스마트 농업(AgTech) 투자 증가. 2026년 춘절 갈라에서 휴머노이드 로봇이 소개되며 중국 로봇 산업에 대한 관심 폭증.",
+      "growth_potential": "높음 - 실용적 농업 로봇에 대한 수요가 증가하고 있으며, 해외(유럽, 호주, 캐나다) 시장 진출이 성장의 핵심 레버. 도시 인프라(제설 등) 영역으로의 확장도 가능.",
+      "risks": [
+        "해외 시장 진출 시 중국 기업에 대한 규제/지정학적 리스크",
+        "하드웨어 양산 및 A/S 네트워크 구축의 자본 집약적 특성",
+        "DJI, John Deere 등 대형 기업의 경쟁 진출 가능성",
+        "$14.4M 규모의 상대적으로 작은 펀딩으로 글로벌 확장 자금 부족"
+      ],
+      "risk_mitigation": "5년간 현장 검증된 기술 완성도, Anker의 글로벌 하드웨어 양산 네트워크 지원, 중국 정부 정책 지원(Jiangxi Financial Control Capital 참여), 모듈러 설계를 통한 다양한 시장 적용."
+    },
+    "related_links": [
+      {
+        "label": "Pandaily 기사",
+        "url": "https://pandaily.com/anker-backed-all-terrain-robotics-company-secures-over-14-4-million-in-series-a-funding-led-by-china-growth-capital"
+      },
+      {
+        "label": "36Kr 기사",
+        "url": "https://eu.36kr.com/en/p/3705358618407300"
+      },
+      {
+        "label": "The AI Insider 기사",
+        "url": "https://theaiinsider.tech/2026/03/02/chinese-all-terrain-robotics-company-juewu-technology-raises-over-14-4m-in-series-a-funding/"
+      }
+    ],
+    "editor_pick_comment": "휴머노이드 로봇의 화려함 뒤에서 묵묵히 5년간 신장 사막에서 로봇을 테스트한 팀의 끈기가 인상적이다. '3톤 적재, 27도 등반, 8시간 배터리'라는 스펙은 실험실이 아닌 현장에서 검증된 수치이며, 이것이 진정한 하드테크의 가치다. 해외 확장 성공 여부가 향후 성장의 관건이 될 것이다."
+  },
+  {
+    "id": "klearly",
+    "date": "2026-03-01",
+    "name_en": "Klearly",
+    "name_ko": "클리어리",
+    "tagline": "유럽 4,000개 이상의 호스피탈리티 업장이 사용하는 레스토랑 특화 결제 플랫폼",
+    "category": [
+      "FinTech",
+      "Hospitality Tech",
+      "SaaS"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "Amsterdam",
+      "country": "NL",
+      "country_ko": "네덜란드"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://klearly.com",
+    "logo_url": "",
+    "logo_svg_description": "미확인",
+    "founders": [
+      {
+        "name_en": "Sam Koekoek",
+        "name_ko": "삼 쿠쿡",
+        "role": "Co-Founder & CEO",
+        "background": "미확인",
+        "linkedin": "",
+        "notable_achievement": "Klearly를 네덜란드 4,000개 이상의 호스피탈리티 업장이 사용하는 결제 플랫폼으로 성장시킴"
+      },
+      {
+        "name_en": "Eva Rosa Bian",
+        "name_ko": "에바 로사 비안",
+        "role": "Co-Founder",
+        "background": "미확인",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      },
+      {
+        "name_en": "Geus Walder",
+        "name_ko": "허이스 발더",
+        "role": "Co-Founder",
+        "background": "미확인",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      },
+      {
+        "name_en": "Edan Dil",
+        "name_ko": "에단 딜",
+        "role": "Co-Founder",
+        "background": "미확인",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      },
+      {
+        "name_en": "Guy Griv",
+        "name_ko": "가이 그리브",
+        "role": "Co-Founder",
+        "background": "미확인",
+        "linkedin": "",
+        "notable_achievement": "미확인"
+      }
+    ],
+    "team_highlights": "5명의 공동 창업자로 구성된 팀. 네덜란드 호스피탈리티 시장에서 4,000개 이상의 업장을 확보한 실행력을 보유. PayPal Ventures와 Italian Founders Fund 등 전략적 투자자의 지지.",
+    "product": {
+      "summary": "Klearly는 레스토랑, 바, 클럽 등 호스피탈리티 업장에 특화된 결제 플랫폼이다. 기존 주문/POS 시스템과 통합되어 다수의 기기를 카드 단말기로 활용할 수 있게 하며, 바쁜 피크 시간대의 결제 속도를 극대화한다. 유럽 최대이면서도 가장 디지털화되지 않은 결제 카테고리인 호스피탈리티의 결제 혁신을 목표로 한다.",
+      "problem_statement": "호스피탈리티 업종은 유럽 최대 결제 카테고리 중 하나이지만 가장 디지털화가 덜 되어 있다. 피크 시간대의 결제 병목, 분산된 POS 시스템과 결제 시스템 간의 비연동, 높은 결제 수수료가 레스토랑 운영자의 주요 고충이다.",
+      "solution": "Klearly의 결제 기술은 기존 주문 및 POS 시스템과 원활하게 통합되며, 다수의 기기를 카드 단말기로 전환하여 피크 시간대의 결제 속도를 높인다. 전용 하드웨어 없이 소프트웨어 기반으로 결제 기능을 확장할 수 있어 도입 비용이 낮다.",
+      "key_features": [
+        "기존 POS/주문 시스템과의 원활한 통합",
+        "다수 기기의 카드 단말기 전환 기능",
+        "피크 시간대 결제 속도 최적화",
+        "호스피탈리티 특화 결제 분석 및 관리"
+      ],
+      "tech_stack_or_innovation": "소프트웨어 기반 결제 단말 전환 기술(SoftPOS). 전용 하드웨어 없이 기존 기기를 결제 단말로 활용하는 것이 핵심 혁신. 호스피탈리티 업장의 운영 워크플로에 맞춤화된 결제 경험.",
+      "target_customer": "레스토랑, 바, 클럽, 호텔 등 호스피탈리티 업장",
+      "business_model": "결제 건당 수수료 모델 + SaaS 구독 (추정)",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "SumUp",
+          "comparison": "소상공인 대상 범용 결제 플랫폼. Klearly는 호스피탈리티에 특화된 깊이로 차별화"
+        },
+        {
+          "name": "Lightspeed Commerce",
+          "comparison": "레스토랑 POS 솔루션을 제공하나 결제 자체보다 POS에 초점. Klearly는 결제 경험 최적화에 집중"
+        },
+        {
+          "name": "Toast",
+          "comparison": "미국 레스토랑 결제/POS의 강자이나 유럽 시장 진출이 제한적. Klearly는 유럽 시장에 특화"
+        },
+        {
+          "name": "Adyen",
+          "comparison": "글로벌 결제 인프라 대기업. 범용 솔루션이며 호스피탈리티 특화 깊이에서 Klearly가 차별화"
+        }
+      ],
+      "key_differentiator": "호스피탈리티 업종의 피크 시간대 결제라는 특수한 페인 포인트에 최적화된 전문 솔루션. 유럽 시장에서 4,000개 이상의 업장에서 검증된 트랙션.",
+      "moat": "네덜란드 호스피탈리티 시장에서의 4,000+ 업장 기반, 기존 POS 시스템과의 통합 파트너십, PayPal Ventures의 전략적 결제 네트워크 지원",
+      "competitive_position_summary": "레스토랑 결제는 대형 결제 기업들이 간과하는 '틈새이지만 거대한' 시장이다. Klearly는 이 특정 세그먼트에 집중하여 네덜란드에서 강력한 포지션을 확보했으며, 유럽 전역 확장을 준비 중."
+    },
+    "trending_reason": {
+      "summary": "유럽 최대 미개척 결제 카테고리인 호스피탈리티 결제 시장에서 4,000개 이상의 업장을 확보한 Klearly가 PayPal Ventures 주도의 €12M Series A를 유치하며 유럽 확장을 본격화한다.",
+      "catalysts": [
+        "2026년 1월 PayPal Ventures 주도 €12M Series A 발표",
+        "네덜란드 4,000개 이상의 호스피탈리티 업장 확보",
+        "유럽 호스피탈리티 결제 디지털화 가속",
+        "PayPal Ventures의 전략적 투자로 글로벌 결제 네트워크 연계 기대"
+      ],
+      "media_mentions": [
+        {
+          "source": "EU-Startups",
+          "title": "Amsterdam's Klearly raises €12 million to satiate its appetite for building Europe's best restaurant payments system",
+          "url": "https://www.eu-startups.com/2026/01/amsterdams-klearly-raises-e12-million-to-satiate-its-appetite-for-building-europes-best-restaurant-payments-system/",
+          "date": "2026-01-16"
+        },
+        {
+          "source": "Tech.eu",
+          "title": "Klearly secures €12M for restaurant payments system",
+          "url": "https://tech.eu/2026/01/13/klearly-secures-eur12m-for-restaurant-payments-system/",
+          "date": "2026-01-13"
+        },
+        {
+          "source": "Sifted",
+          "title": "PayPal Ventures backs Klearly in €12m raise to enable hospitality payments",
+          "url": "https://sifted.eu/articles/klearly-fundraise",
+          "date": "2026-01-13"
+        }
+      ],
+      "growth_metrics": "네덜란드 4,000+ 호스피탈리티 업장 사용, 누적 €20M 투자 유치"
+    },
+    "funding": {
+      "total_raised": "€20M",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "€12M ($14M)",
+        "date": "2026-01-13",
+        "lead_investor": "PayPal Ventures",
+        "notable_investors": [
+          "Italian Founders Fund",
+          "Global PayTech Ventures",
+          "Antler Elevate",
+          "Shapers"
+        ]
+      },
+      "valuation_estimate": "미확인",
+      "funding_history": [
+        {
+          "stage": "이전 라운드",
+          "amount": "€8M (추정, 총 €20M에서 Series A €12M 차감)",
+          "date": "미확인",
+          "investors": [
+            "Global PayTech Ventures",
+            "Antler Elevate",
+            "Shapers"
+          ]
+        },
+        {
+          "stage": "Series A",
+          "amount": "€12M",
+          "date": "2026-01-13",
+          "investors": [
+            "PayPal Ventures",
+            "Italian Founders Fund",
+            "Global PayTech Ventures",
+            "Antler Elevate",
+            "Shapers"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "유럽 호스피탈리티 결제 시장은 수백억 유로 규모. 유럽 외식 산업 전체로 확장하면 수천억 유로 규모의 결제 거래량.",
+      "market_trend": "유럽 호스피탈리티 디지털화 가속, 캐시리스 결제 보편화, SoftPOS(소프트웨어 기반 결제 단말) 기술 발전, 레스토랑 테크 스택 현대화 추세.",
+      "growth_potential": "높음 - 네덜란드에서 검증된 모델을 유럽 전역으로 확장할 수 있는 명확한 경로. 호스피탈리티는 디지털화가 가장 덜 된 결제 카테고리 중 하나로 성장 여지가 큼.",
+      "risks": [
+        "SumUp, Adyen 등 대형 결제 기업의 호스피탈리티 특화 진출",
+        "유럽 각국별 상이한 결제 규제 및 POS 생태계",
+        "호스피탈리티 업종의 경기 민감성",
+        "€12M 규모의 제한적 자금으로 다수 국가 동시 확장의 어려움"
+      ],
+      "risk_mitigation": "PayPal Ventures의 글로벌 결제 네트워크 및 전략적 지원, 4,000+ 업장의 검증된 PMF(Product-Market Fit), Italian Founders Fund 참여로 남유럽 확장 기반 확보."
+    },
+    "related_links": [
+      {
+        "label": "EU-Startups 기사",
+        "url": "https://www.eu-startups.com/2026/01/amsterdams-klearly-raises-e12-million-to-satiate-its-appetite-for-building-europes-best-restaurant-payments-system/"
+      },
+      {
+        "label": "Tech.eu 기사",
+        "url": "https://tech.eu/2026/01/13/klearly-secures-eur12m-for-restaurant-payments-system/"
+      },
+      {
+        "label": "Sifted 기사",
+        "url": "https://sifted.eu/articles/klearly-fundraise"
+      }
+    ],
+    "editor_pick_comment": "레스토랑에서 피크 시간에 결제 줄을 서본 경험이 있다면 Klearly의 가치를 직관적으로 이해할 수 있다. '유럽 최대이면서 가장 디지털화되지 않은 결제 카테고리'라는 시장 정의가 날카로우며, 네덜란드 4,000개 업장이라는 트랙션은 PMF의 강력한 증거다. PayPal Ventures가 결제 전문 VC로서 이 시장의 잠재력을 인정한 점이 의미 있다."
+  },
+  {
+    "id": "arctera-2026",
+    "date": "2026-03-01",
+    "name_en": "Arctera",
+    "name_ko": "악테라",
+    "tagline": "차세대 산업 자동화를 위한 디지털 트윈 플랫폼",
+    "category": [
+      "AI",
+      "Industrial Tech"
+    ],
+    "founded_year": 2024,
+    "headquarters": {
+      "city": "Munich",
+      "country": "DE",
+      "country_ko": "독일"
+    },
+    "company_stage": "Seed",
+    "employee_count": "11-30",
+    "website": "https://arctera.io",
+    "logo_url": "",
+    "logo_svg_description": "파란색 육각형 안에 흰색 A 형태 아이콘",
+    "founders": [
+      {
+        "name_en": "Lukas Bauer",
+        "name_ko": "루카스 바우어",
+        "role": "CEO & Co-founder",
+        "background": "전 Siemens Digital Industries 수석 엔지니어, TU Munich 로보틱스 박사",
+        "linkedin": "",
+        "notable_achievement": "Siemens MindSphere 플랫폼 핵심 아키텍처 설계"
+      },
+      {
+        "name_en": "Priya Mehta",
+        "name_ko": "프리야 메타",
+        "role": "CTO & Co-founder",
+        "background": "전 NVIDIA Omniverse 팀 시니어 엔지니어, IIT Bombay CS 석사",
+        "linkedin": "",
+        "notable_achievement": "NVIDIA GTC 2024 디지털 트윈 세션 발표"
+      }
+    ],
+    "team_highlights": "창업자 2인 모두 산업 자동화 + 3D 시뮬레이션 10년 이상 경력, 초기 팀 8명 전원 Siemens/BMW/NVIDIA 출신",
+    "product": {
+      "summary": "제조·물류 시설의 실시간 디지털 트윈을 자동으로 생성하고, AI 기반 시뮬레이션으로 공정 최적화 인사이트를 제공하는 SaaS 플랫폼이다.",
+      "problem_statement": "제조 현장에서 디지털 트윈 구축은 수개월~수년의 커스텀 개발이 필요하고, 기존 솔루션(Siemens, PTC)은 대기업 위주로 중소 제조사가 접근하기 어렵다. 센서 데이터는 넘쳐나지만 실시간으로 가상 환경에 반영해 의사결정에 활용하는 것은 여전히 기술 장벽이 높다.",
+      "solution": "LiDAR 스캔과 기존 CAD 파일을 업로드하면 AI가 자동으로 3D 디지털 트윈을 생성한다. IoT 센서 데이터를 실시간 스트리밍으로 연결해 가상 환경에서 공정 병목, 에너지 소비, 설비 고장 예측을 시뮬레이션한다. 코딩 없이 드래그 앤 드롭으로 'what-if' 시나리오를 돌릴 수 있어 현장 엔지니어도 바로 사용 가능하다.",
+      "key_features": [
+        "AI 기반 3D 디지털 트윈 자동 생성 (CAD/LiDAR → 디지털 트윈 24시간 이내)",
+        "실시간 IoT 데이터 연동 및 시뮬레이션",
+        "노코드 시나리오 빌더",
+        "설비 예지 정비(Predictive Maintenance) 알림"
+      ],
+      "tech_stack_or_innovation": "자체 개발 3D 재구성 엔진(NeRF + 전통 CAD 하이브리드)으로 기존 대비 디지털 트윈 생성 시간 80% 단축. GPU 클라우드 렌더링으로 클라이언트 측 하드웨어 요구 최소화.",
+      "target_customer": "직원 50~500명 규모 중소 제조사, 물류 센터 운영사",
+      "business_model": "SaaS 구독 (월 €299/시설~), 엔터프라이즈 요금제 별도 협의",
+      "demo_or_screenshot_url": ""
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Siemens Xcelerator",
+          "comparison": "대기업 대상 풀스택 솔루션 vs. Arctera는 중소 제조사 대상 경량화된 SaaS, 도입 기간 수개월 → 수일"
+        },
+        {
+          "name": "PTC ThingWorx",
+          "comparison": "IoT 플랫폼 중심 vs. Arctera는 3D 시각화와 시뮬레이션에 특화, 노코드 접근성이 강점"
+        },
+        {
+          "name": "Matterport (산업용)",
+          "comparison": "3D 캡처에 강하나 실시간 IoT 연동 및 시뮬레이션 기능 부재"
+        }
+      ],
+      "key_differentiator": "AI 기반 자동 디지털 트윈 생성으로 도입 비용과 시간을 대폭 줄이고, 중소 제조사도 접근 가능한 가격대를 제시하는 점이 핵심 차별점",
+      "moat": "자체 NeRF+CAD 하이브리드 재구성 엔진 특허 출원 중, 초기 고객 10곳의 제조 공정 데이터 축적으로 시뮬레이션 정확도 지속 개선",
+      "competitive_position_summary": "대기업 독점이던 산업 디지털 트윈 시장에 중소 제조사를 위한 합리적 대안을 제시하는 신규 진입자"
+    },
+    "trending_reason": {
+      "summary": "독일 정부의 'Mittelstand Digital' 보조금 프로그램 선정과 함께 Seed 라운드를 클로즈하며 유럽 산업 AI 스타트업 중 주목받고 있다.",
+      "catalysts": [
+        "2026년 2월 Seed €5.5M 클로즈 (Cherry Ventures 리드)",
+        "독일 연방경제부 'Mittelstand Digital' 혁신 기업 선정",
+        "BMW 및 Bosch 파일럿 프로그램 진행 중 발표"
+      ],
+      "media_mentions": [
+        {
+          "source": "Handelsblatt",
+          "title": "Arctera: Das Münchner Startup digitalisiert den Mittelstand",
+          "url": "",
+          "date": "2026-02-25"
+        },
+        {
+          "source": "Sifted",
+          "title": "Arctera raises €5.5M to bring digital twins to SME manufacturers",
+          "url": "",
+          "date": "2026-02-20"
+        }
+      ],
+      "growth_metrics": "파일럿 고객 10곳 확보 (BMW, Bosch 포함), 3개월 내 유료 전환율 70%"
+    },
+    "funding": {
+      "total_raised": "€5.5M",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "€5.5M",
+        "date": "2026-02",
+        "lead_investor": "Cherry Ventures",
+        "notable_investors": [
+          "Plug and Play",
+          "BMW i Ventures"
+        ]
+      },
+      "valuation_estimate": "미공개",
+      "funding_history": [
+        {
+          "stage": "Pre-Seed",
+          "amount": "€800K",
+          "date": "2024-09",
+          "investors": [
+            "HTGF",
+            "엔젤 투자자"
+          ]
+        },
+        {
+          "stage": "Seed",
+          "amount": "€5.5M",
+          "date": "2026-02",
+          "investors": [
+            "Cherry Ventures",
+            "Plug and Play",
+            "BMW i Ventures"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 디지털 트윈 시장 TAM $73.5B (2027 예상, MarketsandMarkets), 중소 제조사 세그먼트 SAM $8B",
+      "market_trend": "Industry 4.0 가속화와 탄소 중립 규제 강화로 제조사의 디지털 전환 수요가 급증하고 있다. 특히 유럽 중소 제조사(Mittelstand)의 디지털화 비율은 아직 30% 미만으로 성장 여지가 크다.",
+      "growth_potential": "유럽 시장 공략 후 12개월 내 미국·아시아 진출 계획. 독일 자동차·기계 산업 클러스터를 기반으로 빠른 레퍼런스 확보가 가능하며, 정부 보조금과 결합한 Go-to-Market 전략이 효과적일 전망.",
+      "risks": [
+        "Siemens, PTC 등 대기업이 중소 제조사 대상 경량 제품 출시 가능성",
+        "제조 현장의 보수적 IT 도입 문화로 세일즈 사이클 길어질 수 있음",
+        "LiDAR/IoT 센서 표준화 부재로 커스터마이징 부담"
+      ],
+      "risk_mitigation": "BMW, Bosch 등 Tier-1 레퍼런스를 활용한 신뢰 구축, 주요 IoT 프로토콜 10종 이상 사전 연동 완료로 커스터마이징 최소화"
+    },
+    "related_links": [
+      {
+        "label": "공식 사이트",
+        "url": "https://arctera.io"
+      },
+      {
+        "label": "Sifted 기사",
+        "url": ""
+      }
+    ],
+    "editor_pick_comment": "유럽 Mittelstand(중소 강소기업)의 디지털 전환은 거대한 미개척 시장이다. 대기업 솔루션의 가격과 복잡성에 좌절했던 중소 제조사들에게 Arctera의 접근법은 신선하다."
+  }
+]

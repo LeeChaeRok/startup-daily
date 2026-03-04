@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"npm run build 2>&1\",\"timeout\":60000,\"description\":\"Run Vite build to verify all components compile\"}",
+  "error": "Exit code 1\n\n> startup-daily@0.0.0 build\n> vite build\n\nvite v7.3.1 building client environment for production...\ntransforming...\n✓ 12 modules transformed.\n✗ Build failed in 95ms\nerror during build:\nCould not resolve \"./components/StartupCard.jsx\" from \"src/App.jsx\"\nfile: /Users/roki/Desktop/project/startup-new/startup-daily/src/App.jsx\n    at getRollupError (file:///Users/roki/Desktop/project/startup-new/startup-daily/node_modules/rollup/dist/es/shared/parseAst.js:402:41)\n    at error (file:///U...",
+  "timestamp": "2026-03-04T12:33:05.720Z",
+  "retry_count": 1
+}
