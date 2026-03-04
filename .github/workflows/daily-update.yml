@@ -1,0 +1,37 @@
+name: Daily Startup Update
+
+on:
+  schedule:
+    # Every day at 8:00 AM KST (23:00 UTC previous day)
+    - cron: '0 23 * * *'
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Anthropic SDK
+        run: npm install @anthropic-ai/sdk
+
+      - name: Generate daily startups
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-daily.mjs
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/startups.json
+          DATE=$(date +%Y-%m-%d)
+          git diff --cached --quiet || git commit -m "chore: add daily startups for ${DATE}"
+          git push
