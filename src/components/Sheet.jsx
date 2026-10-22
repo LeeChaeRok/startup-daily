@@ -1,0 +1,60 @@
+import { useEffect, useId, useRef } from 'react'
+import Icon from './Icon.jsx'
+
+/**
+ * Bottom sheet on mobile, centered dialog on desktop. Uses the native
+ * <dialog> for focus trapping, Esc handling and inert background.
+ */
+export default function Sheet({ open, onClose, title, children, footer }) {
+  const ref = useRef(null)
+  const opener = useRef(null)
+  const titleId = useId()
+
+  useEffect(() => {
+    const dlg = ref.current
+    if (!dlg) return
+    if (open && !dlg.open) {
+      opener.current = document.activeElement
+      dlg.showModal()
+    } else if (!open && dlg.open) {
+      dlg.close()
+    }
+  }, [open])
+
+  useEffect(() => {
+    const dlg = ref.current
+    if (!dlg) return
+    const onClose = () => opener.current?.focus?.()
+    dlg.addEventListener('close', onClose)
+    return () => dlg.removeEventListener('close', onClose)
+  }, [])
+
+  return (
+    <dialog
+      ref={ref}
+      className="sheet"
+      aria-labelledby={titleId}
+      onCancel={(e) => {
+        e.preventDefault()
+        onClose()
+      }}
+      onClick={(e) => {
+        if (e.target === ref.current) onClose()
+      }}
+    >
+      <div className="sheet__panel">
+        <div className="sheet__handle" aria-hidden="true" />
+        <div className="sheet__head">
+          <h2 id={titleId} className="sheet__title">
+            {title}
+          </h2>
+          <button type="button" className="icon-btn" onClick={onClose} aria-label="닫기">
+            <Icon name="close" />
+          </button>
+        </div>
+        <div className="sheet__body">{children}</div>
+        {footer && <div className="sheet__foot">{footer}</div>}
+      </div>
+    </dialog>
+  )
+}

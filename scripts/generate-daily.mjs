@@ -1,139 +1,230 @@
 #!/usr/bin/env node
 /**
- * Daily startup data generator using Claude API
- * Runs via GitHub Actions cron every morning
+ * Daily startup issue generator (runs from GitHub Actions every morning KST).
+ * LLM calls go through OpenRouter: Claude Haiku first, Sonnet as fallback.
+ *
+ *   node scripts/generate-daily.mjs                 generate today's issue into src/data/startups.json
+ *   node scripts/generate-daily.mjs --out tmp.json  write the merged result elsewhere (dry run)
+ *   node scripts/generate-daily.mjs --candidates c.json --out tmp.json
+ *                                                   skip the LLM: run selection, link checks and merge on a
+ *                                                   JSON array of finished profiles (offline testing)
+ *
+ * Env: OPENROUTER_API_KEY (required unless --candidates)
+ *      OPENROUTER_MODELS   comma-separated, first = primary (default: Haiku 5.5, then Sonnet 5.5)
+ *      ISSUE_DATE          YYYY-MM-DD (default: today in KST)
+ *      RETAIN_ISSUES       issues kept in startups.json (default 30)
+ *
+ * Pipeline: discover candidates (web search) → selection rules → deep research per company
+ * (web search, one call each) → selection rules again → link verification → merge.
  */
-import Anthropic from "@anthropic-ai/sdk";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { merge, normalize, selectCandidates, stripUrl, verifyLinks } from './lib/pipeline.mjs'
+import { createClient, extractJson, modelsFromEnv, OpenRouterError } from './lib/openrouter.mjs'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_PATH = path.join(__dirname, "../src/data/startups.json");
+const here = path.dirname(fileURLToPath(import.meta.url))
+const DATA_PATH = path.join(here, '../src/data/startups.json')
+const META_PATH = path.join(here, '../src/data/meta.json')
 
-const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
+const WANT = 5
+const DISCOVER = 12 // over-ask: selection rules and failed research drop some
+const RESEARCH_PARALLEL = 3
 
-async function main() {
-  const client = new Anthropic();
+const args = process.argv.slice(2)
+const flag = (name) => {
+  const i = args.indexOf(name)
+  return i >= 0 ? args[i + 1] : null
+}
+const outPath = flag('--out') ? path.resolve(flag('--out')) : DATA_PATH
+const candidatesPath = flag('--candidates')
+const retainIssues = Number(process.env.RETAIN_ISSUES || 30)
 
-  // Load existing data to avoid duplicates
-  const existing = JSON.parse(fs.readFileSync(DATA_PATH, "utf-8"));
-  const existingNames = existing.map((s) => s.name_en);
-  const existingDates = [...new Set(existing.map((s) => s.date))];
+// Today in Korea — the workflow runs at 23:00 UTC, which is already tomorrow in KST.
+const kstToday = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10)
+const date = process.env.ISSUE_DATE || kstToday
 
-  // Check if today's data already exists
-  if (existingDates.includes(today)) {
-    console.log(`Data for ${today} already exists. Skipping.`);
-    process.exit(0);
-  }
+/* ---------- Prompts ---------- */
 
-  // Keep only last 7 days of data
-  const sevenDaysAgo = new Date();
-  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-  const cutoff = sevenDaysAgo.toISOString().split("T")[0];
+const RULES = `You research rising startups for "Startup Daily", a Korean publication whose readers want companies they have NOT heard of yet, explained in depth.
 
-  console.log(`Generating 5 startups for ${today}...`);
-  console.log(`Existing startups to avoid: ${existingNames.join(", ")}`);
+Selection rules (hard):
+- Private and independent today: not listed, not acquired, not shut down, not in bankruptcy. Confirm with a search.
+- Seed through Series C; strongly prefer Series B or earlier.
+- Not famous: skip household names and companies that already dominate tech press (OpenAI, Cursor, Perplexity, Hugging Face, Stripe level).
+- A real "why now" from the last 90 days before ${date}: a funding round, launch, notable customer or hiring signal, with a dated source.
 
-  const prompt = `You are a startup research analyst. Generate data for 5 trending startups for date ${today}.
+Sources: every URL you output must be a page you actually saw in your search results. Never construct or guess a URL. If you have nothing real, leave the field empty.`
 
-IMPORTANT RULES:
-- Do NOT include any of these already-covered startups: ${existingNames.join(", ")}
-- Select startups from at least 3 different categories and 3 different regions
-- Focus on early-to-mid stage startups with recent funding, media coverage, or Product Hunt rankings
-- All text content should be in Korean (한국어), with proper nouns in English
-- Return ONLY a valid JSON array, no markdown code blocks, no explanation
+function discoveryPrompt(avoid) {
+  return `Find ${DISCOVER} candidate startups for the ${date} issue. Search broadly: recent funding announcements, launches, accelerator demo days, regional tech press (Korea, Japan, Europe, LatAm, India, Africa, North America).
 
-Each startup must follow this exact JSON schema:
-{
-  "id": "slug-yyyy (unique)",
-  "date": "${today}",
-  "name_en": "English Name",
-  "name_ko": "한국어 이름",
-  "tagline": "한 줄 소개",
-  "category": ["Category1", "Category2"],
-  "founded_year": 2024,
-  "headquarters": {"city": "City", "country": "XX", "country_ko": "국가명"},
-  "company_stage": "Seed/Series A/B/C+",
-  "employee_count": "11-50",
-  "website": "https://example.com",
-  "logo_url": "",
-  "logo_svg_description": "로고 설명",
-  "founders": [{"name_en": "Name", "name_ko": "이름", "role": "CEO", "background": "배경", "linkedin": "", "notable_achievement": "성과"}],
-  "team_highlights": "팀 특징",
-  "product": {
-    "summary": "제품 요약 3-4문장",
-    "problem_statement": "해결하는 문제 2-3문장",
-    "solution": "솔루션 설명 3-4문장",
-    "key_features": ["기능1", "기능2", "기능3"],
-    "tech_stack_or_innovation": "기술 혁신 설명",
-    "target_customer": "타겟 고객",
-    "business_model": "비즈니스 모델",
-    "demo_or_screenshot_url": ""
-  },
-  "competitive_landscape": {
-    "direct_competitors": [{"name": "Competitor", "comparison": "비교 설명"}],
-    "key_differentiator": "핵심 차별점",
-    "moat": "경쟁 우위",
-    "competitive_position_summary": "포지션 요약"
-  },
-  "trending_reason": {
-    "summary": "주목받는 이유 2-3문장",
-    "catalysts": ["촉매1", "촉매2"],
-    "media_mentions": [{"source": "매체명", "title": "기사 제목", "url": "", "date": "YYYY-MM-DD"}],
-    "growth_metrics": "성장 지표"
-  },
-  "funding": {
-    "total_raised": "$XXM",
-    "latest_round": {"stage": "Series A", "amount": "$XXM", "date": "YYYY-MM", "lead_investor": "투자사", "notable_investors": ["투자자1"]},
-    "valuation_estimate": "기업가치 추정",
-    "funding_history": [{"stage": "Seed", "amount": "$XM", "date": "YYYY-MM", "investors": ["투자자"]}]
-  },
-  "market_outlook": {
-    "tam_sam_som": "시장 규모",
-    "market_trend": "시장 트렌드 2-3문장",
-    "growth_potential": "성장 잠재력 2-3문장",
-    "risks": ["리스크1", "리스크2", "리스크3"],
-    "risk_mitigation": "리스크 대응 전략"
-  },
-  "related_links": [{"label": "공식 사이트", "url": "https://..."}],
-  "editor_pick_comment": "에디터 코멘트 한 줄"
+Cover at least 4 sectors and 4 countries. Korea-based companies are welcome.
+Do not include any of these already-covered companies: ${avoid.join(', ')}
+
+Reply with ONLY a JSON object:
+{"candidates": [{"name_en": "", "name_ko": "", "website": "https://…", "country_ko": "국가명", "company_stage": "Seed | Series A | Series B | Series C", "status": "active", "why_now": "one sentence with the date", "evidence_url": "https://…"}]}`
 }
 
-Return exactly 5 startups as a JSON array. Ensure diversity in categories (AI, FinTech, HealthTech, CleanTech, SaaS, Web3, BioTech, EdTech, SpaceTech, Robotics, etc.) and regions (North America, Europe, Asia, etc.).`;
+const PROFILE_SHAPE = `{
+  "name_en": "", "name_ko": "한국어 표기", "tagline": "한 줄 소개(40자 이내)",
+  "category": ["분야1", "분야2"], "founded_year": 2023,
+  "headquarters": {"city": "City", "country": "Country", "country_ko": "국가명"},
+  "company_stage": "Seed | Series A | Series B | Series C", "status": "active | acquired | public | closed",
+  "employee_count": "11-50", "website": "https://…",
+  "founders": [{"name_en": "", "name_ko": "", "role": "", "background": "", "notable_achievement": ""}],
+  "team_highlights": "",
+  "product": {"summary": "", "problem_statement": "", "solution": "", "key_features": [""],
+              "tech_stack_or_innovation": "", "target_customer": "", "business_model": ""},
+  "competitive_landscape": {"direct_competitors": [{"name": "", "comparison": ""}],
+              "key_differentiator": "", "moat": "", "competitive_position_summary": ""},
+  "trending_reason": {"summary": "", "catalysts": [""], "growth_metrics": "",
+              "media_mentions": [{"source": "", "title": "", "url": "https://…", "date": "YYYY-MM-DD"}]},
+  "funding": {"total_raised": "$12M", "valuation_estimate": "$80M (추정)",
+              "latest_round": {"stage": "", "amount": "$8M", "date": "YYYY-MM", "lead_investor": "", "notable_investors": [""]},
+              "funding_history": [{"stage": "", "amount": "", "date": "YYYY-MM", "lead_investor": ""}]},
+  "market_outlook": {"tam_sam_som": "", "market_trend": "", "growth_potential": "", "risks": [""], "risk_mitigation": ""},
+  "related_links": [{"title": "", "url": "https://…"}],
+  "editor_pick_comment": "한 줄 코멘트"
+}`
 
-  const response = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
-    max_tokens: 8000,
-    messages: [{ role: "user", content: prompt }],
-  });
+function researchPrompt(c) {
+  return `Research this company in depth for the ${date} issue: ${c.name_en}${c.website ? ` (${c.website})` : ''}${c.country_ko ? `, ${c.country_ko}` : ''}.
+Lead: ${c.why_now || '—'}
 
-  const text = response.content[0].text.trim();
+Search for: the official site, founders and their backgrounds, the latest funding round and investors, what the product does and for whom, direct competitors, and press coverage from the last 90 days. Re-check that the company is still private and independent; set "status" accordingly.
 
-  // Parse JSON (handle potential markdown code blocks)
-  let jsonStr = text;
-  if (jsonStr.startsWith("```")) {
-    jsonStr = jsonStr.replace(/^```(?:json)?\n?/, "").replace(/\n?```$/, "");
+Writing: all prose in Korean (proper nouns stay in English), concrete and specific, no hype. Numbers you could not confirm are marked "(추정)"; unknown amounts are "비공개", never a bare unit like "M+". media_mentions only lists articles you actually opened in search results. editor_pick_comment is one sharp sentence.
+
+Reply with ONLY a JSON object in this shape:
+${PROFILE_SHAPE}`
+}
+
+/* ---------- LLM steps ---------- */
+
+/** Parse JSON from a reply; if the model wrapped or mangled it, one cheap no-web repair call. */
+async function parseOrRepair(llm, text, kind = 'object') {
+  try {
+    return extractJson(text, kind)
+  } catch {
+    const fixed = await llm.chat({
+      user: `Convert the following into one valid JSON ${kind}. Keep every field and value; do not add facts. Output JSON only.\n\n${text}`,
+      json: kind === 'object',
+      maxTokens: 16000,
+    })
+    return extractJson(fixed.text, kind)
+  }
+}
+
+async function discover(llm, avoid, searched) {
+  const r = await llm.chat({ system: RULES, user: discoveryPrompt(avoid), web: true, maxResults: 10 })
+  r.citations.forEach((c) => searched.add(stripUrl(c.url)))
+  const parsed = await parseOrRepair(llm, r.text)
+  const list = Array.isArray(parsed) ? parsed : parsed.candidates
+  if (!Array.isArray(list)) throw new Error('Discovery returned no candidate list')
+  console.log(`Discovery (${r.model}): ${list.length} candidates, ${r.citations.length} citations`)
+  return list
+}
+
+async function research(llm, candidate, searched) {
+  try {
+    const r = await llm.chat({ system: RULES, user: researchPrompt(candidate), web: true, maxResults: 8 })
+    r.citations.forEach((c) => searched.add(stripUrl(c.url)))
+    const profile = await parseOrRepair(llm, r.text)
+    console.log(`  researched ${candidate.name_en} (${r.model}, ${r.citations.length} citations)`)
+    return { ...profile, _model: r.model }
+  } catch (err) {
+    console.log(`  research failed for ${candidate.name_en}: ${err.message}`)
+    return null
+  }
+}
+
+async function mapLimit(items, limit, fn) {
+  const out = new Array(items.length)
+  let i = 0
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, async () => {
+      while (i < items.length) {
+        const idx = i++
+        out[idx] = await fn(items[idx])
+      }
+    }),
+  )
+  return out
+}
+
+const isComplete = (p) => p?.name_en && p.tagline && p.product?.summary && p.trending_reason?.summary
+
+/* ---------- Main ---------- */
+
+async function main() {
+  const existing = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'))
+
+  if (!candidatesPath && existing.some((s) => s.date === date)) {
+    console.log(`Issue ${date} already exists. Skipping.`)
+    return
   }
 
-  const newStartups = JSON.parse(jsonStr);
+  const searched = new Set()
+  let profiles
+  let llm = null
 
-  if (!Array.isArray(newStartups) || newStartups.length !== 5) {
-    throw new Error(`Expected 5 startups, got ${newStartups?.length}`);
+  if (candidatesPath) {
+    profiles = JSON.parse(fs.readFileSync(candidatesPath, 'utf-8'))
+    console.log(`Using ${profiles.length} profiles from ${candidatesPath} (no LLM call)`)
+  } else {
+    const models = modelsFromEnv()
+    llm = createClient({ apiKey: process.env.OPENROUTER_API_KEY, models, log: console.log })
+    console.log(`Issue ${date} via OpenRouter → ${models.join(' → ')}`)
+
+    const avoid = [...new Set(existing.map((s) => s.name_en))]
+    const leads = await discover(llm, avoid, searched)
+    const { accepted: shortlist, rejected } = selectCandidates(leads, existing, WANT + 3, { maxPerCountry: 3 })
+    for (const r of rejected) console.log(`  reject lead ${r.name}: ${r.reason}`)
+    if (shortlist.length < 3) throw new Error(`Only ${shortlist.length} leads passed the selection rules`)
+
+    console.log(`Researching ${shortlist.length} companies…`)
+    profiles = (await mapLimit(shortlist, RESEARCH_PARALLEL, (c) => research(llm, c, searched))).filter(isComplete)
   }
 
-  // Filter out old data (keep last 7 days)
-  const recentData = existing.filter((s) => s.date >= cutoff);
-  const merged = [...newStartups, ...recentData];
+  // Deep research can surface an acquisition or listing the lead missed — apply the rules again.
+  const existingForDedup = candidatesPath ? existing.filter((s) => s.date !== date) : existing
+  const { accepted, rejected } = selectCandidates(profiles, existingForDedup, WANT)
+  for (const r of rejected) console.log(`  reject ${r.name}: ${r.reason}`)
+  if (accepted.length < 3) throw new Error(`Only ${accepted.length} profiles passed the selection rules`)
 
-  fs.writeFileSync(DATA_PATH, JSON.stringify(merged, null, 2), "utf-8");
+  const generatedAt = new Date().toISOString()
+  const normalized = accepted.map(({ _model, ...c }) =>
+    normalize(c, { date, model: _model || 'manual', generatedAt }),
+  )
+  const { profiles: verified, kept, dropped } = await verifyLinks(normalized, {
+    searched,
+    checkedAt: generatedAt,
+    log: console.log,
+  })
+  console.log(`Links: kept ${kept}, dropped ${dropped} unverifiable`)
 
-  console.log(`Success! Added 5 startups for ${today}`);
-  console.log(`Total entries: ${merged.length} (removed ${existing.length - recentData.length} old entries)`);
-  console.log("New startups:", newStartups.map((s) => s.name_en).join(", "));
+  const merged = merge(existing, verified, retainIssues)
+  fs.writeFileSync(outPath, JSON.stringify(merged, null, 2) + '\n', 'utf-8')
+
+  if (outPath === DATA_PATH) {
+    const issueDates = [...new Set(merged.map((s) => s.date))]
+    const meta = {
+      last_issue_date: issueDates[0],
+      issue_count: issueDates.length,
+      generated_at: generatedAt,
+      models: [...new Set(verified.map((p) => p.model))],
+    }
+    fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2) + '\n', 'utf-8')
+  }
+
+  console.log(`Wrote ${verified.length} profiles for ${date} → ${path.relative(process.cwd(), outPath)}`)
+  console.log(verified.map((p) => `  ${p.name_en} (${p.company_stage}, ${p.headquarters?.country_ko})`).join('\n'))
+  if (llm) console.log(`OpenRouter cost: $${llm.cost().toFixed(4)}`)
 }
 
 main().catch((err) => {
-  console.error("Error:", err.message);
-  process.exit(1);
-});
+  if (err instanceof OpenRouterError) console.error(err.message)
+  else console.error('Error:', err.message)
+  process.exit(1)
+})

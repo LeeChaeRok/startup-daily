@@ -1,0 +1,12 @@
+{"t":0,"agent":"system","event":"skill_invoked","skill_name":"harness:harness"}
+{"t":0,"agent":"a96900d","agent_type":"general-purpose","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"af9bca6","agent_type":"general-purpose","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"a96900d","agent_type":"general-purpose","event":"agent_stop","success":true,"duration_ms":349050}
+{"t":0,"agent":"ab063bf","agent_type":"general-purpose","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"af9bca6","agent_type":"general-purpose","event":"agent_stop","success":true,"duration_ms":377702}
+{"t":0,"agent":"a0e8e26","agent_type":"general-purpose","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"ab063bf","agent_type":"general-purpose","event":"agent_stop","success":true,"duration_ms":465970}
+{"t":0,"agent":"a0e8e26","agent_type":"general-purpose","event":"agent_stop","success":true,"duration_ms":492330}
+{"t":0,"agent":"a8af874","agent_type":"general-purpose","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"a8af874","agent_type":"general-purpose","event":"agent_stop","success":true,"duration_ms":561748}
+{"t":0,"agent":"system","event":"skill_invoked","skill_name":"claude-api"}

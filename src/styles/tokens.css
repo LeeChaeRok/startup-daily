@@ -1,0 +1,134 @@
+/* ============================================================
+   Startup Daily — design tokens ("원장과 인주")
+   Warm newsprint + ink + one seal-ink accent. Spec:
+   _workspace/02_visual-designer_system.md
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+  --sd-bg: #F3EFE6;
+  --sd-surface: #FAF8F3;
+  --sd-surface-2: #E9E3D6;
+  --sd-ink: #1A1915;
+  --sd-ink-2: #45413A;
+  --sd-ink-3: #69645A;
+  --sd-line: #D6CFC0;
+  --sd-line-ui: #827B6D;
+  --sd-line-strong: #1A1915;
+  --sd-accent: #B7321C;
+  --sd-accent-ink: #FFFFFF;
+  --sd-accent-soft: #F6DED6;
+  --sd-positive: #1E6B3F;
+  --sd-positive-soft: #DCEBDF;
+  --sd-warning: #8A5A00;
+  --sd-warning-soft: #F5E7C8;
+  --sd-focus: #B7321C;
+  --sd-on-ink: #F3EFE6;
+  --sd-logo-bg: #FFFFFF;
+  --sd-scrim: rgb(26 25 21 / 0.48);
+
+  --sd-mono-0-bg: #DCE3E8; --sd-mono-0-fg: #24384A;
+  --sd-mono-1-bg: #DEE5D4; --sd-mono-1-fg: #33452A;
+  --sd-mono-2-bg: #EEDBCD; --sd-mono-2-fg: #6A3219;
+  --sd-mono-3-bg: #ECE1C4; --sd-mono-3-fg: #5A4411;
+  --sd-mono-4-bg: #D3E5E1; --sd-mono-4-fg: #1C4943;
+  --sd-mono-5-bg: #EFD7D4; --sd-mono-5-fg: #6D2A25;
+  --sd-mono-6-bg: #D9DCE6; --sd-mono-6-fg: #2D3550;
+  --sd-mono-7-bg: #1A1915; --sd-mono-7-fg: #F3EFE6;
+
+  --sd-shadow-1: 0 1px 0 var(--sd-line);
+  --sd-shadow-2: 0 2px 8px rgb(26 25 21 / 0.08), 0 0 0 1px var(--sd-line);
+  --sd-shadow-3: 0 12px 32px rgb(26 25 21 / 0.16), 0 0 0 1px var(--sd-line);
+
+  /* type */
+  --sd-font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --sd-font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, "Pretendard Variable", monospace;
+  --sd-fs-display: clamp(30px, 24.2px + 1.55vw, 44px);
+  --sd-fs-title-1: clamp(26px, 21.9px + 1.1vw, 36px);
+  --sd-fs-title-2: clamp(22px, 20.3px + 0.44vw, 26px);
+  --sd-fs-headline: clamp(20px, 18.3px + 0.44vw, 24px);
+  --sd-fs-title-3: 18px;
+  --sd-fs-row: 17px;
+  --sd-fs-body: clamp(17px, 16.6px + 0.11vw, 18px);
+  --sd-fs-body-sm: 15px;
+  --sd-fs-caption: 13px;
+  --sd-fs-label: 13px;
+  --sd-fs-micro: 12px;
+  --sd-fs-data-xl: clamp(24px, 21.9px + 0.55vw, 30px);
+  --sd-fs-data: 15px;
+  --sd-measure: 36em;
+  --sd-measure-narrow: 30em;
+
+  /* space & layout */
+  --sd-gutter: 20px;
+  --sd-container: 1200px;
+  --sd-header-h: 52px;
+  --sd-chipnav-h: 48px;
+  --sd-tabbar-h: 56px;
+  --sd-sticky-top: calc(var(--sd-header-h) + env(safe-area-inset-top));
+  --sd-anchor-offset: calc(var(--sd-sticky-top) + var(--sd-chipnav-h) + 12px);
+  --sd-tap: 44px;
+
+  --sd-radius-1: 2px;
+  --sd-radius-2: 4px;
+  --sd-radius-3: 12px;
+
+  --sd-z-sticky: 20;
+  --sd-z-header: 30;
+  --sd-z-tabbar: 30;
+  --sd-z-scrim: 40;
+  --sd-z-sheet: 50;
+  --sd-z-toast: 60;
+
+  /* motion */
+  --sd-dur-1: 120ms;
+  --sd-dur-2: 200ms;
+  --sd-dur-3: 320ms;
+  --sd-ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --sd-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --sd-ease-std: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --sd-bg: #111317;
+  --sd-surface: #181B20;
+  --sd-surface-2: #21252C;
+  --sd-ink: #ECE7DC;
+  --sd-ink-2: #B8B2A6;
+  --sd-ink-3: #969085;
+  --sd-line: #2E333B;
+  --sd-line-ui: #6B717C;
+  --sd-line-strong: #ECE7DC;
+  --sd-accent: #FF7452;
+  --sd-accent-ink: #1A0E0A;
+  --sd-accent-soft: #3A1D16;
+  --sd-positive: #5CC98A;
+  --sd-positive-soft: #16301F;
+  --sd-warning: #E8B24A;
+  --sd-warning-soft: #33280F;
+  --sd-focus: #FF7452;
+  --sd-on-ink: #111317;
+  --sd-logo-bg: #ECE7DC;
+  --sd-scrim: rgb(0 0 0 / 0.6);
+
+  --sd-mono-0-bg: #22303B; --sd-mono-0-fg: #BCD0DF;
+  --sd-mono-1-bg: #263222; --sd-mono-1-fg: #C3D6B3;
+  --sd-mono-2-bg: #3A271C; --sd-mono-2-fg: #EBC3A8;
+  --sd-mono-3-bg: #352D18; --sd-mono-3-fg: #E3CF94;
+  --sd-mono-4-bg: #1C3330; --sd-mono-4-fg: #A8D8CF;
+  --sd-mono-5-bg: #3A2221; --sd-mono-5-fg: #ECB8B2;
+  --sd-mono-6-bg: #262B3B; --sd-mono-6-fg: #C2C9E0;
+  --sd-mono-7-bg: #ECE7DC; --sd-mono-7-fg: #111317;
+
+  --sd-shadow-2: 0 0 0 1px var(--sd-line);
+  --sd-shadow-3: 0 16px 40px rgb(0 0 0 / 0.5), 0 0 0 1px var(--sd-line);
+}
+
+@media (min-width: 640px) {
+  :root { --sd-gutter: 32px; }
+}
+@media (min-width: 1024px) {
+  :root { --sd-gutter: 40px; --sd-header-h: 64px; }
+}

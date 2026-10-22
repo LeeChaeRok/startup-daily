@@ -1,158 +1,206 @@
-import { useState, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import StartupCard from './components/StartupCard.jsx'
-import startups from './data/startups.json'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { AppHeader, Footer, TabBar } from './components/Chrome.jsx'
+import { ToastProvider } from './components/Toast.jsx'
+import { EmptyState } from './components/bits.jsx'
+import StartupRow from './components/StartupRow.jsx'
+import { IssueHeader, IssueList, IssueMobile, IssueOverview, IssueRail } from './screens/Issue.jsx'
+import Detail, { DetailRail } from './screens/Detail.jsx'
+import { useContextList } from './screens/detail-hooks.jsx'
+import Explore from './screens/Explore.jsx'
+import Saved from './screens/Saved.jsx'
+import About from './screens/About.jsx'
+import { byId, dates, issueNo } from './lib/data.js'
+import { navigate, useMediaQuery, useRoute } from './lib/hooks.js'
+import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
+import { longDate } from './lib/format.js'
 
-export default function App() {
-  // Get unique dates sorted descending (newest first)
-  const dates = useMemo(() => {
-    const unique = [...new Set(startups.map((s) => s.date))]
-    unique.sort((a, b) => b.localeCompare(a))
-    return unique
+/* ---------- Route → screen ---------- */
+
+function resolve({ parts, params }) {
+  const [head, arg] = parts
+  if (!head) return { kind: 'issue', date: dates[0], section: 'issue' }
+  if (head === 'd' && dates.includes(arg)) return { kind: 'issue', date: arg, section: 'issue' }
+  if (head === 's' && byId(arg)) return { kind: 'detail', id: arg, from: params.get('from'), section: params.get('from') === 'saved' ? 'saved' : 'issue' }
+  if (head === 'explore') return { kind: 'explore', section: 'explore' }
+  if (head === 'saved') return { kind: 'saved', section: 'saved' }
+  if (head === 'about') return { kind: 'about', section: 'about' }
+  return { kind: 'missing', section: null, head, arg }
+}
+
+function titleFor(r) {
+  if (r.kind === 'issue') return `제${issueNo(r.date)}호 ${longDate(r.date)} — Startup Daily`
+  if (r.kind === 'detail') return `${byId(r.id).name_ko} — Startup Daily`
+  if (r.kind === 'explore') return '탐색 — Startup Daily'
+  if (r.kind === 'saved') return '저장함 — Startup Daily'
+  if (r.kind === 'about') return '소개·선정 기준 — Startup Daily'
+  return '찾을 수 없음 — Startup Daily'
+}
+
+/* ---------- Scroll restoration + focus on route change ----------
+   A new history entry (link, typed URL, navigate()) starts at the top; an
+   entry seen before (back/forward) restores its own scroll position.      */
+
+function useRouteEffects(routeKey, title) {
+  const prevKey = useRef(null)
+
+  useEffect(() => {
+    const onScroll = () => {
+      const entry = currentEntry()
+      if (entry) scrollMemory.set(entry.key, window.scrollY)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const [dateIndex, setDateIndex] = useState(0)
-  const currentDate = dates[dateIndex]
-  const todayStartups = startups.filter((s) => s.date === currentDate)
-  const [cardIndex, setCardIndex] = useState(0)
-  const startup = todayStartups[cardIndex] || todayStartups[0]
+  useLayoutEffect(() => {
+    document.title = title
+    const entry = claimEntry()
+    if (entry.first) {
+      prevKey.current = routeKey
+      return
+    }
+    // same screen, different query (explore filters): keep position
+    if (prevKey.current === routeKey) return
+    prevKey.current = routeKey
+    window.scrollTo(0, entry.fresh ? 0 : scrollMemory.get(entry.key) || 0)
+    document.querySelector('main h1')?.focus({ preventScroll: true })
+  })
+}
 
-  const changeDate = (newIdx) => {
-    setDateIndex(newIdx)
-    setCardIndex(0)
-  }
+function goBackFrom(route) {
+  if (currentEntry()?.depth > 0) window.history.back()
+  else if (route.kind === 'detail') navigate(route.from === 'saved' ? '/saved' : `/d/${byId(route.id).date}`)
+  else navigate('/')
+}
 
-  const formatDate = (dateStr) => {
-    const d = new Date(dateStr + 'T00:00:00')
-    return d.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'short' })
-  }
+/* ---------- Desktop side list ---------- */
 
-  return (
-    <div style={{ minHeight: '100vh', background: '#f5f5f7' }}>
-      {/* Header */}
-      <header style={{
-        position: 'sticky', top: 0, zIndex: 50,
-        background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid #e5e5ea', padding: '16px 24px',
-      }}>
-        <div style={{ maxWidth: 720, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div>
-            <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#1a1a2e' }}>
-              Startup Daily
-            </div>
-            <div style={{ fontSize: 12, color: '#888', marginTop: 2 }}>
-              매일 전 세계 떠오르는 스타트업을 깊이 있게
-            </div>
-          </div>
-          <div style={{ fontSize: 13, color: '#666' }}>
-            {new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </div>
+function SideList({ route }) {
+  const startup = route.kind === 'detail' ? byId(route.id) : null
+  const ctx = useContextList(startup, route.from)
+  if (route.kind === 'detail' && route.from === 'saved') {
+    return (
+      <aside className="split__list" aria-label="저장한 회사">
+        <div className="side-head">
+          <a href="#/saved" className="side-head__back">
+            저장함
+          </a>
         </div>
-      </header>
-
-      <main style={{ maxWidth: 720, margin: '0 auto', padding: '24px 16px' }}>
-
-        {/* Date Navigation */}
-        <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          background: '#fff', borderRadius: 12, padding: '10px 16px',
-          marginBottom: 12, border: '1px solid #e5e5ea',
-        }}>
-          <button onClick={() => changeDate(Math.min(dateIndex + 1, dates.length - 1))}
-            disabled={dateIndex === dates.length - 1}
-            style={{
-              padding: '6px 14px', borderRadius: 8, border: '1px solid #ddd',
-              background: dateIndex === dates.length - 1 ? '#f5f5f5' : '#fff',
-              color: dateIndex === dates.length - 1 ? '#ccc' : '#333',
-              cursor: dateIndex === dates.length - 1 ? 'default' : 'pointer',
-              fontSize: 13, fontWeight: 500,
-            }}>
-            ← 이전 날
-          </button>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: 15, fontWeight: 700, color: '#1a1a2e' }}>{formatDate(currentDate)}</div>
-            <div style={{ fontSize: 11, color: '#999' }}>{todayStartups.length}개 스타트업</div>
-          </div>
-          <button onClick={() => changeDate(Math.max(dateIndex - 1, 0))}
-            disabled={dateIndex === 0}
-            style={{
-              padding: '6px 14px', borderRadius: 8, border: '1px solid #ddd',
-              background: dateIndex === 0 ? '#f5f5f5' : '#fff',
-              color: dateIndex === 0 ? '#ccc' : '#333',
-              cursor: dateIndex === 0 ? 'default' : 'pointer',
-              fontSize: 13, fontWeight: 500,
-            }}>
-            다음 날 →
-          </button>
-        </div>
-
-        {/* Card Navigation */}
-        <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          background: '#fff', borderRadius: 12, padding: '10px 16px',
-          marginBottom: 12, border: '1px solid #e5e5ea',
-        }}>
-          <button onClick={() => setCardIndex(Math.max(cardIndex - 1, 0))}
-            disabled={cardIndex === 0}
-            style={{
-              padding: '6px 14px', borderRadius: 8, border: '1px solid #ddd',
-              background: cardIndex === 0 ? '#f5f5f5' : '#fff',
-              color: cardIndex === 0 ? '#ccc' : '#333',
-              cursor: cardIndex === 0 ? 'default' : 'pointer',
-              fontSize: 13, fontWeight: 500,
-            }}>
-            ← 이전
-          </button>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: 14, fontWeight: 600 }}>{cardIndex + 1} / {todayStartups.length}</div>
-            <div style={{ fontSize: 12, color: '#888' }}>{startup?.name_en}</div>
-          </div>
-          <button onClick={() => setCardIndex(Math.min(cardIndex + 1, todayStartups.length - 1))}
-            disabled={cardIndex === todayStartups.length - 1}
-            style={{
-              padding: '6px 14px', borderRadius: 8, border: '1px solid #ddd',
-              background: cardIndex === todayStartups.length - 1 ? '#f5f5f5' : '#fff',
-              color: cardIndex === todayStartups.length - 1 ? '#ccc' : '#333',
-              cursor: cardIndex === todayStartups.length - 1 ? 'default' : 'pointer',
-              fontSize: 13, fontWeight: 500,
-            }}>
-            다음 →
-          </button>
-        </div>
-
-        {/* Dots */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 6, marginBottom: 20 }}>
-          {todayStartups.map((s, i) => (
-            <button key={s.id} onClick={() => setCardIndex(i)}
-              title={s.name_en}
-              style={{
-                width: i === cardIndex ? 28 : 8, height: 8,
-                borderRadius: 99, border: 'none',
-                background: i === cardIndex ? '#333' : '#ccc',
-                cursor: 'pointer', transition: 'all 0.3s',
-              }}
-            />
+        <ul className="rows">
+          {ctx.map((s) => (
+            <StartupRow key={s.id} startup={s} compact selected={s.id === route.id} from="saved" />
           ))}
-        </div>
+        </ul>
+      </aside>
+    )
+  }
+  const date = startup ? startup.date : route.date
+  return (
+    <aside className="split__list" aria-label="이 호의 회사">
+      <IssueHeader date={date} compact />
+      <IssueList date={date} selectedId={route.id} compact />
+    </aside>
+  )
+}
 
-        {/* Card */}
-        {startup && (
-          <AnimatePresence mode="wait">
-            <motion.div key={startup.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.25 }}
-            >
-              <StartupCard startup={startup} />
-            </motion.div>
-          </AnimatePresence>
-        )}
-      </main>
-
-      <footer style={{ textAlign: 'center', padding: '40px 16px', fontSize: 13, color: '#999', borderTop: '1px solid #e5e5ea', marginTop: 40 }}>
-        © 2026 Startup Daily. 매일 아침, 스타트업 인텔리전스.
-      </footer>
+function NotFound({ head, arg }) {
+  if (head === 'd' && /^\d{4}-\d{2}-\d{2}$/.test(arg || '')) {
+    // closest published issue to the requested date
+    const target = new Date(arg).getTime()
+    const nearest = [...dates].sort((a, b) => Math.abs(new Date(a) - target) - Math.abs(new Date(b) - target))[0]
+    return (
+      <div className="page">
+        <EmptyState
+          icon="calendar"
+          level={1}
+          title="이 날은 발행하지 않았어요"
+          actions={
+            <a className="btn btn--primary" href={nearest === dates[0] ? '#/' : `#/d/${nearest}`}>
+              가장 가까운 호 보기 ({longDate(nearest).replace(/요일$/, '')})
+            </a>
+          }
+        />
+      </div>
+    )
+  }
+  const guess = head === 's' ? arg?.replace(/-\d{4}$/, '').replace(/-/g, ' ') : null
+  return (
+    <div className="page">
+      <EmptyState
+        icon="info"
+        level={1}
+        title="이 페이지를 찾을 수 없어요"
+        actions={
+          <>
+            <a className="btn btn--primary" href="#/">
+              최신 호 보기
+            </a>
+            <a className="btn btn--secondary" href={`#/explore${guess ? `?q=${encodeURIComponent(guess)}` : ''}`}>
+              {guess ? `‘${guess}’ 검색` : '탐색에서 찾기'}
+            </a>
+          </>
+        }
+      >
+        주소가 바뀌었거나 없는 회사·호예요.
+      </EmptyState>
     </div>
   )
 }
+
+/* ---------- App ---------- */
+
+export default function App() {
+  const loc = useRoute()
+  const route = resolve(loc)
+  const desktop = useMediaQuery('(min-width: 1024px)')
+  const wide = useMediaQuery('(min-width: 1280px)')
+  const routeKey = `${route.kind}:${route.date || route.id || ''}:${route.from || ''}`
+  useRouteEffects(routeKey, titleFor(route))
+
+  const [scrolledPastHero, setScrolledPastHero] = useState(false)
+  useEffect(() => {
+    if (route.kind !== 'detail') return
+    const onScroll = () => setScrolledPastHero(window.scrollY > 200)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [route.kind])
+
+  const split = desktop && (route.kind === 'issue' || route.kind === 'detail')
+  const showBack = !desktop && (route.kind === 'detail' || route.kind === 'about')
+
+  let content
+  if (route.kind === 'issue') content = desktop ? <IssueOverview date={route.date} wide={wide} /> : <IssueMobile date={route.date} />
+  else if (route.kind === 'detail')
+    content = <Detail key={route.id} id={route.id} from={route.from} desktop={desktop} wide={wide} />
+  else if (route.kind === 'explore') content = <Explore params={loc.params} desktop={desktop} />
+  else if (route.kind === 'saved') content = <Saved params={loc.params} />
+  else if (route.kind === 'about') content = <About params={loc.params} />
+  else content = <NotFound head={route.head} arg={route.arg} />
+
+  const rail = wide && split && (route.kind === 'detail' ? <DetailRail key={route.id} id={route.id} /> : <IssueRail date={route.date} />)
+
+  return (
+    <ToastProvider>
+      <a className="skip" href="#main" onClick={(e) => (e.preventDefault(), document.getElementById('main')?.focus())}>
+        본문으로 건너뛰기
+      </a>
+      <AppHeader
+        desktop={desktop}
+        section={route.section}
+        back={showBack ? { label: '뒤로', onClick: () => goBackFrom(route) } : null}
+        title={route.kind === 'detail' ? { text: byId(route.id).name_ko, visible: scrolledPastHero } : null}
+      />
+      <div className={`shell ${split ? 'shell--split' : ''} ${rail ? 'shell--rail' : ''} shell--${route.kind}`}>
+        {split && <SideList route={route} />}
+        <main id="main" tabIndex={-1} className="shell__main">
+          {content}
+          {desktop && !split && route.kind !== 'about' && <Footer />}
+        </main>
+        {rail && <aside className="split__rail">{rail}</aside>}
+      </div>
+      {!desktop && route.kind !== 'detail' && <TabBar section={route.section} />}
+    </ToastProvider>
+  )
+}
+

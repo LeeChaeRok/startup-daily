@@ -2,36 +2,81 @@ name: Daily Startup Update
 
 on:
   schedule:
-    # Every day at 8:00 AM KST (23:00 UTC previous day)
+    # 08:00 KST (23:00 UTC the day before)
     - cron: '0 23 * * *'
-  workflow_dispatch: # Manual trigger
+  workflow_dispatch:
+    inputs:
+      issue_date:
+        description: 'Issue date (YYYY-MM-DD, default: today in KST)'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Not secrets: they identify the Vercel project (same values as .vercel/project.json).
+      VERCEL_ORG_ID: team_mTcuMUdWSKLQ6vVS8OT93zHW
+      VERCEL_PROJECT_ID: prj_NNnu7wdtYfKdZPMPCQRWu94xKq36
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check required secrets
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          missing=""
+          [ -z "$OPENROUTER_API_KEY" ] && missing="$missing OPENROUTER_API_KEY"
+          [ -z "$VERCEL_TOKEN" ] && missing="$missing VERCEL_TOKEN"
+          if [ -n "$missing" ]; then
+            echo "::error::Missing repository secrets:$missing (Settings → Secrets and variables → Actions)"
+            exit 1
+          fi
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Anthropic SDK
-        run: npm install @anthropic-ai/sdk
-
-      - name: Generate daily startups
+      - name: Generate today's issue
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # Optional repo variable to override the model order (default: Haiku 5.5 → Sonnet 5.5)
+          OPENROUTER_MODELS: ${{ vars.OPENROUTER_MODELS }}
+          ISSUE_DATE: ${{ inputs.issue_date }}
         run: node scripts/generate-daily.mjs
 
-      - name: Commit and push
+      - name: Build check
+        run: npm run build
+
+      - name: Commit data
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/startups.json
-          DATE=$(date +%Y-%m-%d)
-          git diff --cached --quiet || git commit -m "chore: add daily startups for ${DATE}"
-          git push
+          git add src/data/startups.json src/data/meta.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore: add daily startups for $(TZ=Asia/Seoul date +%Y-%m-%d)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # git pushes don't deploy this project; production goes out through the Vercel CLI.
+      - name: Deploy to Vercel
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: npx --yes vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"

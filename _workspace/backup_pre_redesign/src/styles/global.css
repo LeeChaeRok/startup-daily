@@ -21,3 +21,7 @@ body {
 ::selection {
   background: rgba(124, 58, 237, 0.15);
 }
+
+.carousel-scroll::-webkit-scrollbar {
+  display: none;
+}

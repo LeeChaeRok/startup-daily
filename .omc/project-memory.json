@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1772633522474,
+  "lastScanned": 1792677040642,
   "projectRoot": "/Users/roki/Desktop/project/startup-new/startup-daily",
   "techStack": {
     "languages": [
@@ -56,6 +56,7 @@
     "workspaces": [],
     "mainDirectories": [
       "public",
+      "scripts",
       "src"
     ],
     "gitBranches": null
@@ -65,27 +66,40 @@
     "dist": {
       "path": "dist",
       "purpose": "Distribution/build output",
-      "fileCount": 2,
-      "lastAccessed": 1772633522458,
+      "fileCount": 4,
+      "lastAccessed": 1792677040129,
       "keyFiles": [
         "index.html",
+        "manifest.json",
+        "sw.js",
         "vite.svg"
       ]
     },
     "public": {
       "path": "public",
       "purpose": "Public files",
-      "fileCount": 1,
-      "lastAccessed": 1772633522458,
+      "fileCount": 3,
+      "lastAccessed": 1792677040593,
       "keyFiles": [
+        "manifest.json",
+        "sw.js",
         "vite.svg"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 1,
+      "lastAccessed": 1792677040597,
+      "keyFiles": [
+        "generate-daily.mjs"
       ]
     },
     "src": {
       "path": "src",
       "purpose": "Source code",
       "fileCount": 4,
-      "lastAccessed": 1772633522459,
+      "lastAccessed": 1792677040618,
       "keyFiles": [
         "App.css",
         "App.jsx",
@@ -97,17 +111,17 @@
       "path": "dist/assets",
       "purpose": "Static assets",
       "fileCount": 2,
-      "lastAccessed": 1772633522459,
+      "lastAccessed": 1792677040623,
       "keyFiles": [
-        "index-D5maMy25.js",
-        "index-OFTre3Du.css"
+        "index-CviOfomc.js",
+        "index-KaH67Aue.css"
       ]
     },
     "src/assets": {
       "path": "src/assets",
       "purpose": "Static assets",
       "fileCount": 1,
-      "lastAccessed": 1772633522460,
+      "lastAccessed": 1792677040637,
       "keyFiles": [
         "react.svg"
       ]
@@ -116,7 +130,7 @@
       "path": "src/components",
       "purpose": "UI components",
       "fileCount": 8,
-      "lastAccessed": 1772633522460,
+      "lastAccessed": 1792677040637,
       "keyFiles": [
         "AccordionSection.jsx",
         "CompetitiveLandscape.jsx",
@@ -127,7 +141,7 @@
       "path": "src/data",
       "purpose": "Data files",
       "fileCount": 1,
-      "lastAccessed": 1772633522460,
+      "lastAccessed": 1792677040638,
       "keyFiles": [
         "startups.json"
       ]
@@ -136,10 +150,287 @@
       "path": "src/utils",
       "purpose": "Utility functions",
       "fileCount": 0,
-      "lastAccessed": 1772633522460,
+      "lastAccessed": 1792677040639,
       "keyFiles": []
     }
   },
-  "hotPaths": [],
+  "hotPaths": [
+    {
+      "path": "_workspace/02_visual-designer_system.md",
+      "accessCount": 6,
+      "lastAccessed": 1792678074809,
+      "type": "file"
+    },
+    {
+      "path": "src/screens/Detail.jsx",
+      "accessCount": 6,
+      "lastAccessed": 1792679915547,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/data.js",
+      "accessCount": 5,
+      "lastAccessed": 1792678225921,
+      "type": "file"
+    },
+    {
+      "path": "_workspace/02_ux-architect_ia.md",
+      "accessCount": 5,
+      "lastAccessed": 1792678853343,
+      "type": "file"
+    },
+    {
+      "path": ".claude/agents/market-researcher.md",
+      "accessCount": 2,
+      "lastAccessed": 1792677241510,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/market-benchmark/SKILL.md",
+      "accessCount": 2,
+      "lastAccessed": 1792677242026,
+      "type": "file"
+    },
+    {
+      "path": "_workspace/01_market-researcher_market.md",
+      "accessCount": 2,
+      "lastAccessed": 1792677657064,
+      "type": "file"
+    },
+    {
+      "path": "_workspace/01_product-benchmarker_patterns.md",
+      "accessCount": 2,
+      "lastAccessed": 1792677658606,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/hooks.js",
+      "accessCount": 2,
+      "lastAccessed": 1792678255027,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Logo.jsx",
+      "accessCount": 2,
+      "lastAccessed": 1792678284830,
+      "type": "file"
+    },
+    {
+      "path": "src/screens/Saved.jsx",
+      "accessCount": 2,
+      "lastAccessed": 1792678549594,
+      "type": "file"
+    },
+    {
+      "path": "public/og.png",
+      "accessCount": 2,
+      "lastAccessed": 1792678904371,
+      "type": "file"
+    },
+    {
+      "path": "src/App.jsx",
+      "accessCount": 2,
+      "lastAccessed": 1792678961842,
+      "type": "file"
+    },
+    {
+      "path": "src/styles/app.css",
+      "accessCount": 2,
+      "lastAccessed": 1792679007770,
+      "type": "file"
+    },
+    {
+      "path": "scripts/generate-daily.mjs",
+      "accessCount": 2,
+      "lastAccessed": 1792680229233,
+      "type": "file"
+    },
+    {
+      "path": ".claude/launch.json",
+      "accessCount": 1,
+      "lastAccessed": 1792677079997,
+      "type": "file"
+    },
+    {
+      "path": ".claude/agents/product-benchmarker.md",
+      "accessCount": 1,
+      "lastAccessed": 1792677164310,
+      "type": "file"
+    },
+    {
+      "path": ".claude/agents/ux-architect.md",
+      "accessCount": 1,
+      "lastAccessed": 1792677164574,
+      "type": "file"
+    },
+    {
+      "path": ".claude/agents/visual-designer.md",
+      "accessCount": 1,
+      "lastAccessed": 1792677165102,
+      "type": "file"
+    },
+    {
+      "path": ".claude/agents/frontend-engineer.md",
+      "accessCount": 1,
+      "lastAccessed": 1792677166206,
+      "type": "file"
+    },
+    {
+      "path": ".claude/agents/ui-qa-reviewer.md",
+      "accessCount": 1,
+      "lastAccessed": 1792677167713,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/startup-daily-redesign/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1792677219522,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/editorial-design-system/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1792677220058,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/ui-qa/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1792677220484,
+      "type": "file"
+    },
+    {
+      "path": "_workspace/01_lead_chrome-notes.md",
+      "accessCount": 1,
+      "lastAccessed": 1792677315180,
+      "type": "file"
+    },
+    {
+      "path": "src/data/corrections.json",
+      "accessCount": 1,
+      "lastAccessed": 1792677670370,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Icon.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1792677704445,
+      "type": "file"
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "accessCount": 1,
+      "lastAccessed": 1792678098482,
+      "type": "file"
+    },
+    {
+      "path": "_workspace/03_final_spec.md",
+      "accessCount": 1,
+      "lastAccessed": 1792678198320,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/format.js",
+      "accessCount": 1,
+      "lastAccessed": 1792678255139,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/share.js",
+      "accessCount": 1,
+      "lastAccessed": 1792678255247,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Toast.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1792678285204,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Sheet.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1792678285342,
+      "type": "file"
+    },
+    {
+      "path": "src/components/bits.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1792678285520,
+      "type": "file"
+    },
+    {
+      "path": "src/components/StartupRow.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1792678311985,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Chrome.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1792678312133,
+      "type": "file"
+    },
+    {
+      "path": "src/screens/Issue.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1792678371599,
+      "type": "file"
+    },
+    {
+      "path": "src/screens/Explore.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1792678489426,
+      "type": "file"
+    },
+    {
+      "path": "src/screens/About.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1792678522166,
+      "type": "file"
+    },
+    {
+      "path": "index.html",
+      "accessCount": 1,
+      "lastAccessed": 1792678715835,
+      "type": "file"
+    },
+    {
+      "path": "public/icons/icon-192.png",
+      "accessCount": 1,
+      "lastAccessed": 1792678912813,
+      "type": "file"
+    },
+    {
+      "path": "CLAUDE.md",
+      "accessCount": 1,
+      "lastAccessed": 1792678920044,
+      "type": "file"
+    },
+    {
+      "path": "_workspace/05_ui-qa-reviewer_report.md",
+      "accessCount": 1,
+      "lastAccessed": 1792679381692,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/nav.js",
+      "accessCount": 1,
+      "lastAccessed": 1792679480982,
+      "type": "file"
+    },
+    {
+      "path": "scripts/lib/pipeline.mjs",
+      "accessCount": 1,
+      "lastAccessed": 1792679851736,
+      "type": "file"
+    },
+    {
+      "path": "scripts/lib/openrouter.mjs",
+      "accessCount": 1,
+      "lastAccessed": 1792680192220,
+      "type": "file"
+    }
+  ],
   "userDirectives": []
 }
