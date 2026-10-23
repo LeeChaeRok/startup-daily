@@ -2,8 +2,9 @@ name: Daily Startup Update
 
 on:
   schedule:
-    # 08:00 KST (23:00 UTC the day before)
-    - cron: '0 23 * * *'
+    # ~07:37 KST (22:37 UTC the day before). Off the top of the hour on purpose:
+    # GitHub delays scheduled runs at :00 when many workflows start at once.
+    - cron: '37 22 * * *'
   workflow_dispatch:
     inputs:
       issue_date:
@@ -25,21 +26,21 @@ jobs:
       # Not secrets: they identify the Vercel project (same values as .vercel/project.json).
       VERCEL_ORG_ID: team_mTcuMUdWSKLQ6vVS8OT93zHW
       VERCEL_PROJECT_ID: prj_NNnu7wdtYfKdZPMPCQRWu94xKq36
+      # Deploy from here only when a token exists. Once the Vercel project is linked to the
+      # GitHub repo, every push below deploys on its own and this token is not needed.
+      HAS_VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN != '' }}
     steps:
       - uses: actions/checkout@v4
 
       - name: Check required secrets
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          missing=""
-          [ -z "$OPENROUTER_API_KEY" ] && missing="$missing OPENROUTER_API_KEY"
-          [ -z "$VERCEL_TOKEN" ] && missing="$missing VERCEL_TOKEN"
-          if [ -n "$missing" ]; then
-            echo "::error::Missing repository secrets:$missing (Settings → Secrets and variables → Actions)"
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "::error::Missing repository secret OPENROUTER_API_KEY (Settings → Secrets and variables → Actions)"
             exit 1
           fi
+          [ "$HAS_VERCEL_TOKEN" = "true" ] || echo "::notice::No VERCEL_TOKEN: data is committed but not deployed from this workflow."
 
       - uses: actions/setup-node@v4
         with:
@@ -70,13 +71,15 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: add daily startups for $(TZ=Asia/Seoul date +%Y-%m-%d)"
+            # main may have moved while generating (a few minutes)
+            git pull --rebase origin main
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
       # git pushes don't deploy this project; production goes out through the Vercel CLI.
       - name: Deploy to Vercel
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.commit.outputs.changed == 'true' && env.HAS_VERCEL_TOKEN == 'true'
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: npx --yes vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
