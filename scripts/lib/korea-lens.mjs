@@ -233,11 +233,11 @@ export function validate(entry) {
 /* ---------- Orchestration ---------- */
 
 /** Returns an entry, or null when the section should be left out. */
-export async function buildKoreaLens(llm, profile, { searched = new Set(), checkedAt, fetchImpl, log = () => {} } = {}) {
+export async function buildKoreaLens(llm, profile, { searched = new Set(), checkedAt, fetchImpl, searchResults = 6, log = () => {} } = {}) {
   const name = profile.name_en
   let facts
   try {
-    const r = await llm.chat({ system: FACT_RULES, user: researchPrompt(profile), web: true, maxResults: 6 })
+    const r = await llm.chat({ system: FACT_RULES, user: researchPrompt(profile), web: true, maxResults: searchResults })
     r.citations.forEach((c) => searched.add(stripUrl(c.url)))
     facts = await parseOrRepair(llm, r.text)
   } catch (err) {

@@ -3,7 +3,7 @@ import Icon from '../components/Icon.jsx'
 import Logo from '../components/Logo.jsx'
 import StartupRow from '../components/StartupRow.jsx'
 import { Meta, SaveButton, Tag } from '../components/bits.jsx'
-import startups, { byId, cleanAmount, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
+import startups, { byId, canAnalyze, cleanAmount, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
 import { navigate, prefersReducedMotion, useFlag } from '../lib/hooks.js'
 import { dotDate, enDash, langOf, monthDay, numClass, pad2, ym } from '../lib/format.js'
 import { isColdStart } from '../lib/nav.js'
@@ -493,6 +493,40 @@ function Sources({ startup: s }) {
   )
 }
 
+/** Shows the analysis, or the button that asks for one. */
+function KoreaSection({ startup: s, state }) {
+  const { lens, status, message, elapsed, run } = state
+  if (lens) return <KoreaLens startup={s} lens={lens} />
+  if (status === 'loading' && !elapsed && s._lens) return <p className="muted">불러오는 중…</p>
+  if (status === 'loading') {
+    return (
+      <div className="lens-ask" role="status" aria-live="polite">
+        <p className="lens-ask__busy">
+          <span className="spinner" aria-hidden="true" />
+          한국 시장을 조사하는 중이에요 · <span className="mono">{elapsed}</span>초
+        </p>
+        <p className="lens-ask__hint">웹을 검색하고 링크를 확인하느라 보통 1~2분 걸려요. 이 화면을 열어 두세요.</p>
+      </div>
+    )
+  }
+  return (
+    <div className="lens-ask">
+      <p className="lens-ask__text">
+        비슷한 아이디어와 제품, 한국에 이미 있는 곳, 한국에서의 기회 가설을 AI가 웹을 검색해 정리해 드려요.
+      </p>
+      {status === 'error' && (
+        <p className="lens-ask__error" role="alert">
+          {message}
+        </p>
+      )}
+      <button type="button" className="btn btn--primary" onClick={run}>
+        <Icon name="spark" size={18} /> {status === 'error' ? '다시 시도' : 'AI로 한국 시장 분석하기'}
+      </button>
+      <p className="lens-ask__hint">처음 한 번은 1~2분 걸려요. 만들어진 분석은 이 기기에 저장돼요. 사업·투자 조언이 아니에요.</p>
+    </div>
+  )
+}
+
 const RELATION = { direct: '직접 경쟁', adjacent: '인접', analog: '유사 아이디어' }
 
 function KoreaLens({ startup: s, lens }) {
@@ -693,8 +727,9 @@ export default function Detail({ id, from, desktop, wide }) {
   const list = useContextList(s, from)
   const summaryRef = useRef(null)
   const share = useShare(s || { id, name_ko: '', tagline: '', date: '' })
-  const sections = sectionsFor(Boolean(s?._lens))
-  const lens = useKoreaLens(id, Boolean(s?._lens))
+  const hasLens = Boolean(s && canAnalyze(s))
+  const sections = sectionsFor(hasLens)
+  const lensState = useKoreaLens(id, Boolean(s?._lens), hasLens)
   const active = useActiveSection(sections.map((x) => x.id))
   useReadTracking(summaryRef, id)
 
@@ -797,13 +832,13 @@ export default function Detail({ id, from, desktop, wide }) {
         <Field label="대응">{mo.risk_mitigation && <p>{mo.risk_mitigation}</p>}</Field>
       </Section>
 
-      {s._lens && (
+      {hasLens && (
         <Section id="korea" n={7} title="한국에서는">
-          {lens ? <KoreaLens startup={s} lens={lens} /> : <p className="muted">불러오는 중…</p>}
+          <KoreaSection startup={s} state={lensState} />
         </Section>
       )}
 
-      <Section id="sources" n={s._lens ? 8 : 7} title="출처와 신뢰">
+      <Section id="sources" n={hasLens ? 8 : 7} title="출처와 신뢰">
         <Sources startup={s} />
       </Section>
 
@@ -839,7 +874,7 @@ export default function Detail({ id, from, desktop, wide }) {
 export function DetailRail({ id }) {
   const s = byId(id)
   const share = useShare(s || { id, name_ko: '', tagline: '', date: '' })
-  const sections = sectionsFor(Boolean(s?._lens))
+  const sections = sectionsFor(Boolean(s && canAnalyze(s)))
   const active = useActiveSection(sections.map((x) => x.id))
   if (!s) return null
   return (

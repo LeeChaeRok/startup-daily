@@ -208,7 +208,8 @@ async function main() {
   }
 
   // Optional enrichment ("한국에서는"): a failure here must never block the issue itself.
-  if (llm && outPath === DATA_PATH) {
+  // Off by default: the analysis is built on demand from the app (api/korea-lens.mjs) to save cost.
+  if (llm && outPath === DATA_PATH && process.env.KOREA_LENS_DAILY === '1') {
     try {
       await updateLensFiles(llm, verified, { lensPath: LENS_PATH, indexPath: LENS_INDEX_PATH, allIds: merged.map((s) => s.id), log: console.log })
     } catch (err) {

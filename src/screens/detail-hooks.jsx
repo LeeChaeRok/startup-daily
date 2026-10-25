@@ -22,28 +22,90 @@ export function sectionsFor(hasKorea) {
   return [...BASE_SECTIONS, ...(hasKorea ? [KOREA_SECTION] : []), SOURCES_SECTION]
 }
 
-/* Full analyses are loaded on demand: they are the bulk of the data and only the detail page needs them. */
+/* Analyses that shipped with the site are loaded on demand (they are the bulk of the data).
+   Others are generated when the reader asks, by /api/korea-lens, and kept on this device. */
 const lensCache = new Map()
 let lensFile = null
+const deviceKey = (id) => `sd_lens:${id}`
 
-/** undefined = loading, null = none for this company, object = the analysis. */
-export function useKoreaLens(id, hasIndexEntry) {
+function readDevice(id) {
+  try {
+    const raw = localStorage.getItem(deviceKey(id))
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Returns { lens, status, message, elapsed, run }.
+ *   lens   — the analysis, or null/undefined while loading or absent
+ *   status — 'ready' | 'loading' | 'idle' (nothing yet, can be requested) | 'error'
+ */
+export function useKoreaLens(id, hasStatic, canRequest) {
   const [, tick] = useState(0)
+  const [request, setRequest] = useState({ status: 'idle', message: '', started: 0 })
+  const [now, setNow] = useState(0)
+  const rerender = () => tick((n) => n + 1)
+
   useEffect(() => {
-    if (!hasIndexEntry || lensCache.has(id)) return
+    if (!hasStatic || lensCache.has(id)) return
     let live = true
     ;(lensFile ??= import('../data/korea-lens.json'))
       .then((m) => {
         lensCache.set(id, (m.default || m)[id] || null)
-        if (live) tick((n) => n + 1)
+        if (live) rerender()
       })
       .catch(() => lensCache.set(id, null))
     return () => {
       live = false
     }
-  }, [id, hasIndexEntry])
-  if (!hasIndexEntry) return null
-  return lensCache.has(id) ? lensCache.get(id) : undefined
+  }, [id, hasStatic])
+
+  // while a request runs, tick once a second so the reader sees time passing
+  useEffect(() => {
+    if (request.status !== 'loading') return
+    const t = setInterval(() => setNow(Date.now()), 1000)
+    return () => clearInterval(t)
+  }, [request.status])
+
+  const run = async () => {
+    if (!canRequest || request.status === 'loading') return
+    const started = Date.now()
+    setNow(started)
+    setRequest({ status: 'loading', message: '', started })
+    const ctl = new AbortController()
+    const timer = setTimeout(() => ctl.abort(), 330_000)
+    try {
+      const res = await fetch(`/api/korea-lens?id=${encodeURIComponent(id)}`, { signal: ctl.signal })
+      const type = res.headers.get('content-type') || ''
+      const body = type.includes('json') ? await res.json() : null
+      if (!res.ok || !body?.entry) {
+        setRequest({ status: 'error', message: body?.message || '분석을 불러오지 못했어요. 잠시 뒤에 다시 시도해 주세요.', started })
+        return
+      }
+      lensCache.set(id, body.entry)
+      try {
+        localStorage.setItem(deviceKey(id), JSON.stringify(body.entry))
+      } catch {
+        /* storage full or blocked: it just won't be remembered */
+      }
+      setRequest({ status: 'idle', message: '', started })
+    } catch (err) {
+      setRequest({
+        status: 'error',
+        message: err.name === 'AbortError' ? '시간이 너무 오래 걸려 멈췄어요. 다시 시도해 주세요.' : '네트워크에 문제가 있었어요. 다시 시도해 주세요.',
+        started,
+      })
+    } finally {
+      clearTimeout(timer)
+    }
+  }
+
+  const cached = lensCache.has(id) ? lensCache.get(id) : hasStatic ? undefined : (lensCache.set(id, readDevice(id)), lensCache.get(id))
+  const status = request.status === 'loading' ? 'loading' : cached ? 'ready' : hasStatic && cached === undefined ? 'loading' : request.status
+  const elapsed = request.status === 'loading' ? Math.max(0, Math.round((now - request.started) / 1000)) : 0
+  return { lens: cached || null, status, message: request.message, elapsed, run }
 }
 
 /** Ordered list this detail page belongs to: its issue, or the saved list. */

@@ -133,6 +133,9 @@ export const LENS_VERDICTS = {
 }
 export const LENS_FILTER = ['open', 'emerging', 'crowded', 'constrained']
 
+/** Listed, acquired or closed companies don't get a "한국에서는" analysis: there is no market entry to discuss. */
+export const canAnalyze = (s) => s._stageGroup !== 'exit'
+
 export const isKorean = (s) => (s.headquarters?.country_ko || '').includes('한국')
 
 const norm = (t) => (t || '').normalize('NFC').toLowerCase().replace(/\s+/g, '')

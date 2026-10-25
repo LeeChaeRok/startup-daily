@@ -897,3 +897,11 @@ a { color: inherit; text-decoration: none; }
 .lens__sub { font-size: 13px; font-weight: 700; margin: 16px 0 6px; color: var(--sd-ink); }
 .lens__stamp { font-size: 12px; color: var(--sd-ink-3); margin-top: 20px; }
 .badge--flat { margin-left: 0; }
+
+.lens-ask { margin-top: 12px; max-width: var(--sd-measure); display: grid; gap: 12px; justify-items: start; }
+.lens-ask__text { font-size: var(--sd-fs-body); line-height: 1.7; }
+.lens-ask__hint { font-size: 13px; color: var(--sd-ink-3); line-height: 1.55; }
+.lens-ask__error { font-size: 15px; color: var(--sd-warning); background: var(--sd-warning-soft); padding: 10px 14px; width: 100%; }
+.lens-ask__busy { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 600; }
+.spinner { width: 18px; height: 18px; border: 2px solid var(--sd-line-ui); border-top-color: var(--sd-accent); border-radius: 50%; animation: spin 0.9s linear infinite; flex: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
