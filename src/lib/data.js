@@ -1,5 +1,6 @@
 import raw from '../data/startups.json'
 import corrections from '../data/corrections.json'
+import lensIndex from '../data/korea-lens-index.json'
 
 // KRW/EUR → USD rough rates, only used for ordering and summary stats.
 const FX = { USD: 1, KRW: 1 / 1400, EUR: 1.08 }
@@ -122,6 +123,16 @@ function regionOf(countryKo = '') {
   return 'etc'
 }
 
+/* "한국에서는" verdicts. Wording is deliberately hedged: these are search-based hypotheses. */
+export const LENS_VERDICTS = {
+  open: { label: '빈자리 가능성', badge: '한국 기회', tone: 'accent' },
+  emerging: { label: '초기 단계', badge: '한국 기회', tone: 'accent' },
+  crowded: { label: '경쟁 있음', badge: null, tone: 'muted' },
+  constrained: { label: '규제·구조 장벽', badge: null, tone: 'warn' },
+  unclear: { label: '근거 부족', badge: null, tone: 'muted' },
+}
+export const LENS_FILTER = ['open', 'emerging', 'crowded', 'constrained']
+
 export const isKorean = (s) => (s.headquarters?.country_ko || '').includes('한국')
 
 const norm = (t) => (t || '').normalize('NFC').toLowerCase().replace(/\s+/g, '')
@@ -144,11 +155,15 @@ const startups = raw
       _stageGroup: stageGroupOf(stage, correction),
       _region: regionOf(s.headquarters?.country_ko),
       _correction: correction,
+      _lens: lensIndex[s.id] || null,
       _search: {
         name: norm(`${s.name_ko} ${s.name_en}`),
         body: norm(`${s.tagline} ${category.join(' ')}`),
         founders: founders.map((f) => ({ label: f.name_ko || f.name_en, key: norm(`${f.name_ko} ${f.name_en}`) })),
-        competitors: (s.competitive_landscape?.direct_competitors || []).map((c) => ({ label: c.name, key: norm(c.name) })),
+        competitors: [
+          ...(s.competitive_landscape?.direct_competitors || []).map((c) => ({ label: c.name, key: norm(c.name) })),
+          ...(lensIndex[s.id]?.n || []).map((n) => ({ label: n, key: norm(n), lens: true })),
+        ],
       },
     }
   })
@@ -198,7 +213,7 @@ export function search(query, list = startups) {
       continue
     }
     const c = s._search.competitors.find((x) => x.key.includes(q))
-    if (c) out.push({ startup: s, reason: `경쟁사로 언급: ${c.label}` })
+    if (c) out.push({ startup: s, reason: c.lens ? `비슷한 곳으로 언급: ${c.label}` : `경쟁사로 언급: ${c.label}` })
   }
   return out
 }

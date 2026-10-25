@@ -5,7 +5,7 @@ import StartupRow from '../components/StartupRow.jsx'
 import Sheet from '../components/Sheet.jsx'
 import { CorrectionBadge, EmptyState, SaveButton } from '../components/bits.jsx'
 import { IssueRowItem } from './Issue.jsx'
-import startups, { REGIONS, SECTORS, STAGE_GROUPS, dates, search, stats } from '../lib/data.js'
+import startups, { LENS_FILTER, LENS_VERDICTS, REGIONS, SECTORS, STAGE_GROUPS, dates, search, stats } from '../lib/data.js'
 import { buildQuery, navigate, useReadLog } from '../lib/hooks.js'
 import { monthDay, numClass, weekLabel } from '../lib/format.js'
 
@@ -20,6 +20,12 @@ const GROUPS = [
   { key: 'sector', label: '분야', options: SECTORS.map(({ key, label }) => ({ key, label })), field: (s) => s._sector.key },
   { key: 'stage', label: '단계', options: STAGE_GROUPS, field: (s) => s._stageGroup },
   { key: 'region', label: '지역', options: REGIONS, field: (s) => s._region },
+  {
+    key: 'korea',
+    label: '한국 시장 (AI 가설)',
+    options: LENS_FILTER.map((key) => ({ key, label: LENS_VERDICTS[key].label })),
+    field: (s) => s._lens?.v,
+  },
 ]
 
 const list = (v) => (v ? v.split(',').filter(Boolean) : [])
@@ -45,6 +51,7 @@ function readState(params) {
     sector: list(params.get('sector')),
     stage: list(params.get('stage')),
     region: list(params.get('region')),
+    korea: list(params.get('korea')),
     sort: params.get('sort') || 'date',
   }
 }
@@ -64,6 +71,7 @@ function useExploreState(params) {
         sector: next.sector,
         stage: next.stage,
         region: next.region,
+        korea: next.korea,
         sort: next.sort === 'date' ? null : next.sort,
       })}`,
       { replace },
@@ -121,7 +129,7 @@ function ActiveFilters({ state, update }) {
           {c.label} <Icon name="close" size={14} />
         </button>
       ))}
-      <button type="button" className="text-btn" onClick={() => update({ sector: [], stage: [], region: [] })}>
+      <button type="button" className="text-btn" onClick={() => update({ sector: [], stage: [], region: [], korea: [] })}>
         모두 지우기
       </button>
     </div>
@@ -243,7 +251,7 @@ export default function Explore({ params, desktop }) {
 
   const base = useMemo(() => search(state.q), [state.q])
   const rows = useMemo(() => sortBy(applyFilters(base, state), state.sort), [base, state])
-  const activeCount = state.sector.length + state.stage.length + state.region.length
+  const activeCount = state.sector.length + state.stage.length + state.region.length + state.korea.length
 
   return (
     <div className={`page page--explore ${desktop ? 'page--explore-desktop' : ''}`}>
@@ -331,7 +339,7 @@ export default function Explore({ params, desktop }) {
                     <button
                       type="button"
                       className="btn btn--secondary"
-                      onClick={() => update({ q: '', sector: [], stage: [], region: [] })}
+                      onClick={() => update({ q: '', sector: [], stage: [], region: [], korea: [] })}
                     >
                       조건 지우기
                     </button>
@@ -365,7 +373,7 @@ export default function Explore({ params, desktop }) {
           title="필터"
           footer={
             <>
-              <button type="button" className="btn btn--secondary" onClick={() => update({ sector: [], stage: [], region: [] }, true)}>
+              <button type="button" className="btn btn--secondary" onClick={() => update({ sector: [], stage: [], region: [], korea: [] }, true)}>
                 초기화
               </button>
               <button type="button" className="btn btn--primary" onClick={() => setSheet(false)}>

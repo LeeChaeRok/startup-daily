@@ -134,7 +134,7 @@ export function normalize(c, { date, model, generatedAt }) {
  * when the URL also appeared in the model's web search results, because then
  * we know it came from a real search rather than the model's imagination.
  */
-export async function checkUrl(url, { searched = new Set(), timeoutMs = 12000, fetchImpl = fetch } = {}) {
+export async function checkUrl(url, { searched = new Set(), hostLevel = false, timeoutMs = 12000, fetchImpl = fetch } = {}) {
   let status = 0
   try {
     const u = new URL(url)
@@ -150,7 +150,10 @@ export async function checkUrl(url, { searched = new Set(), timeoutMs = 12000, f
     status = 0
   }
   const walled = status === 401 || status === 403 || status === 429
-  const verified = (status >= 200 && status < 300) || (walled && searched.has(stripUrl(url)))
+  // A bot wall proves nothing by itself. Accept it only if this exact page — or, for company
+  // homepages (hostLevel), this site — appeared in the model's real search results.
+  const seen = searched.has(stripUrl(url)) || (hostLevel && [...searched].some((u) => u.split('/')[0] === stripUrl(url).split('/')[0]))
+  const verified = (status >= 200 && status < 300) || (walled && seen)
   return { verified, http_status: status }
 }
 

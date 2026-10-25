@@ -6,15 +6,45 @@ import { prefersReducedMotion, useFlag, useReadLog, useSaved } from '../lib/hook
 import { monthDay } from '../lib/format.js'
 import { canNativeShare, canonicalUrl, shareOrCopy } from '../lib/share.js'
 
-export const SECTIONS = [
+const BASE_SECTIONS = [
   { id: 'why', label: '왜 지금' },
   { id: 'product', label: '제품' },
   { id: 'competition', label: '경쟁' },
   { id: 'team', label: '팀' },
   { id: 'funding', label: '투자' },
   { id: 'market', label: '시장' },
-  { id: 'sources', label: '출처' },
 ]
+const KOREA_SECTION = { id: 'korea', label: '한국' }
+const SOURCES_SECTION = { id: 'sources', label: '출처' }
+
+/** The "한국" section exists only for companies that have a "한국에서는" analysis. */
+export function sectionsFor(hasKorea) {
+  return [...BASE_SECTIONS, ...(hasKorea ? [KOREA_SECTION] : []), SOURCES_SECTION]
+}
+
+/* Full analyses are loaded on demand: they are the bulk of the data and only the detail page needs them. */
+const lensCache = new Map()
+let lensFile = null
+
+/** undefined = loading, null = none for this company, object = the analysis. */
+export function useKoreaLens(id, hasIndexEntry) {
+  const [, tick] = useState(0)
+  useEffect(() => {
+    if (!hasIndexEntry || lensCache.has(id)) return
+    let live = true
+    ;(lensFile ??= import('../data/korea-lens.json'))
+      .then((m) => {
+        lensCache.set(id, (m.default || m)[id] || null)
+        if (live) tick((n) => n + 1)
+      })
+      .catch(() => lensCache.set(id, null))
+    return () => {
+      live = false
+    }
+  }, [id, hasIndexEntry])
+  if (!hasIndexEntry) return null
+  return lensCache.has(id) ? lensCache.get(id) : undefined
+}
 
 /** Ordered list this detail page belongs to: its issue, or the saved list. */
 export function useContextList(startup, from) {
@@ -77,10 +107,11 @@ export function useReadTracking(ref, id) {
 }
 
 /* Which section is under the sticky nav. */
-export function useActiveSection(ids) {
-  const [active, setActive] = useState(ids[0])
+export function useActiveSection(idList) {
+  const key = idList.join(',') // a new array each render must not re-create the observer
+  const [active, setActive] = useState(idList[0])
   useEffect(() => {
-    const els = ids.map((id) => document.getElementById(id)).filter(Boolean)
+    const els = key.split(',').map((id) => document.getElementById(id)).filter(Boolean)
     const io = new IntersectionObserver(
       (entries) => {
         const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
@@ -90,7 +121,7 @@ export function useActiveSection(ids) {
     )
     els.forEach((el) => io.observe(el))
     return () => io.disconnect()
-  }, [ids])
+  }, [key])
   return active
 }
 

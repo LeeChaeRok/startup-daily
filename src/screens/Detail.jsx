@@ -1,22 +1,23 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Icon from '../components/Icon.jsx'
 import Logo from '../components/Logo.jsx'
 import StartupRow from '../components/StartupRow.jsx'
 import { Meta, SaveButton, Tag } from '../components/bits.jsx'
-import startups, { byId, cleanAmount, issueNo, parseAmountUSD } from '../lib/data.js'
+import startups, { byId, cleanAmount, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
 import { navigate, prefersReducedMotion, useFlag } from '../lib/hooks.js'
 import { dotDate, enDash, langOf, monthDay, numClass, pad2, ym } from '../lib/format.js'
 import { isColdStart } from '../lib/nav.js'
 import {
-  SECTIONS,
   scrollToSection,
+  sectionsFor,
   useActiveSection,
   useContextList,
+  useKoreaLens,
   useReadTracking,
   useShare,
 } from './detail-hooks.jsx'
 
-function SectionNav({ active }) {
+function SectionNav({ active, sections }) {
   const ref = useRef(null)
   useEffect(() => {
     // Scroll only the chip bar horizontally; scrollIntoView would also touch the
@@ -29,7 +30,7 @@ function SectionNav({ active }) {
   }, [active])
   return (
     <nav className="chipnav" aria-label="이 글의 섹션" ref={ref}>
-      {SECTIONS.map((s) => (
+      {sections.map((s) => (
         <button
           key={s.id}
           type="button"
@@ -492,6 +493,127 @@ function Sources({ startup: s }) {
   )
 }
 
+const RELATION = { direct: '직접 경쟁', adjacent: '인접', analog: '유사 아이디어' }
+
+function KoreaLens({ startup: s, lens }) {
+  const v = LENS_VERDICTS[lens.verdict] || LENS_VERDICTS.unclear
+  const { similar = [], korea = {}, opportunity: o = {} } = lens
+  const players = korea.players || []
+  return (
+    <div className="lens">
+      <div className="lens__verdict">
+        <p className="lens__tags">
+          <span className={`badge badge--${v.tone === 'accent' ? 'accent' : v.tone === 'warn' ? 'warn' : 'note'} lens__badge`}>
+            {v.label}
+          </span>
+          <Tag>AI 가설</Tag>
+        </p>
+        {lens.headline && <p className="lens__headline">{lens.headline}</p>}
+        <p className="lens__disclaimer">
+          검색 결과를 바탕으로 AI가 쓴 가설이에요. 사업·투자 조언이 아니며, 직접 확인이 필요해요.
+        </p>
+      </div>
+
+      {similar.length > 0 && (
+        <Field label="비슷한 것들">
+          <ul className="lens__cards">
+            {similar.map((x) => (
+              <li key={x.name} className="lens__card">
+                <p className="lens__cardhead">
+                  <a href={x.url} target="_blank" rel="noopener noreferrer" lang={langOf(x.name)}>
+                    {x.name}
+                    <Icon name="external" size={14} />
+                    <span className="sr-only">(새 창)</span>
+                  </a>
+                  <span className="lens__meta">
+                    {[x.country_ko, RELATION[x.relation]].filter(Boolean).join(' · ')}
+                  </span>
+                </p>
+                <p>{x.summary}</p>
+              </li>
+            ))}
+          </ul>
+        </Field>
+      )}
+
+      <Field label="한국 현황">
+        {players.length > 0 ? (
+          <ul className="lens__cards">
+            {players.map((p) => (
+              <li key={p.name} className="lens__card">
+                <p className="lens__cardhead">
+                  <a href={p.url} target="_blank" rel="noopener noreferrer" lang={langOf(p.name)}>
+                    {p.name}
+                    <Icon name="external" size={14} />
+                    <span className="sr-only">(새 창)</span>
+                  </a>
+                  <span className="lens__meta">{p.relation === 'direct' ? '한국 · 직접 경쟁' : '한국 · 인접'}</span>
+                </p>
+                <p>{p.what}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="muted">이번 조사에서 확인된 한국 사업자는 없어요.</p>
+        )}
+        {korea.market_note && <p className="lens__note">{korea.market_note}</p>}
+        {korea.regulation?.note && (
+          <p className="lens__note">
+            <strong>규제</strong> {korea.regulation.note}{' '}
+            {korea.regulation.source_url ? (
+              <a href={korea.regulation.source_url} target="_blank" rel="noopener noreferrer">
+                근거
+                <Icon name="external" size={14} />
+                <span className="sr-only">(새 창)</span>
+              </a>
+            ) : (
+              <Tag tone="warn">추정</Tag>
+            )}
+          </p>
+        )}
+        {korea.search_gaps && (
+          <p className="lens__gaps">
+            <strong>확인하지 못한 것</strong> {korea.search_gaps}
+          </p>
+        )}
+      </Field>
+
+      <Field label="기회 가설">
+        {o.thesis && <p>{o.thesis}</p>}
+        <dl className="lens__dl">
+          {o.who && (
+            <div>
+              <dt>누가</dt>
+              <dd>{o.who}</dd>
+            </div>
+          )}
+          {o.wedge && (
+            <div>
+              <dt>첫 진입점</dt>
+              <dd>{o.wedge}</dd>
+            </div>
+          )}
+        </dl>
+        {o.barriers?.length > 0 && (
+          <>
+            <h4 className="lens__sub">넘어야 할 장벽</h4>
+            <Bullets items={o.barriers} />
+          </>
+        )}
+        {o.checks?.length > 0 && (
+          <>
+            <h4 className="lens__sub">한 달 안에 확인할 것</h4>
+            <Bullets items={o.checks} ordered />
+          </>
+        )}
+      </Field>
+      <p className="lens__stamp">
+        <span className="mono">{dotDate((lens.generated_at || s.date).slice(0, 10))}</span> 작성
+      </p>
+    </div>
+  )
+}
+
 function NextCard({ startup: s, list, from }) {
   const idx = list.indexOf(s)
   const next = idx >= 0 ? list[idx + 1] : null
@@ -571,8 +693,9 @@ export default function Detail({ id, from, desktop, wide }) {
   const list = useContextList(s, from)
   const summaryRef = useRef(null)
   const share = useShare(s || { id, name_ko: '', tagline: '', date: '' })
-  const ids = useMemo(() => SECTIONS.map((x) => x.id), [])
-  const active = useActiveSection(ids)
+  const sections = sectionsFor(Boolean(s?._lens))
+  const lens = useKoreaLens(id, Boolean(s?._lens))
+  const active = useActiveSection(sections.map((x) => x.id))
   useReadTracking(summaryRef, id)
 
   // ←/→ between companies on desktop (ignored while typing)
@@ -602,7 +725,7 @@ export default function Detail({ id, from, desktop, wide }) {
       <Hero startup={s} list={list} share={share} from={from} desktop={desktop} wide={wide} />
       <Summary startup={s} summaryRef={summaryRef} />
 
-      {!wide && <SectionNav active={active} />}
+      {!wide && <SectionNav active={active} sections={sections} />}
 
       <Section id="why" n={1} title="왜 지금">
         <Field label="촉매">
@@ -674,7 +797,13 @@ export default function Detail({ id, from, desktop, wide }) {
         <Field label="대응">{mo.risk_mitigation && <p>{mo.risk_mitigation}</p>}</Field>
       </Section>
 
-      <Section id="sources" n={7} title="출처와 신뢰">
+      {s._lens && (
+        <Section id="korea" n={7} title="한국에서는">
+          {lens ? <KoreaLens startup={s} lens={lens} /> : <p className="muted">불러오는 중…</p>}
+        </Section>
+      )}
+
+      <Section id="sources" n={s._lens ? 8 : 7} title="출처와 신뢰">
         <Sources startup={s} />
       </Section>
 
@@ -710,7 +839,8 @@ export default function Detail({ id, from, desktop, wide }) {
 export function DetailRail({ id }) {
   const s = byId(id)
   const share = useShare(s || { id, name_ko: '', tagline: '', date: '' })
-  const active = useActiveSection(useMemo(() => SECTIONS.map((x) => x.id), []))
+  const sections = sectionsFor(Boolean(s?._lens))
+  const active = useActiveSection(sections.map((x) => x.id))
   if (!s) return null
   return (
     <div className="rail rail--detail">
@@ -723,7 +853,7 @@ export function DetailRail({ id }) {
       <nav className="toc" aria-label="이 글의 목차">
         <h2 className="rail__title">목차</h2>
         <ol>
-          {SECTIONS.map((x, i) => (
+          {sections.map((x, i) => (
             <li key={x.id}>
               <button
                 type="button"

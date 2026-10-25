@@ -21,11 +21,14 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { merge, normalize, selectCandidates, stripUrl, verifyLinks } from './lib/pipeline.mjs'
-import { createClient, extractJson, modelsFromEnv, OpenRouterError } from './lib/openrouter.mjs'
+import { createClient, modelsFromEnv, OpenRouterError, parseOrRepair } from './lib/openrouter.mjs'
+import { updateLensFiles } from './lib/korea-lens.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const DATA_PATH = path.join(here, '../src/data/startups.json')
 const META_PATH = path.join(here, '../src/data/meta.json')
+const LENS_PATH = path.join(here, '../src/data/korea-lens.json')
+const LENS_INDEX_PATH = path.join(here, '../src/data/korea-lens-index.json')
 
 const WANT = 5
 const DISCOVER = 12 // over-ask: selection rules and failed research drop some
@@ -101,20 +104,6 @@ ${PROFILE_SHAPE}`
 }
 
 /* ---------- LLM steps ---------- */
-
-/** Parse JSON from a reply; if the model wrapped or mangled it, one cheap no-web repair call. */
-async function parseOrRepair(llm, text, kind = 'object') {
-  try {
-    return extractJson(text, kind)
-  } catch {
-    const fixed = await llm.chat({
-      user: `Convert the following into one valid JSON ${kind}. Keep every field and value; do not add facts. Output JSON only.\n\n${text}`,
-      json: kind === 'object',
-      maxTokens: 16000,
-    })
-    return extractJson(fixed.text, kind)
-  }
-}
 
 async function discover(llm, avoid, searched) {
   const r = await llm.chat({ system: RULES, user: discoveryPrompt(avoid), web: true, maxResults: 10 })
@@ -216,6 +205,15 @@ async function main() {
       models: [...new Set(verified.map((p) => p.model))],
     }
     fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2) + '\n', 'utf-8')
+  }
+
+  // Optional enrichment ("한국에서는"): a failure here must never block the issue itself.
+  if (llm && outPath === DATA_PATH) {
+    try {
+      await updateLensFiles(llm, verified, { lensPath: LENS_PATH, indexPath: LENS_INDEX_PATH, allIds: merged.map((s) => s.id), log: console.log })
+    } catch (err) {
+      console.log(`korea-lens skipped: ${err.message}`)
+    }
   }
 
   console.log(`Wrote ${verified.length} profiles for ${date} → ${path.relative(process.cwd(), outPath)}`)

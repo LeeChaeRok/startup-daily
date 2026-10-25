@@ -98,3 +98,17 @@ export function extractJson(text, kind = 'object') {
   if (start < 0 || end <= start) throw new SyntaxError(`no JSON ${kind} found`)
   return JSON.parse(src.slice(start, end + 1))
 }
+
+/** Parse JSON from a reply; if the model wrapped or mangled it, one cheap no-web repair call. */
+export async function parseOrRepair(llm, text, kind = 'object') {
+  try {
+    return extractJson(text, kind)
+  } catch {
+    const fixed = await llm.chat({
+      user: `Convert the following into one valid JSON ${kind}. Keep every field and value; do not add facts. Output JSON only.\n\n${text}`,
+      json: kind === 'object',
+      maxTokens: 16000,
+    })
+    return extractJson(fixed.text, kind)
+  }
+}

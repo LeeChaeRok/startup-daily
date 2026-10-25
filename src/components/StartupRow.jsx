@@ -1,6 +1,7 @@
 import Logo from './Logo.jsx'
 import Icon from './Icon.jsx'
 import { CorrectionBadge, Meta, SaveButton } from './bits.jsx'
+import { LENS_VERDICTS } from '../lib/data.js'
 import { useReadLog } from '../lib/hooks.js'
 import { monthDay, numClass, pad2 } from '../lib/format.js'
 
@@ -50,6 +51,7 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
                 ]}
               />
               <CorrectionBadge correction={s._correction} />
+              {LENS_VERDICTS[s._lens?.v]?.badge && <span className="badge badge--accent badge--flat">{LENS_VERDICTS[s._lens.v].badge}</span>}
             </span>
           )}
           {compact && s._correction && (
