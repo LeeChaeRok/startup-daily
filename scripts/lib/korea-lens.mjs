@@ -157,6 +157,11 @@ export async function assemble(facts, written, { searched, checkedAt, model, fet
   const dropped = []
   const known = new Map()
   for (const s of list(facts.similar)) if (s?.name && s.url) known.set(norm(s.name), s)
+  // writers often list a Korean player as a comparable too; that is fine, it is in the facts
+  for (const p of list(facts.korean_players)) {
+    if (p?.name && p.url && !known.has(norm(p.name)))
+      known.set(norm(p.name), { ...p, country_ko: '한국', kind: 'company', relation: p.relation === 'direct' ? 'direct' : 'adjacent', fact: p.what })
+  }
   const checks = new Map()
   const verify = async (url, hostLevel = true) => {
     if (!checks.has(`${url}|${hostLevel}`)) checks.set(`${url}|${hostLevel}`, await checkUrl(url, { searched, hostLevel, fetchImpl }))
@@ -313,7 +318,7 @@ export async function buildKoreaLens(
   }
 
   let feedback = ''
-  for (let attempt = 0; attempt < 2; attempt++) {
+  for (let attempt = 0; attempt < 3; attempt++) {
     // a retry is a writing call only (no web), ~10-30s; give up instead of being killed by a hard time limit
     if (attempt > 0 && deadline - Date.now() < 40_000) {
       log(`  korea-lens ${name}: no time left for a retry`)
@@ -322,7 +327,8 @@ export async function buildKoreaLens(
     try {
       // the retry goes to the next model in the list: a model that just broke a rule tends to repeat it
       const useModels = attempt > 0 && llm.models?.length > 1 ? llm.models.slice(1) : undefined
-      const w = await llm.chat({ system: WRITE_RULES, user: writePrompt(profile, facts, feedback), json: true, maxTokens: 8000, useModels })
+      // generous limit: reasoning models spend part of it thinking before the JSON
+      const w = await llm.chat({ system: WRITE_RULES, user: writePrompt(profile, facts, feedback), json: true, maxTokens: 24000, useModels })
       const written = await parseOrRepair(llm, w.text)
       const entry = await assemble(facts, written, { searched, checkedAt, model: w.model, fetchImpl, subjectNames: [profile.name_en, profile.name_ko], log })
       const problems = validate(entry)
@@ -331,7 +337,7 @@ export async function buildKoreaLens(
         return entry
       }
       feedback = problems.join('; ')
-      log(`  korea-lens ${name}: rejected (${feedback})${attempt === 0 ? ', retrying' : ''}`)
+      log(`  korea-lens ${name}: rejected (${feedback})${attempt < 2 ? ', retrying' : ''}`)
     } catch (err) {
       log(`  korea-lens ${name}: write failed (${err.message})`)
       feedback = 'invalid JSON'
