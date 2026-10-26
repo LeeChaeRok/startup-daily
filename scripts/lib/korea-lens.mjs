@@ -98,7 +98,7 @@ const ABSOLUTE = [
   /미개척/,
   /블루\s*오션/,
   /(시장|분야)[^.。\n]{0,10}공백/,
-  /(최초|첫)\s*(진입|사례|플레이어)/,
+  /(최초|첫)\s*(진입(?!점)|사례|플레이어)/, // "첫 진입점" is the wedge label, not a claim
   /(독점|선점)\s*(가능|기회)/,
 ]
 
@@ -285,7 +285,15 @@ export async function buildKoreaLens(
   let facts
   try {
     // 'tool': the model runs its own Korean and English queries, several times
-    const r = await llm.chat({ system: FACT_RULES, user: researchPrompt(profile), web: 'tool', maxResults: searchResults, maxSearches })
+    // leave at least ~70s of the budget for writing
+    const r = await llm.chat({
+      system: FACT_RULES,
+      user: researchPrompt(profile),
+      web: 'tool',
+      maxResults: searchResults,
+      maxSearches,
+      timeoutMs: Math.min(240_000, deadline - Date.now() - 70_000),
+    })
     r.citations.forEach((c) => searched.add(stripUrl(c.url)))
     facts = await parseOrRepair(llm, r.text)
   } catch (err) {
@@ -303,6 +311,7 @@ export async function buildKoreaLens(
         web: 'tool',
         maxResults: searchResults,
         maxSearches: Math.min(4, maxSearches),
+        timeoutMs: Math.min(90_000, deadline - Date.now() - 70_000),
       })
       r.citations.forEach((c) => searched.add(stripUrl(c.url)))
       const extra = await parseOrRepair(llm, r.text)
@@ -320,7 +329,7 @@ export async function buildKoreaLens(
   let feedback = ''
   for (let attempt = 0; attempt < 3; attempt++) {
     // a retry is a writing call only (no web), ~10-30s; give up instead of being killed by a hard time limit
-    if (attempt > 0 && deadline - Date.now() < 40_000) {
+    if (attempt > 0 && deadline - Date.now() < 60_000) {
       log(`  korea-lens ${name}: no time left for a retry`)
       break
     }
@@ -328,7 +337,14 @@ export async function buildKoreaLens(
       // the retry goes to the next model in the list: a model that just broke a rule tends to repeat it
       const useModels = attempt > 0 && llm.models?.length > 1 ? llm.models.slice(1) : undefined
       // generous limit: reasoning models spend part of it thinking before the JSON
-      const w = await llm.chat({ system: WRITE_RULES, user: writePrompt(profile, facts, feedback), json: true, maxTokens: 24000, useModels })
+      const w = await llm.chat({
+        system: WRITE_RULES,
+        user: writePrompt(profile, facts, feedback),
+        json: true,
+        maxTokens: 24000,
+        useModels,
+        timeoutMs: Math.min(150_000, deadline - Date.now() - 5_000),
+      })
       const written = await parseOrRepair(llm, w.text)
       const entry = await assemble(facts, written, { searched, checkedAt, model: w.model, fetchImpl, subjectNames: [profile.name_en, profile.name_ko], log })
       const problems = validate(entry)

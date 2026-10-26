@@ -91,7 +91,7 @@ export function createClient({ apiKey, models = DEFAULT_MODELS, fetchImpl = fetc
   let totalCost = 0
 
   // `useModels` overrides the client's model list for one call (e.g. a retry on a different model)
-  async function chat({ system, user, web = false, maxResults = 8, maxSearches = 8, json = false, maxTokens = 16000, useModels }) {
+  async function chat({ system, user, web = false, maxResults = 8, maxSearches = 8, json = false, maxTokens = 16000, useModels, timeoutMs = 300_000 }) {
     const list = useModels?.length ? useModels : models
     const body = {
       model: list[0],
@@ -112,7 +112,7 @@ export function createClient({ apiKey, models = DEFAULT_MODELS, fetchImpl = fetc
           'X-OpenRouter-Title': 'Startup Daily',
         },
         body: JSON.stringify(body),
-        signal: AbortSignal.timeout(300_000),
+        signal: AbortSignal.timeout(Math.max(5_000, timeoutMs)),
       })
 
       // 429 / 5xx: OpenRouter already tried the fallback models; back off and retry the whole call
