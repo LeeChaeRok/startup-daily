@@ -53,7 +53,7 @@ jobs:
       - name: Generate today's issue
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          # Optional repo variable to override the model order (default: Haiku 5.5 → Sonnet 5.5)
+          # Optional repo variable to override the model order (default: DeepSeek V4 Flash → Haiku 5.5)
           OPENROUTER_MODELS: ${{ vars.OPENROUTER_MODELS }}
           ISSUE_DATE: ${{ inputs.issue_date }}
         run: node scripts/generate-daily.mjs

@@ -10,7 +10,7 @@
  * The OPENROUTER_API_KEY lives only in this project's environment variables.
  */
 import startups from '../src/data/startups.json' with { type: 'json' }
-import { createClient, modelsFromEnv } from '../scripts/lib/openrouter.mjs'
+import { createClient, lensModelsFromEnv } from '../scripts/lib/openrouter.mjs'
 import { buildKoreaLens } from '../scripts/lib/korea-lens.mjs'
 
 export const config = { maxDuration: 300 }
@@ -66,7 +66,7 @@ export default async function handler(req, res) {
 
   running++
   try {
-    const llm = createClient({ apiKey: process.env.OPENROUTER_API_KEY, models: modelsFromEnv() })
+    const llm = createClient({ apiKey: process.env.OPENROUTER_API_KEY, models: lensModelsFromEnv() })
     const entry = await buildKoreaLens(llm, startup, { checkedAt: new Date().toISOString(), searchResults: 4 })
     if (!entry) return send(res, 422, { error: 'no-result', message: '이번에는 믿을 만한 분석을 만들지 못했어요. 나중에 다시 시도해 주세요.' })
     console.log(`korea-lens ${id}: ${entry.verdict}, cost $${llm.cost().toFixed(4)}`)

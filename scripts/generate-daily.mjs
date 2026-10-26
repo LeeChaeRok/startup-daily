@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Daily startup issue generator (runs from GitHub Actions every morning KST).
- * LLM calls go through OpenRouter: Claude Haiku first, Sonnet as fallback.
+ * LLM calls go through OpenRouter: DeepSeek V4 Flash first, Claude Haiku as fallback.
  *
  *   node scripts/generate-daily.mjs                 generate today's issue into src/data/startups.json
  *   node scripts/generate-daily.mjs --out tmp.json  write the merged result elsewhere (dry run)
@@ -10,7 +10,7 @@
  *                                                   JSON array of finished profiles (offline testing)
  *
  * Env: OPENROUTER_API_KEY (required unless --candidates)
- *      OPENROUTER_MODELS   comma-separated, first = primary (default: Haiku 5.5, then Sonnet 5.5)
+ *      OPENROUTER_MODELS   comma-separated, first = primary (default: DeepSeek V4 Flash, then Haiku 5.5)
  *      ISSUE_DATE          YYYY-MM-DD (default: today in KST)
  *      RETAIN_ISSUES       issues kept in startups.json (default 30)
  *

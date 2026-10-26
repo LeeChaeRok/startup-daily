@@ -1,19 +1,45 @@
 /**
  * Minimal OpenRouter chat-completions client for the research pipeline.
- * Haiku first; later entries in `models` are OpenRouter-side fallbacks used
- * only when the earlier model errors (rate limit, downtime, context, …).
+ * Later entries in `models` are OpenRouter-side fallbacks used only when the
+ * earlier model errors (rate limit, downtime, context, …).
  */
 
 const ENDPOINT = 'https://openrouter.ai/api/v1/chat/completions'
 
-export const DEFAULT_MODELS = ['anthropic/claude-haiku-5.5', 'anthropic/claude-sonnet-5.5']
+// Daily discovery + deep research: DeepSeek is ~10-20x cheaper than Haiku with comparable
+// facts (benchmark 2026-10-26); Haiku takes over when DeepSeek errors.
+export const DEFAULT_MODELS = ['deepseek/deepseek-v4-flash', 'anthropic/claude-haiku-5.5']
+// "한국에서는": Haiku's native search finds Korean sources much better, and a missed Korean
+// player turns into a wrong "빈자리" verdict, so this stage stays on Claude.
+export const LENS_MODELS = ['anthropic/claude-haiku-5.5', 'anthropic/claude-sonnet-5.5']
 
-export function modelsFromEnv(env = process.env) {
-  const list = (env.OPENROUTER_MODELS || '')
+const parseList = (v) =>
+  (v || '')
     .split(',')
     .map((s) => s.trim())
     .filter(Boolean)
+
+export function modelsFromEnv(env = process.env) {
+  const list = parseList(env.OPENROUTER_MODELS)
   return list.length ? list : DEFAULT_MODELS
+}
+
+export function lensModelsFromEnv(env = process.env) {
+  const list = parseList(env.LENS_MODELS)
+  return list.length ? list : LENS_MODELS
+}
+
+/** Claude's native search can leave citation markup in the prose; strip it before anything is stored. */
+export function stripCiteTags(text) {
+  return typeof text === 'string' ? text.replace(/<\/?cite[^>]*>/g, '').replace(/[ \t]{2,}/g, ' ') : text
+}
+
+/** Apply stripCiteTags to every string in a parsed JSON value. */
+export function deepClean(v) {
+  if (typeof v === 'string') return stripCiteTags(v)
+  if (Array.isArray(v)) return v.map(deepClean)
+  if (v && typeof v === 'object') return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, deepClean(x)]))
+  return v
 }
 
 export class OpenRouterError extends Error {
@@ -101,6 +127,10 @@ export function extractJson(text, kind = 'object') {
 
 /** Parse JSON from a reply; if the model wrapped or mangled it, one cheap no-web repair call. */
 export async function parseOrRepair(llm, text, kind = 'object') {
+  return deepClean(await parseOrRepairRaw(llm, text, kind))
+}
+
+async function parseOrRepairRaw(llm, text, kind) {
   try {
     return extractJson(text, kind)
   } catch {

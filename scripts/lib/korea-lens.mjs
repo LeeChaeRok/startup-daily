@@ -17,12 +17,12 @@ const norm = (s = '') => s.normalize('NFC').toLowerCase().replace(/[^\p{L}\p{N}]
 
 /* ---------- Prompts ---------- */
 
-const FACT_RULES = `You are a research assistant for a Korean startup publication. You report facts with sources and nothing else.
+export const FACT_RULES = `You are a research assistant for a Korean startup publication. You report facts with sources and nothing else.
 - Every company, product or regulation you mention must come with a URL you actually saw in search results. Never construct or guess a URL.
 - Search in Korean and in English. If you could not find something, say so in "gaps"; do not fill the gap from memory.
 - "Not found in my searches" is not the same as "does not exist". Never claim absence.`
 
-function researchPrompt(p) {
+export function researchPrompt(p) {
   return `Subject company: ${p.name_en} (${p.headquarters?.country_ko || ''}) — ${p.tagline}
 What it does: ${p.product?.summary || ''}
 Target customer: ${p.product?.target_customer || ''}

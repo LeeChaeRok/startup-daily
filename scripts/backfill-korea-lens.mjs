@@ -9,7 +9,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { createClient, modelsFromEnv } from './lib/openrouter.mjs'
+import { createClient, lensModelsFromEnv } from './lib/openrouter.mjs'
 import { updateLensFiles } from './lib/korea-lens.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
@@ -33,7 +33,7 @@ if (!targets.length) {
   console.log('Nothing to do.')
   process.exit(0)
 }
-const llm = createClient({ apiKey: process.env.OPENROUTER_API_KEY, models: modelsFromEnv(), log: console.log })
+const llm = createClient({ apiKey: process.env.OPENROUTER_API_KEY, models: lensModelsFromEnv(), log: console.log })
 console.log(`Building ${targets.length} entries: ${targets.map((s) => s.name_en).join(', ')}`)
 if (out && fs.existsSync(LENS) && !fs.existsSync(lensPath)) fs.copyFileSync(LENS, lensPath)
 await updateLensFiles(llm, targets, { lensPath, indexPath, allIds: startups.map((s) => s.id) })
