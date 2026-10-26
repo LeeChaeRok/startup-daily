@@ -21,6 +21,9 @@ eq('blocks 전무', abs('국내 경쟁사는 전무하다'), true)
 eq('blocks 유일한', abs('한국에서 유일한 플레이어'), true)
 eq('allows hedged', abs('이번 조사에서는 한국 사업자가 확인되지 않았다'), false)
 eq('allows 없이 (without)', abs('설치 없이 바로 쓸 수 있어 국내 도입이 쉽다'), false)
+eq('blocks 미개척', abs('AI 임베디드 보험 인프라, 한국 시장 미개척'), true)
+eq('blocks 블루오션', abs('국내는 블루오션이다'), true)
+eq('allows 공백 elsewhere', abs('개발 공백 기간을 줄인다'), false)
 
 // full flow with mocked LLM + real link check (example.com is reachable, nope.invalid is not)
 const good = 'https://example.com/'

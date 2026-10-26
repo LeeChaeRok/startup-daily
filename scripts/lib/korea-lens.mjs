@@ -44,6 +44,15 @@ Do not list ${p.name_en} itself as a Korean player. For korean_players, "direct"
 Use an empty list or empty string when you have nothing. relation: direct = same job for the same customer; adjacent = neighboring job or customer; analog = same idea in a different industry.`
 }
 
+function koreanPassPrompt(p) {
+  return `${p.name_en}: ${p.tagline}
+What it does: ${p.product?.summary || ''}
+
+Search ONLY in Korean, at least three different queries (a product category term, the customer's industry, and the business model, e.g. "국내 ○○ 서비스", "○○ 스타트업 투자", "○○ 솔루션 도입 사례"). List Korean companies, products or big-company units that do the same or a neighboring job.
+Reply with ONLY: {"queries_run": [""], "korean_players": [{"name": "", "relation": "direct | adjacent", "what": "", "url": "https://…"}]}
+Every URL must be a page you saw in search results. An empty list is a valid answer.`
+}
+
 const WRITE_RULES = `You write the "한국에서는" section of a Korean startup publication, in Korean (proper nouns stay in English).
 You are given verified research facts. Use ONLY the companies, products and facts listed there; never add a name, number or regulation that is not in the facts.
 Tone: specific and measured. This is a hypothesis for readers to check, not advice.
@@ -86,6 +95,11 @@ const ABSOLUTE = [
   /아무도\s/,
   /(경쟁자|경쟁사|플레이어)[가는]?\s*(전혀\s*)?없/,
   /존재하지\s*않/,
+  /미개척/,
+  /블루\s*오션/,
+  /(시장|분야)[^.。\n]{0,10}공백/,
+  /(최초|첫)\s*(진입|사례|플레이어)/,
+  /(독점|선점)\s*(가능|기회)/,
 ]
 
 export function absoluteClaims(entry) {
@@ -250,6 +264,30 @@ export async function buildKoreaLens(
   } catch (err) {
     log(`  korea-lens ${name}: research failed (${err.message})`)
     return null
+  }
+
+  // No Korean player is the claim most likely to be wrong (search results vary run to run), so
+  // before the analysis can lean on it, run one more Korean-only pass and merge what it finds.
+  if (!list(facts.korean_players).length && deadline - Date.now() > 110_000) {
+    try {
+      const r = await llm.chat({
+        system: FACT_RULES,
+        user: koreanPassPrompt(profile),
+        web: 'tool',
+        maxResults: searchResults,
+        maxSearches: Math.min(4, maxSearches),
+      })
+      r.citations.forEach((c) => searched.add(stripUrl(c.url)))
+      const extra = await parseOrRepair(llm, r.text)
+      facts = {
+        ...facts,
+        korean_players: list(extra.korean_players),
+        queries_run: [...list(facts.queries_run), ...list(extra.queries_run)],
+      }
+      log(`  korea-lens ${name}: Korean-only pass found ${facts.korean_players.length} players`)
+    } catch (err) {
+      log(`  korea-lens ${name}: Korean-only pass failed (${err.message})`)
+    }
   }
 
   let feedback = ''
