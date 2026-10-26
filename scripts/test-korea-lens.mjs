@@ -1,6 +1,6 @@
 // Guard tests for the "한국에서는" pipeline. Mock LLM; link checks hit example.com / an invalid host.
 // Run: node scripts/test-korea-lens.mjs
-import { absoluteClaims, boundVerdict, buildKoreaLens, validate, buildIndex } from './lib/korea-lens.mjs'
+import { absoluteClaims, boundVerdict, buildKoreaLens, validate, buildIndex, unverifiedMentions } from './lib/korea-lens.mjs'
 let fails = 0
 const eq = (name, a, b) => { const ok = JSON.stringify(a) === JSON.stringify(b); if (!ok) fails++; console.log(ok ? 'ok  ' : 'FAIL', name, ok ? '' : `got ${JSON.stringify(a)} want ${JSON.stringify(b)}`) }
 
@@ -21,6 +21,8 @@ eq('blocks 전무', abs('국내 경쟁사는 전무하다'), true)
 eq('blocks 유일한', abs('한국에서 유일한 플레이어'), true)
 eq('allows hedged', abs('이번 조사에서는 한국 사업자가 확인되지 않았다'), false)
 eq('allows 없이 (without)', abs('설치 없이 바로 쓸 수 있어 국내 도입이 쉽다'), false)
+eq('ghost name caught', unverifiedMentions({ headline: '국내 MGA 인프라 스타트업, 디비아이엔씨 예스슈어 확인' }, ['DB Inc. (디비아이엔씨) — 예스슈어(Yes, Sure)', '디비아이엔씨 예스슈어']).length > 0, true)
+eq('ghost name ignored when absent', unverifiedMentions({ headline: '국내 직접 후보 2곳' }, ['AIMS (에임스)']).length, 0)
 eq('blocks 미개척', abs('AI 임베디드 보험 인프라, 한국 시장 미개척'), true)
 eq('blocks 블루오션', abs('국내는 블루오션이다'), true)
 eq('allows 공백 elsewhere', abs('개발 공백 기간을 줄인다'), false)

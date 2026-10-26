@@ -102,8 +102,8 @@ const ABSOLUTE = [
   /(독점|선점)\s*(가능|기회)/,
 ]
 
-export function absoluteClaims(entry) {
-  const text = [
+function prose(entry) {
+  return [
     entry.headline,
     entry.korea?.market_note,
     entry.opportunity?.thesis,
@@ -113,7 +113,21 @@ export function absoluteClaims(entry) {
   ]
     .filter(Boolean)
     .join('\n')
-  return ABSOLUTE.filter((re) => re.test(text)).map((re) => re.source.slice(0, 30))
+}
+
+/** The offending sentences (not the patterns), so a retry can be told exactly what to rewrite. */
+export function absoluteClaims(entry) {
+  const sentences = prose(entry).split(/(?<=[.。!?])\s+|\n/)
+  return [...new Set(sentences.filter((s) => ABSOLUTE.some((re) => re.test(s))).map((s) => s.trim().slice(0, 120)))]
+}
+
+/** Names that were dropped by verification must not reappear in the prose. */
+export function unverifiedMentions(entry, dropped) {
+  const text = norm(prose(entry))
+  return dropped.filter((n) => {
+    const key = norm(n.split(/[—(\-]/)[0])
+    return key.length >= 2 && text.includes(key)
+  })
 }
 
 const hangul = (t = '') => (t.match(/[가-힣]/g) || []).length / Math.max(1, t.replace(/\s/g, '').length)
@@ -140,6 +154,7 @@ const str = (v) => (typeof v === 'string' ? v.trim() : '')
  * survive, and every link must open (or have appeared in a real search result).
  */
 export async function assemble(facts, written, { searched, checkedAt, model, fetchImpl, subjectNames = [], log = () => {} }) {
+  const dropped = []
   const known = new Map()
   for (const s of list(facts.similar)) if (s?.name && s.url) known.set(norm(s.name), s)
   const checks = new Map()
@@ -153,11 +168,13 @@ export async function assemble(facts, written, { searched, checkedAt, model, fet
     const src = known.get(norm(w?.name))
     if (!src) {
       log(`    drop similar "${w?.name}": not in research facts`)
+      if (w?.name) dropped.push(w.name)
       continue
     }
     const c = await verify(src.url)
     if (!c.verified) {
       log(`    drop similar "${src.name}": link ${c.http_status}`)
+      dropped.push(src.name)
       continue
     }
     similar.push({
@@ -179,6 +196,7 @@ export async function assemble(facts, written, { searched, checkedAt, model, fet
     const c = await verify(p.url)
     if (!c.verified) {
       log(`    drop Korean player "${p.name}": link ${c.http_status}`)
+      dropped.push(p.name)
       continue
     }
     players.push({
@@ -208,7 +226,7 @@ export async function assemble(facts, written, { searched, checkedAt, model, fet
   const direct = players.filter((p) => p.relation === 'direct').length
   const verdict = boundVerdict(written.verdict, { players: direct, queries, gaps: gaps || rawGaps })
 
-  return {
+  const entry = {
     generated_at: checkedAt,
     model,
     verdict,
@@ -230,6 +248,8 @@ export async function assemble(facts, written, { searched, checkedAt, model, fet
       checks: list(written.checks).map(str).filter(Boolean).slice(0, 4),
     },
   }
+  Object.defineProperty(entry, 'dropped', { value: dropped, enumerable: false })
+  return entry
 }
 
 export function validate(entry) {
@@ -242,7 +262,9 @@ export function validate(entry) {
   if (!entry.opportunity.checks.length) problems.push('no checks')
   if (hangul(entry.opportunity.thesis) < 0.3) problems.push('thesis is not Korean')
   const abs = absoluteClaims(entry)
-  if (abs.length) problems.push(`absolute claim (${abs.join(', ')})`)
+  if (abs.length) problems.push(`these sentences claim absence or uniqueness; rewrite them as "이번 조사에서는 확인되지 않았다" without the absolute wording: ${abs.map((s) => `"${s}"`).join(' / ')}`)
+  const ghosts = unverifiedMentions(entry, entry.dropped || [])
+  if (ghosts.length) problems.push(`do not mention these names, their sources could not be verified: ${ghosts.join(', ')}`)
   return problems
 }
 
@@ -298,7 +320,9 @@ export async function buildKoreaLens(
       break
     }
     try {
-      const w = await llm.chat({ system: WRITE_RULES, user: writePrompt(profile, facts, feedback), json: true, maxTokens: 8000 })
+      // the retry goes to the next model in the list: a model that just broke a rule tends to repeat it
+      const useModels = attempt > 0 && llm.models?.length > 1 ? llm.models.slice(1) : undefined
+      const w = await llm.chat({ system: WRITE_RULES, user: writePrompt(profile, facts, feedback), json: true, maxTokens: 8000, useModels })
       const written = await parseOrRepair(llm, w.text)
       const entry = await assemble(facts, written, { searched, checkedAt, model: w.model, fetchImpl, subjectNames: [profile.name_en, profile.name_ko], log })
       const problems = validate(entry)

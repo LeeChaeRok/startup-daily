@@ -90,10 +90,12 @@ export function createClient({ apiKey, models = DEFAULT_MODELS, fetchImpl = fetc
 
   let totalCost = 0
 
-  async function chat({ system, user, web = false, maxResults = 8, maxSearches = 8, json = false, maxTokens = 16000 }) {
+  // `useModels` overrides the client's model list for one call (e.g. a retry on a different model)
+  async function chat({ system, user, web = false, maxResults = 8, maxSearches = 8, json = false, maxTokens = 16000, useModels }) {
+    const list = useModels?.length ? useModels : models
     const body = {
-      model: models[0],
-      models,
+      model: list[0],
+      models: list,
       max_tokens: maxTokens,
       messages: [...(system ? [{ role: 'system', content: system }] : []), { role: 'user', content: user }],
       ...(web === 'tool' ? searchTool(maxResults, maxSearches) : web ? { plugins: [{ id: 'web', max_results: maxResults }] } : {}),
@@ -139,7 +141,7 @@ export function createClient({ apiKey, models = DEFAULT_MODELS, fetchImpl = fetc
     }
   }
 
-  return { chat, cost: () => totalCost }
+  return { chat, cost: () => totalCost, models }
 }
 
 /** Pull the first JSON value (object or array) out of a model reply. */
