@@ -221,7 +221,9 @@ export async function assemble(facts, written, { searched, checkedAt, model, fet
 export function validate(entry) {
   const problems = []
   if (!entry.headline || entry.headline.length > 90) problems.push('headline missing or too long')
-  if (entry.similar.length < 2) problems.push(`only ${entry.similar.length} verified similar entries`)
+  // the section still says something useful with one comparable when Korean players are well covered
+  if (entry.similar.length < 1 || (entry.similar.length < 2 && entry.korea.players.length < 2))
+    problems.push(`only ${entry.similar.length} verified similar entries`)
   if (!entry.opportunity.thesis || !entry.opportunity.wedge) problems.push('thesis/wedge missing')
   if (!entry.opportunity.checks.length) problems.push('no checks')
   if (hangul(entry.opportunity.thesis) < 0.3) problems.push('thesis is not Korean')
@@ -252,8 +254,8 @@ export async function buildKoreaLens(
 
   let feedback = ''
   for (let attempt = 0; attempt < 2; attempt++) {
-    // a retry takes ~30-60s; inside a request with a hard time limit, give up instead of being killed
-    if (attempt > 0 && deadline - Date.now() < 70_000) {
+    // a retry is a writing call only (no web), ~10-30s; give up instead of being killed by a hard time limit
+    if (attempt > 0 && deadline - Date.now() < 40_000) {
       log(`  korea-lens ${name}: no time left for a retry`)
       break
     }

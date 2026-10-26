@@ -74,7 +74,9 @@ export default async function handler(req, res) {
       searchResults: 4,
       maxSearches: 6,
       deadline: started + 270_000,
+      log: (m) => console.log(m.trim()),
     })
+    if (!entry) console.log(`korea-lens ${id}: no result after ${Math.round((Date.now() - started) / 1000)}s, cost $${llm.cost().toFixed(4)}`)
     if (!entry) return send(res, 422, { error: 'no-result', message: '이번에는 믿을 만한 분석을 만들지 못했어요. 나중에 다시 시도해 주세요.' })
     console.log(`korea-lens ${id}: ${entry.verdict}, cost $${llm.cost().toFixed(4)}`)
     return send(res, 200, { id, entry }, CACHE)
