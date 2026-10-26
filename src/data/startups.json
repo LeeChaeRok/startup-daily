@@ -1,5 +1,1177 @@
 [
   {
+    "name_en": "Slingshot Insurance",
+    "name_ko": "슬링샷 인슈어런스",
+    "tagline": "체크아웃에서 팔리는 소액 보험을 AI로 운영하는 임베디드 보험 인프라",
+    "category": [
+      "InsurTech",
+      "임베디드 보험",
+      "MGA 인프라"
+    ],
+    "founded_year": 2026,
+    "headquarters": {
+      "city": "Minneapolis",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Seed",
+    "employee_count": "1-10",
+    "website": "https://www.slingshotinsurance.com",
+    "founders": [
+      {
+        "name_en": "Ethan Genteman",
+        "name_ko": "이선 겐트먼",
+        "role": "공동창업자 겸 CEO",
+        "background": "이전에 상장사 Palomar Holdings에서 Chief Actuarial Officer(최고 보험계리 책임자)를 지냈다. 2019년 Palomar에 합류해 지진보험을 넘어 다른 보장 상품으로 사업이 확장되는 과정에서 계리·데이터 팀을 구축했다. 창업 전 첫 창업이며, 약 1년 전부터 지하실에서 프로토타입을 직접 코딩했다고 밝혔다.",
+        "notable_achievement": "Palomar 재직 중 계리 및 데이터 조직을 구축한 경험을 바탕으로 $27M 시드 라운드를 이끌었다."
+      },
+      {
+        "name_en": "Brock Noland",
+        "name_ko": "브록 노랜드",
+        "role": "공동창업자 (Vertical Insure 공동창업자 겸 CEO)",
+        "background": "슬링샷의 첫 고객이자 설계 파트너인 Vertical Insure의 공동창업자이자 CEO다. 보험 상품 설계 속도와 캐리어 승인 절차 사이의 간극을 지적해 왔다.",
+        "notable_achievement": "Vertical Insure가 750,000명 이상의 고객에게 평균 보험료 $25 규모의 상품을 제공하는 구조를 만들었다고 밝혔다."
+      }
+    ],
+    "team_highlights": "창업자 외에도 Rally Ventures가 공동창업사로 참여했다. Rally의 Managing Director인 Justin Kaufenberg가 이 투자의 전략적 배경을 설명했고, 회사는 Rally가 스텔스 단계에서 출범시키거나 투자한 포트폴리오사가 약 8곳이라고 보도됐다. 전체 인원은 6명이며, 회사는 2026년 7월 1일부터 운영을 시작했다고 알려졌다. P&C(재산·상해 보험) 업계 베테랑 Jim Hays가 이사회에 합류한다. 다만 공개된 경영진 목록은 CEO 중심이라 CFO, 규제·컴플라이언스 담당 등 핵심 직책은 확인되지 않았다.",
+    "product": {
+      "summary": "MGA(위임 인수 대리점), 보험 유통사, 버티컬 SaaS 플랫폼이 소액 보험 상품을 직접 설계·출시·운영할 수 있게 해주는 AI 기반 보험 인프라다. 자체 보험사 역할보다 소프트웨어 레이어에 가깝지만, 인수 중인 캐리어를 통해 보험 인수 주체가 될 계획이다.",
+      "problem_statement": "여행 항공권 추가 보장, 청소년 스포츠 등록 보험처럼 결제 과정에서 $25 안팎에 팔리는 보험은 건당 행정비용이 커서 수익성이 나지 않는다. 기존 업계는 스프레드시트, 이메일, 분절된 시스템으로 이 업무를 처리하며, 캐리어 측 승인 절차도 느리다.",
+      "solution": "보험 관련 워크플로를 하나의 시스템으로 묶고, AI로 플랫폼과 보험사 사이의 데이터 교환과 정책 관리를 자동화한다. 이를 통해 소액 상품의 관리 비용을 낮추고, 상품을 빠르게 출시할 수 있는 구조를 목표로 한다.",
+      "key_features": [
+        "AI 기반 워크플로 자동화(정책 관리, 데이터 공유)",
+        "보험 캐리어, MGA, 유통 플랫폼을 잇는 API 연결",
+        "상품 출시 및 운영을 위한 캐리어 접근·자본 연결",
+        "소액 임베디드 상품용 보고·청구 관련 기능(세부 기능은 공개 자료에서 미확인)"
+      ],
+      "tech_stack_or_innovation": "공개 자료에서는 AI 워크플로 자동화와 API 통합이 핵심으로 제시된다. 기술 스택(사용 언어, 클라우드, 모델 종류)은 확인되지 않았다. 차별점은 AI 모델 자체보다는 보험 운영 비용 구조를 바꾸려는 설계에 있다.",
+      "target_customer": "버티컬 SaaS 플랫폼, MGA, 보험 유통사. 공개된 적용 분야는 여행, 아마추어 스포츠, 독립 노동(긱 이코노미) 등이다. 첫 고객은 Vertical Insure다.",
+      "business_model": "현재는 외부 보험사와 함께 일하는 기술 제공자로 수익을 얻는다. 한 매체는 프로그램 관리 수수료를 약 5%로 보도했으나 이는 2차 보도 기준이며 회사 공식 확인은 없었다. 향후 캐리어 인수 후에는 보험 위험을 직접 부담하는 구조로 바뀔 수 있다."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Cover Genius (XCover)",
+          "comparison": "시드니 본사의 임베디드 보험 플랫폼으로, 2026년 7월 기준 $1.9B 가치로 $100M 신용 자금을 조달했다. 대형 플랫폼 파트너 네트워크가 넓고, 소액 체크아웃 보험에서 기준점 역할을 한다. 슬링샷과 달리 자체 인수 역할보다 유통 플랫폼 성격이 강하다."
+        },
+        {
+          "name": "Boost Insurance",
+          "comparison": "미국 뉴욕 기반으로 인슈어테크, MGA, 유통사를 위한 규제·자본·기술 스택을 API로 제공한다. 슬링샷과 같이 보험 인프라를 파는 회사이므로 가장 직접적인 비교 대상이다."
+        },
+        {
+          "name": "Kayna",
+          "comparison": "아일랜드 기반으로 버티컬 SaaS 플랫폼에 저코드 위젯 형태로 보험을 붙이는 데이터 중심 유통 인프라다. 슬링샷과 같은 고객층(버티컬 SaaS)을 겨냥한다."
+        },
+        {
+          "name": "Coverdash",
+          "comparison": "미국의 임베디드 기업 보험 플랫폼으로 2022년 설립됐다. 급여 플랫폼 등 플랫폼 파트너에게 기업용 보험을 제공하는 방식이라, 슬링샷의 소액 개인 상품과는 상품군이 다르다."
+        },
+        {
+          "name": "Authentic",
+          "comparison": "소프트웨어 기업이 배상책임, 산재 등 상업 보험을 붙일 수 있도록 API를 제공한다. 상업 보험 영역에서 경쟁하며, 슬링샷이 노리는 소액 소비자 상품과는 겹침이 적다."
+        }
+      ],
+      "key_differentiator": "단순 보험 유통이 아니라, 소액 상품의 운영 비용을 줄이는 인프라와 캐리어 인수 계획을 함께 내세운다는 점이다. 창업팀이 보험사 계리 출신이라는 점도 차별화 요소다.",
+      "moat": "현재 확인되는 해자는 Palomar 출신의 계리·데이터 역량과 Vertical Insure와의 설계 파트너 관계 정도다. 규제 승인과 캐리어 확보가 완료되면 해자가 생길 수 있으나, 아직 입증되지 않았다.",
+      "competitive_position_summary": "임베디드 보험 시장에는 Cover Genius처럼 큰 플레이어와 Boost 등 인프라 기업이 이미 있다. 슬링샷은 설립 직후이며 실사용 고객이 사실상 한 곳이라 시장 위치는 아직 초기 단계다. 캐리어 인수가 성사되면 경쟁 구도가 바뀔 것이다."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 22일 $27M 시드 라운드로 스텔스에서 나왔고, Rally Ventures와 Skyward Group이 공동 리드했다. 첫 프로그램이 같은 달 출시될 예정이며, 캐리어 인수 계획도 함께 공개됐다.",
+      "catalysts": [
+        "2026-10-22: $27M 시드 라운드 공개(Rally Ventures, Skyward Group 공동 리드, 초과 청약 보도)",
+        "2026-10: Vertical Insure와 함께하는 첫 프로그램 출시 예정",
+        "진행 중: 보험사(캐리어) 인수 추진으로 보험 인수 주체로 전환 계획",
+        "Jim Hays의 이사회 합류로 P&C 업계 네트워크 확보"
+      ],
+      "growth_metrics": "회사가 공개한 매출·보험료 규모는 없다. 확인 가능한 수치는 Vertical Insure의 고객 75만 명 이상, 평균 보험료 $25, 임직원 6명이다. 회사는 임베디드 보험이 글로벌 P&C 보험료의 약 3%에서 10년 내 약 20%까지 늘 것으로 전망했다고 밝혔다.",
+      "media_mentions": [
+        {
+          "source": "PR Newswire",
+          "title": "Slingshot Insurance Emerges from Stealth with $27 Million Seed Investment to Build AI-Native Infrastructure for Embedded Insurance",
+          "url": "https://www.prnewswire.com/news-releases/slingshot-insurance-emerges-from-stealth-with-27-million-seed-investment-to-build-ai-native-infrastructure-for-embedded-insurance-302914508.html",
+          "date": "2026-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "Crunchbase News",
+          "title": "Exclusive: Slingshot Raises $27M In Seed Funding To Build An Insurer For Those Small Policies Sold At Checkout",
+          "url": "https://news.crunchbase.com/fintech-ecommerce/insuretech/startup-slingshot-insurance-seed-funding-genteman/",
+          "date": "2026-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "Fintech.global",
+          "title": "Slingshot Insurance raises $27m for embedded InsurTech",
+          "url": "https://fintech.global/2026/10/22/slingshot-insurance-raises-27m-for-embedded-insurtech/",
+          "date": "2026-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "Pomegra",
+          "title": "Slingshot Insurance Raises $27M Seed in 2026",
+          "url": "https://pomegra.io/startups/slingshot-insurance-raises-27m-seed-in-2026-2026-10-23",
+          "date": "2026-10-23",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "AI Weekly",
+          "title": "Slingshot Insurance Raises $27M Seed to Automate Embedded P&C",
+          "url": "https://aiweekly.co/alerts/slingshot-insurance-raises-27m-seed-to-automate-embedded-pc",
+          "date": "2026-10-23",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "The Industry Spread",
+          "title": "Slingshot Insurance raises a $27 million seed round",
+          "url": "https://theindustryspread.com/slingshot-insurance-raises-27-million-seed-round/",
+          "date": "2026-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$27M",
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "$27M",
+        "date": "2026-10",
+        "lead_investor": "Rally Ventures, Skyward Group (공동 리드)",
+        "notable_investors": [
+          "Jim Hays (P&C 업계 베테랑, 이사회 합류 예정)",
+          "기타 P&C 업계 임원들 (세부 명단 비공개)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$27M",
+          "date": "2026-10",
+          "lead_investor": "Rally Ventures, Skyward Group (공동 리드)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "비공개. 회사 자료와 보도에 시장 규모 추정치는 없다. 회사가 인용한 전망은 임베디드 보험이 글로벌 P&C 보험료의 약 3%에서 10년 내 약 20%로 늘어난다는 것뿐이다.",
+      "market_trend": "보험이 결제 과정에서 판매되는 임베디드 방식이 늘면서 소액·고빈도·저심도 상품이 커지고 있다. Cover Genius의 대규모 자금 조달은 이 시장에 자본이 몰리고 있음을 보여준다.",
+      "growth_potential": "캐리어 인수가 성사되면 소프트웨어 수수료에서 보험 위험 인수 수익으로 확장할 수 있다. 다만 이는 자본 요건과 감독 부담도 함께 키운다.",
+      "risks": [
+        "현재 확인된 실사용 고객이 Vertical Insure 한 곳뿐이며, 이 회사는 공동창업자 Brock Noland가 이끄는 MGA다. 외부 고객 확보 여부는 아직 검증되지 않았다.",
+        "공개 자료에서 보험 인수 승인이나 주(州) 면허를 어느 회사가 보유하는지 명확하지 않다.",
+        "캐리어 인수가 지연되거나 무산되면 사업 모델 전환이 막힌다.",
+        "보험 상품 규제와 위임 권한(delegated authority) 승인 절차가 출시 속도를 늦출 수 있다."
+      ],
+      "risk_mitigation": "회사는 첫 프로그램으로 소프트웨어의 비용 절감 효과를 검증하는 방식으로 접근하고 있다. Jim Hays의 합류는 보험사 운영과 규제 대응 경험을 보강하는 장치로 볼 수 있다. 다만 외부 고객 확보와 인수 완료 여부는 앞으로 확인해야 한다."
+    },
+    "related_links": [
+      {
+        "title": "Slingshot Insurance 공식 웹사이트",
+        "url": "https://www.slingshotinsurance.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "PR Newswire: Slingshot Insurance 시드 라운드 발표 보도자료",
+        "url": "https://www.prnewswire.com/news-releases/slingshot-insurance-emerges-from-stealth-with-27-million-seed-investment-to-build-ai-native-infrastructure-for-embedded-insurance-302914508.html",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Crunchbase News 단독 보도",
+        "url": "https://news.crunchbase.com/fintech-ecommerce/insuretech/startup-slingshot-insurance-seed-funding-genteman/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Cover Genius 2026년 $100M 자금 조달 보도 (TechTimes)",
+        "url": "https://www.techtimes.com/articles/320689/20260716/cover-genius-100m-raise-signals-embedded-insurance-has-outgrown-venture-capital.htm",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      }
+    ],
+    "editor_pick_comment": "보험 상품을 소프트웨어로 찍어내겠다는 말보다, 첫 고객이 공동창업자의 MGA라는 사실이 이 라운드의 진짜 검증 과제다.",
+    "id": "slingshot-insurance-2026",
+    "date": "2026-10-26",
+    "logo_url": "",
+    "generated_at": "2026-10-26T00:45:51.254Z",
+    "model": "anthropic/claude-haiku-5.5",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-26T00:45:51.254Z"
+    }
+  },
+  {
+    "name_en": "Helical Fusion Co., Ltd.",
+    "name_ko": "헬리컬 퓨전",
+    "tagline": "일본 NIFS 기술 기반 헬리컬 스텔러레이터 핵융합 발전소 개발사",
+    "category": [
+      "핵융합 에너지",
+      "스텔러레이터 원자로",
+      "고온초전도 자석"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Tokyo",
+      "country": "Japan",
+      "country_ko": "일본"
+    },
+    "company_stage": "Series B",
+    "employee_count": "비공개",
+    "website": "https://global.helicalfusion.com",
+    "founders": [
+      {
+        "name_en": "Takaya Taguchi",
+        "name_ko": "타구치 타카야",
+        "role": "Co-founder, CEO",
+        "background": "일본 금융권에서 커리어를 시작해 Mizuho Bank, JBIC(국제협력은행), PwC Advisory, Dai-ichi Life에서 근무했다. 이후 핀테크 스타트업에서 COO를 지낸 뒤 2021년 공동창업했다. 교토대학 대학원(윤리학) 출신으로 공개 프로필에 적혀 있다.",
+        "notable_achievement": "2021년 NIFS 연구 기반 스핀아웃을 설립하고 Series B 2nd close(3.23억 엔 규모)까지 이끌었다. 일본 핵융합 산업단체 J-Fusion 부회장직도 맡고 있다."
+      },
+      {
+        "name_en": "Junichi Miyazawa",
+        "name_ko": "미야자와 준이치",
+        "role": "Co-founder, CTO",
+        "background": "물리학자로, 플라즈마 실험 경력이 풍부하다. 프로필에 따르면 플루이드 다이버터, 카트리지 블랭킷, 고온초전도 자석, 기능성 액체금속 등 여러 설계 아이디어를 제안해 왔다.",
+        "notable_achievement": "Helical Fusion의 핵심 노심·자석 설계 아이디어를 주도해 왔으며, 공식 팀 페이지에서 CTO로서 회사의 기술 방향을 대표한다."
+      },
+      {
+        "name_en": "Takuya Goto",
+        "name_ko": "고토 타쿠야",
+        "role": "Co-founder, Vice CTO",
+        "background": "도쿄대학 대학원 원자력공학 전공으로 소개된다. 공식 팀 페이지에는 NIFS 및 SOKENDAI 교수였다는 문구가 있으나, 문장 배치상 고토 박사에 해당하는지 명확하지 않아 추정으로 둔다.",
+        "notable_achievement": "공식 팀 페이지에서 Vice CTO로 소개되며, 핵융합 원자로 설계 분야의 전문성을 인정받고 있다."
+      }
+    ],
+    "team_highlights": "팀은 NIFS 출신 연구자들이 중심이다. 공식 팀 페이지는 안전설계 전문가(국립연구소 출신)와 금융·에너지 사업개발 인력을 함께 소개한다. Fusion Energy Base 프로필에는 Yosuke Kubo가 COO로 기재돼 있다. 한편 Speeda는 이 회사를 Series C 단계로 분류하지만, 공식 발표는 Series B 2nd close이므로 이 글은 Series B로 본다. 팀 규모 공개 수치는 확인하지 못했다.",
+    "product": {
+      "summary": "헬리컬 스텔러레이터 방식으로 상용 핵융합 발전소를 만드는 것이 목표다. 현재는 통합 실증장치 Helix HARUKA를 건설 중이고, 2030년대 첫 발전소 Helix KANATA에서 순전기 생산을 목표로 한다.",
+      "problem_statement": "핵융합 발전이 상용화되려면 연속 운전, 순전기 생산, 부품의 정기적이고 효율적인 정비라는 세 조건을 동시에 충족해야 한다. 회사는 헬리컬 스텔러레이터가 기존 기술만으로 이 세 조건을 충족할 수 있다고 주장한다.",
+      "solution": "NIFS의 LHD 연구 데이터를 바탕으로 고온초전도(HTS) 자석과 액체금속 블랭킷·다이버터 시스템을 결합한 장치를 설계한다. 실증 장치로 기술을 검증한 뒤 발전소로 확장하는 구조다.",
+      "key_features": [
+        "Helix HARUKA: NIFS 도키 캠퍼스(기후현)에서 건설 중인 통합 실증장치. 2027년 통전 시험 계획",
+        "Helix KANATA: 2030년대 첫 상용 발전소 목표, 순전기 생산 목표",
+        "고온초전도 자석: 2020년대 중 실증 목표. 시험 코일은 관련 자기장 조건에서 성능 시험을 통과했다고 발표됨",
+        "액체금속 블랭킷·다이버터: 2020년대 말까지 성능 시험 목표",
+        "Helix Program 공식 파트너 제도: 2026년 4월 도입. 산업 공급사와 자본 참여 기업을 실제 하드웨어 건설에 묶는 구조"
+      ],
+      "tech_stack_or_innovation": "일본 스텔러레이터 연구의 약 70년 축적을 기반으로 한 헬리컬 구조를 택했다. 이 구조는 연속 운전에 유리하다고 회사는 설명한다. 고온초전도 자석, 액체금속 블랭킷/다이버터를 핵심 기술로 내세운다. 한편 Helical Fusion은 대부분의 스타트업이 택하는 토카막이 아니라 스텔러레이터 방식을 선택했다.",
+      "target_customer": "1차 고객은 발전·전력 인프라 사업자와 산업 파트너다. 전력 공급사, 자재·부품 제조사, 건설사, 에너지 기업이 여기에 해당한다. 최근에는 지역 유통사인 Aoki Super와 전력구매계약(PPA)을 맺는 등 전력 수요 측 고객도 확보하고 있다.",
+      "business_model": "현재는 공동 개발 및 기업 자본 유치 기반이다. 공식 파트너 기업들이 제조·건설에 참여하고 투자하는 구조다. 상용화 이후에는 발전소 전력 판매 및 설비 공급이 수익원이 될 것으로 보이나, 구체적 수익 모델은 공개되지 않았다(추정)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Type One Energy (미국)",
+          "comparison": "테네시주 Knoxville 기반 스테라레이터 개발사. 2026년 10월 $200M Series B를 발표했고 누적 자금은 $400M 이상이다. TVA 부지에 400MWe급 Infinity Two 건설을 계획하며, 외부 공급사와 협력하는 integrator 모델을 쓴다. Helical Fusion보다 자금 규모와 전력사 연계가 훨씬 앞선다."
+        },
+        {
+          "name": "Proxima Fusion (독일)",
+          "comparison": "뮌헨 기반의 QI(준등자장) 스테라레이터 개발사로, Max Planck 연구소 스핀아웃이다. 2025년 Series A 이후 추가 투자를 받았고, 2026년 7월 라운드에서 $2.7B 가치가 언급됐다. 2030년대 초 Alpha 실증기를 목표로 한다. 기업가치와 자금 규모에서 Helical Fusion과 격차가 크다."
+        },
+        {
+          "name": "Thea Energy (미국)",
+          "comparison": "픽셀 형태의 소형 자석을 대량 생산하는 방식의 스테라레이터를 개발한다. 2026년 5월 $100M Series B를 마쳤다. Helical Fusion과 같은 스테라레이터 계열이지만 자석 설계 철학이 다르다."
+        }
+      ],
+      "key_differentiator": "NIFS라는 일본 국가 핵융합 연구기관과 직접 연결된 헬리컬 방식 스테라레이터다. 여기에 일본 제조·에너지 대기업 30곳 이상이 개발과 제조에 참여하는 구조를 갖췄다.",
+      "moat": "일본 내 국립 연구 인프라(NIFS LHD 데이터, Helix HARUKA 부지), 산업 파트너 네트워크(Fuji Electric, Fujikura, Tokyo Gas 등), 그리고 고온초전도 자석 공급 관계에서 나온다. 다만 이 우위가 기술 특허 수준으로 방어되는지는 공개 정보로 확인하지 못했다.",
+      "competitive_position_summary": "기술 검증 단계에서는 미국·유럽 경쟁사보다 뒤처져 있다. 대신 일본 내 산업 연결성과 국가 프로젝트 참여는 강점이다. 발전소 건설 자금과 일정은 경쟁사 대비 불확실하다."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 8일 Series B 2nd close 3.23억 엔(약 $20.6M)을 발표했다. 참여 기업에는 Fuji Electric, Fujikura, Tokyo Gas, Hazama Ando 등이 있다. 같은 시기 스테라레이터 분야 자금 유치가 활발해지면서 주목도가 올랐다.",
+      "catalysts": [
+        "2026년 10월 8일: Series B 2nd close 3.23억 엔 발표. Fuji Electric이 전략적 투자자이자 Helix Program 공식 파트너로 참여",
+        "2026년 4월: Series B 1st close 약 2.7억 엔. 공식 파트너 제도 출범",
+        "2026년 7월: Hazama Ando와의 자본 제휴 발표(Series B 2nd close에 포함)",
+        "Helix HARUKA 건설 진행 및 2027년 통전 시험 계획",
+        "일본 METI의 핵융합 발전 실증 지원(약 600억 엔 규모) 최종 후보 선정 보도. 다만 선정 금액은 아직 확정되지 않았다"
+      ],
+      "growth_metrics": "누적 자금 약 131억~130.5억 엔(보조금·융자 포함). 발표 자료마다 차이가 있다(영문 13.15bn, 일문 130.5억 엔). Series B 누적은 59.3억 엔. 참여 일본 기업은 30곳 이상이다. 사용자 수나 매출은 공개되지 않았다.",
+      "media_mentions": [
+        {
+          "source": "Business Wire",
+          "title": "Fuji Electric Joins Helical Fusion as Strategic Investor and Official Partner as Series B Second Close Raises JPY 3.23 Billion",
+          "url": "https://www.businesswire.com/news/home/20261007813917/en/Fuji-Electric-Joins-Helical-Fusion-as-Strategic-Investor-and-Official-Partner-as-Series-B-Second-Close-Raises-JPY-3.23-Billion",
+          "date": "2026-10-08",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "Helical Fusion 공식 뉴스",
+          "title": "Helical Fusion、シリーズBラウンド 2ndクローズ32.3億円の資金調達で発電に向けた開発・実証を加速、累計調達額は130.5億円",
+          "url": "https://www.helicalfusion.com/post/helical-fusion%E3%80%81%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BAb%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89-2nd%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%BA32-3%E5%84%84%E5%86%86%E3%81%AE%E8%B3%87%E9%87%91%E8%AA%BF%E9%81%94%E3%81%A7%E7%99%BA%E9%9B%BB%E3%81%AB%E5%90%91%E3%81%91%E3%81%9F%E9%96%8B%E7%99%BA%E3%83%BB%E5%AE%9F%E8%A8%BC%E3%82%92%E5%8A%A0%E9%80%9F%E3%80%81%E7%B4%AF%E8%A8%88%E8%AA%BF%E9%81%94%E9%A1%8D%E3%81%AF130-5%E5%84%84%E5%86%86",
+          "date": "2026-10-08",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "Pomegra",
+          "title": "Helical Fusion raises ¥3.23B for stellarator reactor",
+          "url": "https://pomegra.io/startups/helical-fusion-raises-3-23b-for-stellarator-reactor-2026-10-09",
+          "date": "2026-10-09",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "약 131억 엔(보조금·융자 포함, 약 $83.8M). 일문 발표는 130.5억 엔으로 표기해 약 0.1억 엔 차이가 있다.",
+      "valuation_estimate": "약 947억 엔 (추정, Speeda 2026-06-04 기준 조달 후 평가액 추정치)",
+      "latest_round": {
+        "stage": "Series B (2nd close)",
+        "amount": "3.23억 엔 (약 $20.6M). 다른 매체는 $24.8M으로 보도해 차이가 있음",
+        "date": "2026-10",
+        "lead_investor": "비공개 (Fuji Electric은 전략적 투자자 및 공식 파트너로 명시됨)",
+        "notable_investors": [
+          "Fuji Electric (전략적 투자자, Helix Program 공식 파트너)",
+          "Fujikura",
+          "Tokyo Gas",
+          "HAZAMA ANDO CORPORATION",
+          "KKT LLC",
+          "URATA Co., Ltd.",
+          "Kepple Group",
+          "Ecrowd NEXT (개인투자자 펀드)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Pre-Seed",
+          "amount": "약 6,500만 엔",
+          "date": "2022-05",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Seed",
+          "amount": "약 8억 엔",
+          "date": "2023-04",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Series A",
+          "amount": "약 23억 엔 (융자 포함, 주식·융자 내역 비공개)",
+          "date": "2025-07",
+          "lead_investor": "비공개 (SBI Investment 등 다수 참여)"
+        },
+        {
+          "stage": "Series A 확장",
+          "amount": "약 8.7억 엔",
+          "date": "2025-12",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Series B 1st close",
+          "amount": "약 27억 엔",
+          "date": "2026-04",
+          "lead_investor": "비공개 (Nichias, Hasetora 그룹, Seno Kisen, Ecrowd NEXT, Konoike Transport, Mitani Sangyo 참여)"
+        },
+        {
+          "stage": "Series B 2nd close",
+          "amount": "3.23억 엔 (약 $20.6M)",
+          "date": "2026-10",
+          "lead_investor": "비공개"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "확인된 TAM·SAM·SOM 수치는 찾지 못했다. 다만 Fusion Industry Association에 따르면 2026년 7월까지 1년간 핵융합 섹터 자금 조달은 $4.48B로 전년 대비 69% 늘어 기록을 세웠다.",
+      "market_trend": "핵융합 기업들이 실증 장치와 발전소 건설 단계로 넘어가면서, 자금 규모가 벤처 단계를 넘어서고 있다. 스테라레이터 계열은 Type One, Proxima, Thea 등 대형 라운드가 이어지고 있다.",
+      "growth_potential": "Helix HARUKA 통전 시험(2027년 계획)과 Helix KANATA 발전(2030년대)이라는 마일스톤이 달성되면 투자 가능성이 커질 것이다. 일본 내 산업 파트너 확대도 긍정 요인이다.",
+      "risks": [
+        "발전소 건설 비용이 막대하다. 최종 실증장치는 약 400억 엔 규모로 추산되며, 이번 2nd close 자금은 이에 비해 작다(추정)",
+        "METI 보조금(약 600억 엔 규모)은 조건부 채택 단계이며 아직 확정되지 않았다. 금액이 누적 조달액에 포함되지 않았다는 보도도 있다",
+        "스테라레이터 방식은 실증 전이라 기술 리스크가 남아 있다. 2030년대 순발전 목표 일정이 지연될 가능성이 있다",
+        "자금 조달 수치가 매체마다 다르다(영문 13.15bn vs 일문 130.5억 엔, $20.6M vs $24.8M). 투자자 확인 시 정확한 수치를 다시 봐야 한다"
+      ],
+      "risk_mitigation": "Fuji Electric 등 대형 제조사와 전력·가스 기업이 자본과 제조 역할을 나눠 맡아 자금 조달 기반을 넓히고 있다. 개인 투자자 펀드(Ecrowd NEXT)도 참여해 자금원을 다변화했다. 다만 공식 파트너 제도의 실제 계약 규모는 공개되지 않았다."
+    },
+    "related_links": [
+      {
+        "title": "Helical Fusion 공식 팀 페이지",
+        "url": "https://global.helicalfusion.com/team",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Helical Fusion 공식 사이트",
+        "url": "https://global.helicalfusion.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Business Wire: Series B 2nd close 발표",
+        "url": "https://www.businesswire.com/news/home/20261007813917/en/Fuji-Electric-Joins-Helical-Fusion-as-Strategic-Investor-and-Official-Partner-as-Series-B-Second-Close-Raises-JPY-3.23-Billion",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Nuclear Engineering International: Helical stellarator 투자자 확대 기사",
+        "url": "https://www.neimagazine.com/news/helical-stellarator-strengthens-investor-alliance/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Speeda 기업 정보(조달 이력 및 평가액 추정)",
+        "url": "https://initial.inc/companies/A-41850",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Fusion Energy Base: Helical Fusion 프로필",
+        "url": "https://www.fusionenergybase.com/organizations/helical-fusion",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "World Nuclear News: Aoki Super 전력구매계약 기사",
+        "url": "https://www.world-nuclear-news.org/articles/japanese-supermarket-chain-signs-up-for-fusion-power",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Type One Energy $200M Series B (WOWTALE)",
+        "url": "https://en.wowtale.net/2026/10/06/235394/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "TechCrunch: 1억 달러 이상 조달한 핵융합 스타트업 목록",
+        "url": "https://techcrunch.com/2026/08/15/every-fusion-startup-that-has-raised-over-100m/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      }
+    ],
+    "editor_pick_comment": "NIFS 기술과 Fuji Electric 같은 일본 제조 대기업을 묶은 구조는 흥미롭지만, 2027년 통전 시험과 2030년대 발전이라는 일정을 실제 하드웨어로 증명하기 전까지는 기대와 검증의 간극을 함께 봐야 한다.",
+    "id": "helical-fusion-co-ltd-2026",
+    "date": "2026-10-26",
+    "logo_url": "",
+    "generated_at": "2026-10-26T00:45:51.254Z",
+    "model": "anthropic/claude-haiku-5.5",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-26T00:45:51.254Z"
+    }
+  },
+  {
+    "name_en": "Celaid Therapeutics Inc.",
+    "name_ko": "셀레이드 테라퓨틱스",
+    "tagline": "제대혈 조혈모세포 체외 증식 기술로 소아 혈액질환 세포치료제 개발",
+    "category": [
+      "바이오테크",
+      "세포치료",
+      "조혈모세포(HSC)"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "Tokyo (Bunkyo-ku)",
+      "country": "Japan",
+      "country_ko": "일본"
+    },
+    "company_stage": "Series B",
+    "employee_count": "11-50",
+    "website": "https://celaidtx.com/en/about/",
+    "founders": [
+      {
+        "name_en": "Nobuyuki Arakawa",
+        "name_ko": "아라카와 노부유키",
+        "role": "공동창업자, 대표이사 CEO",
+        "background": "케이오대학교 이공학 석사 출신으로 Accenture에서 제조·유통 컨설턴트로 일했다. 이후 대학 기반 바이오 벤처의 창업과 경영 개선, AI·IoT·헬스케어 기술 기업의 사업개발과 DX 추진을 맡았다.",
+        "notable_achievement": "2020년 Celaid 공동 창업 후 CEO를 맡고 있으며, 2026년 10월 Series B 2차 클로징 발표에서 회사를 대표했다."
+      },
+      {
+        "name_en": "Motoo Watanabe",
+        "name_ko": "와타나베 모토오",
+        "role": "공동창업자 (창업 당시 이사회 의장 겸 CSO, 2023년 12월 사임)",
+        "background": "도쿄대학교 농학부 졸업 후 미쓰비시유카(현 미쓰비시케미컬)에서 분자면역학을 연구했고, 캐나다 온타리오암연구소와 시나이 병원에서 연구 경험을 쌓았다. CellFree Sciences CEO, Megakaryon CTO 등을 지냈다.",
+        "notable_achievement": "Celaid의 창업 기술 개발에 참여했으며, 바이오벤처 기술 경영 경력을 바탕으로 회사 초기 과학 전략을 이끌었다."
+      },
+      {
+        "name_en": "Hiromitsu Nakauchi",
+        "name_ko": "나카우치 히로미쓰",
+        "role": "공동창업자 (기술 기원 연구자)",
+        "background": "의학박사(MD, PhD)이며 도쿄대학교 의과학연구소 줄기세포치료 부문 특임교수로 소개된다. 스탠퍼드대학교 교수를 겸직하는 것으로 보도되었다.",
+        "notable_achievement": "츠쿠바대 야마사키 사토시 교수와 함께 마우스 조혈모세포의 대량 체외 증식 기술을 개발한 연구진으로, 이 기술이 Celaid 플랫폼의 출발점이다."
+      },
+      {
+        "name_en": "Satoshi Yamasaki",
+        "name_ko": "야마사키 사토시",
+        "role": "공동창업자 (기술 기원 연구자)",
+        "background": "츠쿠바대학교와 도쿄대학교 의과학연구소 소속 연구자로 소개된다. 공개 자료에 따라 Yamazaki로도 표기된다.",
+        "notable_achievement": "PVA(폴리비닐알코올) 성분을 이용한 조혈모세포 체외 증식법을 나카우치 교수와 함께 개발했다."
+      }
+    ],
+    "team_highlights": "공식 사이트 기준 창업자는 아라카와 CEO와 와타나베 씨이며, 나카우치·야마사키 교수는 기술 기원 연구자로 소개된다. 직원 수는 출처마다 다르다. Crunchbase는 1-10명, 파싱 데이터는 11-50명, Dealroom은 100명 미만으로 적었고, 한 프로필에는 201-500명으로 나와 있어 신뢰도가 낮다. 본 리포트는 11-50명으로 표기했으며 확정 수치가 아니다. Pitchbook과 Tracxn은 사쿠라이 마사토시를 공동창업자로 적고 있으나 공식 사이트에서는 확인되지 않아 제외했다. 임원으로는 Yusuke Inoue가 COO 겸 CFO로 Pitchbook에 올라 있다. 다만 공식 사이트와 교차 확인되지 않았다.",
+    "product": {
+      "summary": "CLD-001은 냉동 제대혈을 원료로 쓰고 자체 체외 증식 기술로 조혈모세포 수를 늘린 세포치료제다. 대상은 재생불량성 빈혈, 원발성 면역결핍, 선천성 대사질환, 겸상적혈구병 등 소아 중증 비악성 혈액질환이다. 회사는 이 치료제를 미국에서 1상 임상에 올리는 것을 목표로 준비하고 있다.",
+      "problem_statement": "동종 조혈모세포이식(allo-HSCT)은 이들 질환의 유일한 근치 치료법이지만, 공여자 부족, HLA 불일치, 이식편대숙주병(GvHD) 같은 문제가 남아 있다. 제대혈은 공여 자원으로 쓸 수 있으나 유닛 하나에 든 조혈모세포 수가 적어 성인 환자에게 쓰기 어렵다.",
+      "solution": "냉동 제대혈 은행의 유닛을 원료로 쓰고, 회사의 체외 증식 기술로 세포 수를 늘린다. 이렇게 하면 HLA 적합도가 더 좋은 제대혈 유닛을 골라 쓸 수 있다는 것이 회사의 설명이다.",
+      "key_features": [
+        "냉동 제대혈 은행 보관 세포를 출발 물질로 사용",
+        "조혈모세포를 선택적으로 체외 증식하는 독자 플랫폼",
+        "HLA 적합도 기준으로 제대혈 유닛을 고를 수 있는 유연성",
+        "CLD-001: 소아 중증 비악성 혈액질환 대상 세포치료제",
+        "플랫폼 기술의 연구 협력 및 라이선싱 (AGC와 iPSC 유래 조혈모세포 증식·기능 평가 공동연구, 2025년 8월 체결)"
+      ],
+      "tech_stack_or_innovation": "원 기술은 마우스 조혈모세포를 체외에서 대량 증식하는 연구에서 출발했다. 현재는 인간 세포 적용, 세포 제조 공정, CMC(화학·제조·관리) 개발을 진행하고 있다. 증식에 쓰는 구체적 화합물이나 조성은 공개 자료에서 확인되지 않았다. 회사는 동물 모델에서 효능과 안전성 데이터가 긍정적이었다고 밝혔다.",
+      "target_customer": "1차 고객은 소아 중증 비악성 혈액질환 환자와 이들을 치료하는 이식 병원이다. 2차 고객은 세포·유전자치료 연구나 조혈모세포 플랫폼 기술을 찾는 제약·바이오 기업이다.",
+      "business_model": "자체 파이프라인인 CLD-001을 임상까지 끌고 가는 방식과, 플랫폼을 제약·바이오 기업에 제공하는 연구 협력·라이선싱 방식을 병행한다. 공개 자료에는 연구 지원, 배지·시약 사업, 세포치료제 개발, 유전자편집 결합 제품 등 여러 사업 영역이 적혀 있다. 매출 구조와 계약 조건은 공개되지 않았다(비공개)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Omisirge (제대혈 HSC 제품, 니코틴아마이드 리보사이드 기반)",
+          "comparison": "단일 제대혈 유닛의 조혈모세포를 늘린다는 목적은 같다. 다만 Omisirge는 니코틴아마이드 리보사이드로 증식하는 방식이고, Celaid는 HLA 적합도에 따라 유닛을 고르는 전략을 강조한다. 두 제품의 임상 결과를 직접 비교할 자료는 확인되지 않았다."
+        },
+        {
+          "name": "Nicord (니코틴아마이드 기반 제대혈 증식 제품, 1상)",
+          "comparison": "CD133+ 세포를 니코틴아마이드로 21일간 배양한 뒤 T세포를 더하는 설계다. 1상에서 CD34+ 세포가 중앙값 72배 증식했다고 보고되었다. Celaid는 증식 방식이 다르고, 아직 임상 데이터가 없다."
+        },
+        {
+          "name": "UM171 계열 단일 제대혈 증식 연구 (1-2상)",
+          "comparison": "소분자 HSC 작용제를 쓰는 접근이다. 임상에서 안전성과 실현 가능성이 보고되고 있다. Celaid는 자사 증식법의 화합물을 공개하지 않은 상태이므로 기전 수준의 직접 비교는 어렵다. 이 계열은 Celaid가 맞서야 할 대표적 기술 대안이다."
+        }
+      ],
+      "key_differentiator": "공개 자료 기준으로 Celaid의 차별점은 세 가지다. 첫째, 냉동 제대혈 은행을 원료로 쓰는 점. 둘째, 증식과 HLA 최적 유닛 선택을 함께 노리는 설계. 셋째, 소아 비악성 질환에 적응증을 좁혀 미국 임상 준비 단계까지 진척시킨 점이다.",
+      "moat": "특허의 세부 목록과 권리 범위는 공개되지 않았다(비공개). 확인 가능한 방어 요소는 대학 유래 기술, 자사 CMC 공정 확립, 미국 CDMO 기술이전 완료, FDA Pre-IND 회의 완료, AMED 보조금 선정이다.",
+      "competitive_position_summary": "CLD-001은 아직 임상 1상 이전 단계다. 제약사 Shionogi가 신규 투자자로 들어온 것은 전략적 신호다. 다만 누적 조달 규모는 약 $22.1M으로 대형 경쟁자에 비해 작고, 경쟁 기술과의 임상 데이터 비교는 아직 이루어지지 않았다."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 5일 Series B 2차 클로징에서 JPY 400M(약 $2.6M)을 조달했다. Shionogi와 Teikoku Ventures가 신규 투자자로 참여했고, AMED 스타트업 생태계 지원 프로그램에서 3단계 자금 지원 대상에 선정되었다. 자금은 미국 IND 신청과 1상 준비에 쓰일 예정이다.",
+      "catalysts": [
+        "2026년 10월 5일 Series B 2차 클로징 발표 (JPY 400M, Shionogi·Teikoku Ventures 신규 참여) — 기사 보도일은 10월 9일로 확인됨",
+        "AMED 스타트업 생태계 강화 프로그램 2차 단계-게이트 심사 통과 및 3단계 자금 선정",
+        "CLD-001 미국 IND 신청과 1상 시험 개시를 위한 준비 (Pre-IND 회의 완료, 미국 CDMO에 제조 공정 기술이전 완료)"
+      ],
+      "growth_metrics": "매출, 환자 수, 임상 등록 같은 운영 지표는 공개되지 않았다(비공개). 누적 조달액은 JPY 3.42bn(약 $22.1M, 보조금 포함)으로 공개되었다. 직원 수는 출처마다 달라 확정하기 어렵다.",
+      "media_mentions": [
+        {
+          "source": "PR Newswire",
+          "title": "Celaid Therapeutics Completes Second Close of Series B Financing Round",
+          "url": "https://www.prnewswire.com/news-releases/celaid-therapeutics-completes-second-close-of-series-b-financing-round-302893509.html",
+          "date": "2026-10-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "Manila Times (PR Newswire 배포)",
+          "title": "Celaid Therapeutics Completes Second Close of Series B Financing Round",
+          "url": "https://www.manilatimes.net/2026/10/05/tmt-newswire/pr-newswire/celaid-therapeutics-completes-second-close-of-series-b-financing-round/2438689",
+          "date": "2026-10-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "Vir.com.vn",
+          "title": "Celaid Therapeutics secures Series B funding from Shionogi and Teikoku",
+          "url": "https://vir.com.vn/celaid-therapeutics-secures-series-b-funding-from-shionogi-and-teikoku-162181.html",
+          "date": "2026-10-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "Pomegra",
+          "title": "Celaid Therapeutics 2026: Shionogi joins ¥400M Series B",
+          "url": "https://pomegra.io/startups/celaid-therapeutics-2026-shionogi-joins-400m-series-b-2026-10-06",
+          "date": "2026-10-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "약 $22.1M (JPY 3.42bn, AMED 보조금 포함)",
+      "valuation_estimate": "비공개 (Dealroom 범위 $25M–$50M, 추정)",
+      "latest_round": {
+        "stage": "Series B 2차 클로징",
+        "amount": "JPY 400M (약 $2.6M)",
+        "date": "2026-10",
+        "lead_investor": "비공개 (발표문상 리드 투자자 명시 없음)",
+        "notable_investors": [
+          "Shionogi & Co., Ltd. (신규, 제약사 CVC 투자)",
+          "Teikoku Ventures, Inc. (신규, TEIKOKU SEIYAKU 그룹 CVC)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "JPY 1.2bn",
+          "date": "2024-05 (추정)",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "AMED 보조금 (비희석, 최대 $19M 규모로 발표)",
+          "amount": "최대 $19M",
+          "date": "2024-09",
+          "lead_investor": "일본 AMED (정부 기관)"
+        },
+        {
+          "stage": "Series B 1차 클로징",
+          "amount": "JPY 1.055bn (약 $7.2M)",
+          "date": "2025-10",
+          "lead_investor": "비공개 (벤처캐피털 및 AMED 참여, UTEC와 오사카대학교 벤처캐피털이 참여한 것으로 보도됨)"
+        },
+        {
+          "stage": "Series B 2차 클로징",
+          "amount": "JPY 400M (약 $2.6M)",
+          "date": "2026-10",
+          "lead_investor": "비공개 (Shionogi, Teikoku Ventures 신규 참여)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "비공개. 공개 자료에 시장 규모 추정치가 없어 TAM·SAM·SOM을 산정할 수 없다.",
+      "market_trend": "제대혈 기반 조혈모세포 체외 증식은 단일 유닛의 세포 수 부족을 해결하려는 연구 흐름이다. 니코틴아마이드 계열과 UM171 계열처럼 임상 단계에 들어간 사례가 늘고 있다.",
+      "growth_potential": "미국 IND 승인과 1상 진입이 가장 큰 분기점이다. 제약사 투자 참여는 긍정적이지만, 임상 데이터가 나오기 전까지 사업성을 판단하기는 이르다.",
+      "risks": [
+        "미국 IND 승인과 1상 시작이 지연될 가능성",
+        "GMP 제조 확대와 CDMO 의존에 따른 공정 리스크",
+        "누적 조달 약 $22M 수준으로 임상이 길어지면 추가 자금이 필요함",
+        "경쟁 증식 기술 대비 임상 차별성이 아직 입증되지 않음"
+      ],
+      "risk_mitigation": "Shionogi 등 제약사의 전략 투자와 AMED 3단계 자금으로 자금 공백을 줄이려 하고 있다. 미국 CDMO에 공정을 이전해 제조 리스크를 일부 분산했다. 다만 공개된 성과는 아직 동물 모델 등 전임상 단계에 머물러 있다."
+    },
+    "related_links": [
+      {
+        "title": "Celaid Therapeutics 공식 사이트 (About)",
+        "url": "https://celaidtx.com/en/about/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Celaid 공식 뉴스: Series B 1차 클로징 (JPY 1.055bn)",
+        "url": "https://celaidtx.com/en/news/1020/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "PR Newswire: Series B 2차 클로징 발표",
+        "url": "https://www.prnewswire.com/news-releases/celaid-therapeutics-completes-second-close-of-series-b-financing-round-302893509.html",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Celaid 보도자료: AMED 보조금 (2024.09.30, PDF)",
+        "url": "https://celaidtx.com/wp/wp-content/uploads/2024/09/2024.09.30_Celaid_AMED_Press-Release_EN.pdf",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      }
+    ],
+    "editor_pick_comment": "1상 이전 단계인 회사에 대형 제약사 Shionogi가 들어왔다는 점은 주목할 만하지만, 공개된 근거는 아직 동물 데이터와 약 $22M의 누적 자금에 머물러 있다.",
+    "id": "celaid-therapeutics-inc-2026",
+    "date": "2026-10-26",
+    "logo_url": "",
+    "generated_at": "2026-10-26T00:45:51.254Z",
+    "model": "anthropic/claude-haiku-5.5",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-26T00:45:51.254Z"
+    }
+  },
+  {
+    "name_en": "PIT IN",
+    "name_ko": "피트인",
+    "tagline": "영업용 전기차 배터리 교체·구독 스테이션을 전력망과 잇는 분산에너지 플랫폼",
+    "category": [
+      "모빌리티 에너지",
+      "전기차 배터리 교체(BSS)",
+      "분산에너지(ESS)"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "Uiwang",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://pitin-ev.com/",
+    "founders": [
+      {
+        "name_en": "Kim Se-kwon (표기 추정)",
+        "name_ko": "김세권",
+        "role": "대표이사 (창업자)",
+        "background": "현대자동차그룹 연구원으로 15년간 근무했고, 기아 K5 1세대, 현대차 싼타페 DM, 제네시스 G80 등의 차량 개발에 참여했다. 영업용 전기차의 배터리팩 SOH(수명) 문제와 충전 인프라 부족에 주목해 피트인을 창업했다.",
+        "notable_achievement": "현대차그룹 사내 스타트업으로 시작한 피트인을 9개월 만에 분사시켰다는 평가를 받았다. 현대차그룹 사내 스타트업 중 최단 기간 조기 분사 사례로 소개됐다."
+      }
+    ],
+    "team_highlights": "2026년 8월 기준 임직원은 21명으로 집계됐고(thevc), 채용 플랫폼에서는 30명으로 표기되어 있어 정확한 인원은 확인되지 않았다. 대표 외 핵심 임원의 공개 프로필은 확인하지 못했다. 현대차그룹이 주주사로 참여하고 있어 자동차 개발 인력과의 연결고리가 강점으로 보인다.",
+    "product": {
+      "summary": "영업용 전기차(택시, 화물차 등)에 배터리 교체 서비스와 구독형 배터리 관리, 멤버십 충전을 제공하는 스테이션 운영 회사다. 현재는 배터리 교체소를 넘어 스테이션을 전력망과 연결하는 '분산에너지 플랫폼'으로 확장 중이다.",
+      "problem_statement": "영업용 전기차는 하루 운행 시간이 길어 충전 대기가 생산성 손실로 이어지고, 배터리 수명(SOH) 불확실성이 차량 운영비 부담으로 남는다. 충전 인프라도 상용차 기준으로는 충분하지 않다.",
+      "solution": "배터리를 갈아 끼우는 방식으로 충전 대기를 줄이고, 배터리를 구독형으로 관리해 운전자의 초기 부담과 배터리 리스크를 낮춘다. 스테이션에서는 충전·방전 스케줄링과 피크 전력 관리를 통해 전력비를 줄이는 것을 목표로 한다.",
+      "key_features": [
+        "배터리 교체 서비스와 구독형 배터리 관리",
+        "멤버십 충전 및 세차·라운지 등 스테이션 부가 서비스",
+        "배터리 충전 스케줄링, 피크 전력 관리, 전력비 최적화",
+        "태양광 연계 및 스테이션 에너지 흐름 관리",
+        "로봇과 비전 기술로 차종별 차이를 인식해 차량 개조 없이 다양한 전기차 대응",
+        "인천 2호 메가 스테이션 기준 일 200회 교체, 500회 멤버십 충전 설계(계획)"
+      ],
+      "tech_stack_or_innovation": "자체 개발한 배터리 교체 시스템으로, 현재 2세대 교체 시스템을 운영 중이다. 'Station-to-Grid(S2G)' 기술로 교환 스테이션과 전력망을 양방향으로 연결하는 개발을 추진하고 있다. 3년간 약 40억원 규모의 R&D 계획(정부 지원금 30억원 포함)이 발표됐다. 로봇·비전 기반 차종 인식이 핵심 차별점으로 제시된다.",
+      "target_customer": "택시, 화물차 등 영업용 전기차 운전자와 차량 운영사(개인사업자 및 법인사업자). 향후 물류사 차량 대상 대규모 물류센터 내 스테이션 구축도 개발 중인 것으로 알려졌다.",
+      "business_model": "배터리 교체 구독료와 멤버십 충전 요금이 기본 매출이다. 여기에 전기차 정비, 부품 개발, 트레이드(중고 거래) 사업을 더해 영업용 전기차의 전 주기를 관리하는 방향을 목표로 하고 있다. 스테이션 에너지 운영과 전력 연계 수익은 계획 단계로 확인된다."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "이브이몬스터",
+          "comparison": "원격 제어 스마트 전기차 충전기를 만드는 하드웨어 중심 기업이다. 배터리 교체나 구독 모델을 운영하지 않아 피트인과 직접 경쟁하는 구조는 아니고, 상용차 충전 인프라 시장에서 함께 비교되는 기업이다."
+        },
+        {
+          "name": "그린도트",
+          "comparison": "전기차 충전기 제조 기업으로 분류된다. 충전 장비 판매 중심이며 배터리 교체형 서비스와는 사업 구조가 다르다."
+        },
+        {
+          "name": "한국전기차인프라기술",
+          "comparison": "전기차 충전기와 전용 충전소 검색 서비스를 함께 운영하는 것으로 확인된다. 충전 인프라 측면에서 겹치지만, 배터리 교체와 영업용 차량 구독 모델은 확인되지 않았다."
+        }
+      ],
+      "key_differentiator": "영업용 전기차에 특화된 배터리 교체 운영 경험과, 스테이션을 전력망과 연결하려는 S2G 계획이 함께 있다는 점이다. 충전기 제조사들과 달리 배터리 자산과 운영 데이터를 직접 다룬다.",
+      "moat": "스테이션 운영으로 쌓인 교체·충전 데이터와 배터리 상태 정보, 현대차그룹과의 관계, 정부 R&D 및 혁신 사업 선정 이력이 진입장벽이 될 수 있다. 다만 기술 특허나 규모의 경제는 아직 공개 자료로 확인되지 않았다.",
+      "competitive_position_summary": "국내 영업용 전기차 배터리 교체 분야에서 초기 선도 기업으로 보이나, 시장 점유율이나 경쟁사 규모는 확인되지 않았다. 충전 인프라 기업들과는 다른 영역이어서 직접 비교 지표는 제한적이다."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 120억원 규모 Series A를 마쳤고, 같은 해 7월 '혁신 프리미어 1000' 사업에 제조·모빌리티 분야 기업으로 선정됐다. 투자금으로 인천 2호 메가 스테이션을 짓고 있어, 교체소 운영에서 전력망 연계 플랫폼으로 전환하는 시점이라는 점이 주목 요인이다.",
+      "catalysts": [
+        "2026년 10월 Series A 120억원 유치 (현대차그룹 제로원 SI 참여)",
+        "2026년 7월 '혁신 프리미어 1000' 사업 제조·모빌리티 분야 선정",
+        "인천 부평구 2호 메가 스테이션 구축 중 (2027년 2월 완공 예정)",
+        "2027년 상반기 부산·광주 스테이션 착공 계획",
+        "3년간 R&D 투자 계획 (S2G 기술 개발)"
+      ],
+      "growth_metrics": "회사 홈페이지 기준 배터리 교체 264건/주, 누적 충전 및 배터리 교체 4,583건, 월평균 충전량 152.27MWh로 공개됐다(집계 시점 미표기). 2026년 8월 기준 임직원 21명, 누적 투자유치액 173억원(추정 환산 약 $12.8M)이다.",
+      "media_mentions": [
+        {
+          "source": "WOWTALE",
+          "title": "PIT IN Raises 12 Billion Won in Series A to Build Distributed Energy Platform for Commercial EVs",
+          "url": "https://en.wowtale.net/2026/10/16/235546/",
+          "date": "2026-10-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "와우테일",
+          "title": "상용 전기차 에너지 '피트인' 120억 시리즈A 투자 유치",
+          "url": "https://wowtale.net/2026/10/16/266366/",
+          "date": "2026-10-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "시사저널e",
+          "title": "피트인, 120억 시리즈A 유치···전력망 플랫폼 전환 노린다",
+          "url": "https://www.sisajournal-e.com/news/articleViewAmp.html?idxno=424302",
+          "date": "2026-10-14",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "블로터",
+          "title": "현대차 분사 피트인, 120억 시리즈A 유치…신보·증권사 '베팅'",
+          "url": "https://www.bloter.net/news/articleView.html?idxno=675575",
+          "date": "2026-10-13",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "약 173억원 (약 $12.8M, 추정)",
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "120억원 (약 $8.9M, 추정)",
+        "date": "2026-10",
+        "lead_investor": "비공개 (주관사 미확인)",
+        "notable_investors": [
+          "ZER01NE (현대차그룹 오픈이노베이션 플랫폼, 전략적 투자자)",
+          "노틸러스인베스트먼트 (미국 실리콘밸리 기반)",
+          "신용보증기금",
+          "코리아에셋투자증권 (KOSDAQ 상장사)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "1억원",
+          "date": "2023-08",
+          "lead_investor": "현대자동차 (분사 직후 투자)"
+        },
+        {
+          "stage": "Pre-Series A",
+          "amount": "20억원 (22억원 규모로 보도된 기사도 있음)",
+          "date": "2023-09",
+          "lead_investor": "대성창업투자 (슈미트, 포엔, 금강오토텍 참여, 포엔과 금강오토텍은 SI)"
+        },
+        {
+          "stage": "Series A",
+          "amount": "120억원 (약 $8.9M, 추정)",
+          "date": "2026-10",
+          "lead_investor": "비공개 (주관사 미확인)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "확인된 시장 규모 자료가 없어 TAM·SAM·SOM 수치는 비공개로 둔다. 국내 영업용 전기차 대수와 교체 수요에 대한 신뢰할 만한 집계를 찾지 못했다.",
+      "market_trend": "국내 영업용 전기차 전환이 진행되면서 상용차 충전 대기와 배터리 관리 문제가 커지고 있다. 정부는 재생에너지와 분산형 ESS 확대를 추진 중이며, 피트인의 S2G 방향은 이 흐름과 맞닿아 있다.",
+      "growth_potential": "인천 2호 스테이션 완공(2027년 2월 예정), 부산·광주 스테이션 착공이 이어지면 교체 건수와 스테이션당 매출이 늘어날 수 있다. 다만 전력 연계 수익 모델은 아직 검증되지 않은 단계다.",
+      "risks": [
+        "스테이션 건설과 배터리 재고에 필요한 자본 부담이 크다. 자본 조달이 지연되면 확장 속도가 떨어질 수 있다.",
+        "분산에너지 플랫폼으로의 전환은 전력 시장 규제와 계통 연계 승인 등 외부 요인에 좌우된다.",
+        "창업자가 직접 2024년 인터뷰에서 BM 고도화가 필요하다고 언급했고, 설립 2년차 스타트업의 데스밸리 우려를 인정했다.",
+        "배터리 SOH와 안전 관리의 실제 운영 데이터가 충분히 공개되지 않았다."
+      ],
+      "risk_mitigation": "정부 R&D 지원금(3년간 30억원)과 혁신 사업 선정, 현대차그룹과 금융기관 투자자 구성은 자금 조달 리스크를 줄이는 장치다. 스테이션 운영 데이터를 축적해 교체 효율과 배터리 관리 품질을 증명하는 것이 다음 단계의 과제다."
+    },
+    "related_links": [
+      {
+        "title": "PIT IN 공식 홈페이지",
+        "url": "https://pitin-ev.com/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "피트인(피트인 스테이션) 기업정보 - THE VC",
+        "url": "https://thevc.kr/pitin",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "PIT IN Raises 12 Billion Won in Series A (WOWTALE EN)",
+        "url": "https://en.wowtale.net/2026/10/16/235546/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "피트인, 120억 시리즈A 유치···전력망 플랫폼 전환 노린다 (시사저널e)",
+        "url": "https://www.sisajournal-e.com/news/articleViewAmp.html?idxno=424302",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "기업 탐방: 피트인 김세권 대표 (인천광역시)",
+        "url": "https://www.incheon.go.kr/goodmorning/GOOD010501/view?nttNo=2042389&srchPblicteIssnoCode=202508&curPage=1",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      }
+    ],
+    "editor_pick_comment": "배터리를 갈아 끼우던 회사가 전력망에 물리는 플랫폼이 될 수 있을지, 120억원 시리즈A의 진짜 검증 과제는 인천 2호 스테이션이 그 모델을 실제로 증명하느냐에 달려 있다.",
+    "id": "pit-in-2026",
+    "date": "2026-10-26",
+    "logo_url": "",
+    "generated_at": "2026-10-26T00:45:51.254Z",
+    "model": "anthropic/claude-haiku-5.5",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-26T00:45:51.254Z"
+    }
+  },
+  {
+    "name_en": "AD System (ADSYSTEM Inc.)",
+    "name_ko": "에이디시스템",
+    "tagline": "대드론 환경을 버티는 저피탐 VTOL 고정익 무인기 개발사",
+    "category": [
+      "방산",
+      "무인기(드론)"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "Cheonan",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50 (추정)",
+    "website": "https://www.adsystem.kr",
+    "founders": [
+      {
+        "name_en": "Jung-ho Kim",
+        "name_ko": "김정호",
+        "role": "대표이사 (CEO)",
+        "background": "항공학과를 졸업한 뒤 공군 부사관으로 정찰기와 훈련기 정비를 맡았다. 이후 민간 무인기 기업에서 개발팀장을 지냈고, 그 경험을 바탕으로 2019년 5월 에이디시스템을 세웠다. 창업 동기로 중국산 부품을 조립하는 업체가 아니라 기체를 직접 설계하는 회사를 만들고 싶었다고 밝혔다.",
+        "notable_achievement": "주력기 AD-3000을 국내 최초의 스텔스 VTOL 정찰 무인기로 상용화했다고 회사와 언론이 밝혔다. 보도에 따르면 저피탐 성능을 국방과학연구소(ADD) RCS 시험과 미국 오하이오주립대 ESL 시험시설에서 검증받았으며, 후자는 국내 기업 중 유일하다고 한다."
+      }
+    ],
+    "team_highlights": "김정호 대표 외 공동창업자 정보는 이번 조사에서 확인하지 못했다. 초기에는 개발자 4명이 설계부터 시험비행까지 직접 수행했다고 회사 인터뷰에 나온다. 투자 심사역들은 기체설계, 복합재 제조, 비행제어·항전 소프트웨어, 체계종합을 모두 자체 수행하는 국내 소수 기업이라는 점을 높이 평가했다. 초기 투자사는 JB벤처스이며 IBK기업은행 창업육성 프로그램 IBK창공 출신이다.",
+    "product": {
+      "summary": "소형 스텔스 수직이착륙(VTOL) 고정익 무인기를 설계·제작한다. 주력 기종은 정찰용 AD-3000이고, 공격형 AD-4000은 2027년 내 개발 완료가 목표다. 교육용 멀티콥터도 함께 판매한다.",
+      "problem_statement": "대드론(C-UAS) 체계가 보편화되면서 전장에서 무인기가 탐지되고 재밍이나 요격으로 격추되기 쉬워졌다. 회사는 비싸서 몇 대밖에 쓰지 못하는 무인기로는 한계가 있다는 입장이다.",
+      "solution": "저피탐(레이더 반사 저감) 설계와 스텔스 도료, GPS 없이 비행하는 VIO·SLAM 기반 항법, 항재밍 데이터링크, 종말단계 회피비행을 결합한다. 여기에 고정익 순항으로 체공시간을 늘리고, 단가를 낮춰 대량 공급이 가능하도록 하는 것이 목표다.",
+      "key_features": [
+        "AD-3000: 프로펠러로 수직 이착륙한 뒤 날개로 순항하는 고정익 방식, 최대 3시간 비행 (회사 발표 기준)",
+        "RCS 90% 이상 감소 설계와 최대 90분 이상 장기 체공 (보도 기준)",
+        "비GPS 항법(VIO·SLAM), 항재밍 데이터링크, 종말단계 회피 비행 기술 개발",
+        "AD-4000: 15kg급 탑재와 5시간 비행을 목표로 하는 스텔스 공격형 기체 (DSK 2025 자료 기준, 개발 중)",
+        "자동 이착륙 기능으로 전문 조종사 없이 운용 가능하다고 회사 측이 설명"
+      ],
+      "tech_stack_or_innovation": "탄소 복합재 성형으로 기체를 만들고, 자체 개발한 비행제어와 항전 소프트웨어를 얹는다. 기체 설계부터 체계종합까지 내재화한 것이 핵심이다. 저피탐 형상 설계(레이더 반사가 큰 부분에만 도료를 칠하고 나머지는 기체 각도와 구조로 전파를 분산)로 무게와 비행효율 문제를 줄였다고 밝혔다.",
+      "target_customer": "국군(육군 포함) 및 국방 전력 조달 기관, 방산 주계약업체. 교육용 드론은 국방부 '50만 드론전사' 정책 아래 군 교육 수요와 연결된다.",
+      "business_model": "방산 조달 계약과 기체 납품이 기본 수익원이다. 2026년 8월 보도에 따르면 육군 교육용 상용드론 구매 계약(약 87억원, 납기 12월 27일)을 수주했다. 공개된 바로는 개별 기체 판매와 군 납품이 중심이며, 로열티나 소프트웨어 매출은 확인되지 않았다."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Airbility (에어빌리티)",
+          "comparison": "eVTOL 기체를 개발하던 회사로, 2026년 9월 Series A(65억원, Sazze Partners 리드)를 받고 대드론 요격 체계로 방향을 틀었다. 대드론 시장을 같이 겨냥하지만 요격기와 네트 건 항공기 중심이라 생존성이 중심인 에이디시스템의 정찰·공격 무인기와는 제품 구성이 다르다."
+        },
+        {
+          "name": "니어스랩 (Niarslab)",
+          "comparison": "드론 운용 솔루션과 자폭드론을 주력으로 하며 2026년 4월 기준 코스닥 상장을 준비 중이었다. 기체 플랫폼보다는 운용 솔루션과 자폭 계열에 무게가 실려 있어, 에이디시스템과 같은 소형 정찰·타격 무인기 시장에서 겹치는 부분이 있다. 상장 상태는 보도마다 달라 추가 확인이 필요하다."
+        },
+        {
+          "name": "파블로항공 (Pablo Air)",
+          "comparison": "군집 AI를 방산, 점검, 드론아트쇼로 넓히고 있으며, 고중량 자폭드론 S20s를 선보였다. 자율 군집과 AI 쪽에 강점이 있고, 에이디시스템은 기체 자체의 저피탐·장시간 비행 설계에 집중한다는 점에서 차이가 있다."
+        }
+      ],
+      "key_differentiator": "국내에서 고정익 VTOL 기체, 저피탐 설계, 실제 군 납품 실적을 함께 가진 소수 업체라는 점이다. 보도에 따르면 저피탐 성능을 미국 대학 시설에서도 검증받았다.",
+      "moat": "기체 설계부터 체계종합까지 내재화한 엔지니어링 역량과 ADD 시험 검증 이력이 진입장벽이다. 군 납품 이력이 쌓이면 조달 신뢰도로 이어진다. 다만 특허나 독점 계약을 확인하지는 못했다.",
+      "competitive_position_summary": "국내 방산 무인기 중에서는 기술 검증과 군 납품 실적을 함께 가진 소수 업체에 속한다. 그러나 매출 규모와 양산 실적은 아직 공개되지 않아, 2027년 AD-4000 완성과 대량 양산 체계 구축이 실제 위치를 결정할 전망이다. 대형 방산 업체(KAI, 대한항공 등)도 무인기 개발을 확대하고 있어 경쟁은 치열해질 것으로 보인다."
+    },
+    "trending_reason": {
+      "summary": "2026년 9월 22일 LB인베스트먼트 리드로 130억원 규모 Series A 투자 유치를 발표했다. 같은 달 국방 당국이 2027~2036년 수직이착륙 정찰 무인기 사업(총 2조1600억원)을 확정했고, 8월에는 육군 교육용 드론 공급 계약도 체결했다. 발표 날짜는 보도마다 차이가 있어 9월 16일 보도도 있지만, 대부분 22일 발표로 보도하고 있다.",
+      "catalysts": [
+        "2026년 9월 Series A 130억원 투자 유치 (LB인베스트먼트 리드, 산업은행 등 8개 기관 참여)",
+        "2026년 8월 육군 교육용 상용드론 구매 계약 체결 (약 87억원, 납기 2026년 12월 27일)",
+        "2026년 9월 방위사업추진위원회가 2027~2036년 수직이착륙 정찰 무인기 국내개발을 의결 (총사업비 약 2조1600억원)",
+        "2026년 10월 리베스트와 드론용 배터리 국산화 협력 발표 (AD-3000 적용, 작전 지속시간 2배 확대 목표)",
+        "2026년 9월 Airbility 등 인접 업체의 대드론 관련 투자 확대"
+      ],
+      "growth_metrics": "공개된 매출과 수주 잔고는 확인하지 못했다. 누적 투자 금액은 보도마다 다르다. 비상장 상태이며 2028년 상장 목표를 밝힌 바 있다(2025년 인터뷰 기준). 육군 교육용 드론 계약 규모는 약 87억원이다.",
+      "media_mentions": [
+        {
+          "source": "파이낸셜뉴스",
+          "title": "'대드론 시대' 생존 무인기에 베팅…LB·산은·미래에셋 130억 투자",
+          "url": "https://www.fnnews.com/news/202609220824142264",
+          "date": "2026-09-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "WOWTALE",
+          "title": "Defense UAV Specialist ADSYSTEM Raises USD 9.9M Series A",
+          "url": "https://en.wowtale.net/2026/09/23/235201/",
+          "date": "2026-09-23",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "Seoul Economic Daily",
+          "title": "Stealth Drone Maker AD System Raises 13 Billion Won in Series A",
+          "url": "https://en.sedaily.com/finance/2026/09/24/stealth-drone-maker-ad-system-raises-13-billion-won-in",
+          "date": "2026-09-24",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "유니콘팩토리",
+          "title": "'스텔스 무인기' 에이디시스템…130억 시리즈 A 투자유치",
+          "url": "https://www.unicornfactory.co.kr/article/2026091609015552963",
+          "date": "2026-09-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "WOWTALE",
+          "title": "[Korean Startup Weekly News #137] Defense-Tech Cluster Goes Public",
+          "url": "https://en.wowtale.net/2026/09/27/235249/",
+          "date": "2026-09-27",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "머니투데이",
+          "title": "'50만 드론전사' 키운다…에이디시스템, 軍 드론 3792대 공급",
+          "url": "https://www.mt.co.kr/future/2026/08/04/2026080409433981680",
+          "date": "2026-08-04",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        },
+        {
+          "source": "뉴시스",
+          "title": "리베스트·에이디시스템, 드론 배터리 국산화 맞손",
+          "url": "https://www.newsis.com/view/NISX20261008_0003819746",
+          "date": "2026-10-08",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-26T00:45:51.254Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "비공개 (보도 간 불일치: 약 184억원 대 18.4억원 표기. 공개된 개별 라운드 합계(3억+30억+10억+13억)와 맞지 않아 확정 불가)",
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "약 130억원 (약 $9.3M~$9.9M, 보도별 환율 기준 상이)",
+        "date": "2026-09",
+        "lead_investor": "LB인베스트먼트",
+        "notable_investors": [
+          "한국산업은행",
+          "스마일게이트인베스트먼트",
+          "미래에셋벤처투자",
+          "미래에셋캐피탈",
+          "플럭스벤처스",
+          "JB인베스트먼트",
+          "이노폴리스파트너스"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "3억원",
+          "date": "2024-10 (추정)",
+          "lead_investor": "JB벤처스"
+        },
+        {
+          "stage": "Pre-A",
+          "amount": "10억원",
+          "date": "2025-06",
+          "lead_investor": "UTC인베스트먼트"
+        },
+        {
+          "stage": "Pre-A",
+          "amount": "30억원",
+          "date": "2025-08",
+          "lead_investor": "비공개 (UTC·대교인베스트먼트 등 참여 보도)"
+        },
+        {
+          "stage": "Series A",
+          "amount": "130억원",
+          "date": "2026-09",
+          "lead_investor": "LB인베스트먼트"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: 국내 수직이착륙 정찰 무인기 사업 2조1600억원(2027~2036, 방위사업청 의결) 및 글로벌 방산 드론 시장. SAM: 국내 소형 정찰·교육용 무인기 조달 시장(규모 미확정). SOM: 비공개 (추정 불가).",
+      "market_trend": "러시아·우크라이나 전쟁과 최근 중동 분쟁 이후 정찰·공격·요격 드론 수요가 커졌고, 중국 의존도를 줄이려는 공급망 재편이 진행 중이다. 국내에서는 '50만 드론전사' 정책으로 교육·훈련용 드론 조달이 늘고 있다. 2026년 10월 AUSA 등에서는 양산 능력이 경쟁력이라는 논의가 확산됐다.",
+      "growth_potential": "군 조달 중심의 성장이 기대되지만, 수주 규모와 시기는 정부 예산과 평가에 달려 있다. 2027년 AD-4000 완성과 양산 체계가 실제 매출을 좌우한다. 2028년 상장 목표가 유효하다면 그 전까지 매출 실적을 보여줘야 한다.",
+      "risks": [
+        "정부 조달 의존도가 높아 예산과 사업 일정에 따라 매출이 크게 변할 수 있음",
+        "대형 방산 업체와 신규 스타트업이 같은 시장에서 경쟁함",
+        "Series A 자금으로 목표한 양산 체계가 제때 구축되지 않을 가능성",
+        "배터리 등 핵심 부품의 국산화 수준에 따라 원가와 공급 안정성이 흔들릴 수 있음",
+        "공개된 매출·수주 잔고가 없어 실적 검증이 어려움"
+      ],
+      "risk_mitigation": "군 교육용 드론 납품 이력과 ADD 시험 검증으로 신뢰도를 쌓고 있다. 리베스트와 배터리 국산화를 협력해 공급망 리스크를 줄이려 한다. 국방 체계 전반의 공급망 안정이 정부 정책 방향이라는 점도 완충 요인이다. 다만 세부 수주 잔고나 재무제표는 확인하지 못했다."
+    },
+    "related_links": [
+      {
+        "title": "파이낸셜뉴스: 대드론 시대 생존 무인기 투자 보도",
+        "url": "https://www.fnnews.com/news/202609220824142264",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "WOWTALE: Defense UAV Specialist ADSYSTEM Raises USD 9.9M Series A",
+        "url": "https://en.wowtale.net/2026/09/23/235201/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "Seoul Economic Daily: Stealth Drone Maker AD System Raises 13 Billion Won in Series A",
+        "url": "https://en.sedaily.com/finance/2026/09/24/stealth-drone-maker-ad-system-raises-13-billion-won-in",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "머니투데이: 군 드론 3792대 공급 보도",
+        "url": "https://www.mt.co.kr/future/2026/08/04/2026080409433981680",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "뉴시스: 리베스트·에이디시스템 드론 배터리 국산화 협력",
+        "url": "https://www.newsis.com/view/NISX20261008_0003819746",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "아시아투데이: 군 2.2조 수직이착륙 무인기 국내개발 의결",
+        "url": "https://www.asiatoday.co.kr/kn/view.php?key=20260915010005577",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      },
+      {
+        "title": "DSK 2025 Directory Book (회사 소개 및 AD-3000, AD-4000 사양)",
+        "url": "https://www.droneshowkorea.com/file/DSK2025_Directory_Book.pdf",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-26T00:45:51.254Z"
+      }
+    ],
+    "editor_pick_comment": "국내에서 드물게 기체 설계부터 군 납품까지 직접 해내는 팀이지만, 공개된 매출과 양산 실적이 없어 2027년 AD-4000과 양산 체계가 실제 평가 기준이 된다.",
+    "id": "ad-system-adsystem-inc-2026",
+    "date": "2026-10-26",
+    "logo_url": "",
+    "generated_at": "2026-10-26T00:45:51.254Z",
+    "model": "anthropic/claude-haiku-5.5",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-26T00:45:51.254Z"
+    }
+  },
+  {
     "name_en": "AZOO Inc. (WASIMIL)",
     "name_ko": "아주 (와시밀)",
     "tagline": "일본 중소 호텔·여관용 통합 호텔 OS에 AI 에이전트를 얹는 교토 스타트업",
