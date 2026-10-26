@@ -65,9 +65,16 @@ export default async function handler(req, res) {
   if (running >= MAX_CONCURRENT) return send(res, 429, { error: 'busy', message: '지금 분석 요청이 몰려 있어요. 잠시 뒤에 다시 눌러 주세요.' })
 
   running++
+  const started = Date.now()
   try {
     const llm = createClient({ apiKey: process.env.OPENROUTER_API_KEY, models: lensModelsFromEnv() })
-    const entry = await buildKoreaLens(llm, startup, { checkedAt: new Date().toISOString(), searchResults: 4 })
+    // stay inside the 300s function limit: fewer searches, and no retry when time is short
+    const entry = await buildKoreaLens(llm, startup, {
+      checkedAt: new Date().toISOString(),
+      searchResults: 4,
+      maxSearches: 6,
+      deadline: started + 270_000,
+    })
     if (!entry) return send(res, 422, { error: 'no-result', message: '이번에는 믿을 만한 분석을 만들지 못했어요. 나중에 다시 시도해 주세요.' })
     console.log(`korea-lens ${id}: ${entry.verdict}, cost $${llm.cost().toFixed(4)}`)
     return send(res, 200, { id, entry }, CACHE)

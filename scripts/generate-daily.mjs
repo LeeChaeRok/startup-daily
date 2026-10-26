@@ -106,7 +106,8 @@ ${PROFILE_SHAPE}`
 /* ---------- LLM steps ---------- */
 
 async function discover(llm, avoid, searched) {
-  const r = await llm.chat({ system: RULES, user: discoveryPrompt(avoid), web: true, maxResults: 10 })
+  // the model plans its own queries (several regions/languages) instead of one fixed search
+  const r = await llm.chat({ system: RULES, user: discoveryPrompt(avoid), web: 'tool', maxResults: 8, maxSearches: 10 })
   r.citations.forEach((c) => searched.add(stripUrl(c.url)))
   const parsed = await parseOrRepair(llm, r.text)
   const list = Array.isArray(parsed) ? parsed : parsed.candidates
@@ -117,7 +118,9 @@ async function discover(llm, avoid, searched) {
 
 async function research(llm, candidate, searched) {
   try {
-    const r = await llm.chat({ system: RULES, user: researchPrompt(candidate), web: true, maxResults: 8 })
+    // Korean companies are covered mostly by Korean-language sources, which the one-shot plugin misses
+    const korean = /한국|대한민국/.test(candidate.country_ko || '')
+    const r = await llm.chat({ system: RULES, user: researchPrompt(candidate), web: korean ? 'tool' : true, maxResults: 8, maxSearches: 6 })
     r.citations.forEach((c) => searched.add(stripUrl(c.url)))
     const profile = await parseOrRepair(llm, r.text)
     console.log(`  researched ${candidate.name_en} (${r.model}, ${r.citations.length} citations)`)

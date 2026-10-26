@@ -505,7 +505,7 @@ function KoreaSection({ startup: s, state }) {
           <span className="spinner" aria-hidden="true" />
           한국 시장을 조사하는 중이에요 · <span className="mono">{elapsed}</span>초
         </p>
-        <p className="lens-ask__hint">웹을 검색하고 링크를 확인하느라 보통 1~2분 걸려요. 이 화면을 열어 두세요.</p>
+        <p className="lens-ask__hint">웹을 검색하고 링크를 확인하느라 보통 2~3분 걸려요. 이 화면을 열어 두세요.</p>
       </div>
     )
   }
@@ -522,7 +522,7 @@ function KoreaSection({ startup: s, state }) {
       <button type="button" className="btn btn--primary" onClick={run}>
         <Icon name="spark" size={18} /> {status === 'error' ? '다시 시도' : 'AI로 한국 시장 분석하기'}
       </button>
-      <p className="lens-ask__hint">처음 한 번은 1~2분 걸려요. 만들어진 분석은 이 기기에 저장돼요. 사업·투자 조언이 아니에요.</p>
+      <p className="lens-ask__hint">처음 한 번은 2~3분 걸려요. 만들어진 분석은 이 기기에 저장돼요. 사업·투자 조언이 아니에요.</p>
     </div>
   )
 }

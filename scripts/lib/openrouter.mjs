@@ -9,9 +9,9 @@ const ENDPOINT = 'https://openrouter.ai/api/v1/chat/completions'
 // Daily discovery + deep research: DeepSeek is ~10-20x cheaper than Haiku with comparable
 // facts (benchmark 2026-10-26); Haiku takes over when DeepSeek errors.
 export const DEFAULT_MODELS = ['deepseek/deepseek-v4-flash', 'anthropic/claude-haiku-5.5']
-// "한국에서는": Haiku's native search finds Korean sources much better, and a missed Korean
-// player turns into a wrong "빈자리" verdict, so this stage stays on Claude.
-export const LENS_MODELS = ['anthropic/claude-haiku-5.5', 'anthropic/claude-sonnet-5.5']
+// "한국에서는": DeepSeek + the search tool (model-written Korean queries) found as many Korean
+// players as Haiku at ~1/3 the cost (2026-10-26); Haiku takes over when DeepSeek errors.
+export const LENS_MODELS = ['deepseek/deepseek-v4-flash', 'anthropic/claude-haiku-5.5']
 
 const parseList = (v) =>
   (v || '')
@@ -49,12 +49,40 @@ export class OpenRouterError extends Error {
   }
 }
 
+// Perplexity won the Korean-coverage experiment (most Korean citations, cheapest per call);
+// Korea as the location nudges results toward Korean sources without excluding others.
+export const SEARCH_ENGINE = 'perplexity'
+
+function searchTool(maxResults, maxSearches) {
+  return {
+    tools: [
+      {
+        type: 'openrouter:web_search',
+        parameters: {
+          engine: SEARCH_ENGINE,
+          max_results: maxResults,
+          max_uses: maxSearches,
+          user_location: { type: 'approximate', country: 'KR' },
+        },
+      },
+    ],
+    max_tool_calls: maxSearches + 2,
+  }
+}
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 /**
  * One chat completion. Returns { text, citations, model, usage }.
- *   web        — enable OpenRouter's web plugin (native search for Anthropic models)
- *   maxResults — search results per query when `web` is on
+ *   web        — search mode:
+ *                true / 'plugin' — OpenRouter web plugin: ONE search, query chosen by OpenRouter.
+ *                                  Cheap; fine for English sources about one company.
+ *                'tool'          — openrouter:web_search server tool: the model writes its own queries
+ *                                  (Korean ones too) and searches several times. Needed for Korean
+ *                                  coverage on non-Claude models (experiment 2026-10-26: 0-1 → 5-7
+ *                                  Korean players found). Costs per search.
+ *   maxResults — search results per query when searching
+ *   maxSearches — cap on searches in 'tool' mode
  *   json       — ask for a JSON object response (no schema); used for repair calls
  */
 export function createClient({ apiKey, models = DEFAULT_MODELS, fetchImpl = fetch, log = () => {} }) {
@@ -62,13 +90,13 @@ export function createClient({ apiKey, models = DEFAULT_MODELS, fetchImpl = fetc
 
   let totalCost = 0
 
-  async function chat({ system, user, web = false, maxResults = 8, json = false, maxTokens = 16000 }) {
+  async function chat({ system, user, web = false, maxResults = 8, maxSearches = 8, json = false, maxTokens = 16000 }) {
     const body = {
       model: models[0],
       models,
       max_tokens: maxTokens,
       messages: [...(system ? [{ role: 'system', content: system }] : []), { role: 'user', content: user }],
-      ...(web ? { plugins: [{ id: 'web', max_results: maxResults }] } : {}),
+      ...(web === 'tool' ? searchTool(maxResults, maxSearches) : web ? { plugins: [{ id: 'web', max_results: maxResults }] } : {}),
       ...(json ? { response_format: { type: 'json_object' } } : {}),
     }
 

@@ -233,11 +233,16 @@ export function validate(entry) {
 /* ---------- Orchestration ---------- */
 
 /** Returns an entry, or null when the section should be left out. */
-export async function buildKoreaLens(llm, profile, { searched = new Set(), checkedAt, fetchImpl, searchResults = 6, log = () => {} } = {}) {
+export async function buildKoreaLens(
+  llm,
+  profile,
+  { searched = new Set(), checkedAt, fetchImpl, searchResults = 6, maxSearches = 8, deadline = Infinity, log = () => {} } = {},
+) {
   const name = profile.name_en
   let facts
   try {
-    const r = await llm.chat({ system: FACT_RULES, user: researchPrompt(profile), web: true, maxResults: searchResults })
+    // 'tool': the model runs its own Korean and English queries, several times
+    const r = await llm.chat({ system: FACT_RULES, user: researchPrompt(profile), web: 'tool', maxResults: searchResults, maxSearches })
     r.citations.forEach((c) => searched.add(stripUrl(c.url)))
     facts = await parseOrRepair(llm, r.text)
   } catch (err) {
@@ -247,6 +252,11 @@ export async function buildKoreaLens(llm, profile, { searched = new Set(), check
 
   let feedback = ''
   for (let attempt = 0; attempt < 2; attempt++) {
+    // a retry takes ~30-60s; inside a request with a hard time limit, give up instead of being killed
+    if (attempt > 0 && deadline - Date.now() < 70_000) {
+      log(`  korea-lens ${name}: no time left for a retry`)
+      break
+    }
     try {
       const w = await llm.chat({ system: WRITE_RULES, user: writePrompt(profile, facts, feedback), json: true, maxTokens: 8000 })
       const written = await parseOrRepair(llm, w.text)
