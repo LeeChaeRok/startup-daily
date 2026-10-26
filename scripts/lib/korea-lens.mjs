@@ -67,7 +67,7 @@ Research facts (JSON):
 ${JSON.stringify(facts)}
 
 Direct Korean players found in the facts: ${direct}. Your headline and verdict must be consistent with that number.
-${feedback ? `\nYour previous attempt was rejected: ${feedback}. Fix that and keep everything else.\n` : ''}
+${/한국|대한민국/.test(p.headquarters?.country_ko || '') ? `${p.name_ko || p.name_en} is itself a Korean company: write about the competition it faces inside Korea and what it would take to win there. Never present it as one of the Korean players or as "the" player found.\n` : ''}${feedback ? `\nYour previous attempt was rejected: ${feedback}. Fix that and keep everything else.\n` : ''}
 Reply with ONLY this JSON object:
 {
   "verdict": "open | emerging | crowded | constrained | unclear",
