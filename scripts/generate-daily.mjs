@@ -107,7 +107,7 @@ ${PROFILE_SHAPE}`
 
 async function discover(llm, avoid, searched) {
   // the model plans its own queries (several regions/languages) instead of one fixed search
-  const r = await llm.chat({ system: RULES, user: discoveryPrompt(avoid), web: 'tool', maxResults: 8, maxSearches: 10 })
+  const r = await llm.chat({ system: RULES, user: discoveryPrompt(avoid), web: 'tool', maxResults: 8, maxSearches: 10, maxTokens: 32000 })
   r.citations.forEach((c) => searched.add(stripUrl(c.url)))
   const parsed = await parseOrRepair(llm, r.text)
   const list = Array.isArray(parsed) ? parsed : parsed.candidates
@@ -117,18 +117,34 @@ async function discover(llm, avoid, searched) {
 }
 
 async function research(llm, candidate, searched) {
-  try {
-    // Korean companies are covered mostly by Korean-language sources, which the one-shot plugin misses
-    const korean = /한국|대한민국/.test(candidate.country_ko || '')
-    const r = await llm.chat({ system: RULES, user: researchPrompt(candidate), web: korean ? 'tool' : true, maxResults: 8, maxSearches: 6 })
-    r.citations.forEach((c) => searched.add(stripUrl(c.url)))
-    const profile = await parseOrRepair(llm, r.text)
-    console.log(`  researched ${candidate.name_en} (${r.model}, ${r.citations.length} citations)`)
-    return { ...profile, _model: r.model }
-  } catch (err) {
-    console.log(`  research failed for ${candidate.name_en}: ${err.message}`)
-    return null
+  // Korean companies are covered mostly by Korean-language sources, which the one-shot plugin misses
+  const korean = /한국|대한민국/.test(candidate.country_ko || '')
+  const call = (useModels) =>
+    llm.chat({
+      system: RULES,
+      user: researchPrompt(candidate),
+      web: korean ? 'tool' : true,
+      maxResults: 8,
+      maxSearches: 6,
+      // reasoning models think before writing the long profile JSON; 16k was too tight (3/8 cut off)
+      maxTokens: 32000,
+      useModels,
+    })
+  for (const useModels of [undefined, llm.models.slice(1)]) {
+    if (useModels && !useModels.length) break
+    try {
+      const r = await call(useModels)
+      r.citations.forEach((c) => searched.add(stripUrl(c.url)))
+      const profile = await parseOrRepair(llm, r.text)
+      console.log(`  researched ${candidate.name_en} (${r.model}, ${r.citations.length} citations)`)
+      return { ...profile, _model: r.model }
+    } catch (err) {
+      // OpenRouter's own fallback only covers API errors; a cut-off or broken answer is retried
+      // here on the next model in the list
+      console.log(`  research ${useModels ? 'retry' : 'attempt'} failed for ${candidate.name_en}: ${err.message}`)
+    }
   }
+  return null
 }
 
 async function mapLimit(items, limit, fn) {
