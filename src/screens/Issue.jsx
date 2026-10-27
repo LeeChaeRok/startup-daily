@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import Icon from '../components/Icon.jsx'
 import Logo from '../components/Logo.jsx'
 import StartupRow from '../components/StartupRow.jsx'
-import { AiNote, Meta, ProgressRing } from '../components/bits.jsx'
+import { AiNote, MarkAllRead, Meta, ProgressRing } from '../components/bits.jsx'
 import { Footer } from '../components/Chrome.jsx'
 import { byDate, dates, formatUSD, issueNo, sectorMix, stats } from '../lib/data.js'
 import { useFlag, useReadLog } from '../lib/hooks.js'
@@ -60,6 +60,7 @@ export function IssueHeader({ date, compact = false }) {
           </span>
         )}
       </p>
+      {!compact && <MarkAllRead list={list} />}
       {latest && gap >= 2 && !compact && (
         <p className="issue-head__stale">
           {monthDay(date)} 이후 새 호가 없어요. <a href="#/explore?view=issues">지난 호 보기</a>

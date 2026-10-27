@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import Icon from '../components/Icon.jsx'
 import Logo from '../components/Logo.jsx'
 import StartupRow from '../components/StartupRow.jsx'
-import { Meta, SaveButton, Tag } from '../components/bits.jsx'
+import { Meta, ReadButton, SaveButton, Tag } from '../components/bits.jsx'
 import startups, { byId, canAnalyze, cleanAmount, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
 import { navigate, prefersReducedMotion, useFlag } from '../lib/hooks.js'
 import { dotDate, enDash, langOf, monthDay, numClass, pad2, ym } from '../lib/format.js'
@@ -189,6 +189,7 @@ function Hero({ startup: s, list, share, from, desktop, wide }) {
       {desktop && !wide && (
         <div className="hero__actions">
           <SaveButton startup={s} variant="label" />
+          <ReadButton startup={s} variant="label" />
           <button type="button" className="btn btn--secondary" onClick={share.share}>
             <Icon name="share" size={18} /> {share.label}
           </button>
@@ -848,6 +849,7 @@ export default function Detail({ id, from, desktop, wide }) {
       {!desktop && (
         <div className="actionbar" role="toolbar" aria-label="이 회사">
           <SaveButton startup={s} />
+          <ReadButton startup={s} />
           <button type="button" className="icon-btn" onClick={share.share} aria-label={share.label}>
             <Icon name="share" />
           </button>
@@ -904,6 +906,7 @@ export function DetailRail({ id }) {
       </nav>
       <div className="rail__actions">
         <SaveButton startup={s} variant="label" />
+        <ReadButton startup={s} variant="label" />
         <button type="button" className="btn btn--secondary" onClick={share.share}>
           <Icon name="share" size={18} /> {share.label}
         </button>

@@ -417,6 +417,11 @@ a { color: inherit; text-decoration: none; }
 .row__numlabel { font-size: 12px; color: var(--sd-ink-3); margin-top: 2px; }
 .row__na { font-size: 13px !important; font-weight: 500 !important; color: var(--sd-ink-3) !important; }
 .row.is-read .row__name { color: var(--sd-ink-2); font-weight: 500; }
+.row.is-read .row__tagline, .row.is-read .row__num, .row.is-read .logo { opacity: 0.55; }
+.row.is-read .row__rank { color: var(--sd-accent); }
+.read-tag { font-size: 12px; font-weight: 600; color: var(--sd-ink-3); border: 1px solid var(--sd-line); border-radius: 4px; padding: 0 5px; line-height: 18px; }
+.readbtn.is-on { color: var(--sd-accent); }
+.mark-all { display: inline-flex; align-items: center; gap: 4px; margin-top: 8px; font-size: 13px; color: var(--sd-ink-3); }
 .row > .save { align-self: center; margin-left: 4px; }
 .row.is-selected .row__link { background: var(--sd-surface); box-shadow: inset 3px 0 0 var(--sd-accent); }
 
@@ -768,6 +773,7 @@ a { color: inherit; text-decoration: none; }
 .results__num { text-align: right; white-space: nowrap; }
 .results__num .mono, .results__num.mono { font-size: 13px; }
 .results tr.is-read .results__name { font-weight: 500; color: var(--sd-ink-2); }
+.results tr.is-read td:not(:first-child), .results tr.is-read .results__tagline, .results tr.is-read .logo { opacity: 0.55; }
 @media (hover: hover) { .results__company:hover .results__name { text-decoration: underline; text-decoration-color: var(--sd-accent); text-underline-offset: 3px; } }
 
 .issues-view__sum { font-size: 13px; color: var(--sd-ink-2); margin: 12px 0 8px; }

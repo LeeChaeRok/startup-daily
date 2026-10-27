@@ -52,6 +52,7 @@ function readState(params) {
     stage: list(params.get('stage')),
     region: list(params.get('region')),
     korea: list(params.get('korea')),
+    unread: params.get('unread') === '1',
     sort: params.get('sort') || 'date',
   }
 }
@@ -72,6 +73,7 @@ function useExploreState(params) {
         stage: next.stage,
         region: next.region,
         korea: next.korea,
+        unread: next.unread ? '1' : null,
         sort: next.sort === 'date' ? null : next.sort,
       })}`,
       { replace },
@@ -249,8 +251,10 @@ export default function Explore({ params, desktop }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [draft])
 
+  const { isRead } = useReadLog()
   const base = useMemo(() => search(state.q), [state.q])
-  const rows = useMemo(() => sortBy(applyFilters(base, state), state.sort), [base, state])
+  const filtered = sortBy(applyFilters(base, state), state.sort)
+  const rows = state.unread ? filtered.filter(({ startup }) => !isRead(startup.id)) : filtered
   const activeCount = state.sector.length + state.stage.length + state.region.length + state.korea.length
 
   return (
@@ -313,6 +317,14 @@ export default function Explore({ params, desktop }) {
                   <Icon name="filter" size={16} /> 필터{activeCount > 0 && <span className="num"> {activeCount}</span>}
                 </button>
               )}
+              <button
+                type="button"
+                className={`chip ${state.unread ? 'chip--on' : ''}`}
+                aria-pressed={state.unread}
+                onClick={() => update({ unread: !state.unread })}
+              >
+                안 읽은 곳만
+              </button>
               <label className="select">
                 <span className="sr-only">정렬</span>
                 <select value={state.sort} onChange={(e) => update({ sort: e.target.value })}>
@@ -333,13 +345,19 @@ export default function Explore({ params, desktop }) {
             {rows.length === 0 ? (
               <EmptyState
                 icon="explore"
-                title={state.q ? `‘${state.q}’에 맞는 회사가 없어요` : '조건에 맞는 회사가 없어요'}
+                title={
+                  state.unread && filtered.length
+                    ? '조건에 맞는 곳은 모두 읽었어요'
+                    : state.q
+                      ? `‘${state.q}’에 맞는 회사가 없어요`
+                      : '조건에 맞는 회사가 없어요'
+                }
                 actions={
                   <>
                     <button
                       type="button"
                       className="btn btn--secondary"
-                      onClick={() => update({ q: '', sector: [], stage: [], region: [], korea: [] })}
+                      onClick={() => update({ q: '', sector: [], stage: [], region: [], korea: [], unread: false })}
                     >
                       조건 지우기
                     </button>

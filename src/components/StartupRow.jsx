@@ -51,6 +51,7 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
                 ]}
               />
               <CorrectionBadge correction={s._correction} />
+              {read && <span className="read-tag">읽음</span>}
               {LENS_VERDICTS[s._lens?.v]?.badge && <span className="badge badge--accent badge--flat">{LENS_VERDICTS[s._lens.v].badge}</span>}
             </span>
           )}
@@ -60,7 +61,8 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
             </span>
           )}
           {reason && <span className="row__reason">{reason}</span>}
-          {read && <span className="sr-only">, 읽음</span>}
+          {read && compact && <span className="sr-only">, 읽음</span>}
+
         </span>
         <span className="row__num">
           {raised ? <span className={numClass(raised)}>{raised}</span> : <span className="row__na">미공개</span>}

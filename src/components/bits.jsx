@@ -1,5 +1,5 @@
 import Icon from './Icon.jsx'
-import { useSaved } from '../lib/hooks.js'
+import { useReadLog, useSaved } from '../lib/hooks.js'
 import { useToast } from './toast-context.js'
 import { navigate } from '../lib/hooks.js'
 
@@ -97,6 +97,53 @@ export function SaveButton({ startup, variant = 'icon' }) {
       onClick={onClick}
     >
       <Icon name={on ? 'bookmarkFill' : 'bookmark'} className="save__icon" />
+    </button>
+  )
+}
+
+/** "읽음" toggle — auto-tracking marks it, this lets the reader set it either way. */
+export function ReadButton({ startup, variant = 'icon' }) {
+  const { isRead, setRead } = useReadLog()
+  const on = isRead(startup.id)
+  const onClick = () => setRead([startup.id], !on)
+  if (variant === 'label') {
+    return (
+      <button type="button" className={`btn btn--secondary readbtn ${on ? 'is-on' : ''}`} aria-pressed={on} onClick={onClick}>
+        <Icon name="check" size={18} />
+        {on ? '읽음' : '읽음 표시'}
+      </button>
+    )
+  }
+  return (
+    <button
+      type="button"
+      className={`icon-btn readbtn ${on ? 'is-on' : ''}`}
+      aria-pressed={on}
+      aria-label={`${startup.name_ko || startup.name_en} 읽음 표시`}
+      onClick={onClick}
+    >
+      <Icon name="check" />
+    </button>
+  )
+}
+
+/** Mark a whole list read (or unread again), with undo. */
+export function MarkAllRead({ list, label = '이 호' }) {
+  const { isRead, setRead, readLog, restoreRead } = useReadLog()
+  const toast = useToast()
+  if (!list.length) return null
+  const allRead = list.every((s) => isRead(s.id))
+  const onClick = () => {
+    const before = readLog
+    setRead(list.map((s) => s.id), !allRead)
+    toast(allRead ? `${label}를 안 읽음으로 돌렸어요` : `${label}를 모두 읽음으로 표시했어요`, {
+      label: '되돌리기',
+      onClick: () => restoreRead(before),
+    })
+  }
+  return (
+    <button type="button" className="text-btn mark-all" onClick={onClick}>
+      <Icon name="check" size={16} /> {allRead ? '모두 안 읽음으로' : '모두 읽음으로 표시'}
     </button>
   )
 }

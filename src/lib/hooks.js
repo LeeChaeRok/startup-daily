@@ -119,14 +119,34 @@ export function localDate(d = new Date()) {
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`
 }
 
+// ids the reader marked unread this session: auto-tracking leaves them alone
+const keptUnread = new Set()
+
 export function useReadLog() {
   const readLog = useStore(readStore)
   const markRead = useCallback((id) => {
-    if (readStore.get()[id]) return
+    if (readStore.get()[id] || keptUnread.has(id)) return
     readStore.set((prev) => ({ ...prev, [id]: localDate() }))
   }, [])
   const clearRead = useCallback(() => readStore.set({}), [])
-  return { readLog, isRead: (id) => Boolean(readLog[id]), markRead, clearRead }
+  // explicit toggles from the reader: on → today, off → drop the entry
+  const setRead = useCallback((ids, on) => {
+    readStore.set((prev) => {
+      const next = { ...prev }
+      for (const id of ids) {
+        if (on) {
+          next[id] ||= localDate()
+          keptUnread.delete(id)
+        } else {
+          delete next[id]
+          keptUnread.add(id)
+        }
+      }
+      return next
+    })
+  }, [])
+  const restoreRead = useCallback((log) => readStore.set(log), [])
+  return { readLog, isRead: (id) => Boolean(readLog[id]), markRead, setRead, restoreRead, clearRead }
 }
 
 /* One-off flags (intro dismissed, last seen issue, …). */

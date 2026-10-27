@@ -140,31 +140,26 @@ export function useShare(startup) {
   return { share, sheet, label: canNativeShare() ? '공유' : '링크 복사' }
 }
 
-/* Mark as read once the summary has been on screen for 5s while the tab is visible. */
+/* Mark as read once the summary has been on screen for 2s while the tab is visible.
+   Polled rather than observed: an observer only reports threshold crossings, so a
+   detail opened in a background tab would never count once the reader looks at it. */
 export function useReadTracking(ref, id) {
   const { markRead } = useReadLog()
   const [, setIntro] = useFlag('sd_intro_dismissed', false)
   useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    let timer = null
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        clearTimeout(timer)
-        if (entry.isIntersecting && document.visibilityState === 'visible') {
-          timer = setTimeout(() => {
-            markRead(id)
-            setIntro(true)
-          }, 5000)
-        }
-      },
-      { threshold: 0.4 },
-    )
-    io.observe(el)
-    return () => {
-      clearTimeout(timer)
-      io.disconnect()
-    }
+    let seen = 0
+    const timer = setInterval(() => {
+      const el = ref.current
+      const r = el?.getBoundingClientRect()
+      const onScreen = r && r.top < window.innerHeight * 0.85 && r.bottom > 0
+      seen = onScreen && document.visibilityState === 'visible' ? seen + 1 : 0
+      if (seen >= 4) {
+        clearInterval(timer)
+        markRead(id)
+        setIntro(true)
+      }
+    }, 500)
+    return () => clearInterval(timer)
   }, [ref, id, markRead, setIntro])
 }
 
