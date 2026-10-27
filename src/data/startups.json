@@ -1,5 +1,887 @@
 [
   {
+    "name_en": "TraceWeave",
+    "name_ko": "트레이스위브",
+    "tagline": "맥락이 길어져도 메모리는 일정한 포스트-트랜스포머 온디바이스 AI",
+    "category": [
+      "온디바이스 AI",
+      "AI 아키텍처",
+      "엣지 컴퓨팅"
+    ],
+    "founded_year": 2025,
+    "headquarters": {
+      "city": "Seoul",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Seed",
+    "employee_count": "11-50 (추정)",
+    "website": "https://traceweave.net/",
+    "founders": [
+      {
+        "name_en": "Jaeyoung Park",
+        "name_ko": "박재영",
+        "role": "Co-founder & CEO",
+        "background": "구글(Consumer Insights Analyst)·42dot 기업전략, 기아 글로벌 마케팅, ESADE MBA(듀크 교환 포함), 연세대 산업공학. Antler Korea 7기 창업자.",
+        "notable_achievement": "2025년 10월 Antler Korea 'Startup Generator'를 통해 법인 설립 주도. 'KV 캐시를 제거하는 것은 쉬웠고, 그것 없이도 능력을 유지하는 것이 핵심'이라는 투자 발표 코멘트를 남김."
+      },
+      {
+        "name_en": "Kim Tae-hoon",
+        "name_ko": "김태훈",
+        "role": "Co-founder & CTO",
+        "background": "ETH 취리히 계산신경과학 박사 출신. 취리히대 블록체인·네트워크 사이언스 연구 경력.",
+        "notable_achievement": "아키텍처 설계부터 기반 모델 사전학습, 추론 엔진까지 자체 개발을 총괄."
+      },
+      {
+        "name_en": "Park Geun-cheol",
+        "name_ko": "박근철",
+        "role": "Co-founder & Head of AI",
+        "background": "KAIST 비전 AI 연구실 출신 연구자.",
+        "notable_achievement": "Phase-TITAN 기반 비전·월드모델 및 차량용 에이전트 검증 주도."
+      }
+    ],
+    "team_highlights": "ETH 취리히·구글·KAIST 출신 공동 창업 3인 체제. CEO 박재영(구글·42dot·기아 전략/BD), CTO 김태훈(ETH 취리히 계산신경과학 박사), Head of AI 박근철(KAIST 비전 AI 연구실)이 아키텍처 설계·사전학습·추론 엔진을 모두 자체 개발한다. 현재 네이버 D2SF @강남에 입주해 연구·엔지니어링 인력을 확충 중.",
+    "product": {
+      "summary": "맥락 길이와 무관하게 메모리 사용량을 일정하게 유지하는 포스트-트랜스포머 아키텍처 'Phase-TITAN'을 기반으로, 스마트폰·자동차·로봇 등 엣지 기기에서 클라우드 호출 없이 동작하는 AI 에이전트와 월드모델 기술을 개발한다.",
+      "problem_statement": "트랜스포머 기반 LLM은 입력 맥락이 길어질수록 KV 캐시가 커져 메모리 사용량이 증가한다. 메모리·배터리·발열 제약이 큰 온디바이스 환경에서는 장문 맥락을 이해하고 다단계 추론·도구 호출을 수행하는 AI 에이전트를 구동하기 어렵다.",
+      "solution": "KV 캐시 대신 고정 크기의 '진화하는 상태(evolving state)'로 맥락을 압축하는 Phase-TITAN 아키텍처로, 처리 정보가 길어져도 메모리 사용량을 일정하게 유지하고 기기 자체에서 외부 도구 호출→결과 해석→다음 행동 판단까지 수행한다.",
+      "key_features": [
+        "Phase-TITAN: 트랜스포머 구조 자체를 대체하는 포스트-트랜스포머 추론 아키텍처",
+        "PT Language Model v5: 토큰 증가형 KV 캐시 없이 장문 맥락·툴 사용 지원하는 온디바이스 언어모델",
+        "PT Training-Free Dynamics Monitor: 학습 가중치 없이 기기별 정상 동역학을 실시간 추정하는 설비 상태 모니터링",
+        "PT World Model: 최초로 시연된 지속형 인터랙티브 비디오 월드모델(33분·10랩 이상 실시간 조작)",
+        "스마트폰 CPU 싱글코어·1GB 이하 고정 메모리로 멀티스텝 에이전트 구동(자체 시연)"
+      ],
+      "tech_stack_or_innovation": "계산신경과학·물리학 기반 설계. 어텐션 없는 고정 크기 시간 상태(fixed-size attention-free temporal state)로 세계를 안정적 동역학 어트랙터로 학습. Qwen·Llama 등 오픈소스 모델을 쓰지 않고 자체 모델을 개발하며 사전학습부터 추론 엔진까지 내재화. 100만 토큰 맥락에서 1B 파라미터 모델의 KV 캐시가 0.04GB(자사 측정·비교 모델 대비 수십 GB 절감).",
+      "target_customer": "자동차(글로벌 완성차·자율주행 계열사, 전장 SW 기업), 로봇, 드론, 스마트 글래스, 웨어러블, 스마트TV 등 물리·디지털 엣지 디바이스의 OEM·플랫폼 기업.",
+      "business_model": "고객 환경에서의 유료 기술검증(PoC) 계약으로 시작해, 차량용·디바이스용 AI 에이전트 및 월드모델의 라이선스·구독형 공급으로 전환하는 구조. 구체적 계약 조건은 비공개."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "NOTA (노타)",
+          "comparison": "국내 온디바이스 AI 경량화·최적화 선두(코스닥 상장). 기존 트랜스포머 모델을 압축·최적화하는 접근인 반면, 트레이스위브는 아키텍처 자체를 교체한다는 점에서 전략이 다르지만 타깃 고객(HW 제조사)은 겹친다."
+        },
+        {
+          "name": "SqueezeBits (스퀴즈비츠)",
+          "comparison": "모델 압축·양자화 전문 국내 스타트업이었으나 AI 반도체 기업 리벨리온에 인수됨. 트레이스위브는 독립·비상장 상태를 유지 중."
+        },
+        {
+          "name": "UnderMilli (언더밀리)",
+          "comparison": "의료 현장용 실시간 음성통역 AI '말로하'로 온디바이스 추론에 특화. 디지털 엣지(음성) 영역에서 간접 경쟁."
+        },
+        {
+          "name": "Deci AI / Neural Magic / Deeplite",
+          "comparison": "해외 AI 경량화 스타트업으로, 각각 NVIDIA·Red Hat 등에 인수되며 시장이 재편됐다. 독립 최적화 플레이어의 공백이 커진 상황."
+        }
+      ],
+      "key_differentiator": "모델을 줄이는 최적화가 아니라 'KV 캐시 없는 포스트-트랜스포머 아키텍처'로 메모리 문제를 원천 해결. CPU 싱글코어·1GB 이하 메모리로 에이전트를 구동하는 자체 데모와, 세계를 고정 크기 상태로 학습하는 지속형 월드모델을 보유한 점이 차별점이다.",
+      "moat": "계산신경과학·물리학 기반의 독자 아키텍처 설계 역량과 자체 사전학습·추론 엔진 내재화(오픈소스 무의존), 차량용 유료 PoC 실적, 네이버 D2SF와의 협력 관계. 아키텍처·월드모델 관련 특허·논문 자산은 미공개.",
+      "competitive_position_summary": "국내 온디바이스 AI 시장이 '경량화·최적화(압축)' 중심으로 형성된 가운데, 트레이스위브는 '아키텍처 교체'라는 다른 축으로 접근하는 초기 스타트업. 아직 1년 차로 시장 검증 초기 단계."
+    },
+    "trending_reason": {
+      "summary": "2026-10-21 네이버 D2SF가 온디바이스 AI 스타트업 트레이스위브에 신규 투자했다고 발표. 미래에셋캐피탈이 리드한 시드 라운드에서 약 30억 원을 조달하고 약 300억 원(선투자 기준)의 기업가치를 인정받았다.",
+      "catalysts": [
+        "미래에셋캐피탈 리드, 네이버 D2SF·쿼드벤처스·앤틀러코리아 참여의 시드 라운드 발표(2026-10-21)",
+        "스마트폰 CPU 싱글코어·1GB 이하 메모리로 차량용 에이전트 구동 성공 및 PT 월드모델 33분 실시간 시연 공개",
+        "글로벌 완성차 그룹 자율주행 계열사와 주행 데이터 분석 유료 PoC 완료, 미국 전장 SW 기업과 차량용 에이전트 검증 진행",
+        "네이버 D2SF @강남 입주로 생태계 협력 본격화"
+      ],
+      "growth_metrics": "시드 라운드 약 30억 원(약 $2.2M) 조달, 기업가치 약 300억 원(선투자 기준). 자체 측정 기준 100만 토큰 맥락에서 1B 모델 KV 캐시 0.04GB 수준. 매출·고객사 수는 비공개.",
+      "media_mentions": [
+        {
+          "source": "네이버 D2SF 보도자료",
+          "title": "네이버 D2SF, 온디바이스 AI 스타트업 '트레이스위브'에 신규 투자",
+          "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034775",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "조선비즈",
+          "title": "트레이스위브, CPU 싱글코어 기반 온디바이스 AI 에이전트 개발",
+          "url": "https://biz.chosun.com/industry/business_info/2026/10/21/EU4BG23PWNH63OWKJESAPJZSNI/",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "매일경제",
+          "title": "네이버 D2SF, 온디바이스 AI 스타트업 '트레이스위브'에 신규 투자",
+          "url": "https://www.mk.co.kr/news/it/12181498",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "연합뉴스",
+          "title": "클라우드 없이 스마트폰 CPU로 에이전트 구동…네이버 D2SF, 트레이스위브 투자",
+          "url": "https://www.yna.co.kr/view/AKR20261021050500017",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "뉴스핌",
+          "title": "네이버 D2SF, 온디바이스 AI 스타트업 '트레이스위브' 투자",
+          "url": "https://www.newspim.com/news/view/20261021000226",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "더팩트",
+          "title": "네이버, 메모리 제약 줄인 온디바이스 AI 스타트업에 투자",
+          "url": "https://news.tf.co.kr/read/economy/2378803.htm",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "머니투데이",
+          "title": "From video production to medical devices: a string of early-stage investments",
+          "url": "https://www.mt.co.kr/en/future/2026/10/25/2026102515204626680",
+          "date": "2026-10-25",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "Platum",
+          "title": "트레이스위브, 시드 30억원 유치… 기기 안에서 도는 AI 에이전트 구조 개발",
+          "url": "https://platum.kr/archives/296698",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "PRNewswire (Morningstar 게재)",
+          "title": "NAVER D2SF Invests in On-Device AI Startup TraceWeave",
+          "url": "https://www.morningstar.com/news/pr-newswire/20261020cn76433/naver-d2sf-invests-in-on-device-ai-startup-traceweave",
+          "date": "2026-10-20",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "전자신문",
+          "title": "네이버 D2SF, 온디바이스 AI 스타트업 트레이스위브에 신규 투자",
+          "url": "https://www.dt.co.kr/article/12090458",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$2.2M (시드 라운드 기준, 앤틀러 프리시드 별도분은 비공개)",
+      "valuation_estimate": "$22M (추정, 선투자 기준 약 300억 원)",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "$2.2M (약 30억 원)",
+        "date": "2026-10",
+        "lead_investor": "Mirae Asset Capital",
+        "notable_investors": [
+          "Naver D2SF",
+          "Quad Ventures",
+          "Antler Korea"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Pre-seed (Antler Korea Startup Generator)",
+          "amount": "비공개",
+          "date": "2025-10",
+          "lead_investor": "Antler Korea"
+        },
+        {
+          "stage": "Seed",
+          "amount": "$2.2M (약 30억 원)",
+          "date": "2026-10",
+          "lead_investor": "Mirae Asset Capital"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "잠재 시장(TAM)은 스마트폰·자동차·로봇·드론·스마트글래스 등 기기 내 AI 추론·에이전트 전체로 봄(규모 수치는 비공개, 추정). 당분간 서비스 가능 시장(SAM)은 자동차·전장 에이전트와 월드모델 PoC 중심, 획득 가능 시장(SOM)은 글로벌 완성차·전장 SW 고객의 초기 파일럿 계약으로 상정.",
+      "market_trend": "AI 에이전트가 클라우드에서 엣지로 확산되고, 트랜스포머 한계를 보완하는 포스트-트랜스포머·상태공간모델 연구가 활성화 중. 퀄컴이 한국 엣지 AI 스타트업 5곳을 퀄컴 AI 이노베이터 프로그램(QAIPI)에 선정하는 등 HW 기업의 엣지 AI 생태계 투자가 이어지고, 한국 정부도 K-온디바이스 AI 반도체 사업(2026-2030, 총 8,002억 원) 등 지원을 확대하고 있다.",
+      "growth_potential": "모빌리티 유료 PoC 완료 후 로봇·드론·스마트글래스·웨어러블로 수평 확장 예정. 특정 NPU 부가 장치 없이 '이미 기기에 있는 칩 사양'에서 에이전트를 돌린다는 전략이어서 기기 보급형 시장 접근성이 높다(상용화 시점은 미공개, 2027년 전후로 추정).",
+      "risks": [
+        "외부 대규모 벤치마크·실증 부족: 성능 주장이 대부분 자체 측정 기준",
+        "Apple·Qualcomm·삼성 등 빅테크의 온디바이스 AI 내재화 및 NOTA 등 기존 최적화 기업과의 경쟁",
+        "설립 1년 차 초기 팀이라 연구·엔지니어링 인재 확보 경쟁이 치열",
+        "유료 PoC가 실제 상용 라이선스 계약으로 전환될지 불확실"
+      ],
+      "risk_mitigation": "오픈소스·클라우드에 의존하지 않는 자체 아키텍처로 기술 주도권을 유지하고, 고객 디바이스 환경에서 직접 검증하는 유료 PoC로 수요를 실증. 네이버 D2SF @강남 입주와 D2SF의 디바이스 생태계 투자(노타 등) 네트워크를 활용해 고객·파트너 발굴을 진행 중."
+    },
+    "related_links": [
+      {
+        "title": "TraceWeave 공식 웹사이트",
+        "url": "https://traceweave.net/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "NAVER D2SF 포트폴리오 - TraceWeave",
+        "url": "https://d2sf.naver.com/en/portfolio/traceweave",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "THE VC 기업정보 - 트레이스위브",
+        "url": "https://thevc.kr/traceweave",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "CEO Jaey Park LinkedIn",
+        "url": "https://www.linkedin.com/in/jaey-park-bb127199",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "NAVER D2SF 투자 보도자료",
+        "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034775",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      }
+    ],
+    "editor_pick_comment": "트랜스포머를 통째로 대체하겠다는 Phase-TITAN의 야심은 흥미롭지만, 300억 원 밸류의 시드 스타트업이 글로벌 완성차·전장 고객을 실제 계약으로 얼마나 빨리 전환하느냐가 진짜 시험대다.",
+    "id": "traceweave-2026",
+    "date": "2026-10-27",
+    "logo_url": "",
+    "generated_at": "2026-10-27T01:43:36.628Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-27T01:43:36.628Z"
+    }
+  },
+  {
+    "name_en": "OQT",
+    "name_ko": "오큐티",
+    "tagline": "중성원자 큐비트로 오류내성 양자컴퓨터를 개발하는 KAIST 스핀오프",
+    "category": [
+      "양자컴퓨팅",
+      "딥테크 하드웨어",
+      "양자오류정정"
+    ],
+    "founded_year": 2025,
+    "headquarters": {
+      "city": "Daejeon",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50 (추정)",
+    "website": "https://www.k-oqt.com",
+    "founders": [
+      {
+        "name_en": "Donggyu Kim",
+        "name_ko": "김동규",
+        "role": "대표(CEO), KAIST 물리학과 교수 겸임",
+        "background": "1985년생. MIT에서 원자·광학 기반 양자기술로 기계공학 박사 학위를 받은 뒤, 미국 풀스택 양자컴퓨팅 기업 QuEra의 창업멤버로 활동. 현재 KAIST 물리학과 교수로 재직하며 2025년 1월 OQT를 설립했다.",
+        "notable_achievement": "세계 최초 256큐비트 중성원자 양자컴퓨터를 개발한 QuEra 창업멤버로서 논리큐비트 연구 성과에 기여"
+      }
+    ],
+    "team_highlights": "KAIST 물리학과 연구실의 박사과정 연구원들이 함께 창업에 참여한 것으로 알려져 있다. THE VC 기준 등기임원 2명, 임직원 규모는 비공개. 2026년 현재 광학시스템 엔지니어링·시스템 운영·양자 시뮬레이션·양자 정보 4개 분야를 상시 채용 중(대전 KAIST 문지캠퍼스).",
+    "product": {
+      "summary": "레이저로 냉각한 중성원자를 큐비트로 쓰는 양자처리장치(QPU) 하드웨어부터 제어 소프트웨어·오류정정·알고리즘까지 통합 설계하는 풀스택 양자컴퓨팅 기업. 논리큐비트 기반 오류내성(fault-tolerant) 양자컴퓨터를 목표로 하며 2026년 10월 현재 상용 제품 출시 이전 연구개발 단계.",
+      "problem_statement": "양자컴퓨터는 큐비트가 외부 노이즈에 취약해 연산 중 오류가 누적되고, 물리큐비트를 늘려도 계산이 무너져 실제 산업 문제를 풀지 못한다. 상용화의 핵심 장벽은 오류를 실시간으로 탐지·수정하는 오류내성 구현.",
+      "solution": "오류정정 코드로 여러 물리큐비트를 묶은 논리큐비트를 사용하고, 알고리즘 요구에 맞춰 프로세서 구조·동작을 재구성하는 SDQ(Software-Defined Quantum Processor)와 하드웨어-소프트웨어-오류정정-알고리즘 공동설계(Co-design)로 오류내성 시스템을 만든다.",
+      "key_features": [
+        "레이저 냉각·광학 트위저 배열로 중성원자를 큐비트로 사용하는 QPU",
+        "양자오류정정(QEC) 코드 기반 논리큐비트 연산",
+        "SDQ: 알고리즘에 따라 프로세서 구조와 동작을 소프트웨어로 재구성",
+        "하드웨어·소프트웨어·오류정정·양자 알고리즘 통합 설계(Co-design)",
+        "중성원자 방식 특유의 대규모 확장성과 전력 효율"
+      ],
+      "tech_stack_or_innovation": "중성원자 어레이, 리드베리(Rydberg) 상호작용, 양자오류정정(QEC), SDQ 아키텍처. 창업자가 MIT·QuEra에서 검증한 논리큐비트 기술을 한국에서 재현·고도화하는 것이 핵심 동력.",
+      "target_customer": "신약·소재 개발과 최적화 문제를 푸는 산업체 및 국내외 연구기관. 단기적으로는 정부 양자 플래그십·연구 협력, 중장기적으로 일본·미국 산업계 PoC(개념 검증)를 겨냥한다.",
+      "business_model": "비공개. 상용화 이전 단계로, QPU 시스템 공급과 클라우드 접근(Quantum-as-a-Service) 형태가 유력한 후보(추정)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "QuEra Computing",
+          "comparison": "OQT 창업자가 몸담았던 미국 보스턴 기업. 세계 최초 256큐비트 중성원자 QPU와 약 50개 논리큐비트 연산 구현, 구글·소프트뱅크 투자 유치로 중성원자 분야 글로벌 선두."
+        },
+        {
+          "name": "Pasqal",
+          "comparison": "프랑스 기업. 중성원자 방식으로 1,000큐비트급 달성을 목표, 크레디아그리콜 등 금융·에너지 산업 적용 테스트 진행. LG전자 등과 협력 관계."
+        },
+        {
+          "name": "Atom Computing",
+          "comparison": "미국 기업. 스트론튬 원자를 사용하며 수십 초 수준의 긴 결맞음 시간을 강점으로 내세움."
+        },
+        {
+          "name": "SDT",
+          "comparison": "국내(대전) 양자 하드웨어 기업으로 QPU가 아닌 양자 측정·제어 장비를 개발해 간접 경쟁 관계."
+        }
+      ],
+      "key_differentiator": "카이스트 스핀오프로 하드웨어-소프트웨어-오류정정을 처음부터 통합 설계하는 Co-design과 SDQ 접근. 국내에서는 유일한 중성원자 QPU 풀스택 개발사.",
+      "moat": "창업자의 QuEra 창업멤버·논리큐비트 연구 경험, KAIST 연구실 인력 파이프라인, 한국 퀀텀 플래그십 등 국가 생태계와의 연계, 국내 첫 중성원자 하드웨어라는 선점 효과.",
+      "competitive_position_summary": "국내 중성원자 양자컴퓨팅 하드웨어의 사실상 대표 주자. 글로벌 기준으로는 QuEra·Pasqal·Atom Computing에 이은 후발주자로, 논리큐비트·SDQ 차별화로 추격하며 2026년 프리A를 통해 미국 SRI·일본/미국 네트워크를 확보했다."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 15일 140억 원 규모 프리 시리즈A 유치를 발표했다. DSC인베스트먼트가 주도하고 카카오벤처스·블루포인트파트너스가 후속 투자, 뮤렉스파트너스·스톤브릿지벤처스·슈미트·ZVC·GIL이 신규 참여했다.",
+      "catalysts": [
+        "2026-10-15 프리 시리즈A 140억 원 유치 (DSC인베스트먼트 주도)",
+        "GIL을 통한 미국 SRI(구 Stanford Research Institute) 기술협력, ZVC를 통한 일본·미국 산업 네트워크 확대 계획 발표",
+        "한국 퀀텀 플래그십(2032년까지 1,000큐비트급 중성원자 QPU 목표)과 '퀀텀 코리아 2026'(7월 DDP) 등 정책 모멘텀",
+        "중성원자 방식이 논리큐비트 연산을 실제로 구현한 유일한 경로라는 글로벌 업계 평가"
+      ],
+      "growth_metrics": "설립 21개월 만에 누적 투자 약 170억 원(시드 30억+프리A 140억). 프리A 유치 과정에서 약 600억 원대 몸값을 인정받았다(2026년 6월 한경 보도 기준). 매출·큐비트 수 등 구체적 기술 지표는 비공개.",
+      "media_mentions": [
+        {
+          "source": "벤처스퀘어",
+          "title": "오큐티, 140억원 프리 시리즈A 투자 유치…오류내성 양자컴퓨터 상용화 속도",
+          "url": "https://www.venturesquare.net/1119995/",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "이데일리",
+          "title": "오큐티, 140억 투자 유치…오류내성 양자컴퓨터 개발 속도",
+          "url": "https://www.edaily.co.kr/News/Read?newsId=06638726645613248&mediaCodeNo=257",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "매일경제",
+          "title": "중성원자 양자컴퓨팅 기업 오큐티, 140억 원 규모 프리 시리즈A 투자 유치",
+          "url": "https://www.mk.co.kr/news/it/12176495",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "머니투데이",
+          "title": "\"양자컴퓨터 오류 잡는다\"…오큐티, 140억 프리A 투자유치",
+          "url": "https://www.mt.co.kr/future/2026/10/15/2026101509281665949",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "조선일보",
+          "title": "양자컴퓨팅 기업 오큐티, 140억원 투자 유치",
+          "url": "https://www.chosun.com/economy/tech_it/2026/10/16/RIBQJ2RLNJAQFH73M4F3EFLXBM/",
+          "date": "2026-10-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "아시아경제",
+          "title": "양자컴퓨팅 기업 오큐티, 140억원 규모 프리 시리즈A 투자 받는다",
+          "url": "https://view.asiae.co.kr/article/2026101508104908540",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$12.6M (추정)",
+      "valuation_estimate": "$45M (추정)",
+      "latest_round": {
+        "stage": "Pre-Series A",
+        "amount": "₩14B (약 $10.4M)",
+        "date": "2026-10",
+        "lead_investor": "DSC Investment",
+        "notable_investors": [
+          "Kakao Ventures",
+          "Bluepoint Partners",
+          "Murex Partners",
+          "Stonebridge Ventures",
+          "Schmidt",
+          "Z Venture Capital (ZVC)",
+          "Global Innovation Labs (GIL)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "₩3B (약 $2.2M (추정))",
+          "date": "2025-02",
+          "lead_investor": "Kakao Ventures, Bluepoint Partners"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: 2030년대 글로벌 양자컴퓨팅 시장은 수십조 원 규모로 전망(업계 추산). SAM: 중성원자 방식 QPU 하드웨어·시스템 및 오류정정 기술 시장. SOM: 한국 및 아시아 연구기관·산업체 대상 PoC 수요(추정).",
+      "market_trend": "중성원자 방식은 현재 논리큐비트를 실제로 구현한 유일한 양자컴퓨팅 경로로 평가받으며 QuEra(구글·소프트뱅크), Pasqal, Atom Computing 등 글로벌 플레이어가 확장 경쟁 중. 한국은 퀀텀 플래그십으로 KRISS 주관 1,000큐비트급 중성원자 QPU(2032년 목표)를 추진 중.",
+      "growth_potential": "국내 유일 중성원자 QPU 풀스택 스타트업으로 정부 플래그십·퀀텀 코리아 등 정책 모멘텀과 맞물려 성장 여지가 크다. 프리A에서 이미 600억 원대 몸값을 인정받았다.",
+      "risks": [
+        "상용화까지 수년 이상 소요될 수 있는 기술 불확실성",
+        "QuEra 등 글로벌 선두 대비 자금·인력 규모 열세",
+        "국내 양자 전문 인력 풀 부족",
+        "레이저·광학 부품 등 핵심 공급망의 해외 의존",
+        "중성원자 방식 자체가 주류 아키텍처가 되리라는 보장이 없음"
+      ],
+      "risk_mitigation": "GIL을 통한 미국 SRI 기술협력과 ZVC를 통한 일본·미국 네트워크 확장, KAIST 연구실 인력 및 정부 과제 연계, DSC인베스트먼트 등 국내 딥테크 전담 VC의 추가 자금력 확보로 리스크를 분산한다."
+    },
+    "related_links": [
+      {
+        "title": "OQT 공식 홈페이지",
+        "url": "https://www.k-oqt.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "OQT 채용 (Career)",
+        "url": "https://www.k-oqt.com/career",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "THE VC 기업정보 - 오큐티",
+        "url": "https://thevc.kr/oqt",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "매일경제 인터뷰 - 반도체 다음은 '양자컴퓨터'…천재 물리학자에 한국 현주소",
+        "url": "https://www.mk.co.kr/news/it/12054883",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "한국경제 - 벤처시장 달구는 양자 스타트업",
+        "url": "https://www.hankyung.com/article/2026060964901",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "과학동아 - 논리 큐비트의 대가를 만나다 (2025년 8월호)",
+        "url": "https://dl.dongascience.com/dl/magazine/detail/S202508N030",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      }
+    ],
+    "editor_pick_comment": "QuEra 창업멤버 출신 KAIST 교수가 국내 첫 중성원자 양자컴퓨터 하드웨어에 도전, 140억 원 프리A로 한국 양자 생태계의 시험대에 섰다.",
+    "id": "oqt-2026",
+    "date": "2026-10-27",
+    "logo_url": "",
+    "generated_at": "2026-10-27T01:43:36.628Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-27T01:43:36.628Z"
+    }
+  },
+  {
+    "name_en": "UniSieve",
+    "name_ko": "유니시브",
+    "tagline": "산업용 분리 공정을 탈탄소화하는 MOF 분자체막 스타트업",
+    "category": [
+      "클린테크",
+      "산업용 분리막",
+      "탄소 포집"
+    ],
+    "founded_year": 2018,
+    "headquarters": {
+      "city": "Zurich",
+      "country": "Switzerland",
+      "country_ko": "스위스"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://unisieve.com",
+    "founders": [
+      {
+        "name_en": "Samuel Hess",
+        "name_ko": "사무엘 헤스",
+        "role": "CEO",
+        "background": "ETH Zurich 동문. 전략 컨설팅과 에너지 분야 경력을 거쳐 2018년 공동 창업.",
+        "notable_achievement": "MOF 분리막 기술을 산업용으로 상용화해 2026년 10월 시리즈 A 900만 달러를 유치했다."
+      },
+      {
+        "name_en": "Elia Schneider",
+        "name_ko": "엘리아 슈나이더",
+        "role": "Co-founder",
+        "background": "ETH Zurich 화학공학 전공.",
+        "notable_achievement": "ETH Zurich에서 UniSieve의 핵심 기술인 MOF 기반 분리막 연구에 참여했다."
+      }
+    ],
+    "team_highlights": "",
+    "product": {
+      "summary": "UniSieve는 MOF(금속-유기 골격체)와 제올라이트를 고분자 막에 통합한 하이브리드 분리막을 개발한다. 열을 가하지 않고 분자 크기 차이만으로 기체를 분리해, 증류 등 에너지 집약적 공정을 대체한다.",
+      "problem_statement": "석유화학, 수소 정제, 탄소 포집 등 산업 공정에서 분리·정제는 대부분 열을 가하는 증류 방식이다. 전 세계 산업 에너지 소비의 상당 부분이 분리 공정에 쓰이며, 탄소 배출과 비용의 주요 원인이 된다.",
+      "solution": "0.1옹스트롬 수준의 분자 크기 차이를 구분하는 프리시전 컷오프(precise cutoff) 분자체 막을 제공한다. 열분리 대비 최대 90% 에너지를 절감할 수 있으며, 기존 인프라에 장착 가능한 컨테이너형 모듈로 공급한다.",
+      "key_features": [
+        "MOF와 제올라이트를 고분자 막에 통합한 하이브리드 분리막",
+        "분자 크기 차이만으로 프로필렌/프로판 등 유사 분자도 분리",
+        "최대 90% 에너지 절감",
+        "기존 설비에 후장착 가능한 컨테이너형 모듈"
+      ],
+      "tech_stack_or_innovation": "ETH Zurich 공정화학연구소에서 2013년부터 개발된 MOF 분자체 기술을 기반으로 한다. 결정성 분자체를 고분자 막에 배향 배열해 산업용 스케일에서 선택도를 유지하는 것이 핵심이다.",
+      "target_customer": "석유화학(올레핀 생산), 탄소 포집(시멘트·폐기물 소각·소다회), 수소 정제, 가스 네트워크 수소 혼합 등 에너지 다소비 산업. 현재 유럽과 미국의 화학 기업이 주요 고객이다.",
+      "business_model": "분리막 단품보다는 컨테이너형 모듈 시스템을 직접 공급하고, 파일럿 테스트를 거쳐 상업용으로 확장하는 구조다. 소프트웨어 제어로 운영되며 기존 설비에 통합이 쉽다."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Svante",
+          "comparison": "캐나다의 고체 흡착제 기반 탄소 포집 기업. MOF 계열 소재를 쓰지만 막 방식이 아니라 가열·냉각 사이클이 필요하다."
+        },
+        {
+          "name": "ARK Capture Solutions",
+          "comparison": "저농도 배가스 대상 탄소 포집 초기 스타트업. 2025년 220만 유로를 유치했으며 상용화 단계는 아니다."
+        },
+        {
+          "name": "Membrane Technology & Research (MTR)",
+          "comparison": "미국의 기체 분리막 기업. CO2 포집용 막을 상용화했지만 MOF 기반 프리시전 컷오프는 아니다."
+        }
+      ],
+      "key_differentiator": "열 사이클 없이 분자 크기 차이만으로 분리하는 하이브리드 막. 올레핀 생산과 탄소 포집 두 분야에서 동시에 상용화 준비를 마쳤고, MOF 결정성 소재를 산업용 막으로 스케일업한 것이 차별점이다.",
+      "moat": "ETH Zurich에서 10년 이상 연구된 MOF-고분자 복합막 특허와 제조 노하우. 균일한 기공 크기의 결정성 분자체를 고분자 막에 배향시키는 기술은 경쟁사가 쉽게 따라오기 어렵다.",
+      "competitive_position_summary": "유럽 탄소 포집·산업 분리막 스타트업 중 Series A 단계에서 가장 앞선 상용화 성과를 보여준다. Orano Venture Fund 등 전략적 투자자를 확보했고, 폴란드 Qemetica와 실제 CO2 포집 실증을 진행 중이다."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 8일 Orano Venture Fund가 주도한 900만 달러 규모 Series A를 유치하며 MOF 기반 산업용 분리막의 상용화를 본격 추진하고 있다. 2025년 MOF가 노벨 화학상을 받으면서 소재 기술에 대한 관심이 높아진 것도 유리하게 작용했다.",
+      "catalysts": [
+        "2026-10-08 Orano Venture Fund 주도 Series A 900만 달러 유치",
+        "총 펀딩 2,500만 달러 달성",
+        "폴란드 화학기업 Qemetica(구 CIECH)와 CO2 포집 실증 시작",
+        "2025년 MOF 노벨 화학상 수상으로 MOF 기반 스타트업 주목"
+      ],
+      "growth_metrics": "",
+      "media_mentions": [
+        {
+          "source": "Tech Funding News",
+          "title": "ETH Zurich classmates land $9M to replace thermal chemical separation",
+          "url": "https://techfundingnews.com/unisieve-secures-9m-series-a-mof-membranes-orano-carbon-capture/",
+          "date": "2026-10-08",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "Bilanz",
+          "title": "Unisieve senkt Energieverbrauch für Molekültrennung drastisch",
+          "url": "https://www.bilanz.ch/unternehmen/cleantech-aus-zuerich-unisieve-bietet-schluesselfertige-systeme/ffn29g6",
+          "date": "2026-10-08",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "CFNEWS",
+          "title": "UniSieve passe un VC français au tamis",
+          "url": "https://www.cfnews.net/L-actualite/International/Operations/Capital-innovation/UniSieve-passe-un-VC-francais-au-tamis-744788",
+          "date": "2026-10-08",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$25M",
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$9M",
+        "date": "2026-10",
+        "lead_investor": "Orano Venture Fund",
+        "notable_investors": [
+          "Amadeus APEX Technology Fund",
+          "Founderful",
+          "Zürcher Kantonalbank",
+          "Guenat Holding"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$9M",
+          "date": "2026-10",
+          "lead_investor": "Orano Venture Fund"
+        },
+        {
+          "stage": "Seed",
+          "amount": "비공개",
+          "date": "2024",
+          "lead_investor": "Founderful"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 산업용 가스 분리막 시장은 2020년대 중반 약 20억~30억 달러 규모로 추정되며, 탄소 포집과 수소 경제 확대로 더 커질 전망이다. UniSieve의 초점인 올레핀 분리와 포인트소스 탄소 포집 시장 규모는 수십억 달러로 추정된다.",
+      "market_trend": "산업 탈탄소화 압력, 탄소 포집 지원 정책, MOF 소재 연구 성숙, 수소 인프라 확대. 특히 MOF가 2025년 노벨 화학상을 받으면서 소재 상용화 투자가 늘고 있다.",
+      "growth_potential": "첫 상용 시스템이 설치되면 에너지 절감 효과를 근거로 화학·시멘트·폐기물 소각 시장으로 확장할 수 있다. 컨테이너형 모듈은 기존 플랜트에 후장착이 쉬워 교체 수요를 공략하기 좋다.",
+      "risks": [
+        "막의 장기 내구성과 대규모 실증 데이터 부족",
+        "화학 산업의 보수적 구매 사이클",
+        "탄소 포집 시장이 규제·보조금 정책에 크게 영향",
+        "자금력 있는 경쟁사와의 기술 경쟁"
+      ],
+      "risk_mitigation": "Qemetica 등 실제 고객 사이트에서 파일럿을 운영하며 성능을 입증하고 있다. Orano 등 전략적 투자자를 통해 산업 네트워크를 확장하고, MOF 특허로 차별성을 유지한다."
+    },
+    "related_links": [
+      {
+        "title": "UniSieve 공식 웹사이트",
+        "url": "https://unisieve.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "UniSieve 기술 설명",
+        "url": "https://www.unisieve.com/technology",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "UniSieve 팀 소개",
+        "url": "https://www.unisieve.com/team",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "UniSieve 보도자료",
+        "url": "https://unisieve.com/resources",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      }
+    ],
+    "editor_pick_comment": "MOF가 노벨상을 받은 지 1년 만에 '노벨상 소재'를 산업용 분리막으로 상용화하는 스위스 스타트업이다.",
+    "id": "unisieve-2026",
+    "date": "2026-10-27",
+    "logo_url": "",
+    "generated_at": "2026-10-27T01:43:36.628Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-27T01:43:36.628Z"
+    }
+  },
+  {
+    "name_en": "Sonexos",
+    "name_ko": "소넥소스",
+    "tagline": "플라즈마로 저주파 소음을 잡는 스위스 딥테크 스타트업",
+    "category": [
+      "딥테크",
+      "음향",
+      "소음제어"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "로잔",
+      "country": "Switzerland",
+      "country_ko": "스위스"
+    },
+    "company_stage": "Pre-Series A",
+    "employee_count": "11-50",
+    "website": "https://sonexos.com",
+    "founders": [
+      {
+        "name_en": "Mark Donaldson",
+        "name_ko": "마크 도널드슨",
+        "role": "CEO",
+        "background": "액티브 노이즈 컨트롤 분야 20년 이상 경력. SoundChip(현 Synaptics) 창업 및 DSP Group에 매각. 오클랜드 대학교 기계공학 학사 및 석사.",
+        "notable_achievement": "EY 올해의 기술 기업가상 수상"
+      },
+      {
+        "name_en": "Dr. Stanislav Sergeev",
+        "name_ko": "스타니슬라프 세르게예프",
+        "role": "CTO",
+        "background": "EPFL(스위스 로잔 연방공과대학교) 박사. 플라즈마 음향 메타물질 개념 창시. Nature Communications 게재. Schlumberger 근무.",
+        "notable_achievement": "ABB 연구상 수상, Nature 계열 저널 게재"
+      },
+      {
+        "name_en": "Andrea Onetti",
+        "name_ko": "안드레아 오네티",
+        "role": "COO",
+        "background": "ST마이크로일렉트로닉스에서 30년 이상 재직, MEMS 부문 부사장 겸 총괄. 오디오 반도체 및 센서 분야 전문가.",
+        "notable_achievement": "ST마이크로일렉트로닉스 MEMS 부문 총괄"
+      }
+    ],
+    "team_highlights": "CEO는 DSP Group에 매각된 SoundChip 설립자, CTO는 EPFL 출신으로 플라즈마 음향 원천기술 개발자, COO는 ST마이크로일렉트로닉스 MEMS 사업부문 총괄 출신으로 양산 경험 보유.",
+    "product": {
+      "summary": "Sonexos는 플라즈마 방전을 이용해 능동적으로 저주파 소음을 흡수하는 'Plasmacoustic Metalayer' 기술을 개발했다. 기존 수동형 흡음재와 달리 얇고 가벼우며 움직이는 부품이 없다.",
+      "problem_statement": "가전제품, HVAC(공조시스템), 데이터센터 냉각 팬에서 발생하는 저주파 소음(윙윙거리는 소리)은 전통적인 흡음재나 스피커 기반 액티브 노이즈 캔슬링으로는 효과적으로 제어하기 어렵다. 저주파로 갈수록 흡음재는 두꺼워지고, 헤드폰용 ANC는 3차원 공간에서 성능이 떨어진다.",
+      "solution": "코로나 방전으로 생성된 플라즈마(이온화된 가스) 층을 능동적으로 제어해 입사하는 소리에너지를 흡수한다. 시스템이 실시간으로 소음 환경을 감지하고 플라즈마 임피던스를 조절, 특히 저주파 대역에서 높은 흡음 성능을 제공한다.",
+      "key_features": [
+        "두께 10mm 미만의 얇은 패널 형태",
+        "무빙파츠 없음, 경량, 고체 상태(solid-state)",
+        "저주파(100Hz 이하)에서 20dB까지 흡음 성능 (HVAC 시스템 기준)",
+        "소프트웨어로 제어 가능한 적응형 능동 흡음",
+        "밀폐형 불활성 가스 충전 패키지(Plasmapanel®)"
+      ],
+      "tech_stack_or_innovation": "저온 대기압 플라즈마 방전을 음향 메타물질로 활용하는 독자적인 'Plasmacoustic' 기술. EPFL에서 특허 출원된 원천기술을 기반으로 3세대 하드웨어 진화를 통해 중량과 부피를 80% 이상 줄임.",
+      "target_customer": "가전제품 및 HVAC OEM, 데이터센터 냉각 시스템 제조사, 자동차 부품사, 산업용 팬/모터 제조사",
+      "business_model": "OEM 대상 Plasmapanel 모듈 공급 (B2B). 엔지니어링 프로토타입 기반의 유료 통합 프로그램 진행 중이며, 2028년 초 첫 양산 목표."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Silentium (이스라엘)",
+          "comparison": "Active Noise Control(ANC) 솔루션을 가전/IT에 제공하지만, 스피커 기반으로 저주파 공간 제어에 한계가 있음."
+        },
+        {
+          "name": "Soft dB (캐나다)",
+          "comparison": "능동 소음 제어 시스템을 산업용으로 제공하지만, 주로 덕트나 헤드셋에 국한됨."
+        },
+        {
+          "name": "MuGen (일본)",
+          "comparison": "자기변형 소자를 이용한 능동 흡음 기술을 연구 중이나 상용화 전 단계."
+        }
+      ],
+      "key_differentiator": "플라즈마를 음향 흡음 소자로 사용하는 유일한 접근법. 두께가 얇고 저주파 성능이 우수하며 공기 흐름을 방해하지 않음. 스피커 기반 능동 제어의 공간적 한계를 극복.",
+      "moat": "특허로 보호된 플라즈마 음향 메타물질 원천기술, EPFL 라이선스, 3세대 하드웨어와 제어 알고리즘, Bosch Ventures를 포함한 글로벌 OEM 네트워크와의 협력.",
+      "competitive_position_summary": "초기 단계지만 기술적 차별성이 뚜렷하고 대형 고객사와 유료 통합 프로그램을 진행 중이어서 선점 효과를 노릴 수 있는 위치."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 21일, Valquest Partners와 Bosch Ventures가 참여한 CHF 500만(약 $610만) 규모의 프리시리즈A 투자 유치 소식이 주목받았다. 데이터센터 냉각 소음 등 급성장하는 시장 수요와 결합해 딥테크 분야에서 주목받고 있다.",
+      "catalysts": [
+        "2026-10-21: CHF 500만 프리시리즈A 라운드 클로징 (리드: Valquest Partners, 참여: Bosch Ventures)",
+        "2026-10-21: Bosch Ventures 공식 보도자료 발표",
+        "기존 HVAC/가전 OEM과 유료 프로토타입 통합 프로그램 진행 중",
+        "데이터센터 냉각 팬 소음 규제 강화 트렌드와 기술 부합"
+      ],
+      "growth_metrics": "비공개",
+      "media_mentions": [
+        {
+          "source": "EINPresswire",
+          "title": "Sonexos Raises CHF 5 Million to Bring Plasma-Based Noise Control to Series Production",
+          "url": "https://www.einpresswire.com/article/951171633/sonexos-raises-chf-5-million-to-bring-plasma-based-noise-control-to-series-production",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "Bosch Media Service",
+          "title": "Bosch Ventures investiert in Sonexos",
+          "url": "https://www.bosch-presse.de/pressportal/de/de/bosch-ventures-investiert-in-sonexos-286464.html",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        },
+        {
+          "source": "Valquest Partners (LinkedIn)",
+          "title": "Valquest Partners is pleased to announce that it has led an oversubscribed CHF 5 million Pre-Series A investment round in Sonexos SA.",
+          "url": "https://www.linkedin.com/posts/valquest-partners_sonexos-raises-chf-5-million-to-bring-plasma-based-activity-7518638831471132672-8L18",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-27T01:43:36.628Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$6.1M",
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Pre-Series A",
+        "amount": "$6.1M",
+        "date": "2026-10",
+        "lead_investor": "Valquest Partners",
+        "notable_investors": [
+          "Robert Bosch Venture Capital GmbH",
+          "업계 엔젤 및 개인투자자"
+        ]
+      },
+      "funding_history": []
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 소음 제어 시장은 2024년 약 12억 달러에서 2030년 20억 달러 이상 성장 예상(추정). 저주파 소음 제어는 HVAC, 데이터센터, 전기차 분야에서 특히 수요 증가.",
+      "market_trend": "데이터센터 냉각 팬 소음 규제 강화, 가전제품 저소음화 추세, 전기차 로드노이즈 저감 필요성 증가.",
+      "growth_potential": "기존 기술 대비 획기적인 성능과 폼팩터로 인해 초기 시장 진입 시 빠른 채택 가능. 2028년 첫 양산 이후 연간 2~3배 성장 목표(추정).",
+      "risks": [
+        "플라즈마 기술의 장기 신뢰성 및 안전성 검증 필요",
+        "대량 생산 시 단가가 기존 흡음재 대비 높을 가능성",
+        "경쟁사 스피커 기반 ANC 기술도 진화 중",
+        "규제 인증 절차(가전, 자동차) 소요 시간"
+      ],
+      "risk_mitigation": "Bosch Ventures 등 산업 파트너를 통한 양산 및 인증 지원, 3세대 하드웨어를 통해 부피/비용 절감, 특허 기반 진입 장벽 확보."
+    },
+    "related_links": [
+      {
+        "title": "Sonexos 공식 웹사이트",
+        "url": "https://sonexos.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "Sonexos 리더십 페이지",
+        "url": "https://sonexos.com/leadership/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "Sonexos 기술 개요",
+        "url": "https://sonexos.com/technology/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "Sonexos 마켓 페이지",
+        "url": "https://sonexos.com/markets/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      },
+      {
+        "title": "Sonexos 뉴스룸",
+        "url": "https://sonexos.com/latest/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-27T01:43:36.628Z"
+      }
+    ],
+    "editor_pick_comment": "플라즈마라는 낯선 기술로 100년 묵은 저주파 소음 난제를 해결하려는 시도가 인상적이며, 글로벌 OEM의 관심을 실질적인 유료 프로그램으로 증명한 점이 돋보인다.",
+    "id": "sonexos-2026",
+    "date": "2026-10-27",
+    "logo_url": "",
+    "generated_at": "2026-10-27T01:43:36.628Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-27T01:43:36.628Z"
+    }
+  },
+  {
     "name_en": "Slingshot Insurance",
     "name_ko": "슬링샷 인슈어런스",
     "tagline": "체크아웃에서 팔리는 소액 보험을 AI로 운영하는 임베디드 보험 인프라",
