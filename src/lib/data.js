@@ -1,3 +1,4 @@
+import { useSyncExternalStore } from 'react'
 import { formatUSD as fmtUSD, parseAmount, shortAmount } from './amount.js'
 
 /* Data arrives at start-up (see load.js → initData); everything below reads the
@@ -157,7 +158,28 @@ export let correctionList = []
 export let stats = { issues: 0, companies: 0, first: null, last: null }
 let issueCache = new Map()
 
-export function initData({ startups: raw, corrections = {}, lensIndex = {} }) {
+/* 'lite' — list fields only (index.json, first paint); 'full' — every field (startups.json);
+   'failed' — the full records could not be fetched. Screens that need full records
+   (the detail page) wait on this. */
+let level = 'lite'
+let version = 0
+const listeners = new Set()
+const subscribe = (l) => (listeners.add(l), () => listeners.delete(l))
+
+export function useDataLevel() {
+  useSyncExternalStore(subscribe, () => version)
+  return level
+}
+
+export function setDataFailed() {
+  if (level === 'full') return
+  level = 'failed'
+  version++
+  listeners.forEach((l) => l())
+}
+
+export function initData({ startups: raw, corrections = {}, lensIndex = {}, full = false }) {
+  level = full ? 'full' : 'lite'
   startups = prepare(raw, corrections, lensIndex)
   dates = [...new Set(startups.map((s) => s.date))]
   issueCache = new Map(dates.map((d) => [d, startups.filter((s) => s.date === d)]))
@@ -165,6 +187,8 @@ export function initData({ startups: raw, corrections = {}, lensIndex = {} }) {
     .filter((s) => s._correction)
     .sort((a, b) => b._correction.checked.localeCompare(a._correction.checked))
   stats = { issues: dates.length, companies: startups.length, first: dates[dates.length - 1], last: dates[0] }
+  version++
+  listeners.forEach((l) => l())
 }
 
 export function byDate(date) {

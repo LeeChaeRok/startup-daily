@@ -4,12 +4,16 @@ import path from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { liteRecord } from './src/lib/lite.js'
 
 /* The daily data stays in src/data (the generator, the API and the workflow write and
    read it there) but ships as /data/*.json fetched at start-up, not inside the bundle:
    a new issue then only changes a JSON file, and the code bundle keeps its hash. */
 const DATA_DIR = path.resolve(import.meta.dirname, 'src/data')
 const DATA_FILES = ['startups.json', 'corrections.json', 'korea-lens-index.json', 'korea-lens.json', 'meta.json']
+// index.json: list fields only, for the first paint (see src/lib/lite.js)
+const indexJson = () =>
+  JSON.stringify(JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'startups.json'), 'utf8')).map(liteRecord))
 
 function dataFiles() {
   return {
@@ -17,15 +21,16 @@ function dataFiles() {
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
         const name = req.url?.split('?')[0].match(/^\/data\/([\w.-]+\.json)$/)?.[1]
-        if (!name || !DATA_FILES.includes(name)) return next()
+        if (!name || (name !== 'index.json' && !DATA_FILES.includes(name))) return next()
         res.setHeader('content-type', 'application/json; charset=utf-8')
-        res.end(fs.readFileSync(path.join(DATA_DIR, name)))
+        res.end(name === 'index.json' ? indexJson() : fs.readFileSync(path.join(DATA_DIR, name)))
       })
     },
     generateBundle() {
       for (const name of DATA_FILES) {
         this.emitFile({ type: 'asset', fileName: `data/${name}`, source: fs.readFileSync(path.join(DATA_DIR, name)) })
       }
+      this.emitFile({ type: 'asset', fileName: 'data/index.json', source: indexJson() })
     },
   }
 }

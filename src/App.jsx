@@ -10,7 +10,7 @@ import { onLensReady, useContextList } from './screens/detail-hooks.jsx'
 import Explore from './screens/Explore.jsx'
 import Saved from './screens/Saved.jsx'
 import About from './screens/About.jsx'
-import { byId, dates, issueNo } from './lib/data.js'
+import { byId, dates, issueNo, useDataLevel } from './lib/data.js'
 import { navigate, useMediaQuery, useRoute } from './lib/hooks.js'
 import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
 import { longDate, monthDay } from './lib/format.js'
@@ -149,6 +149,33 @@ function NotFound({ head, arg }) {
   )
 }
 
+/** A company page opened before the full records arrived (usually a fraction of a second). */
+function DetailPending({ failed }) {
+  if (failed) {
+    return (
+      <EmptyState
+        icon="explore"
+        title="회사 정보를 불러오지 못했어요"
+        actions={
+          <button type="button" className="btn btn--primary" onClick={() => window.location.reload()}>
+            다시 시도
+          </button>
+        }
+      >
+        인터넷 연결을 확인해 주세요.
+      </EmptyState>
+    )
+  }
+  return (
+    <div className="boot__body" aria-busy="true">
+      <div className="boot__line boot__line--title" />
+      <div className="boot__line boot__line--sub" />
+      <div className="boot__row" />
+      <div className="boot__row" />
+    </div>
+  )
+}
+
 /* ---------- Background news: a new issue, a finished "한국에서는" request ---------- */
 
 function Notifier() {
@@ -180,6 +207,7 @@ export default function App() {
   const route = resolve(loc)
   const desktop = useMediaQuery('(min-width: 1024px)')
   const wide = useMediaQuery('(min-width: 1280px)')
+  const dataLevel = useDataLevel()
   const routeKey = `${route.kind}:${route.date || route.id || ''}:${route.from || ''}`
   useRouteEffects(routeKey, titleFor(route))
 
@@ -198,13 +226,18 @@ export default function App() {
   let content
   if (route.kind === 'issue') content = desktop ? <IssueOverview date={route.date} wide={wide} /> : <IssueMobile date={route.date} />
   else if (route.kind === 'detail')
-    content = <Detail key={route.id} id={route.id} from={route.from} desktop={desktop} wide={wide} />
+    content =
+      dataLevel === 'full' ? (
+        <Detail key={route.id} id={route.id} from={route.from} desktop={desktop} wide={wide} />
+      ) : (
+        <DetailPending failed={dataLevel === 'failed'} />
+      )
   else if (route.kind === 'explore') content = <Explore params={loc.params} desktop={desktop} />
   else if (route.kind === 'saved') content = <Saved params={loc.params} />
   else if (route.kind === 'about') content = <About params={loc.params} />
   else content = <NotFound head={route.head} arg={route.arg} />
 
-  const rail = wide && split && (route.kind === 'detail' ? <DetailRail key={route.id} id={route.id} /> : <IssueRail date={route.date} />)
+  const rail = wide && split && dataLevel === 'full' && (route.kind === 'detail' ? <DetailRail key={route.id} id={route.id} /> : <IssueRail date={route.date} />)
 
   return (
     <ToastProvider>

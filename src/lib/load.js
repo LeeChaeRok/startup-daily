@@ -1,8 +1,10 @@
-import { initData } from './data.js'
+import { initData, setDataFailed } from './data.js'
 import { setLoadedMeta } from './update.js'
 
-/* The issue data is fetched, not bundled (see vite.config.js). index.html preloads
-   startups.json so the request starts before this module runs. */
+/* The issue data is fetched, not bundled (see vite.config.js). The first paint needs only
+   the list fields (index.json, ~35 KB gzip; index.html preloads it); the full records
+   (startups.json) follow in the background. A cold start straight into a company page
+   (a shared link) waits for the full records instead. */
 const getJSON = async (name) => {
   const res = await fetch(`/data/${name}`)
   if (!res.ok) throw new Error(`${name}: ${res.status}`)
@@ -10,12 +12,19 @@ const getJSON = async (name) => {
 }
 
 export async function loadData() {
+  const full = window.location.hash.startsWith('#/s/')
   const [startups, corrections, lensIndex, meta] = await Promise.all([
-    getJSON('startups.json'),
+    getJSON(full ? 'startups.json' : 'index.json'),
     getJSON('corrections.json').catch(() => ({})),
     getJSON('korea-lens-index.json').catch(() => ({})),
     getJSON('meta.json').catch(() => null),
   ])
-  initData({ startups, corrections, lensIndex })
+  initData({ startups, corrections, lensIndex, full })
   setLoadedMeta(meta)
+  if (!full) {
+    getJSON('startups.json').then(
+      (all) => initData({ startups: all, corrections, lensIndex, full: true }),
+      setDataFailed,
+    )
+  }
 }
