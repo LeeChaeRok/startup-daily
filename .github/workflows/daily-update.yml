@@ -2,9 +2,10 @@ name: Daily Startup Update
 
 on:
   schedule:
-    # ~07:37 KST (22:37 UTC the day before). Off the top of the hour on purpose:
-    # GitHub delays scheduled runs at :00 when many workflows start at once.
-    - cron: '37 22 * * *'
+    # 05:07 KST (20:07 UTC the day before). GitHub can start scheduled runs up to ~3 hours late,
+    # so this still puts the new issue out in the morning. Off the top of the hour on purpose:
+    # runs at :00 are delayed most when many workflows start at once.
+    - cron: '7 20 * * *'
   workflow_dispatch:
     inputs:
       issue_date:
@@ -29,6 +30,8 @@ jobs:
       # Deploy from here only when a token exists. Once the Vercel project is linked to the
       # GitHub repo, every push below deploys on its own and this token is not needed.
       HAS_VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN != '' }}
+      # New-issue push notifications go out only when this secret exists (see the last step).
+      HAS_PUSH_SECRET: ${{ secrets.PUSH_SEND_SECRET != '' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -41,6 +44,7 @@ jobs:
             exit 1
           fi
           [ "$HAS_VERCEL_TOKEN" = "true" ] || echo "::notice::No VERCEL_TOKEN: data is committed but not deployed from this workflow."
+          [ "$HAS_PUSH_SECRET" = "true" ] || echo "::notice::No PUSH_SEND_SECRET: new-issue push notifications are not sent."
 
       - uses: actions/setup-node@v4
         with:
@@ -63,14 +67,18 @@ jobs:
 
       - name: Commit data
         id: commit
+        env:
+          ISSUE_DATE: ${{ inputs.issue_date }}
         run: |
+          issue_date="${ISSUE_DATE:-$(TZ=Asia/Seoul date +%Y-%m-%d)}"
+          echo "date=$issue_date" >> "$GITHUB_OUTPUT"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/startups.json src/data/meta.json src/data/korea-lens.json src/data/korea-lens-index.json public/logos
+          git add src/data/startups.json src/data/meta.json src/data/korea-lens.json src/data/korea-lens-index.json src/data/updates.json public/logos
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            git commit -m "chore: add daily startups for $(TZ=Asia/Seoul date +%Y-%m-%d)"
+            git commit -m "chore: add daily startups for $issue_date"
             # main may have moved while generating (a few minutes)
             git pull --rebase origin main
             git push
@@ -79,7 +87,24 @@ jobs:
 
       # git pushes don't deploy this project; production goes out through the Vercel CLI.
       - name: Deploy to Vercel
+        id: deploy
         if: steps.commit.outputs.changed == 'true' && env.HAS_VERCEL_TOKEN == 'true'
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: npx --yes vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
+
+      # Tell subscribers the new issue is out. Best effort: a failed push never fails the run.
+      # The endpoint answers {sent, failed}.
+      - name: Send new-issue push
+        if: steps.commit.outputs.changed == 'true' && steps.deploy.outcome == 'success' && env.HAS_PUSH_SECRET == 'true'
+        continue-on-error: true
+        env:
+          PUSH_SEND_SECRET: ${{ secrets.PUSH_SEND_SECRET }}
+          ISSUE_DATE: ${{ steps.commit.outputs.date }}
+        run: |
+          # give the new deployment time to reach the edge before readers open the link
+          sleep 30
+          curl -fsS -X POST https://startup-daily.vercel.app/api/push/send \
+            -H "authorization: Bearer $PUSH_SEND_SECRET" \
+            -H "content-type: application/json" \
+            -d "{\"date\":\"$ISSUE_DATE\"}"

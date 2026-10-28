@@ -951,3 +951,82 @@ a { color: inherit; text-decoration: none; }
 .intro--line p { flex: 1; }
 .intro--line .icon-btn { margin: -8px -8px -8px 0; }
 .chipnav__chip { min-height: 40px; }
+
+/* ---------- Onboarding (first run) ---------- */
+.onboard {
+  border: 0; padding: 0; margin: auto; width: min(480px, calc(100vw - 32px)); max-height: calc(100dvh - 48px);
+  background: var(--sd-bg); color: var(--sd-ink); border-radius: var(--sd-radius-2, 12px); box-shadow: var(--sd-shadow-2, 0 12px 40px rgb(0 0 0 / 0.25));
+  display: flex; flex-direction: column;
+}
+.onboard:not([open]) { display: none; }
+.onboard::backdrop { background: var(--sd-scrim); }
+.onboard__top { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px 0; }
+.onboard__steps { font-size: 13px; color: var(--sd-ink-3); }
+.onboard__body { padding: 12px 20px 8px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.65; }
+.onboard__title { font-size: var(--sd-fs-title-2); font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
+.onboard__points { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; color: var(--sd-ink-2); }
+.onboard__points li { position: relative; padding-left: 14px; }
+.onboard__points li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 5px; height: 5px; background: var(--sd-accent); }
+.onboard__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.onboard__chips .chip { height: 40px; gap: 4px; }
+.onboard__later { font-size: 13px; }
+.onboard__actions { display: flex; gap: 8px; padding: 12px 20px 20px; }
+.onboard__actions .btn { flex: 1; }
+
+.alert-setting { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.alert-setting__note { font-size: 13px; color: var(--sd-ink-3); line-height: 1.6; }
+.interest-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sd-accent); display: inline-block; flex: none; }
+
+.chips-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips-wrap .chip { gap: 4px; }
+.setting__hint { font-size: 13px; color: var(--sd-ink-3); margin-top: 8px; }
+.sector.is-interest::before { background: var(--sd-accent); border-radius: 50%; }
+.sector.is-interest { color: var(--sd-ink); font-weight: 600; }
+
+/* ---------- Weekly, sector pages, compare ---------- */
+.weekly__sec { margin-top: 28px; }
+.weekly__title { font-size: var(--sd-fs-title-3); font-weight: 800; padding-bottom: 8px; border-bottom: 2px solid var(--sd-ink); }
+.weekly__more { display: inline-flex; align-items: center; gap: 4px; margin-top: 10px; font-size: 14px; }
+.weekly-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; margin: 16px 0; border: 1px solid var(--sd-line); background: var(--sd-surface); color: var(--sd-ink); text-decoration: none; }
+.weekly-card .eyebrow { flex: none; }
+.weekly-card__text { flex: 1; font-weight: 600; font-size: 15px; }
+.week__title a { color: inherit; text-decoration: none; display: flex; align-items: baseline; gap: 8px; }
+.week__more { font-size: 13px; font-weight: 500; color: var(--sd-ink-3); }
+.shelf { margin: 4px 0 16px; }
+.shelf__label { display: block; font-size: 13px; font-weight: 700; color: var(--sd-ink-3); margin-bottom: 8px; }
+.shelf__chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.shelf__chips .chip { flex: none; text-decoration: none; gap: 4px; }
+.page--sector .segmented, .page--weekly .segmented { margin: 12px 0; }
+.same__compare { margin-top: 12px; }
+.cmp-wrap { overflow-x: auto; margin-top: 8px; }
+.cmp { border-collapse: separate; border-spacing: 0; font-size: 13px; min-width: 100%; }
+.cmp th, .cmp td { padding: 10px 12px; border-bottom: 1px solid var(--sd-line); text-align: left; vertical-align: top; min-width: 120px; max-width: 200px; }
+.cmp thead th { vertical-align: bottom; }
+.cmp tbody th { color: var(--sd-ink-3); font-weight: 600; white-space: nowrap; min-width: 0; }
+.cmp th:first-child { position: sticky; left: 0; background: var(--sd-bg); z-index: 1; min-width: 72px; }
+.cmp .is-current { background: var(--sd-surface-2); }
+.cmp__co { display: flex; flex-direction: column; gap: 6px; color: var(--sd-ink); font-weight: 700; text-decoration: none; font-size: 14px; }
+.cmp__text { color: var(--sd-ink-2); line-height: 1.55; }
+.cmp__foot { font-size: 12px; color: var(--sd-ink-3); margin-top: 8px; }
+
+/* ---------- Reading aids ---------- */
+.readbar { position: fixed; left: 0; right: 0; top: calc(env(safe-area-inset-top) + var(--sd-appbar-h, 56px)); height: 2px; z-index: 30; pointer-events: none; }
+.readbar > span { display: block; height: 100%; background: var(--sd-accent); transform-origin: 0 50%; }
+.section__time { margin-left: auto; font-size: 12px; font-weight: 500; color: var(--sd-ink-3); align-self: center; }
+.font-btn__glyph { font-weight: 800; font-size: 17px; line-height: 1; }
+
+/* ---------- 그때 그 회사 ---------- */
+.update-banner { border: 1px solid var(--sd-line); border-left: 3px solid var(--sd-accent); background: var(--sd-surface); padding: 12px 14px; margin: 12px 0; font-size: 14px; line-height: 1.6; }
+.update-banner__label { font-size: 12px; font-weight: 700; color: var(--sd-ink-3); margin-bottom: 4px; }
+.update-banner ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.update-banner a { color: var(--sd-ink-2); white-space: nowrap; }
+.followups { margin-top: 28px; }
+.followup { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--sd-line); color: var(--sd-ink); text-decoration: none; }
+.followup__body { flex: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.followup__lead { font-size: 13px; color: var(--sd-ink-2); }
+.followup__news { font-size: 15px; font-weight: 600; }
+.row__news { width: 7px; height: 7px; border-radius: 50%; background: var(--sd-accent); display: inline-block; margin-left: 6px; vertical-align: 2px; }
+
+.share-options { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+.share-options .btn { justify-content: flex-start; }
+.cmp__text { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }

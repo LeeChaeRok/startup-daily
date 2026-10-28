@@ -384,13 +384,18 @@ export async function verifyLinks(profiles, { searched, checkedAt, fetchImpl, lo
 /* ---------- Merge ---------- */
 
 /**
- * Newest issue first; keep the last `retainIssues` issues so the bundle stays small.
+ * Newest issue first. Every issue is kept by default (`retainIssues` 0, missing or not a
+ * positive number): follow-ups revisit companies 90-180 days after they ran, so old issues
+ * must stay. A positive `retainIssues` keeps only that many of the newest issues.
  * Fresh profiles that repeat a published company (same domain or name) are dropped.
  */
-export function merge(existing, fresh, retainIssues, { log } = {}) {
+export function merge(existing, fresh, retainIssues = 0, { log } = {}) {
   const { kept } = dropDuplicates(fresh, existing, { log })
   const all = [...kept, ...existing.filter((s) => !kept.some((f) => f.id === s.id))]
-  const dates = [...new Set(all.map((s) => s.date))].sort((a, b) => b.localeCompare(a))
-  const keep = new Set(dates.slice(0, retainIssues))
-  return all.filter((s) => keep.has(s.date)).sort((a, b) => b.date.localeCompare(a.date))
+  const sorted = all.sort((a, b) => b.date.localeCompare(a.date))
+  const limit = Number(retainIssues)
+  if (!Number.isFinite(limit) || limit <= 0) return sorted
+  const dates = [...new Set(sorted.map((s) => s.date))]
+  const keep = new Set(dates.slice(0, Math.floor(limit)))
+  return sorted.filter((s) => keep.has(s.date))
 }

@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { AppHeader, Footer, TabBar } from './components/Chrome.jsx'
 import { ToastProvider } from './components/Toast.jsx'
+import Onboarding from './components/Onboarding.jsx'
 import { useToast } from './components/toast-context.js'
 import { EmptyState } from './components/bits.jsx'
 import StartupRow from './components/StartupRow.jsx'
@@ -10,10 +11,12 @@ import { onLensReady, useContextList } from './screens/detail-hooks.jsx'
 import Explore from './screens/Explore.jsx'
 import Saved from './screens/Saved.jsx'
 import About from './screens/About.jsx'
-import { byId, dates, issueNo, useDataLevel } from './lib/data.js'
-import { navigate, useMediaQuery, useRoute } from './lib/hooks.js'
+import Weekly from './screens/Weekly.jsx'
+import Sector from './screens/Sector.jsx'
+import { SECTORS, byDate, byId, dates, issueNo, useDataLevel, weeks } from './lib/data.js'
+import { navigate, useMediaQuery, useReadLog, useRoute } from './lib/hooks.js'
 import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
-import { longDate, monthDay } from './lib/format.js'
+import { longDate, monthDay, weekLabel } from './lib/format.js'
 import { onUpdate } from './lib/update.js'
 
 /* ---------- Route → screen ---------- */
@@ -26,6 +29,8 @@ function resolve({ parts, params }) {
   if (head === 'explore') return { kind: 'explore', section: 'explore' }
   if (head === 'saved') return { kind: 'saved', section: 'saved' }
   if (head === 'about') return { kind: 'about', section: 'about' }
+  if (head === 'w' && weeks.some((w) => w.key === arg)) return { kind: 'weekly', week: arg, section: 'explore' }
+  if (head === 't' && arg) return { kind: 'sector', sector: arg, section: 'explore' }
   return { kind: 'missing', section: null, head, arg }
 }
 
@@ -35,6 +40,8 @@ function titleFor(r) {
   if (r.kind === 'explore') return '탐색 — Startup Daily'
   if (r.kind === 'saved') return '저장함 — Startup Daily'
   if (r.kind === 'about') return '소개·선정 기준 — Startup Daily'
+  if (r.kind === 'weekly') return `${weekLabel(r.week)} 주간 정리 — Startup Daily`
+  if (r.kind === 'sector') return `${SECTORS.find((s) => s.key === r.sector)?.label || '분야'} 모아 보기 — Startup Daily`
   return '찾을 수 없음 — Startup Daily'
 }
 
@@ -200,6 +207,16 @@ function Notifier() {
   return null
 }
 
+/** App icon badge = companies in the latest issue not read yet (installed apps only). */
+function useAppBadge() {
+  const { isRead } = useReadLog()
+  const unread = dates[0] ? byDate(dates[0]).filter((s) => !isRead(s.id)).length : 0
+  useEffect(() => {
+    if (!('setAppBadge' in navigator)) return
+    ;(unread ? navigator.setAppBadge(unread) : navigator.clearAppBadge()).catch(() => {})
+  }, [unread])
+}
+
 /* ---------- App ---------- */
 
 export default function App() {
@@ -208,6 +225,7 @@ export default function App() {
   const desktop = useMediaQuery('(min-width: 1024px)')
   const wide = useMediaQuery('(min-width: 1280px)')
   const dataLevel = useDataLevel()
+  useAppBadge()
   const routeKey = `${route.kind}:${route.date || route.id || ''}:${route.from || ''}`
   useRouteEffects(routeKey, titleFor(route))
 
@@ -235,6 +253,8 @@ export default function App() {
   else if (route.kind === 'explore') content = <Explore params={loc.params} desktop={desktop} />
   else if (route.kind === 'saved') content = <Saved params={loc.params} />
   else if (route.kind === 'about') content = <About params={loc.params} />
+  else if (route.kind === 'weekly') content = <Weekly week={route.week} />
+  else if (route.kind === 'sector') content = <Sector sector={route.sector} />
   else content = <NotFound head={route.head} arg={route.arg} />
 
   const rail = wide && split && dataLevel === 'full' && (route.kind === 'detail' ? <DetailRail key={route.id} id={route.id} /> : <IssueRail date={route.date} />)
@@ -242,6 +262,7 @@ export default function App() {
   return (
     <ToastProvider>
       <Notifier />
+      <Onboarding />
       <a className="skip" href="#main" onClick={(e) => (e.preventDefault(), document.getElementById('main')?.focus())}>
         본문으로 건너뛰기
       </a>

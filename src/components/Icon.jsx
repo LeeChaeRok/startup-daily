@@ -10,6 +10,8 @@ const PATHS = {
   back: <path d="M15 5 8 12l7 7" />,
   chevronRight: <path d="m9 5 7 7-7 7" />,
   chevronDown: <path d="m5 9 7 7 7-7" />,
+  chevronUp: <path d="m5 15 7-7 7 7" />,
+  image: <><rect x="4" y="4.5" width="16" height="15" rx="1.5" /><circle cx="9" cy="10" r="1.6" /><path d="m4.5 17.5 5-5 4 4 2.5-2.5 3.5 3.5" /></>,
   external: <><path d="M14 4.5h5.5V10M19.5 4.5 11 13" /><path d="M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" /></>,
   sun: <><circle cx="12" cy="12" r="4" /><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" /></>,
   monitor: <><rect x="3" y="4" width="18" height="12.5" rx="1.5" /><path d="M8.5 20.5h7M12 16.5v4" /></>,

@@ -132,3 +132,7 @@
 @media (min-width: 1024px) {
   :root { --sd-gutter: 40px; --sd-header-h: 64px; }
 }
+
+/* Reading text size (설정 → 글자 크기), set as data-font on <html> */
+:root[data-font='sm'] { --sd-fs-body: 15px; --sd-fs-body-sm: 14px; }
+:root[data-font='lg'] { --sd-fs-body: 20px; --sd-fs-body-sm: 17px; }

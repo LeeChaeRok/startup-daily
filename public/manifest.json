@@ -57,5 +57,28 @@
         }
       ]
     }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screen-issue.png",
+      "sizes": "780x1688",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "오늘의 스타트업"
+    },
+    {
+      "src": "/screenshots/screen-detail.png",
+      "sizes": "780x1688",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "회사 상세"
+    },
+    {
+      "src": "/screenshots/screen-wide.png",
+      "sizes": "2560x1600",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "데스크톱 화면"
+    }
   ]
 }

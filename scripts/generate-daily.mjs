@@ -13,10 +13,12 @@
  * Env: OPENROUTER_API_KEY (required unless --candidates)
  *      OPENROUTER_MODELS   comma-separated, first = primary (default: DeepSeek V4 Flash, then Haiku 5.5)
  *      ISSUE_DATE          YYYY-MM-DD (default: today in KST)
- *      RETAIN_ISSUES       issues kept in startups.json (default 30)
+ *      FOLLOWUPS           0 turns off the follow-up step (default on)
+ *      RETAIN_ISSUES       issues kept in startups.json (default 0 = all; follow-ups revisit old issues)
  *
  * Pipeline: discover candidates (web search) → selection rules → deep research per company
- * (web search, one call each) → selection rules again → link verification → merge.
+ * (web search, one call each) → selection rules again → link verification → merge →
+ * follow-ups on older companies (scripts/lib/followups.mjs, max 2 a day).
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -25,6 +27,7 @@ import { dropDuplicates, merge, normalize, selectCandidates, stripUrl, verifyLin
 import { attachLogos } from './lib/logos.mjs'
 import { createClient, modelsFromEnv, OpenRouterError, parseOrRepair } from './lib/openrouter.mjs'
 import { updateLensFiles } from './lib/korea-lens.mjs'
+import { runFollowups } from './lib/followups.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const DATA_PATH = path.join(here, '../src/data/startups.json')
@@ -32,6 +35,8 @@ const META_PATH = path.join(here, '../src/data/meta.json')
 const LENS_PATH = path.join(here, '../src/data/korea-lens.json')
 const LENS_INDEX_PATH = path.join(here, '../src/data/korea-lens-index.json')
 const LOGO_DIR = path.join(here, '../public/logos')
+const UPDATES_PATH = path.join(here, '../src/data/updates.json')
+const CORRECTIONS_PATH = path.join(here, '../src/data/corrections.json')
 
 const WANT = 5
 const DISCOVER = 12 // over-ask: selection rules and failed research drop some
@@ -44,9 +49,9 @@ const flag = (name) => {
 }
 const outPath = flag('--out') ? path.resolve(flag('--out')) : DATA_PATH
 const candidatesPath = flag('--candidates')
-const retainIssues = Number(process.env.RETAIN_ISSUES || 30)
+const retainIssues = Number(process.env.RETAIN_ISSUES || 0) // 0 = keep every issue
 
-// Today in Korea — the workflow runs at 23:00 UTC, which is already tomorrow in KST.
+// Today in Korea — the workflow runs at 20:07 UTC, which is already tomorrow in KST.
 const kstToday = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10)
 const date = process.env.ISSUE_DATE || kstToday
 
@@ -246,6 +251,16 @@ async function main() {
       models: [...new Set(verified.map((p) => p.model))],
     }
     fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2) + '\n', 'utf-8')
+  }
+
+  // "그때 그 회사": revisit companies 90+ days after their issue. Never blocks the issue itself;
+  // bounded to 2 companies, 16k tokens each and 4 minutes in total.
+  if (llm && outPath === DATA_PATH && process.env.FOLLOWUPS !== '0') {
+    try {
+      await runFollowups(llm, merged, { updatesPath: UPDATES_PATH, correctionsPath: CORRECTIONS_PATH, today: kstToday, log: console.log })
+    } catch (err) {
+      console.log(`follow-ups skipped: ${err.message}`)
+    }
   }
 
   // Optional enrichment ("한국에서는"): a failure here must never block the issue itself.

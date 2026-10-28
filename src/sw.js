@@ -74,8 +74,11 @@ self.addEventListener('fetch', (e) => {
   // generated analyses are kept on the device by the app itself; never serve a stale API answer
   if (url.pathname.startsWith('/api/')) return
 
-  if (req.mode === 'navigate' || url.pathname === '/' || url.pathname === '/index.html') {
+  if (url.pathname === '/' || url.pathname === '/index.html') {
     e.respondWith(networkFirst(req, SHELL, '/'))
+  } else if (req.mode === 'navigate') {
+    // /s/:id link-preview pages and the like: never cached as the shell; offline, open the app
+    e.respondWith(fetch(req).catch(async () => (await caches.match('/', MATCH)) || Response.error()))
   } else if (url.pathname.startsWith('/assets/')) {
     e.respondWith(cacheFirst(req, SHELL)) // hashed file names never change content
   } else if (url.pathname.startsWith('/data/')) {
@@ -83,4 +86,44 @@ self.addEventListener('fetch', (e) => {
   } else {
     e.respondWith(cacheFirst(req, RUNTIME)) // logos, icons
   }
+})
+
+/* ---------- New-issue alerts (sent by /api/push/send after a daily deploy) ---------- */
+
+self.addEventListener('push', (e) => {
+  let d = {}
+  try {
+    d = e.data?.json() || {}
+  } catch {
+    /* empty or non-JSON payload: show a plain alert */
+  }
+  e.waitUntil(
+    (async () => {
+      if (d.badge && self.navigator.setAppBadge) await self.navigator.setAppBadge(d.badge).catch(() => {})
+      await self.registration.showNotification(d.title || 'Startup Daily', {
+        body: d.body || '새 호가 나왔어요',
+        tag: d.tag,
+        icon: '/icons/icon-192.png',
+        badge: '/icons/icon-192.png',
+        data: { url: d.url || '/' },
+      })
+    })(),
+  )
+})
+
+self.addEventListener('notificationclick', (e) => {
+  e.notification.close()
+  const url = new URL(e.notification.data?.url || '/', self.location.origin).href
+  e.waitUntil(
+    (async () => {
+      const wins = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
+      const win = wins.find((w) => new URL(w.url).origin === self.location.origin)
+      if (win) {
+        await win.focus()
+        // reload so the new issue's data is fetched
+        return win.navigate(url).catch(() => {})
+      }
+      return self.clients.openWindow(url)
+    })(),
+  )
 })

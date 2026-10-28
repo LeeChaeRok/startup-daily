@@ -5,8 +5,9 @@ import StartupRow from '../components/StartupRow.jsx'
 import Sheet from '../components/Sheet.jsx'
 import { CorrectionBadge, EmptyState, SaveButton } from '../components/bits.jsx'
 import { IssueRowItem } from './Issue.jsx'
-import { startups, LENS_FILTER, LENS_VERDICTS, REGIONS, SECTORS, STAGE_GROUPS, dates, search, stats } from '../lib/data.js'
-import { buildQuery, navigate, useReadLog } from '../lib/hooks.js'
+import { startups, LENS_FILTER, LENS_VERDICTS, REGIONS, SECTORS, STAGE_GROUPS, search, stats, weeks } from '../lib/data.js'
+import { MIN_SECTOR } from './Sector.jsx'
+import { buildQuery, navigate, useInterests, useReadLog } from '../lib/hooks.js'
 import { monthDay, numClass, weekLabel } from '../lib/format.js'
 
 const SORTS = [
@@ -204,26 +205,41 @@ function ResultsTable({ rows, sort, update }) {
   )
 }
 
+/** "분야별로 모아 보기": one chip per sector with enough companies to be worth a page. */
+function SectorShelf() {
+  const counts = new Map()
+  for (const s of startups) counts.set(s._sector.key, (counts.get(s._sector.key) || 0) + 1)
+  const shelf = SECTORS.filter((s) => (counts.get(s.key) || 0) >= MIN_SECTOR)
+  if (!shelf.length) return null
+  return (
+    <nav className="shelf" aria-label="분야별로 모아 보기">
+      <span className="shelf__label">분야별로 모아 보기</span>
+      <div className="shelf__chips">
+        {shelf.map((s) => (
+          <a key={s.key} className="chip" href={`#/t/${s.key}`}>
+            {s.label} <span className="num muted">{counts.get(s.key)}</span>
+          </a>
+        ))}
+      </div>
+    </nav>
+  )
+}
+
 function IssuesView({ desktop }) {
   const { isRead, readLog } = useReadLog()
-  const groups = useMemo(() => {
-    const m = new Map()
-    for (const d of dates) {
-      const w = weekLabel(d)
-      if (!m.has(w)) m.set(w, [])
-      m.get(w).push(d)
-    }
-    return [...m.entries()]
-  }, [])
   return (
     <div className="issues-view">
       <p className="issues-view__sum">
         전체 <span className="num">{stats.issues}</span>호 · <span className="num">{stats.companies}</span>곳 · 읽음{' '}
         <span className="num">{Object.keys(readLog).filter((id) => startups.some((s) => s.id === id)).length}</span>곳
       </p>
-      {groups.map(([label, ds]) => (
-        <section key={label} className="week">
-          <h2 className="week__title">{label}</h2>
+      {weeks.map(({ key, dates: ds }) => (
+        <section key={key} className="week">
+          <h2 className="week__title">
+            <a href={`#/w/${key}`}>
+              {weekLabel(key)} <span className="week__more">주간 정리 →</span>
+            </a>
+          </h2>
           <ul className={`issue-rows ${desktop ? 'issue-rows--grid' : ''}`}>
             {ds.map((d) => (
               <IssueRowItem key={d} date={d} isRead={isRead} showSectors />
@@ -258,6 +274,8 @@ export default function Explore({ params, desktop }) {
   }, [draft])
 
   const { isRead } = useReadLog()
+  const { interests } = useInterests()
+  const interestOn = interests.length > 0 && interests.length === state.sector.length && interests.every((k) => state.sector.includes(k))
   const base = useMemo(() => search(state.q), [state.q])
   const filtered = sortBy(applyFilters(base, state), state.sort)
   const rows = state.unread ? filtered.filter(({ startup }) => !isRead(startup.id)) : filtered
@@ -311,6 +329,7 @@ export default function Explore({ params, desktop }) {
         <IssuesView desktop={desktop} />
       ) : (
         <div className="explore">
+          <SectorShelf />
           {desktop && (
             <aside className="explore__filters" aria-label="필터">
               <FilterGroups state={state} update={update} base={base} idPrefix="side" />
@@ -321,6 +340,16 @@ export default function Explore({ params, desktop }) {
               {!desktop && (
                 <button type="button" className="chip" onClick={() => setSheet(true)}>
                   <Icon name="filter" size={16} /> 필터{activeCount > 0 && <span className="num"> {activeCount}</span>}
+                </button>
+              )}
+              {interests.length > 0 && (
+                <button
+                  type="button"
+                  className={`chip ${interestOn ? 'chip--on' : ''}`}
+                  aria-pressed={interestOn}
+                  onClick={() => update({ sector: interestOn ? [] : interests })}
+                >
+                  내 관심 분야
                 </button>
               )}
               <button

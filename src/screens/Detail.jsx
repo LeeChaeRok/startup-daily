@@ -7,7 +7,9 @@ import { useToast } from '../components/toast-context.js'
 import { Meta, ReadButton, SaveButton, Tag } from '../components/bits.jsx'
 import { startups, byId, canAnalyze, cleanAmount, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
 import { splitAmount } from '../lib/amount.js'
-import { navigate, prefersReducedMotion, useFlag } from '../lib/hooks.js'
+import { CompareTable } from './Sector.jsx'
+import { UpdateBanner } from '../components/FollowUp.jsx'
+import { navigate, prefersReducedMotion, useFlag, useFontSize } from '../lib/hooks.js'
 import { dotDate, enDash, langOf, monthDay, numClass, pad2, ym } from '../lib/format.js'
 import { isColdStart } from '../lib/nav.js'
 import {
@@ -48,12 +50,24 @@ function SectionNav({ active, sections }) {
   )
 }
 
+// Korean reading speed for this kind of text, roughly 500 characters a minute
+const CHARS_PER_MIN = 500
+
 function Section({ id, n, title, children, onReport }) {
+  const ref = useRef(null)
+  const time = useRef(null)
+  // "약 N분" from the rendered text; written straight into the label, no re-render needed
+  useEffect(() => {
+    const n = ref.current?.textContent.replace(/\s+/g, '').length || 0
+    const el = time.current
+    if (el) el.textContent = `약 ${Math.max(1, Math.round(n / CHARS_PER_MIN))}분`
+  }, [id])
   return (
-    <section id={id} className="section" aria-labelledby={`${id}-title`}>
+    <section id={id} className="section" aria-labelledby={`${id}-title`} ref={ref}>
       <h2 id={`${id}-title`} className="section__title">
         <span className="section__no mono">{pad2(n)}</span>
         {title}
+        <span className="section__time" ref={time} />
       </h2>
       {children}
       {onReport && (
@@ -635,6 +649,60 @@ function KoreaSection({ startup: s, state }) {
   )
 }
 
+/** 2px bar under the header: how far down this page the reader is. */
+function ReadProgress() {
+  const [p, setP] = useState(0)
+  useEffect(() => {
+    let frame = 0
+    const on = () => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        const max = document.documentElement.scrollHeight - window.innerHeight
+        setP(max > 0 ? Math.min(1, window.scrollY / max) : 0)
+      })
+    }
+    on()
+    window.addEventListener('scroll', on, { passive: true })
+    window.addEventListener('resize', on)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', on)
+      window.removeEventListener('resize', on)
+    }
+  }, [])
+  return (
+    <div className="readbar" aria-hidden="true">
+      <span style={{ transform: `scaleX(${p})` }} />
+    </div>
+  )
+}
+
+const FONT_NEXT = { sm: 'md', md: 'lg', lg: 'sm' }
+const FONT_LABEL = { sm: '작게', md: '기본', lg: '크게' }
+
+/** "가" button: cycles the reading text size (작게 → 기본 → 크게). */
+export function FontButton({ variant = 'icon' }) {
+  const [font, setFont] = useFontSize()
+  const toast = useToast()
+  const onClick = () => {
+    const next = FONT_NEXT[font]
+    setFont(next)
+    toast(`글자 크기: ${FONT_LABEL[next]}`)
+  }
+  if (variant === 'label') {
+    return (
+      <button type="button" className="btn btn--secondary" onClick={onClick}>
+        <span className="font-btn__glyph" aria-hidden="true">가</span> 글자 {FONT_LABEL[font]}
+      </button>
+    )
+  }
+  return (
+    <button type="button" className="icon-btn font-btn" onClick={onClick} aria-label={`글자 크기 바꾸기, 지금 ${FONT_LABEL[font]}`}>
+      <span className="font-btn__glyph" aria-hidden="true">가</span>
+    </button>
+  )
+}
+
 const RELATION = { direct: '직접 경쟁', adjacent: '인접', analog: '유사 아이디어' }
 
 function KoreaLens({ startup: s, lens }) {
@@ -783,6 +851,7 @@ function NextCard({ startup: s, list, from }) {
 }
 
 function SameSector({ startup: s }) {
+  const [compare, setCompare] = useState(false)
   const list = startups.filter((x) => x._sector.key === s._sector.key && x.id !== s.id).slice(0, 3)
   if (!list.length) return null
   return (
@@ -791,8 +860,8 @@ function SameSector({ startup: s }) {
         <h2 id="same-title" className="section-head__title">
           같은 분야의 다른 회사
         </h2>
-        <a className="section-head__more" href={`#/explore?sector=${s._sector.key}`}>
-          {s._sector.label} 전체
+        <a className="section-head__more" href={`#/t/${s._sector.key}`}>
+          {s._sector.label} 모아 보기
         </a>
       </div>
       <ul className="rows">
@@ -800,6 +869,12 @@ function SameSector({ startup: s }) {
           <StartupRow key={x.id} startup={x} showDate />
         ))}
       </ul>
+      <button type="button" className="btn btn--secondary same__compare" onClick={() => setCompare(true)}>
+        이 회사와 비교 ({list.length + 1}곳)
+      </button>
+      <Sheet open={compare} onClose={() => setCompare(false)} title={`같은 분야 ${list.length + 1}곳 비교`}>
+        <CompareTable list={[s, ...list]} current={s.id} />
+      </Sheet>
     </section>
   )
 }
@@ -841,6 +916,7 @@ export default function Detail({ id, from, desktop, wide }) {
   const active = useActiveSection(sections.map((x) => x.id))
   useReadTracking(summaryRef, id)
   const [reportSection, setReportSection] = useState(null)
+  const articleRef = useRef(null)
 
   // ←/→ between companies on desktop (ignored while typing)
   useEffect(() => {
@@ -863,9 +939,11 @@ export default function Detail({ id, from, desktop, wide }) {
   const mo = s.market_outlook || {}
 
   return (
-    <article className="detail">
+    <article className="detail" ref={articleRef}>
+      <ReadProgress />
       <EntryBanner startup={s} />
       <CorrectionBanner startup={s} />
+      <UpdateBanner startup={s} />
       <Hero startup={s} list={list} share={share} from={from} desktop={desktop} wide={wide} />
       <Summary startup={s} summaryRef={summaryRef} />
 
@@ -959,6 +1037,7 @@ export default function Detail({ id, from, desktop, wide }) {
         <div className="actionbar" role="toolbar" aria-label="이 회사">
           <SaveButton startup={s} />
           <ReadButton startup={s} />
+          <FontButton />
           <button type="button" className="icon-btn" onClick={share.share} aria-label={share.label}>
             <Icon name="share" />
           </button>
@@ -1017,6 +1096,7 @@ export function DetailRail({ id }) {
       <div className="rail__actions">
         <SaveButton startup={s} variant="label" />
         <ReadButton startup={s} variant="label" />
+        <FontButton variant="label" />
         <button type="button" className="btn btn--secondary" onClick={share.share}>
           <Icon name="share" size={18} /> {share.label}
         </button>

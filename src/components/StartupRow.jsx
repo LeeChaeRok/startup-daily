@@ -2,7 +2,7 @@ import Logo from './Logo.jsx'
 import Icon from './Icon.jsx'
 import { CorrectionBadge, Meta, SaveButton } from './bits.jsx'
 import { LENS_VERDICTS } from '../lib/data.js'
-import { useReadLog } from '../lib/hooks.js'
+import { useInterests, useReadLog } from '../lib/hooks.js'
 import { monthDay, numClass, pad2 } from '../lib/format.js'
 
 /**
@@ -15,7 +15,9 @@ import { monthDay, numClass, pad2 } from '../lib/format.js'
  */
 export default function StartupRow({ startup: s, rank, showDate, compact, selected, reason, showSave, from }) {
   const { isRead } = useReadLog()
+  const { isInterest } = useInterests()
   const read = isRead(s.id)
+  const hasNews = s._hasNews
   const href = `#/s/${s.id}${from ? `?from=${from}` : ''}`
   // The amount column is narrow: one currency per column ($, or 억 원 for Korean amounts).
   // The amount as written, with its notes, is on the detail page.
@@ -32,7 +34,11 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
         <Logo startup={s} size={compact ? 32 : 40} />
         <span className="row__body">
           <span className="row__title">
-            <span className="row__name">{s.name_ko || s.name_en}</span>
+            <span className="row__name">
+              {s.name_ko || s.name_en}
+              {hasNews && <span className="row__news" title="소개 이후 새 소식" />}
+              {hasNews && <span className="sr-only"> (새 소식)</span>}
+            </span>
             {s.name_en && s.name_en !== s.name_ko && (
               <span className="row__en" lang="en">
                 {s.name_en}
@@ -44,7 +50,10 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
             <span className="row__meta">
               <Meta
                 items={[
-                  <span className="sector" key="s">{s._sector.label}</span>,
+                  <span className={`sector ${isInterest(s._sector.key) ? 'is-interest' : ''}`} key="s">
+                    {s._sector.label}
+                    {isInterest(s._sector.key) && <span className="sr-only"> (관심 분야)</span>}
+                  </span>,
                   s._correction ? null : s._stage,
                   s.headquarters?.country_ko,
                   showDate ? `${monthDay(s.date)} 호` : null,

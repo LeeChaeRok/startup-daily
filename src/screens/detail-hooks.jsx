@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, useSyncExternalStore } from 'react'
+import Icon from '../components/Icon.jsx'
 import Sheet from '../components/Sheet.jsx'
 import { useToast } from '../components/toast-context.js'
 import { byDate, byId, issueNo } from '../lib/data.js'
@@ -175,11 +176,17 @@ export function useContextList(startup, from) {
   }, [startup, from, saved])
 }
 
+/** Public link for a company: /s/:id is a small static page with that company's link
+    preview (title, summary) that forwards to the app. Dev has no such pages. */
+export const shareUrl = (id) => (import.meta.env.PROD ? `${window.location.origin}/s/${id}` : canonicalUrl(`/s/${id}`))
+
 export function useShare(startup) {
   const toast = useToast()
   const [manualUrl, setManualUrl] = useState(null)
-  const share = async () => {
-    const url = canonicalUrl(`/s/${startup.id}`)
+  const [open, setOpen] = useState(false)
+  const shareLink = async () => {
+    setOpen(false)
+    const url = shareUrl(startup.id)
     const r = await shareOrCopy({
       title: `${startup.name_ko} — Startup Daily`,
       text: `${startup.tagline} · 제${issueNo(startup.date)}호(${monthDay(startup.date)})`,
@@ -188,13 +195,32 @@ export function useShare(startup) {
     if (r === 'copied') toast('링크를 복사했어요')
     if (r === 'manual') setManualUrl(url)
   }
+  const shareImage = async () => {
+    setOpen(false)
+    const { shareCard } = await import('../lib/card.js')
+    const r = await shareCard(startup)
+    if (r === 'saved') toast('카드 이미지를 저장했어요')
+  }
   const sheet = (
-    <Sheet open={Boolean(manualUrl)} onClose={() => setManualUrl(null)} title="링크 복사">
-      <p className="sheet__hint">아래 주소를 길게 눌러 복사하세요.</p>
-      <input className="field" readOnly value={manualUrl || ''} onFocus={(e) => e.currentTarget.select()} autoFocus />
-    </Sheet>
+    <>
+      <Sheet open={open} onClose={() => setOpen(false)} title="공유하기">
+        <div className="share-options">
+          <button type="button" className="btn btn--secondary" onClick={shareLink}>
+            <Icon name="share" size={18} /> {canNativeShare() ? '링크 공유' : '링크 복사'}
+          </button>
+          <button type="button" className="btn btn--secondary" onClick={shareImage}>
+            <Icon name="image" size={18} /> 카드 이미지로 {canNativeShare() ? '공유' : '저장'}
+          </button>
+        </div>
+        <p className="sheet__hint">카드 이미지에는 &lsquo;AI가 공개 자료로 작성&rsquo; 표시가 함께 들어가요.</p>
+      </Sheet>
+      <Sheet open={Boolean(manualUrl)} onClose={() => setManualUrl(null)} title="링크 복사">
+        <p className="sheet__hint">아래 주소를 길게 눌러 복사하세요.</p>
+        <input className="field" readOnly value={manualUrl || ''} onFocus={(e) => e.currentTarget.select()} autoFocus />
+      </Sheet>
+    </>
   )
-  return { share, sheet, label: canNativeShare() ? '공유' : '링크 복사' }
+  return { share: () => setOpen(true), sheet, label: '공유' }
 }
 
 /* Mark as read once the summary has been on screen for 2s while the tab is visible.

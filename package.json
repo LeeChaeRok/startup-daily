@@ -10,6 +10,8 @@
     "preview": "vite preview",
     "test:lens": "node scripts/test-korea-lens.mjs",
     "test:pipeline": "node scripts/test-pipeline.mjs",
+    "test:followups": "node scripts/test-followups.mjs",
+    "followups": "node scripts/followups.mjs",
     "logos": "node scripts/fetch-logos.mjs"
   },
   "dependencies": {
@@ -18,7 +20,8 @@
     "framer-motion": "^12.34.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "tailwindcss": "^4.2.1"
+    "tailwindcss": "^4.2.1",
+    "web-push": "^3.6.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

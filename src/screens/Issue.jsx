@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { LastWeekCard } from './Weekly.jsx'
+import { FollowUpSection } from '../components/FollowUp.jsx'
 import Icon from '../components/Icon.jsx'
 import Logo from '../components/Logo.jsx'
 import StartupRow from '../components/StartupRow.jsx'
@@ -97,7 +99,7 @@ export function IssueList({ date, selectedId, compact }) {
   )
 }
 
-function SectorMix({ list }) {
+export function SectorMix({ list }) {
   const mix = sectorMix(list)
   return (
     <p className="sector-mix">
@@ -370,6 +372,8 @@ export function IssueMobile({ date }) {
       <SectorMix list={list} />
       <IssueList date={date} />
       <ContinueCard date={date} />
+      {date === dates[0] && <LastWeekCard />}
+      {date === dates[0] && <FollowUpSection />}
       <PastIssues current={date} />
       <p className="data-range">
         데이터 <span className="mono">{dotDate(stats.first)}</span>–<span className="mono">{dotDate(stats.last)}</span> ·{' '}
@@ -390,7 +394,9 @@ export function IssueOverview({ date, wide }) {
       <NumbersStrip list={list} />
       <SectorMix list={list} />
       <ContinueCard date={date} />
+      {date === dates[0] && <LastWeekCard />}
       <Preview startup={list[0]} />
+      {date === dates[0] && <FollowUpSection />}
       {/* without the ≥1280 rail, past issues and the footer move under the article */}
       {!wide && (
         <>

@@ -13,17 +13,18 @@ const getJSON = async (name) => {
 
 export async function loadData() {
   const full = window.location.hash.startsWith('#/s/')
-  const [startups, corrections, lensIndex, meta] = await Promise.all([
+  const [startups, corrections, lensIndex, meta, updates] = await Promise.all([
     getJSON(full ? 'startups.json' : 'index.json'),
     getJSON('corrections.json').catch(() => ({})),
     getJSON('korea-lens-index.json').catch(() => ({})),
     getJSON('meta.json').catch(() => null),
+    getJSON('updates.json').catch(() => ({})),
   ])
-  initData({ startups, corrections, lensIndex, full })
+  initData({ startups, corrections, lensIndex, updates: updates.updates, full })
   setLoadedMeta(meta)
   if (!full) {
     getJSON('startups.json').then(
-      (all) => initData({ startups: all, corrections, lensIndex, full: true }),
+      (all) => initData({ startups: all, corrections, lensIndex, updates: updates.updates, full: true }),
       setDataFailed,
     )
   }

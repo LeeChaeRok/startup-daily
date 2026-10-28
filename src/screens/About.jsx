@@ -1,7 +1,11 @@
 import { useEffect } from 'react'
 import Icon from '../components/Icon.jsx'
 import { startups, correctionList, getDomain, stats } from '../lib/data.js'
-import { useReadLog, useSaved, useTheme } from '../lib/hooks.js'
+import { useFontSize, useInterests, useReadLog, useSaved, useTheme } from '../lib/hooks.js'
+import AlertSetting from '../components/AlertSetting.jsx'
+import { SECTORS } from '../lib/data.js'
+import { syncPushPrefs } from '../lib/push.js'
+import { load } from '../lib/storage.js'
 import { dotDate } from '../lib/format.js'
 import { scrollToSection } from './detail-hooks.jsx'
 
@@ -13,6 +17,8 @@ const THEMES = [
 
 export default function About({ params }) {
   const [theme, setTheme] = useTheme()
+  const [font, setFont] = useFontSize()
+  const { interests, toggle } = useInterests()
   const { readLog, clearRead } = useReadLog()
   const { saved } = useSaved()
   const sec = params.get('sec')
@@ -144,6 +150,57 @@ export default function About({ params }) {
                 {label}
               </button>
             ))}
+          </div>
+        </div>
+        <div className="setting">
+          <span className="setting__label" id="font-label">
+            글자 크기
+          </span>
+          <div className="segmented segmented--inline" role="group" aria-labelledby="font-label">
+            {[
+              ['sm', '작게'],
+              ['md', '기본'],
+              ['lg', '크게'],
+            ].map(([k, label]) => (
+              <button key={k} type="button" aria-pressed={font === k} className="segmented__tab" onClick={() => setFont(k)}>
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="setting">
+          <span className="setting__label" id="interest-label">
+            관심 분야
+          </span>
+          <div className="setting__body">
+            <div className="chips-wrap" role="group" aria-labelledby="interest-label">
+              {SECTORS.map((s) => {
+                const on = interests.includes(s.key)
+                return (
+                  <button
+                    key={s.key}
+                    type="button"
+                    className={`chip ${on ? 'chip--on' : ''}`}
+                    aria-pressed={on}
+                    onClick={() => {
+                      toggle(s.key)
+                      const next = on ? interests.filter((k) => k !== s.key) : [...interests, s.key]
+                      syncPushPrefs({ sectors: next, onlyInterests: load('sd_push_only_interests', false) })
+                    }}
+                  >
+                    {on && <Icon name="check" size={14} />}
+                    {s.label}
+                  </button>
+                )
+              })}
+            </div>
+            <p className="setting__hint">목록에 점으로 표시하고, 탐색과 알림에 써요.</p>
+          </div>
+        </div>
+        <div className="setting">
+          <span className="setting__label">새 호 알림</span>
+          <div className="setting__body">
+            <AlertSetting />
           </div>
         </div>
         <div className="setting">

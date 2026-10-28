@@ -1,4 +1,5 @@
 import { useCallback, useState, useSyncExternalStore } from 'react'
+import { load, save } from './storage.js'
 
 /* ---------- Hash router ----------
    Static hosting on Vercel without rewrites, so routes live in the hash:
@@ -59,23 +60,6 @@ export function buildQuery(params) {
 /* ---------- Small persisted stores ----------
    localStorage can throw (private mode, blocked storage); every access is
    guarded and the in-memory value keeps the UI working.                   */
-
-function load(key, fallback) {
-  try {
-    const v = localStorage.getItem(key)
-    return v == null ? fallback : JSON.parse(v)
-  } catch {
-    return fallback
-  }
-}
-
-function save(key, value) {
-  try {
-    localStorage.setItem(key, JSON.stringify(value))
-  } catch {
-    /* keep in memory only */
-  }
-}
 
 function createStore(key, fallback, validate = () => true) {
   const initial = load(key, fallback)
@@ -147,6 +131,36 @@ export function useReadLog() {
   }, [])
   const restoreRead = useCallback((log) => readStore.set(log), [])
   return { readLog, isRead: (id) => Boolean(readLog[id]), markRead, setRead, restoreRead, clearRead }
+}
+
+/* Sectors the reader cares about (keys from SECTORS). Marks rows, seeds filters and
+   can limit alerts; it never reorders an issue. */
+const interestStore = createStore('sd_interests', [], Array.isArray)
+
+export function useInterests() {
+  const interests = useStore(interestStore)
+  const toggle = useCallback((key) => {
+    interestStore.set((prev) => (prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]))
+  }, [])
+  const set = useCallback((list) => interestStore.set(list), [])
+  return { interests, isInterest: (key) => interests.includes(key), toggle, set }
+}
+
+export const getInterests = () => interestStore.get()
+
+/* Reading text size: 'sm' | 'md' | 'lg', applied as data-font on <html>. */
+const FONT_SIZES = ['sm', 'md', 'lg']
+const fontStore = createStore('sd_font', 'md', (v) => FONT_SIZES.includes(v))
+const applyFont = (v) => (document.documentElement.dataset.font = v)
+applyFont(fontStore.get())
+
+export function useFontSize() {
+  const value = useStore(fontStore)
+  const set = useCallback((v) => {
+    fontStore.set(v)
+    applyFont(v)
+  }, [])
+  return [value, set]
 }
 
 /* One-off flags (intro dismissed, last seen issue, …). */
