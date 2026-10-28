@@ -20,9 +20,9 @@ export function ToastProvider({ children }) {
   )
 
   const show = useCallback(
-    (message, action) => {
+    (message, action, ms) => {
       setToast({ id: Date.now(), message, action })
-      schedule(action ? 5000 : 3000)
+      schedule(ms || (action ? 5000 : 3000))
     },
     [schedule],
   )

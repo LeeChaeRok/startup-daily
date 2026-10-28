@@ -26,4 +26,9 @@ export default defineConfig([
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  {
+    // service worker source; the build injects __PRECACHE__ and __VERSION__
+    files: ['src/sw.js'],
+    languageOptions: { globals: { ...globals.serviceworker, __PRECACHE__: 'readonly', __VERSION__: 'readonly' } },
+  },
 ])

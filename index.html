@@ -31,17 +31,30 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="StartupDaily" />
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+    <!-- web fonts must not block the first paint: load as print, switch to all once fetched -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+    <link rel="preload" href="/data/startups.json" as="fetch" crossorigin="anonymous" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- static shell, replaced when the app mounts -->
+      <div class="boot" aria-busy="true">
+        <header class="appbar"><div class="appbar__inner"><span class="wordmark">Startup Daily<span class="wordmark__dot"></span></span></div></header>
+        <div class="boot__body">
+          <div class="boot__line boot__line--eyebrow"></div>
+          <div class="boot__line boot__line--title"></div>
+          <div class="boot__line boot__line--sub"></div>
+          <div class="boot__row"></div><div class="boot__row"></div><div class="boot__row"></div><div class="boot__row"></div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
     <script>
       if ('serviceWorker' in navigator && !/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {

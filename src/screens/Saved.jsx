@@ -85,7 +85,7 @@ export default function Saved({ params }) {
             </a>
           }
         >
-          목록이나 상세에서 저장 버튼을 누르면 여기에 모여요.
+          회사 상세 화면의 저장 버튼을 누르면 여기에 모여요.
         </EmptyState>
       ) : (
         <>

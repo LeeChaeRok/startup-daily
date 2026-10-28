@@ -60,7 +60,7 @@ export function IssueHeader({ date, compact = false }) {
           </span>
         )}
       </p>
-      {!compact && <MarkAllRead list={list} />}
+      {!compact && done > 0 && <MarkAllRead list={list} />}
       {latest && gap >= 2 && !compact && (
         <p className="issue-head__stale">
           {monthDay(date)} 이후 새 호가 없어요. <a href="#/explore?view=issues">지난 호 보기</a>
@@ -261,20 +261,13 @@ function IntroCard() {
   const [dismissed, setDismissed] = useFlag('sd_intro_dismissed', false)
   if (dismissed) return null
   return (
-    <aside className="intro" aria-label="처음 오셨나요">
-      <div className="intro__head">
-        <strong>처음 오셨나요?</strong>
-        <button type="button" className="icon-btn icon-btn--sm" onClick={() => setDismissed(true)} aria-label="안내 닫기">
-          <Icon name="close" size={18} />
-        </button>
-      </div>
-      <p>한국 독자가 아직 잘 모르는, 지금 뜨는 회사를 하루 한 묶음으로 소개해요.</p>
-      <ul>
-        <li>목록에서 훑고, 눌러서 깊게 읽어요.</li>
-        <li>
-          AI가 공개 자료로 작성해요. <a href="#/about">작성 방식과 선정 기준</a>
-        </li>
-      </ul>
+    <aside className="intro intro--line" aria-label="처음 오셨나요">
+      <p>
+        <strong>처음 오셨나요?</strong> 한국에 아직 덜 알려진 해외 스타트업을 하루 한 묶음으로 소개해요.
+      </p>
+      <button type="button" className="icon-btn icon-btn--sm" onClick={() => setDismissed(true)} aria-label="안내 닫기">
+        <Icon name="close" size={18} />
+      </button>
     </aside>
   )
 }
@@ -319,7 +312,7 @@ function NumbersStrip({ list }) {
           </dt>
           <dd>
             <span className="mono">≈{formatUSD(sum)}</span>
-            {unknown > 0 && <small> · {unknown}곳 미공개</small>}
+            {unknown > 0 && <small className="numbers__aside">{unknown}곳 미공개</small>}
           </dd>
         </div>
       </dl>

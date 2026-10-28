@@ -17,9 +17,9 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
   const { isRead } = useReadLog()
   const read = isRead(s.id)
   const href = `#/s/${s.id}${from ? `?from=${from}` : ''}`
-  // The amount column is narrow: "약 1,000억 원+" → "1,000억 원+", "$32M (ICO) + …" → "$32M".
-  // The full string is on the detail page.
-  const raised = s._raised?.replace(/^약\s*/, '').split(/\s*\(|\s+\+/)[0]
+  // The amount column is narrow: one currency per column ($, or 억 원 for Korean amounts).
+  // The amount as written, with its notes, is on the detail page.
+  const raised = s._raisedShort
 
   return (
     <li className={`row ${compact ? 'row--compact' : ''} ${read ? 'is-read' : ''} ${selected ? 'is-selected' : ''}`}>

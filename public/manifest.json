@@ -1,12 +1,13 @@
 {
+  "id": "/",
   "name": "Startup Daily",
   "short_name": "StartupDaily",
   "description": "아직 모르는, 지금 뜨는 스타트업을 하루 한 묶음으로",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#F3EFE6",
+  "background_color": "#1B1A17",
   "theme_color": "#F3EFE6",
-  "orientation": "portrait",
   "icons": [
     {
       "src": "/icons/icon-192.png",
@@ -23,6 +24,38 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "최신 호",
+      "url": "/#/",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "탐색",
+      "url": "/#/explore",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "저장",
+      "url": "/#/saved",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }

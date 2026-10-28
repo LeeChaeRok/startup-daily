@@ -3,6 +3,7 @@
  * normalization, link verification and merging. No Claude API calls here,
  * so it can be exercised offline (see `--candidates` in generate-daily.mjs).
  */
+import { parseAmount, splitAmount } from '../../src/lib/amount.js'
 
 /* ---------- Selection rules ---------- */
 
@@ -43,16 +44,17 @@ export function countryOf(c) {
 }
 
 export function selectCandidates(candidates, existing, want = 5, { maxPerCountry = 2 } = {}) {
-  const seen = new Set(existing.flatMap((s) => [norm(s.name_en), norm(s.name_ko)]).filter(Boolean))
+  const seen = dedupIndex(existing)
   const perCountry = new Map()
   const accepted = []
   const rejected = []
   for (const c of candidates) {
+    const dup = c?.name_en ? findDuplicate(c, seen) : null
     const reason =
       !c?.name_en
         ? 'incomplete'
-        : seen.has(norm(c.name_en)) || seen.has(norm(c.name_ko))
-          ? 'duplicate'
+        : dup
+          ? `duplicate (${dup.by} ${dup.key} = ${dup.id})`
           : isFamous(c)
             ? 'famous'
             : stageProblem(c.company_stage) || (c.status && c.status !== 'active' ? `status:${c.status}` : null)
@@ -69,11 +71,117 @@ export function selectCandidates(candidates, existing, want = 5, { maxPerCountry
     if (accepted.length < want) {
       if (country) perCountry.set(country, (perCountry.get(country) || 0) + 1)
       accepted.push(c)
-      seen.add(norm(c.name_en))
-      if (c.name_ko) seen.add(norm(c.name_ko))
+      addToIndex(seen, c)
     }
   }
   return { accepted, rejected }
+}
+
+/* ---------- Duplicate detection ---------- */
+
+// Second-level labels under a ccTLD that act like a TLD: co.kr, co.jp, com.br, co.uk, or.jp …
+const SLD = new Set(['co', 'com', 'or', 'ne', 'ac', 'go', 'org', 'net', 'gov', 'edu', 'gen', 'ltd', 'plc', 'biz', 'info'])
+// Hosting platforms many companies share: compare the full host there, not the platform domain.
+const SHARED = new Set([
+  'github.io', 'notion.site', 'wixsite.com', 'webflow.io', 'vercel.app', 'netlify.app', 'pages.dev', 'framer.website',
+  'framer.ai', 'carrd.co', 'super.site', 'medium.com', 'substack.com', 'linktr.ee', 'linkedin.com', 'blogspot.com',
+  'wordpress.com', 'herokuapp.com', 'imweb.me', 'modoo.at', 'oopy.io', 'sites.google.com', 'google.com',
+])
+
+/** "https://www.k-oqt.com/en" → "k-oqt.com"; "shop.foo.co.kr" → "foo.co.kr". */
+export function registrableDomain(url) {
+  if (!url || typeof url !== 'string') return null
+  let host
+  try {
+    host = new URL(/^[a-z][\w+.-]*:\/\//i.test(url) ? url : `https://${url}`).hostname.toLowerCase()
+  } catch {
+    return null
+  }
+  host = host.replace(/^www\d*\./, '').replace(/\.$/, '')
+  const parts = host.split('.')
+  if (parts.length < 2 || /^\d+$/.test(parts.at(-1))) return null
+  const n = parts.length >= 3 && parts.at(-1).length === 2 && SLD.has(parts.at(-2)) ? 3 : 2
+  const base = parts.slice(-n).join('.')
+  if (SHARED.has(base) || SHARED.has(parts.slice(-3).join('.'))) return host
+  return base
+}
+
+// Legal-form words at the end of a name ("Helical Fusion Co., Ltd.", "Celaid Therapeutics Inc.")
+const LEGAL_TAIL =
+  /[\s,.]*\b(?:inc|incorporated|corp|corporation|co|ltd|limited|llc|l\.l\.c|gmbh|ag|sa|s\.a|sas|sarl|bv|b\.v|nv|pte|pty|plc|kk|k\.k|oy|ab|as|srl|spa|ltda|s\.l|sl)\.?[\s,.]*$/i
+// …and the Korean / Japanese ones anywhere ("주식회사 오큐티", "(주)오큐티", "株式会社Kinish")
+const LEGAL_CJK = /주식회사|유한회사|유한책임회사|\(\s*주\s*\)|㈜|株式会社|有限会社|合同会社|\(\s*株\s*\)|㈱/g
+
+/** "주식회사 오큐티" → "오큐티", "Helical Fusion Co., Ltd." → "helicalfusion". */
+export function companyKey(name) {
+  if (!name || typeof name !== 'string') return ''
+  let s = name.normalize('NFKC').replace(LEGAL_CJK, ' ')
+  for (let prev = ''; prev !== s; ) {
+    prev = s
+    s = s.replace(LEGAL_TAIL, '')
+  }
+  return norm(s)
+}
+
+/** Every name a company goes by: full name, and the name and alias of "Occu-T (OQT)" separately. */
+export function nameKeys(c) {
+  const keys = new Set()
+  for (const name of [c?.name_en, c?.name_ko]) {
+    if (!name || typeof name !== 'string') continue
+    keys.add(companyKey(name))
+    const m = name.match(/^(.*?)\s*[(（]([^)）]+)[)）]\s*(.*)$/)
+    if (m) {
+      keys.add(companyKey(`${m[1]} ${m[3]}`))
+      keys.add(companyKey(m[2]))
+    }
+  }
+  // very short keys ("ai", "x") would match unrelated companies
+  return [...keys].filter((k) => k.length >= (/^[\x00-\x7f]+$/.test(k) ? 3 : 2))
+}
+
+/** Index of published companies by registrable domain and by normalized name. */
+export function dedupIndex(records = []) {
+  const index = { domains: new Map(), names: new Map() }
+  for (const r of records) addToIndex(index, r)
+  return index
+}
+
+export function addToIndex(index, r) {
+  const id = r?.id || r?.name_en || '?'
+  const d = registrableDomain(r?.website)
+  if (d && !index.domains.has(d)) index.domains.set(d, id)
+  for (const k of nameKeys(r)) if (!index.names.has(k)) index.names.set(k, id)
+}
+
+/** → { by: 'domain' | 'name', key, id } of the record `c` repeats, or null. */
+export function findDuplicate(c, index) {
+  const d = registrableDomain(c?.website)
+  if (d && index.domains.has(d)) return { by: 'domain', key: d, id: index.domains.get(d) }
+  for (const k of nameKeys(c)) if (index.names.has(k)) return { by: 'name', key: k, id: index.names.get(k) }
+  return null
+}
+
+/**
+ * Drop fresh profiles that repeat a published company or an earlier fresh one.
+ * A fresh record with the same id and date as an existing one is a re-run of
+ * that issue and replaces it, so it is not compared against itself.
+ */
+export function dropDuplicates(fresh, existing, { log = () => {} } = {}) {
+  const replaced = (s) => fresh.some((f) => f.id === s.id && f.date === s.date)
+  const index = dedupIndex(existing.filter((s) => !replaced(s)))
+  const kept = []
+  const dropped = []
+  for (const f of fresh) {
+    const dup = findDuplicate(f, index)
+    if (dup) {
+      dropped.push({ ...dup, name: f.name_en, id: f.id })
+      log(`  drop duplicate ${f.name_en} (${f.id}): ${dup.by} ${dup.key} already published as ${dup.id}`)
+      continue
+    }
+    kept.push(f)
+    addToIndex(index, f)
+  }
+  return { kept, dropped }
 }
 
 /* ---------- Normalization ---------- */
@@ -92,16 +200,65 @@ export function cleanAmount(v) {
   return typeof v === 'string' && /\d/.test(v) ? v.trim() : null
 }
 
-export function normalize(c, { date, model, generatedAt }) {
+const UNDISCLOSED = /^\s*(비공개|미공개|undisclosed|n\/a|unknown|알 수 없음)/i
+const joinNotes = (...notes) => [...new Set(notes.map((n) => (typeof n === 'string' ? n.trim() : '')).filter(Boolean))].join(' / ') || null
+const ratioOff = (a, b) => a > 0 && b > 0 && (a / b >= 2 || b / a >= 2)
+
+/**
+ * One funding amount → { amount, note, usd }. The amount keeps only the figure
+ * ("3.23억 엔"); commentary and conversions move to the note. USD comes from the
+ * figure itself (amount.js) — the model's number is kept only when it agrees
+ * within 2×, and a conversion written next to the figure is never trusted over it.
+ */
+export function fixAmount(text, { note = null, usd = null, label = 'amount', log = () => {} } = {}) {
+  const raw = typeof text === 'string' ? text.trim() : ''
+  const modelUsd = usd == null || usd === '' ? null : Number(usd)
+  const given = Number.isFinite(modelUsd) && modelUsd > 0 ? modelUsd : null
+  if (!/\d/.test(raw)) {
+    // "비공개 (보도 간 불일치 …)" keeps its explanation; digit-less junk ("M+") becomes 비공개
+    const extra = UNDISCLOSED.test(raw) ? splitAmount(raw).note : null
+    return { amount: '비공개', note: joinNotes(note, extra), usd: null }
+  }
+  let parsed = parseAmount(raw)
+  // a unit amount.js does not know ("¥2億") leaves letters glued to the figure: don't cut there
+  if (parsed && /^\p{L}/u.test(raw.slice(parsed.primary.index + parsed.primary.raw.length))) parsed = null
+  if (!parsed) {
+    if (UNDISCLOSED.test(raw)) return { amount: '비공개', note: joinNotes(note, splitAmount(raw).note), usd: null }
+    return { amount: raw, note: joinNotes(note), usd: given }
+  }
+  const split = splitAmount(raw)
+  const amount = split.note ? split.main : raw
+  // "3.23억 엔 (약 $20.6M)": the original currency wins, the stray conversion stays in the note
+  const conv = split.note ? parseAmount(split.note) : null
+  if (conv && parsed.primary.cur !== 'USD' && conv.primary.cur === 'USD' && ratioOff(conv.usd, parsed.usd)) {
+    log(`  ${label}: conversion "${conv.primary.raw}" disagrees with ${parsed.primary.raw}; keeping the original currency`)
+  }
+  let out = parsed.usd
+  if (given && ratioOff(given, parsed.usd)) {
+    log(`  ${label}: model USD ${Math.round(given)} vs parsed ${Math.round(parsed.usd)} from "${amount}"; using parsed`)
+  } else if (given) {
+    out = given
+  }
+  return { amount, note: joinNotes(note, split.note), usd: Math.round(out) }
+}
+
+export function normalize(c, { date, model, generatedAt, log = () => {} }) {
   const year = date.slice(0, 4)
   const f = c.funding || {}
-  const fixRound = (r = {}) => ({
-    stage: r.stage || '',
-    amount: cleanAmount(r.amount) || '비공개',
-    date: r.date || '',
-    lead_investor: r.lead_investor || (Array.isArray(r.investors) ? r.investors[0] : '') || '',
-    ...(r.notable_investors ? { notable_investors: r.notable_investors } : {}),
-  })
+  const name = c.name_en || '?'
+  const fixRound = (r = {}, where) => {
+    const a = fixAmount(r.amount, { note: r.note, usd: r.amount_usd, label: `${name} ${where}`, log })
+    return {
+      stage: r.stage || '',
+      amount: a.amount,
+      ...(a.note ? { note: a.note } : {}),
+      ...(a.usd != null ? { amount_usd: a.usd } : {}),
+      date: r.date || '',
+      lead_investor: r.lead_investor || (Array.isArray(r.investors) ? r.investors[0] : '') || '',
+      ...(r.notable_investors ? { notable_investors: r.notable_investors } : {}),
+    }
+  }
+  const total = fixAmount(f.total_raised, { note: f.total_raised_note, usd: f.total_raised_usd, label: `${name} total_raised`, log })
   const { status, sources, ...rest } = c
   void status
   void sources
@@ -115,10 +272,12 @@ export function normalize(c, { date, model, generatedAt }) {
     logo_url: '',
     funding: {
       ...f,
-      total_raised: cleanAmount(f.total_raised) || '비공개',
-      latest_round: fixRound(f.latest_round),
+      total_raised: total.amount,
+      total_raised_note: total.note,
+      total_raised_usd: total.usd,
+      latest_round: fixRound(f.latest_round, 'latest_round'),
       valuation_estimate: cleanAmount(f.valuation_estimate) || '비공개',
-      funding_history: (f.funding_history || []).map(fixRound),
+      funding_history: (f.funding_history || []).map((r, i) => fixRound(r, `funding_history[${i}]`)),
     },
     related_links: (c.related_links || []).map((l) => ({ title: l.title || l.label || '', url: l.url })),
     generated_at: generatedAt,
@@ -224,9 +383,13 @@ export async function verifyLinks(profiles, { searched, checkedAt, fetchImpl, lo
 
 /* ---------- Merge ---------- */
 
-/** Newest issue first; keep the last `retainIssues` issues so the bundle stays small. */
-export function merge(existing, fresh, retainIssues) {
-  const all = [...fresh, ...existing.filter((s) => !fresh.some((f) => f.id === s.id))]
+/**
+ * Newest issue first; keep the last `retainIssues` issues so the bundle stays small.
+ * Fresh profiles that repeat a published company (same domain or name) are dropped.
+ */
+export function merge(existing, fresh, retainIssues, { log } = {}) {
+  const { kept } = dropDuplicates(fresh, existing, { log })
+  const all = [...kept, ...existing.filter((s) => !kept.some((f) => f.id === s.id))]
   const dates = [...new Set(all.map((s) => s.date))].sort((a, b) => b.localeCompare(a))
   const keep = new Set(dates.slice(0, retainIssues))
   return all.filter((s) => keep.has(s.date)).sort((a, b) => b.date.localeCompare(a.date))

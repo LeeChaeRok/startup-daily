@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import Icon from '../components/Icon.jsx'
 import Logo from '../components/Logo.jsx'
+import Sheet from '../components/Sheet.jsx'
 import StartupRow from '../components/StartupRow.jsx'
+import { useToast } from '../components/toast-context.js'
 import { Meta, ReadButton, SaveButton, Tag } from '../components/bits.jsx'
-import startups, { byId, canAnalyze, cleanAmount, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
+import { startups, byId, canAnalyze, cleanAmount, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
+import { splitAmount } from '../lib/amount.js'
 import { navigate, prefersReducedMotion, useFlag } from '../lib/hooks.js'
 import { dotDate, enDash, langOf, monthDay, numClass, pad2, ym } from '../lib/format.js'
 import { isColdStart } from '../lib/nav.js'
@@ -45,7 +48,7 @@ function SectionNav({ active, sections }) {
   )
 }
 
-function Section({ id, n, title, children }) {
+function Section({ id, n, title, children, onReport }) {
   return (
     <section id={id} className="section" aria-labelledby={`${id}-title`}>
       <h2 id={`${id}-title`} className="section__title">
@@ -53,7 +56,77 @@ function Section({ id, n, title, children }) {
         {title}
       </h2>
       {children}
+      {onReport && (
+        <button type="button" className="text-btn section__report" onClick={() => onReport(id)}>
+          이 섹션에 틀린 내용이 있나요?
+        </button>
+      )}
     </section>
+  )
+}
+
+const REPORT_REASONS = [
+  ['number', '숫자가 틀렸어요'],
+  ['status', '회사 상태가 바뀌었어요 (인수·폐업 등)'],
+  ['link', '링크가 안 열려요'],
+  ['other', '기타'],
+]
+
+/** "틀린 내용 알리기": a reason, an optional line, sent to /api/report. */
+function ReportSheet({ startup: s, section, onClose }) {
+  const toast = useToast()
+  const [reason, setReason] = useState('number')
+  const [detail, setDetail] = useState('')
+  const [sending, setSending] = useState(false)
+  const submit = async (e) => {
+    e.preventDefault()
+    setSending(true)
+    try {
+      const res = await fetch('/api/report', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ id: s.id, section, reason, detail }),
+      })
+      if (!res.ok) throw new Error(String(res.status))
+      toast('알려 주셔서 고마워요. 확인 후 정정 기록에 반영할게요.')
+      onClose()
+    } catch {
+      toast('보내지 못했어요. 잠시 뒤에 다시 시도해 주세요.')
+    } finally {
+      setSending(false)
+    }
+  }
+  return (
+    <Sheet open={Boolean(section)} onClose={onClose} title="틀린 내용 알리기">
+      <form className="report" onSubmit={submit}>
+        <p className="sheet__hint">확인되면 정정 기록에 남기고 이 페이지 맨 위에 표시해요.</p>
+        <fieldset className="report__reasons">
+          <legend className="sr-only">무엇이 틀렸나요?</legend>
+          {REPORT_REASONS.map(([key, label]) => (
+            <label key={key} className="check">
+              <input type="radio" name="reason" value={key} checked={reason === key} onChange={() => setReason(key)} />
+              <span className="check__label">{label}</span>
+            </label>
+          ))}
+        </fieldset>
+        <label className="report__label" htmlFor="report-detail">
+          자세히 (선택)
+        </label>
+        <textarea
+          id="report-detail"
+          className="field report__detail"
+          rows={3}
+          maxLength={500}
+          value={detail}
+          onChange={(e) => setDetail(e.target.value)}
+          placeholder="예: 2026년 9월에 시리즈 B를 유치했어요 (기사 링크)"
+        />
+        <p className="report__note">공개 기록으로 남을 수 있으니 개인 정보는 적지 말아 주세요.</p>
+        <button type="submit" className="btn btn--primary report__send" disabled={sending}>
+          {sending ? '보내는 중…' : '보내기'}
+        </button>
+      </form>
+    </Sheet>
   )
 }
 
@@ -208,10 +281,20 @@ function Hero({ startup: s, list, share, from, desktop, wide }) {
   )
 }
 
+/** The generator's commentary on an amount ("보조금 포함, 약 $83.8M …"), as a quiet line. */
+function AmountNote({ text, note }) {
+  const value = cleanAmount(text)
+  const extra = [value && splitAmount(value).note, note].filter(Boolean).join(' · ')
+  return extra ? <p className="amount__note">{extra}</p> : null
+}
+
+/** Just the figure, for tight spots (the commentary is in the 투자 section). */
+const amountMain = (text) => (cleanAmount(text) ? splitAmount(cleanAmount(text)).main : null)
+
 function Summary({ startup: s, summaryRef }) {
   const f = s.funding || {}
   const lr = f.latest_round || {}
-  const lrAmount = cleanAmount(lr.amount)
+  const lrAmount = amountMain(lr.amount)
   return (
     <div className="summary" ref={summaryRef}>
       <div className="block">
@@ -223,7 +306,7 @@ function Summary({ startup: s, summaryRef }) {
         <dl className="facts">
           <div>
             <dt>누적 투자</dt>
-            <dd className={s._raised ? numClass(s._raised) : ''}>{s._raised || '미공개'}</dd>
+            <dd className={s._raised ? numClass(s._raised) : ''}>{amountMain(s._raised) || '미공개'}</dd>
           </div>
           <div>
             <dt>최근 라운드</dt>
@@ -241,7 +324,7 @@ function Summary({ startup: s, summaryRef }) {
               기업가치 <Tag tone="warn">AI 추정</Tag>
             </dt>
             <dd className={cleanAmount(f.valuation_estimate) ? numClass(f.valuation_estimate) : ''}>
-              {cleanAmount(f.valuation_estimate) || '미공개'}
+              {amountMain(f.valuation_estimate) || '미공개'}
             </dd>
           </div>
         </dl>
@@ -286,6 +369,8 @@ function FundingTimeline({ funding: f }) {
       {rounds.map((r, i) => {
         const amount = cleanAmount(r.amount)
         const usd = parseAmountUSD(amount)
+        const split = amount ? splitAmount(amount) : null
+        const note = [split?.note, r.note].filter(Boolean).join(' · ')
         return (
           <li key={i} className={`timeline__item ${i === 0 ? 'is-latest' : ''} ${amount ? '' : 'is-unknown'}`}>
             <span className="timeline__date mono">{ym(r.date || '')}</span>
@@ -297,11 +382,12 @@ function FundingTimeline({ funding: f }) {
                   {r.lead_investor}
                 </span>
               )}
+              {note && <span className="timeline__note">{note}</span>}
               {usd != null && (
                 <span className="timeline__bar" style={{ width: `${Math.max(2, (usd / max) * 100)}%` }} aria-hidden="true" />
               )}
             </span>
-            <span className={`timeline__amount ${amount ? numClass(amount) : 'is-na'}`}>{amount || '미공개'}</span>
+            <span className={`timeline__amount ${amount ? numClass(amount) : 'is-na'}`}>{split?.main || '미공개'}</span>
           </li>
         )
       })}
@@ -496,17 +582,38 @@ function Sources({ startup: s }) {
 
 /** Shows the analysis, or the button that asks for one. */
 function KoreaSection({ startup: s, state }) {
-  const { lens, status, message, elapsed, run } = state
+  const { lens, status, message, elapsed, phase, run, retry } = state
   if (lens) return <KoreaLens startup={s} lens={lens} />
   if (status === 'loading' && !elapsed && s._lens) return <p className="muted">불러오는 중…</p>
+  if (status === 'static-error') {
+    return (
+      <div className="lens-ask">
+        <p className="lens-ask__error" role="alert">
+          이미 만들어 둔 분석을 불러오지 못했어요. 인터넷 연결을 확인해 주세요.
+        </p>
+        <button type="button" className="btn btn--secondary" onClick={retry}>
+          다시 불러오기
+        </button>
+      </div>
+    )
+  }
   if (status === 'loading') {
     return (
-      <div className="lens-ask" role="status" aria-live="polite">
+      <div className="lens-ask">
         <p className="lens-ask__busy">
           <span className="spinner" aria-hidden="true" />
-          한국 시장을 조사하는 중이에요 · <span className="mono">{elapsed}</span>초
+          {/* only the phase is announced; the ticking seconds stay out of the live region */}
+          <span role="status" aria-live="polite">
+            {phase}
+          </span>
+          <span className="lens-ask__time mono" aria-hidden="true">
+            {elapsed}초
+          </span>
         </p>
-        <p className="lens-ask__hint">웹을 검색하고 링크를 확인하느라 보통 2~3분 걸려요. 이 화면을 열어 두세요.</p>
+        <div className="lens-ask__bar" aria-hidden="true">
+          <span style={{ width: `${Math.min(95, (elapsed / 180) * 100)}%` }} />
+        </div>
+        <p className="lens-ask__hint">보통 2~3분 걸려요. 다른 화면을 봐도 괜찮아요. 준비되면 알려 드릴게요.</p>
       </div>
     )
   }
@@ -703,8 +810,8 @@ export function KeyFacts({ startup: s }) {
     ['본사', [s.headquarters?.city, s.headquarters?.country_ko].filter(Boolean).join(', ')],
     ['단계', s._correction ? s._correction.status : s._stage],
     ['직원', s.employee_count ? `${enDash(s.employee_count)}명` : null],
-    ['누적 투자', s._raised],
-    ['기업가치', cleanAmount(s.funding?.valuation_estimate)],
+    ['누적 투자', amountMain(s._raised)],
+    ['기업가치', amountMain(s.funding?.valuation_estimate)],
   ].filter(([, v]) => v)
   return (
     <dl className="keyfacts">
@@ -733,6 +840,7 @@ export default function Detail({ id, from, desktop, wide }) {
   const lensState = useKoreaLens(id, Boolean(s?._lens), hasLens)
   const active = useActiveSection(sections.map((x) => x.id))
   useReadTracking(summaryRef, id)
+  const [reportSection, setReportSection] = useState(null)
 
   // ←/→ between companies on desktop (ignored while typing)
   useEffect(() => {
@@ -763,7 +871,7 @@ export default function Detail({ id, from, desktop, wide }) {
 
       {!wide && <SectionNav active={active} sections={sections} />}
 
-      <Section id="why" n={1} title="왜 지금">
+      <Section id="why" n={1} title="왜 지금" onReport={setReportSection}>
         <Field label="촉매">
           <Bullets items={tr.catalysts} ordered />
         </Field>
@@ -772,7 +880,7 @@ export default function Detail({ id, from, desktop, wide }) {
         </Field>
       </Section>
 
-      <Section id="product" n={2} title="제품">
+      <Section id="product" n={2} title="제품" onReport={setReportSection}>
         <Field label="문제">{p.problem_statement && <p>{p.problem_statement}</p>}</Field>
         <Field label="해법">{p.solution && <p>{p.solution}</p>}</Field>
         <Field label="핵심 기능">{p.key_features?.length ? <Bullets items={p.key_features} /> : null}</Field>
@@ -783,25 +891,26 @@ export default function Detail({ id, from, desktop, wide }) {
         </div>
       </Section>
 
-      <Section id="competition" n={3} title="경쟁">
+      <Section id="competition" n={3} title="경쟁" onReport={setReportSection}>
         <Competition startup={s} />
       </Section>
 
-      <Section id="team" n={4} title="팀">
+      <Section id="team" n={4} title="팀" onReport={setReportSection}>
         <Founders startup={s} />
       </Section>
 
-      <Section id="funding" n={5} title="투자">
+      <Section id="funding" n={5} title="투자" onReport={setReportSection}>
         <p className="funding-sum">
           <Meta
             items={[
               <span key="t">
-                누적 <strong className={s._raised ? numClass(s._raised) : ''}>{s._raised || '미공개'}</strong>
+                누적 <strong className={s._raised ? numClass(s._raised) : ''}>{amountMain(s._raised) || '미공개'}</strong>
               </span>,
               s.funding?.funding_history?.length ? `라운드 ${s.funding.funding_history.length}회` : null,
             ]}
           />
         </p>
+        <AmountNote text={s._raised} note={s.funding?.total_raised_note} />
         <FundingTimeline funding={s.funding} />
         {s.funding?.latest_round?.notable_investors?.length > 0 && (
           <Field label="참여 투자자">
@@ -812,7 +921,7 @@ export default function Detail({ id, from, desktop, wide }) {
         )}
       </Section>
 
-      <Section id="market" n={6} title="시장">
+      <Section id="market" n={6} title="시장" onReport={setReportSection}>
         <Field label="시장 규모" tag={<Tag tone="warn">AI 추정</Tag>}>
           {mo.tam_sam_som && <p>{mo.tam_sam_som}</p>}
         </Field>
@@ -834,12 +943,12 @@ export default function Detail({ id, from, desktop, wide }) {
       </Section>
 
       {hasLens && (
-        <Section id="korea" n={7} title="한국에서는">
+        <Section id="korea" n={7} title="한국에서는" onReport={setReportSection}>
           <KoreaSection startup={s} state={lensState} />
         </Section>
       )}
 
-      <Section id="sources" n={hasLens ? 8 : 7} title="출처와 신뢰">
+      <Section id="sources" n={hasLens ? 8 : 7} title="출처와 신뢰" onReport={setReportSection}>
         <Sources startup={s} />
       </Section>
 
@@ -868,6 +977,7 @@ export default function Detail({ id, from, desktop, wide }) {
         </div>
       )}
       {share.sheet}
+      <ReportSheet startup={s} section={reportSection} onClose={() => setReportSection(null)} />
     </article>
   )
 }

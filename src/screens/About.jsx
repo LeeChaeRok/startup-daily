@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import Icon from '../components/Icon.jsx'
-import startups, { correctionList, getDomain, stats } from '../lib/data.js'
+import { startups, correctionList, getDomain, stats } from '../lib/data.js'
 import { useReadLog, useSaved, useTheme } from '../lib/hooks.js'
 import { dotDate } from '../lib/format.js'
 import { scrollToSection } from './detail-hooks.jsx'

@@ -8,6 +8,7 @@
  *   node scripts/generate-daily.mjs --candidates c.json --out tmp.json
  *                                                   skip the LLM: run selection, link checks and merge on a
  *                                                   JSON array of finished profiles (offline testing)
+ *   --logos                                         also save logos into public/logos on a dry run
  *
  * Env: OPENROUTER_API_KEY (required unless --candidates)
  *      OPENROUTER_MODELS   comma-separated, first = primary (default: DeepSeek V4 Flash, then Haiku 5.5)
@@ -20,7 +21,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { merge, normalize, selectCandidates, stripUrl, verifyLinks } from './lib/pipeline.mjs'
+import { dropDuplicates, merge, normalize, selectCandidates, stripUrl, verifyLinks } from './lib/pipeline.mjs'
+import { attachLogos } from './lib/logos.mjs'
 import { createClient, modelsFromEnv, OpenRouterError, parseOrRepair } from './lib/openrouter.mjs'
 import { updateLensFiles } from './lib/korea-lens.mjs'
 
@@ -29,6 +31,7 @@ const DATA_PATH = path.join(here, '../src/data/startups.json')
 const META_PATH = path.join(here, '../src/data/meta.json')
 const LENS_PATH = path.join(here, '../src/data/korea-lens.json')
 const LENS_INDEX_PATH = path.join(here, '../src/data/korea-lens-index.json')
+const LOGO_DIR = path.join(here, '../public/logos')
 
 const WANT = 5
 const DISCOVER = 12 // over-ask: selection rules and failed research drop some
@@ -83,9 +86,10 @@ const PROFILE_SHAPE = `{
               "key_differentiator": "", "moat": "", "competitive_position_summary": ""},
   "trending_reason": {"summary": "", "catalysts": [""], "growth_metrics": "",
               "media_mentions": [{"source": "", "title": "", "url": "https://…", "date": "YYYY-MM-DD"}]},
-  "funding": {"total_raised": "$12M", "valuation_estimate": "$80M (추정)",
-              "latest_round": {"stage": "", "amount": "$8M", "date": "YYYY-MM", "lead_investor": "", "notable_investors": [""]},
-              "funding_history": [{"stage": "", "amount": "", "date": "YYYY-MM", "lead_investor": ""}]},
+  "funding": {"total_raised": "$12M", "total_raised_note": "", "total_raised_usd": 12000000,
+              "valuation_estimate": "$80M (추정)",
+              "latest_round": {"stage": "", "amount": "$8M", "note": "", "date": "YYYY-MM", "lead_investor": "", "notable_investors": [""]},
+              "funding_history": [{"stage": "", "amount": "", "note": "", "date": "YYYY-MM", "lead_investor": ""}]},
   "market_outlook": {"tam_sam_som": "", "market_trend": "", "growth_potential": "", "risks": [""], "risk_mitigation": ""},
   "related_links": [{"title": "", "url": "https://…"}],
   "editor_pick_comment": "한 줄 코멘트"
@@ -97,7 +101,12 @@ Lead: ${c.why_now || '—'}
 
 Search for: the official site, founders and their backgrounds, the latest funding round and investors, what the product does and for whom, direct competitors, and press coverage from the last 90 days. Re-check that the company is still private and independent; set "status" accordingly.
 
-Writing: all prose in Korean (proper nouns stay in English), concrete and specific, no hype. Numbers you could not confirm are marked "(추정)"; unknown amounts are "비공개", never a bare unit like "M+". media_mentions only lists articles you actually opened in search results. editor_pick_comment is one sharp sentence.
+Writing: all prose in Korean (proper nouns stay in English), concrete and specific, no hype. Numbers you could not confirm are marked "(추정)" in the note. media_mentions only lists articles you actually opened in search results. editor_pick_comment is one sharp sentence.
+
+Funding amounts (strict):
+- "total_raised" and every round "amount" hold the figure ONLY, in the currency the source reported: "$12.6M", "약 131억 엔", "약 173억원", "₹65 crore". Unknown → "비공개". Never a bare unit like "M+", never parentheses or sentences.
+- Explanations go in "total_raised_note" / the round's "note": what is included (grants, loans), which source, disagreements between sources, a USD conversion. Empty string when there is nothing to add.
+- "total_raised_usd" is a plain number in US dollars (12600000), or null when unknown. Convert from the original currency yourself; do not copy a conversion you cannot check.
 
 Reply with ONLY a JSON object in this shape:
 ${PROFILE_SHAPE}`
@@ -203,16 +212,29 @@ async function main() {
 
   const generatedAt = new Date().toISOString()
   const normalized = accepted.map(({ _model, ...c }) =>
-    normalize(c, { date, model: _model || 'manual', generatedAt }),
+    normalize(c, { date, model: _model || 'manual', generatedAt, log: console.log }),
   )
-  const { profiles: verified, kept, dropped } = await verifyLinks(normalized, {
+  // ids and names are final only now; catch a company already published under another id
+  const { kept: unique } = dropDuplicates(normalized, existing, { log: console.log })
+  if (unique.length < 3) throw new Error(`Only ${unique.length} profiles left after duplicate checks`)
+  const { profiles: verified, kept, dropped } = await verifyLinks(unique, {
     searched,
     checkedAt: generatedAt,
     log: console.log,
   })
   console.log(`Links: kept ${kept}, dropped ${dropped} unverifiable`)
 
-  const merged = merge(existing, verified, retainIssues)
+  // Logos are saved into public/logos; a dry run (--out elsewhere) skips them unless --logos.
+  if (outPath === DATA_PATH || args.includes('--logos')) {
+    try {
+      const { ok, failed } = await attachLogos(verified, { dir: LOGO_DIR, log: console.log })
+      console.log(`Logos: ${ok} saved, ${failed} missing`)
+    } catch (err) {
+      console.log(`logos skipped: ${err.message}`)
+    }
+  }
+
+  const merged = merge(existing, verified, retainIssues, { log: console.log })
   fs.writeFileSync(outPath, JSON.stringify(merged, null, 2) + '\n', 'utf-8')
 
   if (outPath === DATA_PATH) {

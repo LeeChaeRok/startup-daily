@@ -1,45 +1,18 @@
-import raw from '../data/startups.json'
-import corrections from '../data/corrections.json'
-import lensIndex from '../data/korea-lens-index.json'
+import { formatUSD as fmtUSD, parseAmount, shortAmount } from './amount.js'
 
-// KRW/EUR → USD rough rates, only used for ordering and summary stats.
-const FX = { USD: 1, KRW: 1 / 1400, EUR: 1.08 }
-
-/**
- * Parse loose funding strings ("$330M+", "약 1,000억 원+", "€825M+", "₩70B+")
- * into an approximate USD number. Returns null when unparseable.
- */
-export function parseAmountUSD(text) {
-  if (!text || typeof text !== 'string') return null
-  const t = text.replace(/,/g, '')
-
-  const eok = t.match(/([\d.]+)\s*(?:~\s*[\d.]+\s*)?억/)
-  if (eok) {
-    const jo = t.match(/([\d.]+)\s*조/)
-    const krw = (jo ? parseFloat(jo[1]) * 1e12 : 0) + parseFloat(eok[1]) * 1e8
-    return krw * FX.KRW
-  }
-  const joOnly = t.match(/([\d.]+)\s*조/)
-  if (joOnly) return parseFloat(joOnly[1]) * 1e12 * FX.KRW
-
-  const m = t.match(/([$€₩])\s*([\d.]+)\s*([KMBT])?/i)
-  if (!m) return null
-  const cur = m[1] === '€' ? 'EUR' : m[1] === '₩' ? 'KRW' : 'USD'
-  const mult = { K: 1e3, M: 1e6, B: 1e9, T: 1e12 }[m[3]?.toUpperCase()] || 1
-  return parseFloat(m[2]) * mult * FX[cur]
-}
+/* Data arrives at start-up (see load.js → initData); everything below reads the
+   module-level bindings that initData fills. */
 
 /** Some generated records lost their digits ("M+"); treat those as unknown. */
 export function cleanAmount(text) {
   return typeof text === 'string' && /\d/.test(text) ? text : null
 }
 
-export function formatUSD(n) {
-  if (n == null) return '—'
-  if (n >= 1e9) return `$${(n / 1e9).toFixed(n >= 1e10 ? 0 : 1)}B`
-  if (n >= 1e6) return `$${Math.round(n / 1e6)}M`
-  return `$${Math.round(n / 1e3)}K`
-}
+/** Approximate USD for a loose amount string, or null. */
+export const parseAmountUSD = (text) => parseAmount(text)?.usd ?? null
+
+/** Whole millions for summary figures ("≈$15M"); lists keep one decimal via shortAmount. */
+export const formatUSD = (n) => (n == null ? '—' : n >= 1e6 && n < 1e9 ? `$${Math.round(n / 1e6)}M` : (fmtUSD(n) ?? '—'))
 
 export function getDomain(url) {
   try {
@@ -140,42 +113,59 @@ export const isKorean = (s) => (s.headquarters?.country_ko || '').includes('한�
 
 const norm = (t) => (t || '').normalize('NFC').toLowerCase().replace(/\s+/g, '')
 
-const startups = raw
-  .map((s) => {
-    const category = Array.isArray(s.category) ? s.category : []
-    const founders = Array.isArray(s.founders) ? s.founders : []
-    const correction = corrections[s.id] ? { ...corrections[s.id], kind: CORRECTION_KIND(corrections[s.id].status) } : null
-    const stage = stageLabel(s.company_stage)
-    return {
-      ...s,
-      category,
-      founders,
-      _raised: cleanAmount(s.funding?.total_raised),
-      _raisedUSD: parseAmountUSD(cleanAmount(s.funding?.total_raised)),
-      _domain: getDomain(s.website),
-      _sector: sectorOf(category),
-      _stage: stage,
-      _stageGroup: stageGroupOf(stage, correction),
-      _region: regionOf(s.headquarters?.country_ko),
-      _correction: correction,
-      _lens: lensIndex[s.id] || null,
-      _search: {
-        name: norm(`${s.name_ko} ${s.name_en}`),
-        body: norm(`${s.tagline} ${category.join(' ')}`),
-        founders: founders.map((f) => ({ label: f.name_ko || f.name_en, key: norm(`${f.name_ko} ${f.name_en}`) })),
-        competitors: [
-          ...(s.competitive_landscape?.direct_competitors || []).map((c) => ({ label: c.name, key: norm(c.name) })),
-          ...(lensIndex[s.id]?.n || []).map((n) => ({ label: n, key: norm(n), lens: true })),
-        ],
-      },
-    }
-  })
-  .sort((a, b) => b.date.localeCompare(a.date))
+function prepare(raw, corrections, lensIndex) {
+  return raw
+    .map((s) => {
+      const category = Array.isArray(s.category) ? s.category : []
+      const founders = Array.isArray(s.founders) ? s.founders : []
+      const correction = corrections[s.id] ? { ...corrections[s.id], kind: CORRECTION_KIND(corrections[s.id].status) } : null
+      const stage = stageLabel(s.company_stage)
+      const raised = cleanAmount(s.funding?.total_raised)
+      return {
+        ...s,
+        category,
+        founders,
+        _raised: raised,
+        _raisedShort: shortAmount(raised),
+        _raisedUSD: Number.isFinite(s.funding?.total_raised_usd) ? s.funding.total_raised_usd : parseAmountUSD(raised),
+        _domain: getDomain(s.website),
+        _sector: sectorOf(category),
+        _stage: stage,
+        _stageGroup: stageGroupOf(stage, correction),
+        _region: regionOf(s.headquarters?.country_ko),
+        _correction: correction,
+        _lens: lensIndex[s.id] || null,
+        _search: {
+          name: norm(`${s.name_ko} ${s.name_en}`),
+          body: norm(`${s.tagline} ${category.join(' ')}`),
+          founders: founders.map((f) => ({ label: f.name_ko || f.name_en, key: norm(`${f.name_ko} ${f.name_en}`) })),
+          competitors: [
+            ...(s.competitive_landscape?.direct_competitors || []).map((c) => ({ label: c.name, key: norm(c.name) })),
+            ...(lensIndex[s.id]?.n || []).map((n) => ({ label: n, key: norm(n), lens: true })),
+          ],
+        },
+      }
+    })
+    .sort((a, b) => b.date.localeCompare(a.date))
+}
 
+/** All companies, newest issue first. */
+export let startups = []
 /** Issue dates, newest first. */
-export const dates = [...new Set(startups.map((s) => s.date))]
+export let dates = []
+export let correctionList = []
+export let stats = { issues: 0, companies: 0, first: null, last: null }
+let issueCache = new Map()
 
-const issueCache = new Map(dates.map((d) => [d, startups.filter((s) => s.date === d)]))
+export function initData({ startups: raw, corrections = {}, lensIndex = {} }) {
+  startups = prepare(raw, corrections, lensIndex)
+  dates = [...new Set(startups.map((s) => s.date))]
+  issueCache = new Map(dates.map((d) => [d, startups.filter((s) => s.date === d)]))
+  correctionList = startups
+    .filter((s) => s._correction)
+    .sort((a, b) => b._correction.checked.localeCompare(a._correction.checked))
+  stats = { issues: dates.length, companies: startups.length, first: dates[dates.length - 1], last: dates[0] }
+}
 
 export function byDate(date) {
   return issueCache.get(date) || []
@@ -220,16 +210,3 @@ export function search(query, list = startups) {
   }
   return out
 }
-
-export const correctionList = startups
-  .filter((s) => s._correction)
-  .sort((a, b) => b._correction.checked.localeCompare(a._correction.checked))
-
-export const stats = {
-  issues: dates.length,
-  companies: startups.length,
-  first: dates[dates.length - 1],
-  last: dates[0],
-}
-
-export default startups

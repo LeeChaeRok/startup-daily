@@ -15,16 +15,13 @@ function initials(name = '') {
 }
 
 /**
- * Company mark. The monogram is always painted first; a logo image (explicit
- * logo_url, else the site's favicon via Google s2) covers it only once it has
- * loaded at a usable size, so a blank tile never shows.
+ * Company mark. The monogram is always painted first; the logo the generator saved
+ * under /logos (logo_url) covers it once loaded. No third-party favicon fallback:
+ * the generator already tried those and kept only usable images.
  */
 export default function Logo({ startup, size = 40, person = false, name }) {
   const label = name || startup?.name_en || startup?.name_ko || ''
-  const src = person
-    ? null
-    : startup?.logo_url ||
-      (startup?._domain ? `https://www.google.com/s2/favicons?domain=${startup._domain}&sz=128` : null)
+  const src = person ? null : startup?.logo_url || null
   const [loaded, setLoaded] = useState(false)
   const idx = person ? 7 : monoIndex(label)
   const text = initials(label)
@@ -51,7 +48,6 @@ export default function Logo({ startup, size = 40, person = false, name }) {
           height={size}
           loading="lazy"
           decoding="async"
-          referrerPolicy="no-referrer"
           onLoad={(e) => setLoaded(e.currentTarget.naturalWidth >= 48)}
         />
       )}

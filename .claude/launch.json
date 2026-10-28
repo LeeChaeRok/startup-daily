@@ -4,8 +4,29 @@
     {
       "name": "startup-daily",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev", "--", "--port", "5173"],
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "5173"
+      ],
       "port": 5173
+    },
+    {
+      "name": "startup-daily-preview",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "preview",
+        "--",
+        "--port",
+        "4173",
+        "--host",
+        "--strictPort"
+      ],
+      "port": 4173,
+      "url": "http://sd.localhost:4173"
     }
   ]
 }

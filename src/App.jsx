@@ -1,18 +1,20 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { AppHeader, Footer, TabBar } from './components/Chrome.jsx'
 import { ToastProvider } from './components/Toast.jsx'
+import { useToast } from './components/toast-context.js'
 import { EmptyState } from './components/bits.jsx'
 import StartupRow from './components/StartupRow.jsx'
 import { IssueHeader, IssueList, IssueMobile, IssueOverview, IssueRail } from './screens/Issue.jsx'
 import Detail, { DetailRail } from './screens/Detail.jsx'
-import { useContextList } from './screens/detail-hooks.jsx'
+import { onLensReady, useContextList } from './screens/detail-hooks.jsx'
 import Explore from './screens/Explore.jsx'
 import Saved from './screens/Saved.jsx'
 import About from './screens/About.jsx'
 import { byId, dates, issueNo } from './lib/data.js'
 import { navigate, useMediaQuery, useRoute } from './lib/hooks.js'
 import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
-import { longDate } from './lib/format.js'
+import { longDate, monthDay } from './lib/format.js'
+import { onUpdate } from './lib/update.js'
 
 /* ---------- Route → screen ---------- */
 
@@ -147,6 +149,30 @@ function NotFound({ head, arg }) {
   )
 }
 
+/* ---------- Background news: a new issue, a finished "한국에서는" request ---------- */
+
+function Notifier() {
+  const toast = useToast()
+  useEffect(
+    () =>
+      onUpdate((kind, meta) => {
+        const label = kind === 'issue' && meta?.last_issue_date ? `${monthDay(meta.last_issue_date)} 호가 나왔어요` : '새 버전이 있어요'
+        toast(label, { label: '새로고침', onClick: () => window.location.reload() }, 15000)
+      }),
+    [toast],
+  )
+  useEffect(
+    () =>
+      onLensReady((id) => {
+        if (window.location.hash.startsWith(`#/s/${id}`)) return // already looking at it
+        const s = byId(id)
+        toast(`${s?.name_ko || '요청한 회사'} 한국 분석이 준비됐어요`, { label: '보기', onClick: () => navigate(`/s/${id}`) }, 10000)
+      }),
+    [toast],
+  )
+  return null
+}
+
 /* ---------- App ---------- */
 
 export default function App() {
@@ -182,6 +208,7 @@ export default function App() {
 
   return (
     <ToastProvider>
+      <Notifier />
       <a className="skip" href="#main" onClick={(e) => (e.preventDefault(), document.getElementById('main')?.focus())}>
         본문으로 건너뛰기
       </a>

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, useSyncExternalStore } from 'react'
 import Sheet from '../components/Sheet.jsx'
 import { useToast } from '../components/toast-context.js'
 import { byDate, byId, issueNo } from '../lib/data.js'
@@ -22,10 +22,22 @@ export function sectionsFor(hasKorea) {
   return [...BASE_SECTIONS, ...(hasKorea ? [KOREA_SECTION] : []), SOURCES_SECTION]
 }
 
-/* Analyses that shipped with the site are loaded on demand (they are the bulk of the data).
-   Others are generated when the reader asks, by /api/korea-lens, and kept on this device. */
-const lensCache = new Map()
+/* Analyses that shipped with the site come from /data/korea-lens.json, fetched on demand.
+   Others are generated when the reader asks, by /api/korea-lens, and kept on this device.
+   Requests live in this module, not in the screen: leaving the detail page and coming
+   back must not lose a 2~3 minute generation or start a second, paid one. */
+const lensCache = new Map() // id → entry | null (known absent)
+const staticFailed = new Set() // ids whose shipped analysis could not be fetched (offline, …)
+const requests = new Map() // id → { status: 'loading' | 'error', started, message }
+const readyListeners = new Set()
+const listeners = new Set()
+let version = 0
 let lensFile = null
+const emit = () => {
+  version++
+  listeners.forEach((l) => l())
+}
+const subscribe = (l) => (listeners.add(l), () => listeners.delete(l))
 const deviceKey = (id) => `sd_lens:${id}`
 
 function readDevice(id) {
@@ -37,75 +49,120 @@ function readDevice(id) {
   }
 }
 
+function loadStatic(id) {
+  staticFailed.delete(id)
+  lensFile ??= fetch('/data/korea-lens.json')
+    .then((res) => {
+      if (!res.ok) throw new Error(String(res.status))
+      return res.json()
+    })
+    .catch((err) => {
+      lensFile = null // let the next attempt try again
+      throw err
+    })
+  lensFile.then(
+    (file) => {
+      lensCache.set(id, file[id] || null)
+      emit()
+    },
+    () => {
+      staticFailed.add(id)
+      emit()
+    },
+  )
+}
+
+async function requestLens(id) {
+  if (requests.get(id)?.status === 'loading') return
+  const started = Date.now()
+  requests.set(id, { status: 'loading', started, message: '' })
+  emit()
+  const ctl = new AbortController()
+  const timer = setTimeout(() => ctl.abort(), 330_000)
+  const fail = (message) => {
+    requests.set(id, { status: 'error', started, message })
+    emit()
+  }
+  try {
+    const res = await fetch(`/api/korea-lens?id=${encodeURIComponent(id)}`, { signal: ctl.signal })
+    const type = res.headers.get('content-type') || ''
+    const body = type.includes('json') ? await res.json() : null
+    if (!res.ok || !body?.entry) return fail(body?.message || '분석을 불러오지 못했어요. 잠시 뒤에 다시 시도해 주세요.')
+    lensCache.set(id, body.entry)
+    try {
+      localStorage.setItem(deviceKey(id), JSON.stringify(body.entry))
+    } catch {
+      /* storage full or blocked: it just won't be remembered */
+    }
+    requests.delete(id)
+    emit()
+    readyListeners.forEach((l) => l(id))
+  } catch (err) {
+    fail(err.name === 'AbortError' ? '시간이 너무 오래 걸려 멈췄어요. 다시 시도해 주세요.' : '네트워크에 문제가 있었어요. 다시 시도해 주세요.')
+  } finally {
+    clearTimeout(timer)
+  }
+}
+
+/** True while any "한국에서는" generation is running (the updater waits for it). */
+export const lensBusy = () => [...requests.values()].some((r) => r.status === 'loading')
+
+/** Called with the id when a requested analysis arrives, wherever the reader is. */
+export function onLensReady(listener) {
+  readyListeners.add(listener)
+  return () => readyListeners.delete(listener)
+}
+
+// what the reader sees during the 2~3 minutes, by elapsed time
+const PHASES = [
+  [0, '비슷한 해외 제품을 찾는 중이에요'],
+  [40, '한국에 이미 있는 곳을 검색하는 중이에요'],
+  [120, '링크를 확인하고 정리하는 중이에요'],
+  [210, '거의 다 됐어요. 조금만 더 기다려 주세요'],
+]
+const phaseAt = (sec) => PHASES.filter(([t]) => sec >= t).at(-1)[1]
+
 /**
- * Returns { lens, status, message, elapsed, run }.
- *   lens   — the analysis, or null/undefined while loading or absent
+ * Returns { lens, status, message, elapsed, phase, run, retry }.
  *   status — 'ready' | 'loading' | 'idle' (nothing yet, can be requested) | 'error'
+ *            | 'static-error' (a shipped analysis exists but could not be fetched)
  */
 export function useKoreaLens(id, hasStatic, canRequest) {
-  const [, tick] = useState(0)
-  const [request, setRequest] = useState({ status: 'idle', message: '', started: 0 })
-  const [now, setNow] = useState(0)
-  const rerender = () => tick((n) => n + 1)
+  useSyncExternalStore(subscribe, () => version)
+  const req = requests.get(id)
+  const [now, setNow] = useState(() => Date.now())
 
   useEffect(() => {
-    if (!hasStatic || lensCache.has(id)) return
-    let live = true
-    ;(lensFile ??= import('../data/korea-lens.json'))
-      .then((m) => {
-        lensCache.set(id, (m.default || m)[id] || null)
-        if (live) rerender()
-      })
-      .catch(() => lensCache.set(id, null))
-    return () => {
-      live = false
-    }
+    if (hasStatic && !lensCache.has(id) && !staticFailed.has(id)) loadStatic(id)
   }, [id, hasStatic])
 
   // while a request runs, tick once a second so the reader sees time passing
+  const loading = req?.status === 'loading'
   useEffect(() => {
-    if (request.status !== 'loading') return
+    if (!loading) return
     const t = setInterval(() => setNow(Date.now()), 1000)
     return () => clearInterval(t)
-  }, [request.status])
+  }, [loading])
 
-  const run = async () => {
-    if (!canRequest || request.status === 'loading') return
-    const started = Date.now()
-    setNow(started)
-    setRequest({ status: 'loading', message: '', started })
-    const ctl = new AbortController()
-    const timer = setTimeout(() => ctl.abort(), 330_000)
-    try {
-      const res = await fetch(`/api/korea-lens?id=${encodeURIComponent(id)}`, { signal: ctl.signal })
-      const type = res.headers.get('content-type') || ''
-      const body = type.includes('json') ? await res.json() : null
-      if (!res.ok || !body?.entry) {
-        setRequest({ status: 'error', message: body?.message || '분석을 불러오지 못했어요. 잠시 뒤에 다시 시도해 주세요.', started })
-        return
-      }
-      lensCache.set(id, body.entry)
-      try {
-        localStorage.setItem(deviceKey(id), JSON.stringify(body.entry))
-      } catch {
-        /* storage full or blocked: it just won't be remembered */
-      }
-      setRequest({ status: 'idle', message: '', started })
-    } catch (err) {
-      setRequest({
-        status: 'error',
-        message: err.name === 'AbortError' ? '시간이 너무 오래 걸려 멈췄어요. 다시 시도해 주세요.' : '네트워크에 문제가 있었어요. 다시 시도해 주세요.',
-        started,
-      })
-    } finally {
-      clearTimeout(timer)
-    }
+  if (!hasStatic && !lensCache.has(id)) lensCache.set(id, readDevice(id))
+  const cached = lensCache.get(id)
+  const elapsed = loading ? Math.max(0, Math.round((now - req.started) / 1000)) : 0
+  let status
+  if (cached) status = 'ready'
+  else if (loading) status = 'loading'
+  else if (hasStatic && staticFailed.has(id)) status = 'static-error'
+  else if (hasStatic && cached === undefined) status = 'loading'
+  else status = req?.status || 'idle'
+
+  return {
+    lens: cached || null,
+    status,
+    message: req?.message || '',
+    elapsed,
+    phase: loading ? phaseAt(elapsed) : '',
+    run: () => canRequest && requestLens(id),
+    retry: () => loadStatic(id),
   }
-
-  const cached = lensCache.has(id) ? lensCache.get(id) : hasStatic ? undefined : (lensCache.set(id, readDevice(id)), lensCache.get(id))
-  const status = request.status === 'loading' ? 'loading' : cached ? 'ready' : hasStatic && cached === undefined ? 'loading' : request.status
-  const elapsed = request.status === 'loading' ? Math.max(0, Math.round((now - request.started) / 1000)) : 0
-  return { lens: cached || null, status, message: request.message, elapsed, run }
 }
 
 /** Ordered list this detail page belongs to: its issue, or the saved list. */

@@ -5,7 +5,7 @@ import StartupRow from '../components/StartupRow.jsx'
 import Sheet from '../components/Sheet.jsx'
 import { CorrectionBadge, EmptyState, SaveButton } from '../components/bits.jsx'
 import { IssueRowItem } from './Issue.jsx'
-import startups, { LENS_FILTER, LENS_VERDICTS, REGIONS, SECTORS, STAGE_GROUPS, dates, search, stats } from '../lib/data.js'
+import { startups, LENS_FILTER, LENS_VERDICTS, REGIONS, SECTORS, STAGE_GROUPS, dates, search, stats } from '../lib/data.js'
 import { buildQuery, navigate, useReadLog } from '../lib/hooks.js'
 import { monthDay, numClass, weekLabel } from '../lib/format.js'
 
@@ -184,7 +184,13 @@ function ResultsTable({ rows, sort, update }) {
             <td>{s._correction ? <CorrectionBadge correction={s._correction} /> : s._stage}</td>
             <td>{s.headquarters?.country_ko}</td>
             <td className="results__num">
-              {s._raised ? <span className={numClass(s._raised)}>{s._raised}</span> : <span className="muted">미공개</span>}
+              {s._raisedShort ? (
+                <span className={numClass(s._raisedShort)} title={s._raised}>
+                  {s._raisedShort}
+                </span>
+              ) : (
+                <span className="muted">미공개</span>
+              )}
             </td>
             <td className="results__num mono">{s.founded_year}</td>
             <td className="results__num">{monthDay(s.date)}</td>
