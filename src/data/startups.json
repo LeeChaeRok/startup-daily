@@ -1,5 +1,1035 @@
 [
   {
+    "name_en": "Ailytics",
+    "name_ko": "아일리틱스",
+    "tagline": "기존 CCTV를 산업 현장 실시간 안전 레이어로 바꾸는 비전 AI",
+    "category": [
+      "산업안전",
+      "컴퓨터비전",
+      "B2B SaaS"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Singapore",
+      "country": "Singapore",
+      "country_ko": "싱가포르"
+    },
+    "company_stage": "Series A",
+    "employee_count": "51-100 (추정)",
+    "website": "https://www.ailytics.ai/",
+    "founders": [
+      {
+        "name_en": "Lenard Tan",
+        "name_ko": "레나드 탄",
+        "role": "Co-Founder & CEO",
+        "background": "NUS와 HDB 공동 연구 프로젝트 출신으로 2021년 Ailytics 공동 창업. 이전에 건설·엔지니어링 분야 경력 보유(추정).",
+        "notable_achievement": "400개 이상의 현장 배포를 15개국으로 확장, 챌린지 에어포트 터미널 5 건설 현장에 1,000대 이상의 카메라 연동."
+      },
+      {
+        "name_en": "Prateek Manocha",
+        "name_ko": "프라틱 마노차",
+        "role": "Co-Founder & CTO",
+        "background": "기술 전반 총괄. 컴퓨터 비전 및 AI 엔지니어링 전문가(추정). NUS-HDB 공동 연구 프로젝트 출신.",
+        "notable_achievement": "단일 2D CCTV 피드에서 3D 공간 이해를 도출하는 Ailyssa 플랫폼과 AilyssaX 컨텍스트 추론 엔진 개발 주도."
+      }
+    ],
+    "team_highlights": "2026년 시리즈 A 이후 미국, 일본, 호주, 걸프 지역에 현지 팀 확장 중. 설립 이후 5년간의 라이브 배포 데이터로 모델을 고도화.",
+    "product": {
+      "summary": "기존 산업용 CCTV에 소프트웨어 레이어를 얹어 안전·보안·생산성 인사이트를 실시간 제공하는 비전 AI 플랫폼.",
+      "problem_statement": "산업 현장에 설치된 수십 대의 CCTV를 사람이 모두 모니터링하는 것은 불가능하며, 사고 후에야 녹화 영상을 확인하는 경우가 대부분. 안전 관리자들은 모든 교대 시간 동안 모든 카메라를 주시할 수 없음.",
+      "solution": "이미 설치된 IP 카메라(2MP 이상, RTSP 지원)를 활용해 별도 하드웨어 교체 없이 2주 내에 구축. AI가 24시간 모든 카메라를 감시하고 위험 발생 즉시 현장팀에 경고를 전송.",
+      "key_features": [
+        "PPE 감지 (안전모, 조끼, 장갑 누락 탐지)",
+        "장비 접근 거리 측정 (단일 카메라의 3D 재구성 기반)",
+        "현수 하중 아래 작업자 위험 감지, 낙하 구역 실시간 표시",
+        "연기·화재 조기 감지",
+        "제한 구역 무단 출입 탐지",
+        "개방된 가장자리 접근 작업자 경고",
+        "50개 이상의 설정 가능한 안전·보안·생산성 유스케이스"
+      ],
+      "tech_stack_or_innovation": "단일 2D CCTV 피드에서 3D 공간 이해를 도출하는 독자적인 컴퓨터 비전 기술. LiDAR, 레이더, 추가 센서 불필요. 비전 언어 모델(VLM) 기반의 AilyssaX 컨텍스트 추론 엔진은 다단계 작업 절차 준수 여부를 순서대로 검증. 5년간의 실배포 데이터로 비·먼지·저조도·폐쇄된 시야·수십 년 된 카메라 환경에서도 작동하도록 학습됨.",
+      "target_customer": "건설, 제조, 물류, 항만, 운송 등 중공업 분야의 EHS(환경·보건·안전) 및 운영 관리팀. 특히 기존 CCTV 인프라를 보유한 중견 기업이 주요 타깃.",
+      "business_model": "B2B SaaS. 카메라당 또는 현장당 구독 기반 과금(추정). 별도 하드웨어 판매 없이 소프트웨어 레이어만 제공."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "viAct",
+          "comparison": "홍콩 기반으로 원격 파이프라인 코리더 등으로 영역을 확장하며 유사한 비전 AI 안전 분석 제공."
+        },
+        {
+          "name": "Lytehouse",
+          "comparison": "Google Cloud와 협력해 AI 비디오 인텔리전스를 통한 작업장 안전 솔루션 제공."
+        },
+        {
+          "name": "Voxel",
+          "comparison": "미국 기반, CCTV 기반 안전 분석 솔루션을 판매."
+        },
+        {
+          "name": "Intenseye",
+          "comparison": "뉴욕 기반, 카메라 안전 분석을 산업 현장에 공급."
+        },
+        {
+          "name": "Protex AI",
+          "comparison": "더블린 기반, 유사한 카메라 기반 안전 분석 서비스를 제공."
+        }
+      ],
+      "key_differentiator": "실전 데이터 기반의 모델 강건성. 열악한 환경(비, 먼지, 저조도, 폐쇄 시야, 낡은 카메라)에서도 작동하도록 5년간 실배포로 학습. 별도 하드웨어 없이 기존 CCTV만으로 3D 공간 이해를 구현.",
+      "moat": "비공개 데이터 접근성 — 각 산업 현장의 비공개 영상을 통해 도메인 특화 모델을 지속적으로 고도화. Tin Men Capital은 '엄청난 진입 장벽'이라고 평가. 고객 이탈률 1% 미만(회사 주장).",
+      "competitive_position_summary": "아시아(싱가포르) 기반으로 15개국, 400개 이상의 배포를 달성하며 글로벌 확장 중. 미국 중견 산업 기업을 공략해 기존 업체들이 가격으로 배제했던 시장을 개척하려는 전략."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 26일 발표된 US$7.4M 시리즈 A 유치로 주목받음. 건설·제조 등 전통 산업의 AI 도입이 가속화되고 있으며, 싱가포르 정부의 'AI 경제' 육성 정책과 맞물려 현지 딥테크 스타트업으로서의 상징성이 큼.",
+      "catalysts": [
+        "2026-10-26: US$7.4M 시리즈 A 발표 (Tin Men Capital 주도)",
+        "2026-06: AilyssaX 컨텍스트 추론 엔진 출시",
+        "2026-04: Safie (일본 최대 클라우드 카메라 기업)와 MOU 체결, 이후 Safie가 투자자로 참여",
+        "일본 30대 건설사 중 29곳에 공급하는 Safie와의 파트너십을 통해 일본 시장 진출 가속화"
+      ],
+      "growth_metrics": "2024년 4월 프리 시리즈 A 이후 70개 프로젝트(4개국)에서 400개 이상의 배포(15개국)로 성장. 누적 570만 건 이상의 위험 요소(화재·안전 위반 등) 감지. 5억㎡ 이상의 작업 현장을 모니터링. 고객 보고 기준 TRIR(총 기록 가능한 재해율) 73% 감소, 안전 비준수 84% 감소.",
+      "media_mentions": [
+        {
+          "source": "Ailytics 공식 블로그",
+          "title": "Tin Men Capital leads US$7.4M Series A for vision AI startup Ailytics to expand across APAC, US and Gulf",
+          "url": "https://www.ailytics.ai/blog/ailytics-series-a-announcement",
+          "date": "2026-10-26",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "e27",
+          "title": "Ailytics raises US$7.4M Series A to make old CCTV cameras earn their keep",
+          "url": "https://e27.co/ailytics-bags-us7-4m-series-a-to-make-old-cctv-cameras-earn-their-keep-20261026/",
+          "date": "2026-10-26",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "Dealroom",
+          "title": "Ailytics raises $7.4M Series A to scale industrial vision AI from Singapore",
+          "url": "https://app.dealroom.co/news/note/ailytics-raises-7-4m-series-a-to-scale-industrial-vision-ai-from-singapore",
+          "date": "2026-10-26",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "The Business Times",
+          "title": "Software startup Ailytics leverages AI to improve industrial safety",
+          "url": "https://www.businesstimes.com.sg/events-awards/design-ai-tech-awards/design-ai-and-tech-awards/software-startup-ailytics-leverages-ai-improve-industrial-safety",
+          "date": "알 수 없음",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "US$10.1M",
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "US$7.4M",
+        "date": "2026-10",
+        "lead_investor": "Tin Men Capital (싱가포르 기반 VC)",
+        "notable_investors": [
+          "SG Growth Capital (SEEDS 포함)",
+          "Safie (일본 최대 클라우드 카메라 기업)",
+          "일본 대형 건설사 중 하나(비공개)",
+          "패밀리오피스 및 기존 투자자"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Pre-Series A",
+          "amount": "US$2.7M",
+          "date": "2024-04",
+          "lead_investor": "Tin Men Capital"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "전 세계 산업 안전 시장과 비전 AI 시장의 교집합. 산업용 CCTV 분석 시장은 수십억 달러 규모(추정). Ailytics는 현재 15개국에 진출해 있으며, 미국·일본·호주·걸프 지역을 우선 공략.",
+      "market_trend": "산업 현장의 AI 기반 안전 관리 도입이 전 세계적으로 확대되는 중. 건설·물류 등 전통 산업에서의 AI 수요 증가가 주요 동력.",
+      "growth_potential": "중동 걸프 지역 및 미국 중견 산업 기업 시장 공략을 통해 글로벌 확장 가속화 예상.",
+      "risks": [
+        "경쟁 심화 — 전 세계적으로 유사한 카메라 기반 안전 분석 스타트업이 다수 존재",
+        "프라이버시 및 노동 인권 문제 — 카메라 AI 감시가 근로자 감시·징계 목적으로 악용될 가능성 제기",
+        "고객 보고 수치에 대한 독립 감사 부재 — TRIR 감소 등의 성과 지표가 자체 보고에 의존",
+        "미국 시장 진출 경쟁 — 로컬 기업(Voxel, Intenseye 등)과의 경쟁 격화 가능성",
+        "모델 성능 유지 및 확장 부담 — 방대한 CCTV 데이터를 처리하는 인프라 비용 증가"
+      ],
+      "risk_mitigation": "일본 최대 건설사 29곳에 공급하는 Safie와의 파트너십으로 일본 시장 진입 장벽 낮춤. 고객 이탈률 1% 미만을 유지하며 안정적인 수익 기반 구축. 도메인 특화 비공개 데이터를 통한 모델 차별화로 경쟁사 대비 우위 확보."
+    },
+    "related_links": [
+      {
+        "title": "Ailytics 공식 웹사이트",
+        "url": "https://www.ailytics.ai/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "Ailytics 소개 페이지",
+        "url": "https://www.ailytics.ai/about-us",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "Tin Men Capital 포트폴리오 공지 (프리 A)",
+        "url": "https://www.tinmen.asia/news/portfolio-announcement-ailytics",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      }
+    ],
+    "editor_pick_comment": "별도 하드웨어 없이 낡은 CCTV에 소프트웨어만 얹어 15개국 400개 현장에서 작동하는, 싱가포르가 자신하는 산업용 비전 AI의 대표주자.",
+    "id": "ailytics-2026",
+    "date": "2026-10-28",
+    "logo_url": "",
+    "generated_at": "2026-10-28T01:47:09.351Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-28T01:47:09.351Z"
+    }
+  },
+  {
+    "name_en": "ACIMUS",
+    "name_ko": "아키무스",
+    "tagline": "대화형 AI로 BIM 모델을 만드는 일본 건설DX 스타트업",
+    "category": [
+      "건설 AI",
+      "BIM",
+      "프롭테크"
+    ],
+    "founded_year": 2024,
+    "headquarters": {
+      "city": "Chiyoda, Tokyo",
+      "country": "Japan",
+      "country_ko": "일본"
+    },
+    "company_stage": "Seed",
+    "employee_count": "1-10 (추정)",
+    "website": "https://www.acimus.com/",
+    "founders": [
+      {
+        "name_en": "Mitsutaka Kikuchi",
+        "name_ko": "키쿠치 미츠타카",
+        "role": "대표이사 CEO",
+        "background": "구체적인 이력은 이번 검색으로 확인 불가. 일본 건설업계의 BIM 도입 비용과 소프트웨어 숙련도 문제를 해결하려는 비전을 제시하고 있음.",
+        "notable_achievement": "2024년 9월 ACIMUS를 설립하고, 대화형 생성 AI 기반 BIM 클라우드 서비스를 직접 만들어냄."
+      }
+    ],
+    "team_highlights": "개발·운영 전반에 AI를 통합해 제품 코드의 90% 이상을 AI 에이전트가 작성하는 소수 정예 체제. 이번 시드 조달 후에도 인원 확대보다 제품 개발과 고객 가치에 집중한다는 방침.",
+    "product": {
+      "summary": "생성형 AI와 대화하면서 건물의 BIM 모델을 만들고 편집할 수 있는 웹 브라우저 기반 클라우드 서비스.",
+      "problem_statement": "일본 국토교통성이 BIM 도입을 확대하면서 신축과 기존 건물 모두에서 BIM 수요가 커지고 있다. 그러나 전문 BIM 소프트웨어의 학습 비용과 모델 작성 시간이 높아 소수의 전문가만 활용할 수 있는 구조다. 특히 도면만 남은 기존 건물은 BIM 모델을 새로 만들어야 해 유지관리 단계에서 진입 장벽이 크다.",
+      "solution": "자연어로 \"3층짜리 사무소를 만들어줘\" 같은 지시를 주면 AI가 BIM 모델을 생성·편집한다. 치수와 법규 기준을 AI가 자동 제안하고, 국제표준 IFC 형식으로 내보내 기존 BIM 소프트웨어와 연동할 수 있다.",
+      "key_features": [
+        "대화형 AI 기반 BIM 모델 생성/편집",
+        "치수 자동 제안: 사용자가 수치를 제시하지 않아도 일반적 치수와 건축법 기준에 맞는 값을 제안",
+        "건축 법규 Q&A: 건축기준법·도시계획법·소방법 등 설계 관련 법규를 채팅 AI로 질의",
+        "AI 건축 퍼스 생성: 모델 캡처, 스케치, 텍스트 지시 등으로 10~20초 내외 투시도 이미지 생성",
+        "IFC 내보내기: 국제표준 형식으로 모델을 내보내 기존 BIM·CAD 도구와 상호운용",
+        "ACIMUS KIWARI: 조건을 입력하면 BIM 모델안을 일괄 생성하는 건축설계 AI"
+      ],
+      "tech_stack_or_innovation": "브라우저 기반 클라우드 서비스로 전문 BIM 툴 설치 없이 사용 가능. 생성형 AI가 BIM 데이터 구조를 직접 만들고 IFC 국제표준으로 연동하는 것이 핵심. 내부적으로는 AI 에이전트가 코드의 90% 이상을 작성하는 AI 네이티브 개발 체제를 갖췄다.",
+      "target_customer": "설계사무소, 건설사, 그리고 JR동일본처럼 많은 건물을 보유한 철도·부동산·공공 부문의 유지관리 담당자. BIM 전문가가 아닌 실무자도 사용할 수 있게 하는 것이 목표.",
+      "business_model": "클라우드 SaaS 기반. PoC(시범 도입)에서 본계약으로 전환을 유도하고, 기존 건물 유지관리 BIM화 프로젝트별로 매출을 확장하는 구조. 상세한 과금 체계는 비공개."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Autodesk Revit",
+          "comparison": "전문 BIM 저작 도구의 사실상 표준이지만 조작 학습 비용이 높고, 기존 건물 도면을 BIM화하는 작업은 대부분 수작업에 가깝다."
+        },
+        {
+          "name": "Swapp",
+          "comparison": "AI로 건축 도면을 자동 생성하는 글로벌 스타트업. 다만 ACIMUS는 건물 전체를 대화로 BIM 모델링하고 IFC로 내보내는 일본 시장 특화 접근에 더 가깝다."
+        }
+      ],
+      "key_differentiator": "전문 BIM 소프트웨어 경험이 없는 사람도 자연어로 BIM 모델을 생성·편집할 수 있는 'ChatBIM'이 핵심 차별점이다. 초기 기획 단계를 겨냥한 LiteBIM과 건축설계 AI 'ACIMUS KIWARI'까지 갖추고 있고, JR동일본의 실제 건물 자산을 대상으로 한 실증 기회를 확보한 것도 강점이다.",
+      "moat": "아직 시드 단계라 절대적 기술 해자로 보기는 어렵다. 다만 IFC 표준 연동, 일본 건축 법규 Q&A 데이터, JR동일본 1,680개 역사·2만 4,000개 건물 대상 실증 경험이 초기 장벽이 될 수 있다.",
+      "competitive_position_summary": "일본 정부의 BIM 규제 도입과 기존 건물 유지관리 BIM화 흐름에서 가장 빠르게 움직이는 초기 스타트업 중 하나로 보인다. 다만 매출·고객 수는 비공개이고, 글로벌 BIM 도구와의 정면 경쟁을 피해 일본 시장에 집중하는 전략이다."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 14일 시드 라운드 약 6,500만 엔 조달과 JR동일본 스타트업과의 자본·업무 제휴를 발표하며 주목받았다. 미국식 보도에서는 'US$65M'로 오기된 일이 있었지만, 실제 공시 금액은 약 6,500만 엔 규모다.",
+      "catalysts": [
+        "2026년 4월 일본 국토교통성의 BIM 도면심사 개시",
+        "2029년 봄 BIM 데이터심사 도입 예정",
+        "JR동일본이 보유한 약 1,680개 역사, 관련 시설 포함 약 2만 4,000개 건물의 유지관리 BIM화 수요",
+        "2026-10-14 시드 라운드 및 JR동일본 스타트업 자본·업무 제휴 발표"
+      ],
+      "growth_metrics": "비공개. 다만 JR동일본 스타트업 프로그램 실증에서 소형 역사 1동당 BIM 모델 작성 시간이 종전 약 95~100시간에서 크게 단축될 가능성을 확인했고, 정확한 단축 시간과 표본 크기는 공개되지 않았다.",
+      "media_mentions": [
+        {
+          "source": "PR TIMES",
+          "title": "生成AIと対話してBIMを作る「ACIMUS」、シードラウンドで約6,500万円を調達 ― JR東日本スタートアップと資本業務提携",
+          "url": "https://prtimes.jp/main/html/rd/p/000000018.000152114.html",
+          "date": "2026-10-14",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "BIMedia",
+          "title": "ACIMUSと資本業務提携 生成AIで駅舎など約2.4万棟のBIM化へ",
+          "url": "https://bi-media.jp/5878/",
+          "date": "2026-10-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "venture.jp",
+          "title": "【#137】注目の資金調達情報",
+          "url": "https://venture.jp/news/2026/10/20/29149/",
+          "date": "2026-10-20",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "The SaaS News",
+          "title": "ACIMUS Co., Ltd. Raises ¥65M Seed",
+          "url": "https://www.thesaasnews.com/news/acimus-co-ltd-raises-65m-seed/",
+          "date": "2026-10",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "AYDrafting",
+          "title": "BIM News 15 October 2026 — Stations, Trials & Controls",
+          "url": "https://www.aydrafting.com/bim-news/2026-10-15-stations-trials-controls",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "약 6,500만 엔 (USD 환산 약 43만 달러, 추정)",
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "약 6,500만 엔 (USD 환산 약 43만 달러, 추정)",
+        "date": "2026-10",
+        "lead_investor": "Link Capital",
+        "notable_investors": [
+          "Incubate Fund",
+          "JR East Startup"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "약 6,500만 엔",
+          "date": "2026-10",
+          "lead_investor": "Link Capital"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "구체 시장 규모 수치는 비공개. TAM은 일본 건설·부동산 BIM 소프트웨어 시장 전체, SAM은 신축 건물의 기획·기본설계 BIM화와 기존 건물 유지관리 BIM화, SOM은 JR동일본 1,680개 역사와 약 2만 4,000개 관련 시설을 시작점으로 한 유지관리 BIM 모델링 수요로 볼 수 있다.",
+      "market_trend": "일본 국토교통성이 2026년 4월 BIM 기반 도면심사를 시작했고, 2029년 봄에는 BIM 데이터 심사 도입을 예고했다. 신축뿐 아니라 기존 건물의 유지관리·운용 단계에서 BIM 활용을 장려하는 방향으로 정책이 움직이고 있다.",
+      "growth_potential": "규제와 대형 자산 보유 기관의 디지털전환 의지가 맞물려 성장 여지는 크지만, ACIMUS는 아직 시드 단계여서 실제 매출과 고객 확대 속도를 확인하기 전까지 성장률을 판단하기 어렵다.",
+      "risks": [
+        "약 6,500만 엔 규모의 시드는 글로벌 BIM 소프트웨어 기업과 개발 경쟁을 벌이기엔 자금 여력이 작다.",
+        "생성형 AI가 만든 BIM 모델의 치수·법규 적합성 검증과 설계 책임 문제가 남아 있다.",
+        "JR동일본 의존도가 높아질 수 있고, 자본·업무 제휴 이후에도 실증 범위 확대가 실제 계약으로 이어져야 한다.",
+        "국토교통성의 BIM 데이터 심사 일정이 2029년 봄으로 예정되어 있어 시장 개화 시점이 늦어질 가능성이 있다."
+      ],
+      "risk_mitigation": "IFC 표준 수출로 기존 BIM 소프트웨어와 호환성을 확보하고, 초기 기획용 LiteBIM으로 진입 장벽을 낮췄다. JR동일본 실증을 통해 얻는 유지관리 데이터를 축적하는 동시에, 인원 확대보다 AI 네이티브 제품 개발에 집중해 비용 부담을 줄이는 전략이다."
+    },
+    "related_links": [
+      {
+        "title": "ACIMUS 공식 서비스",
+        "url": "https://www.acimus.com/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "ACIMUS 회사 정보",
+        "url": "https://www.acimus.com/company-profile",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "PR TIMES 공식 보도자료",
+        "url": "https://prtimes.jp/main/html/rd/p/000000018.000152114.html",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      }
+    ],
+    "editor_pick_comment": "일본 정부의 BIM 심사 도입을 노린 '최초의 대화형 BIM'이라는 포지셔닝은 좋지만, 미국식 보도의 US$65M 오보와 달리 실제로는 약 6,500만 엔 시드라서 자금 규모를 정확히 보고 구분할 필요가 있다.",
+    "id": "acimus-2026",
+    "date": "2026-10-28",
+    "logo_url": "",
+    "generated_at": "2026-10-28T01:47:09.351Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-28T01:47:09.351Z"
+    }
+  },
+  {
+    "name_en": "QibiTech",
+    "name_ko": "키비테크",
+    "tagline": "벤더프리 로봇 통합 제어 플랫폼",
+    "category": [
+      "로봇",
+      "소프트웨어",
+      "제조"
+    ],
+    "founded_year": 2011,
+    "headquarters": {
+      "city": "Tokyo",
+      "country": "Japan",
+      "country_ko": "일본"
+    },
+    "company_stage": "Series B",
+    "employee_count": "61",
+    "website": "https://qibitech.com/",
+    "founders": [
+      {
+        "name_en": "Kenichi Maehara",
+        "name_ko": "마에하라 켄이치",
+        "role": "대표이사 CEO",
+        "background": "국립대학 석사, MBA 졸업. 자동차 부품 공급업체 및 기업 개선 컨설턴트 경험.",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Tomoaki Yoshikai",
+        "name_ko": "요시카이 토모아키",
+        "role": "대표이사 CTO",
+        "background": "도쿄대학 JSK 연구실에서 박사 학위 취득, 동 대학 특별 강사 역임.",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Marika Hayashi",
+        "name_ko": "하야시 마리카",
+        "role": "이사 Founder CCPO",
+        "background": "도쿄대학 정보시스템공학연구실(JSK)에서 박사 학위 취득. 미쓰비시전기 출신.",
+        "notable_achievement": "정보처리추진기구(IPA) 미답 슈퍼 크리에이터"
+      }
+    ],
+    "team_highlights": "도쿄대학 JSK 로봇 연구실 출신 창업자 3인이 300건 이상의 로봇 개발 경험을 바탕으로 창업. 로봇 제어 및 현장 실장에 깊은 전문성 보유.",
+    "product": {
+      "summary": "HATS는 이기종 로봇을 단일 플랫폼에서 통합 관리하고 원격 제어할 수 있는 벤더프리 오케스트레이션 플랫폼입니다.",
+      "problem_statement": "물류·제조 현장의 인력 부족 심화로 로봇 도입 수요가 크지만, 메이커별 상이한 사양, 기존 시스템과의 연동, 운용 중 장애 대응 등이 큰 장벽으로 작용함.",
+      "solution": "HATS는 여러 메이커의 로봇을 통합 연결·제어하고, WMS·MES 등 상위 시스템 및 설비·AI와 연동하며, 원격 모니터링과 유지보수를 일관 지원하여 로봇 도입·운용의 효율성을 극대화합니다.",
+      "key_features": [
+        "이기종 메이커 로봇 통합 제어",
+        "WMS/MES/엘리베이터/AI 등 외부 시스템 연동",
+        "원격 운용 및 유지보수 지원",
+        "사용자 관점에서 유지보수 불필요한 경험 제공"
+      ],
+      "tech_stack_or_innovation": "원격 제어 기술과 벤더 중립 아키텍처를 기반으로, 현장 데이터 수집 및 AI 분석을 통한 운용 최적화 기능을 갖춤.",
+      "target_customer": "물류센터, 공장, 시설 관리 업체 등 복수 로봇을 도입·운영하는 사업자.",
+      "business_model": "플랫폼 라이선스 판매 및 원격 운용 지원 서비스(메인터넌스 프리) 기반의 정액형 수익 모델."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [],
+      "key_differentiator": "벤더프리 접근성과 함께 300건 이상의 실제 로봇 개발 노하우를 바탕으로 한 안정적인 원격 지원 체계를 갖춘 점.",
+      "moat": "도쿄대 JSK 연구실 출신의 기술력과 2011년 창업 이후 쌓아온 300건 이상의 로봇 개발·도입 경험이 핵심 장벽.",
+      "competitive_position_summary": "대부분의 로봇 제어 플랫폼이 특정 메이커에 종속적인 반면, 키비테크는 진정한 벤더프리와 실전에서 검증된 원격 메인터넌스를 제공한다는 점에서 차별화된다."
+    },
+    "trending_reason": {
+      "summary": "시리즈B 투자 유치(약 6억 엔, 410만 달러)를 통해 벤더프리 로봇 제어 플랫폼 'HATS'의 본격적인 스케일업에 나섰다.",
+      "catalysts": [
+        "일본의 심각한 인력 부족을 배경으로 한 물류·제조 자동화 수요 급증",
+        "노동 집약적 현장에서의 로봇 도입 필요성 증가"
+      ],
+      "growth_metrics": "2026년 9월 기준 직원 61명, 누적 로봇 개발 300건 초과, 2026년 9월 신제품 라인업(HATS Standard/Pro/SDK) 출시.",
+      "media_mentions": [
+        {
+          "source": "日本経済新聞",
+          "title": "ロボ制御のキビテク、店舗や工場に3年で300台導入へ　6億円調達",
+          "url": "https://www.nikkei.com/article/DGXZQOUC297NZ0Z20C26A9000000/",
+          "date": "2026-09-30",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "QibiTech 공식 뉴스",
+          "title": "シリーズBラウンドで約6億円の資金調達を実施",
+          "url": "https://qibitech.com/%e3%82%b7%e3%83%aa%e3%83%bc%e3%82%bab%e3%83%a9%e3%82%a6%e3%83%b3%e3%83%89%e3%81%a7%e7%b4%846%e5%84%84%e5%86%86%e3%81%ae%e8%b3%87%e9%87%91%e8%aa%bf%e9%81%94%e3%82%92%e5%ae%9f%e6%96%bd/",
+          "date": "2026-09-30",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "JIC Venture Growth Investments",
+          "title": "JIC Venture Growth Investments has made an additional investment in QibiTech Inc.",
+          "url": "https://www.j-vgi.co.jp/en/news/qibitech260930",
+          "date": "2026-09-30",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "PR TIMES",
+          "title": "住友商事のCVCが、ロボット遠隔制御・統合管理プラットフォームを展開する株式会社キビテクへ共同リード出資",
+          "url": "https://prtimes.jp/main/html/rd/p/000000035.000108815.html",
+          "date": "2026-09-30",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "Japan Startup Observer",
+          "title": "Tokyo-Based QibiTech Raises ¥600 Million in Series B to Scale Vendor-Free Robot Control Platform",
+          "url": "https://japanstartupobserver.substack.com/p/tokyo-based-qibitech-raises-600-million",
+          "date": "2026-10-02",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$4.1M",
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$4.1M",
+        "date": "2026-09",
+        "lead_investor": "JIC Venture Growth Investments",
+        "notable_investors": [
+          "JIC Venture Growth Fund 2",
+          "SVP Open Innovation Fund 1"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "비공개",
+          "date": "2022-??",
+          "lead_investor": "비공개"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "비공개",
+      "market_trend": "일본 내 인력 부족 심화로 물류·제조 분야의 로봇 도입 가속화. 이에 따라 복수 로봇을 통합 관리하는 소프트웨어 플랫폼 수요도 함께 증가.",
+      "growth_potential": "높음. 벤더프리 접근성과 실증된 원격 유지보수 능력으로 다양한 현장에 확장 가능.",
+      "risks": [
+        "대형 테크 기업이나 기존 로봇 메이커의 유사 플랫폼 진입 가능성",
+        "레거시 시스템과의 통합 난이도 및 현장 특성에 따른 커스터마이징 부담"
+      ],
+      "risk_mitigation": "스미토모상사 그룹·JIC 등 강력한 파트너십을 통한 사업 기반 확보와 300건 이상의 현장 도입 경험으로 기술 리스크 축소."
+    },
+    "related_links": [
+      {
+        "title": "QibiTech 공식 웹사이트",
+        "url": "https://qibitech.com/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "QibiTech 회사소개",
+        "url": "https://qibitech.com/company/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "QibiTech 뉴스 목록",
+        "url": "https://qibitech.com/news/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      }
+    ],
+    "editor_pick_comment": "로봇 간 통합의 장벽을 넘는 벤더프리 플랫폼으로, 키비테크의 시리즈B 투자는 일본 로봇 시장 성장성을 잘 보여준다.",
+    "id": "qibitech-2026",
+    "date": "2026-10-28",
+    "logo_url": "",
+    "generated_at": "2026-10-28T01:47:09.351Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-28T01:47:09.351Z"
+    }
+  },
+  {
+    "name_en": "Occu-T (OQT)",
+    "name_ko": "주식회사 오큐티",
+    "tagline": "레이저 냉각 중성원자로 '오류를 잡는' 오류내성 양자컴퓨터 스타트업",
+    "category": [
+      "양자컴퓨팅",
+      "딥테크 하드웨어"
+    ],
+    "founded_year": 2025,
+    "headquarters": {
+      "city": "Daejeon",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://www.k-oqt.com",
+    "founders": [
+      {
+        "name_en": "Kim Dong-gyu",
+        "name_ko": "김동규",
+        "role": "대표 (CEO), 공동창업자",
+        "background": "KAIST 물리학과 교수. MIT에서 박사학위를 받았고, MIT·하버드 연구진이 2019년 세운 미국 중성원자 양자컴퓨팅 기업 QuEra의 창업 멤버로 영입 당시 MIT 소속 연구원이었다. 2025년 1월 한국에 돌아와 KAIST 연구소 스핀오프로 OQT를 설립.",
+        "notable_achievement": "세계 최초 256큐비트 중성원자 양자컴퓨터를 개발한 QuEra 창업에 참여했으며, 구글·소프트뱅크가 2억 3,000만 달러(약 3,340억 원)를 투자한 QuEra의 초기 기술 상용화를 주도"
+      }
+    ],
+    "team_highlights": "김동규 대표(KAIST 물리학과 교수, MIT 박사, QuEra 창업 멤버)가 이끄는 KAIST 스핀오프로, 과학동아 인터뷰에 따르면 KAIST 연구실의 박사과정 연구원들과 함께 중성원자 양자컴퓨터 상용화 연구를 진행 중이다. 본사는 대전 KAIST 문지캠퍼스에 있으며 채용 페이지를 통해 신진 R&D 인력을 모집 중이다. 정확한 인원수는 비공개(추정).",
+    "product": {
+      "summary": "레이저로 냉각한 중성원자를 배열해 논리큐비트를 구성하고, 연산 중 발생하는 오류를 실시간 감지·수정하는 '오류내성(fault-tolerant) 양자컴퓨터'와 양자처리장치(QPU)를 자체 설계·개발한다. 핵심 차별점은 소프트웨어로 프로세서의 구조와 동작을 정의하는 SDQ(Software-Defined Quantum Processor) 방식이다.",
+      "problem_statement": "큐비트는 진동·온도 등 환경 노이즈에 극도로 민감해 연산 중 오류가 잦다. 오류를 방치하면 결과 신뢰성이 떨어져 실용 계산이 불가능하고, 기존 오류정정은 물리큐비트 오버헤드가 크다. 또한 하드웨어를 먼저 만들고 소프트웨어를 얹는 업계 관행 때문에 하드웨어·소프트웨어·오류정정이 분절돼 실질 성능이 떨어진다.",
+      "solution": "양자오류정정 코드를 적용한 논리큐비트를 오류정정과 논리연산이 통합된 시스템으로 설계하고, 알고리즘 요구에 맞춰 QPU 구조와 동작 방식을 실시간 재구성하는 SDQ 공동설계(co-design)를 채택한다. 이를 통해 하드웨어, 소프트웨어, 오류정정, 양자알고리즘을 하나의 시스템으로 통합해 연산 효율과 정확도를 높인다.",
+      "key_features": [
+        "레이저 냉각 중성원자 기반 큐비트 배열 — 원자를 자유롭게 배치해 확장성이 높음",
+        "논리큐비트 기반 오류내성 아키텍처 — 연산 중 오류를 감지·수정해 안정적 결과 도출",
+        "SDQ(Software-Defined Quantum Processor) — 알고리즘에 따라 프로세서 구조·동작을 실시간 재구성",
+        "하드웨어·소프트웨어·오류정정·양자알고리즘 통합 설계로 상용화 병목 해소"
+      ],
+      "tech_stack_or_innovation": "광트랩(optical tweezer) 어레이에 레이저로 냉각한 중성원자를 배열하는 중성원자 방식과, 오류정정을 논리연산과 통합하는 SDQ 아키텍처가 핵심. 세부 큐비트 수·에러레이트 등 기술 스펙은 비공개.",
+      "target_customer": "아직 상용화 전 단계로, 산업 및 연구 현장에서 실제 활용 가능한 시스템 구축을 목표로 한다. 제약·화학·물류·금융 등 최적화·시뮬레이션 수요처와 대학·국책연구소, 양자 가속 HPC(quantum-accelerated high-performance computing) 도입 기업이 잠재 고객.",
+      "business_model": "QPU·양자컴퓨터 하드웨어의 직접 설계·구축을 기반으로 한 판매·임대 및 클라우드 접근 모델을 지향하며, KAIST 연계 파일럿 검증을 병행 중이다. 상용 제품 출시 전이라 매출과 구체적 가격 모델은 비공개."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "QuEra Computing (미국)",
+          "comparison": "김동규 대표가 창업 멤버로 참여했던 중성원자 분야 선두. 세계 최초 256큐비트 중성원자 머신을 내놓고 루비듐 기반 물리큐비트 약 300개로 논리큐비트 50개를 구현했다고 알려졌다. 오큐티는 QuEra의 기술적 '동생'이면서 SDQ로 차별화를 시도한다."
+        },
+        {
+          "name": "Pasqal (프랑스)",
+          "comparison": "2018~2019년 설립된 중성원자 양자컴퓨팅 기업으로 유럽·중동에서 상용 클라우드 서비스를 제공한다. 오큐티보다 한참 앞선 상용화 단계지만 아키텍처는 유사한 중성원자 방식."
+        },
+        {
+          "name": "Atom Computing (미국)",
+          "comparison": "중성원자 방식으로 1,200개 이상의 물리큐비트를 내세우는 미국 스타트업. 2024년 Microsoft와 함께 중성원자 기반 논리큐비트를 시연했다. 오큐티는 규모와 자본에서 이들과 큰 격차가 있는 초기 단계."
+        },
+        {
+          "name": "Qunova Computing (대한민국)",
+          "comparison": "국내 양자컴퓨팅 1호 스타트업으로 불리며 오류 보정 알고리즘·소프트웨어에 집중. 하드웨어가 아닌 소프트웨어 레이어라 직접 경쟁이라기보다 보완 관계에 가깝다."
+        }
+      ],
+      "key_differentiator": "하드웨어 완성 후 소프트웨어를 얹는 기존 방식 대신, 소프트웨어로 QPU의 기능과 동작을 정의하고 알고리즘 요구에 따라 프로세서 구조를 실시간 재구성하는 SDQ(Software-Defined Quantum Processor)와 하드웨어-소프트웨어 공동설계. 오류정정을 논리연산과 통합해 연산 효율과 정확도를 동시에 높이는 것이 핵심 주장이다.",
+      "moat": "KAIST 물리학과 교수이자 QuEra 창업 멤버인 창업자의 원자물리·양자제어 전문성과 글로벌 네트워크, KAIST 연구실 기반의 인력 파이프라인, 국내 유일 중성원자 양자 하드웨어라는 선점 지위, 그리고 SRI(구 Stanford Research Institute) 등 글로벌 협력 채널이 진입장벽을 이룬다.",
+      "competitive_position_summary": "글로벌 중성원자 하드웨어(QuEra, Pasqal, Atom Computing)와 비교하면 창업 2년 차 프리A 단계로 규모·자본 격차가 크지만, 국내에서는 유일한 중성원자 방식 오류내성 양자컴퓨터 기업이다. SDQ라는 차별화된 설계 철학과 SRI 협력 등 글로벌 제휴를 앞세워 오류정정 하드웨어부터 실제 활용까지 직접 연결하는 '하드웨어+소프트웨어 일체형' 공급자로 포지셔닝하고 있다."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 15일, DSC Investment 주도로 140억 원 규모 프리 시리즈A를 유치하며 한국 양자컴퓨팅 초기 단계 최대급 딜 중 하나를 만들었다. QuEra 창업 멤버 출신 창업자의 이력과 '오류정정'이라는 글로벌 양자컴퓨팅 최대 과제를 겨냥한 포지셔닝이 주목받았다.",
+      "catalysts": [
+        "2026-10-15 프리 시리즈A 140억 원 유치 — DSC Investment 리드, 카카오벤처스·블루포인트 후속, 뮤렉스·스톤브릿지·슈미트·ZVC·GIL 신규 참여 (총 7개사)",
+        "Global Innovation Labs (GIL) 통해 미국 SRI(구 Stanford Research Institute)와 기술 협력 추진 — SRI는 NVIDIA·IonQ가 회원사인 양자 컨소시엄 QED-C의 의장 기관",
+        "Jet Venture Capital (ZVC) 통해 일본·미국 시장 네트워크 진출 교두보 확보",
+        "Quantinuum·Oratomic 등 글로벌에서 오류정정·중성원자 하드웨어 투자가 잇따라 이어지며 한국에도 딥테크 양자 투자 열기 확산"
+      ],
+      "growth_metrics": "누적 투자금 약 170억 원(시드 30억 원 + 프리A 140억 원, 2026-10 기준). 매출은 상용화 전이라 비공개. 기술 스펙(큐비트 수 등)과 직원 수는 공개되지 않음(추정).",
+      "media_mentions": [
+        {
+          "source": "머니투데이",
+          "title": "\"양자컴퓨터 오류 잡는다\"…오큐티, 140억 프리A 투자유치",
+          "url": "https://www.mt.co.kr/future/2026/10/15/2026101509281665949",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "매일경제",
+          "title": "중성원자 양자컴퓨팅 기업 오큐티, 140억 원 규모 프리 시리즈A 투자 유치",
+          "url": "https://www.mk.co.kr/news/it/12176495",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "한국일보",
+          "title": "양자컴퓨터 스타트업 오큐티, 140억 원 투자 유치",
+          "url": "https://www.hankookilbo.com/news/article/A2026101516300003503",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "이데일리",
+          "title": "오큐티, 140억 투자 유치…오류내성 양자컴퓨터 개발 속도",
+          "url": "https://www.edaily.co.kr/News/Read?newsId=06638726645613248&mediaCodeNo=257",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "조선일보",
+          "title": "양자컴퓨팅 기업 오큐티, 140억원 투자 유치",
+          "url": "https://www.chosun.com/economy/tech_it/2026/10/16/RIBQJ2RLNJAQFH73M4F3EFLXBM/",
+          "date": "2026-10-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "MoneyToday (영문)",
+          "title": "Private markets hold firm despite stock market plunge, as venture investment boom continues",
+          "url": "https://www.mt.co.kr/en/future/2026/10/18/2026101815063810823",
+          "date": "2026-10-18",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "약 ₩170억 (≈$12M, 추정)",
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Pre-Series A",
+        "amount": "₩140억 (≈$10M, 추정)",
+        "date": "2026-10",
+        "lead_investor": "DSC Investment (DSC인베스트먼트)",
+        "notable_investors": [
+          "Kakao Ventures",
+          "Blue Point Partners",
+          "Murex Partners",
+          "Stonebridge Ventures",
+          "Schmidt",
+          "Jet Venture Capital (ZVC)",
+          "Global Innovation Labs (GIL)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "₩30억 (≈$2.2M, 추정)",
+          "date": "2025-02",
+          "lead_investor": "Kakao Ventures, Blue Point Partners"
+        },
+        {
+          "stage": "Pre-Series A",
+          "amount": "₩140억 (≈$10M, 추정)",
+          "date": "2026-10",
+          "lead_investor": "DSC Investment"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 양자컴퓨팅 시장은 기관별 전망 편차가 크지만 맥킨지 등 일부는 2035년경 수천억~1조 달러 규모를 전망한다(추정). 오류내성 양자컴퓨터는 그중 상용화 직전 단계로 꼽히는 핵심 부문이며, SAM은 중성원자 하드웨어와 양자 가속 HPC, SOM은 국내 양자 하드웨어 시장으로 정부가 서울(양자컴퓨팅)·광주(양자통신)·동남권(양자센싱) 클러스터를 조성하며 형성되는 중이다.",
+      "market_trend": "2026년에도 오류정정·하드웨어 중심의 글로벌 양자 투자가 활발하다(Quantum Motion 시리즈C 1.6억 달러, Oratomic 시리즈B 약 4.75억 달러 보도 등). 확장성과 균일성 때문에 중성원자 방식이 부상했고, 상용화의 관건은 '큐비트 수'가 아니라 '오류를 얼마나 빨리 줄이느냐'로 옮겨가고 있다. 국내에서도 퀀텀 코리아 2026 등 행사와 정부의 양자 클러스터 조성으로 생태계가 커지는 중이다.",
+      "growth_potential": "오류내성 상용화까지는 통상 5년 이상이 걸릴 것으로 보인다(추정). 그 전에 국내 유일 중성원자 양자 하드웨어 기업으로 기술·인력·정부 과제를 선점할 수 있고, SRI·QED-C 협력을 통해 글로벌 표준 논의에 참여할 기회가 있다는 점이 잠재력으로 꼽힌다.",
+      "risks": [
+        "오류정정·상용화까지 긴 R&D 시간이 필요해 중간에 자금줄이 끊길 위험",
+        "QuEra, Pasqal, Atom Computing 등 자본과 성과에서 크게 앞선 글로벌 선두와의 기술격차",
+        "양자컴퓨팅 산업 전반의 기대 과열에 따른 투자 사이클 위축 가능성",
+        "전문 인력 부족으로 한국에서 하드웨어 팀 확충이 어려울 수 있음"
+      ],
+      "risk_mitigation": "SRI(구 Stanford Research Institute) 및 GIL과의 협력으로 글로벌 기술·표준 네트워크에 편입하고, ZVC를 통해 일본·미국 산업 네트워크를 확보했다. KAIST 연구실 기반의 안정적 인력 파이프라인과 김동규 대표의 글로벌 커리어가 후속 투자 유치와 인재 영입의 완충재가 된다."
+    },
+    "related_links": [
+      {
+        "title": "OQT 공식 홈페이지",
+        "url": "https://www.k-oqt.com/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "OQT 채용 페이지",
+        "url": "https://www.k-oqt.com/career",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "THE VC 기업 프로필 (오큐티)",
+        "url": "https://thevc.kr/oqt",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "카카오벤처스 뉴스 — '큐에라' 출신이 창업한 OQT, 30억 시드투자 유치",
+        "url": "https://www.kakao.vc/news?50174d3f_page=5&720e916e_page=3&b1039086_page=10&ed954885_page=3&f147e401_page=2",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "매일경제 인터뷰 — 반도체 다음은 '양자컴퓨터'…천재 물리학자에 한국 현주소",
+        "url": "https://www.mk.co.kr/news/it/12054883",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "과학동아 — 논리 큐비트의 대가를 만나다 (2025년 8월호)",
+        "url": "https://dl.dongascience.com/dl/magazine/detail/S202508N030",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      }
+    ],
+    "editor_pick_comment": "QuEra 창업 멤버가 KAIST에서 되살린 중성원자 양자컴퓨터 — 이 140억 원은 결국 '큐비트 숫자'가 아니라 '오류를 얼마나 빨리 줄이느냐'로 평가받게 될 것이다.",
+    "id": "occu-t-oqt-2026",
+    "date": "2026-10-28",
+    "logo_url": "",
+    "generated_at": "2026-10-28T01:47:09.351Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-28T01:47:09.351Z"
+    }
+  },
+  {
+    "name_en": "AnyBridge",
+    "name_ko": "애니브릿지",
+    "tagline": "GPU·NPU·PIM 통합, AI 추론 비용 70% 절감",
+    "category": [
+      "AI Infrastructure",
+      "Enterprise AI Agent Platform",
+      "System Software"
+    ],
+    "founded_year": 2026,
+    "headquarters": {
+      "city": "Daejeon",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Seed",
+    "employee_count": "1-10",
+    "website": "https://anybridge.ai",
+    "founders": [
+      {
+        "name_en": "Park Jongse",
+        "name_ko": "박종세",
+        "role": "CEO (대표)",
+        "background": "KAIST 전산학부 교수. 컴퓨터 시스템 구조 분야 석학. 구글·메타·엔비디아·삼성전자·SK하이닉스와 산학 공동 연구 수행. LLM 서빙 시뮬레이터 'LLMServingSim'을 오픈소스로 공개하고 IISWC 2024와 ISPASS 2026에서 최우수 논문상 수상.",
+        "notable_achievement": "LLMServingSim 오픈소스 프로젝트로 IISWC 2024 최우수 논문상·우수 아티팩트상, ISPASS 2026 최우수 논문상 수상"
+      },
+      {
+        "name_en": "Kwon Youngjin",
+        "name_ko": "권영진",
+        "role": "Co-founder (공동창업자)",
+        "background": "KAIST 전산학부 교수. 컴퓨터 시스템 구조 분야 최상위 학회에 110여 편 논문 게재, AI 시스템 관련 특허 26건 보유.",
+        "notable_achievement": "컴퓨터 시스템 분야 110여 편 최상위 학회 논문, AI 시스템 특허 26건"
+      }
+    ],
+    "team_highlights": "삼바노바(SambaNova) 공동창업자이자 스탠퍼드대 쿤레 올루코툰(Kunle Olukotun) 교수가 기술 자문 역임. KAIST 석·박사 출신 엔지니어 5명이 핵심 개발 라인업 구성. 제품 출시 전 단계로 2026년 9월 기준 임직원 4명.",
+    "product": {
+      "summary": "GPU, NPU, PIM 등 서로 다른 AI 가속기를 통합 운영하는 '멀티 가속기 런타임'과 기업용 AI 에이전트 플랫폼을 하나의 소프트웨어 스택으로 제공. 특정 하드웨어에 종속되지 않는 공통 인터페이스로 추론 워크로드별 최적 가속기를 자동 배정해 GPU 단독 대비 추론 비용 40~70% 절감.",
+      "problem_statement": "기업이 생성형 AI를 실제 서비스에 적용할 때 GPU 의존 인프라는 비용이 급격히 증가하고, NPU·PIM 등 새로운 AI 반도체가 등장했지만 이를 통합해 운용할 시스템 소프트웨어가 부재함.",
+      "solution": "하드웨어 추상화 계층부터 API까지 7개 계층을 수직 통합한 멀티 가속기 LLM 서빙 런타임. 응답 속도·비용·모델 크기에 따라 GPU/NPU/PIM을 실시간 자동 할당. OpenAI·Google Gemini·Anthropic Claude API와 호환되어 기존 코드 수정 없이 도입 가능.",
+      "key_features": [
+        "멀티 가속기 런타임: GPU·NPU·PIM·PNM 등 모든 AI 가속기를 단일 시스템에서 통합 운영",
+        "워크로드 기반 자동 반도체 할당: 레이턴시·비용·모델 크기 종합 판단해 최적 가속기 배정",
+        "7개 계층 수직 통합: 최하단 하드웨어 추상화부터 개발자 API까지 일관된 소프트웨어 스택",
+        "API 호환성: OpenAI·Google Gemini·Anthropic Claude API와 완전 호환, 기존 인프라 변경 불필요",
+        "3가지 제공 모델: 라이선스형(고객사 인프라 직접 구축), 매니지드형(애니브릿지 운영), 토큰팩토리형(사용량 기반 API)"
+      ],
+      "tech_stack_or_innovation": "LLMServingSim(오픈소스 LLM 서빙 시뮬레이터) 기반. vLLM 등 오픈소스 AI 인프라 생태계 위에서 구축. 하드웨어 종속성 없는 공통 인터페이스 설계가 핵심 기술.",
+      "target_customer": "AI 서비스를 운영하는 기업 전반. 데이터 보안과 주권이 중요한 공공·금융기관, 대기업, AI 스타트업. 특히 NPU 등 새 AI 반도체를 도입하려는 기업.",
+      "business_model": "3-track model: ① 라이선스형(고객 인프라에 소프트웨어 구축·운영), ② 매니지드형(구축부터 모니터링·업데이트까지 위탁), ③ 토큰팩토리형(OpenRouter 방식의 사용량 기반 API)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "vLLM",
+          "comparison": "가장 널리 쓰이는 오픈소스 LLM 서빙 라이브러리. GPU 전용이며 멀티 가속기(∩PU·PIM)를 지원하지 않음."
+        },
+        {
+          "name": "Together AI / Fireworks AI",
+          "comparison": "클라우드 기반 LLM 추론 API 제공. GPU 인프라에 최적화되어 있고 NPU·PIM 등 이기종 가속기 통합 기능 부재."
+        },
+        {
+          "name": "OpenRouter",
+          "comparison": "여러 모델 API를 하나의 게이트웨이로 연결. 애니브릿지도 토큰팩토리형에서 유사 접근을 채택했으나, OpenRouter는 하드웨어 계층 최적화를 하지 않음."
+        },
+        {
+          "name": "Modal / Banana Dev / RunPod",
+          "comparison": "서버리스 GPU 인프라 플랫폼. GPU 기반으로 제한되며 NPU·PIM 등 이기종 가속기를 다루지 않음."
+        }
+      ],
+      "key_differentiator": "GPU·NPU·PIM 등 모든 AI 반도체를 하나의 소프트웨어 스택으로 통합해 추론 워크로드별 최적 반도체를 자동 배정하는 유일한 솔루션. 하드웨어 벤더 종속성 해소가 핵심.",
+      "moat": "KAIST 연구진의 110여 편 시스템 아키텍처 논문과 26건 특허, LLMServingSim 오픈소스 커뮤니티 기반의 시뮬레이션·최적화 기술. 퓨리오사AI·하이퍼엑셀 등 NPU 제조사와의 협력 네트워크. 7계층 수직 통합 아키텍처의 완성도.",
+      "competitive_position_summary": "초기 단계로 아직 시장 검증 전이나, GPU 중심에서 이기종 AI 반도체 생태계로 전환되는 패러다임에서 소프트웨어 계층의 표준을 선점하려는 포지션. 국내 NPU 제조사와 긴밀히 협력해 하드웨어-소프트웨어 동반 생태계를 조성 중."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 22일 더벤처스(The Ventures)로부터 시드 투자 유치와 동시에 중소벤처기업부 팁스(TIPS) 선정. 투자 규모는 비공개지만 팁스를 통해 2년간 최대 8억원(약 60만 달러) R&D 자금 추가 확보. 생성형 AI 서비스 확산으로 GPU 인프라 비용이 폭증하는 상황에서, 대안 반도체(NPU·PIM)를 실용화할 소프트웨어 레이어의 필요성이 부각된 것이 투자 배경.",
+      "catalysts": [
+        "2026년 10월 22일 더벤처스 시드 투자 완료 발표 및 팁스 선정",
+        "2026년 9월 퓨리오사AI·하이퍼엑셀과 NPU 기반 엔터프라이즈 AI 에이전트 플랫폼 공동 개발 협약",
+        "카카오 AI 육성 프로젝트 대상 수상(60여 개 팀 중 1위)",
+        "LLMServingSim 2.0 ISPASS 2026 최우수 논문상 수상",
+        "카카오클라우드와 PoC 진행 및 2026년 내 2~3개 고객사 파일럿 계획"
+      ],
+      "growth_metrics": "4명(2026년 9월 기준, 추정). 아직 매출 발생 전 단계. 2027년 정식 제품 출시 목표.",
+      "media_mentions": [
+        {
+          "source": "아시아경제",
+          "title": "더벤처스, AI 추론 인프라 애니브릿지에 시드투자·팁스추천",
+          "url": "https://view.asiae.co.kr/article/2026102208280231813",
+          "date": "2026-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "머니투데이",
+          "title": "\"적합한 AI반도체 자동 할당, 비용↓\" 애니브릿지, 시드투자 유치",
+          "url": "https://www.mt.co.kr/future/2026/10/22/2026102210483624221",
+          "date": "2026-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "이코노믹빌",
+          "title": "더벤처스, KAIST 교수 창업 애니브릿지에 시드 투자…GPU 의존 LLM 서빙에 멀티 가속기로 도전",
+          "url": "https://www.econovill.com/news/articleView.html?idxno=754472",
+          "date": "2026-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "동아일보",
+          "title": "\"AI 추론 비용 최대 70% 낮춘다\"…KAIST 교수 창업기업에 더벤처스 투자",
+          "url": "https://www.donga.com/news/amp/all/20261022/134887343/2",
+          "date": "2026-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "아시아타임즈",
+          "title": "더벤처스, 카이스트 교수 창업 '애니브릿지'에 시드 머니 집행",
+          "url": "https://www.asiatime.co.kr/article/20261022500272",
+          "date": "2026-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "ZDNet Korea",
+          "title": "더벤처스, AI 인프라 소프트웨어 개발사 '애니브릿지'에 시드 투자",
+          "url": "https://zdnet.co.kr/view/?no=20261022084009",
+          "date": "2026-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        },
+        {
+          "source": "디지털타임스",
+          "title": "애니브릿지, 퓨리오사AI와 함께 NPU 기반 엔터프라이즈 AI 에이전트 플랫폼 개발 착수",
+          "url": "https://www.dt.co.kr/article/12083426",
+          "date": "2026-09-11",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-28T01:47:09.351Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "비공개",
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "비공개",
+        "date": "2026-10",
+        "lead_investor": "The Ventures (더벤처스)",
+        "notable_investors": [
+          "The Ventures"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "비공개",
+          "date": "2026-10",
+          "lead_investor": "The Ventures"
+        },
+        {
+          "stage": "Grant",
+          "amount": "KRW 800M (추정, TIPS R&D 자금)",
+          "date": "2026-10",
+          "lead_investor": "중소벤처기업부 (Ministry of SMEs and Startups)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: AI 인프라 소프트웨어 시장 (2026년 전 세계 AI 인프라 지출 약 1,500억 달러 추정). SAM: LLM 추론 및 AI 에이전트 플랫폼 시장. SOM: 국내 AI 도입 기업 및 공공·금융 부문 (초기 2~3개 파일럿 고객 목표).",
+      "market_trend": "생성형 AI가 PoC에서 프로덕션 단계로 전환되면서 GPU 인프라 비용이 핵심 이슈로 부상. 엔비디아 GPU 공급난과 가격 부담으로 NPU·PIM 등 대안 반도체에 대한 관심이 증가했으나, 이를 통합 운영할 소프트웨어가 부족한 상태. 글로벌 빅테크와 한국 정부 모두 AI 반도처 다변화를 추진 중.",
+      "growth_potential": "2027년 정식 제품 출시 후 NPU 생태계 확산 속도에 따라 성장 가속 가능. 퓨리오사AI·하이퍼엑셀 등 국산 NPU 제조사와 협력을 통해 한국 AI 반도체 생태계의 소프트웨어 표준으로 자리잡을 경우 큰 시장 기회. 다만 아직 매출과 실사용 고객 레퍼런스가 전무한 리스크 존재.",
+      "risks": [
+        "제품 출시 전(2027년 목표) 단계로 매출과 고객 레퍼런스 부재",
+        "NPU·PIM 시장이 기대만큼 성장하지 않을 경우 수요 한정",
+        "글로벌 AI 인프라 소프트웨어(특히 vLLM 생태계)가 멀티 가속기 기능을 포용할 가능성",
+        "초기 4~5인 팀 규모로 제품 개발·고객 대응 역량 제한적"
+      ],
+      "risk_mitigation": "GPU 전용 모드도 지원해 NPU 시장 성장 전까지도 기본 서비스 제공 가능. 오픈소스 기반 전략으로 vLLM 등 기존 생태계와 공존 설계. 팁스 자금으로 2년간 R&D 비용 확보. 퓨리오사AI·하이퍼엑셀과 협력으로 NPU 최적화 경쟁력 확보.",
+      "competitors_mentioned_in_media": "THE VC 비교 테이블에서 바이스트라타(Vulkan 기반 크로스플랫폼 AI 추론 엔진), 모프시스템즈(방위 산업 미들웨어), 제틱에이아이(서버리스 모바일 AI)가 유사 분야로 분류됨."
+    },
+    "related_links": [
+      {
+        "title": "AnyBridge 공식 웹사이트",
+        "url": "https://anybridge.ai",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "THE VC - 애니브릿지 기업정보",
+        "url": "https://thevc.kr/anybridge?source=ranking",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "LLMServingSim 오픈소스 (GitHub)",
+        "url": "https://github.com/casys-kaist/llmservingsim",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      },
+      {
+        "title": "KAIST 뉴스 - 애니브릿지 AI 차세대 인프라 개발",
+        "url": "https://www.kaist.ac.kr/site/newsen/html/news/?skey=prof&sval=Jongse+Park",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-28T01:47:09.351Z"
+      }
+    ],
+    "editor_pick_comment": "KAIST 교수 두 명이 창업한 멀티 가속기 AI 인프라로, NPU 등 대안 반도체를 실전에 투입할 소프트웨어 레이어라는 점에서 한국 AI 반도체 생태계의 미싱 링크가 될 수 있다.",
+    "id": "anybridge-2026",
+    "date": "2026-10-28",
+    "logo_url": "",
+    "generated_at": "2026-10-28T01:47:09.351Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-28T01:47:09.351Z"
+    }
+  },
+  {
     "name_en": "TraceWeave",
     "name_ko": "트레이스위브",
     "tagline": "맥락이 길어져도 메모리는 일정한 포스트-트랜스포머 온디바이스 AI",
