@@ -1,1 +1,19 @@
-{"updates":{},"checked":{}}
+{
+  "updates": {
+    "babylon-health-2026": [
+      {
+        "date": "2026-07-30",
+        "kind": "product",
+        "title_ko": "美 최초 AI 네이티브 헬스 시스템 출범",
+        "detail_ko": "아키도 랩스는 100개 클리닉·원격의료·거리의료에 자체 AI 'ScopeAI'를 확대하며 미국 최초의 AI 네이티브 헬스 시스템을 발표했다. 회사명에서 '랩스'를 빼고 '아키도'로 개명, 아키도 메디컬 브랜드와 AI 임상 자문위원회도 신설했다.",
+        "source_url": "https://www.prnewswire.com/news-releases/akido-announces-the-first-ai-native-health-system-in-the-us-302838924.html",
+        "source_name": "PR Newswire",
+        "found": "2026-10-29"
+      }
+    ]
+  },
+  "checked": {
+    "babylon-health-2026": "2026-10-29",
+    "covariant-2026": "2026-10-29"
+  }
+}
