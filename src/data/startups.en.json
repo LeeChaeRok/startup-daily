@@ -1,1 +1,417 @@
-{}
+{
+  "solidvue-solidvue-2026": {
+    "tagline": "South Korea's only LiDAR sensor IC fabless company",
+    "category": [
+      "Semiconductors",
+      "Autonomous Driving",
+      "Robotics"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Professor, Department of Semiconductor Systems Engineering, Sungkyunkwan University. Led development of Korea's first ToF image sensor and CMOS LiDAR sensor.",
+        "notable_achievement": "Published at IEEE ISSCC; CES 2025 Innovation Award winner"
+      },
+      {
+        "background": "Professor, Department of Semiconductor Systems Engineering, Sungkyunkwan University. Member of a joint research team with CEO Jaehyuk Choi.",
+        "notable_achievement": "Co-developed Korea's first CMOS LiDAR sensor"
+      },
+      {
+        "role": "Co-founder (Director)",
+        "background": "Professor, Department of Electrical and Electronic Engineering, UNIST. Alumnus of the same advisor's lab as CEO Jaehyuk Choi.",
+        "notable_achievement": "Participated in developing Korea's first ToF image sensor"
+      }
+    ],
+    "team_highlights": "All three co-founders are top researchers in semiconductors and LiDAR. The R&D team is composed of veterans with over 10 years of LiDAR sensor experience. The company is expanding its design and mass-production organization.",
+    "product": {
+      "summary": "A fabless semiconductor company that designs and supplies CMOS-based, high-resolution LiDAR sensor systems-on-chip (SoCs).",
+      "problem_statement": "Conventional mechanical LiDAR is bulky, expensive and vulnerable to vibration due to its motor and rotating parts, which limits its adoption in mass-market applications such as autonomous vehicles and robots.",
+      "solution": "A solid-state LiDAR sensor IC that replaces all mechanical components with a single semiconductor chip. A CMOS SPAD array, TDC, image signal processor and power management circuitry are integrated on one chip.",
+      "key_features": [
+        "400×128 pixel high-resolution 3D point cloud output (based on SL-2.2)",
+        "Detection range up to 200m, 99.9% accuracy",
+        "Ultra-compact: sensor core 0.9cm×0.9cm, BGA package 1.4cm×1.4cm",
+        "Approx. 1/10 the volume and 1/100 the cost of mechanical LiDAR",
+        "Mass-producible on standard CMOS processes"
+      ],
+      "tech_stack_or_innovation": "Single-chip CMOS SPAD (Single-Photon Avalanche Diode) sensor architecture. Built-in column-parallel multi-event TDC, on-chip histogramming and interference-rejection filters. Claimed to be the world's first single-chip SPAD sensor IC with 400×128 resolution.",
+      "target_customer": "Automotive LiDAR module makers, robot manufacturers, drone and smart city infrastructure providers, and AR/VR device makers.",
+      "business_model": "As a fabless semiconductor company, SolidVue focuses on designing sensor ICs, has chips manufactured through foundries (contract manufacturing), and sells them to LiDAR module and system customers. It currently supplies evaluation kits to global LiDAR module companies."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Sony (Japan)",
+          "comparison": "Global leader mass-producing SPAD-based LiDAR sensor ICs, having taken the market early with its IMX series. SolidVue claims an advantage in resolution (400×128) and single-chip integration."
+        },
+        {
+          "name": "Canon (Japan)",
+          "comparison": "Competitor in SPAD sensor development with strengths in long-range, high-sensitivity applications. Analysts view it as weaker than SolidVue in ultra-compact size and cost competitiveness."
+        },
+        {
+          "name": "Infoworks (South Korea)",
+          "comparison": "Domestic startup developing FMCW-based LiDAR sensors. Because the technology differs, it is more a partner in market expansion than a direct competitor."
+        },
+        {
+          "name": "Autoel (South Korea)",
+          "comparison": "Domestic startup developing LiDAR sensors for autonomous driving. The market is still in its early stages."
+        }
+      ],
+      "key_differentiator": "South Korea's only LiDAR sensor IC fabless company. Achieves world-class 400×128 resolution in a single-chip SPAD sensor using CMOS mass-production processes. Approx. 1/10 the volume and 1/100 the cost of mechanical LiDAR.",
+      "moat": "Single-chip SPAD integration technology and 14 related patents (as of 2023). Co-founders' track record of ISSCC publications and CES Innovation Awards. Monopoly position in the domestic LiDAR sensor IC market.",
+      "competitive_position_summary": "Globally, it is a late entrant behind Sony, but it differentiates on single-chip resolution, ultra-compact size and low cost. In the domestic market, it is the sole supplier of LiDAR sensor ICs and holds a monopoly position."
+    },
+    "trending_reason": {
+      "summary": "A Series C round of KRW 16.3B, exceeding the target by 63%, raised in October 2026, makes SolidVue's IPO roadmap more concrete.",
+      "catalysts": [
+        "KRW 16.3B Series C funding (target KRW 10B, actual KRW 16.3B)",
+        "CES 2025 Innovation Award (SL-2.2, Smart Cities category)",
+        "Began supplying evaluation kits to global LiDAR module companies → entry into mass-production stage",
+        "Official target for an IPO in two years",
+        "Explosive growth in LiDAR demand across autonomous driving, robotics and AR/VR markets"
+      ],
+      "growth_metrics": "2025 revenue up 148% YoY (absolute figures undisclosed). Cumulative funding of KRW 24.1B. Headcount of 11–50 employees.",
+      "media_mentions": [
+        {
+          "source": "thebell (premium content)",
+          "title": "SolidVue, Maker of Eyes for Autonomous Driving, Raises KRW 16.3B Beyond Target"
+        },
+        {
+          "source": "Maeil Business Newspaper (marketinsight.hankyung.com)",
+          "title": "'LiDAR Chip' Maker SolidVue Raises KRW 16.3B in Series C Funding [VC Briefing]"
+        },
+        null,
+        {
+          "source": "CES.tech (official)"
+        },
+        null,
+        {
+          "source": "thebell"
+        },
+        {
+          "source": "thelec",
+          "title": "SolidVue: 'Next-Generation LiDAR for Autonomous Driving and Mobile to Be Commercialized in 2023'"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Approx. KRW 24.1B",
+      "total_raised_note": "Series C KRW 16.3B plus prior rounds of approx. KRW 7.8B (includes Seed, Series A and Series B; government-funded R&D projects of KRW 2.4B presumed excluded, est.). Source: thebell, 2026.10.07.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "KRW 16.3B",
+        "note": "Closed around October 2, 2026. Exceeded the KRW 10B target. New investors: Envester, Kolon Investment, Hyundai Investment Partners, Union Investment Partners, S Ventures, ID Ventures and IBK Capital. Existing investor Quad Ventures also participated. Some outlets reported KRW 17.3B (sources differ). Approx. $11.6M in USD terms (at KRW 1,400/$, est.).",
+        "lead_investor": "Envester",
+        "notable_investors": [
+          "Kolon Investment",
+          "Hyundai Investment Partners",
+          "Union Investment Partners",
+          "S Ventures",
+          "ID Ventures",
+          "IBK Capital",
+          "Quad Ventures"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Quantum Ventures (Quad Ventures) made the first seed-stage investment. Exact amount undisclosed. Shortly after founding in 2020.",
+          "lead_investor": "Quantum Ventures Korea"
+        },
+        {
+          "amount": "KRW 2B",
+          "note": "Participants included Smilegate Investment, Quad Ventures and Quantum Ventures. Approx. $2M (est.)."
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Included a strategic investment from Futurenier. Amount and exact timing undisclosed; estimated mid-2023.",
+          "lead_investor": "Futurenier"
+        },
+        {
+          "amount": "KRW 16.3B",
+          "note": "See latest_round for details.",
+          "lead_investor": "Envester"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global LiDAR market is expected to grow from approx. $2B in 2025 to over $10B by 2030 (estimates by Yole and MarketsandMarkets). Key demand comes from autonomous driving, robotics, AR/VR and smart cities. SolidVue's TAM is the LiDAR sensor IC market, estimated at approx. $3B by 2030 (est.). SAM consists of autonomous driving solution providers in Korea and Asia. SOM is still at an early stage.",
+      "market_trend": "The shift from mechanical LiDAR to semiconductor-based solid-state LiDAR is accelerating. Competition in SPAD and ToF technologies is intensifying among global players such as Sony and Canon as well as startups. Applications are expanding into automotive, robotics and mobile. 2025–2027 is the watershed period for mass production and commercialization.",
+      "growth_potential": "The CES Innovation Award and investment that exceeded its target are positive signs for securing global customers. Revenue is expected to surge once full-scale mass production begins in 2027. As the only LiDAR sensor IC supplier in Korea, it is expected to benefit.",
+      "risks": [
+        "Global technology and price competition with large companies such as Sony and Canon",
+        "Dependence on foundries inherent to fabless models (risk of production disruption)",
+        "Demand volatility due to delays in commercialization timelines for autonomous vehicles",
+        "Possibility of continued losses due to high R&D costs relative to early-stage revenue scale"
+      ],
+      "risk_mitigation": "Niche differentiation through high resolution and ultra-compact size. Secure domestic customers first, then expand globally. Partially hedge risk by raising funds through government R&D projects. Plans for long-term funding through IPO preparation."
+    },
+    "related_links": [
+      {
+        "title": "Official website"
+      },
+      {
+        "title": "THE VC - SolidVue Company Profile"
+      },
+      {
+        "title": "Innovation Forest - SolidVue Company Profile"
+      },
+      null,
+      null,
+      null,
+      {
+        "title": "thebell premium - SolidVue, Maker of Eyes for Autonomous Driving"
+      }
+    ],
+    "editor_pick_comment": "The KRW 16.3B Series C, which surpassed the KRW 10B target, signals that this 'South Korea's only LiDAR sensor chip fabless company' is now on track toward mass production and an IPO."
+  },
+  "enablefusion-2026": {
+    "tagline": "A 'fusion foundry' platform that designs, procures, and manufactures fusion equipment.",
+    "category": [
+      "Fusion energy",
+      "Precision manufacturing",
+      "Energy equipment"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CSO (Chief Strategy Officer) and Co-founder",
+        "background": "World-renowned fusion expert. Former head of the KSTAR project at the Korea Institute of Fusion Energy (KFE), and former Deputy Director-General and COO of the ITER Organization. Later served as Second Vice Minister of the Ministry of Science and ICT (South Korea).",
+        "notable_achievement": "Led the development of KSTAR (Korea's superconducting fusion research device) and served as head of operations for the ITER Organization."
+      },
+      {
+        "role": "CEO (Chief Executive Officer) and Co-founder",
+        "background": "IT and management expert. Former CEO of KT and President of POSCO DX (formerly POSCO ICT). Has experience listing a startup on the KOSDAQ.",
+        "notable_achievement": "Former CEO of KT and President of POSCO DX; took a startup public on the KOSDAQ."
+      }
+    ],
+    "product": {
+      "summary": "EnableFusion operates a 'fusion foundry' called the Fusion Engineering Platform (FEP) instead of developing its own fusion reactor. It digitally re-engineers the requirements of global fusion developers, connects them to South Korea's precision manufacturing network (roughly 250 partners), and handles design, procurement, manufacturing, quality control, and installation end to end.",
+      "problem_statement": "Fusion reactor developers struggle to source critical equipment with extreme specifications—such as ultra-high vacuum vessels, high-temperature superconducting magnets, and tritium fuel systems—for which global supply chains are narrow. Korean manufacturers that participated in KSTAR and ITER are highly capable, but it is practically impossible for individual startups to access this network.",
+      "solution": "FEP (Fusion Engineering Platform) is a two-sided platform connecting demand-side fusion developers with supply-side Korean precision manufacturers. EnableFusion re-engineers developers' requirements based on digital twins, manages manufacturing processes, and takes responsibility for final delivery and testing. It consists of three categories: ① fusion components and systems, ② high-temperature superconductors (HTS), and ③ fusion AI.",
+      "key_features": [
+        "Digital redesign and re-engineering of fusion equipment requirements",
+        "Operates a network of around 250 precision manufacturing partners in South Korea",
+        "Digital twin- and AI-based cyber-physical simulation",
+        "Manufactures vacuum vessels that withstand ultra-high vacuum, cryogenic, and high-radiation environments",
+        "Capabilities in high-temperature superconducting (HTS) wire, cable, and magnet manufacturing",
+        "Development of tritium fuel-related technologies",
+        "One-stop service from procurement, manufacturing, quality control, installation, and after-sales support"
+      ],
+      "tech_stack_or_innovation": "Introduces the 'fabless semiconductor' model to the fusion industry. It is the first to commercialize the 'fusion foundry' concept, separating design and manufacturing in fusion, analogous to TSMC and NVIDIA in semiconductors. Engineering automation using digital twins and AI is the core technological differentiator.",
+      "target_customer": "Global fusion startups developing their own fusion reactors (potential customers include Commonwealth Fusion Systems, Helion Energy), government-led public–private partnership (PPP) projects (ITER, DTT), and fusion R&D departments of major energy companies.",
+      "business_model": "Project-based order and supply contracts. Revenue comes from fees and margins on the design, manufacturing, and installation of fusion equipment commissioned by customers. In the long term, it can expand into FEP platform usage fees or licensing models."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Kyoto Fusioneering (Japan)",
+          "comparison": "A University of Kyoto spinoff and 'fusion systems provider' that designs and supplies core fusion systems (gyrotrons, fuel cycles, blankets). Like EnableFusion, it does not build its own reactor and instead supplies components and systems, but it focuses on Japanese and European manufacturers and partners with Germany's Siemens Energy and Proxima Fusion. EnableFusion's differentiation is its use of the Korean manufacturing ecosystem."
+        },
+        {
+          "name": "Next Step Fusion (Luxembourg/UK)",
+          "comparison": "European fusion supply chain specialist founded in 2023. Specializes in integrated modeling, plasma diagnostics, and control solutions. More software and diagnostics-oriented than EnableFusion and does not have Korean manufacturing infrastructure."
+        },
+        {
+          "name": "Bilfinger (Germany)",
+          "comparison": "Large German engineering firm that supplies magnets, cryogenics, and remote handling systems to fusion projects such as ITER and W7-X. As a large corporation, it has advantages in scale and references, but it is not a fusion-specific 'foundry platform'."
+        }
+      ],
+      "key_differentiator": "It packages Korea's world-class precision fusion manufacturing capabilities—ultra-high vacuum vessels, HTS magnets, and more—accumulated through KSTAR and ITER into a single platform (FEP). It is the first to apply the semiconductor foundry model to fusion, letting developers focus on design without manufacturing risk.",
+      "moat": "① Exclusive network of about 250 Korean precision manufacturers that participated in KSTAR and ITER, ② the technical credibility of CSO Gyung-Su Lee, former head of KSTAR and COO of ITER, ③ global procurement capability proven by the EUR 26M DTT order in Italy, ④ close ties to government-level fusion R&D infrastructure (KSTAR, the Korean ITER project).",
+      "competitive_position_summary": "While most of the roughly 45 global fusion startups (as of 2026) focus on reactor development, EnableFusion is uniquely differentiated by its 'fusion foundry' business model. Rather than direct competitors, most fusion developers are potential customers. In the mid-to-long term, competition could emerge if large EPC companies such as Bechtel or Siemens enter the fusion market."
+    },
+    "trending_reason": {
+      "summary": "In September 2026, EnableFusion successfully raised a KRW 45B Series A. This followed a EUR 26M (approx. KRW 45B) vacuum vessel order from Italy's DTT project just three months earlier, validating the 'fusion foundry' model in the market. The symbolism of being South Korea's first fusion startup and the country's first fusion technology export is also drawing attention.",
+      "catalysts": [
+        "September 2026: Raised a KRW 45B (approx. $32.74M) Series A led by Quantum Ventures Korea",
+        "March 2026: Won a EUR 26M (approx. KRW 45B) vacuum vessel supply order for Italy's DTT project – Korea's first fusion technology export",
+        "January 2026: Italy's court (Tar Lazio) dismissed a competitor's lawsuit, finalizing the DTT order",
+        "Soaring AI data center power demand pushes interest in fusion as a carbon-free baseload power source to an all-time high",
+        "Signed an MOU with KEPCO E&C to jointly develop domestic and international fusion power plant construction projects"
+      ],
+      "growth_metrics": "Cumulative funding stands at approx. KRW 56B as of September 2026. It won a global fusion project order (EUR 26M) within 2 years and 9 months of founding. Employee count is undisclosed, but it operates a network of about 250 partners.",
+      "media_mentions": [
+        {
+          "title": "EnableFusion raises KRW 45B Series A... Expands fusion business with AI, superconductors, and tritium"
+        },
+        null,
+        null,
+        {
+          "source": "Electronic Times",
+          "title": "EnableFusion wins KRW 45B order for key fusion equipment"
+        },
+        null,
+        {
+          "source": "Quotidiano Energia (Italy)"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Approx. KRW 56B",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "KRW 45B",
+        "note": "CBInsights lists it as $32.74M. At the September 2026 exchange rate (approx. $1 = KRW 1,374), this is approximately KRW 45B.",
+        "notable_investors": [
+          null,
+          null,
+          null,
+          null,
+          "Duk-soo Jang, Chairman of DS Asset Management",
+          "4 strategic and institutional investors (undisclosed)"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Round size not disclosed. Subtracting the Series A (KRW 45B) from cumulative funding (KRW 56B) gives an estimated size of approx. KRW 11B.",
+          "lead_investor": "Undisclosed"
+        }
+      ],
+      "total_raised_note": "Series A KRW 45B (September 2026) + previous rounds approx. KRW 11B (est.). Sources: StartupRecipe, THE VC"
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global fusion energy market. According to the Fusion Industry Association, total investment in private fusion companies reached approx. $7B (approx. KRW 9.4T) in 2025, and the market is expected to grow to multi-trillion KRW with commercial power generation beginning in the 2030s. SAM: Fusion equipment manufacturing and engineering services market. The ITER project alone is worth approx. $22B. SOM: A KRW 1–2T market within global fusion projects' core equipment procurement that Korean manufacturers can participate in.",
+      "market_trend": "① Surging AI data center electricity demand highlights the need for carbon-free, 24/7 baseload power; ② Big tech (Microsoft, Google, Amazon) is rushing to invest in fusion startups and sign power purchase agreements (PPAs); ③ Governments are expanding fusion regulation easing and commercialization support policies; ④ Advances in high-temperature superconductors (HTS) make compact fusion reactors increasingly viable.",
+      "growth_potential": "As the fusion industry enters a full-scale hardware procurement phase with the goal of commercial power generation in the 2030s, the role of the 'fusion foundry' is expected to grow. With its first commercial reference secured via the DTT project, revenue could surge if it wins additional global projects.",
+      "risks": [
+        "Fusion commercialization timelines may slip – profitability may take years to materialize",
+        "Competition could intensify if large global EPC firms (Siemens, Bechtel, etc.) enter the fusion market",
+        "Risk of reliance on a narrow early client base (dependence on the DTT single project)",
+        "Potential for further legal disputes related to the Italian DTT order (Tar Lazio litigation)",
+        "Impact of raw material price volatility and global supply chain disruptions on manufacturing costs"
+      ],
+      "risk_mitigation": "① The fusion foundry model can continue winning equipment orders regardless of whether individual fusion reactor developers succeed or fail; ② A network of about 250 partners diversifies dependence on any single manufacturer; ③ Legal finalization of the DTT order (Tar Lazio ruling in January 2026) removes that risk; ④ Diversification across four business areas, including AI, HTS, and tritium, reduces single-project risk."
+    },
+    "related_links": [
+      {
+        "title": "EnableFusion Official Website"
+      },
+      {
+        "title": "THE VC – EnableFusion Company Profile"
+      },
+      {
+        "title": "Fusion Energy Base – EnableFusion Profile"
+      }
+    ],
+    "editor_pick_comment": "The distinctive positioning of a 'fusion foundry' that doesn't build a reactor itself but connects Korean manufacturers' ultra-precision technology to global fusion developers is impressive."
+  },
+  "lomby-2026": {
+    "tagline": "Autonomous last-mile robot delivery in collaboration with Suzuki",
+    "category": [
+      "Delivery robots",
+      "Autonomous driving",
+      "Last-mile logistics"
+    ],
+    "headquarters": {
+      "city": "Tokyo",
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "Founder & CEO",
+        "background": "Formerly of Itochu Corporation; founded Yper (OKIPPA), a startup solving delivery issues, in 2017; pivoted to LOMBY in 2022.",
+        "notable_achievement": "Leveraged OKIPPA development experience, which solved the redelivery problem, to pivot into last-mile robot delivery."
+      }
+    ],
+    "team_highlights": "Currently attracting investment and pursuing technical collaboration with Suzuki, Mercury Investment, and others. As an engineering-focused team, it is carrying out NEDO-supported projects.",
+    "product": {
+      "summary": "LOMBY is an autonomous delivery robot that travels on sidewalks and delivers goods from stores within a 2–3 km radius to customers at a top speed of 6 km/h. Safety is ensured through remote monitoring, and operation is possible even in bad weather.",
+      "problem_statement": "Aging and labor shortages make it difficult to secure workers for last-mile delivery. In Japan, especially severe population decline has made the delivery labor shortage a social issue.",
+      "solution": "LOMBY robots autonomously deliver from stores to customers in place of people. Operating multiple units under remote supervision provides labor efficiency.",
+      "key_features": [
+        "Autonomous driving and remote monitoring system",
+        "Durability and mass-production readiness co-developed with Suzuki",
+        "Compatible with existing smartphone apps and web services",
+        "Stable operation even in bad weather (rain, nighttime)",
+        "Reduces delivery costs to half or less compared with manual work"
+      ],
+      "tech_stack_or_innovation": "AI-based autonomous driving, route planning and obstacle avoidance using 3D maps, and a remote monitoring operations system. Classified as a 'remote-controlled small vehicle' under the Road Traffic Act.",
+      "target_customer": "Businesses needing last-mile delivery such as convenience stores, retailers, and restaurants, as well as logistics companies and e-commerce operators",
+      "business_model": "Provides robot delivery services on a per-delivery fee or regular subscription basis (est.). Validating the revenue model through demonstration experiments with 7-Eleven."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A global leader that has entered multiple countries, but is not specialized for the Japanese market."
+        },
+        {
+          "name": "Coco (Japan)",
+          "comparison": "An autonomous delivery robot startup in Japan operating similar delivery robots; the Suzuki-specific partnership is LOMBY's unique strength."
+        }
+      ],
+      "key_differentiator": "Secures mass-production capability and stable parts supply through an exclusive partnership with Suzuki. Government support such as NEDO and advanced remote monitoring.",
+      "moat": "Suzuki's manufacturing network, proprietary autonomous AI and remote monitoring software, and experience in complying with regulations for road driving.",
+      "competitive_position_summary": "Although the market is still early-stage, it is building competitiveness through tangible results from Suzuki collaboration, government support, and 7-Eleven demonstrations."
+    },
+    "trending_reason": {
+      "summary": "In a Series A round that closed in August 2026, raised ¥387M led by Mercury Investment, with participation from Suzuki, Nabtesco, Canal Ventures, and others, accelerating the buildout of a robot mass-production system.",
+      "catalysts": [
+        "Labor shortage in delivery due to intensifying aging",
+        "Expanding last-mile delivery demand from e-commerce growth",
+        "Japan government's regulatory easing for autonomous robot demonstrations"
+      ],
+      "media_mentions": [
+        null,
+        {
+          "source": "Suzuki official news"
+        },
+        {
+          "source": "KEPPLE (startup media)"
+        },
+        {
+          "source": "Canal Ventures media"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "¥747M",
+      "total_raised_note": "Cumulative funds raised including the Series A (all through third-party allotment capital increases)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "¥387M",
+        "lead_investor": "Mercury Investment",
+        "notable_investors": [
+          "Suzuki",
+          "Canal Ventures",
+          "Nabtesco Technology Ventures",
+          null,
+          "Tamashin-SNETI Investment Limited Partnership"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "¥387M"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Japan's indoor and outdoor delivery robot market is projected to grow at an average annual rate of over 20% through 2030. LOMBY specializes in convenience store and grocery delivery.",
+      "market_trend": "Labor replacement demand is surging due to aging and population decline, regulatory easing is expanding areas where robots can drive, and e-commerce growth is increasing the burden on last-mile logistics.",
+      "growth_potential": "Targets deploying several thousand units in Japan within five years, with high potential for widespread adoption through Suzuki's mass-production capabilities.",
+      "risks": [
+        "Potential changes in road-driving regulations (backlash if safety accidents occur)",
+        "Competition with robots developed in-house by major logistics companies",
+        "Technical limitations (complex intersections, narrow alleys)"
+      ],
+      "risk_mitigation": "Suzuki's mass-production capacity and parts stability, technology advancement with NEDO support, and accumulation of real usage data through 7-Eleven demonstrations."
+    },
+    "related_links": [
+      {
+        "title": "LOMBY official website"
+      },
+      {
+        "title": "LOMBY service introduction (English)"
+      },
+      {
+        "title": "LOMBY company information"
+      }
+    ],
+    "editor_pick_comment": "The strategic alliance with Suzuki gives it an impressive edge in mass production, but it still needs to prove greater technical maturity and operational efficiency to stand out in the global autonomous delivery robot market."
+  }
+}

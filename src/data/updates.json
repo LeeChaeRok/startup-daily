@@ -8,7 +8,9 @@
         "detail_ko": "아키도 랩스는 100개 클리닉·원격의료·거리의료에 자체 AI 'ScopeAI'를 확대하며 미국 최초의 AI 네이티브 헬스 시스템을 발표했다. 회사명에서 '랩스'를 빼고 '아키도'로 개명, 아키도 메디컬 브랜드와 AI 임상 자문위원회도 신설했다.",
         "source_url": "https://www.prnewswire.com/news-releases/akido-announces-the-first-ai-native-health-system-in-the-us-302838924.html",
         "source_name": "PR Newswire",
-        "found": "2026-10-29"
+        "found": "2026-10-29",
+        "title_en": "US launches first AI-native health system",
+        "detail_en": "Akido Labs announced America's first AI-native health system, expanding its proprietary AI 'ScopeAI' across 100 clinics, telehealth, and street medicine. The company dropped 'Labs' from its name to become Akido, and also launched the Akido Medical brand and an AI clinical advisory board."
       }
     ],
     "nala-2026": [
@@ -19,7 +21,9 @@
         "detail_ko": "Liquidity와 Mars Growth Capital(MUFG와의 합작사)로부터 최대 5,000만 달러 규모의 신용 시설을 확보했으며, 초기 2,500만 달러가 인출되었다.",
         "source_url": "https://www.liquidity.com/press-release/nala-secures-50-million-credit-facility-from-liquidity-to-scale-global-stablecoin-payments-infrastructure",
         "source_name": "Liquidity",
-        "found": "2026-10-30"
+        "found": "2026-10-30",
+        "title_en": "Secures $50M credit facility",
+        "detail_en": "Secured a credit facility of up to $50M from Liquidity and Mars Growth Capital (a joint venture with MUFG), with an initial $25M drawn down."
       }
     ]
   },
