@@ -28,5 +28,7 @@ export function englishRecord(s, tr) {
   // not translated yet: Korean text, but at least the English name
   if (!tr) return { ...s, name_ko: s.name_en || s.name_ko, _ko, _untranslated: true }
   const merged = overlay(s, tr)
-  return { ...merged, name_ko: s.name_en || s.name_ko, _ko }
+  // people too: founders' display name is name_ko, so give it the English spelling
+  const founders = (merged.founders || []).map((f) => (f?.name_en ? { ...f, name_ko: f.name_en } : f))
+  return { ...merged, founders, name_ko: s.name_en || s.name_ko, _ko }
 }

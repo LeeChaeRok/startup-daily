@@ -204,7 +204,8 @@ ${JSON.stringify(request, null, 1)}`
 
 /* ---------- Model call ---------- */
 
-const MAX_TOKENS = 16000
+// DeepSeek spends a lot on reasoning before the JSON; 16k cut off about a third of companies
+const MAX_TOKENS = 32000
 
 async function ask(llm, system, user, useModels, maxTokens = MAX_TOKENS) {
   const r = await llm.chat({ system, user, json: true, maxTokens, useModels })
