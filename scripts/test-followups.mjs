@@ -3,7 +3,7 @@
 import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
-import { applyResult, dateAfter, emptyStore, researchFollowup, runFollowups, selectTargets, vetEvents } from './lib/followups.mjs'
+import { applyResult, dateAfter, emptyStore, followupPrompt, researchFollowup, runFollowups, selectTargets, vetEvents } from './lib/followups.mjs'
 import { merge } from './lib/pipeline.mjs'
 
 let fails = 0
@@ -90,6 +90,7 @@ eq('duplicates dropped', vet.dropped.filter((d) => d.reason === 'duplicate').len
 eq('bad kind / speculative / English / long / homepage dropped', ['kind rumor', 'speculative wording', 'title missing, too long or not Korean', 'title missing, too long or not Korean', 'is not an article URL'].every((r) => vet.dropped.some((d) => d.reason.includes(r))), true)
 eq('found stamped', vet.events[0].found, TODAY)
 eq('event shape', Object.keys(vet.events[0]), ['date', 'kind', 'title_ko', 'detail_ko', 'source_url', 'source_name', 'found'])
+
 eq('no link check for rule failures', fetched.length, 6)
 
 const vet2 = await vetEvents([ev({}), ev({ source_url: 'https://news.example/ok/new', date: '2026-09-09', kind: 'product', title_ko: '신규 API 출시' })], subject, {
@@ -158,6 +159,18 @@ await runFollowups(llmIds, recs, { updatesPath, correctionsPath, today: TODAY, i
 const saved2 = JSON.parse(fs.readFileSync(updatesPath, 'utf-8'))
 eq('--ids forces a recheck, duplicate event not stored twice', [llmIds.calls.length, saved2.updates['old-a'].length], [1, 1])
 fs.rmSync(dir, { recursive: true, force: true })
+
+/* ---------- English from the same call ---------- */
+const vetEn = await vetEvents([
+  ev({ title_en: 'Raised $40M Series B', detail_en: 'Led by X.' }),
+  ev({ source_url: 'https://news.example/ok/en2', date: '2026-07-11', kind: 'product', title_ko: '신규 API 출시', title_en: '신규 API 출시', detail_en: 'New API.' }), // English still Korean
+  ev({ source_url: 'https://news.example/ok/en3', date: '2026-07-12', kind: 'product', title_ko: '모바일 앱 출시' }), // no English
+], subject, { today: TODAY, fetchImpl })
+eq('English stored next to Korean', Object.keys(vetEn.events[0]), ['date', 'kind', 'title_ko', 'title_en', 'detail_ko', 'detail_en', 'source_url', 'source_name', 'found'])
+eq('English values kept', [vetEn.events[0].title_en, vetEn.events[0].detail_en], ['Raised $40M Series B', 'Led by X.'])
+eq('Korean "English" dropped, event kept', [vetEn.events[1].title_ko, 'title_en' in vetEn.events[1]], ['신규 API 출시', false])
+eq('no English, event kept without it', ['title_en' in vetEn.events[2], vetEn.events.length], [false, 3])
+eq('prompt asks for English', /title_en/.test(followupPrompt(subject, TODAY)), true)
 
 console.log(fails ? `${fails} FAILED` : 'ALL PASS')
 process.exit(fails ? 1 : 0)

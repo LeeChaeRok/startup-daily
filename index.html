@@ -48,7 +48,19 @@
     <!-- web fonts must not block the first paint: load as print, switch to all once fetched -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
-    <link rel="preload" href="/data/index.json" as="fetch" crossorigin="anonymous" />
+    <script>
+      // Start fetching the issue list now, in the reading language (see src/lib/i18n.js).
+      (function () {
+        var lang = new URLSearchParams(location.search).get('lang');
+        try { lang = lang || JSON.parse(localStorage.getItem('sd_lang')); } catch (e) {}
+        if (lang !== 'ko' && lang !== 'en') lang = /^ko\b/i.test(navigator.language || '') ? 'ko' : 'en';
+        document.documentElement.lang = lang;
+        var l = document.createElement('link');
+        l.rel = 'preload'; l.as = 'fetch'; l.crossOrigin = 'anonymous';
+        l.href = lang === 'en' ? '/data/en/index.json' : '/data/index.json';
+        document.head.appendChild(l);
+      })();
+    </script>
   </head>
   <body>
     <div id="root">

@@ -2,6 +2,7 @@ import Icon from './Icon.jsx'
 import { useReadLog, useSaved } from '../lib/hooks.js'
 import { useToast } from './toast-context.js'
 import { navigate } from '../lib/hooks.js'
+import { L } from '../lib/i18n.js'
 
 export function SectorLabel({ sector }) {
   return <span className="sector">{sector.label}</span>
@@ -15,7 +16,7 @@ export function CorrectionBadge({ correction }) {
   if (!correction) return null
   return (
     <span className={`badge badge--warn ${correction.kind === 'note' ? 'badge--note' : ''}`}>
-      정정 · {correction.status}
+      {L('정정', 'Correction')} · {correction.status}
     </span>
   )
 }
@@ -58,7 +59,7 @@ export function ProgressRing({ done, total, size = 22 }) {
       </svg>
       <span className="progress__text">
         <span className="mono">{done}</span>/<span className="mono">{total}</span>
-        <span className="sr-only"> 읽음</span>
+        <span className="sr-only">{L(' 읽음', ' read')}</span>
       </span>
     </span>
   )
@@ -73,18 +74,18 @@ export function SaveButton({ startup, variant = 'icon' }) {
     const before = saved
     toggle(startup.id)
     if (on) {
-      toast('저장을 취소했어요', { label: '되돌리기', onClick: () => restore(before) })
+      toast(L('저장을 취소했어요', 'Removed from saved'), { label: L('되돌리기', 'Undo'), onClick: () => restore(before) })
     } else {
-      toast('저장함에 담았어요', { label: '보기', onClick: () => navigate('/saved') })
+      toast(L('저장함에 담았어요', 'Saved'), { label: L('보기', 'View'), onClick: () => navigate('/saved') })
     }
   }
 
-  const label = `${startup.name_ko || startup.name_en} 저장`
+  const label = L(`${startup.name_ko || startup.name_en} 저장`, `Save ${startup.name_ko || startup.name_en}`)
   if (variant === 'label') {
     return (
       <button type="button" className={`btn btn--secondary save ${on ? 'is-on' : ''}`} aria-pressed={on} onClick={onClick}>
         <Icon name={on ? 'bookmarkFill' : 'bookmark'} className="save__icon" />
-        {on ? '저장됨' : '저장'}
+        {on ? L('저장됨', 'Saved') : L('저장', 'Save')}
       </button>
     )
   }
@@ -110,7 +111,7 @@ export function ReadButton({ startup, variant = 'icon' }) {
     return (
       <button type="button" className={`btn btn--secondary readbtn ${on ? 'is-on' : ''}`} aria-pressed={on} onClick={onClick}>
         <Icon name="check" size={18} />
-        {on ? '읽음' : '읽음 표시'}
+        {on ? L('읽음', 'Read') : L('읽음 표시', 'Mark as read')}
       </button>
     )
   }
@@ -119,7 +120,7 @@ export function ReadButton({ startup, variant = 'icon' }) {
       type="button"
       className={`icon-btn readbtn ${on ? 'is-on' : ''}`}
       aria-pressed={on}
-      aria-label={`${startup.name_ko || startup.name_en} 읽음 표시`}
+      aria-label={L(`${startup.name_ko || startup.name_en} 읽음 표시`, `Mark ${startup.name_ko || startup.name_en} as read`)}
       onClick={onClick}
     >
       <Icon name="check" />
@@ -128,7 +129,7 @@ export function ReadButton({ startup, variant = 'icon' }) {
 }
 
 /** Mark a whole list read (or unread again), with undo. */
-export function MarkAllRead({ list, label = '이 호' }) {
+export function MarkAllRead({ list, label = L('이 호', 'this issue') }) {
   const { isRead, setRead, readLog, restoreRead } = useReadLog()
   const toast = useToast()
   if (!list.length) return null
@@ -136,14 +137,19 @@ export function MarkAllRead({ list, label = '이 호' }) {
   const onClick = () => {
     const before = readLog
     setRead(list.map((s) => s.id), !allRead)
-    toast(allRead ? `${label}를 안 읽음으로 돌렸어요` : `${label}를 모두 읽음으로 표시했어요`, {
-      label: '되돌리기',
+    toast(
+      allRead
+        ? L(`${label}를 안 읽음으로 돌렸어요`, `Marked ${label} as unread`)
+        : L(`${label}를 모두 읽음으로 표시했어요`, `Marked ${label} as read`),
+      {
+      label: L('되돌리기', 'Undo'),
       onClick: () => restoreRead(before),
-    })
+      },
+    )
   }
   return (
     <button type="button" className="text-btn mark-all" onClick={onClick}>
-      <Icon name="check" size={16} /> {allRead ? '모두 안 읽음으로' : '모두 읽음으로 표시'}
+      <Icon name="check" size={16} /> {allRead ? L('모두 안 읽음으로', 'Mark all unread') : L('모두 읽음으로 표시', 'Mark all read')}
     </button>
   )
 }
@@ -167,8 +173,8 @@ export function AiNote({ compact = false }) {
     <p className={`ai-note ${compact ? 'ai-note--compact' : ''}`}>
       <Icon name="info" size={16} />
       <span>
-        AI가 공개 자료로 작성 · 발행일 기준 정보 · 투자 조언 아님 ·{' '}
-        <a href="#/about?sec=how">작성 방식과 선정 기준</a>
+        {L('AI가 공개 자료로 작성 · 발행일 기준 정보 · 투자 조언 아님 ·', 'Written by AI from public sources · Accurate as of publication · Not investment advice ·')}{' '}
+        <a href="#/about?sec=how">{L('작성 방식과 선정 기준', 'How we write and pick')}</a>
       </span>
     </p>
   )

@@ -9,25 +9,29 @@ import { startups, LENS_FILTER, LENS_VERDICTS, REGIONS, SECTORS, STAGE_GROUPS, s
 import { MIN_SECTOR } from './Sector.jsx'
 import { buildQuery, navigate, useInterests, useReadLog } from '../lib/hooks.js'
 import { monthDay, numClass, weekLabel } from '../lib/format.js'
+import { isEn, L } from '../lib/i18n.js'
+
+const plural = (n, one, many = `${one}s`) => (n === 1 ? one : many)
 
 const SORTS = [
-  { key: 'date', label: '최신 발행순' },
-  { key: 'raised', label: '누적 투자 큰 순' },
-  { key: 'founded', label: '설립 최근순' },
-  { key: 'name', label: '이름순' },
+  { key: 'date', label: L('최신 발행순', 'Newest') },
+  { key: 'raised', label: L('누적 투자 큰 순', 'Most raised') },
+  { key: 'founded', label: L('설립 최근순', 'Newest founded') },
+  { key: 'name', label: L('이름순', 'Name') },
 ]
 
 const GROUPS = [
-  { key: 'sector', label: '분야', options: SECTORS.map(({ key, label }) => ({ key, label })), field: (s) => s._sector.key },
-  { key: 'stage', label: '단계', options: STAGE_GROUPS, field: (s) => s._stageGroup },
-  { key: 'region', label: '지역', options: REGIONS, field: (s) => s._region },
+  { key: 'sector', label: L('분야', 'Sector'), options: SECTORS.map(({ key, label }) => ({ key, label })), field: (s) => s._sector.key },
+  { key: 'stage', label: L('단계', 'Stage'), options: STAGE_GROUPS, field: (s) => s._stageGroup },
+  { key: 'region', label: L('지역', 'Region'), options: REGIONS, field: (s) => s._region },
   {
     key: 'korea',
-    label: '한국 시장 (AI 가설)',
+    label: L('한국 시장 (AI 가설)', 'Korean market (AI hypothesis)'),
     options: LENS_FILTER.map((key) => ({ key, label: LENS_VERDICTS[key].label })),
     field: (s) => s._lens?.v,
   },
-]
+  // the Korea-market read only exists in the Korean edition
+].filter((g) => !(isEn && g.key === 'korea'))
 
 const list = (v) => (v ? v.split(',').filter(Boolean) : [])
 
@@ -35,7 +39,7 @@ function sortBy(rows, key) {
   const r = [...rows]
   if (key === 'raised') r.sort((a, b) => (b.startup._raisedUSD ?? -1) - (a.startup._raisedUSD ?? -1))
   else if (key === 'founded') r.sort((a, b) => (b.startup.founded_year || 0) - (a.startup.founded_year || 0))
-  else if (key === 'name') r.sort((a, b) => (a.startup.name_ko || '').localeCompare(b.startup.name_ko || '', 'ko'))
+  else if (key === 'name') r.sort((a, b) => (a.startup.name_ko || '').localeCompare(b.startup.name_ko || '', L('ko', 'en')))
   return r
 }
 
@@ -127,13 +131,13 @@ function ActiveFilters({ state, update }) {
           type="button"
           className="chip chip--on"
           onClick={() => update({ [c.group]: state[c.group].filter((x) => x !== c.key) })}
-          aria-label={`${c.label} 필터 해제`}
+          aria-label={L(`${c.label} 필터 해제`, `Remove filter: ${c.label}`)}
         >
           {c.label} <Icon name="close" size={14} />
         </button>
       ))}
       <button type="button" className="text-btn" onClick={() => update({ sector: [], stage: [], region: [], korea: [] })}>
-        모두 지우기
+        {L('모두 지우기', 'Clear all')}
       </button>
     </div>
   )
@@ -151,18 +155,18 @@ function ResultsTable({ rows, sort, update }) {
   )
   return (
     <table className="results">
-      <caption className="sr-only">검색 결과</caption>
+      <caption className="sr-only">{L('검색 결과', 'Search results')}</caption>
       <thead>
         <tr>
-          {th('name', '회사')}
-          <th scope="col">분야</th>
-          <th scope="col">단계</th>
-          <th scope="col">지역</th>
-          {th('raised', '누적 투자')}
-          {th('founded', '설립')}
-          {th('date', '발행')}
+          {th('name', L('회사', 'Company'))}
+          <th scope="col">{L('분야', 'Sector')}</th>
+          <th scope="col">{L('단계', 'Stage')}</th>
+          <th scope="col">{L('지역', 'Region')}</th>
+          {th('raised', L('누적 투자', 'Raised'))}
+          {th('founded', L('설립', 'Founded'))}
+          {th('date', L('발행', 'Issue'))}
           <th scope="col">
-            <span className="sr-only">저장</span>
+            <span className="sr-only">{L('저장', 'Save')}</span>
           </th>
         </tr>
       </thead>
@@ -175,7 +179,7 @@ function ResultsTable({ rows, sort, update }) {
                 <span>
                   <span className="results__name">
                     {s.name_ko}
-                    {isRead(s.id) && <Icon name="check" size={14} label="읽음" />}
+                    {isRead(s.id) && <Icon name="check" size={14} label={L('읽음', 'Read')} />}
                   </span>
                   <span className="results__tagline">{reason || s.tagline}</span>
                 </span>
@@ -190,7 +194,7 @@ function ResultsTable({ rows, sort, update }) {
                   {s._raisedShort}
                 </span>
               ) : (
-                <span className="muted">미공개</span>
+                <span className="muted">{L('미공개', 'Undisclosed')}</span>
               )}
             </td>
             <td className="results__num mono">{s.founded_year}</td>
@@ -212,8 +216,8 @@ function SectorShelf() {
   const shelf = SECTORS.filter((s) => (counts.get(s.key) || 0) >= MIN_SECTOR)
   if (!shelf.length) return null
   return (
-    <nav className="shelf" aria-label="분야별로 모아 보기">
-      <span className="shelf__label">분야별로 모아 보기</span>
+    <nav className="shelf" aria-label={L('분야별로 모아 보기', 'Browse by sector')}>
+      <span className="shelf__label">{L('분야별로 모아 보기', 'Browse by sector')}</span>
       <div className="shelf__chips">
         {shelf.map((s) => (
           <a key={s.key} className="chip" href={`#/t/${s.key}`}>
@@ -227,17 +231,27 @@ function SectorShelf() {
 
 function IssuesView({ desktop }) {
   const { isRead, readLog } = useReadLog()
+  const readCount = Object.keys(readLog).filter((id) => startups.some((s) => s.id === id)).length
   return (
     <div className="issues-view">
       <p className="issues-view__sum">
-        전체 <span className="num">{stats.issues}</span>호 · <span className="num">{stats.companies}</span>곳 · 읽음{' '}
-        <span className="num">{Object.keys(readLog).filter((id) => startups.some((s) => s.id === id)).length}</span>곳
+        {L(
+          <>
+            전체 <span className="num">{stats.issues}</span>호 · <span className="num">{stats.companies}</span>곳 · 읽음{' '}
+            <span className="num">{readCount}</span>곳
+          </>,
+          <>
+            <span className="num">{stats.issues}</span> {plural(stats.issues, 'issue')} ·{' '}
+            <span className="num">{stats.companies}</span> {plural(stats.companies, 'startup')} ·{' '}
+            <span className="num">{readCount}</span> read
+          </>,
+        )}
       </p>
       {weeks.map(({ key, dates: ds }) => (
         <section key={key} className="week">
           <h2 className="week__title">
             <a href={`#/w/${key}`}>
-              {weekLabel(key)} <span className="week__more">주간 정리 →</span>
+              {weekLabel(key)} <span className="week__more">{L('주간 정리 →', 'Weekly recap →')}</span>
             </a>
           </h2>
           <ul className={`issue-rows ${desktop ? 'issue-rows--grid' : ''}`}>
@@ -284,12 +298,12 @@ export default function Explore({ params, desktop }) {
   return (
     <div className={`page page--explore ${desktop ? 'page--explore-desktop' : ''}`}>
       <h1 className="page-title" tabIndex={-1}>
-        탐색
+        {L('탐색', 'Explore')}
       </h1>
       <form className="searchbar" role="search" onSubmit={(e) => e.preventDefault()}>
         <Icon name="explore" size={20} />
         <label htmlFor="explore-q" className="sr-only">
-          회사, 분야, 창업자, 경쟁사 검색
+          {L('회사, 분야, 창업자, 경쟁사 검색', 'Search companies, sectors, founders, competitors')}
         </label>
         <input
           id="explore-q"
@@ -297,21 +311,21 @@ export default function Explore({ params, desktop }) {
           type="search"
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
-          placeholder="회사, 분야, 창업자, 경쟁사"
+          placeholder={L('회사, 분야, 창업자, 경쟁사', 'Companies, sectors, founders, competitors')}
           autoComplete="off"
           enterKeyHint="search"
         />
         {draft && (
-          <button type="button" className="icon-btn" onClick={() => setDraft('')} aria-label="검색어 지우기">
+          <button type="button" className="icon-btn" onClick={() => setDraft('')} aria-label={L('검색어 지우기', 'Clear search')}>
             <Icon name="close" size={18} />
           </button>
         )}
       </form>
 
-      <div className="segmented" role="group" aria-label="보기">
+      <div className="segmented" role="group" aria-label={L('보기', 'View')}>
         {[
-          ['companies', '회사'],
-          ['issues', '지난 호'],
+          ['companies', L('회사', 'Companies')],
+          ['issues', L('지난 호', 'Issues')],
         ].map(([k, label]) => (
           <button
             key={k}
@@ -331,7 +345,7 @@ export default function Explore({ params, desktop }) {
         <div className="explore">
           <SectorShelf />
           {desktop && (
-            <aside className="explore__filters" aria-label="필터">
+            <aside className="explore__filters" aria-label={L('필터', 'Filters')}>
               <FilterGroups state={state} update={update} base={base} idPrefix="side" />
             </aside>
           )}
@@ -339,7 +353,7 @@ export default function Explore({ params, desktop }) {
             <div className="explore__bar">
               {!desktop && (
                 <button type="button" className="chip" onClick={() => setSheet(true)}>
-                  <Icon name="filter" size={16} /> 필터{activeCount > 0 && <span className="num"> {activeCount}</span>}
+                  <Icon name="filter" size={16} /> {L('필터', 'Filters')}{activeCount > 0 && <span className="num"> {activeCount}</span>}
                 </button>
               )}
               {interests.length > 0 && (
@@ -349,7 +363,7 @@ export default function Explore({ params, desktop }) {
                   aria-pressed={interestOn}
                   onClick={() => update({ sector: interestOn ? [] : interests })}
                 >
-                  내 관심 분야
+                  {L('내 관심 분야', 'My sectors')}
                 </button>
               )}
               <button
@@ -358,10 +372,10 @@ export default function Explore({ params, desktop }) {
                 aria-pressed={state.unread}
                 onClick={() => update({ unread: !state.unread })}
               >
-                안 읽은 곳만
+                {L('안 읽은 곳만', 'Unread only')}
               </button>
               <label className="select">
-                <span className="sr-only">정렬</span>
+                <span className="sr-only">{L('정렬', 'Sort')}</span>
                 <select value={state.sort} onChange={(e) => update({ sort: e.target.value })}>
                   {SORTS.map((s) => (
                     <option key={s.key} value={s.key}>
@@ -372,7 +386,14 @@ export default function Explore({ params, desktop }) {
                 <Icon name="chevronDown" size={16} />
               </label>
               <p className="explore__count" aria-live="polite">
-                결과 <span className="num">{rows.length}</span>곳
+                {L(
+                  <>
+                    결과 <span className="num">{rows.length}</span>곳
+                  </>,
+                  <>
+                    <span className="num">{rows.length}</span> {plural(rows.length, 'result')}
+                  </>,
+                )}
               </p>
             </div>
             <ActiveFilters state={state} update={update} />
@@ -382,10 +403,10 @@ export default function Explore({ params, desktop }) {
                 icon="explore"
                 title={
                   state.unread && filtered.length
-                    ? '조건에 맞는 곳은 모두 읽었어요'
+                    ? L('조건에 맞는 곳은 모두 읽었어요', "You've read everything that matches")
                     : state.q
-                      ? `‘${state.q}’에 맞는 회사가 없어요`
-                      : '조건에 맞는 회사가 없어요'
+                      ? L(`‘${state.q}’에 맞는 회사가 없어요`, `No companies match “${state.q}”`)
+                      : L('조건에 맞는 회사가 없어요', 'No companies match these filters')
                 }
                 actions={
                   <>
@@ -394,15 +415,15 @@ export default function Explore({ params, desktop }) {
                       className="btn btn--secondary"
                       onClick={() => update({ q: '', sector: [], stage: [], region: [], korea: [], unread: false })}
                     >
-                      조건 지우기
+                      {L('조건 지우기', 'Clear filters')}
                     </button>
                     <a className="btn btn--primary" href="#/">
-                      최신 호 보기
+                      {L('최신 호 보기', 'See the latest issue')}
                     </a>
                   </>
                 }
               >
-                철자를 확인하거나 필터를 줄여 보세요.
+                {L('철자를 확인하거나 필터를 줄여 보세요.', 'Check the spelling or try fewer filters.')}
               </EmptyState>
             ) : desktop ? (
               <div className="results-wrap">
@@ -423,15 +444,22 @@ export default function Explore({ params, desktop }) {
         <Sheet
           open={sheet}
           onClose={() => setSheet(false)}
-          title="필터"
+          title={L('필터', 'Filters')}
           footer={
             <>
               <button type="button" className="btn btn--secondary" onClick={() => update({ sector: [], stage: [], region: [], korea: [] }, true)}>
-                초기화
+                {L('초기화', 'Reset')}
               </button>
               <button type="button" className="btn btn--primary" onClick={() => setSheet(false)}>
                 <span>
-                  <span className="num">{rows.length}</span>곳 보기
+                  {L(
+                    <>
+                      <span className="num">{rows.length}</span>곳 보기
+                    </>,
+                    <>
+                      Show <span className="num">{rows.length}</span> {plural(rows.length, 'result')}
+                    </>,
+                  )}
                 </span>
               </button>
             </>

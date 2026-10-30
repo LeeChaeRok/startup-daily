@@ -14,10 +14,12 @@
  *      OPENROUTER_MODELS   comma-separated, first = primary (default: DeepSeek V4 Flash, then Haiku 5.5)
  *      ISSUE_DATE          YYYY-MM-DD (default: today in KST)
  *      FOLLOWUPS           0 turns off the follow-up step (default on)
+ *      TRANSLATE           0 turns off the English translation step (default on)
  *      RETAIN_ISSUES       issues kept in startups.json (default 0 = all; follow-ups revisit old issues)
  *
  * Pipeline: discover candidates (web search) → selection rules → deep research per company
  * (web search, one call each) → selection rules again → link verification → merge →
+ * English translation of the new companies (scripts/lib/translate.mjs) →
  * follow-ups on older companies (scripts/lib/followups.mjs, max 2 a day).
  */
 import fs from 'node:fs'
@@ -27,7 +29,8 @@ import { dropDuplicates, merge, normalize, selectCandidates, stripUrl, verifyLin
 import { attachLogos } from './lib/logos.mjs'
 import { createClient, modelsFromEnv, OpenRouterError, parseOrRepair } from './lib/openrouter.mjs'
 import { updateLensFiles } from './lib/korea-lens.mjs'
-import { runFollowups } from './lib/followups.mjs'
+import { readStore, runFollowups } from './lib/followups.mjs'
+import { translateRecords, translateUpdates } from './lib/translate.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const DATA_PATH = path.join(here, '../src/data/startups.json')
@@ -37,6 +40,7 @@ const LENS_INDEX_PATH = path.join(here, '../src/data/korea-lens-index.json')
 const LOGO_DIR = path.join(here, '../public/logos')
 const UPDATES_PATH = path.join(here, '../src/data/updates.json')
 const CORRECTIONS_PATH = path.join(here, '../src/data/corrections.json')
+const EN_PATH = path.join(here, '../src/data/startups.en.json')
 
 const WANT = 5
 const DISCOVER = 12 // over-ask: selection rules and failed research drop some
@@ -253,6 +257,18 @@ async function main() {
     fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2) + '\n', 'utf-8')
   }
 
+  // English edition of today's companies. A failure only leaves them Korean in the English app;
+  // `npm run translate:en` picks them up later.
+  const translate = llm && outPath === DATA_PATH && process.env.TRANSLATE !== '0'
+  if (translate) {
+    try {
+      const { done, failed } = await translateRecords(llm, verified, { file: EN_PATH, order: merged.map((s) => s.id), concurrency: 4, fs, log: console.log })
+      console.log(`English: ${done.length} translated, ${failed.length} failed`)
+    } catch (err) {
+      console.log(`translation skipped: ${err.message}`)
+    }
+  }
+
   // "그때 그 회사": revisit companies 90+ days after their issue. Never blocks the issue itself;
   // bounded to 2 companies, 16k tokens each and 4 minutes in total.
   if (llm && outPath === DATA_PATH && process.env.FOLLOWUPS !== '0') {
@@ -260,6 +276,17 @@ async function main() {
       await runFollowups(llm, merged, { updatesPath: UPDATES_PATH, correctionsPath: CORRECTIONS_PATH, today: kstToday, log: console.log })
     } catch (err) {
       console.log(`follow-ups skipped: ${err.message}`)
+    }
+  }
+
+  // follow-up events normally come with English; fill any that did not
+  if (translate && fs.existsSync(UPDATES_PATH)) {
+    try {
+      const store = readStore(fs, UPDATES_PATH)
+      const { count } = await translateUpdates(llm, store, { log: console.log })
+      if (count) fs.writeFileSync(UPDATES_PATH, JSON.stringify(store, null, 2) + '\n', 'utf-8')
+    } catch (err) {
+      console.log(`update translation skipped: ${err.message}`)
     }
   }
 

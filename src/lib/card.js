@@ -3,6 +3,7 @@
    screenshot travels without its page, so the label has to be on the image itself. */
 import { issueNo } from './data.js'
 import { monthDay } from './format.js'
+import { isEn, L } from './i18n.js'
 
 const W = 1080
 const H = 1350
@@ -13,7 +14,9 @@ const C = { paper: '#F3EFE6', ink: '#1B1A17', ink2: '#4A463F', ink3: '#857F74', 
 function wrap(ctx, text, maxWidth, maxLines) {
   const lines = []
   let line = ''
-  for (const ch of text) {
+  // Korean breaks anywhere; English breaks between words
+  const units = isEn ? text.split(/(?<=\s)/) : text
+  for (const ch of units) {
     const next = line + ch
     if (ctx.measureText(next).width > maxWidth && line) {
       lines.push(line)
@@ -55,7 +58,7 @@ export async function drawCard(s) {
   ctx.fillRect(PAD + wm + 8, PAD + 66, 10, 10)
   ctx.fillStyle = C.ink3
   ctx.font = `500 30px ${FONT}`
-  const issue = `제${issueNo(s.date)}호 · ${monthDay(s.date)}`
+  const issue = `${L(`제${issueNo(s.date)}호`, `Issue #${issueNo(s.date)}`)} · ${monthDay(s.date)}`
   ctx.fillText(issue, W - PAD - ctx.measureText(issue).width, PAD + 44)
 
   let y = PAD + 200
@@ -84,7 +87,7 @@ export async function drawCard(s) {
     y += 68
   }
 
-  const facts = [s._sector?.label, s._stage, s._raisedShort ? `누적 ${s._raisedShort}` : null, s.headquarters?.country_ko].filter(Boolean)
+  const facts = [s._sector?.label, s._stage, s._raisedShort ? L(`누적 ${s._raisedShort}`, `${s._raisedShort} raised`) : null, s.headquarters?.country_ko].filter(Boolean)
   ctx.fillStyle = C.line
   ctx.fillRect(PAD, H - PAD - 210, W - PAD * 2, 2)
   ctx.fillStyle = C.ink
@@ -92,7 +95,7 @@ export async function drawCard(s) {
   ctx.fillText(facts.join('  ·  '), PAD, H - PAD - 176)
   ctx.fillStyle = C.ink3
   ctx.font = `500 30px ${FONT}`
-  ctx.fillText('AI가 공개 자료로 작성 · 투자 조언 아님', PAD, H - PAD - 84)
+  ctx.fillText(L('AI가 공개 자료로 작성 · 투자 조언 아님', 'Written by AI from public sources · Not investment advice'), PAD, H - PAD - 84)
   ctx.fillText('startup-daily.vercel.app', PAD, H - PAD - 40)
 
   return new Promise((resolve) => canvas.toBlob((b) => resolve(b), 'image/png'))

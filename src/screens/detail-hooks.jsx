@@ -6,17 +6,18 @@ import { byDate, byId, issueNo } from '../lib/data.js'
 import { prefersReducedMotion, useFlag, useReadLog, useSaved } from '../lib/hooks.js'
 import { monthDay } from '../lib/format.js'
 import { canNativeShare, canonicalUrl, shareOrCopy } from '../lib/share.js'
+import { L } from '../lib/i18n.js'
 
 const BASE_SECTIONS = [
-  { id: 'why', label: '왜 지금' },
-  { id: 'product', label: '제품' },
-  { id: 'competition', label: '경쟁' },
-  { id: 'team', label: '팀' },
-  { id: 'funding', label: '투자' },
-  { id: 'market', label: '시장' },
+  { id: 'why', label: L('왜 지금', 'Why now') },
+  { id: 'product', label: L('제품', 'Product') },
+  { id: 'competition', label: L('경쟁', 'Competition') },
+  { id: 'team', label: L('팀', 'Team') },
+  { id: 'funding', label: L('투자', 'Funding') },
+  { id: 'market', label: L('시장', 'Market') },
 ]
-const KOREA_SECTION = { id: 'korea', label: '한국' }
-const SOURCES_SECTION = { id: 'sources', label: '출처' }
+const KOREA_SECTION = { id: 'korea', label: L('한국', 'Korea') }
+const SOURCES_SECTION = { id: 'sources', label: L('출처', 'Sources') }
 
 /** The "한국" section exists only for companies that have a "한국에서는" analysis. */
 export function sectionsFor(hasKorea) {
@@ -88,7 +89,7 @@ async function requestLens(id) {
     const res = await fetch(`/api/korea-lens?id=${encodeURIComponent(id)}`, { signal: ctl.signal })
     const type = res.headers.get('content-type') || ''
     const body = type.includes('json') ? await res.json() : null
-    if (!res.ok || !body?.entry) return fail(body?.message || '분석을 불러오지 못했어요. 잠시 뒤에 다시 시도해 주세요.')
+    if (!res.ok || !body?.entry) return fail(body?.message || L('분석을 불러오지 못했어요. 잠시 뒤에 다시 시도해 주세요.', 'Couldn’t load the analysis. Please try again in a moment.'))
     lensCache.set(id, body.entry)
     try {
       localStorage.setItem(deviceKey(id), JSON.stringify(body.entry))
@@ -99,7 +100,11 @@ async function requestLens(id) {
     emit()
     readyListeners.forEach((l) => l(id))
   } catch (err) {
-    fail(err.name === 'AbortError' ? '시간이 너무 오래 걸려 멈췄어요. 다시 시도해 주세요.' : '네트워크에 문제가 있었어요. 다시 시도해 주세요.')
+    fail(
+      err.name === 'AbortError'
+        ? L('시간이 너무 오래 걸려 멈췄어요. 다시 시도해 주세요.', 'It took too long, so we stopped. Please try again.')
+        : L('네트워크에 문제가 있었어요. 다시 시도해 주세요.', 'There was a network problem. Please try again.'),
+    )
   } finally {
     clearTimeout(timer)
   }
@@ -116,10 +121,10 @@ export function onLensReady(listener) {
 
 // what the reader sees during the 2~3 minutes, by elapsed time
 const PHASES = [
-  [0, '비슷한 해외 제품을 찾는 중이에요'],
-  [40, '한국에 이미 있는 곳을 검색하는 중이에요'],
-  [120, '링크를 확인하고 정리하는 중이에요'],
-  [210, '거의 다 됐어요. 조금만 더 기다려 주세요'],
+  [0, L('비슷한 해외 제품을 찾는 중이에요', 'Looking for similar products abroad')],
+  [40, L('한국에 이미 있는 곳을 검색하는 중이에요', 'Searching for companies already in Korea')],
+  [120, L('링크를 확인하고 정리하는 중이에요', 'Checking links and writing it up')],
+  [210, L('거의 다 됐어요. 조금만 더 기다려 주세요', 'Almost done. Just a little longer')],
 ]
 const phaseAt = (sec) => PHASES.filter(([t]) => sec >= t).at(-1)[1]
 
@@ -189,38 +194,47 @@ export function useShare(startup) {
     const url = shareUrl(startup.id)
     const r = await shareOrCopy({
       title: `${startup.name_ko} — Startup Daily`,
-      text: `${startup.tagline} · 제${issueNo(startup.date)}호(${monthDay(startup.date)})`,
+      text: L(
+        `${startup.tagline} · 제${issueNo(startup.date)}호(${monthDay(startup.date)})`,
+        `${startup.tagline} · Issue #${issueNo(startup.date)} (${monthDay(startup.date)})`,
+      ),
       url,
     })
-    if (r === 'copied') toast('링크를 복사했어요')
+    if (r === 'copied') toast(L('링크를 복사했어요', 'Link copied'))
     if (r === 'manual') setManualUrl(url)
   }
   const shareImage = async () => {
     setOpen(false)
     const { shareCard } = await import('../lib/card.js')
     const r = await shareCard(startup)
-    if (r === 'saved') toast('카드 이미지를 저장했어요')
+    if (r === 'saved') toast(L('카드 이미지를 저장했어요', 'Card image saved'))
   }
   const sheet = (
     <>
-      <Sheet open={open} onClose={() => setOpen(false)} title="공유하기">
+      <Sheet open={open} onClose={() => setOpen(false)} title={L('공유하기', 'Share')}>
         <div className="share-options">
           <button type="button" className="btn btn--secondary" onClick={shareLink}>
-            <Icon name="share" size={18} /> {canNativeShare() ? '링크 공유' : '링크 복사'}
+            <Icon name="share" size={18} /> {canNativeShare() ? L('링크 공유', 'Share link') : L('링크 복사', 'Copy link')}
           </button>
           <button type="button" className="btn btn--secondary" onClick={shareImage}>
-            <Icon name="image" size={18} /> 카드 이미지로 {canNativeShare() ? '공유' : '저장'}
+            <Icon name="image" size={18} />{' '}
+            {canNativeShare() ? L('카드 이미지로 공유', 'Share as card image') : L('카드 이미지로 저장', 'Save as card image')}
           </button>
         </div>
-        <p className="sheet__hint">카드 이미지에는 &lsquo;AI가 공개 자료로 작성&rsquo; 표시가 함께 들어가요.</p>
+        <p className="sheet__hint">
+          {L(
+            '카드 이미지에는 ‘AI가 공개 자료로 작성’ 표시가 함께 들어가요.',
+            'Card images include a “Written by AI from public sources” label.',
+          )}
+        </p>
       </Sheet>
-      <Sheet open={Boolean(manualUrl)} onClose={() => setManualUrl(null)} title="링크 복사">
-        <p className="sheet__hint">아래 주소를 길게 눌러 복사하세요.</p>
+      <Sheet open={Boolean(manualUrl)} onClose={() => setManualUrl(null)} title={L('링크 복사', 'Copy link')}>
+        <p className="sheet__hint">{L('아래 주소를 길게 눌러 복사하세요.', 'Press and hold the address below to copy it.')}</p>
         <input className="field" readOnly value={manualUrl || ''} onFocus={(e) => e.currentTarget.select()} autoFocus />
       </Sheet>
     </>
   )
-  return { share: () => setOpen(true), sheet, label: '공유' }
+  return { share: () => setOpen(true), sheet, label: L('공유', 'Share') }
 }
 
 /* Mark as read once the summary has been on screen for 2s while the tab is visible.

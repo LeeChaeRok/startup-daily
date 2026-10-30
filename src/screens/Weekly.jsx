@@ -6,6 +6,9 @@ import { SectorMix } from './Issue.jsx'
 import { companiesOfWeek, weeks } from '../lib/data.js'
 import { useInterests, useReadLog, useSaved } from '../lib/hooks.js'
 import { weekLabel } from '../lib/format.js'
+import { L } from '../lib/i18n.js'
+
+const plural = (n, one, many = `${one}s`) => (n === 1 ? one : many)
 
 const TOP = 3
 
@@ -31,13 +34,21 @@ export default function Weekly({ week }) {
     <div className="page page--weekly">
       <header className="issue-head">
         <div className="issue-head__rule" aria-hidden="true" />
-        <p className="eyebrow">주간 정리</p>
+        <p className="eyebrow">{L('주간 정리', 'Weekly recap')}</p>
         <h1 className="issue-head__title" tabIndex={-1}>
           {weekLabel(week)}
         </h1>
         <p className="issue-head__sub">
-          <span className="num">{issues}</span>호 · 스타트업 <span className="num">{list.length}</span>곳 · 읽음{' '}
-          <span className="num">{list.length - unread.length}</span>곳
+          {L(
+            <>
+              <span className="num">{issues}</span>호 · 스타트업 <span className="num">{list.length}</span>곳 · 읽음{' '}
+              <span className="num">{list.length - unread.length}</span>곳
+            </>,
+            <>
+              <span className="num">{issues}</span> {plural(issues, 'issue')} · <span className="num">{list.length}</span>{' '}
+              {plural(list.length, 'startup')} · <span className="num">{list.length - unread.length}</span> read
+            </>,
+          )}
         </p>
       </header>
       <SectorMix list={list} />
@@ -45,7 +56,7 @@ export default function Weekly({ week }) {
       {biggest.length > 0 && (
         <section className="weekly__sec" aria-labelledby="w-big">
           <h2 id="w-big" className="weekly__title">
-            가장 큰 투자 {biggest.length}곳
+            {L(`가장 큰 투자 ${biggest.length}곳`, 'Biggest rounds')}
           </h2>
           <ol className="rows">
             {biggest.map((s) => (
@@ -58,7 +69,7 @@ export default function Weekly({ week }) {
       {mine.length > 0 && (
         <section className="weekly__sec" aria-labelledby="w-mine">
           <h2 id="w-mine" className="weekly__title">
-            내 관심 분야 {mine.length}곳
+            {L(`내 관심 분야 ${mine.length}곳`, `In your sectors (${mine.length})`)}
           </h2>
           <ol className="rows">
             {mine.map((s) => (
@@ -70,7 +81,12 @@ export default function Weekly({ week }) {
 
       <section className="weekly__sec" aria-labelledby="w-unread">
         <h2 id="w-unread" className="weekly__title">
-          {unread.length ? `아직 안 읽은 ${unread.length}곳` : `이번 주 ${list.length}곳을 모두 읽었어요`}
+          {unread.length
+            ? L(`아직 안 읽은 ${unread.length}곳`, `${unread.length} unread`)
+            : L(
+                `이번 주 ${list.length}곳을 모두 읽었어요`,
+                `You've read all ${list.length} ${plural(list.length, 'startup')} this week`,
+              )}
         </h2>
         {unread.length > 0 && (
           <>
@@ -82,7 +98,7 @@ export default function Weekly({ week }) {
               </ol>
             )}
             <button type="button" className="text-btn weekly__more" aria-expanded={showUnread} onClick={() => setShowUnread(!showUnread)}>
-              {showUnread ? '접기' : '펼쳐 보기'} <Icon name={showUnread ? 'chevronUp' : 'chevronDown'} size={16} />
+              {showUnread ? L('접기', 'Hide') : L('펼쳐 보기', 'Show')} <Icon name={showUnread ? 'chevronUp' : 'chevronDown'} size={16} />
             </button>
           </>
         )}
@@ -91,7 +107,7 @@ export default function Weekly({ week }) {
       {saved.length > 0 && (
         <section className="weekly__sec" aria-labelledby="w-saved">
           <h2 id="w-saved" className="weekly__title">
-            내가 저장한 {saved.length}곳
+            {L(`내가 저장한 ${saved.length}곳`, `Saved (${saved.length})`)}
           </h2>
           <ol className="rows">
             {saved.map((s) => (
@@ -101,7 +117,7 @@ export default function Weekly({ week }) {
         </section>
       )}
 
-      <nav className="issue-nav" aria-label="주 이동">
+      <nav className="issue-nav" aria-label={L('주 이동', 'Week navigation')}>
         {weeks[idx + 1] ? (
           <a className="issue-nav__link" href={`#/w/${weeks[idx + 1].key}`}>
             <Icon name="chevronLeft" size={16} /> {weekLabel(weeks[idx + 1].key)}
@@ -130,9 +146,17 @@ export function LastWeekCard() {
   const unread = list.filter((s) => !isRead(s.id)).length
   return (
     <a className="weekly-card" href={`#/w/${last.key}`}>
-      <span className="eyebrow">지난주 스타트업</span>
+      <span className="eyebrow">{L('지난주 스타트업', "Last week's startups")}</span>
       <span className="weekly-card__text">
-        {unread ? `지난주 ${list.length}곳 중 ${unread}곳을 아직 못 봤어요` : `지난주 ${list.length}곳을 모두 읽었어요`}
+        {unread
+          ? L(
+              `지난주 ${list.length}곳 중 ${unread}곳을 아직 못 봤어요`,
+              `${unread} of last week's ${list.length} ${plural(list.length, 'startup')} still unread`,
+            )
+          : L(
+              `지난주 ${list.length}곳을 모두 읽었어요`,
+              `You've read all ${list.length} of last week's ${plural(list.length, 'startup')}`,
+            )}
       </span>
       <Icon name="arrowRight" size={18} />
     </a>

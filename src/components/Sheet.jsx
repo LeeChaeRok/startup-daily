@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef } from 'react'
 import Icon from './Icon.jsx'
+import { L } from '../lib/i18n.js'
 
 /**
  * Bottom sheet on mobile, centered dialog on desktop. Uses the native
@@ -48,7 +49,7 @@ export default function Sheet({ open, onClose, title, children, footer }) {
           <h2 id={titleId} className="sheet__title">
             {title}
           </h2>
-          <button type="button" className="icon-btn" onClick={onClose} aria-label="닫기">
+          <button type="button" className="icon-btn" onClick={onClose} aria-label={L('닫기', 'Close')}>
             <Icon name="close" />
           </button>
         </div>

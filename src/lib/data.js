@@ -1,8 +1,12 @@
 import { useSyncExternalStore } from 'react'
 import { formatUSD as fmtUSD, parseAmount, shortAmount } from './amount.js'
-import { SECTORS, sectorOf } from './sectors.js'
+import { SECTORS as SECTOR_DEFS, sectorOf as sectorDef } from './sectors.js'
+import { isEn, L } from './i18n.js'
 
-export { SECTORS, sectorOf }
+// sector labels in the reading language (the API uses sectors.js directly, in Korean)
+const localSector = (s) => (isEn ? { ...s, label: s.en } : s)
+export const SECTORS = SECTOR_DEFS.map(localSector)
+export const sectorOf = (categories) => localSector(sectorDef(categories))
 
 /* Data arrives at start-up (see load.js → initData); everything below reads the
    module-level bindings that initData fills. */
@@ -39,11 +43,11 @@ export function stageLabel(stage = '') {
 }
 
 export const STAGE_GROUPS = [
-  { key: 'early', label: '초기 (Seed·A)' },
+  { key: 'early', label: L('초기 (Seed·A)', 'Early (Seed–A)') },
   { key: 'b', label: 'Series B' },
   { key: 'c', label: 'Series C' },
-  { key: 'late', label: 'Series D 이상' },
-  { key: 'exit', label: '상장·M&A·종료' },
+  { key: 'late', label: L('Series D 이상', 'Series D+') },
+  { key: 'exit', label: L('상장·M&A·종료', 'Public · M&A · Closed') },
 ]
 
 const CORRECTION_KIND = (status = '') =>
@@ -59,11 +63,11 @@ function stageGroupOf(stage, correction) {
 }
 
 export const REGIONS = [
-  { key: 'kr', label: '한국' },
-  { key: 'us', label: '미국' },
-  { key: 'eu', label: '유럽' },
-  { key: 'asia', label: '아시아·중동' },
-  { key: 'etc', label: '기타' },
+  { key: 'kr', label: L('한국', 'Korea') },
+  { key: 'us', label: L('미국', 'US') },
+  { key: 'eu', label: L('유럽', 'Europe') },
+  { key: 'asia', label: L('아시아·중동', 'Asia & Middle East') },
+  { key: 'etc', label: L('기타', 'Other') },
 ]
 
 function regionOf(countryKo = '') {
@@ -85,12 +89,19 @@ export const LENS_VERDICTS = {
 }
 export const LENS_FILTER = ['open', 'emerging', 'crowded', 'constrained']
 
-/** Listed, acquired or closed companies don't get a "한국에서는" analysis: there is no market entry to discuss. */
-export const canAnalyze = (s) => s._stageGroup !== 'exit'
+/** Listed, acquired or closed companies don't get a "한국에서는" analysis: there is no market entry to discuss.
+    The analysis is written for Korean readers, so the English edition leaves it out. */
+export const canAnalyze = (s) => !isEn && s._stageGroup !== 'exit'
 
 export const isKorean = (s) => (s.headquarters?.country_ko || '').includes('한국')
 
 const norm = (t) => (t || '').normalize('NFC').toLowerCase().replace(/\s+/g, '')
+
+const localStage = (stage) =>
+  isEn ? { 상장사: 'Public', '단계 미공개': 'Stage undisclosed' }[stage] || stage : stage
+
+/* Corrections carry English text in status_en / note_en. */
+const localCorrection = (c) => (isEn && c ? { ...c, status: c.status_en || c.status, note: c.note_en || c.note } : c)
 
 function prepare(raw, corrections, lensIndex, updates) {
   const now = Date.now()
@@ -98,29 +109,33 @@ function prepare(raw, corrections, lensIndex, updates) {
     .map((s) => {
       const category = Array.isArray(s.category) ? s.category : []
       const founders = Array.isArray(s.founders) ? s.founders : []
-      const correction = corrections[s.id] ? { ...corrections[s.id], kind: CORRECTION_KIND(corrections[s.id].status) } : null
-      const stage = stageLabel(s.company_stage)
+      const correction = corrections[s.id] ? localCorrection({ ...corrections[s.id], kind: CORRECTION_KIND(corrections[s.id].status) }) : null
+      const stage = stageLabel(s._ko?.stage ?? s.company_stage)
+      // amounts, sector and region are read from the Korean original (the English
+      // edition keeps it under _ko); labels follow the reading language
       const raised = cleanAmount(s.funding?.total_raised)
+      const raisedKo = cleanAmount(s._ko?.total_raised ?? s.funding?.total_raised)
+      const category_ko = s._ko?.category ?? category
       return {
         ...s,
         category,
         founders,
         _raised: raised,
-        _raisedShort: shortAmount(raised),
-        _raisedUSD: Number.isFinite(s.funding?.total_raised_usd) ? s.funding.total_raised_usd : parseAmountUSD(raised),
+        _raisedShort: shortAmount(raisedKo, { krw: !isEn }),
+        _raisedUSD: Number.isFinite(s.funding?.total_raised_usd) ? s.funding.total_raised_usd : parseAmountUSD(raisedKo),
         _domain: getDomain(s.website),
-        _sector: sectorOf(category),
-        _stage: stage,
+        _sector: sectorOf(category_ko),
+        _stage: localStage(stage),
         _stageGroup: stageGroupOf(stage, correction),
-        _region: regionOf(s.headquarters?.country_ko),
+        _region: regionOf(s._ko?.country_ko ?? s.headquarters?.country_ko),
         _correction: correction,
-        _lens: lensIndex[s.id] || null,
+        _lens: isEn ? null : lensIndex[s.id] || null,
         // "그때 그 회사": verified events after the company was introduced, newest first
         _updates: [...(updates[s.id] || [])].sort((a, b) => (b.date || '').localeCompare(a.date || '')),
         // news the follow-up check found in the last two weeks (a dot on list rows)
         _hasNews: (updates[s.id] || []).some((u) => now - Date.parse(u.found || u.date) < 14 * 864e5),
         _search: {
-          name: norm(`${s.name_ko} ${s.name_en}`),
+          name: norm(`${s.name_ko} ${s.name_en} ${s._ko?.name_ko || ''}`),
           body: norm(`${s.tagline} ${category.join(' ')}`),
           founders: founders.map((f) => ({ label: f.name_ko || f.name_en, key: norm(`${f.name_ko} ${f.name_en}`) })),
           competitors: [
@@ -204,11 +219,11 @@ export function followUps(limit = 3) {
 }
 
 export const UPDATE_KINDS = {
-  funding: '새 투자',
-  acquired: '인수됨',
-  shutdown: '서비스 종료',
-  ipo: '상장',
-  product: '새 제품',
+  funding: L('새 투자', 'New funding'),
+  acquired: L('인수됨', 'Acquired'),
+  shutdown: L('서비스 종료', 'Shut down'),
+  ipo: L('상장', 'IPO'),
+  product: L('새 제품', 'New product'),
 }
 
 export function companiesOfSector(key) {

@@ -4,6 +4,7 @@ import { CorrectionBadge, Meta, SaveButton } from './bits.jsx'
 import { LENS_VERDICTS } from '../lib/data.js'
 import { useInterests, useReadLog } from '../lib/hooks.js'
 import { monthDay, numClass, pad2 } from '../lib/format.js'
+import { L } from '../lib/i18n.js'
 
 /**
  * One startup in a list. The whole row is a single link; the optional save
@@ -36,8 +37,8 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
           <span className="row__title">
             <span className="row__name">
               {s.name_ko || s.name_en}
-              {hasNews && <span className="row__news" title="소개 이후 새 소식" />}
-              {hasNews && <span className="sr-only"> (새 소식)</span>}
+              {hasNews && <span className="row__news" title={L('소개 이후 새 소식', 'News since we covered it')} />}
+              {hasNews && <span className="sr-only">{L(' (새 소식)', ' (news)')}</span>}
             </span>
             {s.name_en && s.name_en !== s.name_ko && (
               <span className="row__en" lang="en">
@@ -52,15 +53,15 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
                 items={[
                   <span className={`sector ${isInterest(s._sector.key) ? 'is-interest' : ''}`} key="s">
                     {s._sector.label}
-                    {isInterest(s._sector.key) && <span className="sr-only"> (관심 분야)</span>}
+                    {isInterest(s._sector.key) && <span className="sr-only">{L(' (관심 분야)', ' (a sector you follow)')}</span>}
                   </span>,
                   s._correction ? null : s._stage,
                   s.headquarters?.country_ko,
-                  showDate ? `${monthDay(s.date)} 호` : null,
+                  showDate ? L(`${monthDay(s.date)} 호`, `${monthDay(s.date)} issue`) : null,
                 ]}
               />
               <CorrectionBadge correction={s._correction} />
-              {read && <span className="read-tag">읽음</span>}
+              {read && <span className="read-tag">{L('읽음', 'Read')}</span>}
               {LENS_VERDICTS[s._lens?.v]?.badge && <span className="badge badge--accent badge--flat">{LENS_VERDICTS[s._lens.v].badge}</span>}
             </span>
           )}
@@ -70,12 +71,12 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
             </span>
           )}
           {reason && <span className="row__reason">{reason}</span>}
-          {read && compact && <span className="sr-only">, 읽음</span>}
+          {read && compact && <span className="sr-only">{L(', 읽음', ', read')}</span>}
 
         </span>
         <span className="row__num">
-          {raised ? <span className={numClass(raised)}>{raised}</span> : <span className="row__na">미공개</span>}
-          {!compact && <span className="row__numlabel">누적 투자</span>}
+          {raised ? <span className={numClass(raised)}>{raised}</span> : <span className="row__na">{L('미공개', 'Undisclosed')}</span>}
+          {!compact && <span className="row__numlabel">{L('누적 투자', 'Total raised')}</span>}
         </span>
       </a>
       {showSave && <SaveButton startup={s} />}

@@ -1,4 +1,8 @@
+import { isEn } from './i18n.js'
+
 const WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토']
+const EN_DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+const EN_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 /** 'YYYY-MM-DD' → local Date (no UTC shift). */
 export function parseDate(ymd) {
@@ -9,18 +13,21 @@ export function parseDate(ymd) {
 /** "4월 27일 월요일" */
 export function longDate(ymd) {
   const d = parseDate(ymd)
+  if (isEn) return `${EN_DAYS[d.getDay()]}, ${EN_MONTHS[d.getMonth()]} ${d.getDate()}`
   return `${d.getMonth() + 1}월 ${d.getDate()}일 ${WEEKDAYS[d.getDay()]}요일`
 }
 
 /** "4월 27일" */
 export function monthDay(ymd) {
   const d = parseDate(ymd)
+  if (isEn) return `${EN_MONTHS[d.getMonth()]} ${d.getDate()}`
   return `${d.getMonth() + 1}월 ${d.getDate()}일`
 }
 
 /** "4.27 월" */
 export function shortDate(ymd) {
   const d = parseDate(ymd)
+  if (isEn) return `${EN_MONTHS[d.getMonth()]} ${d.getDate()} ${EN_DAYS[d.getDay()].slice(0, 3)}`
   return `${d.getMonth() + 1}.${String(d.getDate()).padStart(2, '0')} ${WEEKDAYS[d.getDay()]}`
 }
 
@@ -40,6 +47,7 @@ export function weekLabel(ymd) {
   const d = parseDate(ymd)
   const monday = new Date(d)
   monday.setDate(d.getDate() - ((d.getDay() + 6) % 7))
+  if (isEn) return `Week of ${EN_MONTHS[monday.getMonth()]} ${monday.getDate()}`
   const nth = Math.ceil(monday.getDate() / 7)
   const names = ['첫째', '둘째', '셋째', '넷째', '다섯째']
   return `${monday.getMonth() + 1}월 ${names[nth - 1] || `${nth}번째`} 주`
@@ -61,7 +69,8 @@ export function readMinutes(list) {
       (s.editor_pick_comment?.length || 0),
     0,
   )
-  return Math.max(1, Math.ceil(chars / 500))
+  // ~500 Korean characters a minute; English runs about twice as many characters
+  return Math.max(1, Math.ceil(chars / (isEn ? 1000 : 500)))
 }
 
 /** "2024-07" → "2024.07" */

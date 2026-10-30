@@ -11,7 +11,9 @@
     "test:lens": "node scripts/test-korea-lens.mjs",
     "test:pipeline": "node scripts/test-pipeline.mjs",
     "test:followups": "node scripts/test-followups.mjs",
+    "test:translate": "node scripts/test-translate.mjs",
     "followups": "node scripts/followups.mjs",
+    "translate:en": "node scripts/translate-en.mjs",
     "logos": "node scripts/fetch-logos.mjs"
   },
   "dependencies": {

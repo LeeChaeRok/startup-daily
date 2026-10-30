@@ -6,10 +6,12 @@
  *              oldest first, at most 2 a day
  *   research — one web-search call per company (web: true), JSON events with source URLs
  *   vet      — code: source must open (or be a search hit behind a bot wall), event dated after
- *              the issue, short factual Korean title, no duplicates
+ *              the issue, short factual Korean title, no duplicates. The English title/detail
+ *              come from the same call; when missing or still Korean they are left out and
+ *              scripts/translate-en.mjs fills them later.
  *
  * Store (src/data/updates.json):
- *   { "updates": { "<id>": [{ date, kind, title_ko, detail_ko, source_url, source_name, found }] },
+ *   { "updates": { "<id>": [{ date, kind, title_ko, title_en, detail_ko, detail_en, source_url, source_name, found }] },
  *     "checked": { "<id>": "YYYY-MM-DD" } }
  */
 import { checkUrl, stripUrl } from './pipeline.mjs'
@@ -26,6 +28,7 @@ export const DAILY_LIMIT = 2
 export const MAX_TOKENS = 16000
 export const BUDGET_MS = 240_000
 const TITLE_MAX = 40
+const TITLE_EN_MAX = 90
 const PER_COMPANY = 5
 const MAX_CHECKS = 8 // link checks per company
 
@@ -107,17 +110,28 @@ For each event:
 - kind: funding | acquired | shutdown | ipo | product
 - title_ko: Korean, 40 characters or fewer, the fact only. Example: "시리즈 B 4,000만 달러 유치"
 - detail_ko: 1-2 Korean sentences with the specifics (amount, investors, acquirer, product name)
+- title_en, detail_en: the same title and detail in English (official English names; amounts exact: 1억 = 100M)
 - source_url: the article or announcement page you saw in search results (not a homepage)
 - source_name: the publication or site name
 
 Reply with ONLY a JSON object:
-{"events": [{"date": "", "kind": "", "title_ko": "", "detail_ko": "", "source_url": "https://…", "source_name": ""}]}`
+{"events": [{"date": "", "kind": "", "title_ko": "", "title_en": "", "detail_ko": "", "detail_en": "", "source_url": "https://…", "source_name": ""}]}`
 }
 
 /* ---------- Vetting ---------- */
 
 const str = (v) => (typeof v === 'string' ? v.trim() : '')
 const hasHangul = (s) => /[가-힣]/.test(s)
+// English text with at most a few Korean proper-noun characters
+const isEnglish = (s) => !!s && (s.match(/[가-힣]/g) || []).length <= s.replace(/\s/g, '').length * 0.3
+
+/** title_en / detail_en when the model gave usable English for both; {} otherwise. */
+function english(e) {
+  const title = str(e?.title_en)
+  const detail = str(e?.detail_en)
+  if (!isEnglish(title) || title.length > TITLE_EN_MAX || (detail && !isEnglish(detail))) return {}
+  return detail ? { title_en: title, detail_en: detail } : { title_en: title }
+}
 // the title states a fact; plans and guesses are not events
 const SPECULATIVE = /예정|전망|추정|기대|가능성|루머|소문|검토|추진\s*중|할\s*듯|것으로\s*보/
 
@@ -156,11 +170,14 @@ export async function vetEvents(raw, record, { searched = new Set(), today, exis
 
   const candidates = []
   for (const e of Array.isArray(raw) ? raw : []) {
+    const en = english(e)
     const ev = {
       date: str(e?.date),
       kind: str(e?.kind).toLowerCase(),
       title_ko: str(e?.title_ko),
+      ...(en.title_en ? { title_en: en.title_en } : {}),
       detail_ko: str(e?.detail_ko),
+      ...(en.detail_en ? { detail_en: en.detail_en } : {}),
       source_url: str(e?.source_url),
       source_name: str(e?.source_name),
     }

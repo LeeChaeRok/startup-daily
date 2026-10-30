@@ -5,6 +5,8 @@ import { usePush } from './usePush.js'
 import { SECTORS, startups } from '../lib/data.js'
 import { useFlag, useInterests, useReadLog } from '../lib/hooks.js'
 import { isColdStart } from '../lib/nav.js'
+import { L } from '../lib/i18n.js'
+import { LangLink } from './LangSwitch.jsx'
 
 /**
  * First run, three short steps, each skippable: what this is → sectors you care about
@@ -44,30 +46,41 @@ export default function Onboarding() {
           {step + 1} / {steps}
         </p>
         <button type="button" className="text-btn" onClick={finish}>
-          건너뛰기
+          {L('건너뛰기', 'Skip')}
         </button>
       </div>
 
       {step === 0 && (
         <div className="onboard__body">
           <h2 id="onboard-title" className="onboard__title">
-            아직 모르는, 지금 뜨는 스타트업
+            {L('아직 모르는, 지금 뜨는 스타트업', 'Startups you haven’t heard of yet')}
           </h2>
-          <p>한국에 아직 덜 알려진 해외 신생 스타트업을 하루 한 묶음(4~5곳)으로 소개해요.</p>
+          <p>
+            {L(
+              '한국에 아직 덜 알려진 해외 신생 스타트업을 하루 한 묶음(4~5곳)으로 소개해요.',
+              'A handful of under-the-radar startups from around the world, every day.',
+            )}
+          </p>
           <ul className="onboard__points">
-            <li>왜 지금 뜨는지, 무엇을 하는지, 숫자로 보면 어떤지</li>
-            <li>AI가 공개 자료로 조사하고, 링크가 실제로 열리는지 확인해요</li>
-            <li>틀린 내용은 제보받아 정정 기록에 남겨요</li>
+            <li>{L('왜 지금 뜨는지, 무엇을 하는지, 숫자로 보면 어떤지', 'Why now, what they do, and what the numbers say')}</li>
+            <li>{L('AI가 공개 자료로 조사하고, 링크가 실제로 열리는지 확인해요', 'Researched by AI from public sources, with every link checked')}</li>
+            <li>{L('틀린 내용은 제보받아 정정 기록에 남겨요', 'Errors you report go into a public corrections log')}</li>
           </ul>
+          <LangLink className="onboard__lang" />
         </div>
       )}
 
       {step === 1 && (
         <div className="onboard__body">
           <h2 id="onboard-title" className="onboard__title">
-            관심 분야를 골라 주세요
+            {L('관심 분야를 골라 주세요', 'Pick sectors you follow')}
           </h2>
-          <p className="muted">선택이에요. 목록에 표시하고 탐색과 알림에 써요. 하루 호의 순서는 바뀌지 않아요.</p>
+          <p className="muted">
+            {L(
+              '선택이에요. 목록에 표시하고 탐색과 알림에 써요. 하루 호의 순서는 바뀌지 않아요.',
+              'Optional. We mark them in lists and use them in Explore and alerts. The order of each issue stays the same.',
+            )}
+          </p>
           <div className="onboard__chips">
             {SECTORS.filter((s) => counts.get(s.key)).map((s) => (
               <button
@@ -88,22 +101,22 @@ export default function Onboarding() {
       {step === 2 && steps === 3 && (
         <div className="onboard__body">
           <h2 id="onboard-title" className="onboard__title">
-            새 호가 나오면 알려 드릴까요?
+            {L('새 호가 나오면 알려 드릴까요?', 'Want a heads-up when a new issue is out?')}
           </h2>
           <AlertSetting compact onDone={finish} />
-          <p className="muted onboard__later">나중에 소개 → 설정에서 언제든 바꿀 수 있어요.</p>
+          <p className="muted onboard__later">{L('나중에 소개 → 설정에서 언제든 바꿀 수 있어요.', 'You can change this anytime in About → Settings.')}</p>
         </div>
       )}
 
       <div className="onboard__actions">
         {step > 0 && (
           <button type="button" className="btn btn--secondary" onClick={() => setStep(step - 1)}>
-            이전
+            {L('이전', 'Back')}
           </button>
         )}
         {/* first focus on the main action, not on 건너뛰기 at the top */}
         <button type="button" className="btn btn--primary" autoFocus onClick={() => (step < steps - 1 ? setStep(step + 1) : finish())}>
-          {step < steps - 1 ? '다음' : '시작하기'}
+          {step < steps - 1 ? L('다음', 'Next') : L('시작하기', 'Get started')}
         </button>
       </div>
     </dialog>

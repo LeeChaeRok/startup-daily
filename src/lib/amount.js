@@ -23,7 +23,7 @@ const PREFIX_CUR = { USD: 'USD', KRW: 'KRW', JPY: 'JPY', EUR: 'EUR', GBP: 'GBP',
 const SUFFIX = new RegExp(NUM + UNIT + String.raw`\s*(달러|엔|원|유로|파운드|루피|위안|헤알|USD|JPY|KRW|EUR|GBP|INR|CNY|BRL)`, 'i')
 const SUFFIX_CUR = { 달러: 'USD', 엔: 'JPY', 원: 'KRW', 유로: 'EUR', 파운드: 'GBP', 루피: 'INR', 위안: 'CNY', 헤알: 'BRL' }
 
-const UNDISCLOSED = /^\s*(비공개|미공개|undisclosed|n\/a|unknown|알 수 없음)/i
+const UNDISCLOSED = /^\s*(비공개|미공개|undisclosed|not disclosed|n\/a|unknown|알 수 없음)/i
 
 function toNumber(s) {
   // "1,000" → 1000; "3.23" stays; a lone comma decimal ("8,5") is rare enough to ignore
@@ -77,7 +77,7 @@ export function parseAmount(text) {
   const before = text.slice(0, primary.index)
   const after = text.slice(primary.index + primary.raw.length)
   const plus = /^\s*(\+|이상)/.test(after)
-  const approx = /약\s*$|~\s*$|≈\s*$/.test(before) || /추정/.test(text)
+  const approx = /약\s*$|~\s*$|≈\s*$|approx\.?\s*$|about\s*$/i.test(before) || /추정|estimate/i.test(text)
   const note = unwrap(
     after
       .replace(/^\s*(\+|이상)/, '')
@@ -125,10 +125,10 @@ function formatKRW(v) {
  * Short label for lists and tables: KRW stays in 억 원, everything else becomes USD
  * so one column never mixes 엔 / ₹ / €. The original wording stays on the detail page.
  */
-export function shortAmount(text) {
+export function shortAmount(text, { krw = true } = {}) {
   const a = parseAmount(text)
   if (!a) return null
-  const label = a.primary.cur === 'KRW' ? formatKRW(a.primary.value) : formatUSD(a.usd)
+  const label = krw && a.primary.cur === 'KRW' ? formatKRW(a.primary.value) : formatUSD(a.usd)
   return `${label}${a.plus ? '+' : ''}`
 }
 
@@ -146,7 +146,7 @@ export function splitAmount(text) {
     return m ? { main: m[1], note: m[2].replace(/\)\s*$/, '') } : { main: text, note: null }
   }
   const start = a.primary.index
-  const lead = text.slice(0, start).match(/(약|~|≈)\s*$/)?.[0] || ''
+  const lead = text.slice(0, start).match(/(약|~|≈|approx\.?|about)\s*$/i)?.[0] || ''
   const main = `${lead}${a.primary.raw}${a.plus ? '+' : ''}`.trim()
   return { main, note: a.note }
 }

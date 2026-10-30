@@ -1,0 +1,69 @@
+name: Translate to English
+
+# English edition of the company profiles (src/data/startups.en.json). Daily runs translate
+# new companies on their own; this is for the backlog and for re-translating on demand.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'At most this many companies (empty = all missing)'
+        required: false
+      ids:
+        description: 'Only these ids, comma-separated (translated again if present)'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update # never at the same time as the daily run: both commit data files
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      VERCEL_ORG_ID: team_mTcuMUdWSKLQ6vVS8OT93zHW
+      VERCEL_PROJECT_ID: prj_NNnu7wdtYfKdZPMPCQRWu94xKq36
+      HAS_VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Translate
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODELS: ${{ vars.OPENROUTER_MODELS }}
+          LIMIT: ${{ inputs.limit }}
+          IDS: ${{ inputs.ids }}
+        run: |
+          args=""
+          [ -n "$LIMIT" ] && args="$args --limit $LIMIT"
+          [ -n "$IDS" ] && args="$args --ids $IDS"
+          node scripts/translate-en.mjs $args
+
+      - name: Commit
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/startups.en.json src/data/updates.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore: English translations"
+            git pull --rebase origin main
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy to Vercel
+        if: steps.commit.outputs.changed == 'true' && env.HAS_VERCEL_TOKEN == 'true'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: npx --yes vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"

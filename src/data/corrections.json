@@ -3,24 +3,32 @@
     "status": "운영 중단",
     "note": "2025년 2월 운영을 중단하고 최종 파산 절차에 들어갔습니다. 본문의 '재상장 추진' 표기는 사실과 다릅니다.",
     "source": "https://avweb.com/aviation-news/lilium-ceases-operations",
-    "checked": "2026-10-22"
+    "checked": "2026-10-22",
+    "status_en": "Ceased operations",
+    "note_en": "Ceased operations in February 2025 and entered final insolvency proceedings. The article's mention of a planned relisting is incorrect."
   },
   "wiz-2026": {
     "status": "인수 완료",
     "note": "Google이 2026년 3월 11일 인수를 완료했습니다. 본문의 'Series D' 단계 표기는 게재 시점 기준으로도 맞지 않습니다.",
     "source": "https://www.clearygottlieb.com/news-and-insights/news-listing/google-completes-32-billion-acquisition-of-wiz",
-    "checked": "2026-10-22"
+    "checked": "2026-10-22",
+    "status_en": "Acquired",
+    "note_en": "Google completed the acquisition on March 11, 2026. The \"Series D\" stage in the article was wrong even at the time of publication."
   },
   "covariant-2026": {
     "status": "핵심 인력 이동",
     "note": "2024년 8월 Amazon이 공동창업자 3명을 영입하고 기술 라이선스 계약을 맺었습니다. 본문에는 이 사실이 빠져 있습니다.",
     "source": "https://www.geekwire.com/2024/amazon-hires-covariant-founders-inks-licensing-deal-with-robotics-ai-startup-in-latest-reverse-acquihire-deal/",
-    "checked": "2026-10-22"
+    "checked": "2026-10-22",
+    "status_en": "Key team moved",
+    "note_en": "In August 2024 Amazon hired three co-founders and licensed the technology. The article leaves this out."
   },
   "plenty-2026": {
     "status": "구조조정",
     "note": "2025년 3월 Chapter 11을 신청했고 2025년 5월 구조조정을 마치고 재출발했습니다. 본문에는 이 사실이 빠져 있습니다.",
     "source": "https://www.plenty.ag/plenty-completes-restructuring-emerges-from-chapter-11/",
-    "checked": "2026-10-22"
+    "checked": "2026-10-22",
+    "status_en": "Restructured",
+    "note_en": "Filed for Chapter 11 in March 2025 and emerged from restructuring in May 2025. The article leaves this out."
   }
 }

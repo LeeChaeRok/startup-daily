@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { liteRecord } from './src/lib/lite.js'
+import { englishRecord } from './src/lib/merge-en.js'
 
 /* The daily data stays in src/data (the generator, the API and the workflow write and
    read it there) but ships as /data/*.json fetched at start-up, not inside the bundle:
@@ -12,18 +13,33 @@ import { liteRecord } from './src/lib/lite.js'
 const DATA_DIR = path.resolve(import.meta.dirname, 'src/data')
 const DATA_FILES = ['startups.json', 'corrections.json', 'korea-lens-index.json', 'korea-lens.json', 'meta.json', 'updates.json']
 // index.json: list fields only, for the first paint (see src/lib/lite.js)
-const indexJson = () =>
-  JSON.stringify(JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'startups.json'), 'utf8')).map(liteRecord))
+const readData = (name, fallback) => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(DATA_DIR, name), 'utf8'))
+  } catch {
+    return fallback
+  }
+}
+const indexJson = () => JSON.stringify(readData('startups.json', []).map(liteRecord))
+// English edition: data/en/startups.json and data/en/index.json (see src/lib/merge-en.js)
+const englishAll = () => {
+  const tr = readData('startups.en.json', {})
+  return readData('startups.json', []).map((s) => englishRecord(s, tr[s.id]))
+}
+const EN_FILES = {
+  'en/startups.json': () => JSON.stringify(englishAll()),
+  'en/index.json': () => JSON.stringify(englishAll().map((s) => ({ ...liteRecord(s), _ko: s._ko }))),
+}
 
 function dataFiles() {
   return {
     name: 'startup-daily-data',
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
-        const name = req.url?.split('?')[0].match(/^\/data\/([\w.-]+\.json)$/)?.[1]
-        if (!name || (name !== 'index.json' && !DATA_FILES.includes(name))) return next()
+        const name = req.url?.split('?')[0].match(/^\/data\/((?:en\/)?[\w.-]+\.json)$/)?.[1]
+        if (!name || (name !== 'index.json' && !EN_FILES[name] && !DATA_FILES.includes(name))) return next()
         res.setHeader('content-type', 'application/json; charset=utf-8')
-        res.end(name === 'index.json' ? indexJson() : fs.readFileSync(path.join(DATA_DIR, name)))
+        res.end(name === 'index.json' ? indexJson() : EN_FILES[name] ? EN_FILES[name]() : fs.readFileSync(path.join(DATA_DIR, name)))
       })
     },
     generateBundle() {
@@ -31,6 +47,7 @@ function dataFiles() {
         this.emitFile({ type: 'asset', fileName: `data/${name}`, source: fs.readFileSync(path.join(DATA_DIR, name)) })
       }
       this.emitFile({ type: 'asset', fileName: 'data/index.json', source: indexJson() })
+      for (const [name, make] of Object.entries(EN_FILES)) this.emitFile({ type: 'asset', fileName: `data/${name}`, source: make() })
     },
   }
 }
@@ -90,6 +107,7 @@ function serviceWorker() {
         .filter((f) => /\.(js|css)$/.test(f) || f.startsWith('data/'))
         .filter((f) => !f.startsWith('s/'))
         .filter((f) => f !== 'data/korea-lens.json') // large and only needed for a few pages
+        .filter((f) => !f.startsWith('data/en/')) // the other edition is cached when it is used
         .map((f) => `/${f}`)
       const precache = ['/', '/manifest.json', '/icons/icon-192.png', ...files]
       const version = crypto.createHash('sha1').update(files.join('|')).digest('hex').slice(0, 10)

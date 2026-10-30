@@ -18,6 +18,7 @@ import { navigate, useMediaQuery, useReadLog, useRoute } from './lib/hooks.js'
 import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
 import { longDate, monthDay, weekLabel } from './lib/format.js'
 import { onUpdate } from './lib/update.js'
+import { L } from './lib/i18n.js'
 
 /* ---------- Route → screen ---------- */
 
@@ -35,14 +36,17 @@ function resolve({ parts, params }) {
 }
 
 function titleFor(r) {
-  if (r.kind === 'issue') return `제${issueNo(r.date)}호 ${longDate(r.date)} — Startup Daily`
+  if (r.kind === 'issue') return L(`제${issueNo(r.date)}호 ${longDate(r.date)}`, `Issue ${issueNo(r.date)} · ${longDate(r.date)}`) + ' — Startup Daily'
   if (r.kind === 'detail') return `${byId(r.id).name_ko} — Startup Daily`
-  if (r.kind === 'explore') return '탐색 — Startup Daily'
-  if (r.kind === 'saved') return '저장함 — Startup Daily'
-  if (r.kind === 'about') return '소개·선정 기준 — Startup Daily'
-  if (r.kind === 'weekly') return `${weekLabel(r.week)} 주간 정리 — Startup Daily`
-  if (r.kind === 'sector') return `${SECTORS.find((s) => s.key === r.sector)?.label || '분야'} 모아 보기 — Startup Daily`
-  return '찾을 수 없음 — Startup Daily'
+  if (r.kind === 'explore') return `${L('탐색', 'Explore')} — Startup Daily`
+  if (r.kind === 'saved') return `${L('저장함', 'Saved')} — Startup Daily`
+  if (r.kind === 'about') return `${L('소개·선정 기준', 'About and how we pick')} — Startup Daily`
+  if (r.kind === 'weekly') return `${L(`${weekLabel(r.week)} 주간 정리`, weekLabel(r.week))} — Startup Daily`
+  if (r.kind === 'sector') {
+    const label = SECTORS.find((s) => s.key === r.sector)?.label
+    return `${L(`${label || '분야'} 모아 보기`, label || 'Sector')} — Startup Daily`
+  }
+  return `${L('찾을 수 없음', 'Not found')} — Startup Daily`
 }
 
 /* ---------- Scroll restoration + focus on route change ----------
@@ -89,10 +93,10 @@ function SideList({ route }) {
   const ctx = useContextList(startup, route.from)
   if (route.kind === 'detail' && route.from === 'saved') {
     return (
-      <aside className="split__list" aria-label="저장한 회사">
+      <aside className="split__list" aria-label={L('저장한 회사', 'Saved companies')}>
         <div className="side-head">
           <a href="#/saved" className="side-head__back">
-            저장함
+            {L('저장함', 'Saved')}
           </a>
         </div>
         <ul className="rows">
@@ -105,7 +109,7 @@ function SideList({ route }) {
   }
   const date = startup ? startup.date : route.date
   return (
-    <aside className="split__list" aria-label="이 호의 회사">
+    <aside className="split__list" aria-label={L('이 호의 회사', 'Companies in this issue')}>
       <IssueHeader date={date} compact />
       <IssueList date={date} selectedId={route.id} compact />
     </aside>
@@ -122,10 +126,10 @@ function NotFound({ head, arg }) {
         <EmptyState
           icon="calendar"
           level={1}
-          title="이 날은 발행하지 않았어요"
+          title={L('이 날은 발행하지 않았어요', 'No issue on this date')}
           actions={
             <a className="btn btn--primary" href={nearest === dates[0] ? '#/' : `#/d/${nearest}`}>
-              가장 가까운 호 보기 ({longDate(nearest).replace(/요일$/, '')})
+              {L(`가장 가까운 호 보기 (${longDate(nearest).replace(/요일$/, '')})`, `See the nearest issue (${monthDay(nearest)})`)}
             </a>
           }
         />
@@ -138,19 +142,19 @@ function NotFound({ head, arg }) {
       <EmptyState
         icon="info"
         level={1}
-        title="이 페이지를 찾을 수 없어요"
+        title={L('이 페이지를 찾을 수 없어요', 'Page not found')}
         actions={
           <>
             <a className="btn btn--primary" href="#/">
-              최신 호 보기
+              {L('최신 호 보기', 'See the latest issue')}
             </a>
             <a className="btn btn--secondary" href={`#/explore${guess ? `?q=${encodeURIComponent(guess)}` : ''}`}>
-              {guess ? `‘${guess}’ 검색` : '탐색에서 찾기'}
+              {guess ? L(`‘${guess}’ 검색`, `Search for “${guess}”`) : L('탐색에서 찾기', 'Search in Explore')}
             </a>
           </>
         }
       >
-        주소가 바뀌었거나 없는 회사·호예요.
+        {L('주소가 바뀌었거나 없는 회사·호예요.', 'The link may have changed, or this company or issue doesn’t exist.')}
       </EmptyState>
     </div>
   )
@@ -162,14 +166,14 @@ function DetailPending({ failed }) {
     return (
       <EmptyState
         icon="explore"
-        title="회사 정보를 불러오지 못했어요"
+        title={L('회사 정보를 불러오지 못했어요', 'Couldn’t load this company')}
         actions={
           <button type="button" className="btn btn--primary" onClick={() => window.location.reload()}>
-            다시 시도
+            {L('다시 시도', 'Try again')}
           </button>
         }
       >
-        인터넷 연결을 확인해 주세요.
+        {L('인터넷 연결을 확인해 주세요.', 'Check your connection and try again.')}
       </EmptyState>
     )
   }
@@ -190,8 +194,8 @@ function Notifier() {
   useEffect(
     () =>
       onUpdate((kind, meta) => {
-        const label = kind === 'issue' && meta?.last_issue_date ? `${monthDay(meta.last_issue_date)} 호가 나왔어요` : '새 버전이 있어요'
-        toast(label, { label: '새로고침', onClick: () => window.location.reload() }, 15000)
+        const label = kind === 'issue' && meta?.last_issue_date ? L(`${monthDay(meta.last_issue_date)} 호가 나왔어요`, `New issue: ${monthDay(meta.last_issue_date)}`) : L('새 버전이 있어요', 'A new version is available')
+        toast(label, { label: L('새로고침', 'Reload'), onClick: () => window.location.reload() }, 15000)
       }),
     [toast],
   )
@@ -200,7 +204,7 @@ function Notifier() {
       onLensReady((id) => {
         if (window.location.hash.startsWith(`#/s/${id}`)) return // already looking at it
         const s = byId(id)
-        toast(`${s?.name_ko || '요청한 회사'} 한국 분석이 준비됐어요`, { label: '보기', onClick: () => navigate(`/s/${id}`) }, 10000)
+        toast(L(`${s?.name_ko || '요청한 회사'} 한국 분석이 준비됐어요`, `Korea analysis is ready for ${s?.name_ko || 'the company you asked about'}`), { label: L('보기', 'View'), onClick: () => navigate(`/s/${id}`) }, 10000)
       }),
     [toast],
   )
@@ -264,12 +268,12 @@ export default function App() {
       <Notifier />
       <Onboarding />
       <a className="skip" href="#main" onClick={(e) => (e.preventDefault(), document.getElementById('main')?.focus())}>
-        본문으로 건너뛰기
+        {L('본문으로 건너뛰기', 'Skip to content')}
       </a>
       <AppHeader
         desktop={desktop}
         section={route.section}
-        back={showBack ? { label: '뒤로', onClick: () => goBackFrom(route) } : null}
+        back={showBack ? { label: L('뒤로', 'Back'), onClick: () => goBackFrom(route) } : null}
         title={route.kind === 'detail' ? { text: byId(route.id).name_ko, visible: scrolledPastHero } : null}
       />
       <div className={`shell ${split ? 'shell--split' : ''} ${rail ? 'shell--rail' : ''} shell--${route.kind}`}>
