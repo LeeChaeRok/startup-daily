@@ -1,0 +1,3116 @@
+{
+ "news_topfreeapplications": [
+  {
+   "rank": 1,
+   "name": "X",
+   "id": "333903271",
+   "artist": "X Corp.",
+   "rating": 4.33664,
+   "count": 265616,
+   "genre": "News"
+  },
+  {
+   "rank": 2,
+   "name": "블라인드 Blind",
+   "id": "737534965",
+   "artist": "Teamblind inc",
+   "rating": 4.44339,
+   "count": 42434,
+   "genre": "News"
+  },
+  {
+   "rank": 3,
+   "name": "Reddit",
+   "id": "1064216828",
+   "artist": "REDDIT, INC.",
+   "rating": 4.77865,
+   "count": 8579,
+   "genre": "News"
+  },
+  {
+   "rank": 4,
+   "name": "다음 - Daum",
+   "id": "365494029",
+   "artist": "Daum Corp.",
+   "rating": 2.67191,
+   "count": 1716,
+   "genre": "News"
+  },
+  {
+   "rank": 5,
+   "name": "뉴닉 - 가장 쉬운 뉴스 브리핑",
+   "id": "1549450444",
+   "artist": "뉴닉",
+   "rating": 4.10158,
+   "count": 886,
+   "genre": "News"
+  },
+  {
+   "rank": 6,
+   "name": "롱블랙 LongBlack",
+   "id": "6450910866",
+   "artist": "timenco",
+   "rating": 3.91329,
+   "count": 173,
+   "genre": "News"
+  },
+  {
+   "rank": 7,
+   "name": "현대카드 DIVE",
+   "id": "1469507774",
+   "artist": "HyundaiCard Co., Ltd.",
+   "rating": 4.21304,
+   "count": 1610,
+   "genre": "News"
+  },
+  {
+   "rank": 8,
+   "name": "꼬뜨 피드 : 커뮤니티 통합 뷰어",
+   "id": "6812951807",
+   "artist": "Seonhu Jeong",
+   "rating": 5,
+   "count": 3,
+   "genre": "News"
+  },
+  {
+   "rank": 9,
+   "name": "뉴스보이 - 매일 분야별 TOP 10 뉴스 보기",
+   "id": "6667097167",
+   "artist": "Curvedroad",
+   "rating": 4.82552,
+   "count": 619,
+   "genre": "News"
+  },
+  {
+   "rank": 10,
+   "name": "Substack",
+   "id": "1581650857",
+   "artist": "Substack, Inc.",
+   "rating": 4.87847,
+   "count": 897,
+   "genre": "News"
+  },
+  {
+   "rank": 11,
+   "name": "한국경제 - 한경 프리미엄9",
+   "id": "406614875",
+   "artist": "The Korea Economic Daily",
+   "rating": 4.61949,
+   "count": 1929,
+   "genre": "News"
+  },
+  {
+   "rank": 12,
+   "name": "中国领事",
+   "id": "1385502150",
+   "artist": "Center for Consular Assistance & Protection, Ministry of Foreign Affairs, People's Republic of China",
+   "rating": 2.70492,
+   "count": 61,
+   "genre": "News"
+  },
+  {
+   "rank": 13,
+   "name": "팟빵",
+   "id": "612769954",
+   "artist": "(주)팟빵",
+   "rating": 3.75371,
+   "count": 1482,
+   "genre": "News"
+  },
+  {
+   "rank": 14,
+   "name": "매일경제 - 매경플러스",
+   "id": "325920454",
+   "artist": "매일경제신문",
+   "rating": 3.58621,
+   "count": 29,
+   "genre": "News"
+  },
+  {
+   "rank": 15,
+   "name": "AI 이삭이2.0",
+   "id": "592367352",
+   "artist": "농촌진흥청",
+   "rating": 5,
+   "count": 5,
+   "genre": "News"
+  },
+  {
+   "rank": 16,
+   "name": "코인니스 라이브",
+   "id": "6759036281",
+   "artist": "Pointex LLC",
+   "rating": 2.9,
+   "count": 10,
+   "genre": "News"
+  },
+  {
+   "rank": 17,
+   "name": "BBC: World News & Stories",
+   "id": "364147881",
+   "artist": "BBC Studios Distribution Ltd.",
+   "rating": 4.67978,
+   "count": 712,
+   "genre": "News"
+  },
+  {
+   "rank": 18,
+   "name": "중앙일보",
+   "id": "340212179",
+   "artist": "Joongang Ilbo",
+   "rating": 4.55009,
+   "count": 5510,
+   "genre": "News"
+  },
+  {
+   "rank": 19,
+   "name": "시그널 실시간검색어",
+   "id": "6801948138",
+   "artist": "Signallab",
+   "rating": 4.375,
+   "count": 8,
+   "genre": "News"
+  },
+  {
+   "rank": 20,
+   "name": "하이젠버그: 이공계 석박사의 AI·반도체·빅테크",
+   "id": "6795601378",
+   "artist": "NextGen Corp.",
+   "rating": 4.5,
+   "count": 4,
+   "genre": "News"
+  },
+  {
+   "rank": 21,
+   "name": "Google 뉴스",
+   "id": "459182288",
+   "artist": "Google",
+   "rating": 4.42399,
+   "count": 592,
+   "genre": "News"
+  },
+  {
+   "rank": 22,
+   "name": "PressReader: 뉴스 및 잡지",
+   "id": "313904711",
+   "artist": "PressReader Inc",
+   "rating": 4.83091,
+   "count": 1307,
+   "genre": "News"
+  },
+  {
+   "rank": 23,
+   "name": "CNN: Live & Breaking News",
+   "id": "331786748",
+   "artist": "CNN Interactive Group, Inc.",
+   "rating": 4.74012,
+   "count": 7088,
+   "genre": "News"
+  },
+  {
+   "rank": 24,
+   "name": "모바일한경",
+   "id": "708032904",
+   "artist": "The Korea Economic Daily",
+   "rating": 2.62983,
+   "count": 181,
+   "genre": "News"
+  },
+  {
+   "rank": 25,
+   "name": "패션 & 스타일",
+   "id": "1620312420",
+   "artist": "Fashion & Style Company Inc.",
+   "rating": 3.77419,
+   "count": 31,
+   "genre": "News"
+  },
+  {
+   "rank": 26,
+   "name": "NYTimes: US and World News",
+   "id": "284862083",
+   "artist": "The New York Times Company",
+   "rating": 4.79038,
+   "count": 1455,
+   "genre": "News"
+  },
+  {
+   "rank": 27,
+   "name": "tbn",
+   "id": "969867489",
+   "artist": "Korea Road Traffic Authority",
+   "rating": 2.97143,
+   "count": 35,
+   "genre": "News"
+  },
+  {
+   "rank": 28,
+   "name": "연합뉴스",
+   "id": "346169668",
+   "artist": "연합뉴스",
+   "rating": 3.39744,
+   "count": 78,
+   "genre": "News"
+  },
+  {
+   "rank": 29,
+   "name": "미라클디그",
+   "id": "6737538885",
+   "artist": "Maekyung AX",
+   "rating": 4.7,
+   "count": 10,
+   "genre": "News"
+  },
+  {
+   "rank": 30,
+   "name": "YTN",
+   "id": "353117998",
+   "artist": "YTN",
+   "rating": 2.86022,
+   "count": 93,
+   "genre": "News"
+  },
+  {
+   "rank": 31,
+   "name": "The Economist: News & Analysis",
+   "id": "1239397626",
+   "artist": "The Economist",
+   "rating": 4.84832,
+   "count": 4859,
+   "genre": "News"
+  },
+  {
+   "rank": 32,
+   "name": "The Wall Street Journal News",
+   "id": "364387007",
+   "artist": "Dow Jones & Company, Inc., publisher of The Wall Street Journal.",
+   "rating": 4.67626,
+   "count": 1980,
+   "genre": "News"
+  },
+  {
+   "rank": 33,
+   "name": "굿뉴스",
+   "id": "1211582650",
+   "artist": "Hwangmuc Kim",
+   "rating": 3.2,
+   "count": 40,
+   "genre": "News"
+  },
+  {
+   "rank": 34,
+   "name": "매경e신문",
+   "id": "589375715",
+   "artist": "매일경제신문",
+   "rating": 3.5,
+   "count": 6,
+   "genre": "News"
+  },
+  {
+   "rank": 35,
+   "name": "뉴스매일 - 멀티소스 뉴스 리더",
+   "id": "576210200",
+   "artist": "Nobuyuki Kondo",
+   "rating": 4.68966,
+   "count": 10576,
+   "genre": "News"
+  },
+  {
+   "rank": 36,
+   "name": "Bloomberg: Business News Daily",
+   "id": "281941097",
+   "artist": "Bloomberg Finance LP",
+   "rating": 4.74809,
+   "count": 1830,
+   "genre": "News"
+  },
+  {
+   "rank": 37,
+   "name": "실검 위젯 – 홈화면 실시간검색어 위젯",
+   "id": "6749870074",
+   "artist": "cocoququ.co.,ltd",
+   "rating": 4.58559,
+   "count": 333,
+   "genre": "News"
+  },
+  {
+   "rank": 38,
+   "name": "Medium: Read & Write Stories",
+   "id": "828256236",
+   "artist": "A Medium Corporation",
+   "rating": 4.84497,
+   "count": 4109,
+   "genre": "News"
+  },
+  {
+   "rank": 39,
+   "name": "SmartNews: Breaking News",
+   "id": "579581125",
+   "artist": "SmartNews, Inc.",
+   "rating": 4.49143,
+   "count": 175,
+   "genre": "News"
+  },
+  {
+   "rank": 40,
+   "name": "MBC 뉴스",
+   "id": "387713617",
+   "artist": "MUNHWA BROADCASTING CORP.",
+   "rating": 3.09639,
+   "count": 83,
+   "genre": "News"
+  },
+  {
+   "rank": 41,
+   "name": "NHK WORLD-JAPAN",
+   "id": "350732480",
+   "artist": "NHK (Japan Broadcasting Corporation)",
+   "rating": 3.1,
+   "count": 20,
+   "genre": "News"
+  },
+  {
+   "rank": 42,
+   "name": "Reuters - Breaking World News",
+   "id": "602660809",
+   "artist": "Thomson Reuters Enterprise Centre GmbH",
+   "rating": 4.61538,
+   "count": 26,
+   "genre": "News"
+  },
+  {
+   "rank": 43,
+   "name": "SBSNEWS",
+   "id": "371932445",
+   "artist": "SBS I&M Co., Ltd.",
+   "rating": 4.05907,
+   "count": 237,
+   "genre": "News"
+  },
+  {
+   "rank": 44,
+   "name": "爱山东",
+   "id": "1064793304",
+   "artist": "Shandong Provincial Big Data Center",
+   "rating": 1,
+   "count": 1,
+   "genre": "News"
+  },
+  {
+   "rank": 45,
+   "name": "YTN 라디오",
+   "id": "695481841",
+   "artist": "YTN",
+   "rating": 3.15094,
+   "count": 53,
+   "genre": "News"
+  },
+  {
+   "rank": 46,
+   "name": "조선일보",
+   "id": "360677289",
+   "artist": "The Chosunilbo Company",
+   "rating": 3.64184,
+   "count": 282,
+   "genre": "News"
+  },
+  {
+   "rank": 47,
+   "name": "동아일보",
+   "id": "377687605",
+   "artist": "dongA.com",
+   "rating": 4,
+   "count": 16,
+   "genre": "News"
+  },
+  {
+   "rank": 48,
+   "name": "SH청약소식",
+   "id": "6748625249",
+   "artist": "hoseok kim",
+   "rating": 5,
+   "count": 1,
+   "genre": "News"
+  },
+  {
+   "rank": 49,
+   "name": "더불어민주당",
+   "id": "1495133762",
+   "artist": "더불어민주당",
+   "rating": 3.24038,
+   "count": 208,
+   "genre": "News"
+  },
+  {
+   "rank": 50,
+   "name": "HYPE by Hypebeast",
+   "id": "986768161",
+   "artist": "Hypebeast Hong Kong Limited",
+   "rating": 4.84273,
+   "count": 6524,
+   "genre": "News"
+  }
+ ],
+ "news_toppaidapplications": [
+  {
+   "rank": 1,
+   "name": "PocketNews - 워치로 보는 뉴스, 기사",
+   "id": "6444249757",
+   "artist": "GEONJU CHOI"
+  },
+  {
+   "rank": 2,
+   "name": "Explorineer | 하루10분 글로벌IT트렌드읽기",
+   "id": "6740914910",
+   "artist": "SeungHyeon Lee"
+  },
+  {
+   "rank": 3,
+   "name": "Downcast",
+   "id": "393858566",
+   "artist": "Jamawkinaw Enterprises LLC"
+  },
+  {
+   "rank": 4,
+   "name": "세계 신문 - 200 개 국가",
+   "id": "313147645",
+   "artist": "BoCoSoft,Inc."
+  },
+  {
+   "rank": 5,
+   "name": "Reeder Classic",
+   "id": "1529445840",
+   "artist": "Silvio Rizzi"
+  },
+  {
+   "rank": 6,
+   "name": "GoodLinks: Read Later",
+   "id": "1474335294",
+   "artist": "Ngoc Luu"
+  },
+  {
+   "rank": 7,
+   "name": "Outcast for Watch",
+   "id": "1326693810",
+   "artist": "Crunchy Bagel"
+  },
+  {
+   "rank": 8,
+   "name": "iCatcher! Podcast App",
+   "id": "414419105",
+   "artist": "Joeisanerd.com"
+  },
+  {
+   "rank": 9,
+   "name": "Feeddler RSS Reader Pro",
+   "id": "919056339",
+   "artist": "C.B. Liu"
+  },
+  {
+   "rank": 10,
+   "name": "News Explorer",
+   "id": "1032668306",
+   "artist": "Ron Elemans"
+  },
+  {
+   "rank": 11,
+   "name": "QuakeWatch",
+   "id": "314600768",
+   "artist": "LateNightProjects"
+  },
+  {
+   "rank": 12,
+   "name": "전문적인 연락처 백업 - 전화번호 백업",
+   "id": "1038892737",
+   "artist": "Giacomo Guglielmi"
+  },
+  {
+   "rank": 13,
+   "name": "The Aviation Herald",
+   "id": "903637019",
+   "artist": "The Aviation Herald"
+  },
+  {
+   "rank": 14,
+   "name": "Simple RSS Push+ · Feed Reader",
+   "id": "711503013",
+   "artist": "Alexandre Fabri"
+  },
+  {
+   "rank": 15,
+   "name": "NewsTap (Usenet Newsreader)",
+   "id": "292410356",
+   "artist": "Alexander Clauss"
+  },
+  {
+   "rank": 16,
+   "name": "lire: RSS Reader",
+   "id": "1531976425",
+   "artist": "Kunal Sood"
+  },
+  {
+   "rank": 17,
+   "name": "Contacts Cleaner Pro",
+   "id": "590254755",
+   "artist": "Emanuele Floris"
+  },
+  {
+   "rank": 18,
+   "name": "Earthquake 3D",
+   "id": "448638079",
+   "artist": "Richard Wolton"
+  },
+  {
+   "rank": 19,
+   "name": "German TV",
+   "id": "336902466",
+   "artist": "Kanta"
+  },
+  {
+   "rank": 20,
+   "name": "World News 206・번역",
+   "id": "6752511428",
+   "artist": "Seiya.k"
+  },
+  {
+   "rank": 21,
+   "name": "Podcast Alarm: Wake & Listen",
+   "id": "1441890371",
+   "artist": "Jonathan Wilson"
+  },
+  {
+   "rank": 22,
+   "name": "Lottery (Thai) - ตรวจหวย",
+   "id": "416339439",
+   "artist": "Orisma"
+  },
+  {
+   "rank": 23,
+   "name": "Pincase - A Pinboard.in client, that is simple, elegant and powerful, perfect for managing your daily discoveries.",
+   "id": "698220406",
+   "artist": "Keishi Maeda"
+  },
+  {
+   "rank": 24,
+   "name": "Current - RSS Feed Reader",
+   "id": "6758530974",
+   "artist": "Jupiter Interactive Group LLC"
+  },
+  {
+   "rank": 25,
+   "name": "Italian TV Schedule",
+   "id": "376534631",
+   "artist": "Kanta"
+  },
+  {
+   "rank": 26,
+   "name": "Tech News++",
+   "id": "1230328423",
+   "artist": "A B"
+  },
+  {
+   "rank": 27,
+   "name": "CloudNews - Feed Reader",
+   "id": "683859706",
+   "artist": "Peter Hedlund"
+  },
+  {
+   "rank": 28,
+   "name": "Sylfeed",
+   "id": "403879490",
+   "artist": "GACHANET"
+  },
+  {
+   "rank": 29,
+   "name": "YourPods: Podcast Player",
+   "id": "6757721236",
+   "artist": "A Secret Company, LLC"
+  },
+  {
+   "rank": 30,
+   "name": "Feedibus — RSS Feed Reader",
+   "id": "1585543362",
+   "artist": "Nicolas Neubauer"
+  },
+  {
+   "rank": 31,
+   "name": "The Aviation Herald - Feed",
+   "id": "1190935479",
+   "artist": "Tobias Ecke"
+  },
+  {
+   "rank": 32,
+   "name": "凤凰新闻专业版",
+   "id": "1152396902",
+   "artist": "Beijing TianyingJiuzhou Network Technology Co. Ltd"
+  },
+  {
+   "rank": 33,
+   "name": "Headlines RSS",
+   "id": "904059445",
+   "artist": "onFoot IT"
+  },
+  {
+   "rank": 34,
+   "name": "Mocast",
+   "id": "897185985",
+   "artist": "Krueger Systems, Inc."
+  },
+  {
+   "rank": 35,
+   "name": "Hacker News",
+   "id": "339408916",
+   "artist": "Michael Grinich"
+  },
+  {
+   "rank": 36,
+   "name": "Wallflower - Boring Reader",
+   "id": "6796877599",
+   "artist": "And a Dinosaur"
+  },
+  {
+   "rank": 37,
+   "name": "Crustacean for Lobsters",
+   "id": "6742195107",
+   "artist": "Sayan Goswami"
+  },
+  {
+   "rank": 38,
+   "name": "TV Show Tracker - TV Club",
+   "id": "6497563903",
+   "artist": "RanduSoft SRL"
+  },
+  {
+   "rank": 39,
+   "name": "All Radio Pro - Radio App",
+   "id": "6475071209",
+   "artist": "ALL RADIO DEVELOPMENT TECHNOLOGY JOINT STOCK COMPANY"
+  },
+  {
+   "rank": 40,
+   "name": "Feedster: RSS Reader",
+   "id": "1668579869",
+   "artist": "Nikolaj Jensen"
+  },
+  {
+   "rank": 41,
+   "name": "TinyFeeds",
+   "id": "1597838632",
+   "artist": "Matthew Elliott"
+  },
+  {
+   "rank": 42,
+   "name": "claw: Unofficial Lobsters App",
+   "id": "1531645542",
+   "artist": "Zac Gorak"
+  },
+  {
+   "rank": 43,
+   "name": "Den for RSS",
+   "id": "1528917651",
+   "artist": "Garrett Johnson"
+  },
+  {
+   "rank": 44,
+   "name": "WatchFeed - RSS for Feedly",
+   "id": "1527233179",
+   "artist": "Nienhuis Development"
+  },
+  {
+   "rank": 45,
+   "name": "Speak News - RSS news reader",
+   "id": "1117146910",
+   "artist": "Imaja"
+  },
+  {
+   "rank": 46,
+   "name": "Color Keys Keyboard Pro",
+   "id": "1072795232",
+   "artist": "Giacomo Guglielmi"
+  },
+  {
+   "rank": 47,
+   "name": "멋진 글꼴 키보드",
+   "id": "1072769428",
+   "artist": "Giacomo Guglielmi"
+  },
+  {
+   "rank": 48,
+   "name": "Electoral Map Maker 2024",
+   "id": "1039945866",
+   "artist": "Carnevale"
+  },
+  {
+   "rank": 49,
+   "name": "PDF Converter !",
+   "id": "965210551",
+   "artist": "Emanuele Floris"
+  },
+  {
+   "rank": 50,
+   "name": "RIP VIP: The Death Alert App.",
+   "id": "724226640",
+   "artist": "David Ritchie"
+  }
+ ],
+ "news_topgrossingapplications": [
+  {
+   "rank": 1,
+   "name": "X",
+   "id": "333903271",
+   "artist": "X Corp.",
+   "rating": 4.33664,
+   "count": 265616,
+   "genre": "News"
+  },
+  {
+   "rank": 2,
+   "name": "블라인드 Blind",
+   "id": "737534965",
+   "artist": "Teamblind inc",
+   "rating": 4.44339,
+   "count": 42434,
+   "genre": "News"
+  },
+  {
+   "rank": 3,
+   "name": "팟빵",
+   "id": "612769954",
+   "artist": "(주)팟빵",
+   "rating": 3.75371,
+   "count": 1482,
+   "genre": "News"
+  },
+  {
+   "rank": 4,
+   "name": "Bloomberg: Business News Daily",
+   "id": "281941097",
+   "artist": "Bloomberg Finance LP",
+   "rating": 4.74809,
+   "count": 1830,
+   "genre": "News"
+  },
+  {
+   "rank": 5,
+   "name": "NYTimes: US and World News",
+   "id": "284862083",
+   "artist": "The New York Times Company",
+   "rating": 4.79038,
+   "count": 1455,
+   "genre": "News"
+  },
+  {
+   "rank": 6,
+   "name": "중앙일보",
+   "id": "340212179",
+   "artist": "Joongang Ilbo",
+   "rating": 4.55009,
+   "count": 5510,
+   "genre": "News"
+  },
+  {
+   "rank": 7,
+   "name": "The Economist: News & Analysis",
+   "id": "1239397626",
+   "artist": "The Economist",
+   "rating": 4.84832,
+   "count": 4859,
+   "genre": "News"
+  },
+  {
+   "rank": 8,
+   "name": "한국경제 - 한경 프리미엄9",
+   "id": "406614875",
+   "artist": "The Korea Economic Daily",
+   "rating": 4.61949,
+   "count": 1929,
+   "genre": "News"
+  },
+  {
+   "rank": 9,
+   "name": "조선일보",
+   "id": "360677289",
+   "artist": "The Chosunilbo Company",
+   "rating": 3.64184,
+   "count": 282,
+   "genre": "News"
+  },
+  {
+   "rank": 10,
+   "name": "The Wall Street Journal News",
+   "id": "364387007",
+   "artist": "Dow Jones & Company, Inc., publisher of The Wall Street Journal.",
+   "rating": 4.67626,
+   "count": 1980,
+   "genre": "News"
+  },
+  {
+   "rank": 11,
+   "name": "Byul - 실시간 경제 뉴스 & 가상화폐 뉴스",
+   "id": "6745809443",
+   "artist": "dongyeong kim"
+  },
+  {
+   "rank": 12,
+   "name": "CNBC: Stock Market & Business",
+   "id": "398018310",
+   "artist": "Versant Media LLC"
+  },
+  {
+   "rank": 13,
+   "name": "Reuters - Breaking World News",
+   "id": "602660809",
+   "artist": "Thomson Reuters Enterprise Centre GmbH",
+   "rating": 4.61538,
+   "count": 26,
+   "genre": "News"
+  },
+  {
+   "rank": 14,
+   "name": "日本経済新聞 電子版 - ビジネス・政治・金融・経済ニュース",
+   "id": "396855834",
+   "artist": "NIKKEI INC."
+  },
+  {
+   "rank": 15,
+   "name": "Medium: Read & Write Stories",
+   "id": "828256236",
+   "artist": "A Medium Corporation",
+   "rating": 4.84497,
+   "count": 4109,
+   "genre": "News"
+  },
+  {
+   "rank": 16,
+   "name": "Financial Times: Business News",
+   "id": "1200842933",
+   "artist": "Financial Times Ltd."
+  },
+  {
+   "rank": 17,
+   "name": "디지털농민신문",
+   "id": "1267195053",
+   "artist": "Farmer News"
+  },
+  {
+   "rank": 18,
+   "name": "PressReader: 뉴스 및 잡지",
+   "id": "313904711",
+   "artist": "PressReader Inc",
+   "rating": 4.83091,
+   "count": 1307,
+   "genre": "News"
+  },
+  {
+   "rank": 19,
+   "name": "The New Yorker",
+   "id": "1081530898",
+   "artist": "Advance Magazine Publishers Inc.",
+   "rating": 3.5,
+   "count": 12,
+   "genre": "News"
+  },
+  {
+   "rank": 20,
+   "name": "DER SPIEGEL - Nachrichten",
+   "id": "424881832",
+   "artist": "DER SPIEGEL GmbH und Co. KG"
+  },
+  {
+   "rank": 21,
+   "name": "매일경제 - 매경플러스",
+   "id": "325920454",
+   "artist": "매일경제신문",
+   "rating": 3.58621,
+   "count": 29,
+   "genre": "News"
+  },
+  {
+   "rank": 22,
+   "name": "Australian Financial Review",
+   "id": "524599864",
+   "artist": "Fairfax Digital Australia & New Zealand Pty Limited"
+  },
+  {
+   "rank": 23,
+   "name": "The Jakarta Post",
+   "id": "1321863437",
+   "artist": "Niskala Media Tenggara, PT."
+  },
+  {
+   "rank": 24,
+   "name": "The Guardian - UK & World News",
+   "id": "409128287",
+   "artist": "Guardian News and Media Limited",
+   "rating": 4.83866,
+   "count": 688,
+   "genre": "News"
+  },
+  {
+   "rank": 25,
+   "name": "Business Insider: News & more",
+   "id": "554260576",
+   "artist": "Insider, Inc."
+  },
+  {
+   "rank": 26,
+   "name": "Tagesspiegel - Nachrichten",
+   "id": "440157280",
+   "artist": "Verlag Der Tagesspiegel GmbH"
+  },
+  {
+   "rank": 27,
+   "name": "AcrossCast: Podcast 번역",
+   "id": "6504446850",
+   "artist": "Masahiro Kimura"
+  },
+  {
+   "rank": 28,
+   "name": "Le Monde, Actualités en direct",
+   "id": "294047850",
+   "artist": "Societe Editrice du Monde"
+  },
+  {
+   "rank": 29,
+   "name": "Reddit",
+   "id": "1064216828",
+   "artist": "REDDIT, INC.",
+   "rating": 4.77865,
+   "count": 8579,
+   "genre": "News"
+  },
+  {
+   "rank": 30,
+   "name": "Espresso: World news in a shot",
+   "id": "896628003",
+   "artist": "The Economist"
+  },
+  {
+   "rank": 31,
+   "name": "World Monitor App",
+   "id": "6760610225",
+   "artist": "Hypecent"
+  },
+  {
+   "rank": 32,
+   "name": "Pocket Casts: Podcast Player",
+   "id": "414834813",
+   "artist": "Automattic"
+  },
+  {
+   "rank": 33,
+   "name": "하이젠버그: 이공계 석박사의 AI·반도체·빅테크",
+   "id": "6795601378",
+   "artist": "NextGen Corp.",
+   "rating": 4.5,
+   "count": 4,
+   "genre": "News"
+  },
+  {
+   "rank": 34,
+   "name": "Le Figaro Actualités en direct",
+   "id": "319557427",
+   "artist": "Société du Figaro"
+  },
+  {
+   "rank": 35,
+   "name": "PocketNews - 워치로 보는 뉴스, 기사",
+   "id": "6444249757",
+   "artist": "GEONJU CHOI"
+  },
+  {
+   "rank": 36,
+   "name": "Narwhal for Reddit",
+   "id": "845422455",
+   "artist": "robot swingset, llc."
+  },
+  {
+   "rank": 37,
+   "name": "Explorineer | 하루10분 글로벌IT트렌드읽기",
+   "id": "6740914910",
+   "artist": "SeungHyeon Lee"
+  },
+  {
+   "rank": 38,
+   "name": "Ground News",
+   "id": "1324203419",
+   "artist": "Snapwise Inc.",
+   "rating": 4.81429,
+   "count": 70,
+   "genre": "News"
+  },
+  {
+   "rank": 39,
+   "name": "The Information: Tech News",
+   "id": "1485459932",
+   "artist": "The Information"
+  },
+  {
+   "rank": 40,
+   "name": "産経新聞HD",
+   "id": "372332300",
+   "artist": "産経新聞社"
+  },
+  {
+   "rank": 41,
+   "name": "뉴닉 - 가장 쉬운 뉴스 브리핑",
+   "id": "1549450444",
+   "artist": "뉴닉",
+   "rating": 4.10158,
+   "count": 886,
+   "genre": "News"
+  },
+  {
+   "rank": 42,
+   "name": "ニュースはNewsPicks｜ビジネス・経済ニュース・就活",
+   "id": "640956497",
+   "artist": "UZABASE, Inc."
+  },
+  {
+   "rank": 43,
+   "name": "뉴스알람New",
+   "id": "1499774734",
+   "artist": "Peter and Partners"
+  },
+  {
+   "rank": 44,
+   "name": "朝日新聞 - 国内外のニュースをいつでもどこでも",
+   "id": "429622552",
+   "artist": "株式会社 朝日新聞社"
+  },
+  {
+   "rank": 45,
+   "name": "SBH News",
+   "id": "6798112818",
+   "artist": "DAESEONG KIM"
+  },
+  {
+   "rank": 46,
+   "name": "LA Times",
+   "id": "373238146",
+   "artist": "Los Angeles Times Communications LLC"
+  },
+  {
+   "rank": 47,
+   "name": "e-경향신문",
+   "id": "716442027",
+   "artist": "BECUAI Corp"
+  },
+  {
+   "rank": 48,
+   "name": "财新-原创高质量财经资讯报道",
+   "id": "356023612",
+   "artist": "Caixin Media Co., Ltd"
+  },
+  {
+   "rank": 49,
+   "name": "Podcast Player App - Castbox",
+   "id": "1243410543",
+   "artist": "Guru Network Limited"
+  },
+  {
+   "rank": 50,
+   "name": "실검 위젯 – 홈화면 실시간검색어 위젯",
+   "id": "6749870074",
+   "artist": "cocoququ.co.,ltd",
+   "rating": 4.58559,
+   "count": 333,
+   "genre": "News"
+  }
+ ],
+ "business_topfreeapplications": [
+  {
+   "rank": 1,
+   "name": "토스 비즈니스",
+   "id": "6755060860",
+   "artist": "Viva Republica",
+   "rating": 4,
+   "count": 23,
+   "genre": "Business"
+  },
+  {
+   "rank": 2,
+   "name": "더존 위하고 모바일",
+   "id": "1363039300",
+   "artist": "Douzone Bizon Co.,Ltd.",
+   "rating": 2.86486,
+   "count": 74,
+   "genre": "Business"
+  },
+  {
+   "rank": 3,
+   "name": "고용24(Work24)",
+   "id": "6478366140",
+   "artist": "한국고용정보원",
+   "rating": 3.88329,
+   "count": 1628,
+   "genre": "Business"
+  },
+  {
+   "rank": 4,
+   "name": "잡코리아 - ai 커리어 플랫폼 취업 이직 직장 채용",
+   "id": "569092652",
+   "artist": "WORXPHERE LLC.",
+   "rating": 4.77039,
+   "count": 142062,
+   "genre": "Business"
+  },
+  {
+   "rank": 5,
+   "name": "알바몬 - 대한민국 1위 아르바이트 플랫폼",
+   "id": "382535825",
+   "artist": "WORXPHERE LLC.",
+   "rating": 4.79101,
+   "count": 241799,
+   "genre": "Business"
+  },
+  {
+   "rank": 6,
+   "name": "사람인 - 취업 이직 커뮤니티 커리어의 모든 것",
+   "id": "739013038",
+   "artist": "Saramin Co., Ltd.",
+   "rating": 4.72503,
+   "count": 251089,
+   "genre": "Business"
+  },
+  {
+   "rank": 7,
+   "name": "쿠펀치",
+   "id": "1463753771",
+   "artist": "Coupang Corp.",
+   "rating": 1.57371,
+   "count": 1567,
+   "genre": "Business"
+  },
+  {
+   "rank": 8,
+   "name": "Zoom Workplace",
+   "id": "546505307",
+   "artist": "Zoom Communications, Inc.",
+   "rating": 4.59684,
+   "count": 120410,
+   "genre": "Business"
+  },
+  {
+   "rank": 9,
+   "name": "알바천국 - 모든 생애 모든 알바",
+   "id": "996325726",
+   "artist": "Mediawill Networks, Inc.",
+   "rating": 3.10853,
+   "count": 2497,
+   "genre": "Business"
+  },
+  {
+   "rank": 10,
+   "name": "마이클 - 차량관리, 엔진오일, 타이어, 세차, 예약",
+   "id": "1004325731",
+   "artist": "Macarong Factory Inc.",
+   "rating": 4.77661,
+   "count": 39922,
+   "genre": "Business"
+  },
+  {
+   "rank": 11,
+   "name": "모바일팩스 i",
+   "id": "1487591338",
+   "artist": "SK Broadband CO.LTD",
+   "rating": 3.81702,
+   "count": 2186,
+   "genre": "Business"
+  },
+  {
+   "rank": 12,
+   "name": "덧셈 - 세금 신고/환급",
+   "id": "6475924107",
+   "artist": "덧셈컴퍼니",
+   "rating": 3.83498,
+   "count": 1012,
+   "genre": "Business"
+  },
+  {
+   "rank": 13,
+   "name": "Microsoft Teams",
+   "id": "1113153706",
+   "artist": "Microsoft Corporation",
+   "rating": 4.74774,
+   "count": 52644,
+   "genre": "Business"
+  },
+  {
+   "rank": 14,
+   "name": "스마트 위택스",
+   "id": "888585740",
+   "artist": "행정안전부",
+   "rating": 1.66963,
+   "count": 1014,
+   "genre": "Business"
+  },
+  {
+   "rank": 15,
+   "name": "엔카 - 중고차 필수 플랫폼, 내차팔기, 내차시세",
+   "id": "404512755",
+   "artist": "ENCARSALES.COM",
+   "rating": 4.68539,
+   "count": 111359,
+   "genre": "Business"
+  },
+  {
+   "rank": 16,
+   "name": "카카오 T 픽커 - 퀵, 도보, 대리, 한차배송",
+   "id": "1540529332",
+   "artist": "Kakao Mobility Corp.",
+   "rating": 2.07758,
+   "count": 232,
+   "genre": "Business"
+  },
+  {
+   "rank": 17,
+   "name": "리멤버 - No.1 경력채용, 명함관리, 커뮤니티",
+   "id": "840553277",
+   "artist": "Remember & Company Co., Ltd",
+   "rating": 4.77339,
+   "count": 84934,
+   "genre": "Business"
+  },
+  {
+   "rank": 18,
+   "name": "나이스 아이핀",
+   "id": "898176302",
+   "artist": "NICE Information Service Co., Ltd.",
+   "rating": 2.04443,
+   "count": 45,
+   "genre": "Business"
+  },
+  {
+   "rank": 19,
+   "name": "e-병무지갑",
+   "id": "1488297209",
+   "artist": "병무청",
+   "rating": 1.23085,
+   "count": 1815,
+   "genre": "Business"
+  },
+  {
+   "rank": 20,
+   "name": "하우머치 - 알바 필수앱",
+   "id": "1480145356",
+   "artist": "자비스앤빌런즈",
+   "rating": 4.67994,
+   "count": 16669,
+   "genre": "Business"
+  },
+  {
+   "rank": 21,
+   "name": "동네알바 - 우리동네 알바, 부업, 채용, 일자리 찾기",
+   "id": "1534674681",
+   "artist": "Saramin Co., Ltd.",
+   "rating": 4.78425,
+   "count": 10160,
+   "genre": "Business"
+  },
+  {
+   "rank": 22,
+   "name": "국방모바일보안(외부인)",
+   "id": "1489115591",
+   "artist": "Ministry of National Defense - Republic of Korea",
+   "rating": 1.19768,
+   "count": 865,
+   "genre": "Business"
+  },
+  {
+   "rank": 23,
+   "name": "Adobe Acrobat Reader: PDF 편집",
+   "id": "469337564",
+   "artist": "Adobe Inc.",
+   "rating": 4.69852,
+   "count": 27335,
+   "genre": "Business"
+  },
+  {
+   "rank": 24,
+   "name": "CLS쿠펀치",
+   "id": "6443390755",
+   "artist": "Coupang Corp.",
+   "rating": 1.72327,
+   "count": 159,
+   "genre": "Business"
+  },
+  {
+   "rank": 25,
+   "name": "급구 - 하루만 알바가 필요할 때",
+   "id": "1024369566",
+   "artist": "Needer Inc",
+   "rating": 4.42583,
+   "count": 2764,
+   "genre": "Business"
+  },
+  {
+   "rank": 26,
+   "name": "모바일 관세청",
+   "id": "1100073666",
+   "artist": "Korea Customs Service",
+   "rating": 1.8225,
+   "count": 800,
+   "genre": "Business"
+  },
+  {
+   "rank": 27,
+   "name": "LinkedIn",
+   "id": "288429040",
+   "artist": "LinkedIn Corporation",
+   "rating": 4.56951,
+   "count": 2971,
+   "genre": "Business"
+  },
+  {
+   "rank": 28,
+   "name": "국방모바일보안",
+   "id": "1485356492",
+   "artist": "Ministry of National Defense - Republic of Korea",
+   "rating": 1.25074,
+   "count": 12204,
+   "genre": "Business"
+  },
+  {
+   "rank": 29,
+   "name": "쿠팡이츠 배달 파트너",
+   "id": "1478213978",
+   "artist": "Coupang Corp.",
+   "rating": 2.01212,
+   "count": 2805,
+   "genre": "Business"
+  },
+  {
+   "rank": 30,
+   "name": "Slack",
+   "id": "618783545",
+   "artist": "Slack Technologies, Inc.",
+   "rating": 3.85473,
+   "count": 1363,
+   "genre": "Business"
+  },
+  {
+   "rank": 31,
+   "name": "GlobalProtect™",
+   "id": "1400555706",
+   "artist": "Palo Alto Networks",
+   "rating": 4.21094,
+   "count": 128,
+   "genre": "Business"
+  },
+  {
+   "rank": 32,
+   "name": "크몽 - 프리랜서 마켓 No.1",
+   "id": "1039179300",
+   "artist": "KMONG",
+   "rating": 4.64767,
+   "count": 15982,
+   "genre": "Business"
+  },
+  {
+   "rank": 33,
+   "name": "배민커넥트 - 배달할 땐 누구나",
+   "id": "1551766749",
+   "artist": "Woowa Bros Co., Ltd.",
+   "rating": 1.98183,
+   "count": 1981,
+   "genre": "Business"
+  },
+  {
+   "rank": 34,
+   "name": "병무청",
+   "id": "496516776",
+   "artist": "병무청",
+   "rating": 1.15646,
+   "count": 3330,
+   "genre": "Business"
+  },
+  {
+   "rank": 35,
+   "name": "인크루트 - 신입 경력 이직 취업정보는 취업비서 하나로",
+   "id": "366417871",
+   "artist": "Incruit Co., Ltd.",
+   "rating": 3.80903,
+   "count": 576,
+   "genre": "Business"
+  },
+  {
+   "rank": 36,
+   "name": "잡플래닛",
+   "id": "981750452",
+   "artist": "잡플래닛(유)",
+   "rating": 4.23423,
+   "count": 5785,
+   "genre": "Business"
+  },
+  {
+   "rank": 37,
+   "name": "여행자 세관신고",
+   "id": "1596697323",
+   "artist": "Korea Customs Service",
+   "rating": 1.59821,
+   "count": 112,
+   "genre": "Business"
+  },
+  {
+   "rank": 38,
+   "name": "대한민국 모바일 공무원증",
+   "id": "6754308730",
+   "artist": "행정안전부",
+   "rating": 3,
+   "count": 10,
+   "genre": "Business"
+  },
+  {
+   "rank": 39,
+   "name": "공임나라 자동차정비,엔진오일,수입차정비,타이어,정비예약",
+   "id": "1585773941",
+   "artist": "공임나라",
+   "rating": 1.60526,
+   "count": 38,
+   "genre": "Business"
+  },
+  {
+   "rank": 40,
+   "name": "신상마켓 - 동대문 의류 도매시장",
+   "id": "995520894",
+   "artist": "Dealicious Inc.",
+   "rating": 3.85277,
+   "count": 2255,
+   "genre": "Business"
+  },
+  {
+   "rank": 41,
+   "name": "네이버웍스 NAVER WORKS",
+   "id": "6447490502",
+   "artist": "NAVER Cloud Corp.",
+   "rating": 4.54969,
+   "count": 4728,
+   "genre": "Business"
+  },
+  {
+   "rank": 42,
+   "name": "네이버 스마트플레이스센터",
+   "id": "1521817390",
+   "artist": "NAVER Corp.",
+   "rating": 2.25956,
+   "count": 366,
+   "genre": "Business"
+  },
+  {
+   "rank": 43,
+   "name": "Amaranth10",
+   "id": "1498550773",
+   "artist": "Douzone Bizon Co.,Ltd.",
+   "rating": 1.97619,
+   "count": 126,
+   "genre": "Business"
+  },
+  {
+   "rank": 44,
+   "name": "링커리어-대학생 대외활동 공모전 인턴 신입 채용 취업",
+   "id": "1526086787",
+   "artist": "Specup Ad Co.,Ltd.",
+   "rating": 4.7609,
+   "count": 2752,
+   "genre": "Business"
+  },
+  {
+   "rank": 45,
+   "name": "원티드 - 취업·이직, 프리랜서, 커리어 성장",
+   "id": "1074569961",
+   "artist": "WantedLab Inc.",
+   "rating": 4.60815,
+   "count": 7776,
+   "genre": "Business"
+  },
+  {
+   "rank": 46,
+   "name": "모바일팩스 및 문서 스캔어플: 팩스 송수신・FAX",
+   "id": "6446494282",
+   "artist": "Plekmin Trade, S.L.",
+   "rating": 4.30029,
+   "count": 686,
+   "genre": "Business"
+  },
+  {
+   "rank": 47,
+   "name": "Adobe Scan: OCR & PDF 스캐너",
+   "id": "1199564834",
+   "artist": "Adobe Inc.",
+   "rating": 4.88638,
+   "count": 124048,
+   "genre": "Business"
+  },
+  {
+   "rank": 48,
+   "name": "Pleos Fleet Mobile",
+   "id": "6812971698",
+   "artist": "UMOS ONE Inc.",
+   "rating": 1.11111,
+   "count": 18,
+   "genre": "Business"
+  },
+  {
+   "rank": 49,
+   "name": "트래블체크",
+   "id": "6758240860",
+   "artist": "Market Grid LP",
+   "rating": 3.47556,
+   "count": 225,
+   "genre": "Business"
+  },
+  {
+   "rank": 50,
+   "name": "GlowMate",
+   "id": "6566185001",
+   "artist": "enjoyworks Inc",
+   "rating": 3.16667,
+   "count": 12,
+   "genre": "Business"
+  }
+ ],
+ "business_toppaidapplications": [
+  {
+   "rank": 1,
+   "name": "Jump Desktop (RDP, VNC, Fluid)",
+   "id": "364876095",
+   "artist": "Phase Five Systems"
+  },
+  {
+   "rank": 2,
+   "name": "EasyPOS Mobile Pro",
+   "id": "1059599823",
+   "artist": "KICC"
+  },
+  {
+   "rank": 3,
+   "name": "바로 녹음 - 세상에 없던 가장 빠른 애플워치 녹음기",
+   "id": "6541753681",
+   "artist": "GEONJU CHOI"
+  },
+  {
+   "rank": 4,
+   "name": "TurboScan",
+   "id": "342548956",
+   "artist": "Piksoft Inc."
+  },
+  {
+   "rank": 5,
+   "name": "WorldCard Mobile (한국어 버전)",
+   "id": "341991991",
+   "artist": "Penpower Technology Ltd."
+  },
+  {
+   "rank": 6,
+   "name": "어썸 보이스 레코더 - AVR PRO",
+   "id": "892393815",
+   "artist": "Newkline Co., Ltd."
+  },
+  {
+   "rank": 7,
+   "name": "JotNot 스캐너 앱 프로",
+   "id": "307868751",
+   "artist": "MobiTech 3000 LLC"
+  },
+  {
+   "rank": 8,
+   "name": "FTPManager Pro",
+   "id": "522627917",
+   "artist": "Skyjos Co., Ltd."
+  },
+  {
+   "rank": 9,
+   "name": "Remote Desktop - RDP",
+   "id": "288362053",
+   "artist": "MochaSoft"
+  },
+  {
+   "rank": 10,
+   "name": "서류",
+   "id": "295798315",
+   "artist": "Savy Soda Pty Ltd"
+  },
+  {
+   "rank": 11,
+   "name": "Audio Memos",
+   "id": "338550388",
+   "artist": "Imesart S.a.r.l."
+  },
+  {
+   "rank": 12,
+   "name": "Genius Scan Enterprise - PDF",
+   "id": "401818935",
+   "artist": "The Grizzly Labs"
+  },
+  {
+   "rank": 13,
+   "name": "명함스캐너 Business Card Reader Pro",
+   "id": "347345474",
+   "artist": "ABBYY USA Software House Inc"
+  },
+  {
+   "rank": 14,
+   "name": "Gamma Calculator Pro",
+   "id": "867478383",
+   "artist": "Gerrit kleyn Winkel"
+  },
+  {
+   "rank": 15,
+   "name": "FAX APP: 모바일팩스, 보내기문서",
+   "id": "1135811739",
+   "artist": "BPMobile"
+  },
+  {
+   "rank": 16,
+   "name": "FineReader Pro: PDF Scanner",
+   "id": "946930094",
+   "artist": "ABBYY USA Software House Inc"
+  },
+  {
+   "rank": 17,
+   "name": "QuickVoice2Text Email (PRO Recorder)",
+   "id": "285877935",
+   "artist": "nFinity Inc"
+  },
+  {
+   "rank": 18,
+   "name": "SA Contacts",
+   "id": "379262343",
+   "artist": "ShenZhen SamApp Technology Development Co., Ltd"
+  },
+  {
+   "rank": 19,
+   "name": "CameraVision",
+   "id": "412366083",
+   "artist": "Masayuki Akamatsu"
+  },
+  {
+   "rank": 20,
+   "name": "WorldCard Mobile",
+   "id": "333211045",
+   "artist": "Penpower Technology Ltd."
+  },
+  {
+   "rank": 21,
+   "name": "FTP Client Pro",
+   "id": "425341262",
+   "artist": "LessIsMore Development"
+  },
+  {
+   "rank": 22,
+   "name": "Mail+ for Outlook",
+   "id": "428974099",
+   "artist": "MAIL PLUS APP LLC"
+  },
+  {
+   "rank": 23,
+   "name": "Mocha VNC",
+   "id": "284981670",
+   "artist": "MochaSoft"
+  },
+  {
+   "rank": 24,
+   "name": "Voice Recorder HD",
+   "id": "373045717",
+   "artist": "eFUSION Co., Ltd."
+  },
+  {
+   "rank": 25,
+   "name": "QuickPlan - Project Gantt Plan",
+   "id": "699434089",
+   "artist": "皓 李"
+  },
+  {
+   "rank": 26,
+   "name": "VDS 바로콘블루 주차장 자동입차 앱",
+   "id": "1522298956",
+   "artist": "youngtae kim"
+  },
+  {
+   "rank": 27,
+   "name": "WiFi HD - Instant Hard Drive SMB Network Server Share",
+   "id": "310425060",
+   "artist": "Savy Soda Pty Ltd"
+  },
+  {
+   "rank": 28,
+   "name": "Vibration",
+   "id": "301097580",
+   "artist": "Diffraction Limited Design LLC"
+  },
+  {
+   "rank": 29,
+   "name": "SketchCut PRO",
+   "id": "1119117405",
+   "artist": "Vladimir Rudenko"
+  },
+  {
+   "rank": 30,
+   "name": "inShort",
+   "id": "423213182",
+   "artist": "Jury Shortki"
+  },
+  {
+   "rank": 31,
+   "name": "GContact",
+   "id": "382005326",
+   "artist": "EJing"
+  },
+  {
+   "rank": 32,
+   "name": "음성을 텍스트로 변환 - Speechy",
+   "id": "1229437714",
+   "artist": "圣辉 金"
+  },
+  {
+   "rank": 33,
+   "name": "내 PC에 연결",
+   "id": "362470364",
+   "artist": "Hana Mobile"
+  },
+  {
+   "rank": 34,
+   "name": "Alon Dictaphone",
+   "id": "498425561",
+   "artist": "ALON Software"
+  },
+  {
+   "rank": 35,
+   "name": "연락처맵: 지도위의 고객관리",
+   "id": "468424673",
+   "artist": "Youngwan Choi"
+  },
+  {
+   "rank": 36,
+   "name": "Voice Recorder : 오디오 녹음",
+   "id": "936694037",
+   "artist": "LiveBird Technologies Private Limited"
+  },
+  {
+   "rank": 37,
+   "name": "vMEyeCloud",
+   "id": "558160040",
+   "artist": "Guangzhou Kedi Intelligence Technology Co., Ltd."
+  },
+  {
+   "rank": 38,
+   "name": "VDS 바로콘 모바일 주차차단기 리모콘 앱",
+   "id": "1475865757",
+   "artist": "youngtae kim"
+  },
+  {
+   "rank": 39,
+   "name": "Oilcalcs",
+   "id": "612283154",
+   "artist": "ron mooring"
+  },
+  {
+   "rank": 40,
+   "name": "근무자 명단-달력 Pro",
+   "id": "549835644",
+   "artist": "michael heinz"
+  },
+  {
+   "rank": 41,
+   "name": "FileViewer USB for iPhone",
+   "id": "382994576",
+   "artist": "Mitchell COHEN"
+  },
+  {
+   "rank": 42,
+   "name": "ezPDF Reader",
+   "id": "407445075",
+   "artist": "Unidocs Inc."
+  },
+  {
+   "rank": 43,
+   "name": "PrintCentral Pro for iPhone",
+   "id": "427761719",
+   "artist": "EuroSmartz Ltd"
+  },
+  {
+   "rank": 44,
+   "name": "Air Projector",
+   "id": "388376531",
+   "artist": "Qrayon, LLC"
+  },
+  {
+   "rank": 45,
+   "name": "vTie Premium - 넥타이 - tie a tie guide with style for occasions like a business meeting, interview, wedding, party",
+   "id": "304568216",
+   "artist": "lab48"
+  },
+  {
+   "rank": 46,
+   "name": "ScanBizCards",
+   "id": "335047649",
+   "artist": "ScanBiz Mobile Solutions L.P."
+  },
+  {
+   "rank": 47,
+   "name": "Free WiFi",
+   "id": "303513289",
+   "artist": "Makayama.com"
+  },
+  {
+   "rank": 48,
+   "name": "蒙恬名片王Mobile",
+   "id": "333212604",
+   "artist": "Penpower Technology Ltd."
+  },
+  {
+   "rank": 49,
+   "name": "iRecorder Pro Audio Recorder",
+   "id": "285750155",
+   "artist": "SIMPLETOUCH LLC"
+  },
+  {
+   "rank": 50,
+   "name": "내 교대",
+   "id": "661244018",
+   "artist": "MTSoft MTSoft"
+  }
+ ],
+ "business_topgrossingapplications": [
+  {
+   "rank": 1,
+   "name": "알바몬 - 대한민국 1위 아르바이트 플랫폼",
+   "id": "382535825",
+   "artist": "WORXPHERE LLC.",
+   "rating": 4.79101,
+   "count": 241799,
+   "genre": "Business"
+  },
+  {
+   "rank": 2,
+   "name": "잡플래닛",
+   "id": "981750452",
+   "artist": "잡플래닛(유)",
+   "rating": 4.23423,
+   "count": 5785,
+   "genre": "Business"
+  },
+  {
+   "rank": 3,
+   "name": "LinkedIn",
+   "id": "288429040",
+   "artist": "LinkedIn Corporation",
+   "rating": 4.56951,
+   "count": 2971,
+   "genre": "Business"
+  },
+  {
+   "rank": 4,
+   "name": "Zoom Workplace",
+   "id": "546505307",
+   "artist": "Zoom Communications, Inc.",
+   "rating": 4.59684,
+   "count": 120410,
+   "genre": "Business"
+  },
+  {
+   "rank": 5,
+   "name": "Adobe Acrobat Reader: PDF 편집",
+   "id": "469337564",
+   "artist": "Adobe Inc.",
+   "rating": 4.69852,
+   "count": 27335,
+   "genre": "Business"
+  },
+  {
+   "rank": 6,
+   "name": "아이폰 통화 녹음 및 음성 녹음",
+   "id": "1503665233",
+   "artist": "JatApp LLC"
+  },
+  {
+   "rank": 7,
+   "name": "모바일팩스 및 문서 스캔어플: 팩스 송수신・FAX",
+   "id": "6446494282",
+   "artist": "Plekmin Trade, S.L.",
+   "rating": 4.30029,
+   "count": 686,
+   "genre": "Business"
+  },
+  {
+   "rank": 8,
+   "name": "FaxFree: 모바일팩스 & 스캔어플",
+   "id": "1151406354",
+   "artist": "BPMobile"
+  },
+  {
+   "rank": 9,
+   "name": "콜라보살롱 - 앱 하나로 끝내는 뷰티샵 관리",
+   "id": "1158916249",
+   "artist": "COLAVOGROUND"
+  },
+  {
+   "rank": 10,
+   "name": "Adobe Scan: OCR & PDF 스캐너",
+   "id": "1199564834",
+   "artist": "Adobe Inc.",
+   "rating": 4.88638,
+   "count": 124048,
+   "genre": "Business"
+  },
+  {
+   "rank": 11,
+   "name": "Jump Desktop (RDP, VNC, Fluid)",
+   "id": "364876095",
+   "artist": "Phase Five Systems"
+  },
+  {
+   "rank": 12,
+   "name": "아이스캐너 (iScanner) - 문서를 PDF로 스캔",
+   "id": "1040093707",
+   "artist": "BPMobile"
+  },
+  {
+   "rank": 13,
+   "name": "결제선생 매니저앱 (사업자용)",
+   "id": "1540726234",
+   "artist": "PAYMINT Inc."
+  },
+  {
+   "rank": 14,
+   "name": "SLICE - 디지털 명함",
+   "id": "1642859979",
+   "artist": "Creatornomic Inc."
+  },
+  {
+   "rank": 15,
+   "name": "뷰카 - 40만 미용인의 필수앱(vuka)",
+   "id": "1613873417",
+   "artist": "Kbiit"
+  },
+  {
+   "rank": 16,
+   "name": "동네알바 - 우리동네 알바, 부업, 채용, 일자리 찾기",
+   "id": "1534674681",
+   "artist": "Saramin Co., Ltd.",
+   "rating": 4.78425,
+   "count": 10160,
+   "genre": "Business"
+  },
+  {
+   "rank": 17,
+   "name": "카딜러프로",
+   "id": "1426273940",
+   "artist": "AUTOBEGINS"
+  },
+  {
+   "rank": 18,
+   "name": "배차장 - 스카이 콜센터, 스카이 배차모임",
+   "id": "6742217952",
+   "artist": "Platmatch Inc."
+  },
+  {
+   "rank": 19,
+   "name": "WhatsApp Business",
+   "id": "1386412985",
+   "artist": "WhatsApp Inc."
+  },
+  {
+   "rank": 20,
+   "name": "Scan Shot: 문서, 사진 및 신분증 스캐너 어플",
+   "id": "1575194801",
+   "artist": "Scanner App PDF Tool"
+  },
+  {
+   "rank": 21,
+   "name": "BOSS直聘-招聘求职找工作招人",
+   "id": "887314963",
+   "artist": "北京华品博睿网络技术有限公司"
+  },
+  {
+   "rank": 22,
+   "name": "모바일팩스 어플 Mobile Fax 이미지 문서 스캐너",
+   "id": "978931264",
+   "artist": "Municorn Limited"
+  },
+  {
+   "rank": 23,
+   "name": "Lens - 문서 스캔 & PDF 변환",
+   "id": "6747065194",
+   "artist": "BREE AI TECH PTE. LTD."
+  },
+  {
+   "rank": 24,
+   "name": "barogog",
+   "id": "6753129023",
+   "artist": "baro barum"
+  },
+  {
+   "rank": 25,
+   "name": "Linkbio - 링크 트리 및 웹 사이트 만들기",
+   "id": "1455604586",
+   "artist": "Qumai,Inc."
+  },
+  {
+   "rank": 26,
+   "name": "PDF 편집",
+   "id": "1532638515",
+   "artist": "SMM service, s.r.o."
+  },
+  {
+   "rank": 27,
+   "name": "통화 녹음 iCall - 전화 음성 녹음",
+   "id": "1447098963",
+   "artist": "AppInnovations"
+  },
+  {
+   "rank": 28,
+   "name": "GetCode - 가상 두 번째 전화번호 SMS 확인",
+   "id": "6450923280",
+   "artist": "MIA DIGITAL SOLUTIONS"
+  },
+  {
+   "rank": 29,
+   "name": "스캔구루: PDF 문서 스캐너",
+   "id": "1040149161",
+   "artist": "GM UniverseApps Limited"
+  },
+  {
+   "rank": 30,
+   "name": "CamCard AI 비서",
+   "id": "349447615",
+   "artist": "INTSIG Information Co., Ltd"
+  },
+  {
+   "rank": 31,
+   "name": "2nd Text Number Now: TalkSafe",
+   "id": "6499511360",
+   "artist": "Gang Ji"
+  },
+  {
+   "rank": 32,
+   "name": "EasyPOS Mobile Pro",
+   "id": "1059599823",
+   "artist": "KICC"
+  },
+  {
+   "rank": 33,
+   "name": "통화녹음 - RecMyCalls",
+   "id": "1200776424",
+   "artist": "BPMobile"
+  },
+  {
+   "rank": 34,
+   "name": "스캐너 PDF - 문서 사진 스캔 및 편집 보내기 파일",
+   "id": "1495971405",
+   "artist": "JatApp LLC"
+  },
+  {
+   "rank": 35,
+   "name": "OnPhone - 두번째 전화번호·세컨폰",
+   "id": "1564051387",
+   "artist": "AnyDay Apps"
+  },
+  {
+   "rank": 36,
+   "name": "고래장터",
+   "id": "6443671985",
+   "artist": "지산투수개발"
+  },
+  {
+   "rank": 37,
+   "name": "통화 녹음기 - Cube ACR",
+   "id": "1613607637",
+   "artist": "Cube Apps Limited"
+  },
+  {
+   "rank": 38,
+   "name": "아이폰 통화녹음 - 음성메모 녹음기",
+   "id": "1485257715",
+   "artist": "MobileTech OU"
+  },
+  {
+   "rank": 39,
+   "name": "PDF 문서 스캐너 - 사진 및 텍스트 스캐너 앱",
+   "id": "1601412419",
+   "artist": "PrimeForm OU"
+  },
+  {
+   "rank": 40,
+   "name": "하나팩스 - 인터넷 모바일 팩스 PDF 문서 스캔 어플",
+   "id": "468353884",
+   "artist": "Posttelink Inc."
+  },
+  {
+   "rank": 41,
+   "name": "스프레드시트",
+   "id": "6467084333",
+   "artist": "SMM service, s.r.o."
+  },
+  {
+   "rank": 42,
+   "name": "Office 7: Word, Sheets, PDF",
+   "id": "6467123573",
+   "artist": "SMM service, s.r.o."
+  },
+  {
+   "rank": 43,
+   "name": "Owll Translator: AI 음성 클론",
+   "id": "6742527823",
+   "artist": "VOCALBEATS.AI PTE. LTD."
+  },
+  {
+   "rank": 44,
+   "name": "캐치랭크 - 플레이스 데이터 분석",
+   "id": "6744350188",
+   "artist": "(주)엠플리파이"
+  },
+  {
+   "rank": 45,
+   "name": "경매알리미 - 아파트, 부동산 경매",
+   "id": "1064796011",
+   "artist": "Blatform.Co.,Ltd."
+  },
+  {
+   "rank": 46,
+   "name": "장부대장",
+   "id": "1528899382",
+   "artist": "FOODNOTE SERVICE CO., Ltd."
+  },
+  {
+   "rank": 47,
+   "name": "통화녹음 음성메모 녹음어플 음성녹음 통화 녹음",
+   "id": "1435773823",
+   "artist": "Madduck"
+  },
+  {
+   "rank": 48,
+   "name": "파워기업검색",
+   "id": "1538531059",
+   "artist": "NICE Information Service Co., Ltd."
+  },
+  {
+   "rank": 49,
+   "name": "교대왕",
+   "id": "918757120",
+   "artist": "Haeyoon Cho"
+  },
+  {
+   "rank": 50,
+   "name": "Harvard Business Review",
+   "id": "1445571382",
+   "artist": "Harvard Business Review",
+   "rating": 4.68614,
+   "count": 462,
+   "genre": "Business"
+  }
+ ],
+ "magazines_topfreeapplications": [
+  {
+   "rank": 1,
+   "name": "모아진(Moazine)",
+   "id": "6702017033",
+   "artist": "PLANTY M Co.,Ltd.",
+   "rating": 3.86441,
+   "count": 59,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 2,
+   "name": "BestNovel: 인기 웹소설 로맨스 판타지 읽기",
+   "id": "1628300409",
+   "artist": "CHANGYI (HK) TECHNOLOGY LIMITED",
+   "rating": 4.23076,
+   "count": 39,
+   "genre": "Book"
+  },
+  {
+   "rank": 3,
+   "name": "BBC: World News & Stories",
+   "id": "364147881",
+   "artist": "BBC Studios Distribution Ltd.",
+   "rating": 4.67978,
+   "count": 712,
+   "genre": "News"
+  },
+  {
+   "rank": 4,
+   "name": "시그널 실시간검색어",
+   "id": "6801948138",
+   "artist": "Signallab",
+   "rating": 4.375,
+   "count": 8,
+   "genre": "News"
+  },
+  {
+   "rank": 5,
+   "name": "하이젠버그: 이공계 석박사의 AI·반도체·빅테크",
+   "id": "6795601378",
+   "artist": "NextGen Corp.",
+   "rating": 4.5,
+   "count": 4,
+   "genre": "News"
+  },
+  {
+   "rank": 6,
+   "name": "하루치 영어: 뉴스로 영어 공부",
+   "id": "6787430681",
+   "artist": "Jinho Cheon",
+   "rating": 4.88889,
+   "count": 9,
+   "genre": "Education"
+  },
+  {
+   "rank": 7,
+   "name": "ReadNow: 로맨스 소설 라이브러리",
+   "id": "1471258643",
+   "artist": "CHANGDU TECHNOLOGY (USA) CO.,LTD.",
+   "rating": 4.33333,
+   "count": 285,
+   "genre": "Book"
+  },
+  {
+   "rank": 8,
+   "name": "아이즈",
+   "id": "6785758106",
+   "artist": "eyes, inc.",
+   "rating": 4.86207,
+   "count": 58,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 9,
+   "name": "PressReader: 뉴스 및 잡지",
+   "id": "313904711",
+   "artist": "PressReader Inc",
+   "rating": 4.83091,
+   "count": 1307,
+   "genre": "News"
+  },
+  {
+   "rank": 10,
+   "name": "CNN: Live & Breaking News",
+   "id": "331786748",
+   "artist": "CNN Interactive Group, Inc.",
+   "rating": 4.74012,
+   "count": 7088,
+   "genre": "News"
+  },
+  {
+   "rank": 11,
+   "name": "Crazy Sand: Bus fever",
+   "id": "6811737128",
+   "artist": "Sweet Technology Limited",
+   "rating": 4.4,
+   "count": 5,
+   "genre": "Games"
+  },
+  {
+   "rank": 12,
+   "name": "WebNovel - Read Novels & Manga",
+   "id": "1234939196",
+   "artist": "Cloudary Holdings Limited",
+   "rating": 4.0068,
+   "count": 147,
+   "genre": "Book"
+  },
+  {
+   "rank": 13,
+   "name": "NYTimes: US and World News",
+   "id": "284862083",
+   "artist": "The New York Times Company",
+   "rating": 4.79038,
+   "count": 1455,
+   "genre": "News"
+  },
+  {
+   "rank": 14,
+   "name": "The Economist: News & Analysis",
+   "id": "1239397626",
+   "artist": "The Economist",
+   "rating": 4.84832,
+   "count": 4859,
+   "genre": "News"
+  },
+  {
+   "rank": 15,
+   "name": "The Wall Street Journal News",
+   "id": "364387007",
+   "artist": "Dow Jones & Company, Inc., publisher of The Wall Street Journal.",
+   "rating": 4.67626,
+   "count": 1980,
+   "genre": "News"
+  },
+  {
+   "rank": 16,
+   "name": "PLAY Games",
+   "id": "483342122",
+   "artist": "Editora Europa",
+   "rating": 1,
+   "count": 1,
+   "genre": "Entertainment"
+  },
+  {
+   "rank": 17,
+   "name": "Vogue: Fashion & Shopping",
+   "id": "289380413",
+   "artist": "Advance Magazine Publishers Inc.",
+   "rating": 5,
+   "count": 4,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 18,
+   "name": "실검 위젯 – 홈화면 실시간검색어 위젯",
+   "id": "6749870074",
+   "artist": "cocoququ.co.,ltd",
+   "rating": 4.58559,
+   "count": 333,
+   "genre": "News"
+  },
+  {
+   "rank": 19,
+   "name": "메이저맵 - 대학교, 학과, 직업, 전공 정보 제공",
+   "id": "6451025590",
+   "artist": "Major Map, Inc.",
+   "rating": 3.38889,
+   "count": 18,
+   "genre": "Education"
+  },
+  {
+   "rank": 20,
+   "name": "MAXIM KOREA",
+   "id": "417328133",
+   "artist": "디지스토리",
+   "rating": 5,
+   "count": 4,
+   "genre": "Lifestyle"
+  },
+  {
+   "rank": 21,
+   "name": "민심마켓 : 한국형 폴리마켓 polymarket",
+   "id": "6754787403",
+   "artist": "주식회사 민심마켓",
+   "rating": 4.65116,
+   "count": 43,
+   "genre": "Social Networking"
+  },
+  {
+   "rank": 22,
+   "name": "FreeFlix - Movies & TV Shows",
+   "id": "6760207676",
+   "artist": "abdessamad moukarrame",
+   "rating": 5,
+   "count": 1,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 23,
+   "name": "WeRead - 인기 있는 웹소설 읽기",
+   "id": "1524592877",
+   "artist": "ChangYi Co.,Ltd",
+   "rating": 4.35135,
+   "count": 37,
+   "genre": "Book"
+  },
+  {
+   "rank": 24,
+   "name": "이어줌",
+   "id": "6736811020",
+   "artist": "Community Media Foundation",
+   "rating": 4,
+   "count": 4,
+   "genre": "News"
+  },
+  {
+   "rank": 25,
+   "name": "ODO Magazine",
+   "id": "6763208671",
+   "artist": "(주)팟빵",
+   "rating": 3.37037,
+   "count": 27,
+   "genre": "Lifestyle"
+  },
+  {
+   "rank": 26,
+   "name": "마사지알바",
+   "id": "6476167223",
+   "artist": "chajin lim",
+   "rating": 5,
+   "count": 1,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 27,
+   "name": "Text to Speech - Listen AI",
+   "id": "6502340091",
+   "artist": "DEEP FLOW SOFTWARE SERVICES",
+   "rating": 4.74074,
+   "count": 27,
+   "genre": "Productivity"
+  },
+  {
+   "rank": 28,
+   "name": "Voicepaper 언어 학습이나 공부에 문장 읽어주기",
+   "id": "1273954643",
+   "artist": "Lemon LLC",
+   "rating": 4.625,
+   "count": 16,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 29,
+   "name": "GlobalComix: Comics and Manga",
+   "id": "6444957733",
+   "artist": "Global Publishing Interactive, Inc",
+   "rating": 4.63636,
+   "count": 11,
+   "genre": "Book"
+  },
+  {
+   "rank": 30,
+   "name": "Harvard Business Review",
+   "id": "1445571382",
+   "artist": "Harvard Business Review",
+   "rating": 4.68614,
+   "count": 462,
+   "genre": "Business"
+  },
+  {
+   "rank": 31,
+   "name": "MoboReader: 웹소설, 로맨스소설 & 판타지소설",
+   "id": "1291247971",
+   "artist": "CHANGDU (HK) TECHNOLOGY LIMITED",
+   "rating": 4.52045,
+   "count": 1345,
+   "genre": "Book"
+  },
+  {
+   "rank": 32,
+   "name": "LH집마련 - 분양/임대 공고문을 한눈에!",
+   "id": "6444668977",
+   "artist": "HoJin Lee",
+   "rating": 5,
+   "count": 3,
+   "genre": "Lifestyle"
+  },
+  {
+   "rank": 33,
+   "name": "정부 보조금 찾기",
+   "id": "1596225943",
+   "artist": "HyunJun Yoon",
+   "rating": 4.68534,
+   "count": 232,
+   "genre": "Lifestyle"
+  },
+  {
+   "rank": 34,
+   "name": "Ground News",
+   "id": "1324203419",
+   "artist": "Snapwise Inc.",
+   "rating": 4.81429,
+   "count": 70,
+   "genre": "News"
+  },
+  {
+   "rank": 35,
+   "name": "Bhakundo",
+   "id": "6504182070",
+   "artist": "Soft Crunch",
+   "rating": 3.8125,
+   "count": 16,
+   "genre": "Sports"
+  },
+  {
+   "rank": 36,
+   "name": "Text to Speech - SayTXT Reader",
+   "id": "6751571213",
+   "artist": "PDF GEAR TECH PTE. LTD.",
+   "rating": 4.66667,
+   "count": 6,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 37,
+   "name": "커튼온",
+   "id": "6798960402",
+   "artist": "GOTOX KOREA CO., LTD.",
+   "rating": 0,
+   "count": 0,
+   "genre": "Lifestyle"
+  },
+  {
+   "rank": 38,
+   "name": "The-K 매거진 웹진",
+   "id": "1582449097",
+   "artist": "hayoung mok",
+   "rating": 4,
+   "count": 4,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 39,
+   "name": "매경이코노미 e매거진",
+   "id": "6502886663",
+   "artist": "Maekyung AX",
+   "rating": 3.25,
+   "count": 4,
+   "genre": "News"
+  },
+  {
+   "rank": 40,
+   "name": "트렌디",
+   "id": "1615275308",
+   "artist": "ungjae Lee",
+   "rating": 4.35714,
+   "count": 14,
+   "genre": "News"
+  },
+  {
+   "rank": 41,
+   "name": "스팸 차단:뭐야이번호,모르는 번호,문자 차단&숫자 블록",
+   "id": "6448217099",
+   "artist": "Thao Tran",
+   "rating": 4.85714,
+   "count": 7,
+   "genre": "Lifestyle"
+  },
+  {
+   "rank": 42,
+   "name": "민중의소리 뉴스",
+   "id": "6744914070",
+   "artist": "DAE YOUNG KIM",
+   "rating": 0,
+   "count": 0,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 43,
+   "name": "The New Yorker",
+   "id": "1081530898",
+   "artist": "Advance Magazine Publishers Inc.",
+   "rating": 3.5,
+   "count": 12,
+   "genre": "News"
+  },
+  {
+   "rank": 44,
+   "name": "Vogue France Magazine",
+   "id": "661150926",
+   "artist": "Condé Nast Digital France",
+   "rating": 5,
+   "count": 11,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 45,
+   "name": "디어마이광주",
+   "id": "1611094322",
+   "artist": "EaseSoft Co.,Ltd.",
+   "rating": 4.55556,
+   "count": 9,
+   "genre": "Lifestyle"
+  },
+  {
+   "rank": 46,
+   "name": "씬짜오베트남 매거진",
+   "id": "6754750793",
+   "artist": "young min han",
+   "rating": 5,
+   "count": 2,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 47,
+   "name": "Kagi News",
+   "id": "6748314243",
+   "artist": "Kagi Inc.",
+   "rating": 5,
+   "count": 3,
+   "genre": "News"
+  },
+  {
+   "rank": 48,
+   "name": "The China Daily iPaper",
+   "id": "388337167",
+   "artist": "PressReader Inc",
+   "rating": 2,
+   "count": 1,
+   "genre": "News"
+  },
+  {
+   "rank": 49,
+   "name": "The Guardian - UK & World News",
+   "id": "409128287",
+   "artist": "Guardian News and Media Limited",
+   "rating": 4.83866,
+   "count": 688,
+   "genre": "News"
+  },
+  {
+   "rank": 50,
+   "name": "도비뉴스 - AI 뉴스 요약",
+   "id": "6473790048",
+   "artist": "Dobby Canvas, Inc.",
+   "rating": 4.82143,
+   "count": 28,
+   "genre": "News"
+  }
+ ],
+ "magazines_toppaidapplications": [
+  {
+   "rank": 1,
+   "name": "PocketNews - 워치로 보는 뉴스, 기사",
+   "id": "6444249757",
+   "artist": "GEONJU CHOI"
+  },
+  {
+   "rank": 2,
+   "name": "Explorineer | 하루10분 글로벌IT트렌드읽기",
+   "id": "6740914910",
+   "artist": "SeungHyeon Lee"
+  },
+  {
+   "rank": 3,
+   "name": "B&W Photography Magazine",
+   "id": "428498721",
+   "artist": "Guild of Master Craftsman Publications Ltd"
+  },
+  {
+   "rank": 4,
+   "name": "Furniture & Cabinetmaking",
+   "id": "437194402",
+   "artist": "Guild of Master Craftsman Publications Ltd"
+  },
+  {
+   "rank": 5,
+   "name": "Outdoor Photography Magazine",
+   "id": "428912452",
+   "artist": "Guild of Master Craftsman Publications Ltd"
+  },
+  {
+   "rank": 6,
+   "name": "Woodworking Crafts Magazine",
+   "id": "429886769",
+   "artist": "Guild of Master Craftsman Publications Ltd"
+  },
+  {
+   "rank": 7,
+   "name": "World News 206・번역",
+   "id": "6752511428",
+   "artist": "Seiya.k"
+  },
+  {
+   "rank": 8,
+   "name": "Woodturning Magazine",
+   "id": "434586971",
+   "artist": "Guild of Master Craftsman Publications Ltd"
+  },
+  {
+   "rank": 9,
+   "name": "Prehistoric Times Magazine",
+   "id": "530088968",
+   "artist": "Magazinecloner.com US LLC"
+  },
+  {
+   "rank": 10,
+   "name": "Knitting Magazine",
+   "id": "428503818",
+   "artist": "Guild of Master Craftsman Publications Ltd"
+  },
+  {
+   "rank": 11,
+   "name": "Maple Magazine",
+   "id": "1065779915",
+   "artist": "PressPad Sp. z o.o."
+  },
+  {
+   "rank": 12,
+   "name": "Woodcarving Magazine",
+   "id": "437204539",
+   "artist": "Guild of Master Craftsman Publications Ltd"
+  },
+  {
+   "rank": 13,
+   "name": "Kitpick",
+   "id": "6761313552",
+   "artist": "Jussi Seppala"
+  },
+  {
+   "rank": 14,
+   "name": "怦然心动的瞬间-轻科幻真人互动恋爱影游",
+   "id": "6737512463",
+   "artist": "TIANJIN KUNYU TECHNOLOGY CO LTD"
+  },
+  {
+   "rank": 15,
+   "name": "Race Tech",
+   "id": "512733218",
+   "artist": "Kimberley Media Group Ltd"
+  }
+ ],
+ "magazines_topgrossingapplications": [
+  {
+   "rank": 1,
+   "name": "WebNovel - Read Novels & Manga",
+   "id": "1234939196",
+   "artist": "Cloudary Holdings Limited",
+   "rating": 4.0068,
+   "count": 147,
+   "genre": "Book"
+  },
+  {
+   "rank": 2,
+   "name": "NYTimes: US and World News",
+   "id": "284862083",
+   "artist": "The New York Times Company",
+   "rating": 4.79038,
+   "count": 1455,
+   "genre": "News"
+  },
+  {
+   "rank": 3,
+   "name": "WeRead - 인기 있는 웹소설 읽기",
+   "id": "1524592877",
+   "artist": "ChangYi Co.,Ltd",
+   "rating": 4.35135,
+   "count": 37,
+   "genre": "Book"
+  },
+  {
+   "rank": 4,
+   "name": "The Economist: News & Analysis",
+   "id": "1239397626",
+   "artist": "The Economist",
+   "rating": 4.84832,
+   "count": 4859,
+   "genre": "News"
+  },
+  {
+   "rank": 5,
+   "name": "The Wall Street Journal News",
+   "id": "364387007",
+   "artist": "Dow Jones & Company, Inc., publisher of The Wall Street Journal.",
+   "rating": 4.67626,
+   "count": 1980,
+   "genre": "News"
+  },
+  {
+   "rank": 6,
+   "name": "Vogue: Fashion & Shopping",
+   "id": "289380413",
+   "artist": "Advance Magazine Publishers Inc.",
+   "rating": 5,
+   "count": 4,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 7,
+   "name": "Crazy Sand: Bus fever",
+   "id": "6811737128",
+   "artist": "Sweet Technology Limited",
+   "rating": 4.4,
+   "count": 5,
+   "genre": "Games"
+  },
+  {
+   "rank": 8,
+   "name": "MAXIM KOREA",
+   "id": "417328133",
+   "artist": "디지스토리",
+   "rating": 5,
+   "count": 4,
+   "genre": "Lifestyle"
+  },
+  {
+   "rank": 9,
+   "name": "ReadNow: 로맨스 소설 라이브러리",
+   "id": "1471258643",
+   "artist": "CHANGDU TECHNOLOGY (USA) CO.,LTD.",
+   "rating": 4.33333,
+   "count": 285,
+   "genre": "Book"
+  },
+  {
+   "rank": 10,
+   "name": "Text to Speech - Listen AI",
+   "id": "6502340091",
+   "artist": "DEEP FLOW SOFTWARE SERVICES",
+   "rating": 4.74074,
+   "count": 27,
+   "genre": "Productivity"
+  },
+  {
+   "rank": 11,
+   "name": "MoboReader: 웹소설, 로맨스소설 & 판타지소설",
+   "id": "1291247971",
+   "artist": "CHANGDU (HK) TECHNOLOGY LIMITED",
+   "rating": 4.52045,
+   "count": 1345,
+   "genre": "Book"
+  },
+  {
+   "rank": 12,
+   "name": "Meb : หนังสือดี นิยายดัง",
+   "id": "453213960",
+   "artist": "MEB Corporation Public Company Limited"
+  },
+  {
+   "rank": 13,
+   "name": "PressReader: 뉴스 및 잡지",
+   "id": "313904711",
+   "artist": "PressReader Inc",
+   "rating": 4.83091,
+   "count": 1307,
+   "genre": "News"
+  },
+  {
+   "rank": 14,
+   "name": "The New Yorker",
+   "id": "1081530898",
+   "artist": "Advance Magazine Publishers Inc.",
+   "rating": 3.5,
+   "count": 12,
+   "genre": "News"
+  },
+  {
+   "rank": 15,
+   "name": "BestNovel: 인기 웹소설 로맨스 판타지 읽기",
+   "id": "1628300409",
+   "artist": "CHANGYI (HK) TECHNOLOGY LIMITED",
+   "rating": 4.23076,
+   "count": 39,
+   "genre": "Book"
+  },
+  {
+   "rank": 16,
+   "name": "ODO Magazine",
+   "id": "6763208671",
+   "artist": "(주)팟빵",
+   "rating": 3.37037,
+   "count": 27,
+   "genre": "Lifestyle"
+  },
+  {
+   "rank": 17,
+   "name": "The Guardian - UK & World News",
+   "id": "409128287",
+   "artist": "Guardian News and Media Limited",
+   "rating": 4.83866,
+   "count": 688,
+   "genre": "News"
+  },
+  {
+   "rank": 18,
+   "name": "Harvard Business Review",
+   "id": "1445571382",
+   "artist": "Harvard Business Review",
+   "rating": 4.68614,
+   "count": 462,
+   "genre": "Business"
+  },
+  {
+   "rank": 19,
+   "name": "Tagesspiegel - Nachrichten",
+   "id": "440157280",
+   "artist": "Verlag Der Tagesspiegel GmbH"
+  },
+  {
+   "rank": 20,
+   "name": "Le Monde, Actualités en direct",
+   "id": "294047850",
+   "artist": "Societe Editrice du Monde"
+  },
+  {
+   "rank": 21,
+   "name": "NovelTime - 로맨스 소설",
+   "id": "6511240337",
+   "artist": "FLUX JOY PTE. LTD."
+  },
+  {
+   "rank": 22,
+   "name": "Espresso: World news in a shot",
+   "id": "896628003",
+   "artist": "The Economist"
+  },
+  {
+   "rank": 23,
+   "name": "하이젠버그: 이공계 석박사의 AI·반도체·빅테크",
+   "id": "6795601378",
+   "artist": "NextGen Corp.",
+   "rating": 4.5,
+   "count": 4,
+   "genre": "News"
+  },
+  {
+   "rank": 24,
+   "name": "PocketNews - 워치로 보는 뉴스, 기사",
+   "id": "6444249757",
+   "artist": "GEONJU CHOI"
+  },
+  {
+   "rank": 25,
+   "name": "Ceramic Review",
+   "id": "658903849",
+   "artist": "Ceramic Review Publishing Ltd"
+  },
+  {
+   "rank": 26,
+   "name": "Explorineer | 하루10분 글로벌IT트렌드읽기",
+   "id": "6740914910",
+   "artist": "SeungHyeon Lee"
+  },
+  {
+   "rank": 27,
+   "name": "Ground News",
+   "id": "1324203419",
+   "artist": "Snapwise Inc.",
+   "rating": 4.81429,
+   "count": 70,
+   "genre": "News"
+  },
+  {
+   "rank": 28,
+   "name": "The Information: Tech News",
+   "id": "1485459932",
+   "artist": "The Information"
+  },
+  {
+   "rank": 29,
+   "name": "GlobalComix: Comics and Manga",
+   "id": "6444957733",
+   "artist": "Global Publishing Interactive, Inc",
+   "rating": 4.63636,
+   "count": 11,
+   "genre": "Book"
+  },
+  {
+   "rank": 30,
+   "name": "ZINIO - 잡지 가판대",
+   "id": "364297166",
+   "artist": "Zinio LLC"
+  },
+  {
+   "rank": 31,
+   "name": "Glassy Comics - Comic Reader",
+   "id": "6758964136",
+   "artist": "Fernando Bunn"
+  },
+  {
+   "rank": 32,
+   "name": "Leera-Tu biblioteca de novelas",
+   "id": "1529860201",
+   "artist": "ChangYi Co.,Ltd"
+  },
+  {
+   "rank": 33,
+   "name": "Mobilis: Romans Lecture Livres",
+   "id": "1560799482",
+   "artist": "CHANGYI (HK) TECHNOLOGY LIMITED"
+  },
+  {
+   "rank": 34,
+   "name": "Gambero Rosso+",
+   "id": "401148186",
+   "artist": "Gambero Rosso"
+  },
+  {
+   "rank": 35,
+   "name": "모아진(Moazine)",
+   "id": "6702017033",
+   "artist": "PLANTY M Co.,Ltd.",
+   "rating": 3.86441,
+   "count": 59,
+   "genre": "Magazines & Newspapers"
+  },
+  {
+   "rank": 36,
+   "name": "LA Times",
+   "id": "373238146",
+   "artist": "Los Angeles Times Communications LLC"
+  },
+  {
+   "rank": 37,
+   "name": "MIT Technology Review",
+   "id": "1449141080",
+   "artist": "Technology Review, Incorporated"
+  },
+  {
+   "rank": 38,
+   "name": "财新-原创高质量财经资讯报道",
+   "id": "356023612",
+   "artist": "Caixin Media Co., Ltd"
+  },
+  {
+   "rank": 39,
+   "name": "봉비방 bonvivant",
+   "id": "6753793170",
+   "artist": "Ji eun Lee"
+  },
+  {
+   "rank": 40,
+   "name": "실검 위젯 – 홈화면 실시간검색어 위젯",
+   "id": "6749870074",
+   "artist": "cocoququ.co.,ltd",
+   "rating": 4.58559,
+   "count": 333,
+   "genre": "News"
+  },
+  {
+   "rank": 41,
+   "name": "週刊ダイヤモンド",
+   "id": "486317533",
+   "artist": "DIAMOND, Inc."
+  },
+  {
+   "rank": 42,
+   "name": "F.A.Z. Der Tag - Nachrichten",
+   "id": "1014908979",
+   "artist": "Frankfurter Allgemeine Zeitung GmbH"
+  },
+  {
+   "rank": 43,
+   "name": "Washington Post: Breaking News",
+   "id": "352509417",
+   "artist": "The Washington Post"
+  },
+  {
+   "rank": 44,
+   "name": "The Times: UK & World News",
+   "id": "436792321",
+   "artist": "Times Media Limited (Apps)"
+  },
+  {
+   "rank": 45,
+   "name": "The Atlantic Magazine",
+   "id": "397599894",
+   "artist": "The Atlantic Monthly Group LLC"
+  },
+  {
+   "rank": 46,
+   "name": "Barron’s - Investing Insights",
+   "id": "409882593",
+   "artist": "Dow Jones & Company, Inc., publisher of The Wall Street Journal."
+  },
+  {
+   "rank": 47,
+   "name": "Kompas.id: Baca Berita Lengkap",
+   "id": "1242195037",
+   "artist": "PT Kompas Media Nusantara"
+  },
+  {
+   "rank": 48,
+   "name": "Inkitt Galatea: Audio & eBooks",
+   "id": "1380362212",
+   "artist": "Inkitt"
+  },
+  {
+   "rank": 49,
+   "name": "Sweet Shop — Comics & Manga",
+   "id": "6748264297",
+   "artist": "Sweet Dot Dev LLC"
+  },
+  {
+   "rank": 50,
+   "name": "British Vogue",
+   "id": "434360554",
+   "artist": "The Conde Nast Publications Limited"
+  }
+ ]
+}
