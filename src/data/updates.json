@@ -25,12 +25,60 @@
         "title_en": "Secures $50M credit facility",
         "detail_en": "Secured a credit facility of up to $50M from Liquidity and Mars Growth Capital (a joint venture with MUFG), with an initial $25M drawn down."
       }
+    ],
+    "chainlink-labs-2026": [
+      {
+        "date": "2026-10-26",
+        "kind": "product",
+        "title_ko": "CustodySync 출시",
+        "title_en": "Chainlink CustodySync Launched",
+        "detail_ko": "기관 수탁 자산을 디파이 대출 시장에 연결하는 솔루션. 기관이 온체인 유동성에 접근 가능.",
+        "detail_en": "Chainlink introduced CustodySync, a solution to connect qualified digital asset custodians with DeFi lending markets, enabling institutions to access onchain liquidity.",
+        "source_url": "https://chainlinktoday.com/category/news/",
+        "source_name": "Chainlink Today",
+        "found": "2026-10-31"
+      },
+      {
+        "date": "2026-09-28",
+        "kind": "product",
+        "title_ko": "CCIP 2.0 출시",
+        "title_en": "Chainlink Launches CCIP 2.0",
+        "detail_ko": "기관 수준의 보안, 규정 준수, 속도를 갖춘 크로스체인 표준 업그레이드. 지원 체인 1,040개 이상, 총 가치 850억 달러.",
+        "detail_en": "Chainlink launched CCIP 2.0, the interoperability standard designed for institutional requirements, powering over 1,040 EVM-to-EVM lanes and surpassing $85 billion in total cross-chain token value.",
+        "source_url": "https://chain.link/blog/quarterly-review-q3-2026",
+        "source_name": "Chainlink Blog",
+        "found": "2026-10-31"
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "product",
+        "title_ko": "홍콩 토큰화 증권 프레임워크 출시",
+        "title_en": "Hong Kong Tokenized Securities Framework launched",
+        "detail_ko": "체인링크 CCIP와 ACE를 활용한 홍콩 정부 지원 토큰화 증권 표준. Cyberport, Apex Group, FORMS HK, CSpro.io 참여.",
+        "detail_en": "Chainlink powers the new Tokenized Securities Framework in Hong Kong, supported by HK SAR government-affiliated companies, using Chainlink CCIP and ACE for cross-chain asset movement and policy enforcement.",
+        "source_url": "https://www.linkedin.com/posts/chainlink-labs_hong-kong-has-a-new-standard-for-tokenized-activity-7490754284905459712-p1lx",
+        "source_name": "LinkedIn - Chainlink Labs",
+        "found": "2026-10-31"
+      },
+      {
+        "date": "2026-06-23",
+        "kind": "product",
+        "title_ko": "APAC Equity Streams 출시",
+        "title_en": "Launch of APAC Equity Streams",
+        "detail_ko": "한국과 일본 주요 기업의 실시간 주가를 온체인에서 사용할 수 있는 오라클 서비스를 출시. 삼성전자, SK하이닉스, 도요타, 소니, 소프트뱅크 포함.",
+        "detail_en": "Chainlink launched APAC Equity Streams, an oracle service providing real-time onchain stock prices for major Korean and Japanese companies including Samsung Electronics, SK Hynix, Toyota, Sony, and SoftBank.",
+        "source_url": "https://www.digitaltoday.co.kr/en/view/73806/chainlink-launches-apac-equity-streams-for-real-time-onchain-prices-of-korean-japanese-blue-chips",
+        "source_name": "DigitalToday",
+        "found": "2026-10-31"
+      }
     ]
   },
   "checked": {
     "babylon-health-2026": "2026-10-29",
     "covariant-2026": "2026-10-29",
     "langchain-2026": "2026-10-30",
-    "nala-2026": "2026-10-30"
+    "nala-2026": "2026-10-30",
+    "pachama-2026": "2026-10-31",
+    "chainlink-labs-2026": "2026-10-31"
   }
 }

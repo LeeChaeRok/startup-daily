@@ -1,4 +1,587 @@
 {
+  "braid-2026": {
+    "tagline": "API platform enabling brands to offer mobile connectivity without a carrier",
+    "category": [
+      "Telecom Infrastructure",
+      null,
+      "Embedded Connectivity"
+    ],
+    "headquarters": {
+      "country_ko": "Netherlands"
+    },
+    "founders": [
+      {
+        "role": "CEO & Co-founder",
+        "background": "Banking background in UK and South Africa (Lloyds, etc.). Subsequently founded and operated an MVNO for seven years.",
+        "notable_achievement": "From his MVNO operating experience, he realized that the 'infrastructure behind the SIM' was the real opportunity, leading him to found Braid."
+      },
+      {
+        "role": "COO & Co-founder",
+        "background": "Limited public information available."
+      },
+      {
+        "role": "Co-founder",
+        "background": "Limited public information available."
+      }
+    ],
+    "team_highlights": "Three co-founders (2023). CEO Jignesh Dave, with a banking background in the UK and South Africa (Lloyds, etc.), operated an MVNO for seven years before recognizing the opportunity in the underlying infrastructure and founding Braid. COO Mitesh Popat is listed on Crunchbase. The company operates across India, Europe, the Middle East, and Africa; according to official press releases, its headquarters is in The Hague (Crunchbase lists London). The exact number of employees is undisclosed (est. 11-50).",
+    "product": {
+      "summary": "Braid is an API platform that enables enterprises to offer their own branded SIM/eSIM mobile connectivity to customers ([kpnventures.com](https://www.kpnventures.com/news/braid-raises-38m-series-a-to-put-mobile-connectivity-inside-the-apps-of-global-enterprises)). It orchestrates networks of over 600 carriers in 200+ countries through a single API, allowing enterprises to embed connectivity into their apps or run a branded storefront without becoming an MVNO.",
+      "problem_statement": "Building a proprietary mobile connectivity service typically requires 3-6 months of carrier negotiations, regulatory filings, and procurement procedures. Until now, enterprises have treated connectivity merely as a 'cost to absorb' rather than a strategic product component. Despite the potential strategic value of connectivity at brand touchpoints, entry barriers have prevented it.",
+      "solution": "Braid replaces traditional carrier contracts and regulatory processes with a single API. Live trials in 3 minutes; branded connectivity service launch in as little as one week (vs. the usual quarter-long timeframe). Embed SIM/eSIM into products via API/SDK, or operate a branded storefront without engineering.",
+      "key_features": [
+        "Orchestration of 600+ carriers in 200+ countries via a single API",
+        "Live trial in 3 minutes, branded mobile service launch in as little as one week",
+        "API/SDK-based SIM and eSIM embedding",
+        "Branded storefront operable without engineering",
+        "MVNO/MVNE layer without becoming a carrier"
+      ],
+      "tech_stack_or_innovation": "Global connectivity aggregator without owning a network. The core innovation is abstracting and standardizing carrier negotiations, regulatory filings, and procurement into an API layer.",
+      "target_customer": "Approximately 90 enterprise clients, including global fintech and travel brands. The primary targets are brands with customer touchpoints in aviation, travel, banking, sports, etc.",
+      "business_model": "Usage-based pricing based on API usage. Revenue is generated whenever a brand's connectivity service is used by customers. As of 2026, the company reports maintaining both profitability and positive cash flow."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Global consumer eSIM services",
+          "comparison": "B2C model selling eSIM directly to consumers. Braid is B2B infrastructure enabling enterprise brands to offer connectivity to their customers—a different layer."
+        },
+        {
+          "name": "CPaaS (communications platform) companies",
+          "comparison": "Strong in messaging and voice APIs but do not orchestrate full mobile connectivity services. However, they could become competitors if they expand into connectivity."
+        },
+        {
+          "name": "Direct contracts with carriers/roaming wholesalers",
+          "comparison": "An alternative where large enterprises bypass the middle layer and negotiate directly with carriers, but must endure months-long procurement and regulatory processes."
+        }
+      ],
+      "key_differentiator": "Rather than 'selling connectivity' like consumer eSIMs, Braid 'embeds' connectivity into the brand product experience itself. Connectivity is automatically provided within brand contexts—flight booking, banking apps, sports fan experiences—and the brand shares in the economic benefit.",
+      "moat": "The 600+ carrier integration infrastructure creates a complex data/relationship barrier. Strategic investment from KPN Ventures (the investment arm of the Netherlands' largest carrier KPN) enhances credibility with carriers. Switching costs for embedded connectivity are also significant for brands.",
+      "competitive_position_summary": "Targeting the early market of 'brand-embedded connectivity' between traditional MVNEs and consumer eSIMs. With 90 enterprise customers and profitability secured, it is scaling with capital from KPN and Octopus Ventures."
+    },
+    "trending_reason": {
+      "summary": "On October 28-29, 2026, raised $38M in Series A—its first external funding after three years since founding ([axios.com](https://www.axios.com/pro/enterprise-software-deals/2026/10/28/braid-next-communications)). This is seen as a signal that the 'embedded connectivity' trend, akin to embedded payments (Stripe etc.), is gaining momentum.",
+      "catalysts": [
+        "$38M Series A led by Octopus Ventures with KPN Ventures participating (2026-10-28, reported exclusively by Axios)",
+        "Next Communications → Braid rebranding",
+        "Strategic investment from KPN, the Netherlands' largest carrier",
+        "Formation of an 'embedded connectivity' market compared to embedded payments"
+      ],
+      "growth_metrics": "Approximately 90 enterprise customers (major global fintech and travel brands), integrated with 600+ carriers in 200+ countries. All metrics are company-reported and have not been independently verified ([recodex.ai](https://recodex.ai/startup/saas/864700.html))."
+    },
+    "funding": {
+      "total_raised_note": "First external investment since founding in 2023, thus also total funding raised. EU-Startups reports the same round as €34.13M. Approx. KRW 51B (est., based on exchange rate KRW 1,350/USD).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Unusual first external investment: according to the company, it was profitable with positive cash flow before the investment."
+      },
+      "funding_history": [
+        {
+          "note": "Led by Octopus Ventures with KPN Ventures participating. Funds to be used for international expansion and expanding the carrier network."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "No publicly available TAM/SAM/SOM figures. The market is viewed as a subset of the global telecom market—connectivity services created at brand-consumer touchpoints, intersecting the consumer eSIM and MVNE markets.",
+      "market_trend": "Similar to how Stripe popularized embedded payments in the payments industry, the view that connectivity will evolve into infrastructure embedded in brand products is gaining traction among investors. KPN's strategic investment signals a shift in the European telecom ecosystem.",
+      "growth_potential": "Considerable room for expansion of branded connectivity demand in customer-touchpoint-rich industries like aviation, travel, finance, and sports. The company's ability to use investment to accelerate growth while already profitable is a positive.",
+      "risks": [
+        "Possibility that enterprises bypass the middle layer and contract directly with carriers or roaming wholesalers",
+        "Possibility that consumer eSIM companies or CPaaS companies expand into the same space",
+        "Brands' willingness to pay may be lower than expected because connectivity value is more indirect than payments",
+        "Customer and revenue metrics are company-reported with no independent verification"
+      ],
+      "risk_mitigation": "Switching costs from integrating 600+ carriers, strengthened carrier negotiation power via KPN's strategic investment, and lowering entry barriers for brands through API self-service to capture the early market."
+    },
+    "related_links": [
+      {
+        "title": "Braid official website"
+      },
+      {
+        "title": "Crunchbase — Braid profile"
+      }
+    ],
+    "editor_pick_comment": "Pioneer of embedded connectivity where brands become the 'owner of connectivity' without becoming a carrier. The key point is the first $38M Series A, raised while already profitable without external capital."
+  },
+  "finmaq-2026": {
+    "tagline": "Colombian fintech for SME machinery and equipment installment financing",
+    "category": [
+      "Fintech",
+      "SME Finance",
+      "Asset Finance"
+    ],
+    "headquarters": {
+      "country_ko": "Colombia"
+    },
+    "founders": [
+      {
+        "background": "Co-founder with an investment banking background, founded FinMaq in 2014 and completely restructured the company in 2019.",
+        "notable_achievement": "Grew FinMaq to over $100M in cumulative transaction volume and more than 1,600 customers."
+      },
+      {
+        "background": "Co-founder with experience in investment banking and financial structuring.",
+        "notable_achievement": "Designed FinMaq's financial structuring and risk model."
+      }
+    ],
+    "team_highlights": "Two co-founders from investment banking backgrounds lead a team with strengths in risk management.",
+    "product": {
+      "summary": "FinMaq is a fintech that provides installment financing for Colombian MSMEs at the point of sale when purchasing machinery and equipment, through partnerships with equipment distributors.",
+      "problem_statement": "Colombian MSMEs account for over 99% of all businesses, 79% of employment, and approximately 40% of GDP, but about 40% lack access to financing for purchasing the equipment needed for growth. Traditional banks overlook small equipment financing for customers with insufficient credit history.",
+      "solution": "FinMaq partners with equipment distributors to offer credit loans, rent-to-own, hybrid, and after-sales service financing at the point of sale. Its proprietary credit scoring model specialized for customers with insufficient credit history and 100% digital onboarding provide pre-approval within minutes.",
+      "key_features": [
+        "Point-of-sale (POS) financing for equipment and machinery purchases",
+        "Credit loans, leasing, hybrid, and rotating credit products",
+        "Proprietary credit scoring model for customers with limited credit history",
+        "Digital onboarding and pre-approval within minutes",
+        "Partnerships with 45+ distributors across manufacturing, food, construction, medical, veterinary, transportation, agriculture, and more",
+        "Combines equipment insurance with financial products"
+      ],
+      "tech_stack_or_innovation": "The core innovation is the proprietary credit scoring model and digital onboarding that allows borrowers with limited credit history to receive pre-approval within minutes.",
+      "target_customer": "Colombian SMEs, self-employed individuals, and independent contractors. Including manufacturing, food production, construction, medical clinics, veterinarians, transporters, small-scale farmers, etc.",
+      "business_model": "Through partnerships with equipment distributors, it offers loans, leases, and hybrid financing at the point of sale, generating revenue from interest and fees. It diversifies revenue by also selling insurance products."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A digital factoring platform from El Salvador. Expands credit supply to SMEs in Latin America, but while FinMaq specializes in equipment financing, Ábaco focuses on invoice factoring."
+        },
+        {
+          "comparison": "A Spanish credit guarantee infrastructure company that announced a $25M expansion plan in Latin America. Its financial products differ from FinMaq's asset-backed equipment financing."
+        },
+        {
+          "name": "Traditional banks and existing equipment financing companies",
+          "comparison": "Traditional banks overlook small equipment financing and customers with informal credit history, whereas FinMaq approaches through distributor-channel-based point-of-sale financing."
+        }
+      ],
+      "key_differentiator": "The 'Point-of-Sale' model that provides instant financing at the point of purchase through partnerships with equipment distributors.",
+      "moat": "A network of 45+ distributor partnerships, proprietary credit scoring model specialized for customers with limited credit history, risk management backed by equipment assets, and embedded insurance as an additional service.",
+      "competitive_position_summary": "Secured a leading position in Colombia's equipment financing niche with over 1,600 customers and $100M+ in cumulative transaction volume. The Accion-led Series A round confirmed trust from impact investors."
+    },
+    "trending_reason": {
+      "summary": "The $6.5M Series A investment led by Accion in October 2026 is a key catalyst for recent growth. It is gaining attention as an impact fintech solving financial access issues for Colombian SMEs.",
+      "catalysts": [
+        "2026-10-27: Announcement of $6.5M Series A led by Accion",
+        "Achieved $100M in cumulative transaction volume and over 1,600 customers since 2019",
+        "Growing awareness of the Colombian SME financial access gap",
+        "Increasing institutional investor interest in productive credit in Latin America"
+      ],
+      "growth_metrics": "Cumulative transaction volume over $100M, 1,600+ customers from 2019 to 2026. Urban/rural split approximately 50:50, 40% female customers. Targets to exceed $200M in transaction volume and 5,000 customers within 18 months with new funding."
+    },
+    "funding": {
+      "total_raised_note": "Combined $29M in equity and debt from January 2025 pre-Series A (equity led by ALIVE Ventures, debt from Accial Capital and Iris) and the $6.5M Series A in October 2026.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Led by Accion, with new participation from Mundi Ventures and follow-on from existing investors ALIVE Ventures and 30N Ventures."
+      },
+      "funding_history": [
+        {
+          "note": "A mixed round of equity and debt. Equity led by ALIVE Ventures, debt from Accial Capital and Iris."
+        },
+        {
+          "note": "Led by Accion, with new participation from Mundi Ventures and follow-on from existing investors ALIVE Ventures and 30N Ventures."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Colombian MSMEs represent over 99% of all businesses, 79% of employment, and approximately 40% of GDP, but about 40% face difficulties in financing equipment purchases. The equipment financing market is expandable across Latin America.",
+      "market_trend": "Institutional investor interest in productive credit for SMEs in Latin America is increasing, and various financial infrastructures such as digital factoring and credit guarantees are expanding.",
+      "growth_potential": "Plans to double transaction volume to $200M and reach 5,000 customers using new funding. The high proportion of rural and female customers makes it attractive for impact investment.",
+      "risks": [
+        "Risk of SME default during economic downturn in Colombia",
+        "Depreciation and theft/damage risk of equipment assets",
+        "Increased funding costs if interest rates rise",
+        "Margin pressure from increased competition"
+      ],
+      "risk_mitigation": "Mitigates risk by securing equipment as collateral and combining insurance products to hedge asset risk. Reduces marketing costs through customer acquisition via distributor partnerships."
+    },
+    "related_links": [
+      {
+        "title": "FinMaq Official Website"
+      },
+      {
+        "title": "Accion Investment Announcement"
+      },
+      {
+        "title": "Mundi Ventures Insights"
+      },
+      {
+        "title": "Enderlin Independent Article"
+      },
+      {
+        "title": "El Ecosistema Startup Article"
+      },
+      {
+        "title": "Semana Article"
+      },
+      {
+        "title": "Dealroom Profile"
+      }
+    ],
+    "editor_pick_comment": "Accion recognized the clear niche of 'point-of-sale financing' that reaches Colombian micro-entrepreneurs without credit history directly at equipment distributors."
+  },
+  "ocean-2026": {
+    "tagline": "Tax refund platform for foreign tourists visiting Japan",
+    "category": [
+      "Fintech",
+      "Travel Tech",
+      "Retail Tech"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "Born in China and later moved to Japan. Worked in accounting and sales at Mitsui & Co. and served as Business Director for Tencent's WeChat Pay Japan entity.",
+        "notable_achievement": "Holds a US CPA license. After leaving the company, he contacted around 60 potential investors and successfully raised a seed round."
+      }
+    ],
+    "team_highlights": "Operated as a small, handpicked team consisting of experts in fintech and tourism.",
+    "product": {
+      "summary": "A tax refund and inbound tourism marketing platform for foreign tourists visiting Japan. Aligned with Japan's new 'refund method' tax-free system effective November 2026, it provides a SaaS-based refund system that retailers can introduce without financial burden.",
+      "problem_statement": "In November 2026, Japan will entirely shift from the current in-store immediate tax exemption to a refund-at-departure (refund method) system. Retailers must build refund systems and operational structures to match the new rules while addressing the complexity of diverse languages, currencies, and payment methods.",
+      "solution": "Through a QR code-based platform, tourists can directly register their passport and payment details and receive a consumption tax refund after departure. The system is compatible with existing POS terminals and natively supports multiple languages, currencies, and major Asian payment methods (WeChat Pay, Alipay, LINE Pay, etc.). Initial setup is free.",
+      "key_features": [
+        "Contactless refund process initiated with a QR code",
+        "Supports 30+ currencies and major payment methods (cards, wire transfers, mobile wallets)",
+        "Integrates with existing POS; requires minimal changes to store operations",
+        "Proprietary WeChat Mini Program and LINE Mini App (first in the tax-free industry)",
+        "Certified by Japan's National Tax Agency as a tax exemption approval transmission operator",
+        "Built-in inbound marketing features with OTA and coupon integration"
+      ],
+      "tech_stack_or_innovation": "Integrated with Japan's National Tax Agency-certified tax exemption approval transmission system, the platform is flexibly built on QR and APIs. Security and reliability are validated by the National Tax Agency's certification.",
+      "target_customer": "All stores in Japan that sell tax-free goods to foreign tourists, from small independent shops to department stores and specialty stores.",
+      "business_model": "Estimated to charge retailers no setup fee and instead take a fee per refund transaction. Plans to diversify revenue by becoming a marketing platform that leverages purchase data."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "The world's largest tax refund provider, but slower to adapt to Japan's new system and localize compared with Ocean's dedicated platform."
+        },
+        {
+          "comparison": "A global refund company. Ocean differentiates itself with zero cost, optimized Asian payments, and local logistics and financial partnerships."
+        }
+      ],
+      "key_differentiator": "A dedicated platform designed for the 2026 new tax-free system, zero initial cost, optimized for Asian payment methods, and differentiated market access through Yamato Logistics and Shizuoka FG networks.",
+      "moat": "Yamato Logistics network and Shizuoka FG regional sales channels; first-mover advantage with roughly 500 stores already secured; scalability into a data-driven marketing platform; National Tax Agency certification.",
+      "competitive_position_summary": "As a fintech platform targeting Japan's new refund-method tax-free system, it is securing a competitive advantage in the new market through low initial costs, broad payment and language support, and logistics-finance partnerships."
+    },
+    "trending_reason": {
+      "summary": "As Japan's tax-free system undergoes a complete overhaul in November 2026 (from in-store exemption to refund at departure), Ocean has rapidly emerged as the SaaS platform responding to this shift. The startup has drawn attention over the past three months by closing an approx. ¥500M Series A and signing major partnerships.",
+      "catalysts": [
+        "Change in Japan's consumption tax refund system effective November 1, 2026",
+        "Successful Series A funding of approx. ¥500M (September–October 2026)",
+        "Participation of Yamato Holdings CVC (KURONEKO Innovation Fund 2) and Shizuoka Capital",
+        "Partnerships with Recruit, Kyoto Financial Group, and others (FinTech Observer, October)"
+      ],
+      "growth_metrics": "As of October 2026, approx. 500 stores have adopted the platform. It supports 30+ currencies and multiple Asian payment methods. The company is rapidly expanding its share ahead of the new system's implementation."
+    },
+    "funding": {
+      "total_raised": "approx. ¥500M",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "approx. ¥500M",
+        "note": "Total amount of Series A first close (September) and second close (October)",
+        "notable_investors": [
+          null,
+          "KURONEKO Innovation Fund 2 (Yamato Holdings CVC)"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "approx. ¥500M",
+          "note": "Includes first close (September 2026) and second close (October 2026)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Approx. 40 million visitors to Japan in 2026 (Japan National Tourism Organization), with tax-free spending estimated at approx. ¥5T. Under the new system, all tax-free stores (est. 100,000–200,000) need to adopt refund systems. Ocean's SAM is estimated at approx. 50,000 stores indicating intent to adopt digital solutions.",
+      "market_turn": "A weak yen and government policies to expand inbound tourism continue to drive foreign spending. The system overhaul is acting as a catalyst for technology adoption.",
+      "growth_potential": "First-mover advantages before the new system takes effect, and easy store expansion through logistics and financial partnerships. Additional services such as purchase-data-driven marketing can increase revenue per store. A strong position in a market where Asian tourists are the primary customer base.",
+      "risks": [
+        "Risk of regulatory changes or implementation delays",
+        "Full-scale entry into the Japanese market by global refund companies such as Global Blue",
+        "Volatility in tourism demand (pandemics, geopolitical risks)",
+        "Digital adoption barriers for small retailers",
+        "Possibility of system failures or security incidents"
+      ],
+      "risk_mitigation": "Yamato Logistics and Shizuoka FG networks ensure access to small retailers; zero cost minimizes adoption barriers; National Tax Agency certification builds trust; data-driven services create customer lock-in."
+    },
+    "related_links": [
+      {
+        "title": "Official corporate site"
+      },
+      {
+        "title": "Service website (Ocean Tax Refund)"
+      },
+      {
+        "title": "Series A funding announcement"
+      }
+    ],
+    "editor_pick_comment": "A fintech platform that emerged amid Japan's sweeping tax-free system overhaul—a textbook example of turning a regulatory change into a market opportunity."
+  },
+  "olsso-care-2026": {
+    "tagline": "AI musculoskeletal DTx company that measures joint range and muscle strength with a 2D camera, no sensors required",
+    "category": [
+      "Digital Healthcare",
+      "AI Medical Devices",
+      "Digital Therapeutics (DTx)"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO and Founder",
+        "background": "Currently a professor in the Department of Orthopedic Surgery at Catholic University of Korea, Yeouido St. Mary's Hospital, and a board-certified orthopedic surgeon. As a clinician specializing in shoulder and hand joint surgery and rehabilitation, he founded the company under the faculty startup program.",
+        "notable_achievement": "Developed ANAPA PS, described as the world's first 2D camera-based muscle strength measurement medical device. A CiOS paper (SCIE-level) demonstrated measurement reliability (ROM 99%, muscle strength 97%), and 9 domestic and international patents have been filed. He is the CEO of the first faculty startup produced by the Gyeojassi Kiumcenter of the Catholic Learning Institution."
+      }
+    ],
+    "team_highlights": "A faculty startup founded in April 2024. CEO Kim Jong-ho (professor of orthopedic surgery at Catholic University of Korea, Yeouido St. Mary's Hospital) leads an organization of medical staff and engineers. Information on co-founders and executives such as the CTO is limited. Classified as a small and medium-sized enterprise by THE VC and Incruit, with an estimated headcount of 11 to 50 (est.). In 2025 it signed a voice-based EMR enhancement agreement with Puzzle AI, expanding its partnerships.",
+    "product": {
+      "summary": "A musculoskeletal measurement and rehabilitation platform based on AI vision technology that quantitatively measures joint range of motion (ROM) and muscle strength using only ordinary 2D camera footage, with no sensors or special equipment. It combines the hospital medical device ANAPA PS, the patient rehabilitation exercise DTx ANAPA ME, and the clinician integrated portal ANAPA Hub to manage the full care cycle, from preoperative assessment to home rehabilitation after discharge.",
+      "problem_statement": "Musculoskeletal rehabilitation requires long-term, consistent exercise, but patients find it difficult to visit hospitals 3 to 4 times a week. Self-directed exercise at home lacks posture accuracy and progress monitoring, which often delays recovery or leads to re-operation. Existing joint and muscle strength measurements require skilled examiners, sensors, or special equipment, and depend on subjective evaluation.",
+      "solution": "Quantifies ROM and muscle strength from ordinary 2D camera footage, and AI proposes a customized rehabilitation path that reflects the patient's age, height, weight, and tear severity. It connects hospital (measurement), home (rehabilitation), and clinicians (monitoring) on a single platform to improve continuity of care.",
+      "key_features": [
+        "Simultaneous quantitative measurement of ROM and muscle strength with a 2D camera, no sensors or special equipment (reliability: ROM 99%, muscle strength 97%, CiOS paper)",
+        "MFDS approval of an Investigational Device Exemption (IND) confirmatory clinical trial plan for the frozen shoulder indication; multicenter clinical trials started at major university hospitals in Korea",
+        "Trained on over 20,000 images and photos of patients and healthy individuals, evaluating shoulder joint mobility in 8 directions",
+        "Personalized rehabilitation exercise prescriptions reflecting age, height, weight, and tear severity, with real-time monitoring",
+        "Smart EMR function that automatically documents clinical records using Puzzle AI's high-precision voice recognition"
+      ],
+      "tech_stack_or_innovation": "Uses AI for 2D video-based body posture estimation and movement analysis to estimate joint angles and muscle strength in three dimensions, and implements patient-specific feedback and treatment quantification with the CDW recovery prediction model. It claims to be the world's first 2D camera-based muscle strength measurement technology and is expanding into voice recognition-based automatic documentation.",
+      "target_customer": "Orthopedic and rehabilitation medicine clinics and hospitals (ANAPA PS and Hub); patients after rotator cuff tear surgery and frozen shoulder patients (ANAPA ME); potential expansion later into the private health insurance and corporate health management markets.",
+      "business_model": "For ANAPA PS, the company is pursuing linkage of medical device sales and introduction with National Health Insurance fee reimbursement to expand adoption in private clinics. For ANAPA ME, revenue is to be generated on a prescription basis after product approval and reimbursement listing. Over the medium to long term, it aims to enter global markets through FDA and EU CE MDR certification and participation in CES 2027."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "EverEx",
+          "comparison": "Offers musculoskeletal rehabilitation based on the same AI motion recognition technology. It has the MORA product line (MORA View, MORA X, MORA Care, MORA Cure), was the first musculoskeletal DTx designated as an innovative medical device, has a cumulative Series B of KRW 28.8B, has strategic investment from Daewoong and Naver, and has been adopted by over 100 medical institutions in Korea and abroad, making it one step ahead of Olsso Care in commercialization and financial strength."
+        },
+        {
+          "name": "ViFive",
+          "comparison": "Based in California, USA, it provides a customized rehabilitation exercise app using camera-based measurement. Pre-A round of KRW 7.1B (2022). Its technology and target market are similar, but Olsso Care is ahead in domestic clinical results and university hospital adoption."
+        },
+        {
+          "name": "Nextdoor",
+          "comparison": "Its DTx 'Aseso' provides rehabilitation exercise coaching for pediatric torticollis, with a narrowly segmented indication. Direct competition with Olsso Care, which focuses on adult shoulders, is limited."
+        },
+        {
+          "name": "H Robotics",
+          "comparison": "Takes a hardware approach with the home rehabilitation robot 'Ribles.' Its product format and price range differ from Olsso Care's camera software approach."
+        }
+      ],
+      "key_differentiator": "Simultaneous quantitative measurement of ROM and muscle strength with a single ordinary 2D camera, without any attached sensors or equipment (the world's first 2D camera muscle strength measurement), and the fact that this technology was first commercialized as a hospital device already used in clinical settings at 25 medical institutions, including Seoul National University Hospital and Asan Medical Center.",
+      "moat": "The clinical domain knowledge of a founder who is a practicing orthopedic professor, a medical institution network (including 8 hospitals under Catholic Central Medical Center), over 20,000 training images of patients and healthy individuals, CiOS paper validation and 9 domestic and international patents, and the regulatory entry barrier of MFDS confirmatory clinical trial approval.",
+      "competitive_position_summary": "In Korean musculoskeletal AI rehabilitation DTx, EverEx is the leader and Olsso Care is a late entrant. However, it is pursuing catch-up on three fronts: a differentiated entry point as a 'measurement device within hospitals,' a confirmatory clinical trial specialized in frozen shoulder, and strategic investment from the Daewoong Pharmaceutical Group CVC."
+    },
+    "trending_reason": {
+      "summary": "On October 19, 2026, the company raised a KRW 3.42B Pre-Series A round led by Daewoong Investment, and on the same day announced MFDS approval of an IND for the frozen shoulder indication of ANAPA ME and the start of multicenter clinical trials. With the measurement device ANAPA PS already introduced at 25 medical institutions nationwide, it is a late entrant in musculoskeletal DTx that has simultaneously received both funding and regulatory triggers.",
+      "catalysts": [
+        "Pre-Series A investment of KRW 3.42B, led by Daewoong Investment; cumulative KRW 4.24B (2026-10-19)",
+        "MFDS approval of IND for frozen shoulder indication; multicenter clinical trials started at major university hospitals (2026-10)",
+        "ANAPA PS introduced at 25 medical institutions nationwide, including 8 hospitals of Catholic Central Medical Center, Seoul National University Hospital, Asan Medical Center, and Korea University Hospital (as of 2026-10)",
+        "Announced plans to pursue US FDA and EU CE MDR certification and to participate in CES 2027 (2026-10)"
+      ],
+      "growth_metrics": "Cumulative investment of KRW 4.24B (seed KRW 500M + Pre-A KRW 3.42B), ANAPA PS introduced at 25 medical institutions, measurement reliability of ROM 99% and muscle strength 97% (CiOS paper), over 20,000 training images, and 1 MFDS confirmatory clinical trial approval for frozen shoulder.",
+      "media_mentions": [
+        {
+          "source": "Money Today",
+          "title": "\"AI Musculoskeletal Diagnosis and Rehabilitation Solution\" Olsso Care Raises KRW 3.4B in Pre-A Funding"
+        },
+        {
+          "source": "Rapportian",
+          "title": "Olsso Care Raises KRW 3.4B in Pre-A Funding... \"Begins Confirmatory Clinical Trial for Frozen Shoulder DTx\""
+        },
+        {
+          "source": "MedigateNews",
+          "title": "Olsso Care Raises KRW 3.42B in Pre-A Funding and Receives Approval for DTx Confirmatory Clinical Trial"
+        },
+        {
+          "source": "Platum",
+          "title": "Olsso Care Raises KRW 3.4B in Pre-A Funding... Rehabilitation AI That Measures Joints with a Camera Begins Confirmatory Trial"
+        },
+        {
+          "title": "Olsso Care Raises KRW 3.4B in Pre-A Funding... Accelerates MFDS Trials and Commercialization of Musculoskeletal DTx"
+        },
+        {
+          "source": "Money Today (English)"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "approx. KRW 4.24B",
+      "total_raised_note": "Seed KRW 500M (2025, FuturePlay) + Pre-A KRW 3.42B. Media report the cumulative total as KRW 4.24B, but the arithmetic sum is KRW 3.92B, a gap of approx. KRW 320M. Whether conditional commitments, capital contributions, or other additional amounts are included is unclear (est.). USD conversion is our own calculation based on approx. KRW 1,326 to 1,330 per $ (est.).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "KRW 3.42B",
+        "note": "Led by Daewoong Investment, the CVC of the Daewoong Pharmaceutical Group, with participation from Torus Partners (Torus Ventures), Korea Credit Guarantee Fund, J&P Medi Partners, and Olbareunpharm. Announced 2026-10-19. approx. $2.5M (based on approx. KRW 1,326 per $, est.).",
+        "lead_investor": "Daewoong Investment",
+        "notable_investors": [
+          "FuturePlay (existing investor)",
+          "Torus Partners",
+          "Korea Credit Guarantee Fund",
+          "J&P Medi Partners",
+          "Olbareunpharm"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "KRW 500M",
+          "note": "Sole investment by FuturePlay, announced 2025-06-27. First company produced by the Gyeojassi Kiumcenter of the Catholic Learning Institution. approx. $0.4M (based on KRW 1,330 per $, est.).",
+          "lead_investor": "FuturePlay"
+        },
+        {
+          "amount": "KRW 3.42B",
+          "note": "Led by Daewoong Investment. Funds are planned for the ANAPA ME confirmatory clinical trial, product approval, and reimbursement listing; National Health Insurance fee linkage for ANAPA PS; and FDA/CE certification and CES 2027.",
+          "lead_investor": "Daewoong Investment"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM is the global musculoskeletal digital therapeutics and digital rehabilitation market (tens of trillions of KRW, est.). SAM is the domestic market for measurement devices and rehabilitation DTx prescriptions targeting orthopedic and rehabilitation medicine departments, including frozen shoulder. SOM depends on expanding share through the introduction of ANAPA PS at 25 medical institutions and, once adopted, through private clinic penetration and reimbursement listing. Specific market size figures were not confirmed.",
+      "market_trend": "Korea's DTx market is entering a growth phase as the MFDS approval system and National Health Insurance fee framework are being refined. EverEx's MORA Cure was designated as the first musculoskeletal DTx innovative medical device, opening up the market environment. Population aging is increasing demand for non-face-to-face rehabilitation among musculoskeletal patients with rotator cuff tears and frozen shoulder.",
+      "growth_potential": "Once the frozen shoulder confirmatory trial is complete, full-scale monetization may be possible through product approval and National Health Insurance reimbursement listing, and the Daewoong Pharmaceutical Group's distribution and clinical infrastructure can be leveraged. The company is exploring entry into global markets through FDA and CE certification and participation in CES 2027.",
+      "risks": [
+        "Failure or delay in DTx product approval or reimbursement listing (confirmatory trial risk)",
+        "Intensifying market competition with leading competitors such as EverEx",
+        "Expansion to indications beyond frozen shoulder and overseas certification will require significant time and capital",
+        "Hospital adoption and expansion among private clinics are prerequisites for revenue"
+      ],
+      "risk_mitigation": "The strategy is to build real-world usage data and references through early adoption of hospital-based ANAPA PS (25 institutions), secure regulatory evidence through multicenter confirmatory trials, and raise clinician adoption through the partnership with the Daewoong Pharmaceutical Group and feature enhancements such as voice-based EMR."
+    },
+    "related_links": [
+      {
+        "title": "Olsso Care Official Website - Products/Services (ANAPA)"
+      },
+      {
+        "title": "Olsso Care News - ANAPA PS Launch and Puzzle AI Partnership"
+      },
+      {
+        "title": "THE VC Company Profile - Olsso Care"
+      },
+      {
+        "title": "FuturePlay Portfolio - ORTHO CARE"
+      },
+      {
+        "title": "Datadrip Deal Sheet - Olsso Care Pre-A"
+      }
+    ],
+    "editor_pick_comment": "With Daewoong CVC investing KRW 3.4B in the company's unique '2D camera muscle strength measurement' technology from a practicing orthopedic professor, and with frozen shoulder DTx confirmatory trial approval announced on the same day, the true value of this late entrant will now be determined by clinical outcomes and reimbursement."
+  },
+  "spill-games-2026": {
+    "tagline": "An Indian casual game studio compressing game development from 'months to weeks' with an AI engine",
+    "category": [
+      "Mobile games",
+      "AI game development"
+    ],
+    "headquarters": {
+      "country_ko": "India"
+    },
+    "employee_count": "11-50 (est.)",
+    "founders": [
+      {
+        "background": "Product and growth leader from PlaySimple Games. Experience in live game operations and user growth.",
+        "notable_achievement": "Directly contributed to scaling PlaySimple's global hits such as Word Trip, Daily Themed Crossword, and Zen Files. Former employer PlaySimple was acquired by MTG in 2021."
+      },
+      {
+        "background": "As an engineering leader at PlaySimple Games, responsible for building game servers, data pipelines, and live systems.",
+        "notable_achievement": "Contributed to the technical foundation design of PlaySimple's global hits."
+      },
+      {
+        "background": "Former engineering director at PlaySimple Games. Oversaw game backend and development processes.",
+        "notable_achievement": "Holds experience scaling game titles from 1 to 100. Some materials (Centre Court Capital) list him as Tapan Rajan."
+      }
+    ],
+    "team_highlights": "A team experienced in scaling global casual games at PlaySimple, Zynga, Tencent, and others. A small organization made up of experts in art, game design, development, production, performance marketing, AI, and analytics.",
+    "product": {
+      "summary": "An Indian game studio that rapidly develops, validates, and scales casual, puzzle, and hybrid casual mobile games using its proprietary AI engine, Compass. It serves free-to-play games to global markets outside India, including the U.S. and Europe.",
+      "problem_statement": "Traditional mobile game development invests months to years for a single hit and validates real user reactions late, making failure costs high. Casual games have low capital efficiency because of high UA costs and heavy dependence on hits.",
+      "solution": "Creates multiple game concepts in parallel, validates them quickly with AI and data, and invests only in proven titles. Reuses infrastructure via its proprietary engine (Compass) to compress development timelines from months to weeks, accumulating learnings from each game into the next title.",
+      "key_features": [
+        "Compass engine: proprietary AI tooling layer integrating analytics, retention, monetization, and live operations",
+        "Parallel development: prototypes multiple game concepts simultaneously and validates them with real player tests",
+        "Portfolio management: concentrates UA budget only on games that have proven profitability and scalability",
+        "Reusable infrastructure: shares SDKs and data stack across titles to reduce development costs",
+        "AI-native development: applies AI across the full cycle from concept discovery to production, launch, and optimization"
+      ],
+      "tech_stack_or_innovation": "Proprietary SDK, integrated analytics stack, and an AI-accelerated game development pipeline. According to the company, the structure increases game development speed by roughly 4x compared to traditional methods.",
+      "target_customer": "Casual and puzzle game users in overseas markets such as the U.S. and Europe (free-to-play). Focuses on monetization globally rather than in the domestic Indian market.",
+      "business_model": "Revenue from in-app purchases and ads based on free-to-play. Allocates user acquisition (UA) budget primarily to titles with proven profitability."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "The founders' former employer, an Indian studio with global hits in similar word and puzzle genres such as Word Trip. Acquired by MTG, now operates as a major publisher."
+        },
+        {
+          "comparison": "A French publisher that scales casual games through data-driven mass testing and UA efficiency. Actively investing in AI game development tools."
+        },
+        {
+          "comparison": "A casual publisher that quickly validates and launches games using its own data and AI platform. Similar in operating a 'develop → test → scale' pipeline."
+        }
+      ],
+      "key_differentiator": "AI-native development model + proprietary engine (Compass). While others buy tools or rely on publishing, Spill internalizes game lifecycle costs with its own engine and accumulates data learnings.",
+      "moat": "① Compass engine and reusable infrastructure ② first-party data loop from launched titles ③ proven game operations know-how from the three PlaySimple founders ④ strong investor network in gaming, including Elevation Capital.",
+      "competitive_position_summary": "Although at an early stage (Series A), it has secured three profitable titles and a six-game portfolio, attempting to differentiate from major publishers on capital efficiency. Its positioning as an AI-native studio is gaining attention in the Indian gaming ecosystem."
+    },
+    "trending_reason": {
+      "summary": "In October 2026, it raised a $10.5M Series A led by Elevation Capital, drawing attention as an Indian AI-native game studio that compresses game development cycles from 'months to weeks' with AI. It also became notable for building three profitable games within two years of founding and expanding the portfolio to six.",
+      "catalysts": [
+        "2026-10-14: Announced $10.5M Series A led by Elevation Capital",
+        "Expanded game portfolio from 3 to 6 in three months",
+        "AI-driven game development efficiency has emerged as a key topic across the global gaming industry",
+        "A global challenge case for Indian casual game startups following PlaySimple"
+      ],
+      "growth_metrics": "Game portfolio from 3 to 6 in under 3 months; 3 profitable titles; development speed roughly 4x traditional methods, per the company."
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "total_raised_note": "Combined total based on Entrackr reporting: Series A $10.5M (2026-10) + Seed $3.1M (2026-04) + Pre-seed $750K (2024-12). PitchBook records the pre-seed at $731K (2025-01-07), a slight discrepancy.",
+      "latest_round": {
+        "note": "Reported 2026-10-14. Funds will be used to expand the game portfolio, user acquisition (UA), strengthen AI and technology capabilities, and hire talent."
+      },
+      "funding_history": [
+        {
+          "note": "Participants included All In Capital, Mobile Premier League (M-League), and angel investors. PitchBook's registration date is 2025-01-07, with an amount of $731K."
+        },
+        {
+          "note": "Co-led by Centre Court Capital and PeerCapital. PeerCapital dates the round to March 2026 in retrospect, while PitchBook's registration date is 04-22."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global mobile game market is approximately $100B (est.) as of 2026. Casual and puzzle are the largest genres by downloads, and the free-to-play casual market centered on the U.S. and Europe is the primary target (SAM within TAM). Spill's SOM is the casual downloads and in-app purchase revenue captured by its 3–6 profitable titles (est.).",
+      "market_trend": "Attempts to automate and accelerate game development with AI are spreading worldwide. As the hybrid casual genre grows, more small studios are creating global hits through data-driven approaches.",
+      "growth_potential": "Can expand the portfolio beyond six games and, once Compass engine efficiency is proven, pursue direct publishing and UA expansion in key markets after Series B. The founders' PlaySimple experience (acquisition by MTG) represents one possible exit path.",
+      "risks": [
+        "Casual games' hit dependence and short lifecycles",
+        "Rising global UA costs pressure profitability",
+        "The actual effectiveness of the AI development model has not been proven to the claimed degree (roughly 4x)",
+        "Regulatory risks such as app store privacy and tracking policy changes"
+      ],
+      "risk_mitigation": "Diversifies failure risk by testing multiple titles in parallel and lowers failure costs with a shared engine. Retains FTUE and retention operations know-how proven at PlaySimple."
+    },
+    "related_links": [
+      {
+        "title": "Spill Games official website"
+      },
+      null,
+      null,
+      null,
+      {
+        "title": "Elevation Capital investment announcement (LinkedIn)"
+      },
+      {
+        "title": "Centre Court Capital portfolio: Spill Games"
+      },
+      {
+        "title": "PitchBook company profile: Spill Games"
+      }
+    ],
+    "editor_pick_comment": "The engine, not the catalog, is the competitive edge — if Compass truly proves 'months to weeks' development, it could change the overseas expansion formula for Indian game studios."
+  },
   "solidvue-solidvue-2026": {
     "tagline": "South Korea's only LiDAR sensor IC fabless company",
     "category": [
