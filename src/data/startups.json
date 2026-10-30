@@ -1,5 +1,1166 @@
 [
   {
+    "name_en": "SolidVue (SOLiDVUE)",
+    "name_ko": "솔리드뷰",
+    "tagline": "국내 유일 라이다 센서 IC 팹리스",
+    "category": [
+      "반도체",
+      "자율주행",
+      "로보틱스"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "Busan",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "11-50",
+    "website": "https://www.solid-vue.com",
+    "founders": [
+      {
+        "name_en": "Jaehyuk Choi",
+        "name_ko": "최재혁",
+        "role": "Co-CEO",
+        "background": "성균관대학교 반도체시스템공학과 교수. 국내 최초 ToF 이미지센서 및 CMOS 라이다 센서 개발 주도.",
+        "notable_achievement": "IEEE ISSCC 논문 발표, CES 2025 혁신상 수상"
+      },
+      {
+        "name_en": "Jeonghoon Jeon",
+        "name_ko": "전정훈",
+        "role": "Co-CEO",
+        "background": "성균관대학교 반도체시스템공학과 교수. 최재혁 대표와 공동 연구팀 소속.",
+        "notable_achievement": "국내 최초 CMOS 라이다 센서 공동 개발"
+      },
+      {
+        "name_en": "Seongjin Kim",
+        "name_ko": "김성진",
+        "role": "공동창업자 (이사)",
+        "background": "UNIST 전기전자공학과 교수. 최재혁 대표와 동일 지도교수 연구실 출신.",
+        "notable_achievement": "국내 최초 ToF 이미지센서 개발 참여"
+      }
+    ],
+    "team_highlights": "창업 3인 모두 반도체·라이다 분야 최정상 연구자. 연구개발 인력은 라이다 센서 분야 경력 10년 이상 베테랑으로 구성. 설계·양산 조직 확충 중.",
+    "product": {
+      "summary": "CMOS 기반 고해상도 라이다 센서 시스템온칩(SoC)을 설계·공급하는 팹리스 반도체 기업.",
+      "problem_statement": "기존 기계식 라이다는 모터와 회전 부품으로 인해 부피가 크고, 단가가 높으며, 진동에 취약해 자율주행차·로봇 등 대량 채용에 한계가 있었다.",
+      "solution": "모든 기계식 구성요소를 단일 반도체 칩으로 대체한 Solid-State 라이다 센서 IC. CMOS SPAD 어레이, TDC, 이미지 신호 프로세서, 전력 관리 회로를 하나의 칩에 통합.",
+      "key_features": [
+        "400×128 픽셀 고해상도 3D 포인트 클라우드 출력 (SL-2.2 기준)",
+        "최대 200m 검출 거리, 99.9% 정확도",
+        "센서 코어 0.9cm×0.9cm, BGA 패키지 1.4cm×1.4cm 초소형",
+        "기계식 대비 부피 1/10, 원가 1/100 수준",
+        "표준 CMOS 공정으로 양산 가능"
+      ],
+      "tech_stack_or_innovation": "CMOS SPAD (Single-Photon Avalanche Diode) 단일칩 센서 아키텍처. 컬럼-병렬 멀티-이벤트 TDC, 온칩 히스토그래밍, 간섭 제거 필터를 칩 내장. 세계 최초 400×128 해상도 SPAD 단일칩 센서 IC.",
+      "target_customer": "자율주행차 LiDAR 모듈 기업, 로봇 제조사, 드론·스마트시티 인프라 업체, AR/VR 기기 제조사.",
+      "business_model": "팹리스 반도체 기업으로서 센서 IC 설계를 전담, 파운드리(위탁생산)를 통해 칩을 생산하고 LiDAR 모듈·시스템 고객에 판매. 현재 글로벌 LiDAR 모듈 기업에 평가용 키트 공급 중."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Sony (일본)",
+          "comparison": "SPAD 방식 라이다 센서 IC를 양산 중인 글로벌 리더. IMX 시리즈로 시장 선점. 솔리드뷰는 해상도(400×128)와 단일칩 통합도에서 우위 주장."
+        },
+        {
+          "name": "Canon (일본)",
+          "comparison": "SPAD 센서 개발 경쟁사. 장거리·고감도 분야 강점. 솔리드뷰 대비 초소형·원가 경쟁력은 열세로 분석."
+        },
+        {
+          "name": "인포웍스 (한국)",
+          "comparison": "FMCW 방식 라이다 센서 개발 국내 스타트업. 방식이 달라 직접 경합보다는 시장 확대 동반자적 성격."
+        },
+        {
+          "name": "오토엘 (한국)",
+          "comparison": "자율주행용 라이다 센서 국내 스타트업. 아직 시장 초기 단계."
+        }
+      ],
+      "key_differentiator": "국내 유일의 라이다 센서 IC 팹리스. 세계 최고 수준의 400×128 해상도 단일칩 SPAD 센서를 CMOS 양산 공정으로 구현. 기계식 대비 1/10 부피, 1/100 원가.",
+      "moat": "SPAD 단일칩 통합 기술과 관련 특허 14건(2023년 기준). 창업자의 ISSCC·CES 혁신상 수상 실적. 국내 라이다 센서 IC 분야 독점적 지위.",
+      "competitive_position_summary": "글로벌로는 소니에 이은 후발주자이나, 단일칩 해상도와 초소형·저원가에서 차별화. 국내 시장에서는 유일한 라이다 센서 IC 공급자로 독점적 위치."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 목표 대비 63% 초과 달성한 163억원 규모 시리즈C 투자 유치로 IPO 로드맵 가시화.",
+      "catalysts": [
+        "163억원 시리즈C 투자 유치 (목표 100억→실제 163억)",
+        "CES 2025 혁신상 수상 (SL-2.2, Smart Cities 부문)",
+        "글로벌 LiDAR 모듈 기업 대상 평가용 키트 공급 개시 → 양산 단계 진입",
+        "내후년 IPO 목표 공식화",
+        "자율주행·로봇·AR/VR 시장의 LiDAR 수요 폭발적 증가"
+      ],
+      "growth_metrics": "2025년 매출 전년 대비 148% 증가 (절대 규모는 비공개). 누적 투자 유치 241억원. 직원 수 11~50명 규모.",
+      "media_mentions": [
+        {
+          "source": "thebell (프리미엄 콘텐츠)",
+          "title": "자율주행의 눈 만드는 솔리드뷰, 목표 넘겨 163억 모았다",
+          "url": "https://contents.premium.naver.com/thebell/stock/contents/261006172834097uz",
+          "date": "2026-10-07",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "매일경제 (marketinsight.hankyung.com)",
+          "title": "'라이다 칩' 솔리드뷰, 163억 시리즈C 투자 유치 [VC 브리핑]",
+          "url": "https://marketinsight.hankyung.com/article/202610079031r",
+          "date": "2026-10-07",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "startuprecipe",
+          "title": "SolidVue Raises KRW 16.3 Billion Series C",
+          "url": "https://en.startuprecipe.co.kr/archives/29679",
+          "date": "2026-10-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "CES.tech (공식)",
+          "title": "[SL-2.2] High-Resolution SPAD Sensor for LiDAR - 2025 Honoree",
+          "url": "https://www.ces.tech/ces-innovation-awards/2025/sl-22-high-resolution-spad-sensor-for-lidar/",
+          "date": "2024-12-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "PRNewswire",
+          "title": "SOLiDVUE Sets New Standards with CES Innovation Award-winning High-Resolution LiDAR Sensor IC SL-2.2",
+          "url": "https://www.prnewswire.com/news-releases/solidvue-sets-new-standards-with-ces-innovation-award-winning-high-resolution-lidar-sensor-ic-sl-2-2-302329805.html",
+          "date": "2024-12-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "더벨 (thebell)",
+          "title": "SolidVue on the Verge of Commercializing Domestic LiDAR Sensors",
+          "url": "https://solid-vue.com/board/view?bd_id=md01&wr_id=49",
+          "date": "2023-08-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "디일렉 (thelec)",
+          "title": "솔리드뷰, \"2023년 자율주행·모바일용 차세대 라이다 상용화\"",
+          "url": "https://www.thelec.kr/news/articleView.html?idxno=14740",
+          "date": "2021-10-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "약 241억원",
+      "total_raised_note": "시리즈C 163억 + 기존 라운드 약 78억 (시드·시리즈A·시리즈B 모두 포함, R&D 정부과제 24억원은 제외된 것으로 추정). 출처: thebell 2026.10.07.",
+      "total_raised_usd": 17200000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "163억원",
+        "note": "2026년 10월 2일경 마감. 목표 100억원 대비 초과 달성. 신규 투자자: 엔베스터, 코오롱인베스트먼트, 현대투자파트너스, 유니온투자파트너스, 에스벤처스, 아이디벤처스, IBK캐피탈. 기존 투자자 쿼드벤처스도 참여. 일부 매체는 173억원으로 보도 (출처 간 이견). USD 환산 시 약 11.6M$ (1,400원/$ 적용, 추정).",
+        "amount_usd": 11642857,
+        "date": "2026-10",
+        "lead_investor": "엔베스터 (Envester)",
+        "notable_investors": [
+          "코오롱인베스트먼트",
+          "현대투자파트너스",
+          "유니온투자파트너스",
+          "에스벤처스",
+          "아이디벤처스",
+          "IBK캐피탈",
+          "쿼드벤처스"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "비공개",
+          "note": "쿼드벤처스(퀀텀벤처스)가 시드 단계 최초 투자. 정확한 규모는 비공개. 2020년 설립 직후.",
+          "date": "2020-2021",
+          "lead_investor": "Quantum Ventures Korea (쿼드벤처스)"
+        },
+        {
+          "stage": "Series A",
+          "amount": "20억원",
+          "note": "스마일게이트인베스트먼트, 쿼드벤처스, 퀀텀벤처스 참여. 약 2M$ (추정).",
+          "amount_usd": 1428571,
+          "date": "2022-01",
+          "lead_investor": "Smilegate Investment"
+        },
+        {
+          "stage": "Series B",
+          "amount": "비공개",
+          "note": "퓨런티어(Futurenier) 전략적 투자 포함. 규모와 정확한 시기는 비공개. 2023년 중순으로 추정.",
+          "date": "2023-08",
+          "lead_investor": "Futurenier (퓨런티어)"
+        },
+        {
+          "stage": "Series C",
+          "amount": "163억원",
+          "note": "자세한 내용은 latest_round 참조.",
+          "amount_usd": 11642857,
+          "date": "2026-10",
+          "lead_investor": "엔베스터 (Envester)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 라이다 시장은 2025년 약 20억$에서 2030년 100억$ 이상으로 성장 전망 (Yole, MarketsandMarkets 추정). 자율주행·로봇·AR/VR·스마트시티가 주요 수요처. 솔리드뷰의 TAM은 '라이다 센서 IC' 시장으로 2030년 약 30억$로 추정. SAM은 한국·아시아권 자율주행 설루션 업체. SOM은 아직 초기.",
+      "market_trend": "기계식 라이다에서 반도체 기반 Solid-State 라이다로 전환 가속. 소니·캐논 등 글로벌 기업과 스타트업의 SPAD·ToF 경쟁 심화. 차량용·로봇용·모바일용으로 응용처 확대. 2025~2027년이 양산 및 상용화 분수령.",
+      "growth_potential": "CES 혁신상 및 목표 초과 투자 유치로 글로벌 고객사 확보에 청신호. 2027년 본격 양산 돌입 시 매출 급증 기대. 국내 유일 라이다 센서 IC 공급자로서 수혜 예상.",
+      "risks": [
+        "소니·캐논 등 대기업과의 글로벌 기술·가격 경쟁",
+        "팹리스 특성상 파운드리 의존도 (생산 차질 리스크)",
+        "자율주행차 상용화 일정 지연으로 인한 수요 변동",
+        "초기 매출 규모 대비 높은 R&D 비용으로 적자 지속 가능성"
+      ],
+      "risk_mitigation": "고해상도·초소형으로 틈새 차별화. 국내 거래선 우선 확보 후 글로벌 확장. 정부 R&D 과제를 통한 자금 조달로 일부 리스크 헷지. IPO 준비를 통한 장기 자금 조달 계획."
+    },
+    "related_links": [
+      {
+        "title": "공식 웹사이트",
+        "url": "https://www.solid-vue.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "THE VC - 솔리드뷰 기업정보",
+        "url": "https://thevc.kr/solidvue",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "혁신의숲 - 솔리드뷰 기업정보",
+        "url": "https://www.innoforest.co.kr/company/CP00010573/%EC%86%94%EB%A6%AC%EB%93%9C%EB%B7%B0",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "startuprecipe - SolidVue Raises KRW 16.3 Billion Series C",
+        "url": "https://en.startuprecipe.co.kr/archives/29679",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "CES 2025 Innovation Award - SL-2.2",
+        "url": "https://www.ces.tech/ces-innovation-awards/2025/sl-22-high-resolution-spad-sensor-for-lidar/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "PRNewswire - SOLiDVUE CES Award Press Release",
+        "url": "https://www.prnewswire.com/news-releases/solidvue-sets-new-standards-with-ces-innovation-award-winning-high-resolution-lidar-sensor-ic-sl-2-2-302329805.html",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "thebell premium - 자율주행의 눈 만드는 솔리드뷰",
+        "url": "https://contents.premium.naver.com/thebell/stock/contents/261006172834097uz",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      }
+    ],
+    "editor_pick_comment": "목표 100억원을 넘긴 163억원 시리즈C는 '국내 유일 라이다 센서 칩 팹리스'가 이제 양산과 IPO를 향해 본궤도에 올랐다는 신호다.",
+    "id": "solidvue-solidvue-2026",
+    "date": "2026-10-30",
+    "logo_url": "",
+    "generated_at": "2026-10-30T00:00:06.733Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-30T00:00:06.733Z"
+    }
+  },
+  {
+    "name_en": "EnableFusion",
+    "name_ko": "인애이블퓨전",
+    "tagline": "핵융합 장비를 설계·조달·제조하는 '퓨전 파운드리' 플랫폼",
+    "category": [
+      "핵융합 에너지",
+      "정밀 제조",
+      "에너지 장비"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "Seoul",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://www.enablefusion.com",
+    "founders": [
+      {
+        "name_en": "Gyung-Su Lee",
+        "name_ko": "이경수",
+        "role": "CSO (Chief Strategy Officer) 및 공동창업자",
+        "background": "세계적 핵융합 전문가. 한국핵융합에너지연구원 KSTAR 프로젝트 총괄, ITER 국제기구 부사무총장 겸 COO 역임. 이후 과학기술정보통신부 제2차관을 지냄.",
+        "notable_achievement": "KSTAR(한국 초전도 핵융합연구장치) 개발 총괄 및 ITER 조직의 운영 책임자"
+      },
+      {
+        "name_en": "DooWhan Choi",
+        "name_ko": "최두환",
+        "role": "CEO (Chief Executive Officer) 및 공동창업자",
+        "background": "IT 및 경영 전문가. KT 대표이사, POSCO DX(구 POSCO ICT) 사장 역임. 스타트업을 코스닥에 상장시킨 경험 보유.",
+        "notable_achievement": "KT 대표이사 및 POSCO DX 사장 역임, 스타트업 코스닥 상장 경험"
+      }
+    ],
+    "team_highlights": "",
+    "product": {
+      "summary": "EnableFusion은 자체 핵융합로를 개발하는 대신, Fusion Engineering Platform(FEP)이라는 '퓨전 파운드리'를 운영한다. 글로벌 핵융합 개발사의 요구사항을 디지털 재설계하여 한국의 정밀 제조 네트워크(약 250개 협력사)와 연결하고, 설계·조달·제조·품질관리·설치까지 일괄 수행한다.",
+      "problem_statement": "핵융합로 개발사들은 세계적으로 공급망이 협소한 초고진공 용기, 고온초전도체 자석, 삼중수소 연료 시스템 등 극한 사양의 핵심 장비를 조달하는 데 어려움을 겪는다. KSTAR·ITER에 참여한 한국 제조사의 역량은 뛰어나지만, 개별 스타트업이 이 네트워크에 접근하기는 현실적으로 불가능에 가깝다.",
+      "solution": "FEP(Fusion Engineering Platform)는 수요자(핵융합 개발사)와 공급자(한국 정밀 제조사)를 연결하는 양면 플랫폼이다. EnableFusion이 개발사의 요구사항을 디지털 트윈 기반으로 재설계하고, 제조 공정을 관리하며, 최종 납품과 시험까지 책임진다. 세 가지 카테고리—① 핵융합 부품 및 시스템, ② 고온초전도체(HTS), ③ 퓨전 AI—로 구성된다.",
+      "key_features": [
+        "핵융합 장비 요구사항을 디지털 재설계 및 재엔지니어링",
+        "한국 내 250여 개 정밀 제조 협력사 네트워크 운영",
+        "디지털 트윈 및 AI 기반 사이버물리 시뮬레이션",
+        "초고진공·극저온·고방사선 환경을 견디는 진공용기(Vacuum Vessel) 제조",
+        "고온초전도체(HTS) 와이어, 케이블, 자석 제조 역량",
+        "삼중수소 연료 관련 기술 개발",
+        "조달-제조-품질관리-설치-사후지원 원스톱 서비스"
+      ],
+      "tech_stack_or_innovation": "핵융합 개발사를 위한 '팹리스(Fabless) 반도체' 모델을 핵융합 업계에 도입. 반도체의 TSMC·엔비디아처럼 핵융합 분야에서 설계와 제조를 분리하는 '퓨전 파운드리' 개념을 최초로 상용화. 디지털 트윈과 AI를 활용한 엔지니어링 자동화가 핵심 기술 차별점.",
+      "target_customer": "자체 핵융합로를 개발 중인 글로벌 핵융합 스타트업(Commonwealth Fusion Systems, Helion Energy 등 잠재 고객), 정부 주도 민관협력(PPP) 프로젝트(ITER, DTT 등), 대형 에너지 기업의 핵융합 R&D 부서",
+      "business_model": "프로젝트 기반 수주 및 납품 계약. 고객이 의뢰한 핵융합 장비의 설계·제조·설치 전 과정에 대한 수수료 및 마진을 통해 수익 창출. 장기적으로 FEP 플랫폼 사용료 또는 라이선스 모델로 확장 가능."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Kyoto Fusioneering (일본)",
+          "comparison": "일본 교토대 발 스핀오프로, 핵융합 핵심 시스템(자이로트론, 연료 순환, 블랭킷)을 설계·공급하는 '퓨전 시스템 제공자'. EnableFusion과 유사하게 자체 원자로를 만들지 않고 부품·시스템을 공급하지만, 일본·유럽 제조사에 집중하고 독일 지멘스 에너지·프록시마 퓨전과 제휴. EnableFusion은 한국 제조 생태계를 활용한다는 점이 차별점."
+        },
+        {
+          "name": "Next Step Fusion (룩셈부르크/영국)",
+          "comparison": "2023년 설립된 유럽 기반 핵융합 공급망 전문사. 통합 모델링, 플라즈마 진단 및 제어 솔루션에 특화. EnableFusion보다 소프트웨어·진단 중심이며, 한국의 제조 인프라를 보유하지 않음."
+        },
+        {
+          "name": "Bilfinger (독일)",
+          "comparison": "독일 대형 엔지니어링 기업으로 ITER, W7-X 등 핵융합 프로젝트에 자석, 극저온, 원격취급 시스템 공급. 대기업으로 규모와 레퍼런스에서 우위지만, 핵융합 전용 '파운드리 플랫폼'은 아님."
+        }
+      ],
+      "key_differentiator": "한국이 KSTAR·ITER를 통해 축적한 세계 최고 수준의 핵융합 정밀 제조 역량(초고진공 용기, HTS 자석 등)을 하나의 플랫폼(FEP)으로 패키징했다는 점. 반도체 파운드리 모델을 핵융합에 최초로 적용하여, 개발사가 제조 리스크 없이 설계에 집중할 수 있게 함.",
+      "moat": "① KSTAR·ITER에 참여한 250여 개 한국 정밀 제조사와의 독점적 네트워크, ② KSTAR 총괄과 ITER COO 출신의 이경수 CSO의 기술적 신뢰도, ③ 이탈리아 DTT 수주(€26M)로 입증된 글로벌 조달 역량, ④ 정부 차원의 핵융합 R&D 인프라(KSTAR, ITER 한국 사업단)와의 긴밀한 연계",
+      "competitive_position_summary": "글로벌 핵융합 스타트업 45여 개사(2026년 기준) 대부분이 원자로 개발에 집중하는 반면, EnableFusion은 유일하게 '퓨전 파운드리'라는 비즈니스 모델로 차별화했다. 직접 경쟁사보다는 대부분의 핵융합 개발사가 잠재 고객이 되는 구조다. 중장기적으로 Bechtel·Siemens 같은 대형 EPC 기업이 핵융합 시장에 진입하면 경쟁이 발생할 수 있다."
+    },
+    "trending_reason": {
+      "summary": "2026년 9월, 450억 원 규모의 시리즈A 투자 유치 성공. 불과 3개월 전 이탈리아 DTT 프로젝트에서 €2,600만(약 450억 원) 규모 진공용기 수주에 이어 추가 자금 조달에 성공하며, '퓨전 파운드리' 모델의 시장 검증을 마쳤다. 대한민국 최초 핵융합 스타트업이자 최초 핵융합 기술 수출이라는 상징성도 주목받는 요인.",
+      "catalysts": [
+        "2026년 9월, 450억 원(약 $3,274만) 시리즈A 투자 유치 - 퀀텀벤처스코리아 주도",
+        "2026년 3월, 이탈리아 DTT 프로젝트에 €2,600만(약 450억 원) 규모 진공용기 공급 수주 - 한국 최초 핵융합 기술 수출",
+        "2026년 1월, 이탈리아 법원(Tar Lazio)이 경쟁사의 소송을 기각하며 DTT 수주 확정",
+        "AI 데이터센터 전력 수요 급증으로 무탄소 기저전력원인 핵융합에 대한 관심 사상 최고조",
+        "한국전력기술과 업무협약(MOU) 체결, 국내외 핵융합 발전장치 건설사업 공동 개발"
+      ],
+      "growth_metrics": "누적 투자 유치액 560억 원(2026년 9월 기준). 창업 2년 9개월 만에 글로벌 핵융합 프로젝트 수주(€2,600만)에 성공. 직원 수는 공개되지 않았으나 250여 개 협력사 네트워크 운영 중.",
+      "media_mentions": [
+        {
+          "source": "HelloDD",
+          "title": "인애이블퓨전, 450억원 시리즈A 유치···AI·초전도·삼중수소로 핵융합 사업 확장",
+          "url": "https://www.hellodd.com/news/articleView.html?idxno=113108",
+          "date": "2026-09-22",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "StartupRecipe",
+          "title": "EnableFusion Raises KRW 45 Billion Series A to Build a Fusion Foundry Platform",
+          "url": "https://en.startuprecipe.co.kr/archives/29555",
+          "date": "2026-09-28",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "Fusion Industry Association",
+          "title": "EnableFusion raises 45 billion won in Series A, expanding fusion business with AI, superconductivity, and tritium",
+          "url": "https://www.fusionindustryassociation.org/news/fusion-in-the-news/",
+          "date": "2026-09-27",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "전자신문",
+          "title": "인애이블퓨전, 450억 규모 핵융합 핵심설비 수주",
+          "url": "https://www.enablefusion.com/enablefusion-news",
+          "date": "2026-03-25",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "Korea JoongAng Daily",
+          "title": "EnableFusion has an answer to AI's power problem",
+          "url": "https://www.koreajoongangdaily.com/business/enablefusion-has-an-answer-to-ais-power-problem/10075814",
+          "date": "2026-06-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "Quotidiano Energia (이탈리아)",
+          "title": "Fusione nucleare, Tar conferma esito bando da 25,8 mln € per il Dtt",
+          "url": "https://www.quotidianoenergia.it/module/news/page/entry/id/527515",
+          "date": "2026-01-19",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "Fusion Energy Base",
+          "title": "EnableFusion Affiliate Interview",
+          "url": "https://www.fusionenergybase.com/articles/enablefusion-affiliate-interview",
+          "date": "2026-03-04",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "약 560억원",
+      "total_raised_note": "시리즈A 450억원(2026.09) + 이전 라운드 약 110억원(추정). 출처: StartupRecipe, THE VC",
+      "total_raised_usd": 41480000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "450억원",
+        "note": "CBInsights는 $32.74M으로 표기. 2026년 9월 기준 환율(약 1$=1,374원) 적용 시 약 450억원.",
+        "amount_usd": 32142857,
+        "date": "2026-09",
+        "lead_investor": "Quantum Ventures Korea",
+        "notable_investors": [
+          "D3 Jubilee Partners",
+          "Company K Partners",
+          "Enlight Ventures",
+          "POSCO Technology Investment",
+          "장덕수 DS자산운용 회장",
+          "전략적·기관 투자자 4개사(명) (비공개)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed/Pre-A",
+          "amount": "비공개",
+          "note": "라운드 규모 미공개. 누적 투자액(560억원)에서 시리즈A(450억원) 차감 시 약 110억원 규모로 추정.",
+          "date": "2024",
+          "lead_investor": "비공개"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: 글로벌 핵융합 에너지 시장. Fusion Industry Association에 따르면 2025년 민간 핵융합 기업의 총 투자액은 약 $70억(약 9.4조 원)에 달하며, 2030년대 상업 발전 개시 시 수조 원 규모로 성장 전망. SAM: 핵융합 장비 제조 및 엔지니어링 서비스 시장. ITER 단일 프로젝트만 약 $220억 규모. SOM: 글로벌 핵융합 프로젝트의 핵심 장비 조달 물량 중 한국 제조사가 참여 가능한 1~2조 원대 시장.",
+      "market_trend": "① AI 데이터센터 전력 수요 폭증으로 무탄소 24시간 기저전력원 필요성 대두, ② 빅테크(마이크로소프트·구글·아마존)의 핵융합 스타트업 투자 및 전력구매계약(PPA) 체결 러시, ③ 각국 정부의 핵융합 규제 완화 및 상용화 지원 정책 확대, ④ 고온초전도체(HTS) 기술 발전으로 소형 핵융합로 실현 가능성 증가",
+      "growth_potential": "핵융합 산업이 2030년대 상업 발전을 목표로 본격적인 하드웨어 조달 단계에 진입하면서, '퓨전 파운드리'의 역할은 더욱 중요해질 전망. 이미 DTT 프로젝트 수주로 첫 상업적 레퍼런스를 확보했으며, 추가 글로벌 프로젝트 수주 시 매출이 급증할 가능성이 높다.",
+      "risks": [
+        "핵융합 기술 자체의 상용화 일정 지연 가능성 - 수익 실현까지 수년 이상 소요",
+        "대형 글로벌 EPC 기업(Siemens, Bechtel 등)의 핵융합 시장 진입 시 경쟁 심화",
+        "초기 클라이언트 편중(DTT 단일 프로젝트 의존도) 리스크",
+        "이탈리아 DTT 수주 관련 법적 분쟁(Tar Lazio 소송)이 추가로 발생할 가능성",
+        "원자재 가격 변동 및 글로벌 공급망 교란이 제조 원가에 미치는 영향"
+      ],
+      "risk_mitigation": "① 퓨전 파운드리 모델은 핵융합로 개발사의 성공/실패와 무관하게 장비 수주를 지속할 수 있는 구조, ② 250여 개 협력사 기반으로 단일 제조사 의존도 분산, ③ DTT 수주의 법적 확정(2026년 1월 Tar Lazio 판결)으로 리스크 해소, ④ AI·HTS·삼중수소 등 4대 사업 영역 다각화로 단일 프로젝트 리스크 완화"
+    },
+    "related_links": [
+      {
+        "title": "EnableFusion 공식 웹사이트",
+        "url": "https://www.enablefusion.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "THE VC - 인애이블퓨전 기업정보",
+        "url": "https://thevc.kr/enablefusion",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "Fusion Energy Base - EnableFusion 프로필",
+        "url": "https://www.fusionenergybase.com/organizations/enablefusion",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "Fusion Industry Association Supply Chain 2026 Report",
+        "url": "https://www.fusionindustryassociation.org/wp-content/uploads/2026/06/FIA-Supply-Chain-2026-Report-Final.pdf",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      }
+    ],
+    "editor_pick_comment": "핵융합로를 직접 만들지 않고, 한국 제조사의 초정밀 기술을 글로벌 개발사에 연결하는 '퓨전 파운드리'라는 독특한 포지셔닝이 인상적이다.",
+    "id": "enablefusion-2026",
+    "date": "2026-10-30",
+    "logo_url": "",
+    "generated_at": "2026-10-30T00:00:06.733Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-30T00:00:06.733Z"
+    }
+  },
+  {
+    "name_en": "LOMBY",
+    "name_ko": "롬비",
+    "tagline": "스즈키 협업 자율주행 라스트마일 로봇 배송",
+    "category": [
+      "배송 로봇",
+      "자율주행",
+      "라스트마일 물류"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "도쿄",
+      "country": "Japan",
+      "country_ko": "일본"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://lomby.jp",
+    "founders": [
+      {
+        "name_en": "Tomoharu Uchiyama",
+        "name_ko": "우치야마 토모하루",
+        "role": "창업자·대표이사",
+        "background": "이토추상사 출신, 2017년 배송 문제 해결 스타트업 Yper(OKIPPA) 창업, 2022년 LOMBY로 피봇",
+        "notable_achievement": "재배송 문제를 해결한 OKIPPA 개발 경험을 바탕으로 라스트마일 로봇 배송으로 전환"
+      }
+    ],
+    "team_highlights": "스즈키, 머큐리인베스트먼트 등으로부터 투자 유치 및 기술 협력 진행 중. 엔지니어링 중심 팀으로 NEDO 지원 과제 수행.",
+    "product": {
+      "summary": "LOMBY는 보도 위를 주행하는 자율주행 배송 로봇으로, 최고 속도 6km/h로 반경 2~3km 이내 상점에서 고객까지 상품을 배달합니다. 원격 모니터링으로 안전성을 확보했으며, 악천후에도 운행이 가능합니다.",
+      "problem_statement": "고령화와 인력 부족으로 라스트마일 배송에서 노동력 확보가 어려움. 일본은 특히 심각한 인구 감소로 배송 인력난이 사회 문제로 대두.",
+      "solution": "LOMBY 로봇이 사람을 대신해 상점에서 고객까지 자율주행으로 배송. 원격 감독 하에 여러 대를 운영하여 인력 효율성 제공.",
+      "key_features": [
+        "자율주행 및 원격 모니터링 시스템",
+        "스즈키와 공동 개발한 내구성과 양산성",
+        "기존 스마트폰 앱·웹 서비스와 연동 가능",
+        "악천후(비, 야간)에도 안정적인 운행",
+        "배송 비용 수작업 대비 절반 이하로 절감"
+      ],
+      "tech_stack_or_innovation": "AI 기반 자율주행, 3D 맵을 활용한 경로 계획과 장애물 회피, 원격 감시 오퍼레이션 시스템. '원격조종소형차'로 도로교통법 적용.",
+      "target_customer": "편의점·소매점·음식점 등 라스트마일 배송이 필요한 업체, 물류사, 전자상거래 사업자",
+      "business_model": "로봇 배송 서비스를 배송 건당 과금 또는 정기 구독 형태로 제공 (추정). 세븐일레븐과의 실증 실험을 통해 수익 모델 검증 중."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Starship Technologies",
+          "comparison": "글로벌 선두주자로 다양한 국가에 진출했으나 일본 시장에 특화되지 않음."
+        },
+        {
+          "name": "Coco (일본)",
+          "comparison": "일본 내 자율배송 로봇 스타트업으로 유사한 배송 로봇 운영, 스즈키 특화 협력은 LOMBY만의 강점."
+        }
+      ],
+      "key_differentiator": "스즈키와의 독점적 파트너십으로 대량 생산 능력과 부품 공급 안정성 확보. NEDO 등의 정부 지원과 원격 모니터링 고도화.",
+      "moat": "스즈키 제조 네트워크, 자체 자율주행 AI 및 원격 모니터링 소프트웨어, 도로 주행을 위한 법규 준수 경험",
+      "competitive_position_summary": "시장 초기 단계이지만 스즈키와의 협력, 정부 지원, 세븐일레븐 실증 등으로 실질적 성과를 내며 경쟁력 확보 중."
+    },
+    "trending_reason": {
+      "summary": "2026년 8월 마감된 시리즈 A 라운드에서 머큐리인베스트먼트 리드로 3.87억 엔을 조달, 스즈키·나부테코·캐널벤처스 등 참여하며 로봇 양산 체제 구축에 속도.",
+      "catalysts": [
+        "고령화 심화에 따른 배송 인력난",
+        "전자상거래 증가로 라스트마일 배송 수요 확대",
+        "일본 정부의 자율주행 로봇 실증 규제 완화"
+      ],
+      "growth_metrics": "",
+      "media_mentions": [
+        {
+          "source": "PR TIMES",
+          "title": "自動走行ロボット「LOMBY」、シリーズAラウンドで3.87億円の資金調達を実施",
+          "url": "https://prtimes.jp/main/html/rd/p/000000010.000103569.html",
+          "date": "2026-09-28",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "스즈키 공식 뉴스",
+          "title": "スズキ、LOMBYに追加出資",
+          "url": "https://www.suzuki.co.jp/release/d/2026/0928b/",
+          "date": "2026-09-28",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "KEPPLE (스타트업 미디어)",
+          "title": "自動配送ロボットを量産へ──LOMBY、3.87億円調達でロボット輸送網を構築",
+          "url": "https://kepple.co.jp/articles/1z1yzwah5",
+          "date": "2026-09-28",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "캐널벤처스 미디어",
+          "title": "「人とモノの両方を運ぶ」独自の自律走行ロボットで課題解決に挑む～LOMBY（前編）",
+          "url": "https://www.canal-v.com/media/3166/",
+          "date": "2026-10-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "Nabtesco News",
+          "title": "Investment in LOMBY Inc., through Nabtesco Technology Ventures",
+          "url": "https://www.nabtesco.com/en/news/20260930-18516/",
+          "date": "2026-09-30",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "7.47억 엔",
+      "total_raised_note": "시리즈 A 포함 누적 조달액 (모두 제3자 배정 증자)",
+      "total_raised_usd": 4980000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "3.87억 엔",
+        "amount_usd": 2580000,
+        "date": "2026-08",
+        "lead_investor": "Mercury Investment (머큐리인베스트먼트)",
+        "notable_investors": [
+          "스즈키 (Suzuki)",
+          "캐널벤처스 (Canal Ventures)",
+          "나부테코 테크놀로지 벤처스 (Nabtesco Technology Ventures)",
+          "DRONE FUND",
+          "たましん-SNETI 투자조합"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "3.87억 엔",
+          "amount_usd": 2580000,
+          "date": "2026-08",
+          "lead_investor": "Mercury Investment"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "일본 실내외 배송 로봇 시장은 2030년까지 연평균 20% 이상 성장 전망. LOMBY는 편의점·식료품 배송에 특화.",
+      "market_trend": "고령화·인구 감소로 인력 대체 수요 급증, 정부 규제 완화로 로봇 주행 가능 구역 확대, 전자상거래 확대로 라스트마일 물류 부담 증가.",
+      "growth_potential": "향후 5년 내 일본 내 수천 대 규모 배치 목표, 스즈키 양산 능력 통해 대량 보급 가능성 높음.",
+      "risks": [
+        "도로주행 규제 변화 가능성 (안전 사고 발생 시 역풍)",
+        "대형 물류 기업 자체 개발 로봇과의 경쟁",
+        "기술적 한계 (복잡한 교차로, 협소 골목길)"
+      ],
+      "risk_mitigation": "스즈키 대량 생산력과 부품 안정성, NEDO 지원으로 기술 고도화, 세븐일레븐 실증을 통한 실제 사용 데이터 축적."
+    },
+    "related_links": [
+      {
+        "title": "LOMBY 공식 사이트",
+        "url": "https://lomby.jp",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "LOMBY 서비스 소개 (영문)",
+        "url": "https://lomby.jp/eng/en/service/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "LOMBY 기업 정보",
+        "url": "https://lomby.jp/corporate/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      }
+    ],
+    "editor_pick_comment": "스즈키와의 전략적 제휴로 양산 경쟁력을 확보한 점이 인상적이나, 글로벌 자율배송 로봇 시장에서 두각을 나타내기 위해서는 기술 완성도와 운영 효율성에서 더 많은 증명이 필요하다.",
+    "id": "lomby-2026",
+    "date": "2026-10-30",
+    "logo_url": "/logos/lomby-2026.png",
+    "generated_at": "2026-10-30T00:00:06.733Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-30T00:00:06.733Z"
+    }
+  },
+  {
+    "name_en": "elleThermo",
+    "name_ko": "엘레써모",
+    "tagline": "버려지는 저온 열을 전기로 바꾸는 차세대 발전 스타트업",
+    "category": [
+      "에너지",
+      "딥테크",
+      "반도체"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "Tokyo",
+      "country": "Japan",
+      "country_ko": "일본"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://ellethermo.com",
+    "founders": [
+      {
+        "name_en": "Shoko Ubukata",
+        "name_ko": "우부카타 쇼코",
+        "role": "대표이사 (CEO)",
+        "background": "도쿄과학대학(Institute of Science Tokyo) 준교수. 반도체 증감형 열전지(STC)의 발명자.",
+        "notable_achievement": "도쿄과학대학에서 STC 원천 기술을 개발하고 2023년 창업"
+      }
+    ],
+    "team_highlights": "과학기술 전문가들로 구성된 소규모 딥테크 팀. Co-CEO & CFO로 이카미(二上) 씨 영입.",
+    "product": {
+      "summary": "30~60℃의 저온 폐열을 직접 전기로 변환하는 '반도체 증감형 열전지(STC)' 기반 발전 시스템. 기존 열전 소자와 달리 온도 구배나 냉각원이 불필요.",
+      "problem_statement": "전 세계 데이터센터, 공장 등에서 막대한 저온 폐열이 발생하지만 기존 기술로는 전력 회수가 어려워 대부분 버려진다. 특히 AI 확대로 전력 소비가 급증하는 데이터센터에서 냉각에 쓰이는 에너지를 다시 전력으로 전환할 필요가 커지고 있다.",
+      "solution": "STC는 화학계 태양전지(염료감응형)의 원리를 응용해 '색소의 광여기' 대신 '반도체의 열여기'를 활용, 실온 부근의 미활용 열을 직접 전기로 변환. 발열체에 접촉만 하면 발전 가능하며, 열이 없을 때는 스위치 오프로 '재충전' 가능.",
+      "key_features": [
+        "30~60℃ 저온에서 발전 가능 (기존 열전 소자는 수백 ℃ 필요)",
+        "냉각원 불필요, 설치 공간 최소화",
+        "데이터센터 액침냉각 시스템과 결합 가능",
+        "발전 시 흡열 효과로 냉각 부하 감소",
+        "실내·야외·지하 등 장소 무관"
+      ],
+      "tech_stack_or_innovation": "STC(반도체 증감형 열전지)는 염료감응형 태양전지 구조에 반도체 나노입자를 도입, 열에 의한 전자 여기로 발전. 50W급 서모패널 목표.",
+      "target_customer": "데이터센터 운영사, 공장·플랜트 소유주, 온천·광산 지열 발전 사업자, 자동차·모빌리티 업체, 가전 제조사",
+      "business_model": "STC 셀·모듈·서모패널 판매, 라이선스, 공동 개발. 먼저 데이터센터와 제조업체에 PoC 공급 후 2028년 상용화 목표."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Gentherm (미국)",
+          "comparison": "열전소자(TEG) 기반이지만 고온 구배 필요. 저온 영역에서 성능이 낮고 냉각판이 필수."
+        },
+        {
+          "name": "Thermogenesis (일본 스핀오프, 추정)",
+          "comparison": "유사 기술을 개발 중인 것으로 알려졌으나 세부 차이는 불명."
+        }
+      ],
+      "key_differentiator": "온도 구배 없이 단일 열원에서 발전 가능, 냉각원 불필요. 태양광이 닿지 않는 장소에서도 24시간 발전.",
+      "moat": "도쿄과학대학 원천 특허, STC 원리 특허 포트폴리오. KDDI 등 대기업과의 공동 실증으로 기술 신뢰도 확보.",
+      "competitive_position_summary": "전 세계에서 저온 폐열을 구배 없이 전기로 바꾸는 STC 기술은 elleThermo가 사실상 유일. 데이터센터 전력난 해결에 최적화되어 차별적 우위."
+    },
+    "trending_reason": {
+      "summary": "2026년 8월 26일 8.3억 엔(약 80억 원) 규모 시리즈 A 투자 유치 발표. 데이터센터 전력 수요 급증과 탈탄소 규제 강화가 수요를 견인.",
+      "catalysts": [
+        "AI·클라우드 확대로 데이터센터 전력 소비 폭증",
+        "일본 정부의 2050 탄소중립 목표 및 미활용 열 에너지 활용 정책",
+        "KDDI 등 대기업과의 공동 실증 성과 (액침냉각 폐열 발전)"
+      ],
+      "growth_metrics": "2026년 8월 기준 단셀 밀리와트급 발전 달성, 2028년 50W급 서모패널 상용화 목표. 2027년까지 파일럿 생산 라인 구축.",
+      "media_mentions": [
+        {
+          "source": "elleThermo 공식 보도자료",
+          "title": "elleThermo, 시리즈 A에서 총 8.3억 엔 자금 조달",
+          "url": "https://ellethermo.com/posts_en/4XwRuvlh",
+          "date": "2026-08-26",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "PR TIMES",
+          "title": "미활용 열 발전 목표 과학대 스핀오프 elleThermo, 시리즈 A 총 8.3억 엔 조달",
+          "url": "https://prtimes.jp/main/html/rd/p/000000011.000120229.html",
+          "date": "2026-08-26",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "日本経済新聞",
+          "title": "도쿄과학대 발 엘레써모, 저온 폐열 발전 28년 실용화 목표 8억 엔 조달",
+          "url": "https://www.nikkei.com/article/DGXZQOUC2921Z0Z20C26A7000000/",
+          "date": "2026-08-26",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "Spiral Capital",
+          "title": "elleThermo에 투자",
+          "url": "https://spiral-cap.com/en/news/2026/08/26/9321/",
+          "date": "2026-08-26",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "JIC Venture Growth Investments",
+          "title": "elleThermo 주식 취득",
+          "url": "https://www.j-vgi.co.jp/en/news/ellethermo260826",
+          "date": "2026-08-26",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "KII (慶應イノベーション・イニシアティブ)",
+          "title": "KII, elleThermo에 추가 출자",
+          "url": "https://prtimes.jp/main/html/rd/p/000000100.000018580.html",
+          "date": "2026-08-26",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "KDDI",
+          "title": "미활용 열 발전 목표 elleThermo에 추가 출자",
+          "url": "https://news.kddi.com/kddi/corporate/csr-topic/2026/08/26/7755.html",
+          "date": "2026-08-26",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "약 12억 엔",
+      "total_raised_note": "시리즈 A(8.3억 엔) 포함 누적 약 12억 엔. 시드·프리 시리즈 A 등 이전 라운드 금액은 별도 공개 없음.",
+      "total_raised_usd": 8000000,
+      "valuation_estimate": "$80M (추정)",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "8.3억 엔",
+        "note": "일부 언론은 8억 엔으로 표기했으나 공식 보도자료는 8.3억 엔.",
+        "amount_usd": 5533333,
+        "date": "2026-08",
+        "lead_investor": "Spiral Innovation Partners (森ビルイノベーションファンド, KRAFTIA Innovation Fund)",
+        "notable_investors": [
+          "KII (慶應イノベーション・イニシアティブ)",
+          "Hulic Startup",
+          "Environmental Energy Investment",
+          "Mizuho Capital",
+          "KDDI Green Partners Fund",
+          "Sony Innovation Fund",
+          "JIC Venture Growth Investments",
+          "Takuma"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed (시드)",
+          "amount": "비공개",
+          "note": "2024년 초 KDDI 등이 참여한 시드 라운드. 구체적 금액 불명.",
+          "date": "2024-02 (추정)",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Pre-Series A",
+          "amount": "비공개",
+          "note": "2025년경 진행된 프리 시리즈 A. 참여사에 Hulic Startup 등 포함.",
+          "date": "2025-05 (추정)",
+          "lead_investor": "Hulic Startup (추정)"
+        },
+        {
+          "stage": "Series A",
+          "amount": "8.3억 엔",
+          "note": "신규 포함 9개사 참여. 누적 약 12억 엔.",
+          "amount_usd": 5533333,
+          "date": "2026-08",
+          "lead_investor": "Spiral Innovation Partners"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "전 세계 미활용 열 에너지 시장은 2030년 500억 달러 이상(추정). 데이터센터 폐열 시장만 100억 달러(추정). elleThermo는 초기 데이터센터·공장 폐열에 집중.",
+      "market_trend": "AI, 클라우드 확대로 데이터센터 전력 소비가 2025년 대비 2030년 2배 이상 증가. 동시에 각국 정부의 배출 규제로 폐열 회수 기술 수요 급증. 저온 열전 변환 기술은 거의 없어 블루오션.",
+      "growth_potential": "2028년 50W급 서모패널 상용화 후 데이터센터·제조·지열 등으로 확장. KDDI 등 파트너를 통한 대량 공급 가능성 높음. 2030년까지 연 매출 100억 엔 이상 달성 목표(추정).",
+      "risks": [
+        "스케일업 기술 리스크 (대면적화, 적층화 공정)",
+        "경쟁 기술 등장 가능성 (나노기반 열전 소자 등)",
+        "생산 비용 대비 전력 단가 경쟁력",
+        "장기 내구성 미검증"
+      ],
+      "risk_mitigation": "도쿄과학대·KDDI 등과 협력해 파일럿 라인 구축 및 데이터센터 실증 진행. STC는 재료 비용이 낮고 인쇄 공정 적용 가능해 대량 생산 시 비용 절감 기대."
+    },
+    "related_links": [
+      {
+        "title": "elleThermo 공식 사이트",
+        "url": "https://ellethermo.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "PR TIMES 보도자료 (일본어)",
+        "url": "https://prtimes.jp/main/html/rd/p/000000011.000120229.html",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "Spiral Capital 보도자료 (영문)",
+        "url": "https://spiral-cap.com/en/news/2026/08/26/9321/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "JIC VGI 보도자료 (영문)",
+        "url": "https://www.j-vgi.co.jp/en/news/ellethermo260826",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      }
+    ],
+    "editor_pick_comment": "데이터센터 폐열로 전기를 만드는 STC 기술은 AI 전력난 해결사로 주목, 하지만 실용화까지 아직 길다.",
+    "id": "ellethermo-2026",
+    "date": "2026-10-30",
+    "logo_url": "/logos/ellethermo-2026.png",
+    "generated_at": "2026-10-30T00:00:06.733Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-30T00:00:06.733Z"
+    }
+  },
+  {
+    "name_en": "InRisk Labs",
+    "name_ko": "인리스크 랩스",
+    "tagline": "기후 재해에 신속 대응하는 파라메트릭 보험·재보험 기술",
+    "category": [
+      "인슈어테크",
+      "기후 리스크 관리"
+    ],
+    "founded_year": 2024,
+    "headquarters": {
+      "city": "Ahmedabad",
+      "country": "India",
+      "country_ko": "인도"
+    },
+    "company_stage": "Series A",
+    "employee_count": "51-200",
+    "website": "https://www.inrisklabs.com/",
+    "founders": [
+      {
+        "name_en": "Aavrit Singhal",
+        "name_ko": "아브리트 싱할",
+        "role": "Co-founder",
+        "background": "보험 마케팅 및 상품 관리 10년 이상 경력",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Siddesh Ramasubramanian",
+        "name_ko": "시데시 라마수브라마니안",
+        "role": "Co-founder",
+        "background": "전 인도농업보험공사(AIC) 최고 리스크 책임자 겸 계리사",
+        "notable_achievement": "AIC에서 17억 달러 규모 프리미엄 관리"
+      },
+      {
+        "name_en": "Shivakhumar R S",
+        "name_ko": "시바쿠마르 R S",
+        "role": "Co-founder",
+        "background": "데이터 과학자, 머신러닝 프레임워크 전문가",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Malay Kumar Poddar",
+        "name_ko": "말레이 쿠마르 포다르",
+        "role": "Co-founder",
+        "background": "전 인도농업보험공사(AIC) 회장, 보험 업계 30년 이상",
+        "notable_achievement": "AIC에서 17억 달러 규모 프리미엄 관리"
+      }
+    ],
+    "team_highlights": "창업진 3인은 인도 농기후 보험 시장의 약 50%를 점유했던 AIC 출신",
+    "product": {
+      "summary": "파라메트릭 보험 및 재보험 상품 설계·가격 산정·청구 모니터링 올인원 플랫폼",
+      "problem_statement": "기후 변화로 인한 극한 기후(폭염, 홍수, 가뭄, 태풍)가 빈번해지지만 기존 보험은 손해사정이 느리고 신뢰도가 낮아 신속한 보상이 어려움",
+      "solution": "온도·강수량·풍속 등 독립적으로 검증 가능한 지수를 기반으로 사전 정의된 조건이 충족되면 자동 지급되는 파라메트릭 보험 제공",
+      "key_features": [
+        "실시간 상품 맞춤화",
+        "AI 기반 동적 가격 모델링",
+        "실시간 파라미터 모니터링 및 청구 자동 트리거",
+        "블록체인 스마트 계약을 통한 투명성 강화",
+        "IMD, NASA, ESA 등 기관급 데이터 활용"
+      ],
+      "tech_stack_or_innovation": "catastrophe 모델링, AI 가격 엔진, 블록체인 스마트 계약",
+      "target_customer": "정부, 다자개발은행, (재)보험사, 중개사, 기업(농업, 태양광, 항만 등 기후 민감 업종)",
+      "business_model": "보험사·중개사에 플랫폼 라이선스 및 상품 설계·가격 서비스 제공, 자회사 EarthRe를 통해 규제된 재보험 밸런스 시트 운영"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "EigenRisk",
+          "comparison": "유사한 기후 리스크 분석 및 파라메트릭 보험 플랫폼 제공, InRisk는 인도 시장 및 Global South에 특화"
+        },
+        {
+          "name": "IBISA",
+          "comparison": "파라메트릭 보험에 주력, InRisk는 재보험 라이선스까지 보유하여 더 넓은 범위 커버"
+        },
+        {
+          "name": "Mitti Labs",
+          "comparison": "농업 테크 스타트업, InRisk는 농업 외에도 다양한 비즈니스 라인(태양광, 항만, 인프라 등) 포괄"
+        }
+      ],
+      "key_differentiator": "인도 GIFT City 최초의 현지 설립 재보험사 EarthRe 운영으로 규제된 재보험 밸런스 시트 보유, AIC 출신 창업진의 딥 업계 전문성",
+      "moat": "현지 규제 라이선스, 기관급 데이터 접근권, 검증된 리스크 모델링 역량, 100억 달러 규모 인도 재보험 시장에서의 선점 효과",
+      "competitive_position_summary": "인도 최초의 규제 재보험사로서 파라메트릭 보험과 전통 재보험을 결합한 유일한 플레이어"
+    },
+    "trending_reason": {
+      "summary": "2026년 8월, 2700만 달러(약 256억 루피) 규모의 시리즈 A 투자 유치 및 EarthRe의 GIFT City 재보험 라이선스 획득이 주요 촉매. 인도 재보험 시장(약 100억 달러)의 현지화 움직임과 기후 리스크 확대에 따른 수요 증가가 배경.",
+      "catalysts": [
+        "인도 정부의 기후 적응 정책 강화",
+        "GIFT City 국제 금융 서비스 구역 활성화",
+        "극한 기후 사건 증가로 인한 파라메트릭 보험 수요 급증"
+      ],
+      "growth_metrics": "",
+      "media_mentions": [
+        {
+          "source": "Inc42",
+          "title": "InRisk Labs Raises $27 Mn To Scale AI-Led Reinsurance Platform EarthRe",
+          "url": "https://inc42.com/buzz/inrisk-labs-raises-27-mn-to-scale-ai-led-reinsurance-platform-earthre/",
+          "date": "2026-08-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "ImpactAlpha",
+          "title": "InRisk Labs raises $27 million to deliver parametric climate insurance across India",
+          "url": "https://impactalpha.com/inrisk-labs-raises-27-million-to-deliver-parametric-climate-insurance-across-india/",
+          "date": "2026-08-10",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "Reinsurance News",
+          "title": "EarthRe gets reinsurance licence for GIFT City as parent InRisk Labs closes Series A",
+          "url": "https://www.reinsurancene.ws/earthre-gets-reinsurance-licence-for-gift-city-as-parent-inrisk-labs-closes-series-a/",
+          "date": "2026-08-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "VCCircle",
+          "title": "InRisk Labs, Hulp, Vingo, Adiabatic Tech raise early-stage funding",
+          "url": "https://www.vccircle.com/inrisklabs-hulp-vingo-adiabatic-tech-raise-early-stage-funding",
+          "date": "2026-08-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "DealStreetAsia",
+          "title": "India: Bessemer, Northpoint co-lead $27m funding in InRisk Labs",
+          "url": "https://www.dealstreetasia.com/stories/bessemer-northpoint-inrisk-labs-491236",
+          "date": "2026-08-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        },
+        {
+          "source": "Bessemer Venture Partners",
+          "title": "Why we invested in Inrisk Labs",
+          "url": "https://www.bvp.com/news/why-we-invested-in-inrisk-labs",
+          "date": "2025-01-14",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-30T00:00:06.733Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$27M",
+      "total_raised_note": "시리즈 A 2700만 달러, 시드 라운드 규모는 비공개",
+      "total_raised_usd": 27000000,
+      "valuation_estimate": "$80M (추정)",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$27M",
+        "note": "동원된 전체 금액, EarthRe 재보험 라이선스와 함께 발표",
+        "amount_usd": 27000000,
+        "date": "2026-08",
+        "lead_investor": "Bessemer Venture Partners",
+        "notable_investors": [
+          "Northpoint Capital"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "비공개",
+          "note": "Bessemer Venture Partners가 참여",
+          "date": "2025-12",
+          "lead_investor": "Bessemer Venture Partners"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$27M",
+          "amount_usd": 27000000,
+          "date": "2026-08",
+          "lead_investor": "Bessemer Venture Partners"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "인도 재보험 시장 규모 약 100억 달러, 파라메트릭 보험은 빠르게 성장 중이나 아직 초기 단계",
+      "market_trend": "기후 변화 대응 필요성 증가, 인도 정부의 GIFT City 금융 허브 육성 정책, 재보험 현지화 움직임",
+      "growth_potential": "EarthRe의 첫 현지 재보험사 지위로 인도 및 Global South 시장에서 큰 성장 잠재력 보유",
+      "risks": [
+        "기후 모델링의 불확실성으로 인한 언더라이팅 리스크",
+        "규제 변화 가능성",
+        "경쟁사(EigenRisk 등)의 시장 진입 가속화"
+      ],
+      "risk_mitigation": "AIC 출신 창업진의 풍부한 업계 경험, AI 기반 지속적인 모델 개선, 규제 라이선스를 통한 진입 장벽 확보"
+    },
+    "related_links": [
+      {
+        "title": "InRisk Labs 공식 사이트",
+        "url": "https://www.inrisklabs.com/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      },
+      {
+        "title": "Northpoint Capital 투자 발표 LinkedIn",
+        "url": "https://www.linkedin.com/posts/northpoint-capital_earthre-the-reinsurance-arm-of-inrisk-labs-activity-7490684738244861952-dWGM",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-30T00:00:06.733Z"
+      }
+    ],
+    "editor_pick_comment": "AIC 출신 창업진이 인도 최초 GIFT City 현지 재보험사를 설립하며, 기후 파라메트릭 보험 시장을 선점하려는 움직임이 인상적이다.",
+    "id": "inrisk-labs-2026",
+    "date": "2026-10-30",
+    "logo_url": "/logos/inrisk-labs-2026.png",
+    "generated_at": "2026-10-30T00:00:06.733Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-30T00:00:06.733Z"
+    }
+  },
+  {
     "name_en": "Galux",
     "name_ko": "갤럭스",
     "tagline": "AI로 자연에 없는 단백질을 처음부터 설계하는 바이오텍",
