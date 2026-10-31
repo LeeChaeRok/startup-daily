@@ -242,7 +242,22 @@ export function fixAmount(text, { note = null, usd = null, label = 'amount', log
   return { amount, note: joinNotes(note, split.note), usd: Math.round(out) }
 }
 
+/**
+ * Web-search answers sometimes carry inline citations — "…유치했다([axios.com](https://…))."
+ * Prose fields are shown as plain text, so drop them; url fields are left alone.
+ */
+export function stripCitations(v, key = '') {
+  if (typeof v === 'string') {
+    if (key === 'url' || key.endsWith('_url')) return v
+    return v.replace(/\s*\(?\[[^\]]+\]\(https?:[^)\s]+\)\)?/g, '')
+  }
+  if (Array.isArray(v)) return v.map((x) => stripCitations(x, key))
+  if (v && typeof v === 'object') return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, stripCitations(x, k)]))
+  return v
+}
+
 export function normalize(c, { date, model, generatedAt, log = () => {} }) {
+  c = stripCitations(c)
   const year = date.slice(0, 4)
   const f = c.funding || {}
   const name = c.name_en || '?'

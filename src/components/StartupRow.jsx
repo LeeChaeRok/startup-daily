@@ -13,9 +13,9 @@ import { L } from '../lib/i18n.js'
  * rank     — show "01" in the leading column (issue lists)
  * showDate — show the issue date in the meta line (search, saved)
  * compact  — one-line tagline, smaller logo (desktop side list)
- * issue    — the mobile issue list: a '왜 지금' line, the amount as plain text at the end
- *            of the meta line instead of the amount column, and read rows folded to
- *            one line
+ * issue    — the mobile issue list, three lines at most: name, tagline, sector · country.
+ *            No English name, stage or amount (the company page has them); read rows
+ *            fold to one line with a check
  */
 export default function StartupRow({ startup: s, rank, showDate, compact, selected, reason, showSave, from, issue }) {
   const { isRead } = useReadLog()
@@ -26,13 +26,10 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
   // The amount column is narrow: one currency per column ($, or 억 원 for Korean amounts).
   // The amount as written, with its notes, is on the detail page.
   const raised = s._raisedShort
-  const why = issue && !read ? s.trending_reason?.summary || s.trending_reason?.catalysts?.[0] : null
   const folded = issue && read
 
   return (
-    <li
-      className={`row ${compact ? 'row--compact' : ''} ${issue ? 'row--issue' : ''} ${why ? 'has-why' : ''} ${read ? 'is-read' : ''} ${selected ? 'is-selected' : ''}`}
-    >
+    <li className={`row ${compact ? 'row--compact' : ''} ${issue ? 'row--issue' : ''} ${read ? 'is-read' : ''} ${selected ? 'is-selected' : ''}`}>
       <a className="row__link" href={href} aria-current={selected ? 'page' : undefined}>
         {rank != null && (
           <span className="row__rank mono" aria-hidden={read ? 'true' : undefined}>
@@ -46,23 +43,15 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
               {s.name_ko || s.name_en}
               {hasNews && <span className="row__news" title={L('소개 이후 새 소식', 'News since we covered it')} />}
               {hasNews && <span className="sr-only">{L(' (새 소식)', ' (news)')}</span>}
+              {folded && <Icon name="check" size={16} className="row__check" />}
             </span>
-            {s.name_en && s.name_en !== s.name_ko && (
+            {!issue && s.name_en && s.name_en !== s.name_ko && (
               <span className="row__en" lang="en">
                 {s.name_en}
               </span>
             )}
           </span>
           {!folded && <span className="row__tagline">{s.tagline}</span>}
-          {why && (
-            <span className="why-line">
-              <Icon name="trendingUp" size={14} strokeWidth={1.75} />
-              <span className="why-line__text">
-                <span className="sr-only">{L('왜 지금: ', 'Why now: ')}</span>
-                {why}
-              </span>
-            </span>
-          )}
           {!compact && !folded && (
             <span className="row__meta">
               <Meta
@@ -71,19 +60,14 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
                     {s._sector.label}
                     {isInterest(s._sector.key) && <span className="sr-only">{L(' (관심 분야)', ' (a sector you follow)')}</span>}
                   </span>,
-                  s._correction ? null : s._stage,
+                  s._correction || issue ? null : s._stage,
                   s.headquarters?.country_ko,
                   showDate ? L(`${monthDay(s.date)} 호`, `${monthDay(s.date)} issue`) : null,
-                  issue && raised ? (
-                    <span key="r">
-                      {L('누적', 'Raised')} <span className={`row__amount ${numClass(raised)}`}>{raised}</span>
-                    </span>
-                  ) : null,
                 ]}
               />
               <CorrectionBadge correction={s._correction} />
               {read && !issue && <span className="read-tag">{L('읽음', 'Read')}</span>}
-              {LENS_VERDICTS[s._lens?.v]?.badge && <span className="badge badge--accent badge--flat">{LENS_VERDICTS[s._lens.v].badge}</span>}
+              {!issue && LENS_VERDICTS[s._lens?.v]?.badge && <span className="badge badge--accent badge--flat">{LENS_VERDICTS[s._lens.v].badge}</span>}
             </span>
           )}
           {compact && s._correction && (

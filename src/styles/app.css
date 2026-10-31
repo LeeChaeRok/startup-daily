@@ -972,20 +972,15 @@ a { color: inherit; text-decoration: none; }
 .issue-title { padding-top: 4px; margin-bottom: 4px; }
 .issue-title__h { font-size: var(--sd-fs-title-2); font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
 .issue-title__h .badge { vertical-align: 4px; }
-.issue-title__brand { margin-top: 4px; font-size: 16px; font-weight: 600; color: var(--sd-ink); line-height: 22px; }
-.issue-title__ai { font-size: 13px; color: var(--sd-ink-3); line-height: 18px; }
-.issue-title__ai a { text-decoration: underline; text-decoration-color: var(--sd-line); text-underline-offset: 3px; }
 .issue-title .issue-nav { margin-top: 8px; }
 
 .issue-progress { padding-top: 8px; margin-bottom: 8px; }
 .issue-progress__text { display: flex; flex-wrap: wrap; align-items: baseline; line-height: 22px; }
-.issue-progress__count { font-size: 15px; font-weight: 700; color: var(--sd-ink); }
-.issue-progress__min { font-size: 13px; font-weight: 500; color: var(--sd-ink-3); white-space: pre; }
-.issue-progress__read { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: var(--sd-ink-3); }
-.issue-progress__done { color: var(--sd-ink); font-size: 13px; }
+.issue-progress__count { font-size: 14px; font-weight: 500; color: var(--sd-ink-3); }
+.issue-progress__read { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; font-size: 14px; color: var(--sd-ink-3); font-variant-numeric: tabular-nums; }
 .issue-progress__check { color: var(--sd-positive); }
 .issue-progress__bar { display: flex; gap: 4px; margin-top: 8px; }
-.issue-progress__bar > span { flex: 1; height: 4px; background: var(--sd-line); }
+.issue-progress__bar > span { flex: 1; height: 3px; background: var(--sd-line); }
 .issue-progress__bar > .is-read { background: var(--sd-ink); }
 
 .order-head { position: relative; margin: 4px 0; }
@@ -1003,64 +998,45 @@ a { color: inherit; text-decoration: none; }
 }
 @media (hover: hover) { .order-head__menu button:hover { background: var(--sd-surface-2); } }
 
-.hero { display: block; margin-top: 8px; padding: 16px 16px 0; background: var(--sd-surface); border-top: 3px solid var(--sd-line-strong); color: var(--sd-ink); transition: background-color var(--sd-dur-1); }
-@media (hover: hover) { .hero:hover { background: var(--sd-surface-2); } }
-.hero:active { background: var(--sd-surface-2); }
-.hero > span, .hero > p { display: block; }
-.hero__kicker { font-size: 13px; color: var(--sd-ink-3); line-height: 18px; }
-.hero__kicker strong { color: var(--sd-ink); font-weight: 700; }
-.hero__rank { font-size: 12px; margin-right: 10px; }
-.hero__sector { display: inline-flex; align-items: center; gap: 6px; }
-.hero__sector::before { content: ""; width: 6px; height: 6px; background: var(--sd-ink-3); }
-.hero > .hero__id { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
-.hero__names { display: flex; flex-direction: column; min-width: 0; }
-.hero__name { font-size: 22px; font-weight: 700; line-height: 28px; letter-spacing: -0.02em; }
-.hero__en { font-size: 13px; font-weight: 500; color: var(--sd-ink-3); line-height: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.hero > .hero__tagline {
+a.hero { display: block; margin-top: 16px; padding: 18px 16px 20px; background: var(--sd-surface); color: var(--sd-ink); transition: background-color var(--sd-dur-1); }
+@media (hover: hover) { a.hero:hover { background: var(--sd-surface-2); } }
+a.hero:active { background: var(--sd-surface-2); }
+a.hero > span, a.hero > p { display: block; }
+a.hero .hero__kicker { font-size: 13px; color: var(--sd-ink-3); line-height: 18px; }
+a.hero .hero__kicker strong { color: var(--sd-ink); font-weight: 700; }
+a.hero > .hero__id { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+a.hero .hero__name { font-size: 22px; font-weight: 700; line-height: 28px; letter-spacing: -0.02em; }
+a.hero > .hero__tagline {
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-  margin-top: 10px; font-size: 18px; font-weight: 700; line-height: 26px; letter-spacing: -0.012em;
+  margin-top: 14px; font-size: 18px; font-weight: 600; line-height: 26px; letter-spacing: -0.012em;
 }
-.hero > .hero__comment {
-  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
-  margin-top: 8px; padding-left: 12px; border-left: 2px solid var(--sd-line-strong);
-  font-size: 15px; font-weight: 500; line-height: 23px; color: var(--sd-ink);
+a.hero > .hero__comment {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  margin-top: 8px; font-size: 15px; font-weight: 400; line-height: 23px; color: var(--sd-ink-2);
 }
-.hero__comment-label { font-size: 13px; font-weight: 700; color: var(--sd-ink-3); margin-right: 2px; }
-.hero > .hero__foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; margin-top: 4px; }
-.hero__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: 13px; font-weight: 500; color: var(--sd-ink-3); }
-.hero__amount, .row__amount { color: var(--sd-ink-2); }
-.hero__cta { flex: none; display: inline-flex; align-items: center; gap: 4px; font-size: 15px; font-weight: 700; border-bottom: 1.5px solid var(--sd-accent); }
+/* AI disclosure for the comment: a small boxed tag, not a run-in label */
+a.hero .hero__ai { display: inline-block; margin-right: 6px; padding: 0 4px; border: 1px solid var(--sd-line-ui); font-size: 11px; font-weight: 600; line-height: 15px; color: var(--sd-ink-3); vertical-align: 1px; }
 
 /* "○○라면": a fact picked for the reader's role. Ink, never the accent */
 .forrole { font-size: 13px; line-height: 20px; }
 .forrole__label { font-weight: 700; color: var(--sd-ink); }
 .forrole__text { font-weight: 500; color: var(--sd-ink-2); }
-.hero > .forrole--hero {
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-  margin-top: 8px; padding-left: 12px; text-indent: -12px;
-}
-.forrole--hero::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 6px; background: var(--sd-ink); vertical-align: 2px; }
 .forrole--detail { margin: 18px 0; padding-left: 12px; border-left: 2px solid var(--sd-line-strong); max-width: var(--sd-measure); }
 .forrole--detail .forrole__label { display: block; }
 .forrole--detail .forrole__text { display: block; font-size: 15px; font-weight: 400; line-height: 1.6; }
 
 /* issue rows: '왜 지금' line, amount in the meta line, read rows folded to one line */
 .rows--issue { border-top: 0; margin-top: 8px; }
-.row--issue .row__link { grid-template-columns: 22px 40px minmax(0, 1fr); padding-block: 12px 13px; }
+.row--issue .row__link { grid-template-columns: 40px minmax(0, 1fr); padding-block: 14px; }
 .row--issue .row__body { gap: 2px; }
-.row--issue .row__name { line-height: 22px; }
+.row--issue .row__name { line-height: 22px; font-size: 17px; }
+.row--issue .row__meta { color: var(--sd-ink-3); }
+.row__check { flex: none; color: var(--sd-ink-3); }
 .row--issue .row__tagline { -webkit-line-clamp: 1; line-height: 21px; }
 .row--issue .row__meta { margin-top: 0; line-height: 18px; }
-.why-line { display: flex; align-items: center; gap: 4px; min-width: 0; font-size: 13px; font-weight: 500; line-height: 18px; color: var(--sd-ink); }
-.why-line .icon { color: var(--sd-accent); }
-.why-line__text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.row--issue.is-read .row__link { grid-template-columns: 22px 32px minmax(0, 1fr); align-items: center; padding-block: 12px; }
+.row--issue.is-read .row__link { grid-template-columns: 32px minmax(0, 1fr); align-items: center; padding-block: 10px; }
 .row--issue.is-read .row__rank { padding-top: 0; color: var(--sd-ink-3); }
 .row--issue.is-read .row__name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 0 1 auto; }
-/* short screens: rows with a '왜 지금' line drop the tagline so more companies fit (VD §3-8 ②) */
-@media (max-height: 760px) {
-  .row--issue.has-why .row__tagline { display: none; }
-}
 
 /* hero-slot cards: issue read (C), no new issue (D) */
 .state-card { margin-top: 8px; padding: 16px; background: var(--sd-surface); border-top: 3px solid var(--sd-line-strong); }

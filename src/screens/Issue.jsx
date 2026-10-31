@@ -9,7 +9,7 @@ import { AiNote, CorrectionBadge, MarkAllRead, Meta, ProgressRing } from '../com
 import { Footer } from '../components/Chrome.jsx'
 import { byDate, dates, followUps, formatUSD, issueNo, sectorMix, stats } from '../lib/data.js'
 import { buildQuery, localDate, useFlag, useInterests, useReadLog } from '../lib/hooks.js'
-import { daysSince, dotDate, longDate, monthDay, numClass, pad2, readMinutes, shortDate } from '../lib/format.js'
+import { daysSince, dotDate, longDate, monthDay, pad2, readMinutes, shortDate } from '../lib/format.js'
 import { canonicalUrl, shareOrCopy } from '../lib/share.js'
 import { currentEntry } from '../lib/nav.js'
 import { useIssueOrder, useOrder, usePastPicks, useRole, useTastePrompt } from '../lib/personal.js'
@@ -419,18 +419,9 @@ function Preview({ startup: s, rank, resume }) {
 /* ---------- Mobile issue (S1, S2): title → progress → hero → rows ---------- */
 
 /** Has the reader ever finished a whole issue? The brand line shows until then. */
-function everFinished(readLog) {
-  return dates.some((d) => {
-    const list = byDate(d)
-    return list.length > 0 && list.every((s) => readLog[s.id])
-  })
-}
-
 function IssueTitle({ date }) {
-  const { readLog } = useReadLog()
   const latest = date === dates[0]
   const isNew = useIsNew(date)
-  const readCount = Object.keys(readLog).length
   return (
     <header className="issue-title">
       <h1 className="issue-title__h" tabIndex={-1}>
@@ -439,26 +430,17 @@ function IssueTitle({ date }) {
         {L('호', '')}
         {isNew && <span className="badge badge--accent">{L('새 호', 'New')}</span>}
       </h1>
-      {latest && !everFinished(readLog) && (
-        <p className="issue-title__brand">{L('아직 모르는, 지금 뜨는 스타트업', "Startups you haven't heard of yet")}</p>
-      )}
-      {latest && readCount === 0 && (
-        <p className="issue-title__ai">
-          <a href="#/about?sec=how">{L('AI가 공개 자료로 작성 · 링크 확인됨', 'Written by AI from public sources · links checked')}</a>
-        </p>
-      )}
       {!latest && <IssueNav idx={dates.indexOf(date)} />}
     </header>
   )
 }
 
-/** "오늘 5곳 · 약 4분 / 5곳 중 2곳 읽음" + one cell per company, in published order. */
+/** "아직 모르는, 지금 뜨는 스타트업 5곳 · 2/5" + one cell per company, in published order. */
 function IssueProgress({ date }) {
   const { isRead } = useReadLog()
   const list = byDate(date)
   const done = list.filter((s) => isRead(s.id)).length
   const all = list.length > 0 && done === list.length
-  const today = date === dates[0] && daysSince(date) === 0
   const n = list.length
   return (
     <div className="issue-progress">
@@ -466,29 +448,17 @@ function IssueProgress({ date }) {
         <span className="issue-progress__count">
           {L(
             <>
-              {today ? '오늘' : '이 호'} <span className="num">{n}</span>곳
+              아직 모르는, 지금 뜨는 스타트업 <span className="num">{n}</span>곳
             </>,
             <>
-              <span className="num">{n}</span> {plural(n, 'startup')}
-              {today ? ' today' : ''}
+              <span className="num">{n}</span> {plural(n, 'startup')} you haven't heard of yet
             </>,
           )}
         </span>
-        <span className="issue-progress__min">
-          {' '}
-          · {L('약', 'about')} <span className="num">{readMinutes(list)}</span>
-          {L('분', ' min')}
-        </span>
         <span className="issue-progress__read">
-          <span>
-            {L(
-              <>
-                <span className="num">{n}</span>곳 중 <span className="mono issue-progress__done">{done}</span>곳 읽음
-              </>,
-              <>
-                <span className="mono issue-progress__done">{done}</span> of <span className="num">{n}</span> read
-              </>,
-            )}
+          <span className="sr-only">{L(`${n}곳 중 ${done}곳 읽음`, `${done} of ${n} read`)}</span>
+          <span aria-hidden="true">
+            {done}/{n}
           </span>
           {all && <Icon name="check" size={16} className="issue-progress__check" />}
         </span>
@@ -554,52 +524,32 @@ function OrderHead({ personal }) {
   )
 }
 
-function Hero({ startup: s, rank, resume, heroRef }) {
-  const stage = s._correction ? null : s._stage
+/* The first unread company, three things: what it is, what it does, why it matters.
+   Stage, amount, English name and the "○○라면" line wait on the company page. */
+function Hero({ startup: s, resume, heroRef }) {
   return (
     <a className="hero" href={`#/s/${s.id}`} ref={heroRef}>
       <span className="hero__kicker">
         {resume && <strong>{L('이어 읽기', 'Keep reading')} · </strong>}
-        <span className="mono hero__rank">{pad2(rank)}</span>
-        <span className="hero__sector">{s._sector.label}</span>
+        {s._sector.label}
         {s.headquarters?.country_ko && <> · {s.headquarters.country_ko}</>}
+        <CorrectionBadge correction={s._correction} />
       </span>
       <span className="hero__id">
-        <Logo startup={s} size={48} />
-        <span className="hero__names">
-          <span className="hero__name">{s.name_ko || s.name_en}</span>
-          {s.name_en && s.name_en !== s.name_ko && (
-            <span className="hero__en" lang="en">
-              {s.name_en}
-            </span>
-          )}
-        </span>
+        <Logo startup={s} size={44} />
+        <span className="hero__name">{s.name_ko || s.name_en}</span>
       </span>
       {s.tagline && <span className="hero__tagline">{s.tagline}</span>}
       {s.editor_pick_comment && (
         <span className="hero__comment">
-          <span className="hero__comment-label">{L('AI 코멘트', 'AI take')}</span> {s.editor_pick_comment}
+          {/* first, so the two-line clamp never hides it */}
+          <span className="hero__ai">
+            <span className="sr-only">{L('AI 코멘트: ', 'AI take: ')}</span>
+            <span aria-hidden="true">AI</span>
+          </span>
+          {s.editor_pick_comment}
         </span>
       )}
-      <ForRoleLine startup={s} />
-      <span className="hero__foot">
-        <span className="hero__meta">
-          <Meta
-            items={[
-              stage,
-              s._raisedShort ? (
-                <span key="r">
-                  {L('누적', 'Raised')} <span className={`hero__amount ${numClass(s._raisedShort)}`}>{s._raisedShort}</span>
-                </span>
-              ) : null,
-            ]}
-          />
-          <CorrectionBadge correction={s._correction} />
-        </span>
-        <span className="hero__cta">
-          {L('읽기', 'Read')} <Icon name="arrowRight" size={16} />
-        </span>
-      </span>
     </a>
   )
 }
@@ -717,7 +667,7 @@ export function IssueMobile({ date }) {
   const { interests } = useInterests()
   const [role] = useRole()
   const [prompt, setPrompt] = useTastePrompt()
-  const { list, hero, rank, personal, differs } = useHeroPick(date)
+  const { list, hero, personal, differs } = useHeroPick(date)
   const issue = byDate(date)
   const latest = date === dates[0]
   const done = issue.filter((s) => isRead(s.id)).length
@@ -752,10 +702,10 @@ export function IssueMobile({ date }) {
       {latest && daysSince(date) >= 2 && <StaleCard date={date} />}
       <IssueProgress date={date} />
       {(differs || !personal) && <OrderHead personal={personal} />}
-      {hero ? <Hero startup={hero} rank={rank} resume={done > 0} heroRef={heroRef} /> : finished && <DoneCard date={date} picks={picks} />}
+      {hero ? <Hero startup={hero} resume={done > 0} heroRef={heroRef} /> : finished && <DoneCard date={date} picks={picks} />}
       <ul className="rows rows--issue" aria-label={L(`제${issueNo(date)}호 스타트업 목록`, `Startups in issue #${issueNo(date)}`)}>
         {rows.map((s) => (
-          <StartupRow key={s.id} startup={s} rank={list.indexOf(s) + 1} issue />
+          <StartupRow key={s.id} startup={s} issue />
         ))}
       </ul>
       {done > 0 && <MarkAllRead list={issue} />}

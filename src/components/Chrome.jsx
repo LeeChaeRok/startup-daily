@@ -107,13 +107,12 @@ export function AppHeader({ section, back, title, desktop }) {
           <Wordmark />
         )}
         <span className="appbar__spacer" />
+        {/* search is the 탐색 tab; language and theme live in 설정 */}
         {!back && (
-          <a href="#/explore?focus=1" className="icon-btn" aria-label={L('검색', 'Search')}>
-            <Icon name="explore" />
+          <a href="#/settings" className="icon-btn" aria-label={L('설정', 'Settings')}>
+            <Icon name="more" />
           </a>
         )}
-        <LangToggle />
-        <ThemeButton />
       </div>
     </header>
   )

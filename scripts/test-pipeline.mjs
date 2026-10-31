@@ -1,10 +1,15 @@
 // Guard tests for the daily pipeline: duplicate detection, amount normalization, logo checks.
 // No network, no LLM. Run: npm run test:pipeline
-import { companyKey, dropDuplicates, fixAmount, merge, normalize, registrableDomain, selectCandidates } from './lib/pipeline.mjs'
+import { companyKey, dropDuplicates, fixAmount, merge, normalize, registrableDomain, selectCandidates, stripCitations } from './lib/pipeline.mjs'
 import { checkImage, iconLinks, imageSize, sniffType } from './lib/logos.mjs'
 
 let fails = 0
 const eq = (name, a, b) => { const ok = JSON.stringify(a) === JSON.stringify(b); if (!ok) fails++; console.log(ok ? 'ok  ' : 'FAIL', name, ok ? '' : `got ${JSON.stringify(a)} want ${JSON.stringify(b)}`) }
+
+/* ---------- inline citations ---------- */
+eq('citation in parens dropped', stripCitations('$38M을 유치했다([axios.com](https://www.axios.com/a/b)). 다음 문장.'), '$38M을 유치했다. 다음 문장.')
+eq('bare citation dropped', stripCitations('Launched in May [techcrunch.com](https://techcrunch.com/x) and grew.'), 'Launched in May and grew.')
+eq('url fields kept, nested prose cleaned', stripCitations({ url: 'https://a.com/[x](y)', t: { summary: 'a ([b.com](https://b.com))' } }), { url: 'https://a.com/[x](y)', t: { summary: 'a' } })
 
 /* ---------- registrable domain ---------- */
 eq('www dropped', registrableDomain('https://www.k-oqt.com'), 'k-oqt.com')

@@ -42,7 +42,7 @@
     ],
     "team_highlights": "3인 공동창업(2023). CEO Jignesh Dave는 영국·남아공 은행권(Lloyds 등) 출신으로 7년간 MVNO를 운영한 뒤, 그 인프라의 기회를 포착해 창업했다. COO Mitesh Popat가 Crunchbase에 등재돼 있다. 인도·유럽·중동·아프리카에 걸쳐 운영하며, 공식 보도자료 기준 본사는 헤이그다(Crunchbase는 런던 표기). 정확한 직원 수는 비공개(추정 11-50명).",
     "product": {
-      "summary": "Braid는 기업이 자사 브랜드의 SIM/eSIM 모바일 연결을 고객에게 제공할 수 있게 하는 API 플랫폼이다([kpnventures.com](https://www.kpnventures.com/news/braid-raises-38m-series-a-to-put-mobile-connectivity-inside-the-apps-of-global-enterprises)). 200여 개국 600여 개 통신사 네트워크를 하나의 API로 오케스트레이션하며, 기업은 MVNO가 될 필요 없이 앱에 연결을 내장하거나 브랜드 스토어프론트를 운영할 수 있다.",
+      "summary": "Braid는 기업이 자사 브랜드의 SIM/eSIM 모바일 연결을 고객에게 제공할 수 있게 하는 API 플랫폼이다. 200여 개국 600여 개 통신사 네트워크를 하나의 API로 오케스트레이션하며, 기업은 MVNO가 될 필요 없이 앱에 연결을 내장하거나 브랜드 스토어프론트를 운영할 수 있다.",
       "problem_statement": "기업이 자체 모바일 연결 서비스를 만드는 데는 통상 3~6개월의 통신사 협상, 규제 파일링, 조달 절차가 필요하다. 그동안 기업은 연결성을 전략적 제품 요소가 아닌 '흡수해야 할 비용'으로만 취급해왔다. 브랜드 접점에서 연결이 가질 수 있는 전략적 가치에도 불구하고 진입 장벽이 이를 막아왔다.",
       "solution": "Braid는 전통적인 통신사 계약·규제 프로세스를 단일 API로 대체한다. 라이브 트라이얼은 3분, 브랜드 연결 서비스 출시는 최소 1주일(기존 분기 단위)이면 가능하다. SIM/eSIM을 API/SDK로 제품에 내장하거나, 엔지니어링 없이 브랜드 스토어프론트를 운영할 수 있다.",
       "key_features": [
@@ -76,14 +76,14 @@
       "competitive_position_summary": "전통 MVNE와 소비자 eSIM 사이의 '브랜드 임베디드 연결'이라는 초기 시장을 공략 중이다. 90개 엔터프라이즈 고객과 수익성을 확보한 상태에서 KPN·Octopus Ventures의 자본으로 스케일을 키우는 단계다."
     },
     "trending_reason": {
-      "summary": "2026년 10월 28~29일, 창업 3년 만의 첫 외부 투자로 $38M Series A를 유치했다([axios.com](https://www.axios.com/pro/enterprise-software-deals/2026/10/28/braid-next-communications)). 결제의 임베디드화(Stripe 등)에 비견되는 '임베디드 커넥티비티' 트렌드가 본격화되는 신호로 읽힌다.",
+      "summary": "2026년 10월 28~29일, 창업 3년 만의 첫 외부 투자로 $38M Series A를 유치했다. 결제의 임베디드화(Stripe 등)에 비견되는 '임베디드 커넥티비티' 트렌드가 본격화되는 신호로 읽힌다.",
       "catalysts": [
         "$38M Series A 유치 — Octopus Ventures 주도, KPN Ventures 참여(2026-10-28 Axios 단독 보도)",
         "Next Communications → Braid 리브랜딩",
         "네덜란드 최대 통신사 KPN의 전략적 투자 확보",
         "임베디드 결제에 비견되는 '임베디드 연결' 시장 형성"
       ],
-      "growth_metrics": "약 90개 엔터프라이즈 고객(주요 글로벌 핀테크·여행 브랜드), 200여 개국 600여 개 통신사 연동. 모든 수치는 회사 발표 기준이며 독립 검증은 되지 않았다([recodex.ai](https://recodex.ai/startup/saas/864700.html)).",
+      "growth_metrics": "약 90개 엔터프라이즈 고객(주요 글로벌 핀테크·여행 브랜드), 200여 개국 600여 개 통신사 연동. 모든 수치는 회사 발표 기준이며 독립 검증은 되지 않았다.",
       "media_mentions": [
         {
           "source": "Axios Pro",
@@ -2870,7 +2870,7 @@
         },
         {
           "source": "Business Insider",
-          "title": "This 11-Person Startup Raised $40 Million to Train Robots ...",
+          "title": "This 11-Person Startup Raised $40 Million to Train Robots...",
           "url": "https://www.businessinsider.com/this-11-person-startup-raised-40-million-train-robots-virtual-worlds-2026-10",
           "date": "2026-10-27",
           "verified": true,
@@ -18637,7 +18637,7 @@
     "team_highlights": "노화 생물학 + AI/딥러닝 분야 세계적 연구진, 홍콩·상하이·뉴욕·아부다비 4개 거점, 임상 진행 파이프라인 다수, Nature·Science 등 톱저널 논문 200편 이상",
     "product": {
       "summary": "자체 개발 AI 플랫폼(PandaOmics, Chemistry42, InClinico)으로 노화 관련 질환의 신약 타겟을 발굴하고, 새로운 분자를 생성·최적화하며, 임상 시험 성공 확률을 예측하는 엔드투엔드 AI 신약 개발 기업. 특발성 폐섬유증(IPF) 치료제 ISB-056이 대표 파이프라인",
-      "problem_statement": "신약 개발에는 평균 10-15년, .6B의 비용이 소요되며, 임상 성공률은 10% 미만. 특히 노화 관련 질환(섬유증, 암, 신경퇴행)은 타겟이 복잡하고 기존 방법으로 신약 설계가 극도로 어려움",
+      "problem_statement": "신약 개발에는 평균 10-15년,.6B의 비용이 소요되며, 임상 성공률은 10% 미만. 특히 노화 관련 질환(섬유증, 암, 신경퇴행)은 타겟이 복잡하고 기존 방법으로 신약 설계가 극도로 어려움",
       "solution": "3개의 AI 플랫폼이 신약 개발 전 과정을 혁신: PandaOmics(노화 바이오마커·타겟 발굴), Chemistry42(AI 분자 생성·최적화), InClinico(임상 시험 성공률 예측·설계). 이를 통해 신약 개발 기간을 18개월로 단축",
       "key_features": [
         "PandaOmics: 멀티오믹스 데이터 기반 질병 타겟·바이오마커 AI 발굴 플랫폼",
@@ -18672,7 +18672,7 @@
       "catalysts": [
         "ISB-056(IPF 치료제) 임상 2상 중간 결과 긍정적 — AI 설계 신약의 임상 유효성 최초 입증 사례",
         "사우디아라비아·UAE 정부의 장수과학 R&D 투자 급증, 아부다비 거점 확대",
-        "Sanofi와의 AI 신약 공동 개발 파트너십 확대(최대 .2B 규모)",
+        "Sanofi와의 AI 신약 공동 개발 파트너십 확대(최대.2B 규모)",
         "노화 시계(Aging Clock) 기술의 웰니스·보험 산업 적용 확대"
       ],
       "media_mentions": [
@@ -21458,7 +21458,7 @@
           "MiQ Partners"
         ]
       },
-      "valuation_estimate": "€1B+ (약 .1B)",
+      "valuation_estimate": "€1B+ (약.1B)",
       "funding_history": [
         {
           "stage": "Series A",

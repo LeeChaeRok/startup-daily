@@ -26,7 +26,7 @@
     ],
     "team_highlights": "Three co-founders (2023). CEO Jignesh Dave, with a banking background in the UK and South Africa (Lloyds, etc.), operated an MVNO for seven years before recognizing the opportunity in the underlying infrastructure and founding Braid. COO Mitesh Popat is listed on Crunchbase. The company operates across India, Europe, the Middle East, and Africa; according to official press releases, its headquarters is in The Hague (Crunchbase lists London). The exact number of employees is undisclosed (est. 11-50).",
     "product": {
-      "summary": "Braid is an API platform that enables enterprises to offer their own branded SIM/eSIM mobile connectivity to customers ([kpnventures.com](https://www.kpnventures.com/news/braid-raises-38m-series-a-to-put-mobile-connectivity-inside-the-apps-of-global-enterprises)). It orchestrates networks of over 600 carriers in 200+ countries through a single API, allowing enterprises to embed connectivity into their apps or run a branded storefront without becoming an MVNO.",
+      "summary": "Braid is an API platform that enables enterprises to offer their own branded SIM/eSIM mobile connectivity to customers. It orchestrates networks of over 600 carriers in 200+ countries through a single API, allowing enterprises to embed connectivity into their apps or run a branded storefront without becoming an MVNO.",
       "problem_statement": "Building a proprietary mobile connectivity service typically requires 3-6 months of carrier negotiations, regulatory filings, and procurement procedures. Until now, enterprises have treated connectivity merely as a 'cost to absorb' rather than a strategic product component. Despite the potential strategic value of connectivity at brand touchpoints, entry barriers have prevented it.",
       "solution": "Braid replaces traditional carrier contracts and regulatory processes with a single API. Live trials in 3 minutes; branded connectivity service launch in as little as one week (vs. the usual quarter-long timeframe). Embed SIM/eSIM into products via API/SDK, or operate a branded storefront without engineering.",
       "key_features": [
@@ -60,14 +60,14 @@
       "competitive_position_summary": "Targeting the early market of 'brand-embedded connectivity' between traditional MVNEs and consumer eSIMs. With 90 enterprise customers and profitability secured, it is scaling with capital from KPN and Octopus Ventures."
     },
     "trending_reason": {
-      "summary": "On October 28-29, 2026, raised $38M in Series A—its first external funding after three years since founding ([axios.com](https://www.axios.com/pro/enterprise-software-deals/2026/10/28/braid-next-communications)). This is seen as a signal that the 'embedded connectivity' trend, akin to embedded payments (Stripe etc.), is gaining momentum.",
+      "summary": "On October 28-29, 2026, raised $38M in Series A—its first external funding after three years since founding. This is seen as a signal that the 'embedded connectivity' trend, akin to embedded payments (Stripe etc.), is gaining momentum.",
       "catalysts": [
         "$38M Series A led by Octopus Ventures with KPN Ventures participating (2026-10-28, reported exclusively by Axios)",
         "Next Communications → Braid rebranding",
         "Strategic investment from KPN, the Netherlands' largest carrier",
         "Formation of an 'embedded connectivity' market compared to embedded payments"
       ],
-      "growth_metrics": "Approximately 90 enterprise customers (major global fintech and travel brands), integrated with 600+ carriers in 200+ countries. All metrics are company-reported and have not been independently verified ([recodex.ai](https://recodex.ai/startup/saas/864700.html))."
+      "growth_metrics": "Approximately 90 enterprise customers (major global fintech and travel brands), integrated with 600+ carriers in 200+ countries. All metrics are company-reported and have not been independently verified."
     },
     "funding": {
       "total_raised_note": "First external investment since founding in 2023, thus also total funding raised. EU-Startups reports the same round as €34.13M. Approx. KRW 51B (est., based on exchange rate KRW 1,350/USD).",
@@ -10551,7 +10551,7 @@
     "team_highlights": "World-class researchers in aging biology and AI/deep learning, four hubs in Hong Kong, Shanghai, New York, and Abu Dhabi, multiple clinical-stage pipelines, 200+ papers in top journals including Nature and Science",
     "product": {
       "summary": "An end-to-end AI drug discovery company that uses its proprietary AI platforms (PandaOmics, Chemistry42, InClinico) to identify drug targets for aging-related diseases, generate and optimize novel molecules, and predict clinical trial success probability. Its lead pipeline is ISB-056, a treatment for idiopathic pulmonary fibrosis (IPF).",
-      "problem_statement": "Drug development takes an average of 10-15 years and costs .6B, with clinical success rates below 10%. Aging-related diseases (fibrosis, cancer, neurodegeneration) are especially difficult because their targets are complex and conventional methods make drug design extremely challenging.",
+      "problem_statement": "Drug development takes an average of 10-15 years and costs.6B, with clinical success rates below 10%. Aging-related diseases (fibrosis, cancer, neurodegeneration) are especially difficult because their targets are complex and conventional methods make drug design extremely challenging.",
       "solution": "Three AI platforms innovate the entire drug development process: PandaOmics (aging biomarker and target discovery), Chemistry42 (AI molecular generation and optimization), and InClinico (clinical trial success prediction and design). This shortens drug development to 18 months.",
       "key_features": [
         "PandaOmics: AI platform for disease target and biomarker discovery based on multi-omics data",
@@ -10583,7 +10583,7 @@
       "catalysts": [
         "ISB-056 (IPF treatment) Phase 2 interim results positive — first demonstration of clinical efficacy for an AI-designed drug",
         "Surge in longevity science R&D investment from Saudi Arabia and UAE governments, expansion of the Abu Dhabi hub",
-        "Expansion of AI drug co-development partnership with Sanofi (up to .2B)",
+        "Expansion of AI drug co-development partnership with Sanofi (up to.2B)",
         "Growing application of Aging Clock technology in the wellness and insurance industries"
       ],
       "growth_metrics": "9 clinical pipelines of AI-designed drugs, total pharma partnership contract value B+, 30+ Pharma.AI platform customers"

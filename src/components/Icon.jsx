@@ -29,7 +29,8 @@ const PATHS = {
   calendar: <><rect x="3.5" y="5" width="17" height="15.5" rx="2" /><path d="M3.5 10h17M8 3v4M16 3v4" /></>,
   spark: <path d="M12 3.5 13.8 10l6.7 2-6.7 2L12 20.5 10.2 14l-6.7-2 6.7-2z" />,
   filter: <path d="M4 6h16M7 12h10M10 18h4" />,
-  trendingUp: <><path d="m3.5 17 6-6 4 4 7-7.5" /><path d="M15 7.5h5.5V13" /></>,
+  more: <path d="M12 5.5v.01M12 12v.01M12 18.5v.01" strokeWidth="2.75" />,
+  trendingUp:<><path d="m3.5 17 6-6 4 4 7-7.5" /><path d="M15 7.5h5.5V13" /></>,
 }
 
 export default function Icon({ name, size = 20, label, className = '', strokeWidth = 1.75 }) {
