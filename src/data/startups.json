@@ -1,5 +1,1070 @@
 [
   {
+    "name_en": "Solvento",
+    "name_ko": "솔벤토",
+    "tagline": "멕시코 트럭 운송 결제 및 자금 조달 인프라",
+    "category": [
+      "핀테크",
+      "로지스틱스",
+      "공급망"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Mexico City",
+      "country": "Mexico",
+      "country_ko": "멕시코"
+    },
+    "company_stage": "Series A",
+    "employee_count": "51-200",
+    "website": "https://solvento.mx",
+    "founders": [
+      {
+        "name_en": "Jaime Tabachnik",
+        "name_ko": "하이메 타박치크",
+        "role": "CEO, Co-founder",
+        "background": "가업인 전기 유통 회사에서 전략 및 운영 책임자로 근무, 이후 디지털 프레이트 브로커리지 CEO 역임",
+        "notable_achievement": "멕시코 화물 운송 산업의 결제 병목 현상 직접 경험 후 Solvento 창업"
+      },
+      {
+        "name_en": "Pedro Bosch",
+        "name_ko": "페드로 보",
+        "role": "Co-founder",
+        "background": "미공개",
+        "notable_achievement": "미공개"
+      },
+      {
+        "name_en": "Guillermo Bosch",
+        "name_ko": "기예르모 보쉬",
+        "role": "Co-founder",
+        "background": "미공개",
+        "notable_achievement": "미공개"
+      }
+    ],
+    "team_highlights": "",
+    "product": {
+      "summary": "멕시코 및 라틴아메리카 트럭 운송사를 위한 자동 결제, 송장 금융, AI 기반 감사 소프트웨어",
+      "problem_statement": "멕시코 트럭 운송사의 95%가 5대 미만의 소규모 업체로, 대금 지급까지 평균 60일이 소요되어 현금 흐름에 애로 사항",
+      "solution": "운송 완료 증명(POD)을 기반으로 즉시 대금 지급, 송장 금융 및 AI 감사 자동화",
+      "key_features": [
+        "자동 결제: API 통합으로 실시간 지급",
+        "송장 금융: 운송사에 즉시 현금 흐름 제공",
+        "Solvento Audita: POD 자동 인식, 검증, 추가 요금(accessorial charges) 확인, 송장 일치 여부 감사"
+      ],
+      "tech_stack_or_innovation": "API 통합, AI 기반 문서 인식 및 데이터 추출",
+      "target_customer": "멕시코의 중소 트럭 운송사, 화주, 3PL(물류대행업체)",
+      "business_model": "결제 수수료 및 금융 이자"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "전통 팩토링 업체",
+          "comparison": "디지털 자동화 부족, 수작업 의존, 빠른 대금 지급 어려움"
+        },
+        {
+          "name": "기타 라틴아메리카 트럭킹 테크 스타트업",
+          "comparison": "Solvento는 AI 감사 기능과 종합적인 결제+금융 인프라 제공으로 차별화"
+        }
+      ],
+      "key_differentiator": "멕시코 트럭 운송 시장에 특화된 엔드 투 엔드 결제 및 신용 인프라, AI 기반 감사 기능",
+      "moat": "운송사 데이터 네트워으 효과, 대형 화주와의 관걔 구축, 현지 시장 이해도",
+      "competitive_position_summary": "멕시코 내 주요 경쟁자는 전통 금융사나 일부 핀테크이나, Solvento는 AI 감사와 실시간 결제를 결합한 유일한 플랫폼으로 평가받음"
+    },
+    "trending_reason": {
+      "summary": "2026년 2월 BBVA Spark로부터 2,500만 달러 규모의 대출 자금 확보, 운송사 6,000곳 이상으로 성장",
+      "catalysts": [
+        "미국-멕시코 국경 간 화물 운송 증가, 디지털 결제 수요 증대",
+        "멕시코 운송 업계의 현금 흐름 문재 해결 필욕"
+      ],
+      "growth_metrics": "2026년 기준 6,000개 이상의 운송사 이용, 월 최대 3억 멕시코 페소(약 1,500만 달러) 지급 처리, 누적 대출 1억 8,000만 달러(2024년 말)",
+      "media_mentions": [
+        {
+          "source": "FreightWaves",
+          "title": "Solvento raises $12.5 million to expand cross-border trucking",
+          "url": "https://www.freightwaves.com/news/solvento-raises-12-5-million-to-expand-cross-border-trucking",
+          "date": "2024-11-19",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "TechCrunch",
+          "title": "This Mexican fintech isn't too worried about Trump's tariff threats",
+          "url": "https://techcrunch.com/2024/11/26/this-mexican-fintech-isnt-too-worried-about-trumps-tariff-threats/",
+          "date": "2024-11-26",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "G2 Investment Banking",
+          "title": "Solvento: USD 25 M from BBVA Spark",
+          "url": "https://g2-consultores.com/en/insights/analisis-solvento-bbva-spark-2026",
+          "date": "2026-09-08",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "Substack (Scenius Latam)",
+          "title": "Tech companies commit US$5.7 billion to Mexico",
+          "url": "https://sceniuslatam.substack.com/p/tech-companies-commit-us57-billion",
+          "date": "2026-05-15",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$12.5M",
+      "total_raised_note": "시리즈A 에퀴테 $12.5M, 추가 적자금 $75M 이상 (2023년 $50M, 2026년 $25M 대출) 포함 시 총 자금 조달 규모는 $87.5M+.",
+      "total_raised_usd": 12500000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$12.5M",
+        "note": "에퀴테 라운드, 최종 마감 2024년 11월. 이후 2026년 2월 BBVA Spark로부터 $25M 대출 별도 조달.",
+        "amount_usd": 12500000,
+        "date": "2024-11",
+        "lead_investor": "Cometa",
+        "notable_investors": [
+          "Quona Capital",
+          "Ironspring Ventures",
+          "Dynamo Ventures",
+          "Proeza Ventures",
+          "Zenda Capital",
+          "Endeavor Fwd Fund"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$12.5M",
+          "note": "에퀴테, Cometa 리드",
+          "amount_usd": 12500000,
+          "date": "2024-11",
+          "lead_investor": "Cometa"
+        },
+        {
+          "stage": "Debt",
+          "amount": "$50M",
+          "note": "Lendable로부터 대출, 추가 에퀴테(금액 미공개) 포함",
+          "amount_usd": 50000000,
+          "date": "2023-12",
+          "lead_investor": "Lendable"
+        },
+        {
+          "stage": "Debt",
+          "amount": "$25M",
+          "note": "BBVA Spark으로부터 대출, 월 최대 3억 페소 지급 능력 확보",
+          "amount_usd": 25000000,
+          "date": "2026-02",
+          "lead_investor": "BBVA Spark"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: 멕시코 화물 운송 시장 규모 약 1,000억 달러(추정); SAM: 디지털 결제 및 금융 서비스 가능 시장; SOM: 현재 6,000개 운송사",
+      "market_trend": "미국-멕시코 교역 증가, 공급망 디지털화, 중소 운송사의 현금 흐름 개선 필요성 확대",
+      "growth_potential": "2,000개 이상의 중소 운송사가 존재, 디지털 전환 미흡, 추가 제품(보험, 연료 등)으로 확장 가능",
+      "risks": [
+        "미국-멕시코 관세 정채 변화로 인한 교역량 감소",
+        "운송사 신용 위험",
+        "경쟁 심화"
+      ],
+      "risk_mitigation": "AI 감사로 사기 방지, 분산된 고객 기반, 자본 조달 다변화"
+    },
+    "related_links": [
+      {
+        "title": "공식 웹사이트",
+        "url": "https://solvento.mx",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      }
+    ],
+    "editor_pick_comment": "멕시코 트럭 운송업의 자금 흐름을 바꾸는 핀테크, 대형 은행의 신규 자금으로 성장 가속화.",
+    "id": "solvento-2026",
+    "date": "2026-11-01",
+    "logo_url": "",
+    "generated_at": "2026-10-31T23:17:59.511Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-31T23:17:59.511Z"
+    }
+  },
+  {
+    "name_en": "Panmnesia",
+    "name_ko": "파네시아",
+    "tagline": "CXL 기반 AI 데이터센터 링크 솔루션 팹리스 스타트업",
+    "category": [
+      "반도체",
+      "AI 인프라",
+      "데이터센터"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "Daejeon",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "51-100",
+    "website": "https://panmnesia.com",
+    "founders": [
+      {
+        "name_en": "Myoungsoo Jung",
+        "name_ko": "정명수",
+        "role": "CEO",
+        "background": "KAIST 전기및전자공학부 석좌교수. 컴퓨터 아키텍처 및 메모리 시스템 연구실(CAMEL Lab) 책임자. 삼성전자 메모리사업부 연구원, UT Dallas/연세대 교수 역임.",
+        "notable_achievement": "ISCA Hall of Fame(2024, 2026), CES Innovation Award(2024, 2025), 대한민국 과학기술인상(2026) 수상. CXL Consortium Contributor Member."
+      },
+      {
+        "name_en": "Miryeong Kwon",
+        "name_ko": "권미령",
+        "role": "CSO & COO",
+        "background": "KAIST 전기및전자공학부 박사. CAMEL Lab 출신. NVMW Memorable Paper Award(2022) 수상.",
+        "notable_achievement": "KAIST 전체 박사 졸업생 중 1등으로 Outstanding Thesis Award 수상."
+      },
+      {
+        "name_en": "Sangwon Lee",
+        "name_ko": "이상원",
+        "role": "Director",
+        "background": "KAIST 전기및전자공학부 박사. LG전자 엔지니어(2010-2018) 출신.",
+        "notable_achievement": "산업체 경험과 학계 연구를 겸비한 반도체 설계 전문가."
+      }
+    ],
+    "team_highlights": "KAIST CAMEL Lab 출신 연구진 10여 명이 공동창업자로 참여. 2026년 9월 기준 임직원 83명(THE VC). 2025년 상반기 39명에서 1년 만에 2배 이상 성장. 대전 본사 외 추가 연구개발 캠퍼스 보유.",
+    "product": {
+      "summary": "Panmnesia는 CXL(Compute Express Link) 기반의 컨트롤러 IP, 스위치 반도체, GPU 메모리 확장 솔루션을 개발하는 풀스택 링크 솔루션 기업이다. AI 데이터센터의 메모리 병목을 해소하기 위해 CPU, GPU, 메모리 간 고속·저지연 연결을 제공한다.",
+      "problem_statement": "AI 모델이 대규모화됨에 따라 GPU의 HBM(고대역폭 메모리) 용량(수십 GB)이 수 TB급으로 부족해지고 있다. 기존에는 GPU를 단순 추가하는 방식으로 메모리를 늘렸지만, 이는 GPU 연산 자원이 낭비되고 비용이 급증하는 구조적 문제를 안고 있다.",
+      "solution": "Panmnesia는 CXL을 통해 GPU 외부에 DRAM 또는 SSD를 추가 메모리로 연결, 통합 가상 메모리 공간을 형성한다. 자체 개발한 CXL 3.1/3.2 컨트롤러 IP는 100ns 미만의 라운드트립 지연시간을 달성하여 GPU가 외부 메모리를 마치 로컬 메모리처럼 로드/스토어 명령어로 접근할 수 있게 한다.",
+      "key_features": [
+        "세계 최초 두 자릿수 나노초(ns) 지연시간 CXL 컨트롤러 IP(약 80ns)",
+        "CXL 3.2 포트 기반 라우팅(PBR) 지원 업계 최초 ASIC 스위치 칩(PANSWITCH)",
+        "PCIe 6.4/CXL 3.2 퓨전 스위치(프리릴리스 샘플 공급 중)",
+        "PCIe 7.0/CXL 4.0 콤보 IP(ISCA 2026 발표)",
+        "CXL-GPU: GPU 스토리지 확장 기술(UVM 대비 3.22배 성능 향상)",
+        "CXL-over-XLink 하이브리드 아키텍처(UALink, NVLink 통합)"
+      ],
+      "tech_stack_or_innovation": "TSMC 첨단 공정으로 제작된 자체 CXL 컨트롤러 IP는 물리계층부터 링크계층, 트랜잭션계층까지 전 계층을 최적화. 세계 최초로 sub-100ns(두 자릿수 ns) CXL 라운드트립 지연시간을 실리콘으로 입증. CXL 4.0(PCIe 7.0 기반)까지 지원 범위 확장. Port-Based Routing(PBR)을 지원하는 유일한 CXL 3.2 패브릭 스위치.",
+      "target_customer": "AI 하이퍼스케일러(클라우드 사업자), 데이터센터 운영사, 서버 OEM/ODM, 메모리 모듈 제조사(Samsung, SK Hynix 등), GPU 탑재 AI 서버를 구축하는 대규모 기업",
+      "business_model": "팹리스 반도체 설계 회사로서 CXL 컨트롤러 IP 라이선싱, CXL 스위치 ASIC 칩 판매, GPU 메모리 확장 키트 하드웨어 판매, 고객 맞춤형 링크 솔루션 개발 용역"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Astera Labs",
+          "comparison": "미국 나스닥 상장사(ALAB). Leo CXL 스마트 메모리 컨트롤러 시장 점유율 1위(약 35-40%). Microsoft Azure에 최초로 CXL 메모리 상용 배포. Panmnesia 대비 컨트롤러 시장에서 확실한 리드, 그러나 스위치 부문은 CXL 3.2 PBR 지원에서 Panmnesia가 앞섬."
+        },
+        {
+          "name": "Marvell Technology (XConn 인수)",
+          "comparison": "미국 상장사(MRVL). 2026년 1분기 XConn 인수로 Structera S 스위치 포트폴리오 확보. CXL 3.1 Apollo 2(Structera S 30260) 260레인 스위치 샘플링 중. 반도체 대기업으로 유통망과 고객 기반이 압도적."
+        },
+        {
+          "name": "Montage Technology",
+          "comparison": "중국 상하이 상장사(688008). 세계 최초 CXL MXC(메모리 익스팬더 컨트롤러) 출시. Samsung, SK Hynix에 CXL 컨트롤러 공급. CXL 3.2 MXC 2026년 7월 시험 생산. Panmnesia 대비 컨트롤러 고객 확보에서 우위, 스위치 부문은 미진."
+        },
+        {
+          "name": "Microchip Technology",
+          "comparison": "미국 상장사(MCHP). SMC 2000 시리즈 CXL 2.0 메모리 컨트롤러. Panmnesia 대비 제품 포트폴리오는 좁고 CXL 세대도 뒤쳐짐."
+        }
+      ],
+      "key_differentiator": "CXL 스위치에서 세계 유일의 CXL 3.2 완전 규격 준수(PBR 지원) 실리콘을 프리릴리스 공급 중인 점. CXL 컨트롤러에서 세계 최초로 두 자릿수 ns 지연시간을 실리콘으로 입증. IP-하드웨어-소프트웨어 풀스택 제공. Meta와의 공동 연구(Nature 논문)를 통한 기술 신뢰도 확보.",
+      "moat": "① CXL 컨트롤러 IP의 초저지연(두 자릿수 ns) 실리콘 검증 완료 ② CXL 3.2 PBR 스위치 최초 ASIC 공급 ③ KAIST CAMEL Lab의 10년 이상 축적된 CXL·컴퓨터 아키텍처 연구 역량 ④ Meta, SK Telecom, Openchip 등 글로벌 파트너십 ⑤ 대규모 특허 포트폴리오(다수의 CXL 관련 학회 논문 및 IP)",
+      "competitive_position_summary": "Panmnesia는 CXL 생태계에서 스위치와 컨트롤러를 동시에 보유한 유일한 독립 팹리스 스타트업이다. Astera Labs, Marvell 등 상장 대기업 대비 규모와 고객 기반은 작지만, CXL 3.2 최신 규격과 초저지연 IP에서 기술적 우위를 보유. AI 데이터센터의 메모리 분리·공유 수요가 본격화되는 2026-2028년 시장 성장의 최대 수혜 후보 중 하나."
+    },
+    "trending_reason": {
+      "summary": "Panmnesia는 2026년 9월, Meta와 공동으로 CXL 기반 AI 데이터센터 아키텍처를 Nature Reviews Electrical Engineering에 게재하며 글로벌 기술 리더십을 입증했다. 동시에 세계 유일의 CXL 3.2 PBR 패브릭 스위치 실리콘 샘플을 파트너사에 공급 중이며, SK Telecom과의 전략적 파트너십을 통해 상용화를 가속화하고 있다.",
+      "catalysts": [
+        "2026년 9월: Meta와 공동으로 CXL 기반 데이터센터 아키텍처를 Nature Portfolio(NREE)에 초청 리뷰 논문 게재 - 'One Chip, One Datacenter' 비전 제시",
+        "2026년 4월: PCIe 6.4/CXL 3.2 퓨전 스위치 프리릴리스 실리콘 공급 개시 - 세계 유일 CXL 3.2 완전 규격 준수(PBR) 스위치",
+        "2026년 6월: ISCA 2026에서 차세대 CXL 컨트롤러 및 패브릭 스위치 논문 발표(64노드까지 안정적 성능 입증)",
+        "2026년 3월: MWC26에서 SK Telecom과 CXL 기반 AI 데이터센터 아키텍처 공동 개발 파트너십 체결",
+        "2026년 5월: $30M 규모 R&D 프로젝트 수주 - 칩렛 기반 AI 가속기 및 통합 인프라 개발"
+      ],
+      "growth_metrics": "누적 투자 1,000억 원(약 $80M) 돌파. 시리즈 A 기업가치 약 3,400억 원(약 $250M). 2025년 대비 2026년 임직원 2배 이상 증가(39명→83명). CES Innovation Award 2년 연속 수상(2024, 2025). 대한민국 과학기술인상(2026) 수상.",
+      "media_mentions": [
+        {
+          "source": "Panmnesia Newsroom",
+          "title": "One Chip, One Datacenter: Meta and Panmnesia Extend Tight Coupling Beyond the Rack with CXL — Published by Invitation from Nature",
+          "url": "https://panmnesia.com/news/en/",
+          "date": "2026-09-08",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "Business Wire",
+          "title": "Panmnesia Supplies PCIe 6.4–CXL 3.2 Fusion Switch Sample Chip",
+          "url": "https://www.businesswire.com/news/home/20260415984752/en/CORRECTING-and-REPLACING-Panmnesia-Supplies-PCIe-6.4CXL-3.2-Fusion-Switch-Sample-Chip",
+          "date": "2026-04-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "Business Wire",
+          "title": "SK Telecom and Panmnesia Sign Partnership to Innovate AI Data Center Architecture",
+          "url": "https://www.businesswire.com/news/home/20260303766726/en/SK-Telecom-and-Panmnesia-Sign-Partnership-to-Innovate-AI-Data-Center-Architecture-Enhancing-Cost-Efficiency-and-Performance",
+          "date": "2026-03-03",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "Blocks and Files",
+          "title": "Panmnesia snags award for GPU CXL memory expansion",
+          "url": "https://www.blocksandfiles.com/ai-ml/2025/01/13/panmnesia-snags-award-for-gpu-cxl-memory-expansion/1598359",
+          "date": "2025-01-13",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "KED Global",
+          "title": "Panmnesia raises $57 mn in Series A funding",
+          "url": "https://www.kedglobal.com/us/korean-startups/newsView/ked202411190002",
+          "date": "2024-11-19",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$80M",
+      "total_raised_note": "회사 공식 발표 기준 누적 투자액(정부 보조금 포함). CB Insights는 약 $69.93M로 집계(시드, 스핀오프, 시리즈 A 포함). KED Global은 1,000억 원($75M)으로 보도.",
+      "total_raised_usd": 80000000,
+      "valuation_estimate": "$250M (추정)",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$57M",
+        "note": "KED Global 기준 800억 원($57M). 회사 측 발표는 $60M 이상. 환율 차이로 인한 편차. 15개 VC 참여, 한국 팹리스 스타트업 사상 최대 규모 VC 전용 시리즈 A.",
+        "amount_usd": 57000000,
+        "date": "2024-11",
+        "lead_investor": "InterVest",
+        "notable_investors": [
+          "Korea Investment Partners",
+          "KB Investment",
+          "Woori Venture Partners",
+          "BSK Investment",
+          "NVester",
+          "Murex Partners",
+          "Daesung Private Equity",
+          "TS Investment",
+          "Daekyo Investment",
+          "G&Tech Venture Investment",
+          "SL Investment",
+          "Timeworks Investment",
+          "Quantum Ventures Korea",
+          "Yuanta Investment"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Spinoff/Spinout",
+          "amount": "비공개",
+          "note": "KAIST 교원창업 초기 자금. CB Insights에 별도 라운드로 기록됨.",
+          "date": "2022-01",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Seed",
+          "amount": "비공개",
+          "note": "CB Insights 기준 2023년 9월 시드 VC 라운드. 당시 기업가치 약 $81.4M.",
+          "date": "2023-09",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$57M",
+          "note": "800억 원. 회사 측은 $60M+로 발표. InterVest 주도, 15개 VC 참여.",
+          "amount_usd": 57000000,
+          "date": "2024-11",
+          "lead_investor": "InterVest"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: CXL 메모리 컨트롤러 IC 시장은 2025년 약 $5.6억에서 2031년 약 $31.3억으로 성장 전망(CAGR 33.2%). CXL 스위치/패브릭 시장은 같은 기간 $1.7억→$17.9억(CAGR 48.0%). AI 데이터센터향 전체 CXL 시장은 2030년까지 수십억 달러 규모로 확대 전망.",
+      "market_trend": "AI 모델의 파라미터 규모가 기하급수적으로 증가하면서 GPU 메모리 계층 구조 혁신이 필수. CXL 3.1/3.2/4.0으로 규격이 진화하며 메모리 풀링과 디스어그리게이션이 현실화. 하이퍼스케일러(Azure, Meta 등)의 CXL 도입이 2025-2026년 본격화되며 생태계가 전환점을 맞고 있음. 머천트(독립) CXL 컨트롤러 시장은 Astera Labs와 Marvell이 주도하나, 스위치 부문은 아직 초기 단계.",
+      "growth_potential": "Panmnesia는 세계 유일의 CXL 3.2 PBR 스위치 공급사로서 AI 데이터센터의 메모리 확장 표준을 선점할 위치. Meta와의 공동 연구, SKT와의 상업 파트너십, $30M R&D 프로젝트 수주 등이 성장을 뒷받침. CXL 4.0(PCIe 7.0) 콤보 IP까지 확보하며 차세대 규격 대응도 선행. 상용 대량 생산이 본격화되는 2027년 이후 매출 급증이 예상됨.",
+      "risks": [
+        "대형 경쟁사(Astera Labs, Marvell) 대비 자본력과 고객 기반 열세",
+        "CXL 시장 자체가 아직 초기 단계로 예상보다 채택 속도가 더딜 가능성",
+        "중국 Montage Technology의 가격 경쟁력과 중국 메모리 제조사와의 관계",
+        "메모리 반도체 대기업(Samsung, SK Hynix)의 자체 CXL 컨트롤러 개발 가능성",
+        "아직 대규모 양산 실적과 매출이 검증되지 않음(2025년 매출 4,545만 원)"
+      ],
+      "risk_mitigation": "Meta, SK Telecom 등 글로벌 파트너십을 통한 기술 검증과 시장 접근권 확보. CXL 스위치 부문에서의 퍼스트무버 이점. KAIST 연구 네트워크를 통한 지속적 인재 유입. 정부 R&D 과제 수주(총 $40M+)로 연구개발 자금 조달 다각화. 독자 IP 포트폴리오로 대기업 종속 위험 최소화."
+    },
+    "related_links": [
+      {
+        "title": "공식 웹사이트",
+        "url": "https://panmnesia.com",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "CXL-GPU 기술 브리프",
+        "url": "https://panmnesia.com/technology/blog/2024-06-25-cxl-gpu-techblog/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "시리즈 A 투자 공식 발표",
+        "url": "https://panmnesia.com/news/en/2024-11-18-series-a-funding/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "ISCA 2026 논문 발표",
+        "url": "https://panmnesia.com/news/en/2026-06-24-panmnesia-isca2026-eng/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "KAIST CAMEL Lab 연구실",
+        "url": "https://camelab.org/pmwiki.php/Main/Members",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      }
+    ],
+    "editor_pick_comment": "AI 데이터센터 전체를 하나의 반도체처럼 연결하는 CXL 패브릭을 세계 최초로 실리콘으로 구현, Meta와 Nature 논문까지 공동 발표한 한국 팹리스의 숨은 고수.",
+    "id": "panmnesia-2026",
+    "date": "2026-11-01",
+    "logo_url": "/logos/panmnesia-2026.png",
+    "generated_at": "2026-10-31T23:17:59.511Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 403,
+      "checked_at": "2026-10-31T23:17:59.511Z"
+    }
+  },
+  {
+    "name_en": "CynLr",
+    "name_ko": "CynLr (사이버네틱스 연구소)",
+    "tagline": "비전 기반 로봇 조작 지능 플랫폼",
+    "category": [
+      "로봇공학",
+      "인공지능",
+      "제조"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "Bengaluru",
+      "country": "India",
+      "country_ko": "인도"
+    },
+    "company_stage": "Series A",
+    "employee_count": "51-200 (추정)",
+    "website": "https://www.cynlr.com/",
+    "founders": [
+      {
+        "name_en": "Gokul NA",
+        "name_ko": "고쿨 NA",
+        "role": "Co-founder & CEO",
+        "background": "National Instruments India에서 머신 비전 전문가로 근무하며 인도, 사우디아라비아, 러시아에서 산업용 비전 시스템을 개발. 2015년부터 상용화 테스트 시작.",
+        "notable_achievement": "CynLr의 물체 지능(Object Intelligence) 기술과 CyRo 로봇 시스템의 핵심 설계자"
+      },
+      {
+        "name_en": "Nikhil Ramaswamy",
+        "name_ko": "니킬 라마스와미",
+        "role": "Co-founder",
+        "background": "구체적인 경력은 공개되지 않았으나, 고쿨과 함께 2015년부터 머신 비전 문제 30여 건을 해결하며 기술 검증 주도",
+        "notable_achievement": "CynLr 공동 창업 및 초기 비전 스택 개발"
+      }
+    ],
+    "team_highlights": "IISc 신경과학센터와의 연구 협력(2025년 10월)을 통해 원숭이 시각 처리 방식을 로 학습에 접목 중",
+    "product": {
+      "summary": "CyRo는 이중 암과 실시간 비전-힘 감지 시스템으로, 사전 훈련 없이 낮선 물체를 직감적으로 파악하고 조작할 수 있는 산업용 로 플랫폼",
+      "problem_statement": "기존 산업용 로봇은 물체마다 별도의 훈련이나 프로그래밍이 필용해, 변동석이 높은 환경에서 다중 품목 조립이 어려움",
+      "solution": "전용 비전 스택 CLX1과 강화 학슴 기반 AI가 물체의 형상, 질감, 반사율을 즉석에서 학슴하여 별도 훈련 없이 그립, 조작, 정합 장착을 가능하게 함",
+      "key_featres": [
+        "사전 학슴 없이 어떤 물체든 그림 가능",
+        "삼중 또는 이중 암 구조로 시-동작 동시 수생",
+        "힘 감지 및 변형 재료(플라스틱, 반성체) 처리가능",
+        "모듈화 구조 - 추후 레고식 키트 제공 계획"
+      ],
+      "tech_stack_or_innovation": "물체 지능(Object Intelligence): 자체 개발 비전 하드웨어 + 강화 학슴(RL) 기반 조작 정책, MuJoCo, NVIDIA Omniverse 시뮬레이션 활용",
+      "target_customer": "자동차 제조사, 반도체 장비 제조사, 전자제품 조립 라인",
+      "business_model": "로봇 시스템 및 비전 스택 하드웨어/소프트웨어 판매. 구독형 서비스 가능성 검토 중"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Veo Robotics",
+          "comparison": "3D 센싱 기반 협동 로봇 안전 솔루션에 특화, 물체 인식보다는 안전에 초점"
+        },
+        {
+          "name": "Flexiv",
+          "comparison": "힘 제어 기반 적응형 로, CynLr보다 물체 일반화 성능이 제한적"
+        },
+        {
+          "name": "Covariant",
+          "comparison": "AI 로 비전 및 그리핑, 대량 데이터 학슴 필요, CynLr는 제로샷 적응 강점"
+        },
+        {
+          "name": "Apera AI",
+          "comparison": "비전 기반 로봇 가이던스, CynLr의 다중 팔 구조 및 물체 조작 폭이 더 넓음"
+        },
+        {
+          "name": "Intrinsic (Alphabet)",
+          "comparison": "로봇 소프트웨어 플랫폼, CynLr는 하드웨어-소프트웨어 통합 스택 제공"
+        }
+      ],
+      "key_differentiator": "사전 훈련 없이 물체를 즉시 인식하고 조작하는 '물체 지능'과 다중 팔 아키텍처로 분리된 시-동작 파이프라인 극복",
+      "moat": "하드웨어-소프트웨어 수직 통합, 400개 이상 부품의 글로벌 공급망, 특허 물체 지능 알고리즘",
+      "competitive_position_summary": "산업용 조립 자동화 중에서도 '부품 대 부품(part-to-part)' 정합 작업에 특화되어 있으며, 기존 로봇이 다루지 못한 반사체·변형 재료에서 강점"
+    },
+    "trending_reason": {
+      "summary": "2024년 11월 1,000만 달러 시리즈 A 유치 후 2026년 2월 7,500만 달러 추가 조달 발표, IISc 신경과학연구소와 협력, 오디 공장 시범 도입 등 최근 90일 내 주요 이벤트 집중",
+      "catalysts": [
+        "7,500만 달러 조달 계획(2026년 2월, CNBC TV18 보도)",
+        "IISc 신경과학센터와 협업으로 생물학적 시각 처리 연구 시작(2025년 10월)",
+        "AI Impact Summit에서 CyRo 시연 및 오디 공급망 테스트"
+      ],
+      "growth_metrics": "연환산 매출 약 100만 달러(2026년 3월 기준), 2027년까지 2,200만 달러 목표",
+      "media_mentions": [
+        {
+          "source": "Economic Times",
+          "title": "Visual robotics platform CynLr raises $10 million in round led by Pavestone, Athera Venture Partners",
+          "url": "https://economictimes.indiatimes.com/tech/funding/visual-robotics-platform-cynlr-raises-10-million-in-round-led-by-pavestone-athera-venture-partners/articleshow/115022837.cms",
+          "date": "2024-11-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "CNBC TV18",
+          "title": "Robotics startup CynLr eyes $75 million raise, targets break-even before 2030 IPO",
+          "url": "https://www.cnbctv18.com/business/startup/robotics-startup-cynlr-eyes-75-million-dollars-fundraise-targets-break-even-before-2030-ipo-exclusive-ws-l-19851845.htm",
+          "date": "2026-02-17",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "Inc42",
+          "title": "Will CynLr's Bet On Object Intelligence Revolutionise Industrial Robotics?",
+          "url": "https://inc42.com/startups/will-cynlrs-bet-on-object-intelligence-revolutionise-industrial-robotics/",
+          "date": "2026-03-12",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "The Print",
+          "title": "Can monkeys teach robots? Bengaluru’s CynLr & IISc bet on it",
+          "url": "https://theprint.in/ground-reports/can-monkeys-teach-dumb-robots-bengalurus-cynlr-iisc-lab-are-making-automation-smarter/2757019/",
+          "date": "2025-10-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "Open Magazine",
+          "title": "The Indian Robo-Rush",
+          "url": "https://openthemagazine.com/feature/the-indian-robo-rush",
+          "date": "2026-03-12",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$15.2M",
+      "total_raised_note": "Economic Times 기사 기준. 시리즈 A 1,000만 달러 + 이전 라운드 520만 달러 합계.",
+      "total_raised_usd": 15200000,
+      "valuation_estimate": "$80M (추정)",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$10M",
+        "note": "Pavestone, Athera Venture Partners 공동 리드; Speciale Invest, Infoedge(Redstart) 참여",
+        "amount_usd": 10000000,
+        "date": "2024-11",
+        "lead_investor": "Pavestone, Athera Venture Partners",
+        "notable_investors": [
+          "Pavestone",
+          "Athera Venture Partners",
+          "Speciale Invest",
+          "Infoedge (Redstart)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$5.2M",
+          "note": "Speciale Invest, Infoedge 등 참여 (정확한 일자 미상)",
+          "amount_usd": 5200000,
+          "date": "2023~2024",
+          "lead_investor": "Speciale Invest"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "전체 주소 가능 시장(TAM) 160억 달러 (조립 자동화 솔루션, Inc42 추정)",
+      "market_trend": "글로벌 제조업의 유연 자동화 수요 급증, 특히 전기차·반도체 부문에서 변동성 큰 부품 조립 자동화 필요성 증가",
+      "growth_potential": "2027년까지 매출 2,200만 달러 목표, 이후 연간 300대 로 시스팀 판매 계획",
+      "risks": [
+        "산업용 안전 인증 취득까지 2-3년 소요",
+        "대규모 고객사 Lock-in 위험",
+        "Veo Robotics, Alphabet 등 대형 경쟁사 대비 자원 부족"
+      ],
+      "risk_mitigation": "글로벌 반도체 장비사 및 자동차 OEM과 장기 파일럿 계약 체결, 자체 공급방 강화 및 7,500만 달러 조달 추진"
+    },
+    "related_links": [
+      {
+        "title": "공식 웹사이트",
+        "url": "https://www.cynr.com/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "Economic Ties 보도",
+        "url": "https://economictimes.indiatimes.com/tech/funding/visual-robotics-platform-cynlr-raises-10-million-in-round-led-by-pavestone-athera-venture-partners/articleshow/115022837.cms",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "Inc42 분석",
+        "url": "https://inc42.com/startups/will-cynlrs-bet-on-object-intelligence-revolutionise-industrial-robotics/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      }
+    ],
+    "editor_pick_comment": "사전 학습 없이 낯선 물체를 즉시 조작하는 비전 지능으로 산업용 로봇 분야에서 독보적인 위치를 확보하다.",
+    "id": "cynlr-2026",
+    "date": "2026-11-01",
+    "logo_url": "/logos/cynlr-2026.png",
+    "generated_at": "2026-10-31T23:17:59.511Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-31T23:17:59.511Z"
+    }
+  },
+  {
+    "name_en": "AirForestry",
+    "name_ko": "에어포레스트리",
+    "tagline": "드론으로 숲을 가꾸는 무인 항공 임업",
+    "category": [
+      "드론",
+      "임업",
+      "기후테크"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "Uppsala",
+      "country": "Sweden",
+      "country_ko": "스웨덴"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://airforestry.com",
+    "founders": [
+      {
+        "name_en": "Caroline Walerud",
+        "name_ko": "캐롤라인 왈레루드",
+        "role": "CEO",
+        "background": "생물학자 출신 연쇄 창업가이자 임팩트 투자자. Walerud Ventures 설립.",
+        "notable_achievement": "Klarna, Midsummer 등 초기 투자"
+      },
+      {
+        "name_en": "Olle Gelin",
+        "name_ko": "올레 옐린",
+        "role": "CPO",
+        "background": "6대째 이어온 산림 농장 경영; Scania에서 하이브리드 트럭 개발, Skogforsk에서 산림 자동화 프로젝트 AUTO2 리드",
+        "notable_achievement": "세계 최대 산림 자동화 프로젝트 리드"
+      },
+      {
+        "name_en": "Mauritz Andersson",
+        "name_ko": "마우리츠 안데르손",
+        "role": "Head of Research and Emerging Tech",
+        "background": "물리학자, 양자광학 연구 12년, 광학 시스템 산업 경험 11년",
+        "notable_achievement": "전기 항공 기술이 가장 효율적인 운송 수단이 될 것이라는 비전 제시"
+      },
+      {
+        "name_en": "Magnus Hedlund",
+        "name_ko": "마그누스 헤들룬드",
+        "role": "CTO",
+        "background": "Founding Engineer",
+        "notable_achievement": ""
+      }
+    ],
+    "team_highlights": "",
+    "product": {
+      "summary": "전기 자율 드론으로 공중에서 나무를 솎아베기하고 운반하는 무인 임업 시스템",
+      "problem_statement": "전통적인 중장비 임업은 토양 압축, 뿌리 손상, 생물다양성 파괴를 유발하며 탄소 배출이 큼",
+      "solution": "무거운 지상 장비 대신 전기 드론이 공중에서 나무를 식별·벌목·운반. AI와 컴퓨터 비전으로 솎아베기할 나무를 정밀 선별하고, 특수 수확 툴로 가지치기 후 절단, 드론이 통나무를 도로변까지 들어 나름.",
+      "key_features": [
+        "AI 기반 개체 수준 수목 선별",
+        "완전 전기 자율 비행, GPS 불필요(컴퓨터 비전 항법 추정)",
+        "특수 제작 경량 수확 툴 (EIC ADATHA 프로젝트로 개발 중)",
+        "지상 관제소에서 다중 드론 동시 운영",
+        "토양 손상 제로, 탄소 배출 제로 (운영 시)"
+      ],
+      "tech_stack_or_innovation": "고하중 자율 드론 플랫폼 + AI/컴퓨터 비전 기반 수목 선별 + 공중 수확 메커니즘. 전기 동력으로 화석연료 불필요.",
+      "target_customer": "북유럽 및 북반구 산림 소유주, 임업 회사, 지속가능 임업 인증(FSC 등)을 추구하는 기관",
+      "business_model": "드론 시스템 판매 또는 임업 서비스(헥타르당 과금) 계약. 현재 상업 파일럿 단계로 수익화 초기."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Treevia (브라질)",
+          "comparison": "산림 모니터링 센서에 집중, 수확은 하지 않음"
+        },
+        {
+          "name": "DroneSeed / Silvaseed (미국)",
+          "comparison": "드론으로 나무 씨앗 살포 (조림), 벌목 아님"
+        },
+        {
+          "name": "전통 임업 장비 업체 (John Deere, Ponsse, Komatsu Forest)",
+          "comparison": "지상 중장비 기반, 토양 훼손 필연적; AirForestry와 직접 경쟁보다는 대체 대상"
+        }
+      ],
+      "key_differentiator": "세계 최초이자 유일한 공중 나무 수확 기술; 토양 손상과 탄소 배출을 근본적으로 해결하는 완전 전기·자율 시스템",
+      "moat": "특허 출원된 공중 수확 메커니즘; 2024년까지 유일무이한 선점; 북유럽 산림 조건에 최적화된 자체 소프트웨어 및 하드웨어 스택",
+      "competitive_position_summary": "개척자로서 경쟁자가 거의 없으나, 기존 대형 장비 업체의 대응 가능성과 하드웨어 대량 생산 난이도가 도전 과제"
+    },
+    "trending_reason": {
+      "summary": "2024년 Northzone 주도 씨드, 2026년 시리즈A 프리커밋, EU 혁신위원회(EIC) 그랜트 수주 등 연속적 자금 조달 성공과 기술 진전으로 상업화 가속",
+      "catalysts": [
+        "2026년 2월 2800만 SEK(약 260만 유로) 시리즈A 전환사채 유치",
+        "2026년 9월 EIC 'ADATHA' 프로젝트 추가 자금 및 지분 투자 텀시트 수령",
+        "기후변화와 산림 보호 의무 강화로 친환경 임업 수요 급증",
+        "2025년 말 CEO 교체 없이 Caroline Walerud가 직접 CEO 맡아 경영 가속화"
+      ],
+      "growth_metrics": "2024년 씨드 이후 12명 엔지니어링 채용 공고 (2026년 2월 기준)",
+      "media_mentions": [
+        {
+          "source": "Northzone",
+          "title": "Our investment in AirForestry: revolutionising tree harvesting with drones",
+          "url": "https://northzone.com/insights/our-investment-in-airforestry-revolutionising-tree-harvesting-with-drones",
+          "date": "2024-10-10",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        },
+        {
+          "source": "Uppsala Innovation Centre",
+          "title": "From Tech Idea to Global Potential – 5 Questions for AirForestry’s CEO",
+          "url": "https://uic.se/en/from-tech-idea-to-global-potential-5-questions-for-airforestrys-ceo",
+          "date": "2026-10-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-10-31T23:17:59.511Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "€13M",
+      "total_raised_note": "€10.3M seed + SEK 28M (약 €2.6M) pre-Series A 전환사채; EIC grant 별도 (금액 비공개)",
+      "total_raised_usd": 14500000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A (Pre-commit)",
+        "amount": "SEK 28M",
+        "note": "Pre-Series A 전환사채, 기존 투자자 참여",
+        "date": "2026-02",
+        "lead_investor": "Northzone",
+        "notable_investors": [
+          "Northzone"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "€10.3M",
+          "note": "€1.7M 스웨덴 에너지청 보조금 포함",
+          "amount_usd": 11124000,
+          "date": "2024-10",
+          "lead_investor": "Northzone"
+        },
+        {
+          "stage": "Grant",
+          "amount": "비공개",
+          "note": "EIC ADATHA 프로젝트 grant + equity term sheet",
+          "date": "2026-09",
+          "lead_investor": "European Innovation Council (EIC)"
+        },
+        {
+          "stage": "Pre-Series A",
+          "amount": "SEK 28M",
+          "note": "전환사채",
+          "date": "2026-02",
+          "lead_investor": "Northzone"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "전 세계 임업 기계 시장 2030년 약 80억 달러 (추정); 북유럽 및 북미 산림 솎아베기 시장이 초기 목표",
+      "market_trend": "기후변화로 산림 건강 관리 필요성 ↑, ESG 규제로 친환경 임업 장비 수요 ↑, 드론·자율주행 기술 성숙으로 하드웨어 비용 ↓",
+      "growth_potential": "유일무이한 기술로 틈새 시장 장악 가능; 규제 완화 및 비용 절감 시 대형 임업 회사로 확장성 큼",
+      "risks": [
+        "드론 배터리·페이로드 한계로 벌목 가능한 나무 크기 제한 (현재 북유럽 기준 중간 크기 위주)",
+        "항공 규제 (특히 야간·악천후 비행) 및 민원",
+        "전통 임업 대기업의 대응 또는 모방 기술 개발",
+        "하드웨어 대량 생산 및 유지보수 네트워크 구축 필요"
+      ],
+      "risk_mitigation": "북유럽 선행 시장에 집중, EIC 등 공공 자금으로 기술 완성도 확보, Northzone 등 VC의 후속 투자로 스케일링 자본 확보"
+    },
+    "related_links": [
+      {
+        "title": "AirForestry 공식 홈페이지",
+        "url": "https://airforestry.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "Seed 라운드 보도 (자사 블로그)",
+        "url": "https://airforestry.com/blog/2024/10/10/e10-3m-seed-round-to-power-airforestrys-fossil-free-aerial-forestry/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "Pre-Series A 보도 (자사 블로그)",
+        "url": "https://airforestry.com/blog/2026/02/24/airforestry-secures-sek-28m-pre-commit-to-the-series-a-ramps-up-engineering-hires/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "EIC 펀딩 보도 (자사 블로그)",
+        "url": "https://airforestry.com/blog/2026/09/25/eic-funding-takes-airforestrys-airborne-harvesting-closer-to-commercialization/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "Northzone 투자 인사이트",
+        "url": "https://northzone.com/insights/our-investment-in-airforestry-revolutionising-tree-harvesting-with-drones",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      }
+    ],
+    "editor_pick_comment": "드론으로 나무를 하늘에서 베어내는 상상을 현실로 만든 스웨덴 딥테크; 임업의 가장 큰 환경 비용인 토양 훼손을 없앤다는 점이 기후테크로서의 본질이다.",
+    "id": "airforestry-2026",
+    "date": "2026-11-01",
+    "logo_url": "/logos/airforestry-2026.png",
+    "generated_at": "2026-10-31T23:17:59.511Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-31T23:17:59.511Z"
+    }
+  },
+  {
+    "name_en": "Influur",
+    "name_ko": "인플루어",
+    "tagline": "AI 기반 인플루언서 마케팅 에이전트",
+    "category": [
+      "인플루언서 마케팅",
+      "음악 마케팅"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Miami",
+      "country": "USA",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://www.influur.com",
+    "founders": [
+      {
+        "name_en": "Alessandra Angelini",
+        "name_ko": "알레산드라 안젤리니",
+        "role": "Co-founder & CEO",
+        "background": "",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Valeria Angelini",
+        "name_ko": "발레리아 안젤리니",
+        "role": "Co-founder",
+        "background": "",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Paula Coleman",
+        "name_ko": "파울라 콜먼",
+        "role": "Co-founder",
+        "background": "",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Fefi Oliveira",
+        "name_ko": "페피 올리베이라",
+        "role": "Co-founder",
+        "background": "6.3M 팔로워를 보유한 TikTok 크리에이터",
+        "notable_achievement": ""
+      }
+    ],
+    "team_highlights": "",
+    "product": {
+      "summary": "인플루언서와 브랜드를 연결하는 마켓플레이스 및 AI 마케팅 에이전트",
+      "problem_statement": "인플루언서 마케팅에서 수동 아웃리치, 일관되지 않은 가격, 분산된 결제, 전략 부재로 인한 비효율 발생",
+      "solution": "플랫폼은 크리에이터 검증, 브랜드-인플루언서 매칭, AI 기반 캠페인 자동화, 결제 처리, 고급 분석을 제공",
+      "key_features": [
+        "AI 에이전트 Pulse (음악 마케팅 특화)",
+        "크리에이터 자동 발굴 및 벌크 아웃리치",
+        "안전한 결제 시스템 (에스크로 방식)",
+        "실시간 분석 대시보드",
+        "프리미엄 구독 (인플루언서용 AI 미디어킷, 독점 캠페인 접근)"
+      ],
+      "tech_stack_or_innovation": "프로프라이어터리 Pulse Score™로 청중 인텔리전스 및 음악 트렌드 분석, AI가 캠페인 전체를 자동 실행",
+      "target_customer": "음악 레이블, 브랜드, 인플루언서 (특히 음악 마케팅 팀)",
+      "business_model": "거래 수수료 및 인플루언서용 프리미엄 구독, 핀테크 도구 (인플루언서 뱅킹)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Captiv8",
+          "comparison": "엔터프라이즈급 인플루언서 마케팅 플랫폼, 음악 특화 AI 기능 없음"
+        },
+        {
+          "name": "Influential",
+          "comparison": "IBM Watson 기반 인플루언서 플랫폼, AI 강조하나 음악 분야 집중도 낮음"
+        },
+        {
+          "name": "Fohr Card",
+          "comparison": "셀프서비스 인플루언서 마켓플레이스, 음악 특화 기능 부재"
+        }
+      ],
+      "key_differentiator": "음악 마케팅에 최적화된 전담 AI 에이전트 'Pulse'와 검증된 크리에이터 커뮤니티",
+      "moat": "네트워크 효과 (30K 이상 활성 인플루언서, 5,000 브랜드), 음악 트렌드 분석 독점 데이터, 인플루언서 뱅킹 서비스",
+      "competitive_position_summary": "음악 업계를 대상으로 한 최초의 AI 에이전트 기반 인플루언서 마케팅 플랫폼으로 시장 내 독보적 위치"
+    },
+    "trending_reason": {
+      "summary": "2026년 4월 음악 마케팅 전용 AI 에이전트 'Pulse' 출시 및 2024년 11월 $10M 시리즈 A 유치로 성장 가속화",
+      "catalysts": [
+        "시리즈 A 투자 (Point72 Ventures, HTwenty Capital 주도)",
+        "Pulse AI 에이전트 출시로 음악 업계 대상 마케팅 자동화",
+        "인플루언서 프리미엄 구독 및 핀테크 서비스 도입"
+      ],
+      "growth_metrics": "활성 인플루언서 83% 증가, 브랜드 지출 200% 성장 (2024년 기준)",
+      "media_mentions": []
+    },
+    "funding": {
+      "total_raised": "$10M",
+      "total_raised_note": "시리즈 A $10M만 공개; 2021년 프리시드 규모 비공개",
+      "total_raised_usd": 10000000,
+      "valuation_estimate": "$50M (추정)",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$10M",
+        "amount_usd": 10000000,
+        "date": "2024-11",
+        "lead_investor": "Point72 Ventures",
+        "notable_investors": [
+          "HTwenty Capital",
+          "Magma Partners",
+          "Daedalus",
+          "IGNIA",
+          "Redwood",
+          "Vamos Ventures",
+          "Amplifica Capital",
+          "Daniel Gutenberg",
+          "Sofía Vergara (개인)",
+          "Thalía (개인)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Pre-seed",
+          "amount": "비공개",
+          "note": "Friends and family round",
+          "date": "2021",
+          "lead_investor": "",
+          "notable_investors": []
+        },
+        {
+          "stage": "Series A",
+          "amount": "$10M",
+          "amount_usd": 10000000,
+          "date": "2024-11",
+          "lead_investor": "Point72 Ventures",
+          "notable_investors": [
+            "HTwenty Capital",
+            "Magma Partners",
+            "Daedalus",
+            "IGNIA",
+            "Redwood",
+            "Vamos Ventures",
+            "Amplifica Capital",
+            "Daniel Gutenberg",
+            "Sofía Vergara (individual)",
+            "Thalía (individual)"
+          ]
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 인플루언서 마케팅 시장은 2023년 약 210억 달러, 음악 마케팅은 그 중 고성장 분야",
+      "market_trend": "AI 기반 마케팅 자동화, 크리에이터 이코노미 성장, 인플루언서 금융 서비스 수요 증가",
+      "growth_potential": "200% 브랜드 지출 성장, 지속적 신규 시장 진출 (11개국)으로 높은 성장 가능성",
+      "risks": [
+        "경쟁 심화 (Captiv8 등)",
+        "플랫폼 의존도 증가",
+        "인플루언서 이탈 가능성"
+      ],
+      "risk_mitigation": "음악 특화 AI로 차별화, 커뮤니티 충성도 강화, 핀테크 락인 효과"
+    },
+    "related_links": [
+      {
+        "title": "공식 웹사이트",
+        "url": "https://www.influur.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "시리지 A 투자 발표",
+        "url": "https://www.prnewswire.com/news-releases/influur-the-leading-professional-network-for-influencers-raises-10m-series-a-introduces-industry-first-ai-tool-to-predict-campaign-impact-and-new-premium-subscription-302305815.html",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      },
+      {
+        "title": "Forbes 보도",
+        "url": "https://www.forbes.com/sites/adamwescott/2024/11/14/female-founders-raise-10m-for-creator-community-and-fintech/",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-10-31T23:17:59.511Z"
+      }
+    ],
+    "editor_pick_comment": "음악 업계를 정조준한 AI 인플루언서 마케팅 에이전트 'Pulse'가 시리즈 A 이후 성장을 가속할 핵심 동력이다.",
+    "id": "influur-2026",
+    "date": "2026-11-01",
+    "logo_url": "/logos/influur-2026.png",
+    "generated_at": "2026-10-31T23:17:59.511Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-10-31T23:17:59.511Z"
+    }
+  },
+  {
     "name_en": "Braid",
     "name_ko": "브레이드",
     "tagline": "통신사 없이 브랜드가 모바일 연결을 제공하는 API 플랫폼",

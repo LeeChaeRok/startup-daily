@@ -71,6 +71,76 @@
         "source_name": "DigitalToday",
         "found": "2026-10-31"
       }
+    ],
+    "ginkgo-bioworks-2026": [
+      {
+        "date": "2026-10-31",
+        "kind": "product",
+        "title_ko": "ARPA-H GIVE 프로그램 수주",
+        "title_en": "ARPA-H GIVE Program Award",
+        "detail_ko": "징코가 ARPA-H GIVE 프로그램에서 RNA 개인 맞춤형 의약품 자동 제조 시스템 구축을 위해 최대 1,750만 달러 하도급 계약 체결.",
+        "detail_en": "Ginkgo awarded up to $17.5M subcontract under ARPA-H GIVE program to build autonomous manufacturing system for individualized RNA medicines.",
+        "source_url": "https://www.businesswire.com/news/home/20260910477067/en/Ginkgo-Bioworks-Joins-ARPA-H-GIVE-Program-to-Build-Autonomous-Manufacturing-System-for-Individualized-RNA-Medicines",
+        "source_name": "Business Wire",
+        "found": "2026-11-01"
+      },
+      {
+        "date": "2026-10-08",
+        "kind": "product",
+        "title_ko": "Araceli Endeavor 이미징 시스템 통합",
+        "title_en": "Araceli Endeavor Imaging System Integrated",
+        "detail_ko": "징코가 Araceli Biosciences의 Endeavor 고속 고함량 이미징 장비를 Nebula 자율 실험실에 통합.",
+        "detail_en": "Ginkgo integrates Araceli Biosciences' Endeavor high-content imaging instrument into its Nebula autonomous lab.",
+        "source_url": "https://everyticker.com/quote/DNA/news/ginkgo-bioworks-integrates-araceli-biosciences-endeavor-imaging-system-into-nebula-autonomous-lab",
+        "source_name": "EveryTicker",
+        "found": "2026-11-01"
+      },
+      {
+        "date": "2026-09-16",
+        "kind": "product",
+        "title_ko": "자율 실험실 하드웨어 판매 시작",
+        "title_en": "Autonomous Lab Hardware Sales Launch",
+        "detail_ko": "노보 노디스크가 징코 바이오웍스의 자율 실험실 시스템을 첫 구매. RAC 모듈과 Catalyst 소프트웨어 기반.",
+        "detail_en": "Novo Nordisk buys the first autonomous laboratory system from Ginkgo Bioworks, built on RAC modules and Catalyst software.",
+        "source_url": "https://cultivated-x.com/manufacturing-technology/ginkgo-bioworks-starts-selling-robotic-labs-behind-its-fermentation-work/",
+        "source_name": "Cultivated X",
+        "found": "2026-11-01"
+      }
+    ],
+    "isar-aerospace-2026": [
+      {
+        "date": "2026-09-05",
+        "kind": "product",
+        "title_ko": "스펙트럼 로켓 최초 궤도 발사 성공",
+        "title_en": "Spectrum rocket first orbital launch success",
+        "detail_ko": "이자르 에어로스페이스가 2026년 9월 5일 노르웨이 안도야 우주기지에서 스펙트럼 로켓의 두 번째 비행을 통해 궤도 진입에 성공하고 큐브샛 6기를 배치했습니다. 유럽 본토에서 상업 기업이 최초로 궤도 발사에 성공한 사례입니다.",
+        "detail_en": "On September 5, 2026, Isar Aerospace successfully reached orbit and deployed six CubeSats on its second flight of the Spectrum rocket from Andøya Spaceport in Norway. This is the first orbital launch from continental Europe by a commercial company.",
+        "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Boost/Isar_Aerospace_achieves_first_launch_to_orbit_from_continental_Europe",
+        "source_name": "European Space Agency",
+        "found": "2026-11-01"
+      },
+      {
+        "date": "2026-08-27",
+        "kind": "funding",
+        "title_ko": "ESA 유럽 발사체 경쟁 2억 유로 계약",
+        "title_en": "ESA European Launcher Challenge EUR 200M contract",
+        "detail_ko": "이자르 에어로스페이스가 ESA(유럽우주국)의 유럽 발사체 경쟁(European Launcher Challenge)에 선정되어 약 2억 유로 규모의 계약을 체결했습니다. 이 자금은 차세대 발사체 개발과 발사 인프라 확장에 사용됩니다.",
+        "detail_en": "Isar Aerospace signed a contract with the European Space Agency under the European Launcher Challenge, securing approximately EUR 200 million in program commitments to accelerate next-generation launch vehicle development and expand launch infrastructure.",
+        "source_url": "https://isaraerospace.com/images/Press-Release_Isar-Aerospace-signs-contract-with-ESA-under-the-European-Launcher-Challenge_27.08.2026.pdf",
+        "source_name": "Isar Aerospace Press Release",
+        "found": "2026-11-01"
+      },
+      {
+        "date": "2026-06-09",
+        "kind": "funding",
+        "title_ko": "시리즈 D 2억7000만 유로 유치",
+        "title_en": "Series D EUR 270 million raised",
+        "detail_ko": "이자르 에어로스페이스가 2억7000만 유로(약 312억 달러)의 시리즈 D 투자를 유치했습니다. 신규 투자자로 Island Green Capital과 Molten Ventures가 참여했으며, 기존 투자자 HV Capital, Lakestar, UVC Partners 등도 참여했습니다.",
+        "detail_en": "Isar Aerospace raised EUR 270 million (approx. $312 million) in Series D funding. New investors include Island Green Capital and Molten Ventures, with participation from existing investors HV Capital, Lakestar, UVC Partners, and others.",
+        "source_url": "https://spacenews.com/isar-aerospace-raises-270-million-euros-for-global-launch-expansion/",
+        "source_name": "SpaceNews",
+        "found": "2026-11-01"
+      }
     ]
   },
   "checked": {
@@ -79,6 +149,8 @@
     "langchain-2026": "2026-10-30",
     "nala-2026": "2026-10-30",
     "pachama-2026": "2026-10-31",
-    "chainlink-labs-2026": "2026-10-31"
+    "chainlink-labs-2026": "2026-10-31",
+    "ginkgo-bioworks-2026": "2026-11-01",
+    "isar-aerospace-2026": "2026-11-01"
   }
 }

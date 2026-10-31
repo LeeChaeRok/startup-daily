@@ -1,4 +1,551 @@
 {
+  "solvento-2026": {
+    "tagline": "Mexico's trucking payment and financing infrastructure",
+    "category": [
+      "Fintech",
+      "Logistics",
+      "Supply Chain"
+    ],
+    "headquarters": {
+      "country_ko": "Mexico"
+    },
+    "founders": [
+      {
+        "background": "Former strategy and operations lead at family-owned electrical distribution company, then CEO of a digital freight brokerage",
+        "notable_achievement": "Founded Solvento after experiencing payment bottlenecks in Mexico's freight trucking industry firsthand"
+      },
+      {
+        "background": "Undisclosed",
+        "notable_achievement": "Undisclosed"
+      },
+      {
+        "background": "Undisclosed",
+        "notable_achievement": "Undisclosed"
+      }
+    ],
+    "product": {
+      "summary": "Automated payments, invoice financing, and AI-powered audit software for trucking companies in Mexico and Latin America",
+      "problem_statement": "95% of Mexico's trucking companies operate fewer than 5 vehicles, and payments take an average of 60 days, creating cash flow difficulties",
+      "solution": "Instant payments based on proof of delivery (POD), invoice financing, and automated AI auditing",
+      "key_features": [
+        "Auto payments: real-time payments via API integration",
+        "Invoice financing: provides immediate cash flow to trucking companies",
+        "Solvento Audita: automatic POD recognition, validation, accessorial charge verification, and invoice matching audit"
+      ],
+      "tech_stack_or_innovation": "API integration, AI-powered document recognition and data extraction",
+      "target_customer": "Small and medium trucking companies in Mexico, shippers, and 3PLs",
+      "business_model": "Payment fees and finance interest"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Traditional factoring companies",
+          "comparison": "Lack digital automation, rely on manual processes, struggle to provide fast payments"
+        },
+        {
+          "name": "Other Latin American trucking tech startups",
+          "comparison": "Solvento differentiates by offering AI audit capabilities and a comprehensive payment + financing infrastructure"
+        }
+      ],
+      "key_differentiator": "End-to-end payment and credit infrastructure specialized for Mexico's trucking market, with AI-powered auditing",
+      "moat": "Trucking company data network effects, relationships with large shippers, local market understanding",
+      "competitive_position_summary": "Main competitors in Mexico are traditional financial firms and some fintechs, but Solvento is seen as the only platform combining AI auditing with real-time payments"
+    },
+    "trending_reason": {
+      "summary": "Secured a $25M loan facility from BBVA Spark in February 2026, growing to over 6,000 trucking companies",
+      "catalysts": [
+        "Increasing US-Mexico cross-border freight volume and demand for digital payments",
+        "Need to solve cash flow problems in Mexico's trucking industry"
+      ],
+      "growth_metrics": "As of 2026, over 6,000 carriers use the platform, with up to MXN 300M (approx. $15M) in payments processed per month, and cumulative loans of $180M (as of end-2024)"
+    },
+    "funding": {
+      "total_raised_note": "Series A equity $12.5M, plus additional debt of over $75M (including $50M in 2023 and $25M loan in 2026) brings total funding to over $87.5M",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Equity round, final close in November 2024. Subsequently secured a $25M loan from BBVA Spark in February 2026."
+      },
+      "funding_history": [
+        {
+          "note": "Led by Equite and Cometa"
+        },
+        {
+          "note": "Loan from Lendable, plus additional equity (undisclosed amount)"
+        },
+        {
+          "note": "Loan from BBVA Spark, enabling up to 300M pesos in monthly payments"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Mexico's freight trucking market estimated at ~$100B; SAM: addressable market for digital payment and financial services; SOM: currently 6,000 trucking companies",
+      "market_trend": "Increasing US-Mexico trade, supply chain digitalization, growing need for cash flow improvement among small and medium trucking companies",
+      "growth_potential": "Over 2,000 small and medium trucking companies exist, digital transformation is low, potential to expand into additional products (insurance, fuel, etc.)",
+      "risks": [
+        "Reduced trade volume due to US-Mexico tariff policy changes",
+        "Trucking company credit risk",
+        "Intensified competition"
+      ],
+      "risk_mitigation": "AI auditing prevents fraud, diversified customer base, diversified capital sourcing"
+    },
+    "related_links": [
+      {
+        "title": "Official website"
+      }
+    ],
+    "editor_pick_comment": "A fintech transforming cash flow in Mexico's trucking industry, accelerating growth with new capital from a major bank."
+  },
+  "panmnesia-2026": {
+    "tagline": "CXL-based AI datacenter link solution fabless startup",
+    "category": [
+      "Semiconductors",
+      "AI Infrastructure",
+      "Datacenter"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "KAIST School of Electrical Engineering Chair Professor. Director of Computer Architecture and Memory Systems Lab (CAMEL Lab). Former researcher at Samsung Electronics Memory Business Division, professor at UT Dallas/Yonsei University.",
+        "notable_achievement": "ISCA Hall of Fame (2024, 2026), CES Innovation Award (2024, 2025), Republic of Korea Science and Technology Award (2026). CXL Consortium Contributor Member."
+      },
+      {
+        "background": "PhD in Electrical Engineering from KAIST. Former member of CAMEL Lab. Won NVMW Memorable Paper Award (2022).",
+        "notable_achievement": "Ranked 1st among all KAIST PhD graduates, received Outstanding Thesis Award."
+      },
+      {
+        "background": "PhD in Electrical Engineering from KAIST. Former LG Electronics engineer (2010-2018).",
+        "notable_achievement": "Semiconductor design expert with both industry experience and academic research."
+      }
+    ],
+    "team_highlights": "About 10 researchers from KAIST CAMEL Lab participated as co-founders. As of September 2026, 83 employees (THE VC). Grew more than 2x in one year from 39 in H1 2025. Has additional R&D campus beyond Daejeon headquarters.",
+    "product": {
+      "summary": "Panmnesia is a full-stack link solutions company developing CXL (Compute Express Link)-based controller IP, switch semiconductors, and GPU memory expansion solutions. It provides high-speed, low-latency connections between CPU, GPU, and memory to resolve AI datacenter memory bottlenecks.",
+      "problem_statement": "As AI models scale up, GPU HBM (High Bandwidth Memory) capacity (tens of GB) is insufficient for multi-TB needs. Previously, simply adding GPUs was used to increase memory, but this wastes GPU compute resources and causes skyrocketing costs.",
+      "solution": "Panmnesia connects DRAM or SSD as additional memory outside the GPU via CXL, forming a unified virtual memory space. Its proprietary CXL 3.1/3.2 controller IP achieves sub-100ns round-trip latency, allowing the GPU to access external memory via load/store instructions as if it were local memory.",
+      "key_features": [
+        "World's first double-digit nanosecond (ns) latency CXL controller IP (approx. 80ns)",
+        "Industry-first ASIC switch chip supporting CXL 3.2 Port-Based Routing (PBR) (PANSWITCH)",
+        "PCIe 6.4/CXL 3.2 fusion switch (pre-release samples currently being supplied)",
+        "PCIe 7.0/CXL 4.0 combo IP (announced at ISCA 2026)",
+        "CXL-GPU: GPU storage expansion technology (3.22x performance improvement over UVM)",
+        "CXL-over-XLink hybrid architecture (UALink, NVLink integration)"
+      ],
+      "tech_stack_or_innovation": "Proprietary CXL controller IP fabricated on TSMC advanced processes, optimized across all layers: physical, link, and transaction. Demonstrated world's first sub-100ns (double-digit ns) CXL round-trip latency in silicon. Extended support up to CXL 4.0 (PCIe 7.0-based). Only CXL 3.2 fabric switch supporting Port-Based Routing (PBR).",
+      "target_customer": "AI hyperscalers (cloud providers), datacenter operators, server OEMs/ODMs, memory module manufacturers (Samsung, SK Hynix, etc.), large enterprises building GPU-equipped AI servers",
+      "business_model": "As a fabless semiconductor design company: CXL controller IP licensing, CXL switch ASIC chip sales, GPU memory expansion kit hardware sales, custom link solution development services"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "US Nasdaq-listed company (ALAB). Leo CXL smart memory controller market share #1 (approx. 35-40%). First commercial CXL memory deployment on Microsoft Azure. Clear lead over Panmnesia in the controller market, but in switches Panmnesia leads with CXL 3.2 PBR support."
+        },
+        {
+          "name": "Marvell Technology (acquired XConn)",
+          "comparison": "US listed company (MRVL). Acquired XConn in Q1 2026, securing Structera S switch portfolio. Sampling CXL 3.1 Apollo 2 (Structera S 30260) 260-lane switch. As a semiconductor giant, has overwhelming distribution network and customer base."
+        },
+        {
+          "comparison": "China Shanghai-listed company (688008). World's first CXL MXC (Memory Expander Controller). Supplies CXL controllers to Samsung, SK Hynix. CXL 3.2 MXC trial production in July 2026. Advantage over Panmnesia in securing controller customers; switch segment is weak."
+        },
+        {
+          "comparison": "US listed company (MCHP). SMC 2000 series CXL 2.0 memory controller. Narrower product portfolio and older CXL generation compared to Panmnesia."
+        }
+      ],
+      "key_differentiator": "World's only company supplying pre-release silicon fully compliant with CXL 3.2 (with PBR support) in CXL switches. World's first to demonstrate double-digit ns latency in silicon for CXL controllers. Provides full-stack IP-hardware-software. Technical credibility through joint research with Meta (Nature paper).",
+      "moat": "① Ultra-low latency (double-digit ns) CXL controller IP with silicon validation ② First ASIC supply of CXL 3.2 PBR switch ③ Over 10 years of accumulated CXL and computer architecture research from KAIST CAMEL Lab ④ Global partnerships: Meta, SK Telecom, Openchip, etc. ⑤ Large patent portfolio (multiple CXL-related academic papers and IP)",
+      "competitive_position_summary": "Panmnesia is the only independent fabless startup with both switches and controllers in the CXL ecosystem. Compared to listed giants like Astera Labs and Marvell, its scale and customer base are smaller, but it holds a technical edge in the latest CXL 3.2 standard and ultra-low-latency IP. It is among the top candidates to benefit from the 2026-2028 market growth as AI datacenter memory disaggregation and sharing demand accelerates."
+    },
+    "trending_reason": {
+      "summary": "In September 2026, Panmnesia jointly published a CXL-based AI datacenter architecture with Meta in Nature Reviews Electrical Engineering, demonstrating global technology leadership. Concurrently, it is supplying the world's only CXL 3.2 PBR fabric switch silicon samples to partners and accelerating commercialization through a strategic partnership with SK Telecom.",
+      "catalysts": [
+        "September 2026: Joint invited review paper with Meta on CXL-based datacenter architecture published in Nature Portfolio (NREE) - presenting 'One Chip, One Datacenter' vision",
+        "April 2026: Began supplying pre-release silicon of PCIe 6.4/CXL 3.2 fusion switch - world's only CXL 3.2 fully compliant (PBR) switch",
+        "June 2026: Presented papers on next-gen CXL controller and fabric switch at ISCA 2026 (demonstrated stable performance up to 64 nodes)",
+        "March 2026: Signed joint development partnership for CXL-based AI datacenter architecture with SK Telecom at MWC26",
+        "May 2026: Won a $30M R&D project for chiplet-based AI accelerator and integrated infrastructure development"
+      ],
+      "growth_metrics": "Cumulative investment exceeded KRW 100B (approx. $80M). Series A valuation approx. KRW 340B (approx. $250M). Employees more than doubled in 2026 vs 2025 (39→83). Won CES Innovation Award two consecutive years (2024, 2025). Won Republic of Korea Science and Technology Award (2026)."
+    },
+    "funding": {
+      "total_raised_note": "Cumulative investment per company official announcement (including government grants). CB Insights estimates approx. $69.93M (includes Seed, Spin-off, Series A). KED Global reported KRW 100B ($75M).",
+      "valuation_estimate": "$250M (est.)",
+      "latest_round": {
+        "note": "Per KED Global: KRW 80B ($57M). Company stated $60M+. Deviation due to exchange rate. 15 VCs participated; largest VC-only Series A for a Korean fabless startup."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Initial KAIST faculty startup funding. Recorded as a separate round in CB Insights.",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Per CB Insights: September 2023 Seed VC round. Valuation at that time approx. $81.4M.",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "note": "KRW 80B. Company stated $60M+. Led by InterVest, 15 VCs participated."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: CXL memory controller IC market projected to grow from approx. $560M in 2025 to approx. $3.13B in 2031 (CAGR 33.2%). CXL switch/fabric market from $170M to $1.79B (CAGR 48.0%). Entire CXL market for AI datacenters expected to expand to multi-billion dollars by 2030.",
+      "market_trend": "Exponential growth in AI model parameters necessitates innovation in GPU memory hierarchy. Evolution of CXL standards (3.1/3.2/4.0) is making memory pooling and disaggregation a reality. Hyperscalers (Azure, Meta, etc.) began adopting CXL in 2025-2026, marking a turning point for the ecosystem. The merchant (independent) CXL controller market is led by Astera Labs and Marvell, but the switch segment is still early-stage.",
+      "growth_potential": "As the world's only supplier of CXL 3.2 PBR switches, Panmnesia is positioned to preempt the memory expansion standard for AI datacenters. Joint research with Meta, commercial partnership with SK Telecom, and winning a $30M R&D project support growth. With CXL 4.0 (PCIe 7.0) combo IP secured, it is also ahead in next-gen standards. Mass production ramp expected in 2027 and beyond, with revenue surging thereafter.",
+      "risks": [
+        "Inferior capital and customer base vs. large competitors (Astera Labs, Marvell)",
+        "CXL market itself is still early; adoption may be slower than expected",
+        "Price competitiveness of China's Montage Technology and its ties with Chinese memory manufacturers",
+        "Possibility of in-house CXL controller development by memory giants (Samsung, SK Hynix)",
+        "Lack of large-scale mass production track record and verified revenue (2025 revenue: KRW 45.45M)"
+      ],
+      "risk_mitigation": "Technical validation and market access through global partnerships (Meta, SK Telecom). First-mover advantage in CXL switches. Continuous talent inflow via KAIST research network. Diversified R&D funding through gov't projects (total $40M+). Minimized dependency risk from large corporations via proprietary IP portfolio."
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "CXL-GPU Technical Brief"
+      },
+      {
+        "title": "Series A Investment Official Announcement"
+      },
+      {
+        "title": "ISCA 2026 Paper Presentation"
+      },
+      {
+        "title": "KAIST CAMEL Lab"
+      }
+    ],
+    "editor_pick_comment": "A hidden master of Korean fabless: first in the world to implement a CXL fabric in silicon that connects an entire AI datacenter like a single chip, and even co-published a Nature paper with Meta."
+  },
+  "cynlr-2026": {
+    "tagline": "Vision-based robotic manipulation intelligence platform",
+    "category": [
+      "Robotics",
+      "Artificial Intelligence",
+      "Manufacturing"
+    ],
+    "headquarters": {
+      "country_ko": "India"
+    },
+    "employee_count": "51-200 (est.)",
+    "founders": [
+      {
+        "background": "Worked as a machine vision expert at National Instruments India, developing industrial vision systems in India, Saudi Arabia, and Russia. Began commercialization testing in 2015.",
+        "notable_achievement": "Key architect of CynLr's Object Intelligence technology and the CyRo robot system"
+      },
+      {
+        "background": "Specific career details not disclosed, but co-led technical validation with Gokul NA by solving about 30 machine vision problems starting in 2015",
+        "notable_achievement": "Co-founded CynLr and developed the early vision stack"
+      }
+    ],
+    "team_highlights": "Research collaboration with IISc Center for Neuroscience (October 2025) to apply monkey visual processing methods to robot learning",
+    "product": {
+      "summary": "CyRo is an industrial robotic platform with dual arms and real-time vision-force sensing that can intuitively grasp and manipulate unfamiliar objects without prior training",
+      "problem_statement": "Existing industrial robots require separate training or programming for each object, making it difficult to assemble multiple items in highly variable environments",
+      "solution": "The proprietary vision stack CLX1 and reinforcement learning-based AI learn object shape, texture, and reflectivity on the fly, enabling gripping, manipulation, and precision assembly without separate training",
+      "key_featres": [
+        "Can grip any object without prior training",
+        "Triple or dual arm architecture enables simultaneous vision-action execution",
+        "Force sensing and handling of deformable materials (plastic, flexible materials)",
+        "Modular architecture – plans to offer Lego-like kits in the future"
+      ],
+      "tech_stack_or_innovation": "Object Intelligence: proprietary vision hardware + reinforcement learning (RL)-based manipulation policy, using MuJoCo and NVIDIA Omniverse simulation",
+      "target_customer": "Automotive manufacturers, semiconductor equipment makers, electronics assembly lines",
+      "business_model": "Sales of robot systems and vision stack hardware/software. Subscription-based service under consideration."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Specializes in 3D sensing-based collaborative robot safety solutions, focusing on safety rather than object recognition"
+        },
+        {
+          "comparison": "Adaptive robot based on force control, with limited object generalization performance compared to CynLr"
+        },
+        {
+          "comparison": "AI robot vision and gripping requires large-scale data training; CynLr's strength is zero-shot adaptation"
+        },
+        {
+          "comparison": "Vision-based robot guidance; CynLr's multi-arm architecture and broader manipulation range"
+        },
+        {
+          "comparison": "Robot software platform; CynLr provides a hardware-software integrated stack"
+        }
+      ],
+      "key_differentiator": "'Object Intelligence' that instantly recognizes and manipulates objects without prior training, and a multi-arm architecture that overcomes the decoupled vision-action pipeline",
+      "moat": "Hardware-software vertical integration, global supply chain of over 400 components, patented Object Intelligence algorithms",
+      "competitive_position_summary": "Specializes in 'part-to-part' assembly automation, with strength in handling reflective and deformable materials that existing robots cannot handle"
+    },
+    "trending_reason": {
+      "summary": "After raising $10M Series A in November 2024, announced additional $75M funding in February 2026; collaboration with IISc Neuroscience; pilot at Audi factory; major events concentrated in the last 90 days",
+      "catalysts": [
+        "Planned $75M funding (February 2026, reported by CNBC TV18)",
+        "Collaboration with IISc Center for Neuroscience to start research on biological visual processing (October 2025)",
+        "CyRo demo at AI Impact Summit and testing in Audi supply chain"
+      ],
+      "growth_metrics": "Annualized revenue approx. $1M (as of March 2026, targeting $22M by 2027"
+    },
+    "funding": {
+      "total_raised_note": "Based on Economic Times article. Total: $10M Series A + $5.2M previous rounds.",
+      "valuation_estimate": "$80M (est.)",
+      "latest_round": {
+        "note": "Co-led by Pavestone and Athera Venture Partners; with participation from Speciale Invest, Infoedge (Redstart)"
+      },
+      "funding_history": [
+        {
+          "note": "Participation from Speciale Invest, Infoedge, etc. (exact date unknown)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Total addressable market (TAM) $16B (assembly automation solutions, estimated by Inc42)",
+      "market_trend": "Global manufacturing demand for flexible automation surging, especially in EV and semiconductor sectors where assembly automation for highly variable parts is increasingly needed",
+      "growth_potential": "Targeting $22M revenue by 2027, with plans to sell 300 robot systems per year thereafter",
+      "risks": [
+        "2-3 years needed to obtain industrial safety certification",
+        "Risk of large customer lock-in",
+        "Resource disadvantage compared to larger competitors like Veo Robotics and Alphabet"
+      ],
+      "risk_mitigation": "Long-term pilot contracts with global semiconductor equipment makers and automotive OEMs; strengthening own supply chain; pursuing $75M funding"
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "Economic Ties coverage"
+      },
+      {
+        "title": "Inc42 Analysis"
+      }
+    ],
+    "editor_pick_comment": "Secured a unique position in industrial robotics with vision intelligence that immediately manipulates unfamiliar objects without prior learning."
+  },
+  "airforestry-2026": {
+    "tagline": "Unmanned aerial forestry that nurtures forests with drones",
+    "category": [
+      "Drone",
+      "Forestry",
+      "Climate Tech"
+    ],
+    "headquarters": {
+      "country_ko": "Sweden"
+    },
+    "founders": [
+      {
+        "background": "Serial entrepreneur and impact investor with a background in biology. Founder of Walerud Ventures.",
+        "notable_achievement": "Early investor in companies such as Klarna and Midsummer."
+      },
+      {
+        "background": "Runs a family forest farm that has been managed for six generations; developed hybrid trucks at Scania and led the forestry automation project AUTO2 at Skogforsk.",
+        "notable_achievement": "Led the world's largest forestry automation project."
+      },
+      {
+        "background": "Physicist with 12 years in quantum optics research and 11 years of experience in the optical systems industry.",
+        "notable_achievement": "Presented the vision that electric aviation technology will become the most efficient mode of transport."
+      }
+    ],
+    "product": {
+      "summary": "An unmanned forestry system that uses electric autonomous drones to thin and transport trees from the air.",
+      "problem_statement": "Traditional heavy machinery forestry causes soil compaction, root damage, biodiversity loss, and high carbon emissions.",
+      "solution": "Instead of heavy ground equipment, electric drones identify, fell, and transport trees from the air. AI and computer vision precisely select which trees to thin, and a special harvesting tool prunes and cuts them, after which the drone carries the logs to the roadside.",
+      "key_features": [
+        "AI-based individual tree selection",
+        "Fully electric autonomous flight, no GPS required (computer vision-based navigation)",
+        "Specially designed lightweight harvesting tool (being developed under the EIC ADATHA project)",
+        "Simultaneous operation of multiple drones from a ground control station",
+        "Zero soil damage, zero carbon emissions (during operation)"
+      ],
+      "tech_stack_or_innovation": "High-load autonomous drone platform + AI/computer vision-based tree selection + aerial harvesting mechanism. Electrically powered, no fossil fuels needed.",
+      "target_customer": "Forest owners and forestry companies in Northern Europe and the Northern Hemisphere, as well as organizations pursuing sustainable forestry certifications (such as FSC).",
+      "business_model": "Sale of drone systems or forestry service contracts (charged per hectare). Currently in the commercial pilot stage, early monetization."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Treevia (Brazil)",
+          "comparison": "Focus on forest monitoring sensors, does not perform harvesting."
+        },
+        {
+          "name": "DroneSeed / Silvaseed (USA)",
+          "comparison": "Uses drones to spread tree seeds (reforestation), not logging."
+        },
+        {
+          "name": "Traditional forestry equipment manufacturers (John Deere, Ponsse, Komatsu Forest)",
+          "comparison": "Based on ground heavy machinery, inevitably causing soil damage; more of a substitute than a direct competitor to AirForestry."
+        }
+      ],
+      "key_differentiator": "The world's first and only aerial tree harvesting technology; a fully electric, autonomous system that fundamentally eliminates soil damage and carbon emissions.",
+      "moat": "Patented aerial harvesting mechanism; unique first-mover advantage as of 2024; proprietary software and hardware stack optimized for Nordic forest conditions.",
+      "competitive_position_summary": "As a pioneer, there are almost no competitors, but challenges include the potential response from existing large equipment manufacturers and the difficulty of mass-producing hardware."
+    },
+    "trending_reason": {
+      "summary": "Accelerating commercialization through consecutive fundraising successes and technological progress, including a seed round led by Northzone in 2024, a pre-commitment for Series A in 2026, and an EIC (European Innovation Council) grant.",
+      "catalysts": [
+        "February 2026: Raised SEK 28M (approx. €2.6M) in Series A convertible notes.",
+        "September 2026: Received additional funding from the EIC ADATHA project and an equity investment term sheet.",
+        "Climate change and strengthened forest protection obligations are driving a surge in demand for eco-friendly forestry.",
+        "At the end of 2025, Caroline Walerud took the helm as CEO (without a CEO change) to accelerate management."
+      ],
+      "growth_metrics": "Since the seed round in 2024, 12 engineering positions have been posted (as of February 2026)."
+    },
+    "funding": {
+      "total_raised_note": "€10.3M seed + SEK 28M (approx. €2.6M) in pre-Series A convertible notes; EIC grant separate (amount undisclosed).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Pre-Series A convertible notes, with existing investors participating."
+      },
+      "funding_history": [
+        {
+          "note": "Includes a €1.7M grant from the Swedish Energy Agency."
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "EIC ADATHA project grant + equity term sheet."
+        },
+        {
+          "note": "Convertible note."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global forestry machinery market estimated at approx. $8B in 2030 (est.); initial target is the forest thinning market in Northern Europe and North America.",
+      "market_trend": "Climate change ↑ need for forest health management, ESG regulations ↑ demand for eco-friendly forestry equipment, maturation of drone and autonomous driving technology ↓ hardware costs.",
+      "growth_potential": "Unique technology enables capturing a niche market; high scalability to large forestry companies with regulatory easing and cost reduction.",
+      "risks": [
+        "Limitations on drone battery and payload restrict the size of trees that can be harvested (currently medium-sized trees by Nordic standards).",
+        "Aviation regulations (especially night and adverse weather flying) and public complaints.",
+        "Response or imitation by traditional large forestry companies.",
+        "Need for mass production of hardware and establishment of a maintenance network."
+      ],
+      "risk_mitigation": "Focus on leading Nordic market, secure technical maturity with public funds from EIC, etc., secure scaling capital through follow-on investments from VCs like Northzone."
+    },
+    "related_links": [
+      {
+        "title": "AirForestry Official Website"
+      },
+      {
+        "title": "Seed Round Coverage (Company Blog)"
+      },
+      {
+        "title": "Pre-Series A Coverage (Company Blog)"
+      },
+      {
+        "title": "EIC Funding Coverage (Company Blog)"
+      },
+      {
+        "title": "Northzone Investment Insight"
+      }
+    ],
+    "editor_pick_comment": "A Swedish deep tech that turned the fantasy of felling trees from the sky with drones into reality; its essence as a climate tech lies in eliminating soil damage, the biggest environmental cost of forestry."
+  },
+  "influur-2026": {
+    "tagline": "AI-powered influencer marketing agent",
+    "category": [
+      "Influencer marketing",
+      "Music marketing"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      null,
+      null,
+      null,
+      {
+        "background": "TikTok creator with 6.3M followers"
+      }
+    ],
+    "product": {
+      "summary": "Marketplace and AI marketing agent connecting influencers and brands",
+      "problem_statement": "Inefficiencies in influencer marketing due to manual outreach, inconsistent pricing, fragmented payments, and lack of strategy",
+      "solution": "Platform provides creator verification, brand-influencer matching, AI-driven campaign automation, payment processing, and advanced analytics",
+      "key_features": [
+        "AI agent Pulse (specialized in music marketing)",
+        "Automated creator discovery and bulk outreach",
+        "Secure payment system (escrow-based)",
+        "Real-time analytics dashboard",
+        "Premium subscription (AI media kit for influencers, exclusive campaign access)"
+      ],
+      "tech_stack_or_innovation": "Proprietary Pulse Score™ for audience intelligence and music trend analysis; AI automatically runs entire campaigns",
+      "target_customer": "Music labels, brands, and influencers (especially music marketing teams)",
+      "business_model": "Transaction fees and premium subscriptions for influencers, fintech tools (influencer banking)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Enterprise-level influencer marketing platform; no music-specific AI features"
+        },
+        {
+          "comparison": "IBM Watson-based influencer platform; emphasizes AI but low focus on music"
+        },
+        {
+          "comparison": "Self-service influencer marketplace; lacks music-specific features"
+        }
+      ],
+      "key_differentiator": "Dedicated AI agent 'Pulse' optimized for music marketing and a verified creator community",
+      "moat": "Network effects (30K+ active influencers, 5,000 brands), proprietary data on music trend analysis, influencer banking service",
+      "competitive_position_summary": "Pioneering AI agent-based influencer marketing platform targeting the music industry, occupying a unique position in the market"
+    },
+    "trending_reason": {
+      "summary": "Accelerated growth with the launch of music-marketing-specific AI agent 'Pulse' in April 2026 and $10M Series A in November 2024",
+      "catalysts": [
+        "Series A investment (led by Point72 Ventures, HTwenty Capital)",
+        "Launch of Pulse AI agent automates marketing for the music industry",
+        "Introduction of influencer premium subscriptions and fintech services"
+      ],
+      "growth_metrics": "83% increase in active influencers, 200% growth in brand spend (as of 2024)"
+    },
+    "funding": {
+      "total_raised_note": "Only $10M Series A disclosed; pre-seed amount in 2021 undisclosed",
+      "valuation_estimate": "$50M (est.)",
+      "latest_round": {
+        "notable_investors": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Sofía Vergara (individual)",
+          "Thalía (individual)"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global influencer marketing market approx. $21B in 2023; music marketing is a high-growth segment within it",
+      "market_trend": "AI-driven marketing automation, growth of the creator economy, rising demand for influencer financial services",
+      "growth_potential": "200% brand spend growth, continuous expansion into new markets (11 countries) indicating high growth potential",
+      "risks": [
+        "Intensifying competition (Captiv8, etc.)",
+        "Increasing platform dependency",
+        "Potential influencer churn"
+      ],
+      "risk_mitigation": "Differentiation through music-specific AI, strengthened community loyalty, fintech lock-in effect"
+    },
+    "related_links": [
+      {
+        "title": "Official website"
+      },
+      {
+        "title": "Series A investment announcement"
+      },
+      {
+        "title": "Forbes coverage"
+      }
+    ],
+    "editor_pick_comment": "AI influencer marketing agent 'Pulse' squarely targeting the music industry will be the key driver accelerating growth after the Series A."
+  },
   "braid-2026": {
     "tagline": "API platform enabling brands to offer mobile connectivity without a carrier",
     "category": [
