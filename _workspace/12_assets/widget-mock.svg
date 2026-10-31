@@ -1,0 +1,80 @@
+<!-- Startup Daily 홈 화면 위젯 시안 [1.1]. 내용은 12_ux-architect_app-ia.md §5-8, 치수·색은 12_visual-designer_app.md §7 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200" font-family="Pretendard Variable, Pretendard, -apple-system, sans-serif">
+<rect width="1200" height="1200" fill="#E9E3D6"/>
+<text x="40" y="50" font-size="24" font-weight="800" fill="#1A1915">홈 화면 위젯 시안 [1.1] — 2×2 · 4×2 · 라이트/다크 (2배 확대, 1dp = 2px)</text>
+<text x="40" y="78" font-size="14" fill="#45413A">모서리는 시스템 반경(system_app_widget_background_radius). 그림의 56px(=28dp)은 자리 표시. 브랜드 팔레트 고정, 동적 색 미사용. 금액 없음. 상태: 2/5 읽음, 개인 순서.</text>
+<rect x="20" y="100" width="1160" height="420" fill="#C9C3B6"/>
+<text x="40" y="126" font-size="16" font-weight="700" fill="#1A1915">라이트 · 2×2 (기준 160×160dp)</text><text x="400" y="126" font-size="16" font-weight="700" fill="#1A1915">4×2 (기준 340×160dp)</text>
+<rect x="40" y="160" width="320" height="320" rx="56" fill="#FAF8F3"/>
+<g transform="translate(72 190) scale(0.5454545454545454) translate(-34 -32)"><path d="M61.5 39.5 C59 35.5 54.5 33.5 49.5 33.5 C42.5 33.5 37.5 37.5 37.5 43.5 C37.5 50 43 52 49.5 53.8 C56.5 55.7 62.5 58 62.5 65 C62.5 71 57 75 49.5 75 C43.5 75 38.5 72.5 36 68" fill="none" stroke="#1A1915" stroke-width="10"/><rect x="66.5" y="66" width="9" height="9" fill="#E5533A"/></g>
+<text x="108" y="210" font-size="26" font-weight="700" fill="#1A1915">제<tspan font-family="IBM Plex Mono, ui-monospace, monospace" font-size="24">22</tspan>호</text>
+<rect x="72" y="240" width="64" height="64" rx="8" fill="#ECE1C4"/><text x="104" y="284" text-anchor="middle" font-size="28" font-weight="800" fill="#5A4411">E</text>
+<text x="72" y="348" font-size="34" font-weight="700" letter-spacing="-0.6" fill="#1A1915">엘레써모</text>
+<text font-size="26" fill="#45413A"><tspan x="72" y="386">버려지는 저온 열을</tspan><tspan x="72" y="418">전기로 바꾸는 발전</tspan></text>
+<rect x="72" y="434" width="256" height="1" fill="#D6CFC0"/>
+<text x="72" y="464" font-size="24" fill="#69645A">5곳 중 <tspan font-family="IBM Plex Mono, ui-monospace, monospace" fill="#1A1915">2</tspan>곳 읽음</text>
+<rect x="260" y="452" width="10" height="6" fill="#1A1915"/>
+<rect x="274" y="452" width="10" height="6" fill="#1A1915"/>
+<rect x="288" y="452" width="10" height="6" fill="#D6CFC0"/>
+<rect x="302" y="452" width="10" height="6" fill="#D6CFC0"/>
+<rect x="316" y="452" width="10" height="6" fill="#D6CFC0"/>
+<rect x="400" y="160" width="680" height="320" rx="56" fill="#FAF8F3"/>
+<g transform="translate(432 190) scale(0.5454545454545454) translate(-34 -32)"><path d="M61.5 39.5 C59 35.5 54.5 33.5 49.5 33.5 C42.5 33.5 37.5 37.5 37.5 43.5 C37.5 50 43 52 49.5 53.8 C56.5 55.7 62.5 58 62.5 65 C62.5 71 57 75 49.5 75 C43.5 75 38.5 72.5 36 68" fill="none" stroke="#1A1915" stroke-width="10"/><rect x="66.5" y="66" width="9" height="9" fill="#E5533A"/></g>
+<text x="468" y="210" font-size="26" font-weight="700" fill="#1A1915">오늘의 스타트업 <tspan font-weight="500" fill="#69645A">· 10월 30일</tspan></text>
+<text x="1048" y="210" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="26" fill="#1A1915">2/5</text>
+<rect x="432" y="262" width="64" height="64" rx="8" fill="#ECE1C4"/><text x="464" y="305" text-anchor="middle" font-size="28" font-weight="800" fill="#5A4411">E</text>
+<text x="512" y="288" font-size="30" font-weight="700" letter-spacing="-0.5" fill="#1A1915">엘레써모</text>
+<text x="512" y="322" font-size="26" fill="#69645A"><tspan font-family="IBM Plex Mono, ui-monospace, monospace" font-size="24">03</tspan>  기후·에너지</text>
+<rect x="748" y="262" width="64" height="64" rx="8" fill="#DCE3E8"/><text x="780" y="305" text-anchor="middle" font-size="22" font-weight="800" fill="#24384A">IL</text>
+<text x="828" y="288" font-size="30" font-weight="700" letter-spacing="-0.5" fill="#1A1915">인리스크 랩스</text>
+<text x="828" y="322" font-size="26" fill="#69645A"><tspan font-family="IBM Plex Mono, ui-monospace, monospace" font-size="24">04</tspan>  핀테크</text>
+<rect x="432" y="374" width="64" height="64" rx="8" fill="#DCE3E8"/><text x="464" y="417" text-anchor="middle" font-size="22" font-weight="800" fill="#24384A">SV</text>
+<text x="512" y="400" font-size="30" font-weight="500" letter-spacing="-0.5" fill="#69645A">솔리드뷰</text>
+<text x="512" y="434" font-size="26" fill="#69645A"><tspan font-family="IBM Plex Mono, ui-monospace, monospace" font-size="24">01</tspan>  AI 인프라</text>
+<path d="M688 396l5 5 9-10" fill="none" stroke="#69645A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="764" y="414" font-size="28" font-weight="700" fill="#1A1915">외 2곳 · 전체 보기 ›</text>
+<rect x="740" y="256" width="1" height="200" fill="#D6CFC0"/><rect x="432" y="356" width="616" height="1" fill="#D6CFC0"/>
+<rect x="20" y="560" width="1160" height="420" fill="#3A3F48"/>
+<text x="40" y="586" font-size="16" font-weight="700" fill="#ECE7DC">다크 · 2×2 (기준 160×160dp)</text><text x="400" y="586" font-size="16" font-weight="700" fill="#ECE7DC">4×2 (기준 340×160dp)</text>
+<rect x="40" y="620" width="320" height="320" rx="56" fill="#181B20"/>
+<g transform="translate(72 650) scale(0.5454545454545454) translate(-34 -32)"><path d="M61.5 39.5 C59 35.5 54.5 33.5 49.5 33.5 C42.5 33.5 37.5 37.5 37.5 43.5 C37.5 50 43 52 49.5 53.8 C56.5 55.7 62.5 58 62.5 65 C62.5 71 57 75 49.5 75 C43.5 75 38.5 72.5 36 68" fill="none" stroke="#ECE7DC" stroke-width="10"/><rect x="66.5" y="66" width="9" height="9" fill="#E5533A"/></g>
+<text x="108" y="670" font-size="26" font-weight="700" fill="#ECE7DC">제<tspan font-family="IBM Plex Mono, ui-monospace, monospace" font-size="24">22</tspan>호</text>
+<rect x="72" y="700" width="64" height="64" rx="8" fill="#352D18"/><text x="104" y="744" text-anchor="middle" font-size="28" font-weight="800" fill="#E3CF94">E</text>
+<text x="72" y="808" font-size="34" font-weight="700" letter-spacing="-0.6" fill="#ECE7DC">엘레써모</text>
+<text font-size="26" fill="#B8B2A6"><tspan x="72" y="846">버려지는 저온 열을</tspan><tspan x="72" y="878">전기로 바꾸는 발전</tspan></text>
+<rect x="72" y="894" width="256" height="1" fill="#2E333B"/>
+<text x="72" y="924" font-size="24" fill="#969085">5곳 중 <tspan font-family="IBM Plex Mono, ui-monospace, monospace" fill="#ECE7DC">2</tspan>곳 읽음</text>
+<rect x="260" y="912" width="10" height="6" fill="#ECE7DC"/>
+<rect x="274" y="912" width="10" height="6" fill="#ECE7DC"/>
+<rect x="288" y="912" width="10" height="6" fill="#2E333B"/>
+<rect x="302" y="912" width="10" height="6" fill="#2E333B"/>
+<rect x="316" y="912" width="10" height="6" fill="#2E333B"/>
+<rect x="400" y="620" width="680" height="320" rx="56" fill="#181B20"/>
+<g transform="translate(432 650) scale(0.5454545454545454) translate(-34 -32)"><path d="M61.5 39.5 C59 35.5 54.5 33.5 49.5 33.5 C42.5 33.5 37.5 37.5 37.5 43.5 C37.5 50 43 52 49.5 53.8 C56.5 55.7 62.5 58 62.5 65 C62.5 71 57 75 49.5 75 C43.5 75 38.5 72.5 36 68" fill="none" stroke="#ECE7DC" stroke-width="10"/><rect x="66.5" y="66" width="9" height="9" fill="#E5533A"/></g>
+<text x="468" y="670" font-size="26" font-weight="700" fill="#ECE7DC">오늘의 스타트업 <tspan font-weight="500" fill="#969085">· 10월 30일</tspan></text>
+<text x="1048" y="670" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="26" fill="#ECE7DC">2/5</text>
+<rect x="432" y="722" width="64" height="64" rx="8" fill="#352D18"/><text x="464" y="765" text-anchor="middle" font-size="28" font-weight="800" fill="#E3CF94">E</text>
+<text x="512" y="748" font-size="30" font-weight="700" letter-spacing="-0.5" fill="#ECE7DC">엘레써모</text>
+<text x="512" y="782" font-size="26" fill="#969085"><tspan font-family="IBM Plex Mono, ui-monospace, monospace" font-size="24">03</tspan>  기후·에너지</text>
+<rect x="748" y="722" width="64" height="64" rx="8" fill="#22303B"/><text x="780" y="765" text-anchor="middle" font-size="22" font-weight="800" fill="#BCD0DF">IL</text>
+<text x="828" y="748" font-size="30" font-weight="700" letter-spacing="-0.5" fill="#ECE7DC">인리스크 랩스</text>
+<text x="828" y="782" font-size="26" fill="#969085"><tspan font-family="IBM Plex Mono, ui-monospace, monospace" font-size="24">04</tspan>  핀테크</text>
+<rect x="432" y="834" width="64" height="64" rx="8" fill="#22303B"/><text x="464" y="877" text-anchor="middle" font-size="22" font-weight="800" fill="#BCD0DF">SV</text>
+<text x="512" y="860" font-size="30" font-weight="500" letter-spacing="-0.5" fill="#969085">솔리드뷰</text>
+<text x="512" y="894" font-size="26" fill="#969085"><tspan font-family="IBM Plex Mono, ui-monospace, monospace" font-size="24">01</tspan>  AI 인프라</text>
+<path d="M688 856l5 5 9-10" fill="none" stroke="#969085" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="764" y="874" font-size="28" font-weight="700" fill="#ECE7DC">외 2곳 · 전체 보기 ›</text>
+<rect x="740" y="716" width="1" height="200" fill="#2E333B"/><rect x="432" y="816" width="616" height="1" fill="#2E333B"/>
+<text x="40" y="1028" font-size="16" font-weight="700" fill="#1A1915">상태(2×2 라이트, 1배 크기): 로딩 · 새 호 없음 · 첫 설치/오류</text>
+<rect x="40" y="1040" width="160" height="160" rx="28" fill="#FAF8F3"/>
+<g transform="translate(56 1055) scale(0.2727272727272727) translate(-34 -32)"><path d="M61.5 39.5 C59 35.5 54.5 33.5 49.5 33.5 C42.5 33.5 37.5 37.5 37.5 43.5 C37.5 50 43 52 49.5 53.8 C56.5 55.7 62.5 58 62.5 65 C62.5 71 57 75 49.5 75 C43.5 75 38.5 72.5 36 68" fill="none" stroke="#1A1915" stroke-width="10"/><rect x="66.5" y="66" width="9" height="9" fill="#E5533A"/></g>
+<rect x="56" y="1084" width="32" height="32" fill="#E9E3D6"/><rect x="56" y="1128" width="80" height="14" fill="#E9E3D6"/><rect x="56" y="1150" width="120" height="10" fill="#E9E3D6"/><rect x="56" y="1166" width="90" height="10" fill="#E9E3D6"/>
+<rect x="240" y="1040" width="160" height="160" rx="28" fill="#FAF8F3"/>
+<g transform="translate(256 1055) scale(0.2727272727272727) translate(-34 -32)"><path d="M61.5 39.5 C59 35.5 54.5 33.5 49.5 33.5 C42.5 33.5 37.5 37.5 37.5 43.5 C37.5 50 43 52 49.5 53.8 C56.5 55.7 62.5 58 62.5 65 C62.5 71 57 75 49.5 75 C43.5 75 38.5 72.5 36 68" fill="none" stroke="#1A1915" stroke-width="10"/><rect x="66.5" y="66" width="9" height="9" fill="#E5533A"/></g>
+<text x="256" y="1110" font-size="14" font-weight="700" fill="#1A1915">다음 호를</text><text x="256" y="1130" font-size="14" font-weight="700" fill="#1A1915">준비하고 있어요</text>
+<text x="256" y="1152" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" fill="#69645A">NO.22 · 10.30</text>
+<text x="256" y="1182" font-size="13" font-weight="700" fill="#1A1915" text-decoration="underline">지난 호 보기 ›</text>
+<rect x="440" y="1040" width="160" height="160" rx="28" fill="#FAF8F3"/>
+<g transform="translate(456 1055) scale(0.2727272727272727) translate(-34 -32)"><path d="M61.5 39.5 C59 35.5 54.5 33.5 49.5 33.5 C42.5 33.5 37.5 37.5 37.5 43.5 C37.5 50 43 52 49.5 53.8 C56.5 55.7 62.5 58 62.5 65 C62.5 71 57 75 49.5 75 C43.5 75 38.5 72.5 36 68" fill="none" stroke="#1A1915" stroke-width="10"/><rect x="66.5" y="66" width="9" height="9" fill="#E5533A"/></g>
+<text x="456" y="1120" font-size="14" font-weight="700" fill="#1A1915">앱을 한 번 열면</text><text x="456" y="1140" font-size="13" fill="#45413A">오늘 호가 여기 보여요</text>
+</svg>

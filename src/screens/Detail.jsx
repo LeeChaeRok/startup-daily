@@ -3,6 +3,7 @@ import Icon from '../components/Icon.jsx'
 import Logo from '../components/Logo.jsx'
 import Sheet from '../components/Sheet.jsx'
 import StartupRow from '../components/StartupRow.jsx'
+import ForRoleLine from '../components/ForRoleLine.jsx'
 import { useToast } from '../components/toast-context.js'
 import { Meta, ReadButton, SaveButton, Tag } from '../components/bits.jsx'
 import { startups, byId, canAnalyze, cleanAmount, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
@@ -13,6 +14,7 @@ import { navigate, prefersReducedMotion, useFlag, useFontSize } from '../lib/hoo
 import { dotDate, enDash, langOf, monthDay, numClass, pad2, ym } from '../lib/format.js'
 import { isColdStart } from '../lib/nav.js'
 import { isEn, L } from '../lib/i18n.js'
+import { recordOpen } from '../lib/personal.js'
 import {
   scrollToSection,
   sectionsFor,
@@ -980,6 +982,8 @@ export default function Detail({ id, from, desktop, wide }) {
   const lensState = useKoreaLens(id, Boolean(s?._lens), hasLens)
   const active = useActiveSection(sections.map((x) => x.id))
   useReadTracking(summaryRef, id)
+  // an open is a (weaker) signal for the reader's order, even when it isn't read
+  useEffect(() => recordOpen(id), [id])
   const [reportSection, setReportSection] = useState(null)
   const articleRef = useRef(null)
 
@@ -1011,6 +1015,7 @@ export default function Detail({ id, from, desktop, wide }) {
       <UpdateBanner startup={s} />
       <Hero startup={s} list={list} share={share} from={from} desktop={desktop} wide={wide} />
       <Summary startup={s} summaryRef={summaryRef} />
+      <ForRoleLine startup={s} variant="detail" />
 
       {!wide && <SectionNav active={active} sections={sections} />}
 

@@ -1,0 +1,78 @@
+<!-- Startup Daily 최신 호(S1) 첫 화면 시안 · 상태 A(첫 실행) · 375x812 웹 기준(인셋 0) · 라이트
+     구조는 12_ux-architect_app-ia.md §3-2, 치수는 12_visual-designer_app.md §3-7. 텍스트는 2026-10-30 제22호 실데이터 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812" font-family="Pretendard Variable, Pretendard, -apple-system, sans-serif">
+  <rect width="375" height="812" fill="#F3EFE6"/>
+
+  <!-- ① app bar 줄 1 (0–64) -->
+  <text x="20" y="38" font-size="18" font-weight="800" letter-spacing="-0.6" fill="#1A1915">Startup Daily</text>
+  <rect x="127" y="32" width="6" height="6" fill="#B7321C"/>
+  <g fill="none" stroke="#45413A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="251" cy="32" r="9"/><path d="M251 36v-4M251 28.5h.01"/>
+    <path d="M291 29a8 8 0 0 1 16 0c0 7 3 9 3 9h-22s3-2 3-9"/><path d="M297.3 42a2 2 0 0 0 3.4 0"/>
+  </g>
+  <g fill="#45413A"><circle cx="347" cy="25" r="1.6"/><circle cx="347" cy="32" r="1.6"/><circle cx="347" cy="39" r="1.6"/></g>
+
+  <!-- ② 제목 블록 (64–148) -->
+  <text x="20" y="90" font-size="26" font-weight="800" letter-spacing="-0.65" fill="#1A1915">10월 30일 <tspan font-weight="500" fill="#45413A">· 제</tspan><tspan font-family="IBM Plex Mono, monospace" font-weight="500" font-size="24" fill="#45413A">22</tspan><tspan font-weight="500" fill="#45413A">호</tspan></text>
+  <text x="20" y="117" font-size="15" font-weight="500" fill="#45413A">아직 모르는, 지금 뜨는 스타트업</text>
+  <text x="20" y="135" font-size="13" fill="#69645A">AI가 공개 자료로 작성 · 링크 확인됨</text>
+
+  <!-- ③ 진척 (148–192) -->
+  <text x="20" y="173" font-size="15" font-weight="700" fill="#1A1915">오늘 5곳 <tspan font-weight="500" font-size="13" fill="#69645A">· 약 4분</tspan></text>
+  <text x="355" y="173" text-anchor="end" font-size="13" fill="#69645A">5곳 중 <tspan font-family="IBM Plex Mono, monospace" fill="#1A1915">0</tspan>곳 읽음</text>
+  <g fill="#D6CFC0"><rect x="20" y="186" width="63.8" height="4"/><rect x="87.8" y="186" width="63.8" height="4"/><rect x="155.6" y="186" width="63.8" height="4"/><rect x="223.4" y="186" width="63.8" height="4"/><rect x="291.2" y="186" width="63.8" height="4"/></g>
+
+  <!-- ④ 히어로 (200–457, 태그라인 1줄인 날. 2줄이면 483) -->
+  <rect x="20" y="200" width="335" height="257" fill="#FAF8F3"/>
+  <rect x="20" y="200" width="335" height="3" fill="#1A1915"/>
+  <text x="36" y="232" font-size="13" fill="#69645A"><tspan font-family="IBM Plex Mono, monospace" font-size="12">01</tspan><tspan dx="10">▪ AI 인프라·반도체 · 한국</tspan></text>
+  <rect x="36" y="247" width="48" height="48" rx="4" fill="#DCE3E8"/><text x="60" y="277" text-anchor="middle" font-size="17" font-weight="800" fill="#24384A">SV</text>
+  <text x="96" y="271" font-size="22" font-weight="700" letter-spacing="-0.44" fill="#1A1915">솔리드뷰</text>
+  <text x="96" y="290" font-size="13" font-weight="500" fill="#69645A">SolidVue</text>
+  <text font-size="18" font-weight="700" letter-spacing="-0.3" fill="#1A1915"><tspan x="36" y="323">국내 유일 라이다 센서 IC 팹리스</tspan></text>
+  <rect x="36" y="339" width="2" height="69" fill="#1A1915"/>
+  <text font-size="15" font-weight="500" fill="#1A1915"><tspan x="50" y="355"><tspan font-size="13" font-weight="700" fill="#69645A">AI 코멘트</tspan><tspan dx="6">목표 100억원을 넘긴 163억원</tspan></tspan><tspan x="50" y="378">시리즈C는 '국내 유일 라이다 센서 칩</tspan><tspan x="50" y="401">팹리스'가 이제 양산과 IPO를 향해 본…</tspan></text>
+  <text x="36" y="439" font-size="13" fill="#69645A">Series C<tspan dx="6">·</tspan><tspan dx="6">누적 </tspan><tspan fill="#45413A">약 241억원</tspan></text>
+  <text x="321" y="439" text-anchor="end" font-size="15" font-weight="700" fill="#1A1915">읽기</text>
+  <rect x="290" y="444" width="49" height="1.5" fill="#B7321C"/>
+  <path d="M327 434h8m-3-3 3 3-3 3" fill="none" stroke="#1A1915" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ⑤ 행 (108px) 465– -->
+  <g font-size="13" fill="#69645A" transform="translate(0 -26)">
+    <text x="20" y="520" font-family="IBM Plex Mono, monospace" font-size="15">02</text>
+    <rect x="54" y="503" width="40" height="40" rx="2" fill="#EFD7D4"/><text x="74" y="529" text-anchor="middle" font-size="17" font-weight="800" fill="#6D2A25">E</text>
+    <text x="106" y="520" font-size="17" font-weight="700" fill="#1A1915">인애이블퓨전 <tspan font-size="13" font-weight="500" fill="#69645A">EnableFusion</tspan></text>
+    <text x="106" y="543" font-size="15" fill="#45413A">핵융합 장비를 설계·조달·제조하는 '퓨전…</text>
+    <path d="M106 560l4-4 3 3 5-6m-3 0h3v3" fill="none" stroke="#B7321C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="124" y="564" font-weight="500" fill="#1A1915">9월 450억 원 시리즈A, 3개월 전 DTT…</text>
+    <text x="106" y="582">기후·에너지 · 한국 · Series A · 누적 <tspan fill="#45413A">약 560억원</tspan></text>
+    <rect x="20" y="598" width="335" height="1" fill="#D6CFC0"/>
+
+    <text x="20" y="628" font-family="IBM Plex Mono, monospace" font-size="15">03</text>
+    <rect x="54" y="611" width="40" height="40" rx="2" fill="#D3E5E1"/><text x="74" y="637" text-anchor="middle" font-size="17" font-weight="800" fill="#1C4943">L</text>
+    <text x="106" y="628" font-size="17" font-weight="700" fill="#1A1915">롬비 <tspan font-size="13" font-weight="500" fill="#69645A">LOMBY</tspan></text>
+    <text x="106" y="651" font-size="15" fill="#45413A">스즈키 협업 자율주행 라스트마일 로봇 배송</text>
+    <path d="M106 668l4-4 3 3 5-6m-3 0h3v3" fill="none" stroke="#B7321C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="124" y="672" font-weight="500" fill="#1A1915">8월 시리즈 A 3.87억 엔, 스즈키·나부테코…</text>
+    <text x="106" y="690">로보틱스·제조 · 일본 · Series A · 누적 <tspan fill="#45413A">7.47억 엔</tspan></text>
+    <rect x="20" y="706" width="335" height="1" fill="#D6CFC0"/>
+
+    <text x="20" y="736" font-family="IBM Plex Mono, monospace" font-size="15">04</text>
+    <rect x="54" y="719" width="40" height="40" rx="2" fill="#ECE1C4"/><text x="74" y="745" text-anchor="middle" font-size="17" font-weight="800" fill="#5A4411">E</text>
+    <text x="106" y="736" font-size="17" font-weight="700" fill="#1A1915">엘레써모 <tspan font-size="13" font-weight="500" fill="#69645A">elleThermo</tspan></text>
+    <text x="106" y="759" font-size="15" fill="#45413A">버려지는 저온 열을 전기로 바꾸는 차세대…</text>
+    <path d="M106 776l4-4 3 3 5-6m-3 0h3v3" fill="none" stroke="#B7321C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="124" y="780" font-weight="500" fill="#1A1915">8월 8.3억 엔 시리즈 A, 데이터센터 전력…</text>
+  </g>
+
+  <!-- ⑥ 하단 내비게이션 바 (748–812) -->
+  <rect x="0" y="748" width="375" height="64" fill="#ECE7DC"/>
+  <rect x="0" y="748" width="375" height="1" fill="#D6CFC0"/>
+  <rect x="34.5" y="760" width="56" height="32" rx="4" fill="#DDD5C4"/>
+  <g fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="51.5" y="766" width="22" height="20" rx="1" fill="#1A1915" stroke="#1A1915"/><path d="M55.5 772h14M55.5 776h14M55.5 780h9" stroke="#DDD5C4"/>
+    <g stroke="#69645A"><circle cx="186" cy="775" r="8"/><path d="m196 785-4-4"/></g>
+    <path d="M306 766h14v20l-7-5-7 5z" stroke="#69645A"/>
+  </g>
+  <g font-size="13" text-anchor="middle"><text x="62.5" y="806" font-weight="700" fill="#1A1915">최신 호</text><text x="187.5" y="806" font-weight="500" fill="#69645A">탐색</text><text x="312.5" y="806" font-weight="500" fill="#69645A">저장</text></g>
+</svg>

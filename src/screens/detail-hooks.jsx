@@ -7,6 +7,7 @@ import { prefersReducedMotion, useFlag, useReadLog, useSaved } from '../lib/hook
 import { monthDay } from '../lib/format.js'
 import { canNativeShare, canonicalUrl, shareOrCopy } from '../lib/share.js'
 import { L } from '../lib/i18n.js'
+import { useIssueOrder } from '../lib/personal.js'
 
 const BASE_SECTIONS = [
   { id: 'why', label: L('왜 지금', 'Why now') },
@@ -171,14 +172,18 @@ export function useKoreaLens(id, hasStatic, canRequest) {
   }
 }
 
-/** Ordered list this detail page belongs to: its issue, or the saved list. */
+const NONE = []
+
+/** Ordered list this detail page belongs to: its issue (in the reader's order, as on
+    the issue screen), or the saved list. */
 export function useContextList(startup, from) {
   const { saved } = useSaved()
+  const issue = useIssueOrder(startup ? byDate(startup.date) : NONE).list
   return useMemo(() => {
     if (!startup) return []
     if (from === 'saved') return saved.map(byId).filter(Boolean)
-    return byDate(startup.date)
-  }, [startup, from, saved])
+    return issue
+  }, [startup, from, saved, issue])
 }
 
 /** Public link for a company: /s/:id is a small static page with that company's link

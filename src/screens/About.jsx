@@ -1,41 +1,26 @@
 import { useEffect } from 'react'
 import Icon from '../components/Icon.jsx'
 import { startups, correctionList, getDomain, stageLabel, stats } from '../lib/data.js'
-import { useFontSize, useInterests, useReadLog, useSaved, useTheme } from '../lib/hooks.js'
-import AlertSetting from '../components/AlertSetting.jsx'
-import { SECTORS } from '../lib/data.js'
-import { syncPushPrefs } from '../lib/push.js'
-import { load } from '../lib/storage.js'
+import { navigate } from '../lib/hooks.js'
 import { dotDate } from '../lib/format.js'
 import { scrollToSection } from './detail-hooks.jsx'
-import LangSwitch from '../components/LangSwitch.jsx'
 import { L } from '../lib/i18n.js'
 
 const plural = (n, one, many = `${one}s`) => (n === 1 ? one : many)
 
-const THEMES = [
-  ['system', L('시스템', 'System')],
-  ['light', L('라이트', 'Light')],
-  ['dark', L('다크', 'Dark')],
-]
-
 export default function About({ params }) {
-  const [theme, setTheme] = useTheme()
-  const [font, setFont] = useFontSize()
-  const { interests, toggle } = useInterests()
-  const { readLog, clearRead } = useReadLog()
-  const { saved } = useSaved()
   const sec = params.get('sec')
 
   useEffect(() => {
-    if (sec) requestAnimationFrame(() => scrollToSection(`about-${sec}`))
+    // settings moved to their own screen (#/settings); old links still land there
+    if (sec === 'settings') navigate('/settings', { replace: true })
+    else if (sec) requestAnimationFrame(() => scrollToSection(`about-${sec}`))
   }, [sec])
 
   // compare on the Korean stage label: s._stage follows the reading language
   const listed = startups.filter((s) => stageLabel(s._ko?.stage ?? s.company_stage) === '상장사' && !s._correction).length
   const exits = startups.filter((s) => s._stage === 'M&A' || s._correction?.kind === 'acquired').length
   const shutdown = startups.filter((s) => s._correction?.kind === 'shutdown').length
-  const readCount = Object.keys(readLog).length
 
   return (
     <div className="page page--about prose">
@@ -43,10 +28,17 @@ export default function About({ params }) {
         {L('Startup Daily는', 'About Startup Daily')}
       </h1>
       <p className="lede">
+        <strong>{L('아직 모르는, 지금 뜨는 스타트업', "Startups you haven't heard of yet")}</strong>
+        <br />
         {L(
-          '한국 독자가 아직 잘 모르는, 지금 뜨는 회사를 하루 한 묶음으로 소개합니다.',
-          "Under-the-radar startups from around the world — a handful each day, researched by AI with checked sources. The ones you haven't heard of yet.",
+          '하루 한 묶음, 덜 알려진 국내외 신생 스타트업을 왜 지금 뜨는지와 함께 소개해요.',
+          'A handful of under-the-radar startups every day, with why they matter now.',
         )}
+      </p>
+      <p className="about-settings-link">
+        <a className="link-cta" href="#/settings">
+          {L('설정: 역할·관심 분야, 순서, 알림, 테마', 'Settings: role and sectors, order, alerts, theme')} <Icon name="arrowRight" size={16} />
+        </a>
       </p>
 
       <section id="about-how" className="about-sec">
@@ -194,119 +186,6 @@ export default function About({ params }) {
         </dl>
       </section>
 
-      <section id="about-settings" className="about-sec">
-        <h2>{L('설정', 'Settings')}</h2>
-        <div className="setting">
-          <span className="setting__label">{L('언어', 'Language')}</span>
-          <LangSwitch />
-        </div>
-        <div className="setting">
-          <span className="setting__label" id="theme-label">
-            {L('테마', 'Theme')}
-          </span>
-          <div className="segmented segmented--inline" role="group" aria-labelledby="theme-label">
-            {THEMES.map(([k, label]) => (
-              <button
-                key={k}
-                type="button"
-                aria-pressed={theme === k}
-                className="segmented__tab"
-                onClick={() => setTheme(k)}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        </div>
-        <div className="setting">
-          <span className="setting__label" id="font-label">
-            {L('글자 크기', 'Text size')}
-          </span>
-          <div className="segmented segmented--inline" role="group" aria-labelledby="font-label">
-            {[
-              ['sm', L('작게', 'Small')],
-              ['md', L('기본', 'Default')],
-              ['lg', L('크게', 'Large')],
-            ].map(([k, label]) => (
-              <button key={k} type="button" aria-pressed={font === k} className="segmented__tab" onClick={() => setFont(k)}>
-                {label}
-              </button>
-            ))}
-          </div>
-        </div>
-        <div className="setting">
-          <span className="setting__label" id="interest-label">
-            {L('관심 분야', 'Sectors you follow')}
-          </span>
-          <div className="setting__body">
-            <div className="chips-wrap" role="group" aria-labelledby="interest-label">
-              {SECTORS.map((s) => {
-                const on = interests.includes(s.key)
-                return (
-                  <button
-                    key={s.key}
-                    type="button"
-                    className={`chip ${on ? 'chip--on' : ''}`}
-                    aria-pressed={on}
-                    onClick={() => {
-                      toggle(s.key)
-                      const next = on ? interests.filter((k) => k !== s.key) : [...interests, s.key]
-                      syncPushPrefs({ sectors: next, onlyInterests: load('sd_push_only_interests', false) })
-                    }}
-                  >
-                    {on && <Icon name="check" size={14} />}
-                    {s.label}
-                  </button>
-                )
-              })}
-            </div>
-            <p className="setting__hint">
-              {L('목록에 점으로 표시하고, 탐색과 알림에 써요.', 'Marked with a dot in lists, and used in Explore and alerts.')}
-            </p>
-          </div>
-        </div>
-        <div className="setting">
-          <span className="setting__label">{L('새 호 알림', 'New-issue alerts')}</span>
-          <div className="setting__body">
-            <AlertSetting />
-          </div>
-        </div>
-        <div className="setting">
-          <span className="setting__label">{L('내 기록', 'Your data')}</span>
-          <div className="setting__body">
-            <p>
-              {L(
-                <>
-                  읽은 회사 <span className="num">{readCount}</span>곳 · 저장 <span className="num">{saved.length}</span>곳
-                </>,
-                <>
-                  <span className="num">{readCount}</span> read · <span className="num">{saved.length}</span> saved
-                </>,
-              )}
-            </p>
-            <div className="setting__actions">
-              <button
-                type="button"
-                className="btn btn--secondary"
-                disabled={!readCount}
-                onClick={() => {
-                  if (window.confirm(
-                      L(
-                        '읽음 기록을 모두 지울까요? 저장한 회사는 그대로 남아요.',
-                        'Clear your whole read history? Saved companies stay saved.',
-                      ),
-                    )) clearRead()
-                }}
-              >
-                {L('읽음 기록 지우기', 'Clear read history')}
-              </button>
-              <a className="btn btn--secondary" href="#/saved">
-                {L('저장함 내보내기', 'Export saved')}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

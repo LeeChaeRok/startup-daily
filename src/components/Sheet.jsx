@@ -5,8 +5,9 @@ import { L } from '../lib/i18n.js'
 /**
  * Bottom sheet on mobile, centered dialog on desktop. Uses the native
  * <dialog> for focus trapping, Esc handling and inert background.
+ * head — replaces the close button in the top bar (the title then opens the body)
  */
-export default function Sheet({ open, onClose, title, children, footer }) {
+export default function Sheet({ open, onClose, title, children, footer, head, className = '' }) {
   const ref = useRef(null)
   const opener = useRef(null)
   const titleId = useId()
@@ -33,7 +34,7 @@ export default function Sheet({ open, onClose, title, children, footer }) {
   return (
     <dialog
       ref={ref}
-      className="sheet"
+      className={`sheet ${className}`}
       aria-labelledby={titleId}
       onCancel={(e) => {
         e.preventDefault()
@@ -45,15 +46,29 @@ export default function Sheet({ open, onClose, title, children, footer }) {
     >
       <div className="sheet__panel">
         <div className="sheet__handle" aria-hidden="true" />
-        <div className="sheet__head">
-          <h2 id={titleId} className="sheet__title">
-            {title}
-          </h2>
-          <button type="button" className="icon-btn" onClick={onClose} aria-label={L('닫기', 'Close')}>
-            <Icon name="close" />
-          </button>
-        </div>
-        <div className="sheet__body">{children}</div>
+        {head ? (
+          <>
+            <div className="sheet__head sheet__head--bar">{head}</div>
+            <div className="sheet__body">
+              <h2 id={titleId} className="sheet__title sheet__title--lg">
+                {title}
+              </h2>
+              {children}
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="sheet__head">
+              <h2 id={titleId} className="sheet__title">
+                {title}
+              </h2>
+              <button type="button" className="icon-btn" onClick={onClose} aria-label={L('닫기', 'Close')}>
+                <Icon name="close" />
+              </button>
+            </div>
+            <div className="sheet__body">{children}</div>
+          </>
+        )}
         {footer && <div className="sheet__foot">{footer}</div>}
       </div>
     </dialog>

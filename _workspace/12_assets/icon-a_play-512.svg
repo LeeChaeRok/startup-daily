@@ -1,0 +1,6 @@
+<!-- Startup Daily Play 아이콘 A안 · 512x512 풀블리드(모서리는 Play가 자른다). 32비트 PNG로 내보낸다 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="15 15 78 78" width="512" height="512">
+  <rect x="0" y="0" width="108" height="108" fill="#1A1915"/>
+  <path d="M61.5 39.5 C59 35.5 54.5 33.5 49.5 33.5 C42.5 33.5 37.5 37.5 37.5 43.5 C37.5 50 43 52 49.5 53.8 C56.5 55.7 62.5 58 62.5 65 C62.5 71 57 75 49.5 75 C43.5 75 38.5 72.5 36 68" fill="none" stroke="#F3EFE6" stroke-width="10" stroke-linecap="butt" stroke-linejoin="round"/>
+  <rect x="66.5" y="66" width="9" height="9" fill="#E5533A"/>
+</svg>

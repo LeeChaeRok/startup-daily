@@ -26,6 +26,8 @@
   --sd-on-ink: #F3EFE6;
   --sd-logo-bg: #FFFFFF;
   --sd-scrim: rgb(26 25 21 / 0.48);
+  --sd-surface-lift: #ECE7DC;   /* raised app bar / navigation bar (with --sd-shadow-1) */
+  --sd-indicator: #DDD5C4;      /* active tab indicator; decorative, no ink-3/accent on it */
 
   --sd-mono-0-bg: #DCE3E8; --sd-mono-0-fg: #24384A;
   --sd-mono-1-bg: #DEE5D4; --sd-mono-1-fg: #33452A;
@@ -69,6 +71,12 @@
   --sd-sticky-top: calc(var(--sd-header-h) + env(safe-area-inset-top));
   --sd-anchor-offset: calc(var(--sd-sticky-top) + var(--sd-chipnav-h) + 12px);
   --sd-tap: 44px;
+  /* system bar insets: the Android shell (Capacitor) injects --safe-area-inset-*, the web falls back to env() */
+  --sd-inset-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+  --sd-inset-right: var(--safe-area-inset-right, env(safe-area-inset-right, 0px));
+  --sd-inset-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+  --sd-inset-left: var(--safe-area-inset-left, env(safe-area-inset-left, 0px));
+  --sd-sheet-pad-bottom: calc(16px + var(--sd-inset-bottom));
 
   --sd-radius-1: 2px;
   --sd-radius-2: 4px;
@@ -112,6 +120,8 @@
   --sd-on-ink: #111317;
   --sd-logo-bg: #ECE7DC;
   --sd-scrim: rgb(0 0 0 / 0.6);
+  --sd-surface-lift: #1C1F25;
+  --sd-indicator: #2E333C;
 
   --sd-mono-0-bg: #22303B; --sd-mono-0-fg: #BCD0DF;
   --sd-mono-1-bg: #263222; --sd-mono-1-fg: #C3D6B3;

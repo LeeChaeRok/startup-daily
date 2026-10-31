@@ -144,6 +144,7 @@ export function Footer() {
     <footer className="footer">
       <nav className="footer__links" aria-label={L('사이트 정보', 'Site info')}>
         <a href="#/about">{L('소개·선정 기준', 'About and how we pick')}</a>
+        <a href="#/settings">{L('설정', 'Settings')}</a>
         <a href="#/about?sec=corrections">{L('정정 기록', 'Corrections log')}</a>
         <a href="#/about?sec=how">{L('투자 조언 아님', 'Not investment advice')}</a>
       </nav>

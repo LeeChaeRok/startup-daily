@@ -1,124 +1,217 @@
 import { useEffect, useRef, useState } from 'react'
 import Icon from './Icon.jsx'
-import AlertSetting from './AlertSetting.jsx'
-import { usePush } from './usePush.js'
-import { SECTORS, startups } from '../lib/data.js'
-import { useFlag, useInterests, useReadLog } from '../lib/hooks.js'
-import { isColdStart } from '../lib/nav.js'
-import { L } from '../lib/i18n.js'
+import Sheet from './Sheet.jsx'
 import { LangLink } from './LangSwitch.jsx'
+import { SECTORS, startups } from '../lib/data.js'
+import { useInterests } from '../lib/hooks.js'
+import { ROLES, useRole, useTastePrompt } from '../lib/personal.js'
+import { closeTaste, useTasteSheet } from '../lib/taste.js'
+import { syncPushPrefs } from '../lib/push.js'
+import { load, save } from '../lib/storage.js'
+import { L } from '../lib/i18n.js'
 
 /**
- * First run, three short steps, each skippable: what this is → sectors you care about
- * (optional) → new-issue alerts. Never shown to a reader who arrived on a shared
- * company link (they came for that page) or who has already been reading.
+ * Taste sheet (C1): a role, then the sectors you follow. Both optional; they set the
+ * order of each issue and the "○○라면" line, never what is in it. Not shown on first
+ * run — the issue comes first (IssueMobile opens it once, lib/taste.js). Alerts are
+ * asked for elsewhere, in context.
  */
 export default function Onboarding() {
-  const [done, setDone] = useFlag('sd_onboarded', false)
-  const [, setIntro] = useFlag('sd_intro_dismissed', false)
-  const { readLog } = useReadLog()
-  const { interests, toggle } = useInterests()
+  const { open, mode, id } = useTasteSheet()
+  // a fresh sheet per opening, starting from the saved choices
+  return <TasteSheet key={id} open={open} mode={mode} />
+}
+
+function TasteSheet({ open, mode }) {
+  const ask = mode === 'ask'
+  const [role, setRole] = useRole()
+  const { interests, set: setInterests } = useInterests()
+  const [, setPrompt] = useTastePrompt()
   const [step, setStep] = useState(0)
-  // the alerts step only when this browser and the server can actually do alerts
-  const { status } = usePush()
-  const steps = status === 'disabled' || status === 'unsupported' ? 2 : 3
-  const ref = useRef(null)
-  const show = !done && Object.keys(readLog).length === 0 && !(isColdStart() && window.location.hash.startsWith('#/s/'))
-
+  const [draftRole, setDraftRole] = useState(role)
+  const [picked, setPicked] = useState(interests)
+  const timer = useRef(null)
+  useEffect(() => () => clearTimeout(timer.current), [])
+  // the chip or button that moved the step is gone: put focus on the new step's title
+  const firstStep = useRef(true)
   useEffect(() => {
-    const dlg = ref.current
-    if (show && dlg && !dlg.open) dlg.showModal()
-  }, [show])
+    if (firstStep.current) return void (firstStep.current = false)
+    const title = document.querySelector('.sheet--taste .sheet__title')
+    title?.setAttribute('tabindex', '-1')
+    title?.focus()
+  }, [step])
 
-  if (!show) return null
-  const finish = () => {
-    setDone(true)
-    setIntro(true)
-    ref.current?.close()
-  }
+  // most-covered sectors first; empty ones stay pickable ("준비 중")
   const counts = new Map()
   for (const s of startups) counts.set(s._sector.key, (counts.get(s._sector.key) || 0) + 1)
+  const chips = [...SECTORS].sort((a, b) => (counts.get(b.key) || 0) - (counts.get(a.key) || 0))
+
+  const saveSectors = () => {
+    const changed = picked.length !== interests.length || picked.some((k) => !interests.includes(k))
+    if (!changed) return
+    setInterests(picked)
+    syncPushPrefs({ sectors: picked, onlyInterests: load('sd_push_only_interests', false) })
+  }
+  const done = () => {
+    if (!ask) setRole(draftRole)
+    saveSectors()
+    save('sd_onboarded', true)
+    closeTaste()
+  }
+  const dismiss = () => {
+    if (ask) {
+      // a role tapped in step 1 stays; sectors not confirmed are dropped
+      save('sd_onboarded', true)
+      setPrompt((p) => ({ dismissed: (p.dismissed || 0) + 1 }))
+    }
+    closeTaste()
+  }
+  const pickRole = (key) => {
+    setDraftRole(key)
+    if (!ask) return
+    setRole(key)
+    clearTimeout(timer.current)
+    timer.current = setTimeout(() => setStep(1), 200)
+  }
+  const togglePick = (key) => setPicked((prev) => (prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]))
+
+  const roleChips = (
+    <div className="taste__chips" role="radiogroup" aria-label={L('하는 일', 'What you do')}>
+      {ROLES.map((r) => {
+        const on = draftRole === r.key
+        return (
+          <button
+            key={r.key}
+            type="button"
+            role="radio"
+            aria-checked={on}
+            className={`taste__role ${on ? 'is-on' : ''}`}
+            onClick={() => pickRole(r.key)}
+          >
+            {on && <Icon name="check" size={16} />}
+            {r.label}
+          </button>
+        )
+      })}
+    </div>
+  )
+  const more = picked.length > 0 && picked.length < 3 ? 3 - picked.length : 0
+  const sectorChips = (
+    <>
+      {more > 0 && (
+        <p className="taste__nudge">{L(`${more}개만 더 고르면 순서가 더 잘 맞아요`, `${more} more and the order fits better`)}</p>
+      )}
+      <div className="taste__chips" role="group" aria-label={L('관심 분야', 'Sectors')}>
+        {chips.map((s) => {
+          const on = picked.includes(s.key)
+          const n = counts.get(s.key) || 0
+          return (
+            <button
+              key={s.key}
+              type="button"
+              aria-pressed={on}
+              className={`taste__sector ${on ? 'is-on' : ''}`}
+              onClick={() => togglePick(s.key)}
+            >
+              {on && <Icon name="check" size={16} />}
+              {s.label} <span className={n ? 'mono taste__count' : 'taste__count'}>{n || L('준비 중', 'soon')}</span>
+            </button>
+          )
+        })}
+      </div>
+    </>
+  )
+  const doneLabel = picked.length ? L(`완료 · ${picked.length}개 선택됨`, `Done · ${picked.length} selected`) : L('완료', 'Done')
+
+  if (!ask) {
+    return (
+      <Sheet
+        open={open}
+        onClose={closeTaste}
+        className="sheet--taste"
+        title={L('역할과 관심 분야', 'Role and sectors')}
+        footer={
+          <button type="button" className="btn btn--primary taste__save" onClick={done}>
+            {L('저장', 'Save')}
+          </button>
+        }
+      >
+        <h3 className="taste__label">{L('어떤 일을 하세요?', 'What do you do?')}</h3>
+        <p className="taste__sub">
+          {L('고르면 회사마다 내 입장에서 볼 한 줄을 붙여요', "We'll add one line per company from your side of the table.")}
+        </p>
+        {roleChips}
+        <h3 className="taste__label taste__label--gap">{L('관심 분야', 'Sectors')}</h3>
+        <p className="taste__sub">
+          {L(
+            '3개쯤 고르면 순서가 잘 맞아요. 오늘의 묶음은 모두에게 같아요.',
+            "About 3 works best. Today's picks are the same for everyone.",
+          )}
+        </p>
+        {sectorChips}
+      </Sheet>
+    )
+  }
+
+  const head = (
+    <>
+      {step === 1 ? (
+        <button type="button" className="text-btn taste__back" onClick={() => setStep(0)}>
+          <Icon name="chevronLeft" size={16} /> {L('이전', 'Back')}
+        </button>
+      ) : (
+        <span />
+      )}
+      <span className="taste__step mono" aria-label={L(`2단계 중 ${step + 1}단계`, `Step ${step + 1} of 2`)}>
+        {step + 1}/2
+      </span>
+      <button type="button" className="taste__skip" onClick={dismiss}>
+        {L('건너뛰기', 'Skip')}
+      </button>
+    </>
+  )
 
   return (
-    <dialog ref={ref} className="onboard" aria-labelledby="onboard-title" onCancel={(e) => (e.preventDefault(), finish())}>
-      <div className="onboard__top">
-        <p className="onboard__steps mono" aria-hidden="true">
-          {step + 1} / {steps}
-        </p>
-        <button type="button" className="text-btn" onClick={finish}>
-          {L('건너뛰기', 'Skip')}
-        </button>
-      </div>
-
-      {step === 0 && (
-        <div className="onboard__body">
-          <h2 id="onboard-title" className="onboard__title">
-            {L('아직 모르는, 지금 뜨는 스타트업', 'Startups you haven’t heard of yet')}
-          </h2>
-          <p>
-            {L(
-              '한국에 아직 덜 알려진 해외 신생 스타트업을 하루 한 묶음(4~5곳)으로 소개해요.',
-              'A handful of under-the-radar startups from around the world, every day.',
-            )}
+    <Sheet
+      open={open}
+      onClose={dismiss}
+      className="sheet--taste"
+      head={head}
+      title={step === 0 ? L('어떤 일을 하세요?', 'What do you do?') : L('관심 분야', 'Sectors')}
+      footer={
+        step === 1 && (
+          <>
+            <button type="button" className="btn btn--secondary" onClick={() => setStep(0)}>
+              {L('이전', 'Back')}
+            </button>
+            <button type="button" className="btn btn--primary" onClick={done}>
+              {doneLabel}
+            </button>
+          </>
+        )
+      }
+    >
+      {step === 0 ? (
+        <div className="taste__pane" key="role">
+          <p className="taste__sub">
+            {L('고르면 회사마다 내 입장에서 볼 한 줄을 붙여요', "We'll add one line per company from your side of the table.")}
           </p>
-          <ul className="onboard__points">
-            <li>{L('왜 지금 뜨는지, 무엇을 하는지, 숫자로 보면 어떤지', 'Why now, what they do, and what the numbers say')}</li>
-            <li>{L('AI가 공개 자료로 조사하고, 링크가 실제로 열리는지 확인해요', 'Researched by AI from public sources, with every link checked')}</li>
-            <li>{L('틀린 내용은 제보받아 정정 기록에 남겨요', 'Errors you report go into a public corrections log')}</li>
-          </ul>
-          <LangLink className="onboard__lang" />
-        </div>
-      )}
-
-      {step === 1 && (
-        <div className="onboard__body">
-          <h2 id="onboard-title" className="onboard__title">
-            {L('관심 분야를 골라 주세요', 'Pick sectors you follow')}
-          </h2>
-          <p className="muted">
-            {L(
-              '선택이에요. 목록에 표시하고 탐색과 알림에 써요. 하루 호의 순서는 바뀌지 않아요.',
-              'Optional. We mark them in lists and use them in Explore and alerts. The order of each issue stays the same.',
-            )}
-          </p>
-          <div className="onboard__chips">
-            {SECTORS.filter((s) => counts.get(s.key)).map((s) => (
-              <button
-                key={s.key}
-                type="button"
-                className={`chip ${interests.includes(s.key) ? 'chip--on' : ''}`}
-                aria-pressed={interests.includes(s.key)}
-                onClick={() => toggle(s.key)}
-              >
-                {interests.includes(s.key) && <Icon name="check" size={14} />}
-                {s.label} <span className="num muted">{counts.get(s.key)}</span>
-              </button>
-            ))}
+          {roleChips}
+          <div className="taste__hint">
+            <span>{L('탭하면 바로 다음 단계로', 'Tap one to go on')}</span>
+            <LangLink className="taste__lang" />
           </div>
         </div>
-      )}
-
-      {step === 2 && steps === 3 && (
-        <div className="onboard__body">
-          <h2 id="onboard-title" className="onboard__title">
-            {L('새 호가 나오면 알려 드릴까요?', 'Want a heads-up when a new issue is out?')}
-          </h2>
-          <AlertSetting compact onDone={finish} />
-          <p className="muted onboard__later">{L('나중에 소개 → 설정에서 언제든 바꿀 수 있어요.', 'You can change this anytime in About → Settings.')}</p>
+      ) : (
+        <div className="taste__pane" key="sectors">
+          <p className="taste__sub">
+            {L('3개쯤 고르면 순서가 잘 맞아요.', 'About 3 works best.')}
+            <br />
+            {L('오늘의 묶음은 모두에게 같아요.', "Today's picks are the same for everyone.")}
+          </p>
+          {sectorChips}
         </div>
       )}
-
-      <div className="onboard__actions">
-        {step > 0 && (
-          <button type="button" className="btn btn--secondary" onClick={() => setStep(step - 1)}>
-            {L('이전', 'Back')}
-          </button>
-        )}
-        {/* first focus on the main action, not on 건너뛰기 at the top */}
-        <button type="button" className="btn btn--primary" autoFocus onClick={() => (step < steps - 1 ? setStep(step + 1) : finish())}>
-          {step < steps - 1 ? L('다음', 'Next') : L('시작하기', 'Get started')}
-        </button>
-      </div>
-    </dialog>
+    </Sheet>
   )
 }

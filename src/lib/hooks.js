@@ -8,7 +8,8 @@ import { load, save } from './storage.js'
    #/s/skild-ai-2026  startup detail (?from=saved keeps the saved list as context)
    #/explore          browse & search (?view=&q=&sector=&stage=&region=&sort=)
    #/saved            saved list
-   #/about            about, selection criteria, corrections, settings       */
+   #/settings         settings (role, sectors, order, theme, alerts, …)
+   #/about            about, selection criteria, corrections                 */
 
 function readHash(hash) {
   const h = (hash || '').replace(/^#/, '') || '/'
@@ -61,7 +62,7 @@ export function buildQuery(params) {
    localStorage can throw (private mode, blocked storage); every access is
    guarded and the in-memory value keeps the UI working.                   */
 
-function createStore(key, fallback, validate = () => true) {
+export function createStore(key, fallback, validate = () => true) {
   const initial = load(key, fallback)
   let value = validate(initial) ? initial : fallback
   const listeners = new Set()
@@ -79,7 +80,7 @@ function createStore(key, fallback, validate = () => true) {
   }
 }
 
-function useStore(store) {
+export function useStore(store) {
   return useSyncExternalStore(store.subscribe, store.get, store.get)
 }
 
@@ -106,13 +107,20 @@ export function localDate(d = new Date()) {
 // ids the reader marked unread this session: auto-tracking leaves them alone
 const keptUnread = new Set()
 
+// other reading signals (personal.js: page opens) are cleared with the read log
+const clearListeners = new Set()
+export const onReadCleared = (l) => (clearListeners.add(l), () => clearListeners.delete(l))
+
 export function useReadLog() {
   const readLog = useStore(readStore)
   const markRead = useCallback((id) => {
     if (readStore.get()[id] || keptUnread.has(id)) return
     readStore.set((prev) => ({ ...prev, [id]: localDate() }))
   }, [])
-  const clearRead = useCallback(() => readStore.set({}), [])
+  const clearRead = useCallback(() => {
+    readStore.set({})
+    clearListeners.forEach((l) => l())
+  }, [])
   // explicit toggles from the reader: on → today, off → drop the entry
   const setRead = useCallback((ids, on) => {
     readStore.set((prev) => {
@@ -133,8 +141,9 @@ export function useReadLog() {
   return { readLog, isRead: (id) => Boolean(readLog[id]), markRead, setRead, restoreRead, clearRead }
 }
 
-/* Sectors the reader cares about (keys from SECTORS). Marks rows, seeds filters and
-   can limit alerts; it never reorders an issue. */
+/* Sectors the reader cares about (keys from SECTORS). Marks rows, seeds filters, can
+   limit alerts, and moves those companies up in the reader's order of an issue
+   (personal.js; the published order stays one tap away). */
 const interestStore = createStore('sd_interests', [], Array.isArray)
 
 export function useInterests() {

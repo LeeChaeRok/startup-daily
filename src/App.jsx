@@ -11,6 +11,7 @@ import { onLensReady, useContextList } from './screens/detail-hooks.jsx'
 import Explore from './screens/Explore.jsx'
 import Saved from './screens/Saved.jsx'
 import About from './screens/About.jsx'
+import Settings from './screens/Settings.jsx'
 import Weekly from './screens/Weekly.jsx'
 import Sector from './screens/Sector.jsx'
 import { SECTORS, byDate, byId, dates, issueNo, useDataLevel, weeks } from './lib/data.js'
@@ -30,6 +31,7 @@ function resolve({ parts, params }) {
   if (head === 'explore') return { kind: 'explore', section: 'explore' }
   if (head === 'saved') return { kind: 'saved', section: 'saved' }
   if (head === 'about') return { kind: 'about', section: 'about' }
+  if (head === 'settings') return { kind: 'settings', section: 'about' }
   if (head === 'w' && weeks.some((w) => w.key === arg)) return { kind: 'weekly', week: arg, section: 'explore' }
   if (head === 't' && arg) return { kind: 'sector', sector: arg, section: 'explore' }
   return { kind: 'missing', section: null, head, arg }
@@ -41,6 +43,7 @@ function titleFor(r) {
   if (r.kind === 'explore') return `${L('탐색', 'Explore')} — Startup Daily`
   if (r.kind === 'saved') return `${L('저장함', 'Saved')} — Startup Daily`
   if (r.kind === 'about') return `${L('소개·선정 기준', 'About and how we pick')} — Startup Daily`
+  if (r.kind === 'settings') return `${L('설정', 'Settings')} — Startup Daily`
   if (r.kind === 'weekly') return `${L(`${weekLabel(r.week)} 주간 정리`, weekLabel(r.week))} — Startup Daily`
   if (r.kind === 'sector') {
     const label = SECTORS.find((s) => s.key === r.sector)?.label
@@ -243,7 +246,7 @@ export default function App() {
   }, [route.kind])
 
   const split = desktop && (route.kind === 'issue' || route.kind === 'detail')
-  const showBack = !desktop && (route.kind === 'detail' || route.kind === 'about')
+  const showBack = !desktop && (route.kind === 'detail' || route.kind === 'about' || route.kind === 'settings')
 
   let content
   if (route.kind === 'issue') content = desktop ? <IssueOverview date={route.date} wide={wide} /> : <IssueMobile date={route.date} />
@@ -257,6 +260,7 @@ export default function App() {
   else if (route.kind === 'explore') content = <Explore params={loc.params} desktop={desktop} />
   else if (route.kind === 'saved') content = <Saved params={loc.params} />
   else if (route.kind === 'about') content = <About params={loc.params} />
+  else if (route.kind === 'settings') content = <Settings />
   else if (route.kind === 'weekly') content = <Weekly week={route.week} />
   else if (route.kind === 'sector') content = <Sector sector={route.sector} />
   else content = <NotFound head={route.head} arg={route.arg} />
@@ -266,6 +270,7 @@ export default function App() {
   return (
     <ToastProvider>
       <Notifier />
+      {/* the taste sheet (role and sectors); opened from the issue screen and 설정 */}
       <Onboarding />
       <a className="skip" href="#main" onClick={(e) => (e.preventDefault(), document.getElementById('main')?.focus())}>
         {L('본문으로 건너뛰기', 'Skip to content')}
