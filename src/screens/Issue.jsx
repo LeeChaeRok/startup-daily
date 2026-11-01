@@ -14,6 +14,8 @@ import { canonicalUrl, shareOrCopy } from '../lib/share.js'
 import { currentEntry } from '../lib/nav.js'
 import { useIssueOrder, useOrder, usePastPicks, useRole, useTastePrompt } from '../lib/personal.js'
 import { maybeAskTaste, openTaste } from '../lib/taste.js'
+import { useHomeTab, useMyIssue } from '../lib/my-issue.js'
+import { track } from '../lib/analytics.js'
 import { load } from '../lib/storage.js'
 import { useToast } from '../components/toast-context.js'
 import { L } from '../lib/i18n.js'
@@ -365,10 +367,12 @@ function NumbersStrip({ list }) {
   )
 }
 
-/** Where the issue's hero points: the first unread company in the reader's order. */
-function useHeroPick(date) {
+/** Where the issue's hero points: the first unread company in the reader's order.
+    `mine`: the reader's own five ("내 5곳"), already in their order. */
+function useHeroPick(date, mine = null) {
   const { isRead } = useReadLog()
-  const order = useIssueOrder(byDate(date))
+  const published = useIssueOrder(byDate(date))
+  const order = mine ? { list: mine, personal: true, differs: false } : published
   const idx = order.list.findIndex((s) => !isRead(s.id))
   return { ...order, hero: idx >= 0 ? order.list[idx] : null, rank: idx + 1 }
 }
@@ -436,9 +440,8 @@ function IssueTitle({ date }) {
 }
 
 /** "아직 모르는, 지금 뜨는 스타트업 5곳 · 2/5" + one cell per company, in published order. */
-function IssueProgress({ date }) {
+function IssueProgress({ date, list = byDate(date) }) {
   const { isRead } = useReadLog()
-  const list = byDate(date)
   const done = list.filter((s) => isRead(s.id)).length
   const all = list.length > 0 && done === list.length
   const n = list.length
@@ -526,11 +529,12 @@ function OrderHead({ personal }) {
 
 /* The first unread company, three things: what it is, what it does, why it matters.
    Stage, amount, English name and the "○○라면" line wait on the company page. */
-function Hero({ startup: s, resume, heroRef }) {
+function Hero({ startup: s, resume, heroRef, discovery }) {
   return (
     <a className="hero" href={`#/s/${s.id}`} ref={heroRef}>
       <span className="hero__kicker">
         {resume && <strong>{L('이어 읽기', 'Keep reading')} · </strong>}
+        {discovery && <strong>{L('오늘의 발견', "Today's find")} · </strong>}
         {s._sector.label}
         {s.headquarters?.country_ko && <> · {s.headquarters.country_ko}</>}
         <CorrectionBadge correction={s._correction} />
@@ -660,6 +664,51 @@ function TasteCard() {
   )
 }
 
+/** "내 5곳 | 모두의 5곳": only when the day has a pool and the reader follows a sector. */
+function HomeTabs({ tab, setTab }) {
+  const pick = (k) => () => {
+    if (k === tab) return
+    setTab(k)
+    track('tab_switch', { tab: k })
+  }
+  return (
+    <div className="segmented home-tabs" role="group" aria-label={L('오늘의 5곳 보기', "Today's five")}>
+      {[
+        ['mine', L('내 5곳', 'My five')],
+        ['all', L('모두의 5곳', "Everyone's five")],
+      ].map(([k, label]) => (
+        <button key={k} type="button" aria-pressed={tab === k} className="segmented__tab" onClick={pick(k)}>
+          {label}
+        </button>
+      ))}
+    </div>
+  )
+}
+
+/** "내 5곳" read to the end: what is left in the reader's sectors today. */
+function MyDoneCard({ date, more }) {
+  const { interests } = useInterests()
+  const share = useIssueShare(date)
+  return (
+    <section className="state-card" aria-labelledby="my-done-title">
+      <h2 id="my-done-title" className="state-card__title">
+        <Icon name="check" size={20} className="state-card__check" />
+        {L('내 5곳을 다 읽었어요', "You've read your five")}
+      </h2>
+      {more > 0 ? (
+        <a className="state-card__link" href={`#/explore${buildQuery({ sector: interests })}`}>
+          {L(`오늘 내 분야에 ${more}곳 더 있어요`, `${more} more in your sectors today`)} <Icon name="chevronRight" size={16} />
+        </a>
+      ) : (
+        <p className="state-card__text">{L('다음 5곳은 내일 나와요', 'Your next five are out tomorrow')}</p>
+      )}
+      <button type="button" className="btn btn--secondary state-card__share" onClick={share}>
+        <Icon name="share" size={18} /> {L('이 호 공유', 'Share this issue')}
+      </button>
+    </section>
+  )
+}
+
 /* ---------- Screens ---------- */
 
 export function IssueMobile({ date }) {
@@ -667,11 +716,26 @@ export function IssueMobile({ date }) {
   const { interests } = useInterests()
   const [role] = useRole()
   const [prompt, setPrompt] = useTastePrompt()
-  const { list, hero, personal, differs } = useHeroPick(date)
-  const issue = byDate(date)
+  const my = useMyIssue(date)
+  const [tab, setTab] = useHomeTab()
+  const mine = my.available && tab === 'mine'
+  const { list, hero, personal, differs } = useHeroPick(date, mine ? my.list : null)
+  const issue = mine ? my.list : byDate(date)
   const latest = date === dates[0]
   const done = issue.filter((s) => isRead(s.id)).length
   const finished = issue.length > 0 && done === issue.length
+  const toast = useToast()
+  // issue_complete: once, when the last unread company of the shown five is read
+  // (not when switching to a tab that was already finished)
+  const wasFinished = useRef(null)
+  useEffect(() => {
+    const key = `${date}:${mine}`
+    if (wasFinished.current?.key === key && !wasFinished.current.finished && finished) track('issue_complete', { date, tab: mine ? 'mine' : 'all' })
+    wasFinished.current = { key, finished }
+  }, [finished, date, mine])
+  useEffect(() => {
+    if (my.repicked) toast(L('관심 분야를 바꿔 오늘의 5곳을 다시 골랐어요', 'Your sectors changed, so we picked your five again'))
+  }, [my.repicked, toast])
   const heroRef = useRef(null)
   const ask = useRef(null)
   ask.current = () => maybeAskTaste({ prompt, setPrompt, role, interests })
@@ -699,13 +763,21 @@ export function IssueMobile({ date }) {
   return (
     <div className="page page--issue">
       <IssueTitle date={date} />
+      {my.available && <HomeTabs tab={tab} setTab={setTab} />}
       {latest && daysSince(date) >= 2 && <StaleCard date={date} />}
-      <IssueProgress date={date} />
-      {(differs || !personal) && <OrderHead personal={personal} />}
-      {hero ? <Hero startup={hero} resume={done > 0} heroRef={heroRef} /> : finished && <DoneCard date={date} picks={picks} />}
-      <ul className="rows rows--issue" aria-label={L(`제${issueNo(date)}호 스타트업 목록`, `Startups in issue #${issueNo(date)}`)}>
+      <IssueProgress date={date} list={issue} />
+      {!mine && (differs || !personal) && <OrderHead personal={personal} />}
+      {hero ? (
+        <Hero startup={hero} resume={done > 0} heroRef={heroRef} discovery={mine && hero.id === my.discoveryId} />
+      ) : (
+        finished && (mine ? <MyDoneCard date={date} more={my.more} /> : <DoneCard date={date} picks={picks} />)
+      )}
+      <ul
+        className="rows rows--issue"
+        aria-label={mine ? L('내 5곳', 'My five') : L(`제${issueNo(date)}호 스타트업 목록`, `Startups in issue #${issueNo(date)}`)}
+      >
         {rows.map((s) => (
-          <StartupRow key={s.id} startup={s} issue />
+          <StartupRow key={s.id} startup={s} issue reason={mine && s.id === my.discoveryId ? L('오늘의 발견 · 관심 밖에서 하나', "Today's find · one from outside your sectors") : null} />
         ))}
       </ul>
       {done > 0 && <MarkAllRead list={issue} />}

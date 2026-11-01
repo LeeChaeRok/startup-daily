@@ -1,0 +1,762 @@
+[
+  {
+    "id": "ginkgo-bioworks-2026",
+    "date": "2026-04-16",
+    "featured": true,
+    "sector": "health",
+    "name_en": "Ginkgo Bioworks",
+    "name_ko": "징코 바이오웍스",
+    "tagline": "세포를 프로그래밍하는 생물학의 파운드리, 합성생물학의 AWS를 만들다",
+    "category": [
+      "합성생물학",
+      "바이오테크",
+      "세포 프로그래밍"
+    ],
+    "founded_year": 2008,
+    "headquarters": {
+      "city": "Boston",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Public (NYSE: DNA)",
+    "employee_count": "1000+",
+    "website": "https://www.ginkgobioworks.com/",
+    "logo_url": "/logos/ginkgo-bioworks-2026.png",
+    "logo_svg_description": "은행나무(Ginkgo) 잎 형태의 심볼과 'Ginkgo Bioworks' 텍스트가 조합된 로고, 자연과 기술의 융합을 상징하는 녹색 톤의 디자인",
+    "founders": [
+      {
+        "name_en": "Jason Kelly",
+        "name_ko": "제이슨 켈리",
+        "role": "CEO & Co-Founder",
+        "background": "MIT 생물공학 박사, 합성생물학 선구자 Tom Knight 교수 연구실 출신",
+        "linkedin": "https://www.linkedin.com/in/jason-kelly-ginkgo/",
+        "notable_achievement": "합성생물학을 제조업 규모로 확장한 세계 최대 세포 프로그래밍 플랫폼 구축"
+      },
+      {
+        "name_en": "Reshma Shetty",
+        "name_ko": "레쉬마 셰티",
+        "role": "President & Co-Founder",
+        "background": "MIT 생물공학 박사, iGEM 대회 창립 멤버, 합성생물학 표준화 연구 선도",
+        "linkedin": "https://www.linkedin.com/in/reshmashetty/",
+        "notable_achievement": "BioBricks 표준 생물학적 부품 개발의 핵심 기여자, Ginkgo의 기술 전략 총괄"
+      }
+    ],
+    "team_highlights": "MIT 합성생물학 연구실 출신 5인의 공동창업자, 세계 최대 바이오 파운드리 운영, AI+자동화 기반 고처리량 세포 설계 플랫폼 보유",
+    "product": {
+      "summary": "고객이 원하는 기능(향료, 효소, 치료제 등)을 수행하는 맞춤형 미생물을 설계·최적화하는 세포 프로그래밍 플랫폼(바이오 파운드리)을 서비스로 제공",
+      "problem_statement": "합성생물학의 잠재력은 거대하지만, 세포를 설계·제작·테스트하는 과정이 극도로 복잡하고 비용이 높아 대부분의 기업이 자체적으로 수행하기 어려움",
+      "solution": "세계 최대 규모의 자동화된 바이오 파운드리에서 AI 기반 세포 설계, 로봇 자동화 제작, 고처리량 테스트를 수행하여 고객의 맞춤형 미생물을 빠르고 효율적으로 개발",
+      "key_features": [
+        "세포 프로그래밍 플랫폼: AI가 유전자 회로를 설계하고 로봇이 자동으로 세포를 제작·테스트",
+        "코드베이스(Codebase): 10만 종 이상의 생물학적 부품과 설계 데이터를 축적한 독자 데이터베이스",
+        "바이오시큐리티(Concentric): 병원체 모니터링을 위한 생물안보 플랫폼",
+        "다양한 산업 적용: 식품·향료·농업·제약·소재 등 전 산업 대상 맞춤형 세포 설계",
+        "파운드리-as-a-서비스: 고객이 자체 연구실 없이도 합성생물학 역량을 활용 가능"
+      ],
+      "tech_stack_or_innovation": "머신러닝 기반 유전자 설계 알고리즘 + 대규모 로봇 자동화 파운드리(연간 수백만 건 실험 가능) + 10만+ 생물학적 부품 코드베이스의 삼중 구조. 합성생물학의 설계-제작-테스트 사이클을 10배 이상 가속",
+      "target_customer": "식품·향료 기업(대체 원료 개발), 제약사(치료제·백신 개발), 농업 기업(작물 개량), 소재 기업(바이오 기반 화학 소재), 정부(바이오시큐리티)",
+      "business_model": "파운드리 서비스 수수료 + 성공 시 마일스톤 수익 + 로열티·지분 교환(Cell Programs) + 바이오시큐리티 구독",
+      "demo_or_screenshot_url": "https://www.ginkgobioworks.com/foundry/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Zymergen (Ginkgo에 인수됨)",
+          "comparison": "Ginkgo에 2022년 인수되어 경쟁 관계 소멸. Ginkgo의 플랫폼이 더욱 확장"
+        },
+        {
+          "name": "Twist Bioscience",
+          "comparison": "합성 DNA 제조에 특화된 기업. Ginkgo는 DNA 합성을 넘어 세포 설계·최적화까지 포괄하는 더 넓은 플랫폼"
+        },
+        {
+          "name": "Amyris (파산 정리)",
+          "comparison": "합성생물학 기반 향료·화장품 원료 생산 기업이었으나 2023년 파산. Ginkgo는 플랫폼 모델로 리스크 분산"
+        }
+      ],
+      "key_differentiator": "세계 최대 자동화 바이오 파운드리와 10만+ 부품 코드베이스를 보유한 유일한 '합성생물학 플랫폼' 기업. 직접 제품을 만들지 않고 플랫폼을 제공하여 리스크 분산",
+      "moat": "압도적 규모의 자동화 파운드리 인프라, 누적된 생물학적 데이터(코드베이스), 글로벌 바이오 기업들과의 셀 프로그램 파이프라인, Zymergen 인수로 확장된 역량",
+      "competitive_position_summary": "합성생물학의 AWS를 지향하는 독보적 플랫폼 기업. 직접 경쟁자가 사실상 없는 카테고리 크리에이터"
+    },
+    "trending_reason": {
+      "summary": "AI 기반 세포 설계 기술의 비약적 발전으로 파운드리 효율성이 10배 향상, 바이오 경제 정책 확대와 맞물려 신규 고객 파이프라인 급증",
+      "catalysts": [
+        "AI 기반 유전자 설계 정확도 획기적 향상으로 세포 개발 사이클 50% 단축",
+        "미국 바이오 경제 행정명령(Executive Order on Biotechnology) 후속 조치 확대",
+        "Pfizer, Bayer 등 글로벌 제약사와의 대규모 셀 프로그램 계약 체결",
+        "2026년 흑자 전환 가이던스 발표로 시장 신뢰 회복"
+      ],
+      "media_mentions": [
+        {
+          "source": "Nature Biotechnology",
+          "title": "Ginkgo Bioworks' AI-powered cell programming reaches new scale",
+          "url": "https://www.nature.com/articles/ginkgo-ai-cell-programming",
+          "date": "2025-12-10"
+        },
+        {
+          "source": "STAT News",
+          "title": "Ginkgo bets big on AI to reshape synthetic biology",
+          "url": "https://www.statnews.com/ginkgo-ai-synbio/",
+          "date": "2026-02-05"
+        }
+      ],
+      "growth_metrics": "활성 셀 프로그램 200개 이상, 누적 실험 데이터 10페타바이트 돌파, 2025년 매출 $500M+"
+    },
+    "funding": {
+      "total_raised": "$2.8B+ (IPO 포함)",
+      "latest_round": {
+        "stage": "Public (SPAC IPO)",
+        "amount": "$1.6B (IPO)",
+        "date": "2021-09",
+        "lead_investor": "SPAC (Soaring Eagle Acquisition Corp)",
+        "notable_investors": [
+          "Bill Gates",
+          "Cascade Investment",
+          "Viking Global Investors"
+        ]
+      },
+      "valuation_estimate": "시가총액 약 $3B (2026년 4월 기준)",
+      "funding_history": [
+        {
+          "stage": "Series D",
+          "amount": "$290M",
+          "date": "2019-09",
+          "lead_investor": "Viking Global Investors"
+        },
+        {
+          "stage": "Series E",
+          "amount": "$70M",
+          "date": "2020-07",
+          "lead_investor": "T. Rowe Price"
+        },
+        {
+          "stage": "SPAC IPO",
+          "amount": "$1.6B",
+          "date": "2021-09",
+          "lead_investor": "Soaring Eagle Acquisition Corp"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 합성생물학 시장 2030년 $50B 전망, 바이오 파운드리 서비스 시장 $8B 추정",
+      "market_trend": "AI와 자동화의 융합으로 세포 설계 비용·시간 급감, 바이오 제조가 화학 제조를 대체하는 '바이오 경제' 전환 가속",
+      "growth_potential": "합성생물학이 적용 가능한 산업(식품, 의약, 농업, 에너지, 소재) 전체가 잠재 시장. 바이오 파운드리의 네트워크 효과로 데이터 우위 확대",
+      "risks": [
+        "상장 후 수익성 달성까지의 장기간 적자 지속",
+        "GMO 관련 규제·사회적 수용성 리스크",
+        "Google·Microsoft 등 빅테크의 AI 바이오 진출"
+      ],
+      "risk_mitigation": "플랫폼 모델로 개별 제품 리스크 분산, 바이오시큐리티 사업으로 정부 수요 확보, 누적 데이터 기반의 AI 경쟁 우위 강화"
+    },
+    "related_links": [
+      {
+        "title": "Ginkgo Bioworks 공식 웹사이트",
+        "url": "https://www.ginkgobioworks.com/"
+      },
+      {
+        "title": "Nature Biotechnology 보도",
+        "url": "https://www.nature.com/articles/ginkgo-ai-cell-programming"
+      },
+      {
+        "title": "Ginkgo Foundry 소개",
+        "url": "https://www.ginkgobioworks.com/foundry/"
+      }
+    ],
+    "editor_pick_comment": "Ginkgo는 세포를 코드처럼 프로그래밍한다. AWS가 클라우드의 기초 인프라가 된 것처럼, Ginkgo는 바이오 경제의 인프라가 되려 한다. 10만 개 생물학적 부품 라이브러리가 이 야심의 근거다."
+  },
+  {
+    "id": "isar-aerospace-2026",
+    "date": "2026-04-16",
+    "featured": true,
+    "sector": "mobility",
+    "name_en": "Isar Aerospace",
+    "name_ko": "이자르 에어로스페이스",
+    "tagline": "유럽의 독립적 우주 접근, 소형 발사체의 새 장을 열다",
+    "category": [
+      "스페이스테크",
+      "발사체",
+      "우주 접근"
+    ],
+    "founded_year": 2018,
+    "headquarters": {
+      "city": "Munich",
+      "country": "Germany",
+      "country_ko": "독일"
+    },
+    "company_stage": "Series C",
+    "employee_count": "201-500",
+    "website": "https://www.isaraerospace.com/",
+    "logo_url": "/logos/isar-aerospace-2026.png",
+    "logo_svg_description": "유선형 로켓 형상의 심볼과 'ISAR AEROSPACE' 텍스트가 조합된 로고, 유럽 우주 기술의 정밀함을 표현하는 다크블루·화이트 톤의 디자인",
+    "founders": [
+      {
+        "name_en": "Daniel Metzler",
+        "name_ko": "다니엘 메츨러",
+        "role": "CEO & Co-Founder",
+        "background": "TU 뮌헨 항공우주공학 출신, 학생 로켓 프로젝트 WARR에서 출발한 연쇄 우주 기업가",
+        "linkedin": "https://www.linkedin.com/in/daniel-metzler/",
+        "notable_achievement": "유럽 뉴스페이스 스타트업 중 가장 많은 민간 투자($310M+)를 유치한 발사체 기업 설립"
+      },
+      {
+        "name_en": "Josef Fleischmann",
+        "name_ko": "요제프 플라이쉬만",
+        "role": "CTO & Co-Founder",
+        "background": "TU 뮌헨 항공우주공학 석사, 로켓 추진체 및 엔진 설계 전문가",
+        "linkedin": "",
+        "notable_achievement": "Spectrum 발사체의 Aquila 엔진을 자체 설계·제작·시험 완료"
+      }
+    ],
+    "team_highlights": "TU 뮌헨 항공우주공학 출신 3인 공동창업자, ESA·에어버스 출신 엔지니어 다수 합류, 유럽 최대 규모의 민간 발사체 팀",
+    "product": {
+      "summary": "소형 위성 전용 경량 발사체 'Spectrum'을 개발하여 유럽의 독립적이고 유연한 우주 접근 서비스를 제공",
+      "problem_statement": "유럽은 소형 위성 수요가 급증하지만 자체 소형 발사체가 없어 SpaceX·Rocket Lab 등 미국 기업에 의존. Ariane 6는 대형 발사체로 소형 위성에는 비효율적이며 발사 대기 시간이 김",
+      "solution": "소형 위성(LEO 1,000kg급)을 전용으로 발사하는 탄소 섬유 복합체 기반 경량 로켓 Spectrum을 개발. 발사 비용 절감과 유연한 발사 일정으로 유럽 고객의 독립적 우주 접근 지원",
+      "key_features": [
+        "Spectrum 발사체: LEO 1,000kg, SSO 700kg 페이로드 능력의 2단 로켓",
+        "Aquila 엔진: 자체 개발한 LOX/케로신 엔진, 3D 프린팅 기반 제조",
+        "탄소 섬유 복합체 기체: 경량화로 성능 극대화",
+        "전용 발사 서비스: 고객 맞춤 궤도·일정 제공(라이드셰어 불필요)",
+        "노르웨이 안되야 발사장: 극궤도 접근에 최적화된 유럽 내 발사 기지 확보"
+      ],
+      "tech_stack_or_innovation": "자체 개발 Aquila 엔진(LOX/케로신)은 3D 프린팅으로 부품 수를 80% 절감. 탄소 섬유 복합체 기체는 금속 대비 30% 경량화. 자동화된 생산 라인으로 발사체 대량 제조 지향",
+      "target_customer": "소형 위성 운용 기업, 지구 관측·통신 위성 콘스텔레이션 사업자, 유럽 우주국(ESA) 및 유럽 정부 기관",
+      "business_model": "발사 서비스 계약(전용 발사 1회당 $12M~) + 다중 페이로드 라이드셰어 옵션 + ESA·정부 기관 계약",
+      "demo_or_screenshot_url": "https://www.isaraerospace.com/spectrum"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Rocket Factory Augsburg (RFA)",
+          "comparison": "독일의 또 다른 소형 발사체 스타트업이나, Isar Aerospace가 투자 규모와 개발 진척도에서 앞서 있음"
+        },
+        {
+          "name": "Rocket Lab",
+          "comparison": "미국·뉴질랜드 기반의 소형 발사체 선두주자. Isar Aerospace는 유럽 내 발사·제조로 유럽 고객에게 지정학적 이점 제공"
+        }
+      ],
+      "key_differentiator": "유럽 기반 소형 발사체 스타트업 중 가장 진척된 개발 상태와 최대 투자를 확보. 유럽 내 제조·발사로 유럽 주권적 우주 접근 제공",
+      "moat": "유럽 최대 민간 투자, 노르웨이 안되야 발사장 독점적 접근권, 자체 엔진·기체 기술, ESA·에어버스 등 유럽 우주 생태계와의 깊은 관계",
+      "competitive_position_summary": "유럽 뉴스페이스의 대표 기업으로, 유럽의 독립적 소형 발사 능력 확보를 위한 가장 유력한 주자"
+    },
+    "trending_reason": {
+      "summary": "첫 궤도 발사 임박, ESA와의 발사 서비스 계약 체결, 유럽 우주 주권 논의 가속화로 유럽 뉴스페이스의 간판 기업으로 급부상",
+      "catalysts": [
+        "Spectrum 발사체 첫 궤도 발사 2026년 상반기 예정으로 임박",
+        "ESA와의 발사 서비스 프레임워크 계약 체결",
+        "러시아 Soyuz 사용 불가로 유럽 독립 발사 능력의 전략적 중요성 부각",
+        "Series C $165M 유치로 유럽 발사체 스타트업 최대 투자 기록"
+      ],
+      "media_mentions": [
+        {
+          "source": "SpaceNews",
+          "title": "Isar Aerospace closes $165M Series C to prepare for Spectrum's debut launch",
+          "url": "https://spacenews.com/isar-aerospace-165m-series-c/",
+          "date": "2024-12-15"
+        },
+        {
+          "source": "Handelsblatt",
+          "title": "Isar Aerospace: Europas Antwort auf SpaceX?",
+          "url": "https://www.handelsblatt.com/isar-aerospace-spacex-europa/",
+          "date": "2025-11-20"
+        }
+      ],
+      "growth_metrics": "총 누적 투자 $310M+, 발사 계약 백로그 $100M 이상, 직원 수 400명으로 2년간 2배 증가"
+    },
+    "funding": {
+      "total_raised": "$310M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$165M",
+        "date": "2024-12",
+        "lead_investor": "HV Capital",
+        "notable_investors": [
+          "Porsche Automobil Holding",
+          "Airbus Ventures",
+          "Lombard Odier"
+        ]
+      },
+      "valuation_estimate": "$1B+ (추정)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$17M",
+          "date": "2020-09",
+          "lead_investor": "Earlybird Venture Capital"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$75M",
+          "date": "2021-12",
+          "lead_investor": "HV Capital"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$165M",
+          "date": "2024-12",
+          "lead_investor": "HV Capital"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 소형 발사체 서비스 시장 2030년 $25B 전망, 유럽 발사 서비스 시장 $5B",
+      "market_trend": "소형 위성 콘스텔레이션 수요 폭증, 유럽 우주 주권 정책 강화, 재사용 발사체 기술 발전으로 발사 비용 하락",
+      "growth_potential": "첫 발사 성공 시 유럽 소형 발사 시장 독점적 위치 확보 가능. 재사용 기술 개발로 중기적 비용 경쟁력 확보 목표",
+      "risks": [
+        "첫 궤도 발사 실패 시 일정 지연 및 신뢰도 하락",
+        "SpaceX·Rocket Lab의 유럽 시장 공략 강화",
+        "발사체 개발의 높은 기술적 리스크와 자본 소모"
+      ],
+      "risk_mitigation": "충분한 지상 시험으로 발사 리스크 최소화, 유럽 주권 우주 접근 수요로 차별화, 대규모 자금 확보로 다회 발사 시도 가능"
+    },
+    "related_links": [
+      {
+        "title": "Isar Aerospace 공식 웹사이트",
+        "url": "https://www.isaraerospace.com/"
+      },
+      {
+        "title": "SpaceNews 보도: $165M Series C",
+        "url": "https://spacenews.com/isar-aerospace-165m-series-c/"
+      }
+    ],
+    "editor_pick_comment": "러시아 Soyuz 없이, Ariane 6의 긴 대기 없이, 유럽이 스스로 위성을 쏘아올리려면 Isar Aerospace가 필요하다. 첫 발사가 성공하면 유럽 뉴스페이스 역사가 다시 쓰인다."
+  },
+  {
+    "id": "photomath-2026",
+    "date": "2026-04-16",
+    "featured": true,
+    "sector": "consumer",
+    "name_en": "Photomath",
+    "name_ko": "포토매스",
+    "tagline": "카메라로 수학 문제를 비추면 AI가 풀이 과정까지 알려준다",
+    "category": [
+      "에듀테크",
+      "AI 튜터",
+      "수학 교육"
+    ],
+    "founded_year": 2014,
+    "headquarters": {
+      "city": "Zagreb",
+      "country": "Croatia",
+      "country_ko": "크로아티아"
+    },
+    "company_stage": "인수 완료 (Google)",
+    "employee_count": "101-200",
+    "website": "https://photomath.com/",
+    "logo_url": "/logos/photomath-2026.png",
+    "logo_svg_description": "카메라 렌즈와 수학 기호를 결합한 아이콘 위에 'Photomath' 텍스트가 조합된 로고, 직관적이고 친근한 교육 앱을 상징하는 빨간색 톤의 디자인",
+    "founders": [
+      {
+        "name_en": "Damir Sabol",
+        "name_ko": "다미르 사볼",
+        "role": "CEO & Founder",
+        "background": "크로아티아 연쇄 기업가, 컴퓨터 비전 및 모바일 기술 전문가",
+        "linkedin": "https://www.linkedin.com/in/damirsabol/",
+        "notable_achievement": "전 세계 3억 회 이상 다운로드된 수학 교육 앱 Photomath를 크로아티아에서 창업하여 Google에 매각"
+      }
+    ],
+    "team_highlights": "크로아티아 출신 창업 팀, Google 인수 후 Google 내 에듀테크 팀으로 편입, 3억+ 다운로드의 글로벌 수학 교육 플랫폼 운영",
+    "product": {
+      "summary": "스마트폰 카메라로 수학 문제를 촬영하면 AI가 문제를 인식하고 단계별 풀이 과정과 해설을 제공하는 AI 수학 튜터 앱",
+      "problem_statement": "수학은 전 세계 학생들이 가장 어려워하는 과목이지만, 1:1 과외는 비용이 높고 접근성이 제한적. 기존 교육 앱은 답만 제공하거나 풀이 과정이 부실하여 실질적 학습 효과가 낮음",
+      "solution": "카메라로 수학 문제를 비추기만 하면 AI가 즉시 인식하고, 학생이 이해할 수 있는 단계별 풀이 과정과 시각적 해설을 제공. 24시간 이용 가능한 개인 수학 튜터 역할",
+      "key_features": [
+        "카메라 인식: 스마트폰 카메라로 수기·인쇄 수학 문제를 즉시 인식",
+        "단계별 풀이: AI가 풀이 과정을 하나하나 분해하여 이해하기 쉽게 설명",
+        "다양한 풀이 방법: 하나의 문제에 대해 여러 풀이 접근법을 제시",
+        "AI 기반 개인화 학습: 학생의 수준과 취약점에 맞는 맞춤형 설명 제공",
+        "초등~대학 수학 커버: 산술부터 미적분, 선형대수까지 폭넓은 수학 범위 지원",
+        "애니메이션 해설: 시각적 애니메이션으로 추상적 수학 개념을 직관적으로 설명"
+      ],
+      "tech_stack_or_innovation": "고정밀 OCR(광학 문자 인식) + 수학 특화 자연어 처리(NLP) + 기호 연산 엔진(CAS)의 결합. Google 인수 후 Gemini AI 모델 통합으로 자연어 질문 대화형 수학 튜터링 기능 강화",
+      "target_customer": "초중고·대학 학생, 수학 학습을 지도하는 학부모, 수업에 Photomath를 활용하는 교사",
+      "business_model": "프리미엄 구독(Photomath Plus: 상세 풀이·AI 튜터 기능) + 광고 없는 기본 앱(무료)",
+      "demo_or_screenshot_url": "https://photomath.com/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Mathway",
+          "comparison": "수학 문제 풀이 앱이나 카메라 인식 기능과 단계별 설명의 품질에서 Photomath이 우위"
+        },
+        {
+          "name": "Microsoft Math Solver",
+          "comparison": "무료 수학 풀이 도구이나 UI/UX와 풀이 해설의 깊이에서 Photomath이 더 뛰어남"
+        },
+        {
+          "name": "Khan Academy (Khanmigo)",
+          "comparison": "AI 튜터를 포함한 종합 교육 플랫폼. Photomath은 수학 문제 풀이에 특화된 즉시성에서 강점"
+        }
+      ],
+      "key_differentiator": "카메라 인식→단계별 풀이→AI 대화형 설명이라는 직관적 UX와 3억+ 다운로드의 압도적 사용자 기반, Google/Gemini AI 통합 시너지",
+      "moat": "3억+ 다운로드의 글로벌 사용자 기반, Google 에코시스템 내 시너지, 수학 문제 인식·풀이 분야 10년간의 데이터 축적",
+      "competitive_position_summary": "AI 수학 튜터 앱 카테고리의 글로벌 1위. Google 인수로 Gemini AI 통합이 가능해지며 차세대 대화형 수학 교육의 기준을 제시"
+    },
+    "trending_reason": {
+      "summary": "Google Gemini AI 통합으로 대화형 수학 튜터링 기능이 대폭 강화되며, AI 교육 시대의 킬러 앱으로 재조명",
+      "catalysts": [
+        "Google Gemini AI 통합으로 '대화하는 수학 튜터' 기능 출시",
+        "전 세계 누적 다운로드 3.5억 회 돌파",
+        "Google for Education 플랫폼과의 통합으로 학교 도입 가속",
+        "AI 교육 도구의 학습 효과 실증 연구 결과 발표(수학 성적 15% 향상)"
+      ],
+      "media_mentions": [
+        {
+          "source": "The Verge",
+          "title": "Google's Photomath gets a Gemini-powered AI tutor upgrade",
+          "url": "https://www.theverge.com/photomath-gemini-ai-tutor",
+          "date": "2026-01-22"
+        },
+        {
+          "source": "EdSurge",
+          "title": "Can Photomath's AI tutor actually help students learn math better?",
+          "url": "https://www.edsurge.com/photomath-ai-tutor-study",
+          "date": "2025-09-10"
+        }
+      ],
+      "growth_metrics": "누적 다운로드 3.5억 회, 월간 활성 사용자 1억 명, Photomath Plus 유료 구독자 수 전년 대비 2배 증가"
+    },
+    "funding": {
+      "total_raised": "$29M (인수 전)",
+      "latest_round": {
+        "stage": "인수 (Google)",
+        "amount": "비공개 (추정 $500M+)",
+        "date": "2023-03",
+        "lead_investor": "Google",
+        "notable_investors": [
+          "Google"
+        ]
+      },
+      "valuation_estimate": "$500M+ (인수 가격 추정)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$6M",
+          "date": "2017-12",
+          "lead_investor": "Goodwater Capital"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$23M",
+          "date": "2021-09",
+          "lead_investor": "Menlo Ventures"
+        },
+        {
+          "stage": "인수",
+          "amount": "비공개",
+          "date": "2023-03",
+          "lead_investor": "Google"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 에듀테크 시장 2030년 $400B 전망, AI 튜터링 시장 $30B, 수학 교육 앱 시장 $5B 추정",
+      "market_trend": "AI 개인화 학습의 대중화, K-12 에듀테크 지출 증가, 생성형 AI의 교육 분야 적용 확산",
+      "growth_potential": "수학에서 과학·물리 등 STEM 전 과목으로 확장, Google Classroom 통합으로 기관(B2B) 시장 진출, 개발도상국 시장 성장",
+      "risks": [
+        "학생들의 AI 의존으로 인한 자기주도 학습 능력 저하 우려",
+        "학교·교사의 AI 교육 도구 사용 제한 정책",
+        "OpenAI·ChatGPT 등 범용 AI의 수학 풀이 능력 향상으로 경쟁 심화"
+      ],
+      "risk_mitigation": "단순 답 제공이 아닌 학습 과정 중심 설계로 교육적 가치 입증, 교사 대상 관리 도구 제공으로 학교 채택 촉진, Google 브랜드 신뢰도 활용"
+    },
+    "related_links": [
+      {
+        "title": "Photomath 공식 웹사이트",
+        "url": "https://photomath.com/"
+      },
+      {
+        "title": "The Verge - Gemini AI 튜터 업데이트",
+        "url": "https://www.theverge.com/photomath-gemini-ai-tutor"
+      }
+    ],
+    "editor_pick_comment": "3.5억 번 다운로드된 이유가 있다. 카메라로 문제를 비추는 순간 풀이가 시작되는 직관적 경험은 여전히 독보적이며, Gemini AI가 합류하면서 '카메라 인식 앱'에서 '대화하는 수학 선생님'으로 진화했다."
+  },
+  {
+    "id": "chainlink-labs-2026",
+    "date": "2026-04-16",
+    "featured": true,
+    "sector": "fintech",
+    "name_en": "Chainlink Labs",
+    "name_ko": "체인링크 랩스",
+    "tagline": "블록체인과 현실 세계를 연결하는 탈중앙 오라클 네트워크의 표준",
+    "category": [
+      "Web3",
+      "크립토 인프라",
+      "오라클 네트워크"
+    ],
+    "founded_year": 2017,
+    "headquarters": {
+      "city": "Grand Cayman",
+      "country": "Cayman Islands",
+      "country_ko": "케이맨 제도"
+    },
+    "company_stage": "Growth Stage",
+    "employee_count": "501-1000",
+    "website": "https://chain.link/",
+    "logo_url": "/logos/chainlink-labs-2026.png",
+    "logo_svg_description": "육각형 체인 링크 패턴의 심볼과 'Chainlink' 텍스트가 조합된 로고, 블록체인 연결성을 상징하는 파란색 톤의 기술적 디자인",
+    "founders": [
+      {
+        "name_en": "Sergey Nazarov",
+        "name_ko": "세르게이 나자로프",
+        "role": "Co-Founder",
+        "background": "NYU 경영학 졸업, 블록체인 업계 초기부터 스마트 컨트랙트·탈중앙 애플리케이션 개발에 집중한 연쇄 창업자",
+        "linkedin": "https://www.linkedin.com/in/sergeynazarov/",
+        "notable_achievement": "블록체인 오라클 문제를 해결하여 DeFi·RWA 등 전체 Web3 생태계의 핵심 인프라를 구축"
+      }
+    ],
+    "team_highlights": "블록체인 인프라 분야 최고 수준의 연구팀, 전 Google·Oracle 엔지니어 다수 합류, SWIFT·DTCC 등 기존 금융 인프라와의 파트너십 확보",
+    "product": {
+      "summary": "스마트 컨트랙트가 외부 실세계 데이터(가격, 날씨, 이벤트 등)에 안전하게 접근할 수 있도록 하는 탈중앙 오라클 네트워크 및 크로스체인 통신 프로토콜(CCIP) 제공",
+      "problem_statement": "블록체인의 스마트 컨트랙트는 외부 데이터에 직접 접근할 수 없는 '오라클 문제'를 가지고 있으며, 중앙화된 데이터 소스를 사용하면 블록체인의 보안·탈중앙 가치가 무너짐",
+      "solution": "탈중앙화된 오라클 노드 네트워크를 통해 실세계 데이터를 검증·집계하여 스마트 컨트랙트에 안전하게 전달. CCIP(크로스체인 상호운용성 프로토콜)로 블록체인 간 데이터·자산 이동도 지원",
+      "key_features": [
+        "Price Feeds: 실시간 암호화폐·금융 자산 가격 데이터를 탈중앙 방식으로 스마트 컨트랙트에 제공",
+        "CCIP (Cross-Chain Interoperability Protocol): 블록체인 간 안전한 데이터·토큰 전송 프로토콜",
+        "VRF (Verifiable Random Function): 검증 가능한 난수 생성으로 NFT·게임에 공정성 보장",
+        "Automation (Keepers): 스마트 컨트랙트의 자동 실행을 위한 탈중앙 자동화 서비스",
+        "Functions: 스마트 컨트랙트에서 외부 API를 안전하게 호출하는 서버리스 컴퓨팅"
+      ],
+      "tech_stack_or_innovation": "탈중앙 오라클 네트워크(DON) 아키텍처로 복수의 독립적 노드가 데이터를 수집·검증·집계. 경제적 인센티브(LINK 토큰 스테이킹)와 암호학적 증명을 결합하여 데이터 무결성 보장",
+      "target_customer": "DeFi 프로토콜(Aave, Synthetix 등), RWA 토큰화 프로젝트, 크로스체인 앱 개발자, 전통 금융기관(SWIFT, DTCC 등의 블록체인 파일럿)",
+      "business_model": "오라클 서비스 이용 수수료(LINK 토큰) + CCIP 크로스체인 전송 수수료 + 노드 운영자 인센티브 경제",
+      "demo_or_screenshot_url": "https://chain.link/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Pyth Network",
+          "comparison": "Solana 생태계 중심의 고속 가격 피드 오라클. Chainlink은 전 체인 지원과 가격 피드 외 다양한 서비스(CCIP, VRF, Automation) 제공에서 차별화"
+        },
+        {
+          "name": "API3",
+          "comparison": "1차 데이터 제공자가 직접 오라클을 운영하는 모델. Chainlink은 탈중앙 노드 네트워크 기반으로 더 높은 보안성과 범용성 제공"
+        }
+      ],
+      "key_differentiator": "블록체인 오라클 시장 점유율 70% 이상의 압도적 1위. 가격 피드를 넘어 CCIP·VRF·Automation 등 블록체인 미들웨어 전 영역을 커버하는 유일한 플랫폼",
+      "moat": "압도적 시장 점유율과 네트워크 효과, SWIFT·DTCC 등 전통 금융과의 파트너십, 방대한 노드 운영자 네트워크, LINK 토큰 경제의 보안 모델",
+      "competitive_position_summary": "블록체인 오라클의 사실상 독점적 표준. DeFi에서 RWA·기관 금융까지 확장하며 Web3 인프라의 핵심 축으로 자리매김"
+    },
+    "trending_reason": {
+      "summary": "CCIP를 통한 크로스체인 인프라 확장, SWIFT와의 토큰화 파일럿 성공, RWA(실물자산 토큰화) 시장 폭발적 성장으로 기관 금융의 블록체인 진입 게이트웨이 역할 급부상",
+      "catalysts": [
+        "SWIFT와의 크로스체인 토큰 전송 파일럿 성공적 완료",
+        "CCIP 통합 블록체인 30개 이상으로 확장, 크로스체인 전송 누적 $20B 돌파",
+        "BlackRock, Franklin Templeton 등 RWA 토큰화 프로젝트에 Chainlink 오라클 채택",
+        "Chainlink Staking v2.0 출시로 LINK 스테이킹 규모 $1B 이상"
+      ],
+      "media_mentions": [
+        {
+          "source": "CoinDesk",
+          "title": "Chainlink CCIP becomes the default cross-chain standard for institutional DeFi",
+          "url": "https://www.coindesk.com/chainlink-ccip-institutional-defi",
+          "date": "2026-02-18"
+        },
+        {
+          "source": "Bloomberg",
+          "title": "SWIFT's blockchain experiment with Chainlink shows promise for tokenized assets",
+          "url": "https://www.bloomberg.com/news/swift-chainlink-tokenization/",
+          "date": "2025-10-30"
+        }
+      ],
+      "growth_metrics": "오라클 서비스 TVS(Total Value Secured) $20T 이상, CCIP 누적 전송 $20B, 통합 블록체인 30개 이상, DeFi 시장 오라클 점유율 70%+"
+    },
+    "funding": {
+      "total_raised": "$32M (ICO) + 토큰 트레저리",
+      "latest_round": {
+        "stage": "ICO",
+        "amount": "$32M",
+        "date": "2017-09",
+        "lead_investor": "Public ICO",
+        "notable_investors": [
+          "Framework Ventures",
+          "ParaFi Capital",
+          "Ari Paul (BlockTower)"
+        ]
+      },
+      "valuation_estimate": "LINK 토큰 시가총액 기준 약 $10B (2026년 4월 기준)",
+      "funding_history": [
+        {
+          "stage": "ICO",
+          "amount": "$32M",
+          "date": "2017-09",
+          "lead_investor": "Public ICO"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 블록체인 미들웨어(오라클+크로스체인) 시장 2030년 $25B 전망, RWA 토큰화 시장 $16T 추정",
+      "market_trend": "기관 금융의 블록체인 도입 가속, RWA 토큰화 시장 폭발적 성장, 멀티체인 환경에서 상호운용성 수요 급증",
+      "growth_potential": "RWA 토큰화 시장의 성장과 함께 기관 금융 인프라의 핵심 레이어로 진화. CCIP가 '블록체인의 TCP/IP'로 자리잡을 잠재력",
+      "risks": [
+        "암호화폐 시장 전체의 규제 불확실성",
+        "블록체인 자체 기능 개선으로 오라클 수요 감소 가능성",
+        "LINK 토큰 가격 변동성에 따른 경제 모델 안정성"
+      ],
+      "risk_mitigation": "전통 금융기관 파트너십으로 규제 친화적 포지셔닝, 오라클 외 미들웨어 서비스 다변화, LINK 스테이킹 경제 모델 강화"
+    },
+    "related_links": [
+      {
+        "title": "Chainlink 공식 웹사이트",
+        "url": "https://chain.link/"
+      },
+      {
+        "title": "CCIP (크로스체인 프로토콜) 소개",
+        "url": "https://chain.link/cross-chain"
+      },
+      {
+        "title": "CoinDesk - CCIP 기관 DeFi 표준",
+        "url": "https://www.coindesk.com/chainlink-ccip-institutional-defi"
+      }
+    ],
+    "editor_pick_comment": "블록체인이 현실 세계와 대화하려면 Chainlink을 거쳐야 한다. SWIFT까지 손을 잡은 지금, Chainlink은 '크립토 인프라'를 넘어 '금융 인프라'의 핵심이 되어가고 있다."
+  },
+  {
+    "id": "procore-2026",
+    "date": "2026-04-16",
+    "featured": true,
+    "sector": "enterprise",
+    "name_en": "Procore Technologies",
+    "name_ko": "프로코어 테크놀로지스",
+    "tagline": "건설 현장의 모든 데이터를 하나로, 건설 산업 수직 SaaS의 대표 주자",
+    "category": [
+      "수직 SaaS",
+      "건설테크",
+      "프로젝트 관리"
+    ],
+    "founded_year": 2002,
+    "headquarters": {
+      "city": "Carpinteria",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Public (NYSE: PCOR)",
+    "employee_count": "3000+",
+    "website": "https://www.procore.com/",
+    "logo_url": "/logos/procore-2026.png",
+    "logo_svg_description": "주황색 기하학적 블록 심볼과 'procore' 텍스트가 조합된 로고, 건설의 견고함과 디지털 혁신을 동시에 표현하는 오렌지·다크그레이 톤의 디자인",
+    "founders": [
+      {
+        "name_en": "Tooey Courtemanche",
+        "name_ko": "투이 쿠르트망시",
+        "role": "Founder & CEO",
+        "background": "건설업 종사 경험을 가진 소프트웨어 엔지니어, 건설 현장의 비효율을 직접 경험하고 해결책을 개발",
+        "linkedin": "https://www.linkedin.com/in/tooeycourtemanche/",
+        "notable_achievement": "건설 프로젝트 관리 SaaS를 20년 이상 이끌어 건설 산업 디지털 전환의 표준 플랫폼으로 성장시킴"
+      }
+    ],
+    "team_highlights": "건설업 경험을 가진 소프트웨어 엔지니어 창업자, 20년 이상의 건설 SaaS 운영 경험, NYSE 상장 기업으로 3,000명 이상의 글로벌 팀",
+    "product": {
+      "summary": "건설 프로젝트의 전 수명주기(설계·입찰·시공·안전·재무)를 하나의 클라우드 플랫폼에서 관리하는 건설 산업 전용 올인원 SaaS",
+      "problem_statement": "건설 산업은 전 산업 중 디지털화가 가장 늦은 분야로, 프로젝트 데이터가 엑셀·이메일·종이에 파편화되어 있어 비용 초과, 일정 지연, 안전 사고가 빈발",
+      "solution": "건설 프로젝트의 모든 이해관계자(발주자, 원청, 하청, 설계사)가 실시간으로 하나의 플랫폼에서 문서·일정·예산·안전·품질을 통합 관리할 수 있는 클라우드 플랫폼 제공",
+      "key_features": [
+        "프로젝트 관리: 일정·RFI·변경 주문·도면 관리를 클라우드에서 실시간 협업",
+        "재무 관리: 예산·계약·결제·변경주문의 실시간 추적 및 분석",
+        "품질 및 안전: 현장 안전 점검, 사고 보고, 품질 관리를 모바일로 수행",
+        "BIM 연동: 3D BIM 모델을 현장에서 모바일로 확인·마크업",
+        "AI 기반 인사이트: 프로젝트 데이터 분석으로 리스크 예측 및 의사결정 지원",
+        "500+ 앱 연동: 회계, ERP, BIM 등 건설 관련 소프트웨어와의 마켓플레이스 통합"
+      ],
+      "tech_stack_or_innovation": "클라우드 네이티브 플랫폼으로 현장·사무실 어디서든 실시간 접근. AI/ML 기반 프로젝트 리스크 예측 엔진, 모바일 우선 UX로 현장 작업자 채택률 극대화",
+      "target_customer": "종합 건설사(GC), 전문 하도급 건설사, 부동산 개발사(Owner), 건축 설계 사무소",
+      "business_model": "연간 SaaS 구독(프로젝트 규모·모듈 수 기준) + 마켓플레이스 수수료 + 프리미엄 AI/분석 기능 추가 과금",
+      "demo_or_screenshot_url": "https://www.procore.com/platform"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Autodesk Construction Cloud",
+          "comparison": "BIM·설계 중심의 건설 플랫폼. Procore는 시공 현장 관리·재무에서 더 깊은 기능 제공"
+        },
+        {
+          "name": "Oracle Aconex",
+          "comparison": "대형 인프라 프로젝트 문서 관리 솔루션. Procore는 더 직관적인 UX와 폭넓은 프로젝트 규모 지원"
+        }
+      ],
+      "key_differentiator": "건설 프로젝트 전 수명주기를 하나의 플랫폼에서 커버하는 유일한 올인원 솔루션. 현장 작업자 채택률이 높은 직관적 모바일 UX",
+      "moat": "20년간 축적된 건설 도메인 전문성, 1만 6,000개 이상 고객사의 네트워크 효과, 500+ 앱 마켓플레이스 생태계, 건설 데이터 플랫폼 효과",
+      "competitive_position_summary": "건설 프로젝트 관리 SaaS의 명실상부한 글로벌 1위. 20년간의 도메인 전문성과 플랫폼 생태계가 후발주자의 진입을 어렵게 만들고 있음"
+    },
+    "trending_reason": {
+      "summary": "AI 기반 건설 리스크 예측 기능 출시, 인프라 투자 붐으로 건설 IT 지출 증가, 건설 산업 디지털 전환 가속화로 수혜 극대화",
+      "catalysts": [
+        "Procore AI Copilot 출시로 건설 프로젝트 리스크 예측·인사이트 자동 생성",
+        "미국 인프라 투자법(IIJA)·반도체법(CHIPS Act) 후속 건설 프로젝트 급증",
+        "2026년 연매출 $1B 돌파 예상으로 건설 SaaS 최초의 유니콘 수익 달성",
+        "글로벌 확장(유럽·아시아) 가속으로 해외 매출 비중 20% 이상 달성"
+      ],
+      "media_mentions": [
+        {
+          "source": "Forbes",
+          "title": "How Procore is using AI to predict construction project risks before they happen",
+          "url": "https://www.forbes.com/sites/procore-ai-construction/",
+          "date": "2026-03-05"
+        },
+        {
+          "source": "Construction Dive",
+          "title": "Procore crosses $1B ARR milestone as construction tech spending surges",
+          "url": "https://www.constructiondive.com/procore-1b-arr/",
+          "date": "2026-02-20"
+        }
+      ],
+      "growth_metrics": "ARR $1B+ 돌파, 고객 수 16,000개 이상, 연간 플랫폼 처리 건설 프로젝트 가치 $1T 이상"
+    },
+    "funding": {
+      "total_raised": "$629M (IPO 전 기준)",
+      "latest_round": {
+        "stage": "IPO",
+        "amount": "$635M (IPO)",
+        "date": "2021-05",
+        "lead_investor": "NYSE IPO",
+        "notable_investors": [
+          "Tiger Global Management",
+          "Iconiq Capital",
+          "Bessemer Venture Partners"
+        ]
+      },
+      "valuation_estimate": "시가총액 약 $12B (2026년 4월 기준)",
+      "funding_history": [
+        {
+          "stage": "Series F",
+          "amount": "$75M",
+          "date": "2018-12",
+          "lead_investor": "Tiger Global Management"
+        },
+        {
+          "stage": "Series G",
+          "amount": "$150M",
+          "date": "2020-06",
+          "lead_investor": "Tiger Global Management"
+        },
+        {
+          "stage": "IPO",
+          "amount": "$635M",
+          "date": "2021-05",
+          "lead_investor": "NYSE IPO"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 건설 소프트웨어 시장 2030년 $30B 전망, 건설 프로젝트 관리 SaaS 시장 $10B",
+      "market_trend": "건설 산업의 디지털 전환 가속, AI/IoT의 건설 현장 적용 확산, 인프라 투자 싸이클 상승기",
+      "growth_potential": "건설 산업의 디지털화율이 여전히 낮아(20% 미만) 성장 여력이 매우 큼. AI·IoT 통합으로 건설 데이터 플랫폼으로 진화 가능",
+      "risks": [
+        "건설 경기 사이클에 따른 IT 지출 변동성",
+        "Autodesk·Oracle 등 대형 소프트웨어 기업의 건설 시장 공략 강화",
+        "건설 현장의 디지털 도구 채택 속도가 기대보다 느릴 수 있음"
+      ],
+      "risk_mitigation": "구독 기반 SaaS 모델로 경기 변동성 완충, 올인원 플랫폼 전략으로 고객 락인 강화, 모바일 우선 UX로 현장 채택률 극대화"
+    },
+    "related_links": [
+      {
+        "title": "Procore 공식 웹사이트",
+        "url": "https://www.procore.com/"
+      },
+      {
+        "title": "Forbes - Procore AI 리스크 예측",
+        "url": "https://www.forbes.com/sites/procore-ai-construction/"
+      }
+    ],
+    "editor_pick_comment": "건설 산업은 전 산업 중 IT 투자가 가장 낮은 분야였다. Procore는 20년간 이 '디지털 사막'을 일구며 ARR $1B을 돌파했다. 수직 SaaS가 결국은 도메인을 먹는다는 것을 증명한 교과서적 사례."
+  }
+]

@@ -1,0 +1,942 @@
+{
+  "liquid-ai-2026": {
+    "tagline": "Born from MIT: 'Liquid Neural Network' — A foundation model taking a path different from transformers",
+    "category": [
+      "Foundation Model",
+      "Next-generation Architecture",
+      "On-device AI"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "MIT CSAIL researcher, first author of Liquid Neural Networks paper",
+        "notable_achievement": "Invented Liquid Neural Networks, pioneered a next-generation architecture applicable to autonomous driving and robotics"
+      },
+      {
+        "background": "MIT CSAIL researcher, co-inventor of LNN",
+        "notable_achievement": "Designed LNN architecture inspired by the C. elegans neural network"
+      },
+      {
+        "background": "MIT CSAIL director, world-renowned robotics researcher",
+        "notable_achievement": "Director of MIT CSAIL — one of the top authorities in robotics and autonomous systems"
+      },
+      {
+        "background": "MIT CSAIL PhD, researcher in autonomous driving and deep learning",
+        "notable_achievement": "Runs MIT 6.S191 course, researches autonomous system safety"
+      }
+    ],
+    "team_highlights": "4 core MIT CSAIL researchers + domain experts in automotive, defense, and industry; the strongest team for research on non-transformer architectures",
+    "product": {
+      "summary": "Develops its own foundation model series 'LFM (Liquid Foundation Models)' based on Liquid Neural Network instead of transformers. Achieves the same performance with fewer parameters, enabling direct deployment in cars, drones, and industrial devices.",
+      "problem_statement": "Transformer-based LLMs are massive, heavily dependent on the cloud, and their inference cost, latency, and power consumption make them unsuitable for device and robotics applications.",
+      "solution": "Redesigns sequence models with a dynamic, continuous-time LNN architecture inspired by the nematode neural network. Achieves the same benchmark performance with 1/10 of the parameters, enabling LLM-level inference on edge and on-device environments.",
+      "key_features": [
+        "LFM 1·3·7B series: LNN-based LLMs in various sizes",
+        "STAR: Sequence reasoning model for automotive and defense",
+        "Edge SDK: Inference runtime for vehicles, drones, and industrial devices",
+        "Liquid Cloud: Cloud inference API",
+        "Enterprise custom LFM training"
+      ],
+      "tech_stack_or_innovation": "Liquid Neural Network architecture, dynamic continuous-time ODE solver, compact parameter-efficient model, edge quantization inference",
+      "target_customer": "Automotive, drone, and robotics OEMs; defense and aerospace; edge computing infrastructure; governments and enterprises requiring data sovereignty",
+      "business_model": "Enterprise license + per-device SDK pricing + government/defense contracts + cloud API"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Leader in open-weight LLMs. Liquid AI has an edge with non-transformer architecture and on-device deployment."
+        },
+        {
+          "comparison": "Enterprise LLM. Liquid AI differentiates with compact models and device deployment."
+        },
+        {
+          "name": "MIT Spinout (Inceptive, etc.)",
+          "comparison": "Next-generation model company from MIT. Liquid AI leads with its pioneering LNN research."
+        }
+      ],
+      "key_differentiator": "Liquid Neural Network architecture + compact parameter efficiency + edge/vehicle-first design",
+      "moat": "Core MIT CSAIL researchers' LNN key IP, pilot experience in automotive and defense, first-mover in non-transformer domain",
+      "competitive_position_summary": "Leading representative of the non-transformer foundation model camp, strong in edge and autonomous systems markets"
+    },
+    "trending_reason": {
+      "summary": "Raised $250M Series A in December 2024 at a $2.3B valuation, strategic partnerships with device OEMs including AMD and Samsung. The fastest in the transformer alternative camp to secure capital and customers.",
+      "catalysts": [
+        "December 2024 Series A $250M at $2.3B valuation",
+        "AMD strategic investment — edge inference chip integration",
+        "Multiple automotive and defense PoCs reported",
+        "LFM 3·7B models released"
+      ],
+      "growth_metrics": "Tens of enterprise and OEM pilots, strategic partners including AMD and Samsung, government and defense PoCs underway"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global edge AI/on-device market $80B+ in 2030, automotive/drone/defense SOM $30B",
+      "market_trend": "Acceleration of edge LLM/on-device AI, standardization of AI integration in vehicles and robots, active research on non-transformer architectures",
+      "growth_potential": "Standard model adoption by automotive OEMs, defense and aerospace computing, integrated LLMs in home appliances and wearables",
+      "risks": [
+        "Accelerated efficiency improvements from the transformer camp",
+        "Long OEM adoption cycles",
+        "Industry conservatism toward new architectures"
+      ],
+      "risk_mitigation": "Strategic collaboration with chip partners like AMD and Samsung, diversified multi-domain PoCs, continued academic research publications"
+    },
+    "related_links": [
+      {
+        "title": "Liquid AI Official Site"
+      },
+      {
+        "title": "Bloomberg: $2.3B Valuation"
+      },
+      {
+        "title": "LFM Model Introduction"
+      }
+    ],
+    "editor_pick_comment": "Maybe transformers aren't the answer — MIT's most serious bet on that hypothesis. If an LLM running on cars, drones, and robots is to be built, Liquid is likely to be part of it."
+  },
+  "sword-health-2026": {
+    "tagline": "AI physical therapist 'Phoenix' — global leader in virtual musculoskeletal care",
+    "category": [
+      "Digital health",
+      "AI healthcare",
+      "Physical therapy"
+    ],
+    "headquarters": {
+      "country_ko": "Portugal"
+    },
+    "founders": [
+      {
+        "background": "PhD in electrical engineering from the University of Porto, Portugal; researcher in medical imaging and physical therapy",
+        "notable_achievement": "Defined the digital MSK category; secured over 1,000 enterprise customers in the US, Europe, and Australia"
+      }
+    ],
+    "team_highlights": "HQ in Portugal plus US and UK offices; combines physical therapists, AI engineers, and health insurance specialists",
+    "product": {
+      "summary": "A digital health platform providing AI-based virtual physical therapy to corporate employees. Using motion sensors and AI coach 'Phoenix', it analyzes patient posture and movement in real time to deliver personalized exercise prescriptions, while human physical therapists manage patients remotely.",
+      "problem_statement": "Musculoskeletal (MSK) pain is one of the top medical cost categories in the US, but in-person physical therapy has low accessibility and the costs of progressing to drugs and surgery are enormous.",
+      "solution": "Ships a motion sensor kit to patients; the AI coach guides exercises in real time while human physical therapists provide remote care. Delivers clinically measurable outcomes in pain and functional recovery, demonstrating cost savings to insurers and employers.",
+      "key_features": [
+        "Phoenix AI: AI physical therapist with real-time posture analysis",
+        "Move: General MSK care program",
+        "Bloom: Women's pelvic health program",
+        "Mind: Digital mental health care",
+        "Outcome-based pricing"
+      ],
+      "tech_stack_or_innovation": "Motion sensors, computer vision pose estimation, reinforcement learning-based exercise prescriptions, and insurance claims based on clinical outcome data",
+      "target_customer": "Large self-insured employers, health insurers, government healthcare programs, and global pension and insurance funds",
+      "business_model": "Per Member Per Month (PMPM) from employers and insurers, or outcome-based payments"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "One of the two major players in digital MSK. Sword has the advantage in outcome-based pricing and global expansion (Europe, Australia)."
+        },
+        {
+          "comparison": "Focuses on diabetes and chronic diseases. Sword differentiates through depth in specialized domains such as MSK and women's health."
+        },
+        {
+          "comparison": "European digital MSK. Sword is overwhelming in US market share and capital scale."
+        }
+      ],
+      "key_differentiator": "Hybrid of AI coach and human physical therapists, outcome-based pricing, and global expansion from Europe",
+      "moat": "Clinical data from millions of patients, 1,000+ enterprise customers, and an established outcome-based insurance claims model",
+      "competitive_position_summary": "Global leader in the digital MSK category; differentiated from Hinge Health by its outcome-based model in a two-horse race"
+    },
+    "trending_reason": {
+      "summary": "Raised an additional $40M in late 2025 at a $4B valuation; revenue surged after the outcome-based pricing and Phoenix AI announcements; reports of a potential US IPO",
+      "catalysts": [
+        "Additional $40M round and $4B valuation in late 2025",
+        "Phoenix AI coach launch improved clinical outcomes",
+        "Outcome-based pricing is spreading among insurers and self-insured employers",
+        "Rumors of preparing for a US IPO"
+      ],
+      "growth_metrics": "1,000+ enterprise customers, millions of patients treated cumulatively, and entry into a profitable operating phase"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global MSK healthcare cost market $400B+, digital MSK SOM $30B, expanding outcome-based digital health segment",
+      "market_trend": "Growing adoption of outcome-based digital health among employers and insurers, standardization of AI coaches and remote care, and growth in adjacent domains such as women's and mental health",
+      "growth_potential": "Expansion of women's health (Bloom) and mental health (Mind) lines, market share growth in Germany, UK, and Australia, and adoption of PMPM by insurers",
+      "risks": [
+        "Price competition with Hinge Health",
+        "Risk to outcome-based payments if clinical outcomes are not demonstrated",
+        "Fluctuations in enterprise health budgets"
+      ],
+      "risk_mitigation": "Continuous accumulation of clinical data and publications, diversification of outcome-guarantee contracts, and revenue diversification into new domains"
+    },
+    "related_links": [
+      {
+        "title": "Sword Health official website"
+      },
+      {
+        "title": "Forbes: $4B valuation"
+      },
+      {
+        "title": "Phoenix AI introduction"
+      }
+    ],
+    "editor_pick_comment": "A company that started in Porto, Portugal is shifting the US's No. 1 medical cost category (MSK) to digital. Its 'paid only on outcomes' pricing is a rare display of confidence in healthcare."
+  },
+  "helsing-2026": {
+    "tagline": "AI Defense for Democracies — Europe's Defense Tech Standard-Bearer",
+    "category": [
+      "Defense Tech",
+      "AI Defense",
+      "Autonomous Systems"
+    ],
+    "headquarters": {
+      "country_ko": "Germany"
+    },
+    "founders": [
+      {
+        "background": "Former advisor to the German Ministry of Defense, McKinsey background",
+        "notable_achievement": "Advised multiple German government and NATO defense digitalization projects, co-founded Helsing"
+      },
+      {
+        "background": "Founder of NaturalMotion (acquired by Zynga), AI and simulation expert",
+        "notable_achievement": "Sold his AI simulation company to Zynga, then pivoted to defense tech"
+      },
+      {
+        "background": "AI systems engineer, formerly at NaturalMotion",
+        "notable_achievement": "Architected battlefield data fusion and AI decision-making systems"
+      }
+    ],
+    "team_highlights": "Team blending government, defense, and AI simulation backgrounds; recruited defense talent from Germany, UK, France; NATO-experienced advisors",
+    "product": {
+      "summary": "An AI software platform that fuses and analyzes massive data from sensors, drones, vehicles, and aircraft in real time to aid battlefield decision-making. It is operationally deployed on the Ukrainian front lines, integrating autonomous drones and electronic warfare solutions.",
+      "problem_statement": "Modern battlefields face an explosion of sensor, drone, and communications data, but existing military command systems lack the ability to integrate and analyze it quickly for decision-making.",
+      "solution": "Combines an AI core platform that fuses sensor data with hardware partnerships for autonomous drones, electronic warfare systems, reconnaissance aircraft, etc. Operates a closed ecosystem supplying only NATO member countries.",
+      "key_features": [
+        "Altra: AI data fusion and battlefield decision-making core platform",
+        "HX-2: Autonomous precision strike drone",
+        "Eurofighter AI Integration: Next-gen fighter electronic warfare and AI modules",
+        "AI integration for Saab GlobalEye",
+        "Electronic warfare and communications analysis solutions"
+      ],
+      "tech_stack_or_innovation": "Battlefield data fusion, reinforcement learning, edge inference infrastructure, autonomous drone systems, cyber/electronic warfare AI modules",
+      "target_customer": "NATO and EU defense ministries, Eastern European countries, allied nation military integration programs, defense OEM partners",
+      "business_model": "Multi-year government/defense ministry contracts, OEM integration licenses, per-unit sales of autonomous systems"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "U.S. defense tech leader. Helsing differentiates through European/NATO market affinity and independent supply chain."
+        },
+        {
+          "comparison": "Strong in battlefield data analysis. Helsing has advantages in autonomous hardware integration and European government partnerships."
+        },
+        {
+          "comparison": "Traditional defense. Helsing differentiates through depth of AI software and rapid integration."
+        }
+      ],
+      "key_differentiator": "European/NATO affinity + AI core + full-stack autonomous hardware integration, combat-proven in Ukraine",
+      "moat": "Government security clearances and closed ecosystem, real-world data from Ukrainian front lines, friendly relations with NATO member states",
+      "competitive_position_summary": "The leading representative of the European defense tech category, a key NATO-aligned supplier countering Anduril"
+    },
+    "trending_reason": {
+      "summary": "Achieved a €5B valuation with a €600M Series D round in 2025, became Europe's largest defense tech unicorn driven by NATO defense spending increases and real-world deployment on Ukrainian front lines.",
+      "catalysts": [
+        "2025 Series D €600M, €5B valuation",
+        "HX-2 drone operational deployment in Ukraine",
+        "German government contract for next-gen fighter AI integration",
+        "Preferred partner for NATO member states' defense digitalization"
+      ],
+      "growth_metrics": "Cumulative government contracts €1B+, 500+ employees (doubled in one year), adopted by multiple NATO member states"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global defense IT/AI market $80B+ by 2030, NATO digital defense segment SOM $20B",
+      "market_trend": "Mandated European defense spending at 2-3% of GDP, accelerated deployment of AI and autonomous systems on battlefields, reduced reliance on the US and strengthened domestic supply chains",
+      "growth_potential": "Market expansion in Europe, Eastern Europe, and allied Asian nations; entry into maritime and space domains; AI cyber and electronic warfare solutions",
+      "risks": [
+        "Defense industry ethics and regulatory debates",
+        "Political fluctuations in NATO defense spending",
+        "Risk of dependence on government contracts"
+      ],
+      "risk_mitigation": "Operates a strict ethics committee, diversifies across NATO member states, partially enters non-defense security domains"
+    },
+    "related_links": [
+      {
+        "title": "Helsing Official Site"
+      },
+      {
+        "title": "FT: €5B Valuation"
+      },
+      {
+        "title": "HX-2 Drone Introduction"
+      }
+    ],
+    "editor_pick_comment": "Can Europe defend itself without the US? The company building the answer. The most serious challenger to Anduril in the AI defense market."
+  },
+  "glean-2026": {
+    "tagline": "All company information in one place — the standard for enterprise AI search",
+    "category": [
+      "Enterprise AI",
+      "Search",
+      "Knowledge Management"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Co-founder of Rubrik, former Distinguished Engineer at Google",
+        "notable_achievement": "Co-founded and took Rubrik public, then founded Glean, defining a new standard for enterprise search"
+      },
+      {
+        "background": "Former Google search engineer",
+        "notable_achievement": "Brought Google web search infrastructure experience to the enterprise"
+      },
+      {
+        "background": "Google search infrastructure and ranking engineer",
+        "notable_achievement": "Designed an enterprise permission-aware search ranking system"
+      }
+    ],
+    "team_highlights": "Core engineers from Google Search and Rubrik, enterprise SaaS and security experts, global GTM executives",
+    "product": {
+      "summary": "An enterprise AI platform that searches across internal SaaS apps, documents, messengers, and email with permission-aware unified search, and provides answers and summaries via a RAG-based AI assistant. Core: 100+ SaaS connectors and permission-based search.",
+      "problem_statement": "Enterprise employees spend on average 20% of their working time searching for information scattered across 100+ apps, and because of permissions and security, general LLM chatbots cannot easily access company data.",
+      "solution": "Indexes company data with 100+ connectors including Slack, Google Workspace, Salesforce, etc., and provides search, summarization, and generated answers while preserving user permissions. Expands to AI assistants and workflow automation agents.",
+      "key_features": [
+        "Glean Search: Enterprise unified search",
+        "Glean Assistant: RAG chatbot grounded in company data",
+        "Work Hub: Personalized work hub dashboard",
+        "Apps & Agents: No-code internal AI agents",
+        "Domain solutions like Glean for Engineering, Sales, Support"
+      ],
+      "tech_stack_or_innovation": "Authorization-aware indexing, 100+ connectors, proprietary RAG and ranking engine, multi-model routing",
+      "target_customer": "Enterprises with 1,000+ employees, information-intensive industries like tech, finance, and pharma, globally distributed organizations",
+      "business_model": "Per-user annual SaaS subscription, enterprise custom licensing"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Strength in Microsoft 365 integration. Glean differentiates with SaaS neutrality and domain depth."
+        },
+        {
+          "comparison": "General-purpose LLM. Glean has an edge in enterprise data search and permission integration."
+        },
+        {
+          "comparison": "Content productivity tools. Glean specializes in integrated search across all company systems."
+        }
+      ],
+      "key_differentiator": "Combination of permission-based enterprise search + RAG assistant + 100+ connectors",
+      "moat": "Enterprise security and compliance certifications, 100+ connector library, lock-in with large customers",
+      "competitive_position_summary": "The leader in the enterprise AI search category, a neutral platform competing against Microsoft and OpenAI"
+    },
+    "trending_reason": {
+      "summary": "In late 2025, raised an additional $260M Series F, valuation rose to $7.2B. One of the biggest beneficiaries of the full-scale adoption of enterprise AI.",
+      "catalysts": [
+        "2025 Series F $260M at $7.2B valuation",
+        "Adopted by 100+ Fortune 500 companies",
+        "Launch of Apps & Agents no-code agents",
+        "Positioned as a ChatGPT Enterprise alternative"
+      ],
+      "growth_metrics": "ARR $100M+, hundreds of customers, high lock-in share among major global enterprises"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global enterprise search & knowledge management market $50B+ in 2030, AI assistant SOM $20B",
+      "market_trend": "Accelerating AI assistant adoption among Fortune 1000 companies, standardization of permission- and security-focused RAG",
+      "growth_potential": "Expansion into AI agents and workflow automation, industry-specific domain solutions, global expansion into EU and Asian markets",
+      "risks": [
+        "Microsoft Copilot's bundling offensive",
+        "Large SaaS vendors strengthening their own AI search",
+        "Fluctuations in enterprise AI budgets"
+      ],
+      "risk_mitigation": "Emphasizes SaaS neutrality and multi-model support, deepens domain specialization, continuously strengthens security certifications"
+    },
+    "related_links": [
+      {
+        "title": "Glean official website"
+      },
+      {
+        "title": "Forbes: $7.2B valuation"
+      },
+      {
+        "title": "Apps & Agents overview"
+      }
+    ],
+    "editor_pick_comment": "If there is going to be a single entry point to search, summarize, and execute across all the data a company has — it's more likely to be Glean than Microsoft."
+  },
+  "tractian-2026": {
+    "tagline": "The 'Apple Watch' for factory equipment — predicts failures with IoT vibration sensors",
+    "category": [
+      "Industrial IoT",
+      "Predictive Maintenance",
+      "Smart Factory"
+    ],
+    "headquarters": {
+      "country_ko": "Brazil"
+    },
+    "founders": [
+      {
+        "background": "Mechanical engineering and software engineer, industrial automation experience",
+        "notable_achievement": "Became Latin America's leading industrial IoT unicorn, rapid expansion into the US and Mexico"
+      },
+      {
+        "background": "Mechanical engineer, manufacturing consulting experience",
+        "notable_achievement": "Led the buildout of North American sales organization and OEM partnerships"
+      }
+    ],
+    "team_highlights": "Combination of mechanical/electrical engineers and ML experts; dual presence in Brazil and the US; leverages Latin America's industrial IoT talent pool",
+    "product": {
+      "summary": "Combines IoT vibration, temperature, and current sensors attached to factory equipment with a cloud analytics platform to predict failures in motors, pumps, compressors, etc. Its proprietary ML model analyzes vibration patterns to detect faults an average of 30 days in advance.",
+      "problem_statement": "Manufacturing worldwide loses trillions of dollars annually in downtime due to unexpected equipment failures. Existing predictive maintenance solutions are expensive and complex to install, making adoption difficult for Latin American and small-to-medium manufacturers.",
+      "solution": "A full-stack predictive maintenance solution combining the wirelessly attached 'Smart Trac' IoT sensor (magnetic mount) with the cloud-based 'TracOS' software. It goes live within 30 minutes using cellular/LoRa communication, and its own ML model learns vibration and temperature patterns.",
+      "key_features": [
+        "Smart Trac: Wireless vibration and temperature IoT sensor",
+        "TracOS: Equipment monitoring and CMMS-integrated SaaS",
+        "Energy Trac: Power consumption and anomaly detection",
+        "AI Diagnostics: Automated vibration pattern diagnosis",
+        "24/7 on-site support in Latin America"
+      ],
+      "tech_stack_or_innovation": "Low-power IoT sensors, ML analysis of vibration signals, cellular/LoRa communication, multi-tenant SaaS platform",
+      "target_customer": "Manufacturers in Latin America and North America; mining, power generation, food, and automotive industries; medium-to-large factories",
+      "business_model": "Sensor unit price + SaaS subscription (monthly fee per sensor)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global leader in predictive maintenance. Tractian has the advantage in price and speed of adoption in the Latin American and US SMB manufacturing market."
+        },
+        {
+          "comparison": "Strong in logistics and fleet IoT. Tractian differentiates with depth of factory equipment vibration analysis."
+        },
+        {
+          "comparison": "Enterprise OT platform. Tractian has the edge in ease of installation and SMB friendliness."
+        }
+      ],
+      "key_differentiator": "Deep Latin American market presence + SMB-friendly pricing + wireless sensor that installs in 30 minutes",
+      "moat": "Millions of hours of vibration data, Latin American OEM and regional sales network, proprietary ML model accuracy",
+      "competitive_position_summary": "Leading industrial IoT player in Latin America, rapidly expanding into the US SMB market"
+    },
+    "trending_reason": {
+      "summary": "In 2025, raised $120M Series C led by General Catalyst at a $1.4B valuation — became Latin America's first industrial IoT unicorn; accelerating US expansion.",
+      "catalysts": [
+        "2025 Series C $120M, $1.4B valuation",
+        "First industrial IoT unicorn in Latin America",
+        "Expanding presence in Texas and Florida",
+        "Launch of AI Diagnostics achieved 90%+ diagnostic accuracy"
+      ],
+      "growth_metrics": "Cumulative 300K+ sensors deployed, 5,000+ customer factories, Latin America and North America revenue tripled year-over-year"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global predictive maintenance market $30B+ by 2030, industrial IoT SOM $80B, Latin American and North American SMB segments growing rapidly",
+      "market_trend": "Manufacturing digitalization and increased OEM AI adoption, rising energy costs drive demand for IoT solutions with clear ROI",
+      "growth_potential": "Entry into adjacent domains (energy, HVAC, logistics), expansion of enterprise contracts with large US companies, entry into Europe",
+      "risks": [
+        "Price competition from Augury and Samsara",
+        "Sensor hardware supply chain risks",
+        "Macro manufacturing cycle fluctuations"
+      ],
+      "risk_mitigation": "Increasing SaaS revenue share, expanding into multiple domains (energy, HVAC), stabilizing supply chain with in-house production in Mexico"
+    },
+    "related_links": [
+      {
+        "title": "Tractian Official Site"
+      },
+      {
+        "title": "TechCrunch: Latin America's first industrial IoT unicorn"
+      },
+      {
+        "title": "TracOS Product Page"
+      }
+    ],
+    "editor_pick_comment": "A small sensor that magnetically attaches to a factory motor — built Latin America's first industrial IoT unicorn. The most realistic bet driving the digital transformation of emerging-market manufacturing."
+  },
+  "rebellions-2026": {
+    "tagline": "The standard-bearer of Korea's homegrown NPUs — an AI semiconductor champion that merged with Sapeon",
+    "category": [
+      "AI Semiconductors",
+      null,
+      "Data Centers"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Former IBM Watson Research and MIT Ph.D., chip design specialist",
+        "notable_achievement": "Became Korea's leading AI semiconductor unicorn and led the consolidation of Korea's NPU camp through the merger with Sapeon"
+      }
+    ],
+    "team_highlights": "Chip designers from IBM, Apple, Samsung, and Qualcomm; compiler and AI systems engineers; partnerships with Korean big tech including KT and SK",
+    "product": {
+      "summary": "Supplies data center and enterprise NPU lineups—ATOM (Inference) and REBEL (LLM inference)—along with an SDK and runtime. Adopted as Korea's homegrown AI chip by KT Cloud, SK, and others; the Sapeon merger consolidated Korea's NPU camp.",
+      "problem_statement": "AI compute in Korean and Asian data centers is almost entirely dependent on NVIDIA, creating significant cost and supply risks. Homegrown AI chips and compiler stacks are urgently needed.",
+      "solution": "Raises LLM inference efficiency versus GPUs with an inference-specialized NPU architecture and in-house compiler, the Rebellions Neural Engine. Expanding from initial footholds in Korean cloud, telecom, and government data centers.",
+      "key_features": [
+        "ATOM: Inference NPU for vision and search",
+        "REBEL: LLM inference NPU (adopts HBM)",
+        null,
+        "Integrated into KT and SK data centers",
+        "Lineup expansion through Sapeon merger"
+      ],
+      "tech_stack_or_innovation": "Inference-specialized dataflow NPU, proprietary compiler and runtime, HBM memory system",
+      "target_customer": "Korean and Asian cloud and telecom operators, government and defense, enterprise on-prem AI",
+      "business_model": "Chip and server unit pricing + enterprise SDK licenses + government contracts"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global standard. Rebellions differentiates on inference efficiency and depth in the Korean market."
+        },
+        {
+          "comparison": "Korean peer competitor. Rebellions has the edge in the Sapeon merger and KT collaboration."
+        },
+        {
+          "comparison": "Global inference chip. Rebellions uses a Korea-first market penetration strategy."
+        }
+      ],
+      "key_differentiator": "Merger with Sapeon unifies the Korean NPU camp, big-tech lock-in with KT and SK, inference specialization",
+      "moat": "Korean government, telecom, and cloud partnerships; consolidated Korean NPU IP pool; Sapeon assets",
+      "competitive_position_summary": "The integrated champion of Korea's AI semiconductor camp, forming the top two Korean NPU players with FuriosaAI"
+    },
+    "trending_reason": {
+      "summary": "In late 2024, agreed to merge with Sapeon to consolidate Korea's NPU camp; became Korea's first AI semiconductor unicorn with a Saudi PIF-led Series C of $124M.",
+      "catalysts": [
+        "December 2024: agreement to merge with Sapeon",
+        "2024: Saudi PIF-led Series C of $124M, unicorn status",
+        "KT Cloud's NPU-based AI data center",
+        "REBEL LLM inference NPU unveiled"
+      ],
+      "media_mentions": [
+        null,
+        {
+          "source": "The Korea Economic Daily",
+          "title": "Rebellions-Sapeon merger — Korea's AI semiconductor consolidation"
+        }
+      ],
+      "growth_metrics": "Multiple enterprise PoCs, adoption in KT and SK data centers, cumulative funding over $230M"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global AI inference accelerator market $200B+ by 2030; Korea/Asia SOM $20B",
+      "market_trend": "AI compute localization policies, diversification of inference chips beyond NVIDIA, Korean government K-semiconductor policy",
+      "growth_potential": "Korean and Middle East government AI data centers, entry into the global NVIDIA alternative market, next-generation chip roadmap",
+      "risks": [
+        "Competition with FuriosaAI in the Korean market",
+        "NVIDIA accelerating inference efficiency",
+        "Post-merger integration risk with Sapeon"
+      ],
+      "risk_mitigation": "Rapid realization of merger synergies, stronger lock-in with KT and SK, diversification across Middle East and Asia"
+    },
+    "related_links": [
+      {
+        "title": "Rebellions official site"
+      },
+      {
+        "title": "Reuters: PIF investment report"
+      },
+      {
+        "title": "REBEL chip introduction"
+      }
+    ],
+    "editor_pick_comment": "The first case of Korean AI semiconductors actually entering data centers. Saudi PIF bet on it, and it even absorbed Sapeon — the real big game has begun."
+  },
+  "doctor-now-2026": {
+    "tagline": "Korea's standard for telemedicine and medication delivery — category leader in digital health",
+    "category": [
+      "Digital Health",
+      "Telemedicine",
+      "Medication Delivery"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "From Hanyang University's pre-med program; founded the company while still a medical student.",
+        "notable_achievement": "Founder who built Korea's telemedicine category from 0 to 1; a key player in post-COVID policy and market shifts."
+      }
+    ],
+    "team_highlights": "Doctors, pharmacists, policy experts, and mobile health engineers; actively hiring government and hospital liaison staff.",
+    "product": {
+      "summary": "A mobile telemedicine platform that has connected 1,000+ medical institutions and 40,000+ pharmacies, starting with the Korean government's temporary allowance of telemedicine after COVID. The entire flow — patient → doctor consultation → prescription → medication delivery — happens in a single app.",
+      "problem_statement": "Korea's healthcare system is face-to-face centric, so access is poor at night, on weekends, and outside cities. Chronic and mild-illness patients face high medical costs and time burdens. Pharmacy hours and physical distance are also entry barriers.",
+      "solution": "A full-stack digital health service where patients pick a doctor in the app, get video or phone consultation, and receive medication delivered immediately from a pharmacy that receives the prescription. It has established a legal operating model that adapts to Korea's changing telemedicine policy.",
+      "key_features": [
+        "Telemedicine: video and phone consultation matching",
+        "E-prescriptions: automatic transfer from doctor to pharmacy",
+        "Medication delivery: 1-hour quick delivery",
+        "Health diary: chronic disease monitoring",
+        "Corporate wellness solution 'Doctor Now Care'"
+      ],
+      "tech_stack_or_innovation": "EMR integration with medical institutions, e-prescription standards, last-mile pharmacy delivery matching, and a policy/legal compliance engine",
+      "target_customer": "General patients in their 20s–50s, chronic disease patients, after-hours/weekend care demand, and corporate wellness customers",
+      "business_model": "Medication delivery and consultation fees + corporate wellness B2B + health data business"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Goodoc",
+          "comparison": "A strong Korean health app player. Doctor Now differentiates with deeper integration of telemedicine and medication delivery."
+        },
+        {
+          "name": "Ollacare",
+          "comparison": "A peer competitor in telemedicine. Doctor Now has an edge in market share and pharmacy network."
+        },
+        {
+          "name": "Naver & Kakao Healthcare",
+          "comparison": "Big tech health efforts. Doctor Now differentiates with category depth and specialization."
+        }
+      ],
+      "key_differentiator": "1,000+ medical institutions + 40,000+ pharmacy network + an operating model that adapts to policy changes",
+      "moat": "Deep relationships with government, medical institutions, and pharmacies; operational know-how navigating telemedicine policy changes; user lock-in data",
+      "competitive_position_summary": "De facto #1 in Korea's telemedicine category; the largest platform positioned for policy normalization."
+    },
+    "trending_reason": {
+      "summary": "Policy changes accelerated after the 2023 telemedicine pilot program; additional capital and B2B lines launched in 2024–2025 diversified revenue. The biggest beneficiary of Korea's digital health policy shift.",
+      "catalysts": [
+        "2023 telemedicine pilot program launch",
+        "Additional Series C funding",
+        "Corporate wellness B2B line launch",
+        "Telemedicine to become a permanent service in 2025–2026"
+      ],
+      "media_mentions": [
+        {
+          "source": "Chosun Biz",
+          "title": "Doctor Now solidifies its #1 position in telemedicine"
+        },
+        {
+          "source": "The Dong-A Ilbo",
+          "title": "Doctor Now launches corporate wellness solution"
+        }
+      ],
+      "growth_metrics": "Cumulative users 10M+; 1,000+ medical institutions / 40,000+ pharmacies; hundreds of thousands of consultations per month"
+    },
+    "funding": {
+      "latest_round": {
+        "lead_investor": "Atinum Investment",
+        "notable_investors": [
+          null,
+          null,
+          "Samsung Venture Investment"
+        ]
+      },
+      "valuation_estimate": "KRW 300B–500B (est.)",
+      "funding_history": [
+        null,
+        null,
+        {
+          "lead_investor": "Atinum Investment"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Korea digital health market: KRW 10T+ by 2030; telemedicine SOM: KRW 2T",
+      "market_trend": "Discussions on making telemedicine a permanent service; growing demand for digital care among seniors and chronic disease patients; health penetrating corporate wellness.",
+      "growth_potential": "B2B corporate wellness market, senior care, and integration with chronic disease monitoring devices",
+      "risks": [
+        "Risk of telemedicine policy rollback",
+        "Opposition from pharmacist and medical associations",
+        "Entry of big tech players like Naver and Kakao"
+      ],
+      "risk_mitigation": "Trust relationships with government, medical institutions, and pharmacy associations; flexibility in responding to policy changes; B2B revenue diversification"
+    },
+    "related_links": [
+      {
+        "title": "Doctor Now official website"
+      },
+      {
+        "title": "Chosun Biz: Market Analysis"
+      }
+    ],
+    "editor_pick_comment": "A company turning the door COVID briefly opened into 'Korea's standard for digital health.' In an industry where a single policy line can shake a company, it's the largest platform — the one to bet on surviving to the end."
+  },
+  "standigm-2026": {
+    "tagline": "Discovering drug targets with AI workflows — an AI drug discovery company from South Korea",
+    "category": [
+      "AI Drug Discovery",
+      "Biotech",
+      "Healthcare AI"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Samsung SDS, Seoul National University PhD, AI and bioinformatics researcher",
+        "notable_achievement": "Pioneer in South Korea's AI drug discovery category, advancing proprietary drug pipelines to clinical stages"
+      }
+    ],
+    "team_highlights": "AI and bioinformatics researchers + pharmaceutical and clinical experts, many PhDs from Seoul National University and KAIST",
+    "product": {
+      "summary": "Operates AI workflows 'Standigm ASK, Standigm BEST, Standigm Insight' series that automate from drug candidate discovery to synthesis and validation. Diversifies revenue through proprietary clinical pipelines and big pharma partnerships.",
+      "problem_statement": "Drug development costs an average of 10 years and $2B; target discovery and candidate validation still rely on human intuition. South Korean biotech, facing capital and infrastructure gaps compared to global big pharma, urgently needs new methodologies.",
+      "solution": "AI workflows combining knowledge graphs, generative ML, and simulation shorten target and candidate discovery time. An 'AI-driven biotech' with in-house synthesis and validation infrastructure.",
+      "key_features": [
+        "Standigm ASK: Target discovery AI",
+        "Standigm BEST: Candidate generation AI",
+        "Standigm Insight: Drug repurposing AI",
+        "Proprietary clinical pipelines (fibrosis, oncology, etc.)",
+        "Global big pharma partnerships (Merck, SK, etc.)"
+      ],
+      "tech_stack_or_innovation": "Knowledge graphs, generative molecular models, in-house synthesis and validation automation, clinical data integration",
+      "target_customer": "Proprietary drug pipelines + global big pharma, South Korean and Asian pharmaceutical companies",
+      "business_model": "Big pharma milestones and royalties + clinical value of proprietary pipelines + AI workflow licensing"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global AI drug discovery leader. Standigm differentiates with workflow automation and collaboration with South Korean big pharma."
+        },
+        {
+          "comparison": "Knowledge graph-based leader. Standigm differentiates with integrated workflows from target to synthesis."
+        },
+        {
+          "comparison": "Peer in South Korean AI drug discovery. Standigm has an advantage in advancing to clinical stages."
+        }
+      ],
+      "key_differentiator": "Integrated workflow from target discovery to synthesis to validation + proprietary clinical pipelines",
+      "moat": "In-house synthesis and validation infrastructure, long-term big pharma contracts, favorable relationships in South Korean biotech ecosystem",
+      "competitive_position_summary": "Leading player in South Korea's AI drug discovery category, South Korea's AI bet in the global biotech market"
+    },
+    "trending_reason": {
+      "summary": "Accelerated IND approvals for proprietary pipelines in 2023-2024, expansion of global big pharma partnerships with SK and Merck, reports of additional capital raising in 2025",
+      "catalysts": [
+        "IND approvals for fibrosis and oncology pipelines in 2023-2024",
+        "Expansion of partnerships with Merck, SK, and domestic pharmaceutical companies",
+        "Reports of additional Series C capital raising",
+        "Benefiting from South Korean government AI drug R&D policies"
+      ],
+      "media_mentions": [
+        null,
+        {
+          "source": "Chosun Biz",
+          "title": "Standigm enters clinical stage for AI drug"
+        }
+      ],
+      "growth_metrics": "Cumulative value of big pharma partnerships in the hundreds of millions of dollars, 5+ proprietary clinical pipelines, multiple government R&D projects"
+    },
+    "funding": {
+      "latest_round": {
+        "lead_investor": "KDB (Korea Development Bank)",
+        "notable_investors": [
+          null,
+          "Korea Investment Partners"
+        ]
+      },
+      "valuation_estimate": "KRW 200B-300B (est.)",
+      "funding_history": [
+        {
+          "lead_investor": "Korea Investment Partners"
+        },
+        null,
+        {
+          "lead_investor": "KDB (Korea Development Bank)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global AI drug discovery market in 2030: $50B, South Korea and Asia SOM: $5B",
+      "market_trend": "Expansion of big pharma AI drug partnerships, South Korean government AI drug R&D policies, industrialization of clinical-stage proprietary pipelines",
+      "growth_potential": "License-out of clinical-stage pipelines, diversification of global big pharma, AI workflow licensing business",
+      "risks": [
+        "Clinical trial failure risk",
+        "Competition from global AI drug discovery leaders",
+        "Capital-intensive business funding"
+      ],
+      "risk_mitigation": "Diversification of multiple pipelines, diversification of big pharma, increasing share of licensing revenue"
+    },
+    "related_links": [
+      {
+        "title": "Standigm Official Site"
+      },
+      {
+        "title": "Endpoints: Entering Clinical Stage"
+      }
+    ],
+    "editor_pick_comment": "A company that shows how South Korean biotech can collaborate with global big pharma. Finding drugs with AI and taking them directly to clinical trials — almost the only AI-driven biotech in South Korea."
+  },
+  "lablup-2026": {
+    "tagline": "Backend.AI, the de facto standard for Korean GPU/AI infrastructure — full-stack MLOps",
+    "category": [
+      "AI Infrastructure",
+      null,
+      "GPU Cloud"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "PhD from KAIST, asyncio and Python core contributor",
+        "notable_achievement": "The person who turned open-source 'Backend.AI' into the de facto standard MLOps platform for the South Korean government and large enterprises"
+      },
+      {
+        "background": "PhD from KAIST, researcher in distributed computing and AI infrastructure",
+        "notable_achievement": "Designed Backend.AI's distributed GPU scheduler and session system"
+      }
+    ],
+    "team_highlights": "Distributed systems engineers from KAIST and Seoul National University, open-source core contributors, and personnel collaborating with government and research institutions",
+    "product": {
+      "summary": "Backend.AI is an AI/HPC container orchestration platform operated under a dual open-source + enterprise license. It provides GPU resource virtualization, session management, and MLOps workflows in a single package, establishing itself as the standard in data centers of the South Korean government, research institutes, and large enterprises.",
+      "problem_statement": "South Korean government agencies, research institutes, and large enterprises need to operate NVIDIA GPU clusters, but Kubernetes alone makes it difficult for ML researchers and students to freely use GPUs, with billing and isolation challenges.",
+      "solution": "An orchestrator that virtualizes and allocates GPU resources in fGPU units and integrates notebook, session, and service modes. It offers a proprietary container runtime and a researcher-friendly UI.",
+      "key_features": [
+        "Backend.AI: GPU container orchestrator",
+        "fGPU: GPU resource virtualization and partitioning",
+        "Sokovan: proprietary container runtime",
+        "FastTrack: multi-tenant for government and research institutes",
+        "Cloud / On-Premises dual deployment"
+      ],
+      "tech_stack_or_innovation": "GPU virtualization and partitioning IP, proprietary container runtime, ML workflow orchestration",
+      "target_customer": "South Korean government and research institutes (KAIST, KISTI), large enterprise R&D data centers, universities and educational institutions, global GPU cloud providers",
+      "business_model": "Open source + enterprise license + cloud SaaS + government and research contracts"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global leader in GPU orchestration. Backend.AI differentiates with deep Korean market presence and government/research friendliness."
+        },
+        {
+          "comparison": "ML training platform. Lablup differentiates with broader integration of notebooks, sessions, and services."
+        },
+        {
+          "comparison": "Global ML infrastructure. Lablup differentiates with on-premises and government data center friendliness."
+        }
+      ],
+      "key_differentiator": "Open-source full stack + GPU virtualization/partitioning + adoption as standard by South Korean government and research institutes",
+      "moat": "De facto standard status among South Korean government, research institutes, and large enterprises; open-source community; fGPU and Sokovan IP",
+      "competitive_position_summary": "The leading player in the Korean AI infrastructure category, with strength in government, research, and large enterprise markets"
+    },
+    "trending_reason": {
+      "summary": "Selected as a key partner for the South Korean government's AI data center and National AI Computing Center projects in 2024–2025, with expanded global exposure through inclusion in the NVIDIA partner lineup.",
+      "catalysts": [
+        "Key partner in the South Korean government's 'K-Cloud' project",
+        "Adopted as standard by government and research institutions including KISTI and KAIST",
+        "Series B funding raised and NVIDIA partner lineup inclusion",
+        "Launch of FastTrack multi-tenant solution"
+      ],
+      "media_mentions": [
+        {
+          "title": "Backend.AI selected as K-Cloud key partner"
+        },
+        {
+          "source": "The Korea Economic Daily",
+          "title": "Lablup accelerates government AI data center business"
+        }
+      ],
+      "growth_metrics": "100+ government, research, and enterprise customers; thousands of GitHub stars on open source; listed as a global NVIDIA partner"
+    },
+    "funding": {
+      "latest_round": {
+        "notable_investors": [
+          "NH Venture Investment",
+          "BNK Capital"
+        ]
+      },
+      "valuation_estimate": "KRW 150B–250B (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global MLOps and GPU orchestration market $30B+ in 2030; Korean SOM KRW 2T",
+      "market_trend": "Expansion of government 'AI sovereignty' computing infrastructure projects, standardization of GPU virtualization, demand for on-premises ML infrastructure",
+      "growth_potential": "Government, research, and defense AI computing centers; expansion of global NVIDIA partnership; cloud SaaS product line",
+      "risks": [
+        "Direct competition with Run:AI (NVIDIA)",
+        "Speed of open-source to enterprise conversion",
+        "Government budget and policy fluctuations"
+      ],
+      "risk_mitigation": "Strengthening the open-source community, lock-in with government and research institutions, diversifying cloud SaaS revenue"
+    },
+    "related_links": [
+      {
+        "title": "Lablup official website"
+      },
+      {
+        "title": "Backend.AI documentation"
+      },
+      {
+        "title": "ZDNet Korea: K-Cloud coverage"
+      }
+    ],
+    "editor_pick_comment": "The company deciding how South Korea's government and research institutes use GPUs. A de facto standard in Korean AI infrastructure recognized by NVIDIA — the most orthodox bet, starting from open source and advancing into government projects."
+  },
+  "mathpresso-qanda-2026": {
+    "tagline": "QANDA — AI math solver app used by 800M students, EdTech champion in Southeast Asia and Japan",
+    "category": [
+      null,
+      "AI Learning",
+      "Mobile App"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Graduate of Seoul National University; serial entrepreneur who started from experience as a private institute instructor and tutor",
+        "notable_achievement": "First South Korean EdTech to rank No.1 in Southeast Asia, Japan, and the Middle East; grew QANDA into a global AI learning platform"
+      },
+      {
+        "background": "Seoul National University graduate; mobile product expert",
+        "notable_achievement": "Designed QANDA mobile app and teacher matching system"
+      }
+    ],
+    "team_highlights": "Founders from Seoul National University + AI/education content specialists; local operations teams in Japan, Southeast Asia, and the Middle East; hires from Google and Naver",
+    "product": {
+      "summary": "A global learning platform combining the 'QANDA' app, which instantly shows step-by-step solutions when a math problem is photographed, with 1:1 AI and human tutor matching. Surpassed 80M+ cumulative users in South Korea, Japan, Southeast Asia, and the Middle East",
+      "problem_statement": "In math learning, the 'solution process' is key, not just the answer, but students have no one to help when they get stuck. Private education costs are high, and access to institutes and tutors varies greatly by region",
+      "solution": "Offers a free step-by-step solution engine combining math problem OCR, proprietary solution database, and LLM; generates revenue through premium features such as 1:1 tutor matching and AI tutor. Expands globally with localized content for Japan, Southeast Asia, and the Middle East",
+      "key_features": [
+        "QANDA Search: Search solutions with a single photo",
+        "QANDA AI Tutor: GPT-based 1:1 learning tutor",
+        "QANDA Tutor: 1:1 human tutor matching",
+        "QANDA Study: Learning management and planner",
+        "Multilingual content (Japanese, Southeast Asian, Middle Eastern)"
+      ],
+      "tech_stack_or_innovation": "Math formula OCR, solution database matching, LLM-based step-by-step explanation generation, multilingual content pipeline",
+      "target_customer": "Middle and high school students and parents in South Korea, Japan, Southeast Asia, and the Middle East; college entrance exam preparers",
+      "business_model": "Premium subscription (AI tutor/tutor matching) + advertising + partnerships with institutes and content providers"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global math solution app. QANDA differentiates with localization in Southeast Asia, Japan, and the Middle East, plus 1:1 tutor matching"
+        },
+        {
+          "comparison": "AI TOEIC/SAT learning. Mathpresso differentiates with depth in K-12 math and Southeast Asian market"
+        },
+        {
+          "comparison": "Indian EdTech giant. Mathpresso differentiates with mobile-first approach and depth in AI solutions"
+        }
+      ],
+      "key_differentiator": "Combination of math solution database + mobile-first approach + localization in Japan, Southeast Asia, and the Middle East",
+      "moat": "80M+ user data and solution dataset, No.1 category status in Japan and Southeast Asia, multilingual content IP",
+      "competitive_position_summary": "Global champion of South Korean EdTech, category leader in K-12 math learning in Japan, Southeast Asia, and the Middle East"
+    },
+    "trending_reason": {
+      "summary": "Became South Korea's first EdTech unicorn candidate after a $50M Series C led by Google and SoftBank in 2022; accelerated revenue diversification from 2024 to 2025 with the launch of 'QANDA AI Tutor' based on GPT",
+      "catalysts": [
+        "2022 Series C $50M led by Google and SoftBank",
+        "Launch of QANDA AI Tutor (GPT-based)",
+        "Consolidation of No.1 category position in Southeast Asia, Japan, and the Middle East",
+        "Full-scale entry into MENA region"
+      ],
+      "growth_metrics": "80M+ cumulative users; No.1 category in Japan, Thailand, Indonesia, and Vietnam; tens of millions of MAU"
+    },
+    "funding": {
+      "valuation_estimate": "$300M~$500M (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global K-12 EdTech market $200B+ by 2030, mobile learning SOM $30B, Japan-Southeast Asia-Middle East SOM $10B",
+      "market_trend": "Standardization of AI tutors and learning tools, surge in mobile learning in Southeast Asia and the Middle East, digitalization of college prep private education",
+      "growth_potential": "Expansion into MENA and LATAM, broadening AI tutor lineup, B2B partnerships with institutes and schools",
+      "risks": [
+        "Strengthening of free Google Photomath",
+        "Local EdTech competition (local apps in Vietnam and Thailand)",
+        "Accuracy risk of AI tutor content"
+      ],
+      "risk_mitigation": "Combination with human tutor matching resources, strengthening local content, AI review workflow"
+    },
+    "related_links": [
+      {
+        "title": "QANDA Official Site"
+      },
+      {
+        "title": "TechCrunch: Series C Coverage"
+      },
+      {
+        "title": "Nikkei Asia: Japan Market Analysis"
+      }
+    ],
+    "editor_pick_comment": "The farthest-reaching South Korean EdTech company. The fact that an app opened daily by tens of millions of students in Japan, Thailand, and Vietnam was built in Seoul is a milestone for the category."
+  }
+}

@@ -3,57 +3,70 @@
  * Daily startup issue generator (runs from GitHub Actions every morning KST).
  * LLM calls go through OpenRouter: DeepSeek V4 Flash first, Claude Haiku as fallback.
  *
- *   node scripts/generate-daily.mjs                 generate today's issue into src/data/startups.json
- *   node scripts/generate-daily.mjs --out tmp.json  write the merged result elsewhere (dry run)
+ * Every day builds a sector pool (_workspace/14): up to 3 companies in each of the nine sectors
+ * (src/lib/sectors.js), about 27 in all. The shared five ("모두의 5곳", the issue everyone sees,
+ * shares and counts as 제N호) are picked from that pool and marked `featured`.
+ *
+ *   node scripts/generate-daily.mjs                 generate today's pool into src/data/days/<date>.json
+ *   node scripts/generate-daily.mjs --out tmp.json  dry run: write only the day's records elsewhere
  *   node scripts/generate-daily.mjs --candidates c.json --out tmp.json
- *                                                   skip the LLM: run selection, link checks and merge on a
- *                                                   JSON array of finished profiles (offline testing)
+ *                                                   skip the LLM: run selection, link checks and the
+ *                                                   featured pick on a JSON array of finished profiles
  *   --logos                                         also save logos into public/logos on a dry run
  *
  * Env: OPENROUTER_API_KEY (required unless --candidates)
  *      OPENROUTER_MODELS   comma-separated, first = primary (default: DeepSeek V4 Flash, then Haiku 5.5)
  *      ISSUE_DATE          YYYY-MM-DD (default: today in KST)
+ *      POOL_SECTORS        comma-separated sector keys to generate (default: all nine)
+ *      MAX_COST_USD        stop researching once the run has spent this much (default 3)
+ *      RESEARCH_PARALLEL   research calls at once (default 6; lower it if OpenRouter rate-limits)
  *      FOLLOWUPS           0 turns off the follow-up step (default on)
  *      TRANSLATE           0 turns off the English translation step (default on)
- *      RETAIN_ISSUES       issues kept in startups.json (default 0 = all; follow-ups revisit old issues)
  *
- * Pipeline: discover candidates (web search) → selection rules → deep research per company
- * (web search, one call each) → selection rules again → link verification → merge →
- * English translation of the new companies (scripts/lib/translate.mjs) →
- * follow-ups on older companies (scripts/lib/followups.mjs, max 2 a day).
+ * Pipeline: per-sector discovery (web search) → selection rules → deep research per company
+ * (web search, one call each, sectors interleaved so a budget stop hits them evenly) →
+ * selection rules again → link verification → up to 3 per sector → featured five → day file →
+ * English translation (scripts/lib/translate.mjs) → follow-ups on older featured companies
+ * (scripts/lib/followups.mjs, max 2 a day) → pool-stats.json for the quality gates (§1-6).
  */
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { dropDuplicates, merge, normalize, selectCandidates, stripUrl, verifyLinks } from './lib/pipeline.mjs'
+import { capPerSector, dropDuplicates, featureScore, merge, normalize, orderDay, pickFeatured, poolSector, selectCandidates, stripUrl, verifyLinks } from './lib/pipeline.mjs'
 import { attachLogos } from './lib/logos.mjs'
 import { createClient, modelsFromEnv, OpenRouterError, parseOrRepair } from './lib/openrouter.mjs'
 import { updateLensFiles } from './lib/korea-lens.mjs'
 import { readStore, runFollowups } from './lib/followups.mjs'
 import { translateRecords, translateUpdates } from './lib/translate.mjs'
+import { readAll, readEn, writeAll, writeEn } from './lib/store.mjs'
+import { SECTORS, SECTOR_KEYS, sectorFor } from '../src/lib/sectors.js'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
-const DATA_PATH = path.join(here, '../src/data/startups.json')
 const META_PATH = path.join(here, '../src/data/meta.json')
+const STATS_PATH = path.join(here, '../src/data/pool-stats.json')
 const LENS_PATH = path.join(here, '../src/data/korea-lens.json')
 const LENS_INDEX_PATH = path.join(here, '../src/data/korea-lens-index.json')
 const LOGO_DIR = path.join(here, '../public/logos')
 const UPDATES_PATH = path.join(here, '../src/data/updates.json')
 const CORRECTIONS_PATH = path.join(here, '../src/data/corrections.json')
-const EN_PATH = path.join(here, '../src/data/startups.en.json')
 
-const WANT = 5
-const DISCOVER = 12 // over-ask: selection rules and failed research drop some
-const RESEARCH_PARALLEL = 3
+const FEATURED = 5
+const PER_SECTOR = 3 // pool companies kept per sector
+const DISCOVER = 6 // candidates asked per sector: selection rules and failed research drop some
+const RESEARCH = 4 // researched per sector
+const DISCOVER_PARALLEL = 3
+const RESEARCH_PARALLEL = Number(process.env.RESEARCH_PARALLEL || 6)
+const MAX_COST = Number(process.env.MAX_COST_USD || 3)
 
 const args = process.argv.slice(2)
 const flag = (name) => {
   const i = args.indexOf(name)
   return i >= 0 ? args[i + 1] : null
 }
-const outPath = flag('--out') ? path.resolve(flag('--out')) : DATA_PATH
+const dryOut = flag('--out') ? path.resolve(flag('--out')) : null
 const candidatesPath = flag('--candidates')
-const retainIssues = Number(process.env.RETAIN_ISSUES || 0) // 0 = keep every issue
+const live = !dryOut
+const poolSectors = process.env.POOL_SECTORS ? process.env.POOL_SECTORS.split(',').map((k) => k.trim()).filter((k) => SECTOR_KEYS.includes(k)) : SECTOR_KEYS
 
 // Today in Korea — the workflow runs at 20:07 UTC, which is already tomorrow in KST.
 const kstToday = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10)
@@ -71,17 +84,21 @@ Selection rules (hard):
 
 Sources: every URL you output must be a page you actually saw in your search results. Never construct or guess a URL. If you have nothing real, leave the field empty.`
 
-function discoveryPrompt(avoid) {
-  return `Find ${DISCOVER} candidate startups for the ${date} issue. Search broadly: recent funding announcements, launches, accelerator demo days, regional tech press (Korea, Japan, Europe, LatAm, India, Africa, North America).
+const SECTOR_LIST = SECTORS.map((x) => `${x.key} (${x.en}: ${x.hint})`).join('; ')
 
-Cover at least 4 sectors and 4 countries. Korea-based companies are welcome.
-Do not include any of these already-covered companies: ${avoid.join(', ')}
+function discoveryPrompt(sector, avoid) {
+  return `Find ${DISCOVER} candidate startups for the ${date} issue, all in one sector: ${sector.en} — ${sector.hint}.
+Search broadly: recent funding announcements, launches, accelerator demo days, regional tech press (Korea, Japan, Europe, LatAm, India, Africa, North America). Spread them over at least 3 countries. Korea-based companies are welcome.
+Do not include any of these already-covered companies: ${avoid.join(', ') || '—'}
+
+"attention" rates the momentum of the news itself from 1 to 5 (5 = a large round or a launch the trade press is talking about this week), not how famous the company is.
 
 Reply with ONLY a JSON object:
-{"candidates": [{"name_en": "", "name_ko": "", "website": "https://…", "country_ko": "국가명", "company_stage": "Seed | Series A | Series B | Series C", "status": "active", "why_now": "one sentence with the date", "evidence_url": "https://…"}]}`
+{"candidates": [{"name_en": "", "name_ko": "", "website": "https://…", "country_ko": "국가명", "company_stage": "Seed | Series A | Series B | Series C", "status": "active", "why_now": "one sentence with the date", "evidence_url": "https://…", "attention": 3}]}`
 }
 
 const PROFILE_SHAPE = `{
+  "sector": "one key from the sector list",
   "name_en": "", "name_ko": "한국어 표기", "tagline": "한 줄 소개(40자 이내)",
   "category": ["분야1", "분야2"], "founded_year": 2023,
   "headquarters": {"city": "City", "country": "Country", "country_ko": "국가명"},
@@ -117,21 +134,23 @@ Funding amounts (strict):
 - Explanations go in "total_raised_note" / the round's "note": what is included (grants, loans), which source, disagreements between sources, a USD conversion. Empty string when there is nothing to add.
 - "total_raised_usd" is a plain number in US dollars (12600000), or null when unknown. Convert from the original currency yourself; do not copy a conversion you cannot check.
 
+"sector" is exactly one of these keys, the company's main market: ${SECTOR_LIST}.
+
 Reply with ONLY a JSON object in this shape:
 ${PROFILE_SHAPE}`
 }
 
 /* ---------- LLM steps ---------- */
 
-async function discover(llm, avoid, searched) {
+async function discover(llm, sector, avoid, searched) {
   // the model plans its own queries (several regions/languages) instead of one fixed search
-  const r = await llm.chat({ system: RULES, user: discoveryPrompt(avoid), web: 'tool', maxResults: 8, maxSearches: 10, maxTokens: 32000 })
+  const r = await llm.chat({ system: RULES, user: discoveryPrompt(sector, avoid), web: 'tool', maxResults: 8, maxSearches: 8, maxTokens: 24000 })
   r.citations.forEach((c) => searched.add(stripUrl(c.url)))
   const parsed = await parseOrRepair(llm, r.text)
   const list = Array.isArray(parsed) ? parsed : parsed.candidates
   if (!Array.isArray(list)) throw new Error('Discovery returned no candidate list')
-  console.log(`Discovery (${r.model}): ${list.length} candidates, ${r.citations.length} citations`)
-  return list
+  console.log(`Discovery ${sector.key} (${r.model}): ${list.length} candidates, ${r.citations.length} citations`)
+  return list.map((c) => ({ ...c, _sector: sector.key }))
 }
 
 async function research(llm, candidate, searched) {
@@ -155,7 +174,7 @@ async function research(llm, candidate, searched) {
       r.citations.forEach((c) => searched.add(stripUrl(c.url)))
       const profile = await parseOrRepair(llm, r.text)
       console.log(`  researched ${candidate.name_en} (${r.model}, ${r.citations.length} citations)`)
-      return { ...profile, _model: r.model }
+      return { ...profile, _model: r.model, _sector: candidate._sector, attention: candidate.attention }
     } catch (err) {
       // OpenRouter's own fallback only covers API errors; a cut-off or broken answer is retried
       // here on the next model in the list
@@ -181,99 +200,171 @@ async function mapLimit(items, limit, fn) {
 
 const isComplete = (p) => p?.name_en && p.tagline && p.product?.summary && p.trending_reason?.summary
 
+
+/** Round-robin over sectors, so a budget stop leaves every sector with something. */
+function interleave(groups) {
+  const out = []
+  for (let i = 0; groups.some((g) => i < g.length); i++) for (const g of groups) if (i < g.length) out.push(g[i])
+  return out
+}
+
+const linkCount = (p) => (p.trending_reason?.media_mentions || []).length + (p.related_links || []).length
+const bump = (obj, key) => (obj[key] = (obj[key] || 0) + 1)
+
 /* ---------- Main ---------- */
 
 async function main() {
-  const existing = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'))
+  const existing = readAll()
 
-  if (!candidatesPath && existing.some((s) => s.date === date)) {
+  if (live && existing.some((s) => s.date === date)) {
     console.log(`Issue ${date} already exists. Skipping.`)
     return
   }
 
+  // pool-stats.json: one entry per day, per sector (the quality gates in _workspace/14 §1-6)
+  const stats = Object.fromEntries(
+    poolSectors.map((k) => [k, { leads: 0, rejected: {}, researched: 0, research_failed: 0, links_dropped: 0, links_kept: 0, adopted: 0 }]),
+  )
+  const statOf = (k) => stats[k] || (stats[k] = { leads: 0, rejected: {}, researched: 0, research_failed: 0, links_dropped: 0, links_kept: 0, adopted: 0 })
   const searched = new Set()
   let profiles
   let llm = null
+  let budgetStops = 0
 
   if (candidatesPath) {
-    profiles = JSON.parse(fs.readFileSync(candidatesPath, 'utf-8'))
+    profiles = JSON.parse(fs.readFileSync(candidatesPath, 'utf-8')).map((p) => ({ ...p, _sector: poolSector(p) }))
     console.log(`Using ${profiles.length} profiles from ${candidatesPath} (no LLM call)`)
   } else {
     const models = modelsFromEnv()
     llm = createClient({ apiKey: process.env.OPENROUTER_API_KEY, models, log: console.log })
-    console.log(`Issue ${date} via OpenRouter → ${models.join(' → ')}`)
+    console.log(`Pool ${date} via OpenRouter → ${models.join(' → ')} (sectors: ${poolSectors.join(', ')}, budget $${MAX_COST})`)
 
-    const avoid = [...new Set(existing.map((s) => s.name_en))]
-    const leads = await discover(llm, avoid, searched)
-    const { accepted: shortlist, rejected } = selectCandidates(leads, existing, WANT + 3, { maxPerCountry: 3 })
-    for (const r of rejected) console.log(`  reject lead ${r.name}: ${r.reason}`)
-    if (shortlist.length < 3) throw new Error(`Only ${shortlist.length} leads passed the selection rules`)
+    // the avoid list is per sector: the full list would outgrow the prompt within weeks,
+    // and duplicates from other sectors are caught by the selection rules anyway
+    const sectors = poolSectors.map((k) => SECTORS.find((x) => x.key === k))
+    const leadsBySector = await mapLimit(sectors, DISCOVER_PARALLEL, async (sector) => {
+      const avoid = [...new Set(existing.filter((s) => sectorFor(s).key === sector.key).map((s) => s.name_en))]
+      try {
+        return await discover(llm, sector, avoid, searched)
+      } catch (err) {
+        console.log(`Discovery ${sector.key} failed: ${err.message}`)
+        return []
+      }
+    })
 
-    console.log(`Researching ${shortlist.length} companies…`)
-    profiles = (await mapLimit(shortlist, RESEARCH_PARALLEL, (c) => research(llm, c, searched))).filter(isComplete)
+    // selection rules per sector, against everything published and everything picked so far today
+    const picked = []
+    const shortlists = leadsBySector.map((leads, i) => {
+      const key = sectors[i].key
+      statOf(key).leads = leads.length
+      const { accepted, rejected } = selectCandidates(leads, [...existing, ...picked], RESEARCH, { maxPerCountry: 2 })
+      for (const r of rejected) {
+        console.log(`  reject lead ${r.name} (${key}): ${r.reason}`)
+        bump(statOf(key).rejected, r.reason.split(' ')[0])
+      }
+      picked.push(...accepted)
+      return accepted
+    })
+    const queue = interleave(shortlists)
+    if (queue.length < 3) throw new Error(`Only ${queue.length} leads passed the selection rules`)
+
+    console.log(`Researching ${queue.length} companies (${RESEARCH_PARALLEL} at a time)…`)
+    profiles = (
+      await mapLimit(queue, RESEARCH_PARALLEL, async (c) => {
+        if (llm.cost() >= MAX_COST) {
+          budgetStops++
+          return null
+        }
+        const p = await research(llm, c, searched)
+        statOf(c._sector).researched++
+        if (!isComplete(p)) statOf(c._sector).research_failed++
+        return p
+      })
+    ).filter(isComplete)
+    if (budgetStops) console.log(`Budget $${MAX_COST} reached: ${budgetStops} companies not researched`)
   }
 
   // Deep research can surface an acquisition or listing the lead missed — apply the rules again.
-  const existingForDedup = candidatesPath ? existing.filter((s) => s.date !== date) : existing
-  const { accepted, rejected } = selectCandidates(profiles, existingForDedup, WANT)
+  // Country spread is a rule for the five, not for the pool.
+  const existingForDedup = existing.filter((s) => s.date !== date)
+  const { accepted, rejected } = selectCandidates(profiles, existingForDedup, Infinity, { maxPerCountry: Infinity })
   for (const r of rejected) console.log(`  reject ${r.name}: ${r.reason}`)
-  if (accepted.length < 3) throw new Error(`Only ${accepted.length} profiles passed the selection rules`)
 
   const generatedAt = new Date().toISOString()
-  const normalized = accepted.map(({ _model, ...c }) =>
-    normalize(c, { date, model: _model || 'manual', generatedAt, log: console.log }),
-  )
-  // ids and names are final only now; catch a company already published under another id
-  const { kept: unique } = dropDuplicates(normalized, existing, { log: console.log })
-  if (unique.length < 3) throw new Error(`Only ${unique.length} profiles left after duplicate checks`)
-  const { profiles: verified, kept, dropped } = await verifyLinks(unique, {
-    searched,
-    checkedAt: generatedAt,
-    log: console.log,
+  const normalized = accepted.map(({ _model, _sector, ...c }) => {
+    const n = normalize(c, { date, model: _model || 'manual', generatedAt, log: console.log })
+    return { ...n, sector: poolSector(c, _sector) }
   })
+  // ids and names are final only now; catch a company already published under another id
+  const { kept: unique } = dropDuplicates(normalized, existingForDedup, { log: console.log })
+  const before = new Map(unique.map((p) => [p.id, linkCount(p)]))
+  const { profiles: verified, kept, dropped } = await verifyLinks(unique, { searched, checkedAt: generatedAt, log: console.log })
   console.log(`Links: kept ${kept}, dropped ${dropped} unverifiable`)
+  for (const p of verified) {
+    statOf(p.sector).links_kept += linkCount(p)
+    statOf(p.sector).links_dropped += before.get(p.id) - linkCount(p)
+  }
 
-  // Logos are saved into public/logos; a dry run (--out elsewhere) skips them unless --logos.
-  if (outPath === DATA_PATH || args.includes('--logos')) {
+  // strongest first within each sector, then at most PER_SECTOR each
+  const ranked = verified
+    .map((p, i) => ({ p, i, score: featureScore(p, date) }))
+    .sort((a, b) => b.score - a.score || a.i - b.i)
+    .map(({ p }) => p)
+  const { kept: pool, over } = capPerSector(ranked, PER_SECTOR)
+  for (const p of over) console.log(`  over the sector cap: ${p.name_en} (${p.sector})`)
+  for (const p of pool) statOf(p.sector).adopted++
+
+  const featuredIds = pickFeatured(pool, { date, want: FEATURED })
+  if (featuredIds.length < 3) throw new Error(`Only ${featuredIds.length} companies for the shared five`)
+  const day = orderDay(pool, featuredIds)
+
+  // Logos are saved into public/logos; a dry run skips them unless --logos.
+  if (live || args.includes('--logos')) {
     try {
-      const { ok, failed } = await attachLogos(verified, { dir: LOGO_DIR, log: console.log })
+      const { ok, failed } = await attachLogos(day, { dir: LOGO_DIR, log: console.log })
       console.log(`Logos: ${ok} saved, ${failed} missing`)
     } catch (err) {
       console.log(`logos skipped: ${err.message}`)
     }
   }
 
-  const merged = merge(existing, verified, retainIssues, { log: console.log })
-  fs.writeFileSync(outPath, JSON.stringify(merged, null, 2) + '\n', 'utf-8')
-
-  if (outPath === DATA_PATH) {
-    const issueDates = [...new Set(merged.map((s) => s.date))]
-    const meta = {
-      last_issue_date: issueDates[0],
-      issue_count: issueDates.length,
-      generated_at: generatedAt,
-      models: [...new Set(verified.map((p) => p.model))],
-    }
-    fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2) + '\n', 'utf-8')
+  if (!live) {
+    fs.writeFileSync(dryOut, JSON.stringify(day, null, 2) + '\n', 'utf-8')
+    console.log(`Dry run: ${day.length} records → ${path.relative(process.cwd(), dryOut)}`)
+    console.log(JSON.stringify({ featured: featuredIds, stats }, null, 2))
+    if (llm) console.log(`OpenRouter cost: $${llm.cost().toFixed(4)}`)
+    return
   }
+
+  const merged = merge(existing, day, 0, { log: console.log })
+  writeAll(merged)
+  const issueDates = [...new Set(merged.map((s) => s.date))]
+  const meta = {
+    last_issue_date: issueDates[0],
+    issue_count: issueDates.length,
+    generated_at: generatedAt,
+    models: [...new Set(day.map((p) => p.model))],
+    pool_size: day.length,
+  }
+  fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2) + '\n', 'utf-8')
 
   // English edition of today's companies. A failure only leaves them Korean in the English app;
   // `npm run translate:en` picks them up later.
-  const translate = llm && outPath === DATA_PATH && process.env.TRANSLATE !== '0'
+  const translate = llm && process.env.TRANSLATE !== '0'
   if (translate) {
     try {
-      const { done, failed } = await translateRecords(llm, verified, { file: EN_PATH, order: merged.map((s) => s.id), concurrency: 4, fs, log: console.log })
+      const { done, failed } = await translateRecords(llm, day, { store: readEn(), save: (s) => writeEn(s, merged), concurrency: 6, fs, log: console.log })
       console.log(`English: ${done.length} translated, ${failed.length} failed`)
     } catch (err) {
       console.log(`translation skipped: ${err.message}`)
     }
   }
 
-  // "그때 그 회사": revisit companies 90+ days after their issue. Never blocks the issue itself;
-  // bounded to 2 companies, 16k tokens each and 4 minutes in total.
-  if (llm && outPath === DATA_PATH && process.env.FOLLOWUPS !== '0') {
+  // "그때 그 회사": revisit companies 90+ days after their issue, featured ones only. Never blocks
+  // the issue itself; bounded to 2 companies, 16k tokens each and 4 minutes in total.
+  if (llm && process.env.FOLLOWUPS !== '0') {
     try {
-      await runFollowups(llm, merged, { updatesPath: UPDATES_PATH, correctionsPath: CORRECTIONS_PATH, today: kstToday, log: console.log })
+      await runFollowups(llm, merged.filter((s) => s.featured !== false), { updatesPath: UPDATES_PATH, correctionsPath: CORRECTIONS_PATH, today: kstToday, log: console.log })
     } catch (err) {
       console.log(`follow-ups skipped: ${err.message}`)
     }
@@ -292,16 +383,24 @@ async function main() {
 
   // Optional enrichment ("한국에서는"): a failure here must never block the issue itself.
   // Off by default: the analysis is built on demand from the app (api/korea-lens.mjs) to save cost.
-  if (llm && outPath === DATA_PATH && process.env.KOREA_LENS_DAILY === '1') {
+  if (llm && process.env.KOREA_LENS_DAILY === '1') {
     try {
-      await updateLensFiles(llm, verified, { lensPath: LENS_PATH, indexPath: LENS_INDEX_PATH, allIds: merged.map((s) => s.id), log: console.log })
+      const five = day.filter((s) => s.featured)
+      await updateLensFiles(llm, five, { lensPath: LENS_PATH, indexPath: LENS_INDEX_PATH, allIds: merged.map((s) => s.id), log: console.log })
     } catch (err) {
       console.log(`korea-lens skipped: ${err.message}`)
     }
   }
 
-  console.log(`Wrote ${verified.length} profiles for ${date} → ${path.relative(process.cwd(), outPath)}`)
-  console.log(verified.map((p) => `  ${p.name_en} (${p.company_stage}, ${p.headquarters?.country_ko})`).join('\n'))
+  const statsFile = fs.existsSync(STATS_PATH) ? JSON.parse(fs.readFileSync(STATS_PATH, 'utf-8')) : { days: [] }
+  statsFile.days = [
+    { date, cost_usd: llm ? Number(llm.cost().toFixed(4)) : 0, budget_stops: budgetStops, pool: day.length, featured: featuredIds, sectors: stats },
+    ...statsFile.days.filter((d) => d.date !== date),
+  ].slice(0, 120)
+  fs.writeFileSync(STATS_PATH, JSON.stringify(statsFile, null, 2) + '\n', 'utf-8')
+
+  console.log(`Wrote ${day.length} pool records for ${date} (featured: ${featuredIds.join(', ')})`)
+  console.log(day.map((p) => `  ${p.featured ? '★' : ' '} ${p.sector.padEnd(10)} ${p.name_en} (${p.company_stage}, ${p.headquarters?.country_ko})`).join('\n'))
   if (llm) console.log(`OpenRouter cost: $${llm.cost().toFixed(4)}`)
 }
 

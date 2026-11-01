@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * English edition: translate company records into src/data/startups.en.json (see
+ * English edition: translate company records into the English day files (src/data/days-en, see
  * scripts/lib/translate.mjs) and fill title_en / detail_en of follow-up events in updates.json.
  * Also runs inside generate-daily.mjs for the new companies.
  *
- *   node scripts/translate-en.mjs                  companies not in startups.en.json yet (= --missing)
+ *   node scripts/translate-en.mjs                  companies without English yet (= --missing)
  *   node scripts/translate-en.mjs --all            every company again
  *   node scripts/translate-en.mjs --ids a,b        these companies (translated again if present)
  *   node scripts/translate-en.mjs --dry-run        list targets and string counts, no LLM call
@@ -12,19 +12,18 @@
  *   --limit N                                      at most N companies this run
  *   --no-updates                                   skip the follow-up events
  *
- * startups.en.json is saved after every company, so an interrupted run resumes with --missing.
+ * The English files are saved after every company, so an interrupted run resumes with --missing.
  * Env: OPENROUTER_API_KEY (required unless --dry-run), OPENROUTER_MODELS (see generate-daily.mjs)
  */
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createClient, modelsFromEnv, OpenRouterError } from './lib/openrouter.mjs'
-import { extractStrings, readTranslations, translateRecords, translateUpdates } from './lib/translate.mjs'
+import { extractStrings, translateRecords, translateUpdates } from './lib/translate.mjs'
 import { readStore } from './lib/followups.mjs'
+import { readAll, readEn, writeEn } from './lib/store.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
-const DATA_PATH = path.join(here, '../src/data/startups.json')
-const EN_PATH = path.join(here, '../src/data/startups.en.json')
 const UPDATES_PATH = path.join(here, '../src/data/updates.json')
 
 const args = process.argv.slice(2)
@@ -40,8 +39,8 @@ const limit = flag('--limit') != null ? Number(flag('--limit')) : Infinity
 
 async function main() {
   if (!Number.isInteger(concurrency) || concurrency < 1) throw new Error('--concurrency must be a positive integer')
-  const records = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'))
-  const have = readTranslations(fs, EN_PATH)
+  const records = readAll()
+  const have = readEn()
 
   let targets
   if (ids) {
@@ -61,8 +60,8 @@ async function main() {
 
   const llm = createClient({ apiKey: process.env.OPENROUTER_API_KEY, models: modelsFromEnv(), log: console.log })
   const { done, failed } = await translateRecords(llm, targets, {
-    file: EN_PATH,
-    order: records.map((r) => r.id),
+    store: have,
+    save: (s) => writeEn(s, records),
     concurrency,
     fs,
     log: console.log,

@@ -1,12 +1,14 @@
-import { useSyncExternalStore } from 'react'
+import { useEffect, useSyncExternalStore } from 'react'
 import { formatUSD as fmtUSD, parseAmount, shortAmount } from './amount.js'
-import { SECTORS as SECTOR_DEFS, sectorOf as sectorDef } from './sectors.js'
+import { SECTORS as SECTOR_DEFS, canonicalSector, sectorFor } from './sectors.js'
 import { isEn, L } from './i18n.js'
 
 // sector labels in the reading language (the API uses sectors.js directly, in Korean)
 const localSector = (s) => (isEn ? { ...s, label: s.en } : s)
 export const SECTORS = SECTOR_DEFS.map(localSector)
-export const sectorOf = (categories) => localSector(sectorDef(categories))
+/** A record's sector: its own pool key, or a guess from its (Korean) categories for older records. */
+export const sectorOfRecord = (s) => localSector(sectorFor({ sector: s.sector, category: s._ko?.category ?? s.category }))
+export { canonicalSector }
 
 /* Data arrives at start-up (see load.js → initData); everything below reads the
    module-level bindings that initData fills. */
@@ -115,7 +117,6 @@ function prepare(raw, corrections, lensIndex, updates) {
       // edition keeps it under _ko); labels follow the reading language
       const raised = cleanAmount(s.funding?.total_raised)
       const raisedKo = cleanAmount(s._ko?.total_raised ?? s.funding?.total_raised)
-      const category_ko = s._ko?.category ?? category
       return {
         ...s,
         category,
@@ -124,7 +125,7 @@ function prepare(raw, corrections, lensIndex, updates) {
         _raisedShort: shortAmount(raisedKo, { krw: !isEn }),
         _raisedUSD: Number.isFinite(s.funding?.total_raised_usd) ? s.funding.total_raised_usd : parseAmountUSD(raisedKo),
         _domain: getDomain(s.website),
-        _sector: sectorOf(category_ko),
+        _sector: sectorOfRecord(s),
         _stage: localStage(stage),
         _stageGroup: stageGroupOf(stage, correction),
         _region: regionOf(s._ko?.country_ko ?? s.headquarters?.country_ko),
@@ -148,7 +149,7 @@ function prepare(raw, corrections, lensIndex, updates) {
     .sort((a, b) => b.date.localeCompare(a.date))
 }
 
-/** All companies, newest issue first. */
+/** All public companies (in ?preview=pool, the whole pool), newest day first. */
 export let startups = []
 /** Issue dates, newest first. */
 export let dates = []
@@ -157,32 +158,40 @@ export let correctionList = []
 export let weeks = []
 export let stats = { issues: 0, companies: 0, first: null, last: null }
 let issueCache = new Map()
+let poolCache = new Map()
+/** The data has sector-pool companies beyond the shared five (public pool, or ?preview=pool). */
+export let poolLive = false
+let context = { corrections: {}, lensIndex: {}, updates: {} }
 
-/* 'lite' — list fields only (index.json, first paint); 'full' — every field (startups.json);
-   'failed' — the full records could not be fetched. Screens that need full records
-   (the detail page) wait on this. */
-let level = 'lite'
 let version = 0
 const listeners = new Set()
 const subscribe = (l) => (listeners.add(l), () => listeners.delete(l))
-
-export function useDataLevel() {
-  useSyncExternalStore(subscribe, () => version)
-  return level
-}
-
-export function setDataFailed() {
-  if (level === 'full') return
-  level = 'failed'
+const notify = () => {
   version++
   listeners.forEach((l) => l())
 }
+/** Re-render on any data change (a day's full records arriving). */
+export const useDataVersion = () => useSyncExternalStore(subscribe, () => version)
 
-export function initData({ startups: raw, corrections = {}, lensIndex = {}, updates = {}, full = false }) {
-  level = full ? 'full' : 'lite'
-  startups = prepare(raw, corrections, lensIndex, updates || {})
-  dates = [...new Set(startups.map((s) => s.date))]
-  issueCache = new Map(dates.map((d) => [d, startups.filter((s) => s.date === d)]))
+function index() {
+  issueCache = new Map()
+  poolCache = new Map()
+  for (const s of startups) {
+    if (!poolCache.has(s.date)) poolCache.set(s.date, [])
+    poolCache.get(s.date).push(s)
+    // the issue is the day's shared five; older records have no flag and all count
+    if (s.featured === false) continue
+    if (!issueCache.has(s.date)) issueCache.set(s.date, [])
+    issueCache.get(s.date).push(s)
+  }
+  dates = [...issueCache.keys()]
+  poolLive = startups.some((s) => s.featured === false)
+}
+
+export function initData({ startups: raw, corrections = {}, lensIndex = {}, updates = {} }) {
+  context = { corrections, lensIndex, updates: updates || {} }
+  startups = prepare(raw, corrections, lensIndex, context.updates)
+  index()
   correctionList = startups
     .filter((s) => s._correction)
     .sort((a, b) => b._correction.checked.localeCompare(a._correction.checked))
@@ -194,8 +203,52 @@ export function initData({ startups: raw, corrections = {}, lensIndex = {}, upda
   }
   weeks = [...byWeek.entries()].map(([key, ds]) => ({ key, dates: ds }))
   stats = { issues: dates.length, companies: startups.length, first: dates[dates.length - 1], last: dates[0] }
-  version++
-  listeners.forEach((l) => l())
+  notify()
+}
+
+/* Full records arrive one day at a time (days/<date>.json): the list fields are enough for
+   every list; the detail page waits for its day. */
+let loadDay = null
+const dayState = new Map() // date → 'loading' | 'full' | 'failed'
+
+export function setDayLoader(fn) {
+  loadDay = fn
+}
+
+function requestDay(date) {
+  const state = dayState.get(date)
+  if (!loadDay || state === 'loading' || state === 'full') return
+  dayState.set(date, 'loading')
+  loadDay(date).then(
+    (raw) => {
+      const full = new Map(prepare(raw, context.corrections, context.lensIndex, context.updates).map((s) => [s.id, s]))
+      startups = startups.map((s) => full.get(s.id) || s)
+      index()
+      dayState.set(date, 'full')
+      notify()
+    },
+    () => {
+      dayState.set(date, 'failed')
+      notify()
+    },
+  )
+}
+
+/** 'lite' while the day's full records are on their way, then 'full' (or 'failed'). */
+export function useDayLevel(date) {
+  useDataVersion()
+  useEffect(() => {
+    if (date) requestDay(date)
+  }, [date])
+  const state = dayState.get(date)
+  return state === 'full' ? 'full' : state === 'failed' ? 'failed' : 'lite'
+}
+
+/** Try a failed day again (the detail page's retry button). */
+export function retryDay(date) {
+  if (dayState.get(date) === 'failed') dayState.delete(date)
+  requestDay(date)
+  notify()
 }
 
 /** Monday of the week a 'YYYY-MM-DD' date falls in, as 'YYYY-MM-DD'. */
@@ -227,11 +280,18 @@ export const UPDATE_KINDS = {
 }
 
 export function companiesOfSector(key) {
-  return startups.filter((s) => s._sector.key === key)
+  const k = canonicalSector(key)
+  return startups.filter((s) => s._sector.key === k)
 }
 
+/** The day's issue: its shared five ("모두의 5곳"). */
 export function byDate(date) {
   return issueCache.get(date) || []
+}
+
+/** Every company of the day: the shared five first, then the rest of the sector pool. */
+export function poolOf(date) {
+  return poolCache.get(date) || []
 }
 
 export function byId(id) {

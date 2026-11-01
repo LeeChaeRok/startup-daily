@@ -1,0 +1,439 @@
+{
+  "ailytics-2026": {
+    "tagline": "Vision AI that turns existing CCTV into a real-time safety layer for industrial sites",
+    "category": [
+      "Industrial Safety",
+      "Computer Vision"
+    ],
+    "headquarters": {
+      "country_ko": "Singapore"
+    },
+    "employee_count": "51-100 (est.)",
+    "founders": [
+      {
+        "background": "Co-founded Ailytics in 2021, originating from a joint NUS-HDB research project. Previously held experience in construction and engineering (est.).",
+        "notable_achievement": "Expanded deployments to over 400 sites across 15 countries; integrated over 1,000 cameras at the Changi Airport Terminal 5 construction site."
+      },
+      {
+        "background": "Oversees overall technology. Expert in computer vision and AI engineering (est.). Originated from the NUS-HDB joint research project.",
+        "notable_achievement": "Led development of the Ailyssa platform, which derives 3D spatial understanding from a single 2D CCTV feed, and the AilyssaX context reasoning engine."
+      }
+    ],
+    "team_highlights": "After the Series A in 2026, expanding local teams in the US, Japan, Australia, and the Gulf region. Models enhanced with five years of live deployment data since founding.",
+    "product": {
+      "summary": "A vision AI platform that overlays a software layer on existing industrial CCTV to provide real-time safety, security, and productivity insights.",
+      "problem_statement": "It is impossible for humans to monitor dozens of CCTV cameras simultaneously on industrial sites; most incidents are only reviewed after the fact. Safety managers cannot watch all cameras across every shift.",
+      "solution": "Uses already installed IP cameras (2MP+, RTSP-compatible) and deploys within two weeks without hardware replacement. AI monitors all cameras 24/7 and sends alerts to on-site teams the moment a hazard is detected.",
+      "key_features": [
+        "PPE detection (missing hard hat, vest, gloves)",
+        "Equipment proximity measurement (based on 3D reconstruction from a single camera)",
+        "Detecting workers under suspended loads, real-time marking of drop zones",
+        "Early smoke and fire detection",
+        "Unauthorized entry detection in restricted areas",
+        "Alerts for workers approaching open edges",
+        "50+ configurable safety, security, and productivity use cases"
+      ],
+      "tech_stack_or_innovation": "Proprietary computer vision technology that derives 3D spatial understanding from a single 2D CCTV feed. No LiDAR, radar, or additional sensors required. The AilyssaX context reasoning engine, based on a vision language model (VLM), sequentially verifies compliance with multi-step work procedures. Trained on five years of real deployment data to operate in rain, dust, low light, obstructed views, and decades-old cameras.",
+      "target_customer": "EHS (Environmental, Health & Safety) and operations management teams in heavy industries such as construction, manufacturing, logistics, ports, and transportation. Primarily targets mid-sized companies with existing CCTV infrastructure.",
+      "business_model": "B2B SaaS. Subscription-based pricing per camera or per site (est.). Provides only the software layer; no hardware sales."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Hong Kong-based, expanding into remote pipeline corridors and offering similar vision AI safety analytics."
+        },
+        {
+          "comparison": "Collaborates with Google Cloud to provide workplace safety solutions via AI video intelligence."
+        },
+        {
+          "comparison": "US-based, sells CCTV-based safety analytics solutions."
+        },
+        {
+          "comparison": "New York-based, supplies camera-based safety analytics to industrial sites."
+        },
+        {
+          "comparison": "Dublin-based, offers similar camera-based safety analytics services."
+        }
+      ],
+      "key_differentiator": "Model robustness from real-world data. Trained on five years of live deployments to operate in harsh conditions (rain, dust, low light, obstructed views, old cameras). Achieves 3D spatial understanding using only existing CCTV, no additional hardware.",
+      "moat": "Access to private data — continuously enhances domain-specific models through non-public video from each industrial site. Tin Men Capital describes it as a 'significant barrier to entry'. Customer churn rate below 1% (company claims).",
+      "competitive_position_summary": "Based in Asia (Singapore), with over 400 deployments across 15 countries, currently scaling globally. Strategy targets mid-sized US industrial enterprises, opening a market that incumbents have priced out."
+    },
+    "trending_reason": {
+      "summary": "Noticed for raising a US$7.4M Series A announced on October 26, 2026. AI adoption in traditional industries like construction and manufacturing is accelerating, and Ailytics is symbolically significant as a Singaporean deep-tech startup aligned with the government's 'AI economy' policy.",
+      "catalysts": [
+        "2026-10-26: Announced US$7.4M Series A led by Tin Men Capital",
+        "2026-06: Launched AilyssaX context reasoning engine",
+        "2026-04: Signed MOU with Safie (Japan's largest cloud camera company); Safie later joined as an investor",
+        "Partnership with Safie, which supplies 29 of Japan's top 30 construction companies, accelerating market entry in Japan"
+      ],
+      "growth_metrics": "Grew from 70 projects (4 countries) at Pre-Series A in April 2024 to over 400 deployments (15 countries). Detected over 5.7M hazards (fire, safety violations, etc.). Monitors over 500M m² of work sites. Based on customer reports: 73% reduction in TRIR (Total Recordable Incident Rate), 84% reduction in safety non-compliance.",
+      "media_mentions": [
+        {
+          "source": "Ailytics Official Blog"
+        }
+      ]
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "lead_investor": "Tin Men Capital (Singapore-based VC)",
+        "notable_investors": [
+          "SG Growth Capital (including SEEDS)",
+          "Safie (Japan's largest cloud camera company)",
+          "One of Japan's major construction companies (undisclosed)",
+          "Family offices and existing investors"
+        ]
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "Intersection of global industrial safety market and vision AI market. Industrial CCTV analytics market estimated at several billion dollars. Ailytics is present in 15 countries, prioritizing the US, Japan, Australia, and the Gulf region.",
+      "market_trend": "Global adoption of AI-powered safety management at industrial sites is expanding. Increasing AI demand in traditional industries such as construction and logistics is a key driver.",
+      "growth_potential": "Expected to accelerate global expansion by targeting the Middle East Gulf region and mid-sized US industrial enterprises.",
+      "risks": [
+        "Intensifying competition — numerous similar camera-based safety analytics startups worldwide",
+        "Privacy and labor rights concerns — potential misuse of camera AI surveillance for worker monitoring or disciplinary action",
+        "Lack of independent audit on customer-reported metrics — performance indicators such as TRIR reduction rely on self-reporting",
+        "Competition in the US market — possible heightened competition with local players (Voxel, Intenseye, etc.)",
+        "Burden of maintaining and scaling model performance — increasing infrastructure costs to process vast CCTV data"
+      ],
+      "risk_mitigation": "Partnership with Safie, which supplies 29 of Japan's top construction companies, lowers entry barriers in Japan. Maintains customer churn below 1%, building a stable revenue base. Differentiates through domain-specific private data for model advantage over competitors."
+    },
+    "related_links": [
+      {
+        "title": "Ailytics Official Website"
+      },
+      {
+        "title": "Ailytics Introduction Page"
+      },
+      {
+        "title": "Tin Men Capital Portfolio Announcement (Pre-A)"
+      }
+    ],
+    "editor_pick_comment": "A Singaporean flagship industrial vision AI that runs on old CCTV with just a software layer, operating across 400 sites in 15 countries, without requiring additional hardware."
+  },
+  "acimus-2026": {
+    "tagline": "Japanese construction DX startup creating BIM models with conversational AI",
+    "category": [
+      "Construction AI",
+      null,
+      "PropTech"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "employee_count": "1-10 (est.)",
+    "founders": [
+      {
+        "role": "Representative Director & CEO",
+        "background": "Specific career details could not be confirmed from this search. He presents a vision to solve the BIM adoption cost and software proficiency issues in the Japanese construction industry.",
+        "notable_achievement": "Founded ACIMUS in September 2024 and directly built the conversational AI-based BIM cloud service."
+      }
+    ],
+    "team_highlights": "A lean team with AI integrated across development and operations; AI agents write over 90% of the product code. After this seed round, the policy is to focus on product development and customer value rather than expanding headcount.",
+    "product": {
+      "summary": "A web browser-based cloud service that allows users to create and edit BIM models of buildings by conversing with generative AI.",
+      "problem_statement": "As Japan's Ministry of Land, Infrastructure, Transport and Tourism (MLIT) expands BIM adoption, demand is growing for both new and existing buildings. However, the high learning cost and model creation time of professional BIM software mean only a few specialists can use it. For existing buildings that only have drawings, BIM models must be created from scratch, creating a high entry barrier at the maintenance stage.",
+      "solution": "When given a natural language instruction like \"Create a three-story office building,\" the AI generates and edits a BIM model. The AI automatically suggests dimensions and regulatory standards, and exports in the international standard IFC format for interoperability with existing BIM software.",
+      "key_features": [
+        "Conversational AI-based BIM model creation/editing",
+        "Auto-dimension suggestion: Suggests typical dimensions and building code compliant values even without user input",
+        "Building regulation Q&A: Query design-related laws like Building Standards Law, City Planning Law, Fire Service Act via chat AI",
+        "AI architectural perspective generation: Produces perspective images in about 10-20 seconds from model captures, sketches, or text instructions",
+        "IFC export: Exports models in international standard format for interoperability with existing BIM/CAD tools",
+        "ACIMUS KIWARI: An architectural design AI that batch-generates BIM model proposals based on input conditions"
+      ],
+      "tech_stack_or_innovation": "A browser-based cloud service usable without installing professional BIM tools. The core is that generative AI directly creates BIM data structures and integrates with the international IFC standard. Internally, it has an AI-native development structure where AI agents write over 90% of the code.",
+      "target_customer": "Design firms, construction companies, and maintenance staff in railway, real estate, and public sectors that own many buildings, like JR East. The goal is to make it usable by non-BIM experts.",
+      "business_model": "Cloud SaaS-based. It induces conversion from PoC to full contract and expands revenue through existing building maintenance BIM projects. Detailed pricing is undisclosed."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "De facto standard for professional BIM authoring tools, but the learning cost is high and converting existing building drawings to BIM is mostly manual."
+        },
+        {
+          "comparison": "A global startup that automatically generates architectural drawings with AI. However, ACIMUS is closer to a Japan-market-specific approach that models entire buildings via conversation and exports to IFC."
+        }
+      ],
+      "key_differentiator": "The key differentiator is 'ChatBIM', which allows people without professional BIM software experience to create and edit BIM models using natural language. It also has LiteBIM for the early planning stage and the architectural design AI 'ACIMUS KIWARI', and it has secured a demonstration opportunity with JR East's actual building assets.",
+      "competitive_position_summary": "It appears to be one of the fastest-moving early startups in the wave of Japan government BIM regulation introduction and BIM-based maintenance of existing buildings. However, revenue and customer numbers are undisclosed, and it avoids head-on competition with global BIM tools by focusing on the Japanese market.",
+      "moat": "Still at the seed stage, so it is hard to call this an absolute technology moat. That said, IFC standard integration, a Q&A dataset on Japanese building regulations, and field experience across JR East's roughly 1,680 stations and about 24,000 buildings could become early barriers to entry."
+    },
+    "trending_reason": {
+      "summary": "It gained attention on October 14, 2026, by announcing a seed round of approx. ¥65M and a capital and business partnership with JR East's startup program. In some US-style reports, it was misreported as 'US$65M', but the actual disclosed amount is approx. ¥65M.",
+      "catalysts": [
+        "April 2026: Japan MLIT commences BIM-based plan review",
+        "Spring 2029: scheduled introduction of BIM data review",
+        "Demand to convert the maintenance of JR East's roughly 1,680 stations and about 24,000 buildings, including related facilities, to BIM",
+        "2026-10-14: Seed round and announcement of capital/business partnership with JR East startup"
+      ],
+      "growth_metrics": "Undisclosed. However, in a demonstration with the JR East startup program, it was confirmed that the time to create a BIM model per small station could be significantly reduced from the previous approx. 95-100 hours. The exact time reduction and sample size were not disclosed."
+    },
+    "funding": {
+      "total_raised": "Approx. ¥65M (approx. $430K USD, est.)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Approx. ¥65M (approx. $430K USD, est.)"
+      },
+      "funding_history": [
+        {
+          "amount": "Approx. ¥65M"
+        }
+      ]
+    },
+    "market_outlook": {
+      "market_trend": "In April 2026, Japan's MLIT started BIM-based plan review, and in Spring 2029 it has announced the introduction of BIM data review. Policy is moving towards encouraging BIM use not only for new construction but also for the maintenance and operation of existing buildings.",
+      "growth_potential": "The growth potential is large due to a combination of regulations and the digital transformation will of large asset owners, but ACIMUS is still at the seed stage, so it is difficult to judge the growth rate until real revenue and customer acquisition speed are confirmed.",
+      "risks": [
+        "A seed round of approx. ¥65M is too small to compete in development with global BIM software companies.",
+        "Challenges remain in verifying the dimensional and regulatory compliance of BIM models created by generative AI and in design liability.",
+        "Dependence on JR East could increase, and the expansion of the demonstration scope after the capital/business partnership must lead to actual contracts.",
+        "MLIT's BIM data review is scheduled for Spring 2029, which may delay the market's opening."
+      ],
+      "risk_mitigation": "It ensures compatibility with existing BIM software through IFC standard export, and lowers the entry barrier with LiteBIM for early planning. By accumulating maintenance data from the JR East demonstration while focusing on AI-native product development instead of expanding headcount, it reduces cost burden.",
+      "tam_sam_som": "Specific market size figures are undisclosed. The TAM can be viewed as the entire Japanese construction and real estate BIM software market; the SAM as BIM conversion for planning and basic design of new buildings plus BIM conversion for maintenance of existing buildings; and the SOM as maintenance BIM modeling demand starting with JR East's 1,680 stations and about 24,000 related facilities."
+    },
+    "related_links": [
+      {
+        "title": "ACIMUS official service"
+      },
+      {
+        "title": "ACIMUS company information"
+      },
+      {
+        "title": "PR TIMES official press release"
+      }
+    ],
+    "editor_pick_comment": "The positioning as 'the first conversational BIM' targeting the Japanese government's BIM review introduction is good, but unlike the US$65M misreport in US-style media, the actual seed is approx. ¥65M, so it is necessary to accurately report and distinguish the fund size."
+  },
+  "qibitech-2026": {
+    "tagline": "Vendor-free robot integrated control platform",
+    "category": [
+      "Robot",
+      "Software",
+      "Manufacturing"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "Master's from a national university, MBA graduate. Experience at automotive parts supplier and corporate improvement consultant."
+      },
+      {
+        "role": "CTO",
+        "background": "Ph.D. from the JSK Lab at the University of Tokyo, served as a special lecturer at the same university."
+      },
+      {
+        "role": "Director, Founder, CCPO",
+        "background": "Ph.D. from the Information Systems Engineering Laboratory (JSK) at the University of Tokyo. Previously at Mitsubishi Electric.",
+        "notable_achievement": "IPA (Information-technology Promotion Agency) Mitou Super Creator"
+      }
+    ],
+    "team_highlights": "Three founders from the University of Tokyo's JSK Robotics Lab founded the company based on over 300 robot development experiences. Deep expertise in robot control and field deployment.",
+    "product": {
+      "summary": "HATS is a vendor-free orchestration platform that integrates and remotely controls heterogeneous robots on a single platform.",
+      "problem_statement": "Severe labor shortages in logistics and manufacturing drive high demand for robot adoption, but different specifications by manufacturer, integration with existing systems, and handling failures during operation are major barriers.",
+      "solution": "HATS integrates and controls robots from multiple manufacturers, connects with upper-level systems like WMS/MES and equipment/AI, and consistently supports remote monitoring and maintenance, maximizing the efficiency of robot adoption and operation.",
+      "key_features": [
+        "Integrated control of robots from different manufacturers",
+        "Integration with external systems such as WMS/MES/elevators/AI",
+        "Remote operation and maintenance support",
+        "Provides a maintenance-free experience from the user's perspective"
+      ],
+      "tech_stack_or_innovation": "Based on remote control technology and a vendor-neutral architecture, with features for field data collection and AI-driven operational optimization.",
+      "target_customer": "Businesses that deploy and operate multiple robots, such as logistics centers, factories, and facility management companies.",
+      "business_model": "Fixed-fee revenue model based on platform license sales and remote operation support services (maintenance-free)."
+    },
+    "competitive_landscape": {
+      "key_differentiator": "Vendor-free accessibility coupled with a stable remote support system built on over 300 real robot development experiences.",
+      "moat": "Technical expertise from the University of Tokyo JSK Lab and over 300 robot development and deployment experiences since founding in 2011 form the core moat.",
+      "competitive_position_summary": "While most robot control platforms are tied to specific manufacturers, QibiTech differentiates itself by offering true vendor freedom and field-proven remote maintenance."
+    },
+    "trending_reason": {
+      "summary": "With a Series B investment (approx. ¥600M, $4.1M), QibiTech has begun full-scale scaling of its vendor-free robot control platform 'HATS'.",
+      "catalysts": [
+        "Surge in demand for logistics and manufacturing automation due to Japan's severe labor shortage",
+        "Increasing need for robot adoption in labor-intensive workplaces"
+      ],
+      "growth_metrics": "As of September 2026: 61 employees, over 300 cumulative robot development projects, new product lineup (HATS Standard/Pro/SDK) launched in September 2026.",
+      "media_mentions": [
+        null,
+        {
+          "source": "QibiTech Official News"
+        }
+      ]
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed",
+      "market_trend": "Accelerating robot adoption in logistics and manufacturing due to worsening labor shortages in Japan. Accordingly, demand for software platforms that integrate multiple robots is also increasing.",
+      "growth_potential": "High. Vendor-free accessibility and proven remote maintenance capability allow expansion into various sites.",
+      "risks": [
+        "Possible entry of similar platforms by large tech companies or existing robot manufacturers",
+        "Difficulty of integrating with legacy systems and customization burden due to site-specific characteristics"
+      ],
+      "risk_mitigation": "Secured business foundation through strong partnerships with Sumitomo Corporation Group and JIC, and reduced technical risk with over 300 field deployment experiences."
+    },
+    "related_links": [
+      {
+        "title": "QibiTech Official Website"
+      },
+      {
+        "title": "QibiTech Company Overview"
+      },
+      {
+        "title": "QibiTech News List"
+      }
+    ],
+    "editor_pick_comment": "As a vendor-free platform that overcomes integration barriers between robots, QibiTech's Series B investment well demonstrates the growth potential of the Japanese robot market."
+  },
+  "anybridge-2026": {
+    "tagline": "Integrates GPU, NPU, and PIM; cuts AI inference costs by 70%",
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "Professor at KAIST School of Computing. A leading scholar in computer system architecture. Conducted industry-academia joint research with Google, Meta, NVIDIA, Samsung Electronics, and SK hynix. Open-sourced the LLM serving simulator 'LLMServingSim' and won Best Paper Awards at IISWC 2024 and ISPASS 2026.",
+        "notable_achievement": "Won Best Paper and Distinguished Artifact Award at IISWC 2024, and Best Paper Award at ISPASS 2026 for the LLMServingSim open-source project"
+      },
+      {
+        "role": "Co-founder",
+        "background": "Professor at KAIST School of Computing. Published over 110 papers in top-tier conferences in computer system architecture and holds 26 patents related to AI systems.",
+        "notable_achievement": "Over 110 papers in top-tier computer systems conferences, 26 AI system patents"
+      }
+    ],
+    "team_highlights": "Kunle Olukotun, co-founder of SambaNova and professor at Stanford University, serves as a technical advisor. Five engineers with KAIST master's and doctoral degrees form the core development lineup. As of September 2026, the company has 4 employees and is pre-product launch.",
+    "product": {
+      "summary": "Provides a 'multi-accelerator runtime' that integrates and operates different AI accelerators such as GPU, NPU, and PIM, along with an enterprise AI agent platform, as a single software stack. With a common interface not tied to any specific hardware, it automatically assigns the optimal accelerator for each inference workload, reducing inference costs by 40–70% compared to GPU-only setups.",
+      "problem_statement": "When enterprises apply generative AI to actual services, GPU-dependent infrastructure causes costs to spike rapidly. While new AI semiconductors like NPUs and PIMs have emerged, there is a lack of system software to integrate and manage them.",
+      "solution": "A vertically integrated 7-layer multi-accelerator LLM serving runtime, from hardware abstraction to API. It allocates GPU, NPU, or PIM in real time based on response speed, cost, and model size. Compatible with OpenAI, Google Gemini, and Anthropic Claude APIs, it can be adopted without modifying existing code.",
+      "key_features": [
+        "Multi-accelerator runtime: Operates all AI accelerators (GPU, NPU, PIM, PNM, etc.) in a single system",
+        "Workload-based automatic semiconductor allocation: Assigns the optimal accelerator by comprehensively evaluating latency, cost, and model size",
+        "Vertical integration of 7 layers: A consistent software stack from the lowest hardware abstraction to the developer API",
+        "API compatibility: Fully compatible with OpenAI, Google Gemini, and Anthropic Claude APIs; no need to change existing infrastructure",
+        "Three delivery models: License (customer builds own infrastructure), Managed (AnyBridge operates), and Token Factory (usage-based API)"
+      ],
+      "tech_stack_or_innovation": "Built on the LLMServingSim (an open-source LLM serving simulator) and the open-source AI infrastructure ecosystem including vLLM. Core technology is a common interface design independent of hardware.",
+      "target_customer": "All enterprises running AI services. Government and financial institutions, large corporations, and AI startups where data security and sovereignty are critical. Particularly companies looking to adopt new AI semiconductors like NPUs.",
+      "business_model": "3-track model: ① License (software built and operated on customer infrastructure), ② Managed (end-to-end from deployment to monitoring and updates), ③ Token Factory (usage-based API in the OpenRouter model)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "The most widely used open-source LLM serving library. GPU-only; does not support multi-accelerators (NPU, PIM)."
+        },
+        {
+          "comparison": "Offers cloud-based LLM inference APIs. Optimized for GPU infrastructure; lacks heterogeneous accelerator integration such as NPU and PIM."
+        },
+        {
+          "comparison": "Connects multiple model APIs via a single gateway. AnyBridge adopts a similar approach in its Token Factory model, but OpenRouter does not optimize at the hardware layer."
+        },
+        {
+          "comparison": "Serverless GPU infrastructure platform. Limited to GPU-based; does not handle heterogeneous accelerators like NPU or PIM."
+        }
+      ],
+      "key_differentiator": "The only solution that integrates all AI semiconductors (GPU, NPU, PIM, etc.) into a single software stack and automatically assigns the optimal semiconductor for each inference workload. The key is eliminating hardware vendor dependency.",
+      "moat": "Over 110 system architecture papers and 26 patents from KAIST researchers, simulation and optimization technology based on the LLMServingSim open-source community, collaboration networks with NPU manufacturers such as FuriosaAI and HyperAccel, and the completeness of the vertically integrated 7-layer architecture.",
+      "competitive_position_summary": "Early stage, not yet market-validated, but positioned to set the software-layer standard in the paradigm shift from GPU-centric to heterogeneous AI semiconductor ecosystems. Closely cooperating with domestic NPU manufacturers to build a joint hardware-software ecosystem."
+    },
+    "trending_reason": {
+      "summary": "On October 22, 2026, received seed investment from The Ventures and was simultaneously selected for the TIPS program of the Ministry of SMEs and Startups. The investment amount is undisclosed, but TIPS provides up to KRW 800M (approx. $600K) in R&D funding over two years. The investment background is the growing need for a software layer to commercialize alternative semiconductors (NPU, PIM) as GPU infrastructure costs surge with the spread of generative AI services.",
+      "catalysts": [
+        "October 22, 2026: Announcement of seed investment from The Ventures and TIPS selection",
+        "September 2026: Signed MOU with FuriosaAI and HyperAccel for joint development of an NPU-based enterprise AI agent platform",
+        "Won first place (among 60+ teams) in Kakao's AI incubation project",
+        "LLMServingSim 2.0 won Best Paper Award at ISPASS 2026",
+        "PoC in progress with KakaoCloud; plans for pilot projects with 2-3 customers within 2026"
+      ],
+      "growth_metrics": "4 employees (as of September 2026, est.). Pre-revenue. Target for official product launch is 2027.",
+      "media_mentions": [
+        {
+          "source": "Asia Economy",
+          "title": "The Ventures invests seed and recommends TIPS for AI inference infrastructure startup AnyBridge"
+        },
+        {
+          "source": "Money Today",
+          "title": "\"Automatic allocation of optimal AI semiconductor reduces costs\": AnyBridge raises seed investment"
+        },
+        {
+          "source": "EconomicVille",
+          "title": "The Ventures invests seed in AnyBridge, a startup founded by KAIST professors... Taking on GPU-dependent LLM serving with multi-accelerators"
+        },
+        {
+          "source": "Dong-A Ilbo",
+          "title": "\"Reducing AI inference costs by up to 70%\"... The Ventures invests in startup founded by KAIST professors"
+        },
+        {
+          "source": "Asia Times",
+          "title": "The Ventures provides seed funding to 'AnyBridge' founded by KAIST professors"
+        },
+        {
+          "title": "The Venturers Makes Seed Investment in AI Infrastructure Software Developer AnyBridge"
+        },
+        {
+          "source": "Digital Times",
+          "title": "AnyBridge starts developing NPU-based enterprise AI agent platform with FuriosaAI"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Undisclosed",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Undisclosed",
+        "lead_investor": "The Ventures"
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed"
+        },
+        {
+          "amount": "KRW 800M (est., TIPS R&D fund)",
+          "lead_investor": "Ministry of SMEs and Startups"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: AI infrastructure software market (global AI infrastructure spending est. ~$150B in 2026). SAM: LLM inference and AI agent platform market. SOM: Korean enterprises adopting AI plus public and financial sectors (initial target of 2-3 pilot customers).",
+      "market_trend": "As generative AI moves from PoC to production, GPU infrastructure cost has become a key issue. NVIDIA GPU supply shortages and price pressures have increased interest in alternative semiconductors such as NPU and PIM, but software to integrate and operate them remains lacking. Both global Big Tech and the Korean government are pushing for diversification of AI semiconductors.",
+      "growth_potential": "Growth could accelerate after the official product launch in 2027, depending on the pace of NPU ecosystem expansion. Cooperating with Korean NPU manufacturers like FuriosaAI and HyperAccel could create a major market opportunity if AnyBridge becomes the software standard for the Korean AI semiconductor ecosystem. However, the risk of zero revenue and no real-world customer references remains.",
+      "risks": [
+        "Pre-launch (target 2027); no revenue or customer references",
+        "If the NPU/PIM market does not grow as expected, demand will be limited",
+        "Possibility that global AI infrastructure software (especially the vLLM ecosystem) will adopt multi-accelerator capabilities",
+        "Initial team of 4-5 people limits product development and customer support capacity"
+      ],
+      "risk_mitigation": "Supports GPU-only mode, enabling basic service even before the NPU market matures. Open-source-based strategy designed to coexist with existing ecosystems like vLLM. TIPS funding secures R&D costs for two years. Partnerships with FuriosaAI and HyperAccel ensure NPU optimization competitiveness.",
+      "competitors_mentioned_in_media": "In THE VC's comparison table, Bytestro (Vulkan-based cross-platform AI inference engine), Morphsystems (defense industry middleware), and Jetic AI (serverless mobile AI) are classified as similar fields."
+    },
+    "related_links": [
+      {
+        "title": "AnyBridge official website"
+      },
+      {
+        "title": "THE VC – AnyBridge company info"
+      },
+      {
+        "title": "LLMServingSim open source (GitHub)"
+      },
+      {
+        "title": "KAIST News – AnyBridge developing next-generation AI infrastructure"
+      }
+    ],
+    "editor_pick_comment": "Founded by two KAIST professors, this multi-accelerator AI infrastructure provides the software layer to deploy alternative semiconductors like NPUs in practice, potentially becoming the missing link in Korea's AI semiconductor ecosystem."
+  }
+}

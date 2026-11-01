@@ -11,9 +11,9 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createClient, lensModelsFromEnv } from './lib/openrouter.mjs'
 import { updateLensFiles } from './lib/korea-lens.mjs'
+import { readAll } from './lib/store.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
-const DATA = path.join(here, '../src/data/startups.json')
 const LENS = path.join(here, '../src/data/korea-lens.json')
 const INDEX = path.join(here, '../src/data/korea-lens-index.json')
 
@@ -23,7 +23,7 @@ const out = flag('--out')
 const lensPath = out ? path.resolve(out) : LENS
 const indexPath = out ? path.resolve(out).replace(/\.json$/, '-index.json') : INDEX
 
-const startups = JSON.parse(fs.readFileSync(DATA, 'utf-8'))
+const startups = readAll()
 const stored = fs.existsSync(LENS) ? JSON.parse(fs.readFileSync(LENS, 'utf-8')) : {}
 const ids = flag('--ids')?.split(',')
 const dates = [...new Set(startups.map((s) => s.date))].sort().reverse().slice(0, Number(flag('--issues') || 3))

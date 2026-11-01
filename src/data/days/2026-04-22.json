@@ -1,0 +1,789 @@
+[
+  {
+    "id": "together-ai-2026",
+    "date": "2026-04-22",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "Together AI",
+    "name_ko": "투게더 AI",
+    "tagline": "오픈소스 AI 모델의 가장 빠른 추론 인프라 — GPU 클라우드의 새로운 기준",
+    "category": [
+      "AI 인프라",
+      "GPU 클라우드",
+      "추론 최적화"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "100-200",
+    "website": "https://www.together.ai/",
+    "logo_url": "/logos/together-ai-2026.png",
+    "logo_svg_description": "서로 연결된 노드들이 하나로 수렴하는 추상적 네트워크 그래픽, 보라색·파란색 그라데이션의 모던한 'together.ai' 로고타입",
+    "founders": [
+      {
+        "name_en": "Vipul Ved Prakash",
+        "name_ko": "비풀 베드 프라카시",
+        "role": "Co-Founder & CEO",
+        "background": "Topsy Labs(Apple 인수) 창업자, 대규모 데이터 인프라 전문가",
+        "linkedin": "https://www.linkedin.com/in/vipulvedprakash/",
+        "notable_achievement": "Topsy Labs를 Apple에 매각한 후 대규모 AI 모델 훈련·추론 인프라 구축에 집중, Together AI를 오픈소스 AI 인프라 리더로 성장"
+      },
+      {
+        "name_en": "Ce Zhang",
+        "name_ko": "체 장",
+        "role": "Co-Founder & Chief Scientist",
+        "background": "ETH 취리히 교수, 데이터 중심 AI 연구의 세계적 권위자, Stanford PhD",
+        "linkedin": "",
+        "notable_achievement": "분산 ML 시스템 연구의 선구자로, FlashAttention 등 핵심 AI 인프라 기술 발전에 기여"
+      }
+    ],
+    "team_highlights": "Apple 인수 경력의 CEO + ETH 취리히 교수급 연구팀, 스탠포드·버클리 출신 AI 인프라 엔지니어 다수, FlashAttention 관련 연구진 포함",
+    "product": {
+      "summary": "오픈소스 대형 언어 모델(Llama, Mixtral 등)을 최적화된 GPU 클러스터에서 초저지연으로 추론·파인튜닝할 수 있는 AI 인프라 플랫폼. 자체 추론 최적화 기술로 토큰당 비용을 기존 대비 최대 5배 절감",
+      "problem_statement": "오픈소스 AI 모델의 성능이 클로즈드 모델에 근접했지만, 직접 서빙하려면 GPU 확보·모델 최적화·인프라 운영의 높은 기술 장벽 존재. 비용과 지연 시간(latency)이 프로덕션 배포의 최대 병목",
+      "solution": "자체 개발한 추론 최적화 스택(커스텀 커널, 배치 최적화, 모델 병렬화)으로 오픈소스 모델의 추론 속도를 극대화하고 비용을 최소화. API 한 줄로 Llama 3, Mixtral 등 최신 모델을 즉시 사용 가능",
+      "key_features": [
+        "Together Inference: 초저지연·저비용 오픈소스 LLM 추론 API",
+        "Together Fine-Tuning: 커스텀 데이터로 오픈소스 모델 파인튜닝",
+        "Together GPU Clusters: 전용 GPU 클러스터 임대·관리",
+        "Turbo Engine: 자체 추론 최적화 엔진(토큰 처리량 5배 향상)",
+        "Together Embeddings: 고성능 벡터 임베딩 API"
+      ],
+      "tech_stack_or_innovation": "자체 개발 추론 최적화 스택(커스텀 CUDA 커널, continuous batching, speculative decoding, 모델 병렬화), NVIDIA H100/H200 기반 전용 GPU 클러스터, 오픈소스 모델 호환 통합 API",
+      "target_customer": "AI 제품을 개발하는 스타트업·테크 기업, 엔터프라이즈 AI 도입 기업, 오픈소스 모델 기반 서비스 운영자, AI 연구 기관",
+      "business_model": "추론 API 사용량 기반 과금(토큰당/GPU 시간당) + 파인튜닝 서비스 + 전용 GPU 클러스터 임대",
+      "demo_or_screenshot_url": "https://api.together.ai/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Fireworks AI",
+          "comparison": "유사한 오픈소스 모델 추론 API 제공. Together AI는 더 넓은 모델 선택지와 파인튜닝·클러스터 관리까지 포괄하는 풀스택 제공"
+        },
+        {
+          "name": "Anyscale (Ray)",
+          "comparison": "분산 AI 인프라 플랫폼. Together AI는 추론 최적화에 더 집중하여 토큰당 비용과 지연 시간에서 우위"
+        },
+        {
+          "name": "Groq",
+          "comparison": "자체 LPU 칩 기반 초고속 추론. Together AI는 NVIDIA GPU 기반으로 모델 호환성이 넓고 파인튜닝까지 지원"
+        }
+      ],
+      "key_differentiator": "추론 최적화 기술력(Turbo Engine)과 모델 선택지의 폭, 추론·파인튜닝·클러스터 관리를 하나의 플랫폼에서 제공하는 풀스택 AI 인프라",
+      "moat": "자체 추론 최적화 엔진의 기술 우위, 대규모 GPU 클러스터 확보(NVIDIA 파트너십), 오픈소스 AI 커뮤니티와의 강한 유대, Salesforce·Stripe 등 대형 고객 확보",
+      "competitive_position_summary": "오픈소스 AI 모델의 '실전 배포' 인프라로서 추론 최적화 분야의 선두 주자, GPU 클라우드 시장에서 AWS·GCP의 대안으로 부상"
+    },
+    "trending_reason": {
+      "summary": "오픈소스 LLM 붐과 함께 추론 인프라 수요 폭증, 2025년 Series B $305M 유치로 유니콘 등극, 엔터프라이즈 AI 도입 가속의 핵심 인프라로 주목",
+      "catalysts": [
+        "2025년 Series B $305M 투자 유치, $3.3B 밸류에이션으로 유니콘 등극",
+        "Llama 3·Mixtral 등 오픈소스 모델의 성능 향상으로 자사 플랫폼 수요 급증",
+        "엔터프라이즈의 오픈소스 AI 채택 확대(데이터 주권·비용 절감)",
+        "NVIDIA H200 GPU 기반 차세대 추론 인프라 구축"
+      ],
+      "media_mentions": [
+        {
+          "source": "The Information",
+          "title": "Together AI raises $305M at $3.3B valuation as open-source AI booms",
+          "url": "https://www.theinformation.com/articles/together-ai-raises-305m",
+          "date": "2025-11-05"
+        },
+        {
+          "source": "VentureBeat",
+          "title": "Why enterprises are choosing Together AI for open-source model deployment",
+          "url": "https://venturebeat.com/ai/together-ai-enterprise-open-source-2026/",
+          "date": "2026-01-18"
+        }
+      ],
+      "growth_metrics": "ARR $100M+ 추정, 월간 API 호출 수십억 건, 전년 대비 매출 4배 성장, 엔터프라이즈 고객 500+ 기업"
+    },
+    "funding": {
+      "total_raised": "$425M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$305M",
+        "date": "2025-11",
+        "lead_investor": "Salesforce Ventures",
+        "notable_investors": [
+          "NVIDIA",
+          "Kleiner Perkins",
+          "NEA",
+          "Emergence Capital"
+        ]
+      },
+      "valuation_estimate": "$3.3B",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$20M",
+          "date": "2023-01",
+          "lead_investor": "Lux Capital"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$102.5M",
+          "date": "2024-03",
+          "lead_investor": "Kleiner Perkins"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$305M",
+          "date": "2025-11",
+          "lead_investor": "Salesforce Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 AI 인프라 시장 2030년 $300B 전망, AI 추론 인프라 세그먼트 $80B, 오픈소스 모델 추론 시장 $20B",
+      "market_trend": "오픈소스 AI 모델의 성능 향상과 엔터프라이즈 채택 가속, GPU 수급 불균형 지속, 추론 비용 최적화 경쟁 심화",
+      "growth_potential": "추론 API에서 AI 애플리케이션 플랫폼으로 확장, 엣지 추론 시장 진출, AI 에이전트 인프라 제공, 글로벌 GPU 리전 확대",
+      "risks": [
+        "AWS·GCP·Azure의 자체 AI 추론 서비스 강화",
+        "GPU 확보 경쟁 심화에 따른 인프라 비용 상승",
+        "추론 최적화 기술의 빠른 범용화(commoditization)"
+      ],
+      "risk_mitigation": "NVIDIA 전략적 파트너십으로 GPU 확보 안정화, 지속적 추론 최적화 R&D 투자로 기술 우위 유지, 엔터프라이즈 장기 계약 기반 매출 안정화"
+    },
+    "related_links": [
+      {
+        "title": "Together AI 공식 웹사이트",
+        "url": "https://www.together.ai/"
+      },
+      {
+        "title": "The Information: Together AI 투자 유치 보도",
+        "url": "https://www.theinformation.com/articles/together-ai-raises-305m"
+      },
+      {
+        "title": "VentureBeat: 엔터프라이즈 AI 인프라 분석",
+        "url": "https://venturebeat.com/ai/together-ai-enterprise-open-source-2026/"
+      }
+    ],
+    "editor_pick_comment": "OpenAI에 의존하지 않고 AI를 만들고 싶다면, Together AI가 답이다. 오픈소스 모델을 가장 빠르고 싸게 돌리는 인프라 — $3.3B 유니콘이 된 데는 이유가 있다."
+  },
+  {
+    "id": "climeworks-2026",
+    "date": "2026-04-22",
+    "featured": true,
+    "sector": "climate",
+    "name_en": "Climeworks",
+    "name_ko": "클라임웍스",
+    "tagline": "공기 중 CO₂를 직접 빨아들여 지하에 영구 저장한다 — 세계 최대 DAC 기업",
+    "category": [
+      "직접 공기 포집",
+      "카본 크레딧",
+      "기후테크"
+    ],
+    "founded_year": 2009,
+    "headquarters": {
+      "city": "Zurich",
+      "country": "Switzerland",
+      "country_ko": "스위스"
+    },
+    "company_stage": "Late Stage (Pre-IPO)",
+    "employee_count": "500-700",
+    "website": "https://climeworks.com/",
+    "logo_url": "",
+    "logo_svg_description": "하늘을 향해 열린 원형 필터 구조를 추상화한 아이콘, 민트 그린과 다크 그레이 배색, 'Climeworks' 텍스트가 깔끔한 산세리프체로 배치",
+    "founders": [
+      {
+        "name_en": "Jan Wurzbacher",
+        "name_ko": "얀 부르츠바허",
+        "role": "Co-Founder & Co-CEO",
+        "background": "ETH 취리히 기계공학 박사, 공기 포집 흡착 소재 연구 전문가",
+        "linkedin": "https://www.linkedin.com/in/jan-wurzbacher/",
+        "notable_achievement": "세계 최초 상업용 DAC 플랜트 Orca(아이슬란드) 및 세계 최대 DAC 시설 Mammoth 건설을 주도"
+      },
+      {
+        "name_en": "Christoph Gebald",
+        "name_ko": "크리스토프 게발트",
+        "role": "Co-Founder & Co-CEO",
+        "background": "ETH 취리히 기계공학 박사, DAC 시스템 엔지니어링 전문가",
+        "linkedin": "https://www.linkedin.com/in/christoph-gebald/",
+        "notable_achievement": "DAC 기술의 모듈형 설계를 구현하여 대규모 확장 가능한 아키텍처 수립"
+      }
+    ],
+    "team_highlights": "ETH 취리히 박사 동기 공동 창업, DAC 분야 15년 이상 연구·상용화 경험, Microsoft·Stripe·Shopify 등 빅테크 기업을 탄소 제거 고객으로 확보",
+    "product": {
+      "summary": "특수 필터로 대기 중 CO₂를 직접 포집(DAC)한 뒤, 아이슬란드 지열 에너지를 활용해 CO₂를 지하 현무암에 영구 광물화 저장(Carbfix)하는 세계 최대 규모의 탄소 제거 서비스. 기업 고객에게 검증된 탄소 제거 크레딧 판매",
+      "problem_statement": "파리 기후 협약 1.5°C 목표 달성을 위해 2050년까지 연간 수십억 톤의 CO₂ 제거가 필요하나, 조림 등 자연 기반 방법은 영속성이 불확실. 고품질·고영속성 탄소 제거 수단이 절대적으로 부족",
+      "solution": "DAC 기술로 대기 중 CO₂를 직접 포집하고, 지하 현무암 광물화로 1,000년 이상 영구 저장. 기업 고객에게 제3자 검증(MRV)된 고품질 탄소 제거 크레딧을 제공하여 탄넷제로 달성 지원",
+      "key_features": [
+        "Orca 플랜트: 세계 최초 상업용 DAC 시설(연 4,000톤 CO₂ 포집, 아이슬란드)",
+        "Mammoth 플랜트: Orca의 10배 규모 세계 최대 DAC 시설(연 36,000톤, 2026년 가동)",
+        "Carbfix 파트너십: 포집 CO₂를 현무암에 영구 광물화 저장",
+        "모듈형 DAC 컬렉터: 레고 블록처럼 확장 가능한 포집 장치 설계",
+        "디지털 MRV: 포집·저장 전 과정 디지털 측정·보고·검증 시스템"
+      ],
+      "tech_stack_or_innovation": "고체 흡착제 기반 온도 스윙 흡착(Temperature Swing Adsorption) DAC 기술, 아이슬란드 지열 에너지 기반 100% 재생에너지 운영, Carbfix 광물화 저장(CO₂가 2년 내 돌로 변환), 모듈형 스케일업 아키텍처",
+      "target_customer": "넷제로 선언 대기업(Microsoft, Stripe, Shopify, Swiss Re), 자발적 탄소 시장 참여 기업, 항공·해운 등 감축 불가 섹터, 정부·국제기구",
+      "business_model": "장기 탄소 제거 구매 계약(10-15년 선구매) + 탄소 제거 크레딧 단건 판매 + 향후 규제 탄소 시장(compliance market) 진입",
+      "demo_or_screenshot_url": "https://climeworks.com/plant-mammoth"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Carbon Engineering (Occidental)",
+          "comparison": "대규모 DAC 기술 보유, Occidental 인수로 자금력 확보. Climeworks는 모듈형 설계로 유연한 확장과 이미 가동 중인 상업 플랜트에서 앞서"
+        },
+        {
+          "name": "Global Thermostat",
+          "comparison": "미국 기반 DAC 기술 기업이나 상업화 지연. Climeworks는 Orca·Mammoth 등 실증 플랜트 운영 경험에서 수 년 리드"
+        }
+      ],
+      "key_differentiator": "세계 유일의 가동 중인 상업용 DAC 플랜트 운영 경험, 모듈형 확장 설계, 지열 에너지 기반 100% 재생에너지 운영, Microsoft 등 빅테크 장기 구매 계약 확보",
+      "moat": "15년간 축적된 DAC 운영 데이터·노하우, Orca·Mammoth 실증 레퍼런스, Microsoft·Stripe 등과의 10년 장기 계약, 스위스·EU 정부 지원, 핵심 흡착 소재 특허",
+      "competitive_position_summary": "DAC 분야의 글로벌 선도 기업으로, '실제로 작동하는 DAC 시설을 운영한 유일한 기업'이라는 압도적 실행 우위 보유"
+    },
+    "trending_reason": {
+      "summary": "2026년 Mammoth 플랜트 본격 가동으로 세계 최대 DAC 시설 기록 달성 예정, DAC 관련 정부 보조금 급증과 기업 탄소 제거 수요 폭발",
+      "catalysts": [
+        "2026년 Mammoth 플랜트 본격 가동 — 세계 최대 DAC 시설(연 36,000톤 CO₂)",
+        "미국 IRA(인플레이션 감축법) DAC 세액 공제(톤당 $180) 적용 확대",
+        "Microsoft·Stripe 등 빅테크의 대규모 탄소 제거 구매 계약 체결 확대",
+        "EU 탄소 국경 조정 메커니즘(CBAM) 시행으로 고품질 탄소 크레딧 수요 급증"
+      ],
+      "media_mentions": [
+        {
+          "source": "Financial Times",
+          "title": "Climeworks prepares world's largest carbon capture plant for full operation",
+          "url": "https://www.ft.com/content/climeworks-mammoth-dac-2026",
+          "date": "2026-03-28"
+        },
+        {
+          "source": "Bloomberg Green",
+          "title": "The race to suck carbon from the air is getting real",
+          "url": "https://www.bloomberg.com/news/features/2026-02-dac-climeworks-race",
+          "date": "2026-02-15"
+        }
+      ],
+      "growth_metrics": "누적 CO₂ 제거량 20,000톤 이상, 고객 기업 100개 이상, 장기 계약 기반 선수금 $1B+ 확보"
+    },
+    "funding": {
+      "total_raised": "$800M+",
+      "latest_round": {
+        "stage": "Series G",
+        "amount": "$650M",
+        "date": "2024-04",
+        "lead_investor": "Partners Group",
+        "notable_investors": [
+          "GIC (싱가포르 국부펀드)",
+          "M&G Investments",
+          "John Doerr",
+          "Swiss Re"
+        ]
+      },
+      "valuation_estimate": "$3B+ (추정)",
+      "funding_history": [
+        {
+          "stage": "Series E",
+          "amount": "$110M",
+          "date": "2022-04",
+          "lead_investor": "GIC"
+        },
+        {
+          "stage": "Series F",
+          "amount": "$140M",
+          "date": "2023-06",
+          "lead_investor": "Partners Group"
+        },
+        {
+          "stage": "Series G",
+          "amount": "$650M",
+          "date": "2024-04",
+          "lead_investor": "Partners Group"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 탄소 제거 시장 2030년 $100B 전망, DAC 세그먼트 $20B, 고품질 자발적 탄소 크레딧 시장 $10B",
+      "market_trend": "넷제로 선언 기업·국가 급증, 탄소 제거(CDR) 기술 투자 붐, DAC 정부 보조금 확대(IRA, EU Innovation Fund), 규제 탄소 시장에 CDR 통합 논의",
+      "growth_potential": "Mammoth 이후 메가톤급 플랜트 건설(연 100만 톤), 아이슬란드 외 케냐·오만 등 다지역 확장, 규제 탄소 시장 진입 시 TAM 폭발적 확대",
+      "risks": [
+        "DAC 비용(현재 톤당 $600-800)의 충분한 절감 속도 불확실",
+        "정부 보조금·세액 공제 정책 변경 리스크",
+        "대규모 확장 시 재생에너지 공급·부지 확보 제약"
+      ],
+      "risk_mitigation": "모듈형 설계와 규모의 경제로 톤당 비용 $200-300 목표 절감, 복수 국가 정부 파트너십으로 정책 리스크 분산, 지열·풍력 등 다양한 재생에너지원 확보"
+    },
+    "related_links": [
+      {
+        "title": "Climeworks 공식 웹사이트",
+        "url": "https://climeworks.com/"
+      },
+      {
+        "title": "Financial Times: Mammoth 플랜트 보도",
+        "url": "https://www.ft.com/content/climeworks-mammoth-dac-2026"
+      },
+      {
+        "title": "Bloomberg Green: DAC 기술 경쟁 분석",
+        "url": "https://www.bloomberg.com/news/features/2026-02-dac-climeworks-race"
+      }
+    ],
+    "editor_pick_comment": "공기에서 CO₂를 빨아들여 돌로 바꾼다 — SF 같지만 Climeworks는 이미 하고 있다. Mammoth가 본격 가동되면, '탄소 제거'는 더 이상 미래의 약속이 아닌 현재의 산업이 된다."
+  },
+  {
+    "id": "akili-interactive-2026",
+    "date": "2026-04-22",
+    "featured": true,
+    "sector": "health",
+    "name_en": "Akili Interactive",
+    "name_ko": "아킬리 인터랙티브",
+    "tagline": "게임이 곧 처방전 — FDA 승인 디지털 치료제의 선구자",
+    "category": [
+      "디지털 치료제",
+      "DTx",
+      "뇌과학"
+    ],
+    "founded_year": 2011,
+    "headquarters": {
+      "city": "Boston",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Growth (Post-SPAC)",
+    "employee_count": "100-150",
+    "website": "https://www.akiliinteractive.com/",
+    "logo_url": "/logos/akili-interactive-2026.png",
+    "logo_svg_description": "뇌 시냅스와 게임 컨트롤러를 결합한 추상적 아이콘, 밝은 틸 블루와 화이트 배색, 모던한 산세리프체의 'akili' 텍스트",
+    "founders": [
+      {
+        "name_en": "Eddie Martucci",
+        "name_ko": "에디 마투치",
+        "role": "Co-Founder & CEO",
+        "background": "디지털 헬스 연쇄 창업가, 인지 신경과학 기반 치료 기술 전문가",
+        "linkedin": "https://www.linkedin.com/in/eddiemartucci/",
+        "notable_achievement": "FDA De Novo 경로를 통해 비디오 게임 형태의 ADHD 디지털 치료제(EndeavorRx)를 사상 최초로 승인받은 인물"
+      },
+      {
+        "name_en": "Adam Gazzaley",
+        "name_ko": "아담 가잘리",
+        "role": "Co-Founder & Chief Science Advisor",
+        "background": "UCSF 신경과학 교수, 인지 신경과학 세계적 권위자",
+        "linkedin": "",
+        "notable_achievement": "Nature 표지 논문 게재 연구(비디오 게임의 인지 향상 효과)가 Akili의 과학적 기반"
+      }
+    ],
+    "team_highlights": "UCSF 신경과학 교수 + 디지털 헬스 창업가의 공동 창업, FDA 최초 게임 기반 디지털 치료제 승인 달성, 30개 이상 임상 시험 수행",
+    "product": {
+      "summary": "비디오 게임 형태의 FDA 승인 디지털 치료제를 개발. 대표 제품 EndeavorRx는 ADHD 아동의 주의력을 개선하는 처방전 기반 게임으로, 의사가 처방하고 환자가 스마트폰에서 플레이하는 방식",
+      "problem_statement": "ADHD는 전 세계 아동의 5-10%에 영향을 미치며, 기존 치료는 약물(부작용 우려) 또는 행동 치료(접근성 제한)에 의존. 아동의 치료 순응도가 낮고, 약물 없는 보조 치료 옵션이 부족",
+      "solution": "신경과학 기반으로 설계된 비디오 게임이 특정 신경 경로를 자극하여 주의력·인지 기능을 개선. 게임이라는 형태로 아동의 치료 순응도를 극대화하고, 약물 없이 또는 약물과 병행하여 사용 가능",
+      "key_features": [
+        "EndeavorRx: FDA 승인 ADHD 디지털 치료제(8-12세 아동용)",
+        "EndeavorOTC: FDA 승인 성인 ADHD 일반 판매(OTC) 버전(2024년 승인)",
+        "Selective Stimulus Management Engine(SSME): 인지 부하를 실시간 조절하는 적응형 게임 엔진",
+        "임상 대시보드: 의사가 환자의 치료 진행도를 모니터링하는 관리 도구",
+        "30개 이상 임상 시험으로 입증된 과학적 근거"
+      ],
+      "tech_stack_or_innovation": "Selective Stimulus Management Engine(SSME): 게임 내 감각 자극과 인지 과제를 실시간 적응적으로 조절하여 전두엽 주의력 네트워크를 타겟팅, FDA De Novo 승인 경로를 최초 활용한 규제 전략, 30+ RCT 임상 데이터",
+      "target_customer": "ADHD 아동·성인 환자, 소아과·정신건강의학과 의사, 디지털 헬스 보험사, 학교·교육 기관",
+      "business_model": "처방 기반 구독(EndeavorRx) + OTC 직접 소비자 판매(EndeavorOTC) + 제약사 파트너십(플랫폼 라이선싱)",
+      "demo_or_screenshot_url": "https://www.akiliinteractive.com/endeavorrx"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Pear Therapeutics",
+          "comparison": "FDA 승인 중독·불면 DTx를 개발했으나 2023년 파산. Akili는 살아남은 DTx 선두 기업으로 OTC 모델 전환에 성공"
+        },
+        {
+          "name": "MindMaze",
+          "comparison": "신경재활 VR/게임 플랫폼이나 FDA 치료제 승인은 미획득. Akili는 FDA 승인 ADHD DTx라는 명확한 포지셔닝"
+        }
+      ],
+      "key_differentiator": "세계 최초이자 유일한 FDA 승인 게임 기반 디지털 치료제. 처방(Rx)과 일반판매(OTC) 양 경로에서 FDA 승인을 모두 확보한 유일한 DTx 기업",
+      "moat": "FDA 승인 2건(Rx + OTC, 경쟁사 대비 2-4년 규제 리드), 30+ 임상 시험 데이터, SSME 적응형 엔진 특허, ADHD DTx 카테고리 정의자",
+      "competitive_position_summary": "DTx 산업의 생존자이자 선도자로, Pear Therapeutics 파산 이후 FDA 승인 DTx 카테고리의 사실상 유일한 플레이어"
+    },
+    "trending_reason": {
+      "summary": "2024년 EndeavorOTC FDA 승인으로 DTx의 OTC(일반판매) 시대를 개척, 2026년 성인 ADHD 시장 본격 공략과 글로벌 확장으로 재조명",
+      "catalysts": [
+        "EndeavorOTC FDA 승인 — 디지털 치료제 최초 처방전 없이 구매 가능",
+        "성인 ADHD 시장(전 세계 2.5억 명) 진출로 TAM 대폭 확대",
+        "2026년 일본·유럽 진출 본격화(시오노기제약 파트너십)",
+        "DTx 산업 재편 — Pear 파산 후 살아남은 선두 기업으로 재평가"
+      ],
+      "media_mentions": [
+        {
+          "source": "STAT News",
+          "title": "Akili Interactive bets on over-the-counter ADHD game as DTx sector resets",
+          "url": "https://www.statnews.com/2026/01/akili-endeavor-otc-dtx/",
+          "date": "2026-01-10"
+        },
+        {
+          "source": "Fierce Biotech",
+          "title": "Can a video game treat ADHD? Akili's expanding FDA-cleared portfolio says yes",
+          "url": "https://www.fiercebiotech.com/medtech/akili-adhd-digital-therapeutics-2026",
+          "date": "2026-03-05"
+        }
+      ],
+      "growth_metrics": "EndeavorOTC 다운로드 100만 건 돌파, 글로벌 파트너 제약사 3개국, ADHD DTx 카테고리 시장점유율 90%+"
+    },
+    "funding": {
+      "total_raised": "$350M+ (SPAC 합산)",
+      "latest_round": {
+        "stage": "전략적 투자",
+        "amount": "$40M",
+        "date": "2025-08",
+        "lead_investor": "시오노기제약(Shionogi)",
+        "notable_investors": [
+          "Amgen Ventures",
+          "JAZZ Venture Partners",
+          "Temasek"
+        ]
+      },
+      "valuation_estimate": "$400M (추정)",
+      "funding_history": [
+        {
+          "stage": "Series C",
+          "amount": "$68M",
+          "date": "2018-07",
+          "lead_investor": "Amgen Ventures"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$110M",
+          "date": "2020-09",
+          "lead_investor": "General Atlantic"
+        },
+        {
+          "stage": "전략적 투자",
+          "amount": "$40M",
+          "date": "2025-08",
+          "lead_investor": "시오노기제약(Shionogi)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 디지털 치료제 시장 2030년 $25B 전망, ADHD 치료 시장 $30B, 디지털 ADHD 치료 세그먼트 $5B",
+      "market_trend": "ADHD 진단률 증가(특히 성인), 약물 부작용 우려에 따른 비약물 치료 수요 증가, DTx 규제 프레임워크 정비, 디지털 헬스 보험 적용 확대",
+      "growth_potential": "ADHD에서 우울증·자폐·외상후스트레스 등 다른 인지·정신 질환으로 파이프라인 확장, OTC 모델의 글로벌 스케일링, 제약사 플랫폼 라이선싱",
+      "risks": [
+        "DTx에 대한 보험 적용 확대 속도 불확실",
+        "소비자의 '게임=치료' 인식 전환 필요",
+        "Pear Therapeutics 파산이 남긴 DTx 산업 전체에 대한 투자자 회의론"
+      ],
+      "risk_mitigation": "OTC 모델로 보험 의존도 감소, 30+ 임상 논문으로 과학적 신뢰 구축, 시오노기·시오노기 등 글로벌 제약사 파트너십으로 유통 채널 확보"
+    },
+    "related_links": [
+      {
+        "title": "Akili Interactive 공식 웹사이트",
+        "url": "https://www.akiliinteractive.com/"
+      },
+      {
+        "title": "STAT News: DTx 산업 리셋과 Akili",
+        "url": "https://www.statnews.com/2026/01/akili-endeavor-otc-dtx/"
+      }
+    ],
+    "editor_pick_comment": "게임을 30분 하면 ADHD 치료가 된다? 그것도 FDA가 인정한? Akili는 DTx 한파에서 살아남은 유일한 승자다. OTC 전환으로 처방전 장벽까지 허물고 있다."
+  },
+  {
+    "id": "wefox-2026",
+    "date": "2026-04-22",
+    "featured": true,
+    "sector": "fintech",
+    "name_en": "wefox",
+    "name_ko": "위폭스",
+    "tagline": "보험을 앱에 심는다 — 유럽 최대 임베디드 인슈어테크 플랫폼",
+    "category": [
+      "인슈어테크",
+      "임베디드 보험",
+      "B2B2C"
+    ],
+    "founded_year": 2015,
+    "headquarters": {
+      "city": "Berlin",
+      "country": "Germany",
+      "country_ko": "독일"
+    },
+    "company_stage": "Series D",
+    "employee_count": "1,000-1,500",
+    "website": "https://www.wefox.com/",
+    "logo_url": "/logos/wefox-2026.png",
+    "logo_svg_description": "둥근 모서리의 방패 아이콘 안에 여우 실루엣을 추상화한 그래픽, 선명한 그린과 다크 네이비 배색, 소문자 'wefox' 로고타입",
+    "founders": [
+      {
+        "name_en": "Julian Teicke",
+        "name_ko": "율리안 타이케",
+        "role": "Founder & CEO",
+        "background": "독일 연쇄 창업가, FinanceFox(wefox 전신) 설립, WHU 경영대 출신",
+        "linkedin": "https://www.linkedin.com/in/julianteicke/",
+        "notable_achievement": "wefox를 유럽 최대 인슈어테크로 성장시키며 $4.5B 밸류에이션 달성, 보험 업계의 디지털 전환을 주도"
+      }
+    ],
+    "team_highlights": "유럽 인슈어테크 최대 규모 팀, Allianz·Munich Re 등 보험업계 출신 경영진 다수, 유럽 8개국 운영 경험",
+    "product": {
+      "summary": "보험사·중개인·파트너 기업에 디지털 보험 인프라를 제공하는 B2B2C 플랫폼. API 기반 임베디드 보험 솔루션으로 비보험 기업(이커머스·핀테크·모빌리티)이 자사 서비스에 보험 상품을 쉽게 내장할 수 있게 지원",
+      "problem_statement": "전통 보험은 구매 과정이 복잡하고, 소비자 접점에서 멀리 떨어져 있어 가입률이 낮음. 보험사도 디지털 채널 구축에 수년과 수억 원이 소요되며, 비보험 기업은 보험 상품 내장이 기술적으로 어려움",
+      "solution": "보험 상품 설계·인수·청구 처리까지 전 과정을 API로 제공하여, 어떤 기업이든 자사 앱·웹에 보험을 임베디드. 소비자는 쇼핑·여행·이동 중 필요한 순간에 원클릭으로 보험 가입",
+      "key_features": [
+        "wefox Insurance Platform: 보험 상품 설계부터 청구까지 풀스택 디지털 보험 인프라",
+        "Embedded Insurance API: 비보험 기업이 자사 서비스에 보험을 내장하는 API",
+        "AI Underwriting: AI 기반 실시간 언더라이팅 및 위험 평가",
+        "Digital Claims: 사진·챗봇 기반 디지털 보험금 청구 처리(평균 48시간 내 지급)",
+        "Advisor Platform: 보험 중개인을 위한 디지털 영업·관리 도구"
+      ],
+      "tech_stack_or_innovation": "마이크로서비스 기반 보험 인프라 플랫폼, RESTful API 기반 임베디드 보험 통합, AI/ML 기반 언더라이팅·사기 탐지 엔진, 클라우드 네이티브 보험 코어 시스템",
+      "target_customer": "보험사(디지털 전환 파트너), 보험 중개인·에이전트, 이커머스·핀테크·모빌리티 기업(임베디드 보험 도입), 개인 소비자(B2C 앱)",
+      "business_model": "보험료 수수료(임베디드 보험 거래 수수료) + SaaS 플랫폼 구독(보험사·중개인용) + 자체 보험 상품 인수 수익",
+      "demo_or_screenshot_url": "https://www.wefox.com/en-de"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Lemonade",
+          "comparison": "미국 기반 AI 보험 D2C 모델. wefox는 B2B2C·임베디드 모델로 보험사·파트너 기업 생태계를 구축하여 더 넓은 유통 채널 확보"
+        },
+        {
+          "name": "Qover",
+          "comparison": "벨기에 기반 임베디드 보험 API 플랫폼. wefox는 자체 보험 인수 역량까지 보유하여 풀스택 가치 사슬 제공"
+        },
+        {
+          "name": "bolttech",
+          "comparison": "아시아 기반 글로벌 임베디드 보험 플랫폼. wefox는 유럽 시장에서 선도적 포지션과 보험 중개인 네트워크 보유"
+        }
+      ],
+      "key_differentiator": "보험 상품 인수·중개·디지털 플랫폼을 수직 통합한 유럽 유일의 풀스택 인슈어테크. 임베디드 API와 중개인 네트워크를 동시에 운영하여 옴니채널 유통",
+      "moat": "유럽 8개국 보험 라이선스, 10만 명 이상 보험 중개인 네트워크, $4.5B 밸류에이션의 규모 경제, 보험사 파트너 다수(Baloise 등)와의 장기 계약",
+      "competitive_position_summary": "유럽 인슈어테크의 최대 규모 기업으로, B2B2C 임베디드 보험 모델과 중개인 네트워크라는 이중 유통 채널로 시장을 장악"
+    },
+    "trending_reason": {
+      "summary": "임베디드 보험 시장 폭발적 성장과 함께 wefox의 B2B2C 모델 재평가, 2026년 수익성 전환 기조와 아시아 시장 진출로 글로벌 확장 본격화",
+      "catalysts": [
+        "임베디드 보험 시장 2030년 $700B 전망, 가장 빠르게 성장하는 보험 유통 채널",
+        "2026년 흑자 전환 목표 달성 임박, 유닛 이코노믹스 개선",
+        "아시아·남미 시장 진출을 위한 파트너십 체결",
+        "EU 오픈 인슈어런스(Open Insurance) 규제 논의로 API 기반 보험 플랫폼 수요 증가"
+      ],
+      "media_mentions": [
+        {
+          "source": "Sifted",
+          "title": "Wefox nears profitability as embedded insurance market booms",
+          "url": "https://sifted.eu/articles/wefox-profitability-embedded-insurance-2026/",
+          "date": "2026-02-20"
+        },
+        {
+          "source": "Insurance Journal",
+          "title": "The rise of embedded insurance: How wefox is reshaping distribution",
+          "url": "https://www.insurancejournal.com/news/international/2026/03/wefox-embedded/",
+          "date": "2026-03-18"
+        }
+      ],
+      "growth_metrics": "연간 보험료 수입(GWP) €1B 돌파, 고객 수 200만 명 이상, 파트너 기업 500+ 개, 전년 대비 매출 50% 성장"
+    },
+    "funding": {
+      "total_raised": "$1.3B+",
+      "latest_round": {
+        "stage": "Series D",
+        "amount": "$400M",
+        "date": "2023-07",
+        "lead_investor": "Mubadala Investment Company",
+        "notable_investors": [
+          "Target Global",
+          "Salesforce Ventures",
+          "LGT Lightstone",
+          "EDBI"
+        ]
+      },
+      "valuation_estimate": "$4.5B (2023년 기준, 현재 재평가 중)",
+      "funding_history": [
+        {
+          "stage": "Series B",
+          "amount": "$125M",
+          "date": "2019-03",
+          "lead_investor": "Target Global"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$650M",
+          "date": "2022-07",
+          "lead_investor": "Target Global"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$400M",
+          "date": "2023-07",
+          "lead_investor": "Mubadala Investment Company"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 보험 시장 $6T, 임베디드 보험 시장 2030년 $700B 전망, 유럽 디지털 보험 시장 $200B",
+      "market_trend": "임베디드 금융·보험의 폭발적 성장, EU 오픈 인슈어런스 규제 추진, 보험의 디지털 유통 전환 가속, AI 기반 개인화 보험 수요 증가",
+      "growth_potential": "유럽에서 아시아·남미로 지역 확장, 자동차·건강·기업 보험까지 상품 다각화, 보험사 코어 시스템 SaaS 시장 진출",
+      "risks": [
+        "인슈어테크 밸류에이션 하향 조정 압력",
+        "유럽 보험 규제(Solvency II) 준수 비용",
+        "전통 보험사의 디지털 전환 자체 투자 확대"
+      ],
+      "risk_mitigation": "수익성 전환으로 밸류에이션 정당화, 8개국 라이선스 기반 규제 준수 체계 구축, 전통 보험사를 경쟁이 아닌 파트너로 전환하는 B2B2C 전략"
+    },
+    "related_links": [
+      {
+        "title": "wefox 공식 웹사이트",
+        "url": "https://www.wefox.com/"
+      },
+      {
+        "title": "Sifted: wefox 수익성 전환 분석",
+        "url": "https://sifted.eu/articles/wefox-profitability-embedded-insurance-2026/"
+      },
+      {
+        "title": "Insurance Journal: 임베디드 보험 트렌드",
+        "url": "https://www.insurancejournal.com/news/international/2026/03/wefox-embedded/"
+      }
+    ],
+    "editor_pick_comment": "보험이 별도 앱이 아니라 쇼핑·여행·이동 속에 자연스럽게 녹아드는 시대. wefox는 그 '보이지 않는 보험'을 만드는 인프라 기업이다. 유럽 1위에서 글로벌로 가는 길목에 서 있다."
+  },
+  {
+    "id": "bland-ai-2026",
+    "date": "2026-04-22",
+    "featured": true,
+    "sector": "ai",
+    "name_en": "Bland AI",
+    "name_ko": "블랜드 AI",
+    "tagline": "전화 한 통이 달라진다 — 사람처럼 대화하는 AI 전화 에이전트 플랫폼",
+    "category": [
+      "보이스 AI",
+      "음성 에이전트",
+      "대화형 AI"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "30-50",
+    "website": "https://www.bland.ai/",
+    "logo_url": "/logos/bland-ai-2026.png",
+    "logo_svg_description": "전화기 수화기와 음성 파형을 결합한 미니멀 아이콘, 블랙과 일렉트릭 블루 배색, 볼드한 소문자 'bland' 로고타입",
+    "founders": [
+      {
+        "name_en": "Isaiah Granet",
+        "name_ko": "이사야 그라넷",
+        "role": "Co-Founder & CEO",
+        "background": "Y Combinator W23 배치 출신, AI 음성 기술 연쇄 창업가",
+        "linkedin": "https://www.linkedin.com/in/isaiah-granet/",
+        "notable_achievement": "창업 1년 만에 Fortune 500 기업 다수를 고객으로 확보하며 AI 전화 에이전트 카테고리를 정의"
+      },
+      {
+        "name_en": "Michael Burke",
+        "name_ko": "마이클 버크",
+        "role": "Co-Founder & CTO",
+        "background": "음성 합성 및 실시간 대화 AI 시스템 엔지니어",
+        "linkedin": "",
+        "notable_achievement": "500ms 이하 응답 지연의 실시간 AI 전화 대화 시스템 구축"
+      }
+    ],
+    "team_highlights": "Y Combinator W23 배치, 창업 1년 만에 ARR $10M+ 달성, 실시간 음성 AI·LLM 통합에 특화된 소규모 정예 엔지니어링 팀",
+    "product": {
+      "summary": "기업이 API 한 줄로 AI 전화 에이전트를 구축할 수 있는 플랫폼. AI가 사람처럼 자연스럽게 전화를 걸고 받으며, 예약·고객 상담·리드 확인·설문 등 전화 업무를 자동화. 500ms 이하 응답 지연으로 실시간 자연 대화 구현",
+      "problem_statement": "기업의 전화 업무(고객 상담, 예약 확인, 리드 발굴)는 인력 의존적이며, 콜센터 인건비가 전체 고객 서비스 비용의 60-70% 차지. 기존 IVR/챗봇은 경직된 시나리오만 처리 가능하여 고객 경험이 나쁨",
+      "solution": "LLM 기반 AI 전화 에이전트가 자연어로 실시간 대화하며 전화 업무를 자동 처리. 사전 정의 시나리오 없이 맥락을 이해하고 유연하게 대응. API 기반으로 기존 CRM·예약 시스템과 즉시 연동",
+      "key_features": [
+        "AI Phone Agent: 사람과 구별 어려운 자연스러운 AI 전화 대화",
+        "500ms 이하 응답 지연: 실시간 대화 수준의 초저지연 응답",
+        "Pathway Builder: 비개발자도 전화 시나리오를 설계할 수 있는 노코드 도구",
+        "실시간 도구 호출: 대화 중 CRM·캘린더·데이터베이스 실시간 조회·업데이트",
+        "다국어 지원: 영어·스페인어·한국어 등 20개 이상 언어 지원"
+      ],
+      "tech_stack_or_innovation": "자체 최적화 음성 합성(TTS)·음성 인식(STT) 파이프라인, LLM 기반 실시간 대화 엔진, 500ms 이하 E2E 지연 달성을 위한 스트리밍 아키텍처, 전화 인프라(Twilio·SIP) 통합, 실시간 function calling으로 외부 시스템 연동",
+      "target_customer": "콜센터 운영 기업, 헬스케어(예약·리마인더), 부동산(리드 확인), 금융(고객 상담), 이커머스(주문 확인·CS), SaaS 기업",
+      "business_model": "AI 전화 통화 분당 과금($0.07-0.12/분) + 엔터프라이즈 월 구독 플랜 + 프리미엄 기능(분석·커스텀 음성) 부가 과금",
+      "demo_or_screenshot_url": "https://www.bland.ai/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Vapi",
+          "comparison": "유사한 AI 전화 에이전트 API 플랫폼. Bland AI는 더 낮은 응답 지연(500ms vs 800ms+)과 노코드 Pathway Builder로 차별화"
+        },
+        {
+          "name": "Retell AI",
+          "comparison": "AI 음성 에이전트 개발 플랫폼. Bland AI는 엔터프라이즈 고객 기반이 넓고 분당 처리량 스케일에서 앞서"
+        },
+        {
+          "name": "Air AI",
+          "comparison": "AI 전화 영업 에이전트. Bland AI는 범용 전화 에이전트 플랫폼으로 영업 외 CS·예약·설문 등 다양한 유스케이스 지원"
+        }
+      ],
+      "key_differentiator": "500ms 이하 초저지연 응답으로 가장 자연스러운 전화 대화 경험 제공, 노코드 시나리오 빌더와 API 모두 지원하는 유연한 플랫폼",
+      "moat": "초저지연 음성 AI 파이프라인 기술 우위, Fortune 500 기업 레퍼런스, Y Combinator 네트워크, 일 수백만 건 전화 처리 스케일 실증",
+      "competitive_position_summary": "AI 전화 에이전트 플랫폼 카테고리의 선두 그룹으로, 기술(초저지연)·시장(엔터프라이즈 고객)·속도(초고속 성장) 모든 면에서 앞서"
+    },
+    "trending_reason": {
+      "summary": "AI 에이전트 시대의 도래와 함께 '전화'라는 가장 전통적 채널의 AI 자동화가 핫 토픽, 창업 1년 만에 ARR $10M+ 달성하며 초고속 성장",
+      "catalysts": [
+        "AI 에이전트 시대 — 전화 채널이 AI 자동화의 마지막 프론티어로 부상",
+        "GPT-4o 등 멀티모달 AI의 음성 대화 능력 급향상",
+        "콜센터 인력 부족·인건비 상승으로 기업의 AI 전화 에이전트 도입 가속",
+        "창업 12개월 만에 ARR $10M 돌파, 초고속 PMF(Product-Market Fit) 달성"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Bland AI wants to make phone calls obsolete with AI agents",
+          "url": "https://techcrunch.com/2026/02/bland-ai-phone-agent/",
+          "date": "2026-02-08"
+        }
+      ],
+      "growth_metrics": "ARR $10M+ (창업 12개월 차), 일 처리 전화 수백만 건, Fortune 500 고객 다수, 월간 성장률 30%+"
+    },
+    "funding": {
+      "total_raised": "$22M",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$16M",
+        "date": "2025-05",
+        "lead_investor": "Scale Venture Partners",
+        "notable_investors": [
+          "Y Combinator",
+          "Founders Fund",
+          "South Park Commons"
+        ]
+      },
+      "valuation_estimate": "$150M (추정)",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$6M",
+          "date": "2023-08",
+          "lead_investor": "Y Combinator"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$16M",
+          "date": "2025-05",
+          "lead_investor": "Scale Venture Partners"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 콜센터 시장 $500B, AI 음성 에이전트 시장 2030년 $30B 전망, 엔터프라이즈 AI 전화 자동화 $10B",
+      "market_trend": "AI 에이전트 열풍, 음성 합성·인식 기술의 극적 발전, 콜센터 디지털 전환 가속, 기업의 AI-first 고객 서비스 전략 채택",
+      "growth_potential": "전화에서 영상 통화·음성 챗봇까지 채널 확장, 헬스케어·금융 등 규제 산업 특화 솔루션, 아시아·유럽 시장 진출, AI 에이전트 마켓플레이스 구축",
+      "risks": [
+        "AI 전화 사기(voice phishing) 우려에 따른 규제 강화",
+        "OpenAI·Google 등 대형 AI 기업의 직접 음성 에이전트 서비스 진출",
+        "AI 전화에 대한 소비자 거부감(uncanny valley 효과)"
+      ],
+      "risk_mitigation": "AI 전화임을 명시하는 투명성 정책 선제 도입, 엔터프라이즈 특화 기능·보안·컴플라이언스로 차별화, 자연스러운 대화 품질 지속 개선으로 소비자 수용도 제고"
+    },
+    "related_links": [
+      {
+        "title": "Bland AI 공식 웹사이트",
+        "url": "https://www.bland.ai/"
+      },
+      {
+        "title": "TechCrunch: Bland AI 보도",
+        "url": "https://techcrunch.com/2026/02/bland-ai-phone-agent/"
+      }
+    ],
+    "editor_pick_comment": "전화를 건 상대가 AI인지 모를 정도의 대화 품질. Bland AI는 '콜센터의 종말'을 가장 가까이서 현실화하고 있다. 창업 1년에 ARR $10M, 이건 진짜 PMF다."
+  }
+]

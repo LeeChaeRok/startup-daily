@@ -15,9 +15,9 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { DAILY_LIMIT, runFollowups } from './lib/followups.mjs'
 import { createClient, modelsFromEnv, OpenRouterError } from './lib/openrouter.mjs'
+import { readAll } from './lib/store.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
-const DATA_PATH = path.join(here, '../src/data/startups.json')
 const UPDATES_PATH = path.join(here, '../src/data/updates.json')
 const CORRECTIONS_PATH = path.join(here, '../src/data/corrections.json')
 
@@ -33,7 +33,7 @@ const today = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10) 
 
 async function main() {
   if (!Number.isInteger(limit) || limit < 0) throw new Error('--limit must be a non-negative integer')
-  const records = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'))
+  const records = readAll()
   const llm = dryRun ? null : createClient({ apiKey: process.env.OPENROUTER_API_KEY, models: modelsFromEnv(), log: console.log })
   const { due } = await runFollowups(llm, records, {
     updatesPath: UPDATES_PATH,

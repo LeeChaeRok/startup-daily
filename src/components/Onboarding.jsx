@@ -2,28 +2,37 @@ import { useEffect, useRef, useState } from 'react'
 import Icon from './Icon.jsx'
 import Sheet from './Sheet.jsx'
 import { LangLink } from './LangSwitch.jsx'
-import { SECTORS, startups } from '../lib/data.js'
+import { SECTORS, poolLive, startups } from '../lib/data.js'
 import { useInterests } from '../lib/hooks.js'
 import { ROLES, useRole, useTastePrompt } from '../lib/personal.js'
-import { closeTaste, useTasteSheet } from '../lib/taste.js'
+import { closeTaste, maybeAskFirstRun, useTasteSheet } from '../lib/taste.js'
 import { syncPushPrefs } from '../lib/push.js'
 import { load, save } from '../lib/storage.js'
 import { L } from '../lib/i18n.js'
 
 /**
  * Taste sheet (C1): a role, then the sectors you follow. Both optional; they set the
- * order of each issue and the "○○라면" line, never what is in it. Not shown on first
- * run — the issue comes first (IssueMobile opens it once, lib/taste.js). Alerts are
- * asked for elsewhere, in context.
+ * order of each issue, the "○○라면" line and, with the sector pool, "내 5곳". On the web
+ * the issue comes first (IssueMobile opens it once, lib/taste.js); in the app it opens
+ * full screen on first run (_workspace/14 §3). Alerts are asked for elsewhere, in context.
  */
 export default function Onboarding() {
   const { open, mode, id } = useTasteSheet()
+  const [prompt, setPrompt] = useTastePrompt()
+  const [role] = useRole()
+  const { interests } = useInterests()
+  useEffect(() => {
+    maybeAskFirstRun({ prompt, setPrompt, role, interests })
+    // first mount only
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   // a fresh sheet per opening, starting from the saved choices
   return <TasteSheet key={id} open={open} mode={mode} />
 }
 
 function TasteSheet({ open, mode }) {
-  const ask = mode === 'ask'
+  const first = mode === 'first'
+  const ask = mode === 'ask' || first
   const [role, setRole] = useRole()
   const { interests, set: setInterests } = useInterests()
   const [, setPrompt] = useTastePrompt()
@@ -114,7 +123,13 @@ function TasteSheet({ open, mode }) {
               onClick={() => togglePick(s.key)}
             >
               {on && <Icon name="check" size={16} />}
-              {s.label} <span className={n ? 'mono taste__count' : 'taste__count'}>{n || L('준비 중', 'soon')}</span>
+              {s.label}{' '}
+              {/* with the sector pool, every sector gets about 3 a day: say what picking it brings */}
+              {poolLive ? (
+                <span className="taste__count">{L('하루 약 3곳', '~3 a day')}</span>
+              ) : (
+                <span className={n ? 'mono taste__count' : 'taste__count'}>{n || L('준비 중', 'soon')}</span>
+              )}
             </button>
           )
         })}
@@ -143,10 +158,9 @@ function TasteSheet({ open, mode }) {
         {roleChips}
         <h3 className="taste__label taste__label--gap">{L('관심 분야', 'Sectors')}</h3>
         <p className="taste__sub">
-          {L(
-            '3개쯤 고르면 순서가 잘 맞아요. 오늘의 묶음은 모두에게 같아요.',
-            "About 3 works best. Today's picks are the same for everyone.",
-          )}
+          {poolLive
+            ? L('고른 분야로 매일 5곳을 골라 드려요. 하나는 관심 밖에서 골라요.', 'We pick five a day from these sectors, and one from outside them.')
+            : L('3개쯤 고르면 순서가 잘 맞아요. 오늘의 묶음은 모두에게 같아요.', "About 3 works best. Today's picks are the same for everyone.")}
         </p>
         {sectorChips}
       </Sheet>
@@ -175,7 +189,7 @@ function TasteSheet({ open, mode }) {
     <Sheet
       open={open}
       onClose={dismiss}
-      className="sheet--taste"
+      className={`sheet--taste ${first ? 'sheet--first' : ''}`}
       head={head}
       title={step === 0 ? L('어떤 일을 하세요?', 'What do you do?') : L('관심 분야', 'Sectors')}
       footer={
@@ -205,9 +219,19 @@ function TasteSheet({ open, mode }) {
       ) : (
         <div className="taste__pane" key="sectors">
           <p className="taste__sub">
-            {L('3개쯤 고르면 순서가 잘 맞아요.', 'About 3 works best.')}
-            <br />
-            {L('오늘의 묶음은 모두에게 같아요.', "Today's picks are the same for everyone.")}
+            {poolLive ? (
+              <>
+                {L('고른 분야로 매일 5곳을 골라 드려요.', 'We pick five a day from these sectors.')}
+                <br />
+                {L('하나는 관심 밖에서 골라요.', 'One comes from outside them.')}
+              </>
+            ) : (
+              <>
+                {L('3개쯤 고르면 순서가 잘 맞아요.', 'About 3 works best.')}
+                <br />
+                {L('오늘의 묶음은 모두에게 같아요.', "Today's picks are the same for everyone.")}
+              </>
+            )}
           </p>
           {sectorChips}
         </div>

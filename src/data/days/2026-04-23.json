@@ -1,0 +1,843 @@
+[
+  {
+    "id": "modal-labs-2026",
+    "date": "2026-04-23",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "Modal Labs",
+    "name_ko": "모달 랩스",
+    "tagline": "GPU 서버리스 컴퓨트 — 파이썬 함수처럼 호출하는 AI 인프라",
+    "category": [
+      "AI 인프라",
+      "서버리스 컴퓨트",
+      "MLOps"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "New York",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "50-100",
+    "website": "https://modal.com/",
+    "logo_url": "/logos/modal-labs-2026.jpg",
+    "logo_svg_description": "기하학적 큐브가 회전하는 추상 마크와 차분한 그린·블랙 톤의 'Modal' 워드마크",
+    "founders": [
+      {
+        "name_en": "Erik Bernhardsson",
+        "name_ko": "에릭 베른하르드슨",
+        "role": "Founder & CEO",
+        "background": "Spotify ML 엔지니어링 디렉터, Annoy(오픈소스 ANN) 저자",
+        "linkedin": "",
+        "notable_achievement": "Spotify 추천 시스템 핵심 인프라 구축, 오픈소스 ML 인프라 분야 영향력 있는 인물"
+      },
+      {
+        "name_en": "Akshat Bubna",
+        "name_ko": "악샤트 부브나",
+        "role": "Co-Founder & CTO",
+        "background": "전 Goldman Sachs 인프라 엔지니어, 분산 시스템 전문가",
+        "linkedin": "",
+        "notable_achievement": "서버리스 GPU 컨테이너 런타임 핵심 설계"
+      }
+    ],
+    "team_highlights": "Spotify·Stripe·Goldman 출신 인프라 엔지니어, 분산 시스템·컨테이너 런타임 전문가",
+    "product": {
+      "summary": "파이썬 함수에 데코레이터를 붙이면 클라우드 GPU에서 즉시 실행되는 서버리스 컴퓨트 플랫폼. 모델 학습·추론·웹 서비스·배치 작업을 동일한 SDK로 처리하고, 사용한 컨테이너 시간만큼만 과금",
+      "problem_statement": "AI 워크로드는 GPU·도커·쿠버네티스·오토스케일링 등 인프라 작업이 너무 많아 진입장벽이 높다. 데이터 사이언티스트·풀스택 개발자가 인프라를 신경 쓰지 않고 GPU를 쓸 방법이 필요하다",
+      "solution": "파이썬 SDK에 컨테이너 정의·종속성 관리·GPU 할당·스케일링을 통합. 함수 호출 한 번이면 자동으로 컨테이너 빌드·배포·실행되고, 콜드 스타트가 짧아 인터랙티브 워크로드까지 커버",
+      "key_features": [
+        "Functions: 파이썬 데코레이터 기반 서버리스 GPU 실행",
+        "Web Endpoints: 추론 모델을 즉시 HTTP API로 노출",
+        "Volumes: 분산 파일 시스템과 모델 캐싱",
+        "Schedules·Queues: 배치·이벤트 워크플로우",
+        "Sandbox: 안전 격리 코드 실행 환경"
+      ],
+      "tech_stack_or_innovation": "자체 컨테이너 런타임, 콜드 스타트 1초 이하 최적화, 파이썬 네이티브 SDK, 분산 파일 시스템",
+      "target_customer": "AI 스타트업, 미디어·이미지·음성 도구, 금융 퀀트, 데이터 사이언스 팀",
+      "business_model": "GPU·CPU 컨테이너 시간 종량제 + 엔터프라이즈 플랜",
+      "demo_or_screenshot_url": "https://modal.com/playground"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Replicate",
+          "comparison": "ML 모델 호스팅 플랫폼. Modal은 일반 컴퓨트·웹 서비스·배치까지 폭넓은 워크로드 차별화"
+        },
+        {
+          "name": "Beam / Banana",
+          "comparison": "유사한 서버리스 GPU. Modal은 SDK 성숙도와 콜드 스타트 최적화로 우위"
+        },
+        {
+          "name": "AWS Lambda·SageMaker",
+          "comparison": "하이퍼스케일러. Modal은 GPU·DX·가격 단순성에서 차별화"
+        }
+      ],
+      "key_differentiator": "파이썬 네이티브 SDK + 1초 미만 콜드 스타트 + GPU/CPU 통합 워크로드의 결합",
+      "moat": "자체 컨테이너 런타임 IP, 개발자 락인된 SDK 워크플로우, GPU 캐파시티 다중 클라우드 확보",
+      "competitive_position_summary": "AI 스타트업 사이에서 사실상 디폴트 GPU 백엔드, Replicate·하이퍼스케일러 대안의 강자"
+    },
+    "trending_reason": {
+      "summary": "2024년 Series B $80M으로 $700M 밸류에이션, ARR 빠르게 성장. Suno·Anthropic 일부 워크로드·Hugging Face 등 AI 빌더의 디폴트 컴퓨트 백엔드로 자리잡음",
+      "catalysts": [
+        "2024년 Series B $80M, $700M 밸류에이션",
+        "콜드 스타트 1초 미만 달성",
+        "Suno·Replicate 등 AI 빌더 락인",
+        "GPU H100 캐파시티 확보 발표"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Modal Labs raises $80M to make GPU compute as easy as Python",
+          "url": "https://techcrunch.com/modal-80m/",
+          "date": "2024-08-21"
+        },
+        {
+          "source": "Latent Space",
+          "title": "Why every AI startup secretly runs on Modal",
+          "url": "https://www.latent.space/p/modal-labs",
+          "date": "2025-12-02"
+        }
+      ],
+      "growth_metrics": "ARR 1년 만에 5배+, AI 스타트업 고객 수천, 월간 GPU 사용 시간 폭증"
+    },
+    "funding": {
+      "total_raised": "$110M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$80M",
+        "date": "2024-08",
+        "lead_investor": "Lux Capital",
+        "notable_investors": [
+          "Redpoint Ventures",
+          "Definition Capital",
+          "Amplify Partners"
+        ]
+      },
+      "valuation_estimate": "$700M",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$7M",
+          "date": "2022-03",
+          "lead_investor": "Amplify Partners"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$23M",
+          "date": "2023-04",
+          "lead_investor": "Redpoint Ventures"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$80M",
+          "date": "2024-08",
+          "lead_investor": "Lux Capital"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 ML 컴퓨트 인프라 시장 2030년 $80B+, 서버리스 GPU SOM $20B",
+      "market_trend": "AI 스타트업의 인프라 외주화 가속, 서버리스 GPU 표준화, 멀티 클라우드 GPU 캐파시티 경쟁",
+      "growth_potential": "엔터프라이즈 ML 워크로드 침투, 학습·미세조정 시장 진입, 멀티 리전·온프레 옵션 확대",
+      "risks": [
+        "AWS·GCP의 서버리스 GPU 경쟁",
+        "GPU 단가·캐파시티 변동",
+        "DX 후발 주자의 추격"
+      ],
+      "risk_mitigation": "GPU 캐파시티 다변화, SDK·생태계 락인 강화, 엔터프라이즈 매출 비중 확대"
+    },
+    "related_links": [
+      {
+        "title": "Modal 공식 사이트",
+        "url": "https://modal.com/"
+      },
+      {
+        "title": "TechCrunch: Series B 보도",
+        "url": "https://techcrunch.com/modal-80m/"
+      },
+      {
+        "title": "Modal Playground",
+        "url": "https://modal.com/playground"
+      }
+    ],
+    "editor_pick_comment": "Spotify에서 ML 인프라를 만들던 사람이, '파이썬 함수처럼 GPU를 호출하게 하자'는 단순한 비전으로 만든 회사. AI 스타트업의 절반쯤은 모달 위에서 돌아가고 있다."
+  },
+  {
+    "id": "ponyai-2026",
+    "date": "2026-04-23",
+    "featured": true,
+    "sector": "mobility",
+    "name_en": "Pony.ai",
+    "name_ko": "포니 AI",
+    "tagline": "중국발 자율주행 — 베이징·광저우의 무인 로보택시",
+    "category": [
+      "자율주행",
+      "모빌리티",
+      "로보택시"
+    ],
+    "founded_year": 2016,
+    "headquarters": {
+      "city": "Guangzhou",
+      "country": "China",
+      "country_ko": "중국"
+    },
+    "company_stage": "Public (NASDAQ: PONY)",
+    "employee_count": "1000-1500",
+    "website": "https://pony.ai/",
+    "logo_url": "/logos/ponyai-2026.png",
+    "logo_svg_description": "달리는 말(pony) 형태의 라인 그래픽과 다크 그레이의 'Pony.ai' 워드마크",
+    "founders": [
+      {
+        "name_en": "James Peng",
+        "name_ko": "제임스 펑(펑쥔)",
+        "role": "Co-Founder & CEO",
+        "background": "Baidu 자율주행 사업부 수석 아키텍트, 스탠퍼드 PhD",
+        "linkedin": "",
+        "notable_achievement": "중국 자율주행 카테고리 정의, 2024년 NASDAQ 상장으로 글로벌 자본시장 진입"
+      },
+      {
+        "name_en": "Tiancheng Lou",
+        "name_ko": "라우 톈청",
+        "role": "Co-Founder & CTO",
+        "background": "Baidu·Google 자율주행 연구자, ACM ICPC 챔피언",
+        "linkedin": "",
+        "notable_achievement": "자율주행 코어 인지·플래닝 시스템 설계"
+      }
+    ],
+    "team_highlights": "Baidu·Google·Waymo 출신 자율주행 베테랑, 중국·미국 양국 거점, 수천 시간 무인 주행 데이터",
+    "product": {
+      "summary": "L4 자율주행 소프트웨어 'PonyWorld'와 로보택시·자율 트럭 운영 사업을 함께 추진. 베이징·상하이·광저우·선전에서 무인 로보택시 서비스 운영, 미국 캘리포니아 테스트 면허 보유",
+      "problem_statement": "도시 모빌리티는 운전자 부족·교통 사고·환경 부담의 한계에 부딪혔고, 로보택시는 안전과 도시 운영 데이터를 동시에 확보해야 하는 고난도 문제다",
+      "solution": "자체 L4 자율주행 스택 'PonyWorld'와 도시 단위 로보택시 운영. 토요타·BAIC 등 OEM 파트너십으로 양산 차량을 자율주행화하고, 트럭 자율주행 자회사 'Pony AI Trucking'으로 화물 시장 진입",
+      "key_features": [
+        "PonyWorld: L4 자율주행 풀스택 소프트웨어",
+        "Pony Pilot: 4개 중국 1선 도시 로보택시",
+        "Pony Trucking: 자율 화물 트럭",
+        "OEM 파트너십(Toyota·BAIC·GAC)",
+        "캘리포니아 무인 테스트 면허"
+      ],
+      "tech_stack_or_innovation": "센서 융합 인지·플래닝, 자체 시뮬레이션 플랫폼, 양산형 자율주행 키트, 도시별 HD 지도",
+      "target_customer": "중국 1·2선 도시 모빌리티 사업자, 자율주행 OEM 파트너, 화물·물류 기업",
+      "business_model": "로보택시 운임 + OEM 자율주행 라이선스 + 화물 자율주행 매출",
+      "demo_or_screenshot_url": "https://pony.ai/robotaxi"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "WeRide",
+          "comparison": "중국 자율주행 동급 경쟁자. Pony.ai는 양산 OEM 파트너십과 미국 면허에서 우위"
+        },
+        {
+          "name": "Baidu Apollo",
+          "comparison": "중국 최대 로보택시. Pony.ai는 OEM 중립성·국제 확장 가능성에서 차별화"
+        },
+        {
+          "name": "Waymo / Cruise",
+          "comparison": "미국 로보택시 강자. Pony.ai는 중국 시장 깊이와 비용 효율 차별화"
+        }
+      ],
+      "key_differentiator": "중국 4대 도시 무인 운영 + 미국 면허 + 다중 OEM 파트너십",
+      "moat": "수천만 km 자율 주행 데이터, 중국 정부·도시 협력, 양산형 자율주행 키트 IP",
+      "competitive_position_summary": "중국 자율주행 카테고리의 대표 상장사, WeRide·Baidu와 함께 시장 3강"
+    },
+    "trending_reason": {
+      "summary": "2024년 11월 NASDAQ 상장으로 자본시장 진입, 2025년 로보택시 무인 운영 도시 확대, 토요타·BAIC와의 양산 협력 강화로 자율주행 산업화 가속",
+      "catalysts": [
+        "2024년 11월 NASDAQ 상장(Ticker: PONY)",
+        "베이징·광저우·선전·상하이 무인 로보택시 운영",
+        "Toyota 합작 양산 자율주행 차량 발표",
+        "Pony Trucking 자회사 분리·확장"
+      ],
+      "media_mentions": [
+        {
+          "source": "Reuters",
+          "title": "Pony.ai prices US IPO at $13 a share",
+          "url": "https://www.reuters.com/pony-ai-ipo/",
+          "date": "2024-11-26"
+        },
+        {
+          "source": "Bloomberg",
+          "title": "China's Pony.ai expands driverless robotaxi fleet",
+          "url": "https://www.bloomberg.com/pony-ai-fleet/",
+          "date": "2025-12-15"
+        }
+      ],
+      "growth_metrics": "누적 무인 주행 4000만 km+, 로보택시 함대 250+ 대, 30+ 도시 누적 테스트"
+    },
+    "funding": {
+      "total_raised": "$1.5B+ (IPO 포함)",
+      "latest_round": {
+        "stage": "IPO",
+        "amount": "$260M",
+        "date": "2024-11",
+        "lead_investor": "NASDAQ 상장",
+        "notable_investors": [
+          "Toyota",
+          "Sequoia China",
+          "IDG Capital",
+          "Saudi Aramco"
+        ]
+      },
+      "valuation_estimate": "Public — 시가총액 $4B 내외 (변동)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$112M",
+          "date": "2018-01",
+          "lead_investor": "Sequoia China"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$462M",
+          "date": "2020-02",
+          "lead_investor": "Toyota"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$300M",
+          "date": "2022-03",
+          "lead_investor": "Saudi Aramco"
+        },
+        {
+          "stage": "IPO",
+          "amount": "$260M",
+          "date": "2024-11",
+          "lead_investor": "NASDAQ 상장"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 자율주행 모빌리티 시장 2030년 $400B+, 중국 로보택시 SOM $80B",
+      "market_trend": "중국 도시들의 무인 운영 정책 완화, OEM의 자율주행 키트 수요 증가, 자율 화물 트럭 상용화",
+      "growth_potential": "중국 1·2선 도시 무인 함대 확대, OEM 양산 라이선스 매출, 화물 자율주행 상용화",
+      "risks": [
+        "미·중 기술·자본시장 갈등",
+        "자율주행 사고·규제 리스크",
+        "수익화 시점 지연"
+      ],
+      "risk_mitigation": "중국 시장 우선 수익화, OEM 다변화, 화물 분야 매출 다각화"
+    },
+    "related_links": [
+      {
+        "title": "Pony.ai 공식 사이트",
+        "url": "https://pony.ai/"
+      },
+      {
+        "title": "Reuters: NASDAQ 상장 보도",
+        "url": "https://www.reuters.com/pony-ai-ipo/"
+      },
+      {
+        "title": "Pony Trucking",
+        "url": "https://pony.ai/trucking"
+      }
+    ],
+    "editor_pick_comment": "미국에서 Waymo가 보여주는 미래를, 중국 도시들은 이미 일상으로 살고 있다. 그 한가운데에 Pony.ai가 있고, 이제는 NASDAQ에서 그 베팅에 가격이 매겨진다."
+  },
+  {
+    "id": "trm-labs-2026",
+    "date": "2026-04-23",
+    "featured": true,
+    "sector": "fintech",
+    "name_en": "TRM Labs",
+    "name_ko": "TRM 랩스",
+    "tagline": "암호화폐 자금세탁·범죄 추적 인프라 — 정부·은행이 쓰는 블록체인 인텔리전스",
+    "category": [
+      "블록체인 분석",
+      "규제 기술",
+      "사이버 보안"
+    ],
+    "founded_year": 2018,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "300-500",
+    "website": "https://www.trmlabs.com/",
+    "logo_url": "/logos/trm-labs-2026.png",
+    "logo_svg_description": "블록체인 노드가 검(劍)을 형성하는 추상 마크와 차분한 다크 블루의 'TRM Labs' 워드마크",
+    "founders": [
+      {
+        "name_en": "Esteban Castaño",
+        "name_ko": "에스테반 카스타뇨",
+        "role": "Co-Founder & CEO",
+        "background": "Bridgewater Associates 출신, 콜롬비아·미국계 기업가",
+        "linkedin": "",
+        "notable_achievement": "정부·법집행기관·은행이 의존하는 블록체인 인텔리전스 카테고리 정의"
+      },
+      {
+        "name_en": "Rahul Raina",
+        "name_ko": "라훌 라이나",
+        "role": "Co-Founder & CTO",
+        "background": "Google·Apple 보안 엔지니어, MIT 컴퓨터과학",
+        "linkedin": "",
+        "notable_achievement": "전 세계 23개+ 블록체인을 커버하는 온체인 분석 엔진 설계"
+      }
+    ],
+    "team_highlights": "FBI·IRS·국세청 출신 사이버 수사관, 블록체인 보안 연구원, 전직 빅테크 보안·ML 엔지니어",
+    "product": {
+      "summary": "23개+ 블록체인의 거래·지갑 그래프를 실시간 분석해 자금세탁·해킹·제재 위반·사기 패턴을 탐지하는 SaaS 플랫폼. FBI·IRS·미 재무부 OFAC, JPMorgan·Coinbase·Citi 등 정부·은행·거래소가 핵심 고객",
+      "problem_statement": "암호화폐가 제도권에 편입되며 자금세탁·제재 위반·해킹 자금 추적이 글로벌 규제 이슈로 부상했지만, 23개 이상의 체인을 통합 분석하고 법정 증거 수준의 추적을 제공하는 인프라가 부족하다",
+      "solution": "비트코인·이더리움·솔라나·트론 등 주요 블록체인 데이터를 통합 인덱싱하고, ML 기반 클러스터링·라벨링으로 거래소·믹서·해커·제재 대상 지갑을 식별. 법집행 수사·은행 KYC·거래소 컴플라이언스 워크플로우와 연결",
+      "key_features": [
+        "TRM Forensics: 법집행용 거래 추적·시각화",
+        "TRM Compliance: 거래소·은행 KYC/AML 스크리닝",
+        "Chain Coverage: 23개+ 블록체인 통합 인덱싱",
+        "Risk Score: 지갑·트랜잭션 리스크 평가",
+        "Sanctions·Hack·Scam Intelligence: 위협 데이터 피드"
+      ],
+      "tech_stack_or_innovation": "멀티 체인 데이터 인덱서, 그래프 ML 기반 지갑 클러스터링, 라벨링 데이터 자산, 실시간 리스크 스코어링",
+      "target_customer": "정부·법집행기관(FBI·IRS·OFAC·UK NCA), 글로벌 은행·핀테크, 암호화폐 거래소, 카드 네트워크",
+      "business_model": "엔터프라이즈 SaaS 라이선스 + 정부 멀티 년 계약 + 위협 데이터 피드 구독",
+      "demo_or_screenshot_url": "https://www.trmlabs.com/products"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Chainalysis",
+          "comparison": "블록체인 분석 카테고리 리더. TRM Labs는 정부·은행 시장 깊이와 멀티체인 커버리지에서 빠르게 추격"
+        },
+        {
+          "name": "Elliptic",
+          "comparison": "유럽 강자. TRM Labs는 미국 정부·OFAC 친밀도와 멀티체인 풀스택 차별화"
+        },
+        {
+          "name": "CipherTrace(Mastercard)",
+          "comparison": "카드사 인수된 분석 도구. TRM Labs는 독립성·기술 갱신 속도 우위"
+        }
+      ],
+      "key_differentiator": "23개+ 체인 커버리지 + 정부·은행 시장의 깊은 침투 + 위협 인텔리전스 데이터 자산",
+      "moat": "정부·법집행기관 장기 계약, 라벨링 데이터셋·지갑 인텔리전스 IP, FBI·OFAC 출신 인력",
+      "competitive_position_summary": "Chainalysis와의 양강 구도에서 정부·멀티체인 영역의 빠른 추격자, 미국 정책 사이클 수혜"
+    },
+    "trending_reason": {
+      "summary": "2024년 Series C $70M 후 미 재무부 OFAC·FBI 등과의 멀티 년 계약 확대, 2025년 후반 추가 자본·밸류에이션 상승. 트럼프 행정부의 '암호화폐 친화 + 자금세탁 강력 단속' 정책의 핵심 수혜",
+      "catalysts": [
+        "2024년 Series C $70M, $600M+ 밸류에이션",
+        "미 재무부 OFAC·FBI 멀티 년 계약 확대",
+        "JPMorgan·Citi 등 글로벌 은행 도입 확산",
+        "북한·러시아 해킹 자금 추적 사례로 미디어 노출"
+      ],
+      "media_mentions": [
+        {
+          "source": "Wall Street Journal",
+          "title": "TRM Labs becomes US Treasury's go-to crypto sleuth",
+          "url": "https://www.wsj.com/trm-labs-treasury/",
+          "date": "2024-09-12"
+        },
+        {
+          "source": "Reuters",
+          "title": "TRM Labs traces $1.5B Bybit hack to North Korea",
+          "url": "https://www.reuters.com/trm-labs-bybit-north-korea/",
+          "date": "2025-03-04"
+        }
+      ],
+      "growth_metrics": "정부 고객 30+ 국가, 글로벌 은행·거래소 수백 곳, ARR 매년 2배 성장"
+    },
+    "funding": {
+      "total_raised": "$150M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$70M",
+        "date": "2024-04",
+        "lead_investor": "Thoma Bravo",
+        "notable_investors": [
+          "Goldman Sachs",
+          "Visa",
+          "Citi Ventures",
+          "Bessemer"
+        ]
+      },
+      "valuation_estimate": "$600M+",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$14M",
+          "date": "2021-03",
+          "lead_investor": "Bessemer"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$60M",
+          "date": "2022-11",
+          "lead_investor": "Thoma Bravo"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$70M",
+          "date": "2024-04",
+          "lead_investor": "Thoma Bravo"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 RegTech·블록체인 분석 시장 2030년 $30B+, 정부·은행·거래소 SOM $10B",
+      "market_trend": "암호화폐 제도권 편입 가속, 글로벌 자금세탁 단속 강화, 스테이블코인·CBDC 규제 신설",
+      "growth_potential": "정부 멀티 년 계약 확대, 카드 네트워크·핀테크 침투, 신규 체인·DeFi·NFT 라벨링 확장",
+      "risks": [
+        "Chainalysis와의 시장 경쟁 심화",
+        "암호화폐 사이클·정책 변동",
+        "프라이버시 규제와의 충돌"
+      ],
+      "risk_mitigation": "정부 장기 계약 비중 확대, 멀티 도메인(은행·핀테크) 매출 다각화, 데이터 거버넌스 인증 강화"
+    },
+    "related_links": [
+      {
+        "title": "TRM Labs 공식 사이트",
+        "url": "https://www.trmlabs.com/"
+      },
+      {
+        "title": "WSJ: 미 재무부 핵심 파트너 보도",
+        "url": "https://www.wsj.com/trm-labs-treasury/"
+      },
+      {
+        "title": "Reuters: Bybit 해킹 추적",
+        "url": "https://www.reuters.com/trm-labs-bybit-north-korea/"
+      }
+    ],
+    "editor_pick_comment": "암호화폐를 둘러싼 가장 무거운 싸움은 가격이 아니라 '돈을 어디까지 추적할 수 있느냐'에 있다. 정부·은행이 그 답을 묻는 곳, TRM Labs."
+  },
+  {
+    "id": "lattice-2026",
+    "date": "2026-04-23",
+    "featured": true,
+    "sector": "enterprise",
+    "name_en": "Lattice",
+    "name_ko": "래티스",
+    "tagline": "사람을 관리하는 운영체제 — HR이 데이터로 일하기 시작했다",
+    "category": [
+      "HR Tech",
+      "엔터프라이즈 SaaS",
+      "성과관리"
+    ],
+    "founded_year": 2015,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series F",
+    "employee_count": "500-700",
+    "website": "https://lattice.com/",
+    "logo_url": "/logos/lattice-2026.png",
+    "logo_svg_description": "교차하는 격자(lattice) 라인이 인간 형상으로 합쳐지는 추상 그래픽과 미니멀한 워드마크",
+    "founders": [
+      {
+        "name_en": "Jack Altman",
+        "name_ko": "잭 알트만",
+        "role": "Co-Founder & Executive Chair",
+        "background": "Y Combinator 출신 창업가, Sam Altman의 동생",
+        "linkedin": "",
+        "notable_achievement": "성과관리 SaaS 카테고리 정의, $3B+ 밸류에이션 회사로 성장"
+      },
+      {
+        "name_en": "Eric Koslow",
+        "name_ko": "에릭 코슬로우",
+        "role": "Co-Founder & CTO",
+        "background": "이전 핀테크·SaaS 엔지니어",
+        "linkedin": "",
+        "notable_achievement": "Lattice 핵심 플랫폼 아키텍처 설계"
+      }
+    ],
+    "team_highlights": "Y Combinator 네트워크, HR·SaaS 베테랑 임원, 데이터·AI 인력 적극 영입",
+    "product": {
+      "summary": "성과 관리·1:1·OKR·참여도 조사·HRIS·페이롤을 단일 플랫폼에 통합한 'People Platform'. AI Lattice가 매니저의 피드백·1:1·평가 작성을 보조한다",
+      "problem_statement": "기업의 사람 관리는 HRIS·평가·OKR·서베이가 각기 다른 도구로 운영되어 데이터가 흩어지고, 매니저는 평가·1:1·피드백 작성에 과도한 시간을 소비한다",
+      "solution": "OKR·1:1·360 평가·참여도·HRIS·페이롤을 단일 플랫폼에 묶고, AI Lattice가 1:1 노트 요약·평가 초안·서베이 분석을 자동화. 매니저·HR·임원에게 '사람 데이터'의 단일 진실 공급원 제공",
+      "key_features": [
+        "Performance: 360 평가·캘리브레이션",
+        "Goals: OKR·KPI 추적",
+        "1:1 & Feedback: 노트·아젠다·연속 피드백",
+        "Engagement: 펄스 서베이·eNPS",
+        "HRIS·Payroll: 핵심 인사 시스템 통합",
+        "AI Lattice: 자동 노트·평가 초안·서베이 분석"
+      ],
+      "tech_stack_or_innovation": "엔터프라이즈 멀티테넌시 SaaS, AI 텍스트 요약·생성, 인사 데이터 모델, 다국가 컴플라이언스",
+      "target_customer": "100~10,000명 규모 기업, 글로벌 분산 조직, HR·운영 임원",
+      "business_model": "사용자당 연간 SaaS 구독, 모듈별 가격제 + HRIS·페이롤 옵션",
+      "demo_or_screenshot_url": "https://lattice.com/product"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Workday / SAP SuccessFactors",
+          "comparison": "엔터프라이즈 HR 거인. Lattice는 중견·성장기 SaaS 친화 UX와 빠른 도입에서 우위"
+        },
+        {
+          "name": "Culture Amp",
+          "comparison": "참여도·문화 강자. Lattice는 성과·OKR·HRIS 통합 폭으로 차별화"
+        },
+        {
+          "name": "15Five",
+          "comparison": "유사한 성과관리. Lattice는 AI·HRIS 통합과 엔터프라이즈 침투에서 우위"
+        }
+      ],
+      "key_differentiator": "성과 + OKR + 1:1 + HRIS + 페이롤의 통합 People Platform, AI Lattice 자동화",
+      "moat": "수천 기업의 People 데이터 락인, 모듈 통합 아키텍처, 글로벌 컴플라이언스 인프라",
+      "competitive_position_summary": "성장기·중견 People Platform 카테고리의 대표 주자, Workday 대안으로 부상"
+    },
+    "trending_reason": {
+      "summary": "2024년 HRIS·페이롤 라인 추가로 People Platform 비전 본격화, 2025년 AI Lattice 출시 후 매출 가속, $3B+ 밸류에이션 유지",
+      "catalysts": [
+        "HRIS·페이롤 라인 출시로 Workday 대안 자리매김",
+        "AI Lattice 매니저 보조 출시",
+        "엔터프라이즈 락인 비중 증가",
+        "글로벌 분산 조직 시장 침투 가속"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Lattice's pivot from performance to full HR platform",
+          "url": "https://techcrunch.com/lattice-hris-payroll/",
+          "date": "2024-04-08"
+        },
+        {
+          "source": "Forbes",
+          "title": "Why Lattice's AI is rewriting manager workflows",
+          "url": "https://www.forbes.com/lattice-ai-managers/",
+          "date": "2025-08-12"
+        }
+      ],
+      "growth_metrics": "ARR $200M+, 고객 5,000+ 기업, 글로벌 60+ 국가 운영"
+    },
+    "funding": {
+      "total_raised": "$330M+",
+      "latest_round": {
+        "stage": "Series F",
+        "amount": "$175M",
+        "date": "2022-01",
+        "lead_investor": "Thrive Capital",
+        "notable_investors": [
+          "Tiger Global",
+          "Founders Fund",
+          "Khosla Ventures"
+        ]
+      },
+      "valuation_estimate": "$3B",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$2.6M",
+          "date": "2016-04",
+          "lead_investor": "Khosla Ventures"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$15M",
+          "date": "2018-09",
+          "lead_investor": "Shasta Ventures"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$25M",
+          "date": "2019-10",
+          "lead_investor": "Founders Fund"
+        },
+        {
+          "stage": "Series E",
+          "amount": "$60M",
+          "date": "2021-01",
+          "lead_investor": "Tiger Global"
+        },
+        {
+          "stage": "Series F",
+          "amount": "$175M",
+          "date": "2022-01",
+          "lead_investor": "Thrive Capital"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 HR Tech 시장 2030년 $50B+, People Platform SOM $15B",
+      "market_trend": "분산 조직·하이브리드 워크 정착, AI 매니저 보조 도구 수요, HRIS·페이롤 통합 트렌드",
+      "growth_potential": "엔터프라이즈 침투 확대, 글로벌 페이롤 시장 진입, AI Lattice 추가 모듈 출시",
+      "risks": [
+        "Workday·BambooHR·Rippling과의 경쟁",
+        "AI 자동화에 대한 HR의 신중함",
+        "거시 고용 환경 변동"
+      ],
+      "risk_mitigation": "모듈 통합 가치 강조, 보안·컴플라이언스 인증, AI 안전·투명성 정책"
+    },
+    "related_links": [
+      {
+        "title": "Lattice 공식 사이트",
+        "url": "https://lattice.com/"
+      },
+      {
+        "title": "TechCrunch: HRIS 출시 보도",
+        "url": "https://techcrunch.com/lattice-hris-payroll/"
+      },
+      {
+        "title": "AI Lattice 소개",
+        "url": "https://lattice.com/ai"
+      }
+    ],
+    "editor_pick_comment": "성과 평가는 매년 사람들의 시간을 가장 많이 잡아먹는 의례 중 하나다. Lattice는 거기에 데이터와 AI를 끼워 넣어, 'HR도 운영체제다'라는 명제를 입증하는 중."
+  },
+  {
+    "id": "replicate-2026",
+    "date": "2026-04-23",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "Replicate",
+    "name_ko": "리플리케이트",
+    "tagline": "오픈소스 모델을 한 줄로 호출 — AI 모델의 클라우드 함수",
+    "category": [
+      "AI 인프라",
+      "MLOps",
+      "개발자 도구"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "30-50",
+    "website": "https://replicate.com/",
+    "logo_url": "/logos/replicate-2026.png",
+    "logo_svg_description": "두 개의 동심원이 미세하게 어긋난 'replicate' 모노그램과 미니멀 산세리프 워드마크",
+    "founders": [
+      {
+        "name_en": "Ben Firshman",
+        "name_ko": "벤 퍼시먼",
+        "role": "Co-Founder & CEO",
+        "background": "Docker 전 Open Source 디렉터, Docker Compose 메인 개발자",
+        "linkedin": "",
+        "notable_achievement": "Docker Compose 핵심 설계자, 오픈소스 ML 컨테이너 표준 'Cog' 창시"
+      },
+      {
+        "name_en": "Andreas Jansson",
+        "name_ko": "안드레아스 얀손",
+        "role": "Co-Founder & CTO",
+        "background": "Spotify·Quartz 출신 ML 엔지니어",
+        "linkedin": "",
+        "notable_achievement": "Replicate 추론 인프라·모델 호스팅 시스템 설계"
+      }
+    ],
+    "team_highlights": "Docker·Spotify·Stripe 출신 인프라·ML 엔지니어, 오픈소스 메인테이너 다수 영입",
+    "product": {
+      "summary": "오픈소스 AI 모델을 컨테이너화하고 API 한 줄로 호출할 수 있게 해주는 모델 호스팅·추론 플랫폼. SDXL·Flux·Llama 등 수만 개 모델을 즉시 실행 가능, 자체 모델도 Cog로 패키징 후 배포",
+      "problem_statement": "오픈소스 AI 모델을 직접 서빙하려면 GPU·컨테이너·스케일링·캐싱 등 복잡한 인프라가 필요하다. 개발자는 모델을 빠르게 실험하고 프로덕션에 올릴 단순한 방법을 원한다",
+      "solution": "Cog 오픈소스 패키징 도구로 모델을 컨테이너화하고, Replicate 클라우드에서 즉시 API로 호출. 사용한 만큼 과금되는 서버리스 ML 추론으로 진입장벽 제거",
+      "key_features": [
+        "Replicate Run: 오픈소스 모델 즉시 실행 API",
+        "Cog: ML 모델 컨테이너화 오픈소스 도구",
+        "Custom Models: 사용자 모델 호스팅·파인튜닝",
+        "Webhooks·Streaming: 비동기 추론 워크플로우",
+        "수만 개 커뮤니티 모델 라이브러리"
+      ],
+      "tech_stack_or_innovation": "Cog 오픈소스 컨테이너 표준, GPU 서버리스 추론, 콜드 스타트 최적화, 모델 캐싱",
+      "target_customer": "AI 제품 빌더, 인디 개발자, 디자인·미디어 도구 스타트업, 엔터프라이즈 ML 팀",
+      "business_model": "추론 사용량 기반 종량제(초 단위) + 엔터프라이즈 플랜",
+      "demo_or_screenshot_url": "https://replicate.com/explore"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Hugging Face Inference Endpoints",
+          "comparison": "오픈소스 허브 강자. Replicate는 다양한 커뮤니티 모델 즉시 실행 UX에서 우위"
+        },
+        {
+          "name": "Modal Labs",
+          "comparison": "서버리스 GPU 인프라 강자. Replicate는 모델 호스팅·커뮤니티 모델 라이브러리 차별화"
+        },
+        {
+          "name": "RunPod / Beam",
+          "comparison": "GPU 컴퓨트 인프라. Replicate는 모델 카탈로그·DX에 더 집중"
+        }
+      ],
+      "key_differentiator": "Cog 오픈소스 표준 + 즉시 실행 가능한 커뮤니티 모델 라이브러리 + 서버리스 GPU",
+      "moat": "수만 개 커뮤니티 모델·개발자 락인, Cog 오픈소스 생태계, 콜드 스타트·캐싱 인프라 IP",
+      "competitive_position_summary": "오픈소스 모델 추론 플랫폼 카테고리의 사실상 디폴트, 인디·미드마켓 시장에서 강세"
+    },
+    "trending_reason": {
+      "summary": "2024년 Series B $40M 후 SDXL·Flux 이미지 모델·LLM 수요 폭증으로 매출 급성장, 디자인·미디어 도구 스타트업의 디폴트 추론 백엔드로 자리잡음",
+      "catalysts": [
+        "2024년 Series B $40M",
+        "Flux·SDXL 등 이미지 모델 수요 폭증",
+        "디자인·미디어 도구 스타트업 락인",
+        "Cog 오픈소스 생태계 확장"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Replicate's $40M Series B for run-anywhere ML",
+          "url": "https://techcrunch.com/replicate-series-b/",
+          "date": "2024-02-08"
+        },
+        {
+          "source": "Stratechery",
+          "title": "Replicate and the rise of model marketplaces",
+          "url": "https://stratechery.com/replicate-model-marketplaces/",
+          "date": "2025-04-11"
+        }
+      ],
+      "growth_metrics": "월간 추론 호출 수억, 호스팅 모델 수만, 개발자 사용자 수십만"
+    },
+    "funding": {
+      "total_raised": "$60M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$40M",
+        "date": "2024-02",
+        "lead_investor": "Andreessen Horowitz",
+        "notable_investors": [
+          "Sequoia Capital",
+          "Y Combinator",
+          "Heavybit"
+        ]
+      },
+      "valuation_estimate": "$350M+ (추정)",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$2.5M",
+          "date": "2020-09",
+          "lead_investor": "Y Combinator"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$17.8M",
+          "date": "2022-12",
+          "lead_investor": "Andreessen Horowitz"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$40M",
+          "date": "2024-02",
+          "lead_investor": "Andreessen Horowitz"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 ML 추론 인프라 시장 2030년 $50B+, 서버리스 GPU 추론 SOM $15B",
+      "market_trend": "오픈소스 모델 추론 수요 폭증, 디자인·미디어·코딩 도구의 ML 통합 가속, 서버리스 GPU 표준화",
+      "growth_potential": "엔터프라이즈 모델 호스팅 라인업, 멀티모달·비디오 모델 시장 진입, Cog 표준의 산업 채택",
+      "risks": [
+        "Hugging Face·Modal·하이퍼스케일러 경쟁",
+        "GPU 단가 변동에 따른 마진 압박",
+        "오픈소스 모델 라이선스 분쟁"
+      ],
+      "risk_mitigation": "Cog 오픈소스 생태계 강화, 콜드 스타트 최적화로 마진 개선, 엔터프라이즈 매출 다변화"
+    },
+    "related_links": [
+      {
+        "title": "Replicate 공식 사이트",
+        "url": "https://replicate.com/"
+      },
+      {
+        "title": "TechCrunch: Series B 보도",
+        "url": "https://techcrunch.com/replicate-series-b/"
+      },
+      {
+        "title": "Cog 오픈소스",
+        "url": "https://github.com/replicate/cog"
+      }
+    ],
+    "editor_pick_comment": "Docker가 코드 배포를 바꿨듯, Replicate는 ML 모델을 'API 한 줄'로 만든다. AI 제품을 처음 만들어본 사람이라면 한 번쯤 reaches한 회사."
+  }
+]

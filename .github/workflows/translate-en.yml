@@ -1,6 +1,6 @@
 name: Translate to English
 
-# English edition of the company profiles (src/data/startups.en.json). Daily runs translate
+# English edition of the company profiles (src/data/days-en). Daily runs translate
 # new companies on their own; this is for the backlog and for re-translating on demand.
 on:
   workflow_dispatch:
@@ -52,7 +52,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/startups.en.json src/data/updates.json
+          git add src/data/days-en src/data/updates.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else

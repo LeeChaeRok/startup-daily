@@ -1,0 +1,444 @@
+{
+  "modal-labs-2026": {
+    "tagline": "GPU serverless compute — AI infrastructure you call like a Python function",
+    "category": [
+      "AI Infrastructure",
+      "Serverless Compute"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Spotify ML Engineering Director, author of Annoy (open-source ANN)",
+        "notable_achievement": "Built core infrastructure for Spotify's recommendation system, influential figure in open-source ML infrastructure"
+      },
+      {
+        "background": "Former Goldman Sachs infrastructure engineer, distributed systems expert",
+        "notable_achievement": "Core designer of the serverless GPU container runtime"
+      }
+    ],
+    "team_highlights": "Infrastructure engineers from Spotify, Stripe, and Goldman; distributed systems and container runtime experts",
+    "product": {
+      "summary": "A serverless compute platform where you attach a decorator to a Python function and it runs instantly on cloud GPUs. Handles model training, inference, web services, and batch jobs with a single SDK, billing only for container time used.",
+      "problem_statement": "AI workloads require too much infrastructure work—GPU, Docker, Kubernetes, autoscaling—creating a high barrier to entry. Data scientists and full-stack developers need a way to use GPUs without worrying about infrastructure.",
+      "solution": "Combines container definition, dependency management, GPU allocation, and scaling into the Python SDK. A single function call automatically builds, deploys, and runs containers; short cold start covers even interactive workloads.",
+      "key_features": [
+        "Functions: Python decorator-based serverless GPU execution",
+        "Web Endpoints: Expose inference models as HTTP APIs instantly",
+        "Volumes: Distributed filesystem and model caching",
+        "Schedules & Queues: Batch and event workflows",
+        "Sandbox: Secure isolated code execution environment"
+      ],
+      "tech_stack_or_innovation": "Custom container runtime, sub-second cold start optimization, native Python SDK, distributed filesystem",
+      "target_customer": "AI startups, media/image/voice tools, financial quants, data science teams",
+      "business_model": "Usage-based pricing on GPU/CPU container hours + enterprise plan"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "ML model hosting platform. Modal differentiates by supporting broader workloads: general compute, web services, and batch."
+        },
+        {
+          "comparison": "Similar serverless GPU. Modal leads in SDK maturity and cold start optimization."
+        },
+        {
+          "comparison": "Hyperscalers. Modal differentiates on GPU, developer experience (DX), and pricing simplicity."
+        }
+      ],
+      "key_differentiator": "Combination of native Python SDK, sub-second cold start, and integrated GPU/CPU workloads.",
+      "moat": "Custom container runtime IP, developer lock-in through SDK workflow, multi-cloud GPU capacity access.",
+      "competitive_position_summary": "De facto default GPU backend among AI startups, a strong alternative to Replicate and hyperscalers."
+    },
+    "trending_reason": {
+      "summary": "Raised $80M in Series B in 2024 at a $700M valuation, with ARR growing quickly. Has become the default compute backend for AI builders such as Suno, Anthropic (some workloads), and Hugging Face.",
+      "catalysts": [
+        "2024 Series B of $80M at $700M valuation",
+        "Achieved sub-second cold start",
+        "Lock-in with AI builders like Suno and Replicate",
+        "Announced secured H100 GPU capacity"
+      ],
+      "growth_metrics": "ARR grew 5x+ in one year, thousands of AI startup customers, monthly GPU usage hours surging."
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global ML compute infrastructure market $80B+ by 2030, serverless GPU SOM $20B",
+      "market_trend": "Acceleration of AI startup infrastructure outsourcing, serverless GPU standardization, multi-cloud GPU capacity competition.",
+      "growth_potential": "Penetration of enterprise ML workloads, entry into training and fine-tuning markets, expansion of multi-region and on-prem options.",
+      "risks": [
+        "Competition from AWS and GCP serverless GPU offerings",
+        "GPU unit pricing and capacity volatility",
+        "Chase from later entrants in developer experience"
+      ],
+      "risk_mitigation": "Diversify GPU capacity, strengthen SDK and ecosystem lock-in, increase enterprise revenue share."
+    },
+    "related_links": [
+      {
+        "title": "Modal Official Website"
+      },
+      {
+        "title": "TechCrunch: Series B Coverage"
+      }
+    ],
+    "editor_pick_comment": "Founded by the person who built ML infrastructure at Spotify, the company was based on a simple vision: 'Let people call GPUs like Python functions.' Now, about half of AI startups are running on Modal."
+  },
+  "ponyai-2026": {
+    "tagline": "Autonomous driving from China — driverless robotaxi in Beijing and Guangzhou",
+    "category": [
+      "Autonomous Driving",
+      "Mobility",
+      "Robotaxi"
+    ],
+    "headquarters": {
+      "country_ko": "China"
+    },
+    "founders": [
+      {
+        "background": "Chief Architect of Baidu's autonomous driving division, Stanford PhD",
+        "notable_achievement": "Defined China's autonomous driving category; listed on NASDAQ in 2024, entering global capital markets"
+      },
+      {
+        "background": "Autonomous driving researcher at Baidu and Google, ACM ICPC champion",
+        "notable_achievement": "Designed core perception and planning systems for autonomous driving"
+      }
+    ],
+    "team_highlights": "Autonomous driving veterans from Baidu, Google, and Waymo; dual bases in China and US; thousands of hours of driverless driving data",
+    "product": {
+      "summary": "Operates L4 autonomous driving software 'PonyWorld' alongside robotaxi and autonomous trucking businesses. Runs driverless robotaxi services in Beijing, Shanghai, Guangzhou, and Shenzhen; holds California testing permit",
+      "problem_statement": "Urban mobility faces limitations from driver shortages, traffic accidents, and environmental burdens. Robotaxis must simultaneously achieve safety and acquire urban operational data—a high-difficulty problem",
+      "solution": "Own L4 autonomous driving stack 'PonyWorld' and city-level robotaxi operations. Converts mass-production vehicles through OEM partnerships with Toyota, BAIC, etc.; enters freight market via autonomous trucking subsidiary 'Pony AI Trucking'",
+      "key_features": [
+        "PonyWorld: L4 autonomous driving full-stack software",
+        "Pony Pilot: Robotaxi in four Chinese first-tier cities",
+        "Pony Trucking: Autonomous freight trucks",
+        "OEM partnerships (Toyota, BAIC, GAC)",
+        "California driverless test permit"
+      ],
+      "tech_stack_or_innovation": "Sensor fusion perception and planning, proprietary simulation platform, production-ready autonomous driving kit, city-specific HD maps",
+      "target_customer": "Mobility operators in Chinese first- and second-tier cities, autonomous driving OEM partners, freight and logistics companies",
+      "business_model": "Robotaxi fares + OEM autonomous driving licenses + freight autonomous driving revenue"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Peer competitor in Chinese autonomous driving. Pony.ai has an edge in production OEM partnerships and US permits"
+        },
+        {
+          "comparison": "China's largest robotaxi operator. Pony.ai differentiates via OEM neutrality and international expansion potential"
+        },
+        {
+          "comparison": "US robotaxi leader. Pony.ai differentiates via deep Chinese market presence and cost efficiency"
+        }
+      ],
+      "key_differentiator": "Driverless operations in four major Chinese cities + US permit + multi-OEM partnerships",
+      "moat": "Tens of millions of km of autonomous driving data, collaboration with Chinese government and cities, IP from production-ready autonomous driving kits",
+      "competitive_position_summary": "A leading listed company in China's autonomous driving category; forms a Big Three with WeRide and Baidu"
+    },
+    "trending_reason": {
+      "summary": "Entered capital markets with NASDAQ listing in November 2024; expanding driverless robotaxi operations to more cities in 2025; accelerating autonomous driving industrialization through strengthened production partnerships with Toyota and BAIC",
+      "catalysts": [
+        "NASDAQ listing in November 2024 (Ticker: PONY)",
+        "Driverless robotaxi operations in Beijing, Guangzhou, Shenzhen, Shanghai",
+        "Announced joint production of autonomous vehicles with Toyota",
+        "Spin-off and expansion of Pony Trucking subsidiary"
+      ],
+      "growth_metrics": "Over 40 million km of cumulative driverless driving, robotaxi fleet of 250+ vehicles, cumulative testing in 30+ cities"
+    },
+    "funding": {
+      "total_raised": "$1.5B+ (including IPO)",
+      "latest_round": {
+        "lead_investor": "NASDAQ listing"
+      },
+      "valuation_estimate": "Public — market cap around $4B (fluctuating)",
+      "funding_history": [
+        null,
+        null,
+        null,
+        {
+          "lead_investor": "NASDAQ listing"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global autonomous mobility market $400B+ by 2030; China robotaxi SOM $80B",
+      "market_trend": "Chinese cities easing policies on driverless operations, increasing OEM demand for autonomous driving kits, commercialization of autonomous freight trucks",
+      "growth_potential": "Expanding driverless fleet in Chinese first- and second-tier cities, revenue from OEM production licenses, commercialization of freight autonomous driving",
+      "risks": [
+        "US-China technology and capital market tensions",
+        "Autonomous driving accident and regulatory risk",
+        "Delayed monetization timeline"
+      ],
+      "risk_mitigation": "Prioritize monetization in China market, diversify OEM partnerships, diversify revenue in freight sector"
+    },
+    "related_links": [
+      {
+        "title": "Pony.ai Official Site"
+      },
+      {
+        "title": "Reuters: NASDAQ Listing Report"
+      }
+    ],
+    "editor_pick_comment": "The future that Waymo shows in the US is already everyday life in Chinese cities. At the center of it is Pony.ai, and now NASDAQ is pricing that bet."
+  },
+  "trm-labs-2026": {
+    "tagline": "Cryptocurrency money laundering & crime tracking infrastructure — blockchain intelligence used by governments and banks",
+    "category": [
+      "Blockchain Analytics",
+      "Regulatory Technology",
+      "Cybersecurity"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Former Bridgewater Associates, Colombian-American entrepreneur",
+        "notable_achievement": "Defined the blockchain intelligence category relied upon by governments, law enforcement, and banks"
+      },
+      {
+        "background": "Security engineer at Google and Apple, MIT Computer Science",
+        "notable_achievement": "Designed an on-chain analytics engine covering 23+ blockchains globally"
+      }
+    ],
+    "team_highlights": "Cyber investigators from FBI, IRS, and tax authorities; blockchain security researchers; former big tech security and ML engineers",
+    "product": {
+      "summary": "A SaaS platform that analyzes transaction and wallet graphs across 23+ blockchains in real time to detect money laundering, hacks, sanctions violations, and fraud patterns. Key customers include governments and banks such as FBI, IRS, U.S. Treasury OFAC, JPMorgan, Coinbase, and Citi.",
+      "problem_statement": "As cryptocurrencies enter the mainstream, tracking money laundering, sanctions violations, and hack proceeds has become a global regulatory issue, but there is a lack of infrastructure that can comprehensively analyze 23+ chains and provide court-grade traceability.",
+      "solution": "Integrates and indexes data from major blockchains like Bitcoin, Ethereum, Solana, and Tron, using ML-based clustering and labeling to identify exchange, mixer, hacker, and sanctioned wallets. Connects with law enforcement investigations, bank KYC, and exchange compliance workflows.",
+      "key_features": [
+        "TRM Forensics: Transaction tracing and visualization for law enforcement",
+        "TRM Compliance: KYC/AML screening for exchanges and banks",
+        "Chain Coverage: Integrated indexing of 23+ blockchains",
+        "Risk Score: Wallet and transaction risk assessment",
+        "Sanctions, Hack, and Scam Intelligence: Threat data feeds"
+      ],
+      "tech_stack_or_innovation": "Multi-chain data indexer, graph ML-based wallet clustering, labeling data assets, real-time risk scoring",
+      "target_customer": "Governments and law enforcement (FBI, IRS, OFAC, UK NCA), global banks and fintechs, cryptocurrency exchanges, card networks",
+      "business_model": "Enterprise SaaS licensing + multi-year government contracts + threat data feed subscriptions"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Leader in blockchain analytics category. TRM Labs is quickly catching up in government and bank market depth and multi-chain coverage."
+        },
+        {
+          "comparison": "European powerhouse. TRM Labs differentiates with U.S. government and OFAC proximity and full-stack multi-chain capabilities."
+        },
+        {
+          "comparison": "Analytics tool acquired by a card company. TRM Labs has advantages in independence and speed of technology refresh."
+        }
+      ],
+      "key_differentiator": "23+ chain coverage + deep penetration in government and bank markets + threat intelligence data assets",
+      "moat": "Long-term government and law enforcement contracts, labeling dataset and wallet intelligence IP, personnel from FBI and OFAC",
+      "competitive_position_summary": "In a duopoly with Chainalysis, a fast follower in government and multi-chain domains, benefiting from U.S. policy cycles."
+    },
+    "trending_reason": {
+      "summary": "After a $70M Series C in 2024, multi-year contracts with U.S. Treasury OFAC and FBI expanded, with additional capital and valuation appreciation expected in late 2025. Key beneficiary of the Trump administration's 'crypto-friendly + strong anti-money laundering' policy.",
+      "catalysts": [
+        "2024 Series C $70M, $600M+ valuation",
+        "Multi-year contract expansion with U.S. Treasury OFAC and FBI",
+        "Growing adoption by global banks like JPMorgan and Citi",
+        "Media exposure from tracking North Korean and Russian hack proceeds"
+      ],
+      "growth_metrics": "Government customers in 30+ countries, hundreds of global banks and exchanges, ARR doubling annually"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global RegTech and blockchain analytics market $30B+ by 2030, SOM for government, banks, and exchanges $10B",
+      "market_trend": "Accelerating institutional adoption of crypto, intensifying global anti-money laundering enforcement, new regulations for stablecoins and CBDCs",
+      "growth_potential": "Expansion of multi-year government contracts, penetration into card networks and fintechs, extension of labeling to new chains, DeFi, and NFTs",
+      "risks": [
+        "Intensified market competition with Chainalysis",
+        "Cryptocurrency cycle and policy volatility",
+        "Conflict with privacy regulations"
+      ],
+      "risk_mitigation": "Increasing share of long-term government contracts, diversifying revenue across multiple domains (banks, fintechs), strengthening data governance certifications"
+    },
+    "related_links": [
+      {
+        "title": "TRM Labs Official Site"
+      },
+      {
+        "title": "WSJ: U.S. Treasury Key Partner Report"
+      },
+      {
+        "title": "Reuters: Bybit Hack Tracking"
+      }
+    ],
+    "editor_pick_comment": "The heaviest fight around cryptocurrency isn't about price—it's about how far money can be traced. Governments and banks ask that question to TRM Labs."
+  },
+  "lattice-2026": {
+    "tagline": "The operating system for managing people — HR has started working with data",
+    "category": [
+      null,
+      "Enterprise SaaS",
+      "Performance Management"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Y Combinator alum founder, Sam Altman's brother",
+        "notable_achievement": "Defined the performance management SaaS category, grew to a $3B+ valuation company"
+      },
+      {
+        "background": "Former fintech and SaaS engineer",
+        "notable_achievement": "Designed Lattice's core platform architecture"
+      }
+    ],
+    "team_highlights": "Y Combinator network, veteran HR and SaaS executives, actively hiring data and AI talent",
+    "product": {
+      "summary": "'People Platform' integrating performance management, 1:1s, OKRs, engagement surveys, HRIS, and payroll in a single platform. AI Lattice assists managers with writing feedback, 1:1s, and reviews.",
+      "problem_statement": "People management at companies runs on separate tools for HRIS, reviews, OKRs, and surveys, scattering data, while managers spend excessive time writing reviews, 1:1s, and feedback.",
+      "solution": "Bundles OKRs, 1:1s, 360 reviews, engagement, HRIS, and payroll into a single platform, with AI Lattice automating 1:1 note summaries, review drafts, and survey analysis. Provides a single source of truth for 'people data' to managers, HR, and executives.",
+      "key_features": [
+        "Performance: 360 reviews and calibration",
+        "Goals: OKR and KPI tracking",
+        "1:1 & Feedback: notes, agendas, continuous feedback",
+        "Engagement: pulse surveys and eNPS",
+        "HRIS & Payroll: core HR system integration",
+        "AI Lattice: automated notes, review drafts, survey analysis"
+      ],
+      "tech_stack_or_innovation": "Enterprise multi-tenant SaaS, AI text summarization and generation, people data modeling, multi-country compliance",
+      "target_customer": "Companies with 100 to 10,000 employees, globally distributed organizations, HR and operations executives",
+      "business_model": "Annual per-user SaaS subscription, module-based pricing plus HRIS and payroll options"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Enterprise HR giant. Lattice has an advantage in mid-market and growth-stage SaaS-friendly UX and fast deployment."
+        },
+        {
+          "comparison": "Engagement and culture leader. Lattice differentiates with the breadth of its performance, OKR, and HRIS integration."
+        },
+        {
+          "comparison": "Similar performance management. Lattice leads in AI and HRIS integration and enterprise penetration."
+        }
+      ],
+      "key_differentiator": "Integrated People Platform spanning performance + OKR + 1:1 + HRIS + payroll, automated by AI Lattice",
+      "moat": "People data lock-in from thousands of companies, modular integration architecture, global compliance infrastructure",
+      "competitive_position_summary": "The leading growth-stage and mid-market People Platform category player, emerging as a Workday alternative."
+    },
+    "trending_reason": {
+      "summary": "In 2024, the addition of HRIS and payroll lines turned the People Platform vision into full reality; after the 2025 launch of AI Lattice, revenue accelerated, sustaining a $3B+ valuation.",
+      "catalysts": [
+        "Launch of HRIS and payroll lines positions Lattice as a Workday alternative",
+        "Launch of AI Lattice manager assistant",
+        "Increasing share of enterprise lock-in",
+        "Accelerating penetration into globally distributed organizations"
+      ],
+      "growth_metrics": "ARR $200M+, 5,000+ customer companies, operating in 60+ countries globally"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global HR tech market $50B+ by 2030, People Platform SOM $15B",
+      "market_trend": "Distributed organizations and hybrid work becoming the norm, rising demand for AI manager-assist tools, trend toward HRIS and payroll integration",
+      "growth_potential": "Expanded enterprise penetration, entry into global payroll market, launch of additional AI Lattice modules",
+      "risks": [
+        "Competition with Workday, BambooHR, and Rippling",
+        "HR's caution toward AI automation",
+        "Macro employment environment volatility"
+      ],
+      "risk_mitigation": "Emphasizing modular integration value, security and compliance certifications, AI safety and transparency policies"
+    },
+    "related_links": [
+      {
+        "title": "Lattice official site"
+      },
+      {
+        "title": "TechCrunch: HRIS launch coverage"
+      },
+      {
+        "title": "Introduction to AI Lattice"
+      }
+    ],
+    "editor_pick_comment": "Performance reviews are one of the most time-consuming rituals of the corporate year. Lattice is inserting data and AI into that process, proving the thesis that 'HR is an operating system.'"
+  },
+  "replicate-2026": {
+    "tagline": "Call open-source models with one line — cloud functions for AI models",
+    "category": [
+      "AI Infrastructure",
+      null,
+      "Developer Tools"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Former Open Source Director at Docker, main developer of Docker Compose",
+        "notable_achievement": "Core designer of Docker Compose, creator of Cog, an open-source ML container standard"
+      },
+      {
+        "background": "ML engineer from Spotify and Quartz",
+        "notable_achievement": "Designed Replicate's inference infrastructure and model hosting system"
+      }
+    ],
+    "team_highlights": "Infrastructure and ML engineers from Docker, Spotify, and Stripe; recruited many open-source maintainers",
+    "product": {
+      "summary": "Model hosting and inference platform that containerizes open-source AI models and lets you call them with a single line of API. Can instantly run tens of thousands of models like SDXL, Flux, and Llama; also deploy your own models after packaging with Cog",
+      "problem_statement": "Serving open-source AI models directly requires complex infrastructure: GPUs, containers, scaling, caching. Developers want a simple way to quickly experiment and put models into production",
+      "solution": "Containerize models with the Cog open-source packaging tool and instantly call them via API on Replicate cloud. Serverless ML inference with pay-per-use eliminates barriers",
+      "key_features": [
+        "Replicate Run: Instant API to run open-source models",
+        "Cog: Open-source tool for containerizing ML models",
+        "Custom Models: Hosting and fine-tuning user models",
+        "Webhooks & Streaming: Asynchronous inference workflows",
+        "Library of tens of thousands of community models"
+      ],
+      "tech_stack_or_innovation": "Cog open-source container standard, GPU serverless inference, cold-start optimization, model caching",
+      "target_customer": "AI product builders, indie developers, design/media tool startups, enterprise ML teams",
+      "business_model": "Pay-per-use inference (per second) + enterprise plans"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Strong open-source hub. Replicate has an edge in UX for instantly running diverse community models"
+        },
+        {
+          "comparison": "Strong serverless GPU infrastructure. Replicate differentiates with model hosting and community model library"
+        },
+        {
+          "comparison": "GPU compute infrastructure. Replicate focuses more on model catalog and developer experience"
+        }
+      ],
+      "key_differentiator": "Cog open-source standard + instantly runnable community model library + serverless GPU",
+      "moat": "Tens of thousands of community models, developer lock-in, Cog open-source ecosystem, cold-start and caching infrastructure IP",
+      "competitive_position_summary": "De facto default in the open-source model inference platform category, strong in indie and mid-market segments"
+    },
+    "trending_reason": {
+      "summary": "After a $40M Series B in 2024, revenue surged due to booming demand for SDXL, Flux image models, and LLMs, positioning Replicate as the default inference backend for design and media tool startups",
+      "catalysts": [
+        "2024 Series B $40M",
+        "Surge in demand for image models like Flux and SDXL",
+        "Lock-in with design and media tool startups",
+        "Expansion of Cog open-source ecosystem"
+      ],
+      "growth_metrics": "Hundreds of millions of monthly inference calls, tens of thousands of hosted models, hundreds of thousands of developer users"
+    },
+    "funding": {
+      "valuation_estimate": ">$350M (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global ML inference infrastructure market $50B+ by 2030, serverless GPU inference SOM $15B",
+      "market_trend": "Soaring demand for open-source model inference, accelerating ML integration in design/media/coding tools, standardization of serverless GPU",
+      "growth_potential": "Enterprise model hosting lineup, entry into multimodal and video model market, industry adoption of Cog standard",
+      "risks": [
+        "Competition from Hugging Face, Modal, and hyperscalers",
+        "Margin pressure from GPU price fluctuations",
+        "Open-source model license disputes"
+      ],
+      "risk_mitigation": "Strengthen Cog open-source ecosystem, improve margins with cold-start optimization, diversify enterprise revenue"
+    },
+    "related_links": [
+      {
+        "title": "Replicate official site"
+      },
+      {
+        "title": "TechCrunch: Series B coverage"
+      },
+      {
+        "title": "Cog open-source"
+      }
+    ],
+    "editor_pick_comment": "Just as Docker changed code deployment, Replicate turns ML models into 'a single line of API'. Anyone who's built an AI product for the first time has reached for this company at some point."
+  }
+}

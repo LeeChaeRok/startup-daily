@@ -4,6 +4,7 @@
  * so it can be exercised offline (see `--candidates` in generate-daily.mjs).
  */
 import { parseAmount, splitAmount } from '../../src/lib/amount.js'
+import { SECTOR_KEYS, canonicalSector, sectorFor } from '../../src/lib/sectors.js'
 
 /* ---------- Selection rules ---------- */
 
@@ -394,6 +395,88 @@ export async function verifyLinks(profiles, { searched, checkedAt, fetchImpl, lo
     }
   })
   return { profiles: out, kept, dropped }
+}
+
+/* ---------- Sector pools and the featured five (_workspace/14 §1-2, §1-3) ---------- */
+
+/** The model's own sector key when it is one of the pools, else the pool it was found for, else a guess. */
+export function poolSector(profile, asked = null) {
+  const own = canonicalSector(String(profile?.sector || '').trim().toLowerCase())
+  if (SECTOR_KEYS.includes(own)) return own
+  if (SECTOR_KEYS.includes(asked)) return asked
+  return sectorFor(profile).key
+}
+
+/** At most `max` profiles per sector, in the given order; the rest come back as `over`. */
+export function capPerSector(profiles, max = 3) {
+  const count = new Map()
+  const kept = []
+  const over = []
+  for (const p of profiles) {
+    const n = count.get(p.sector) || 0
+    if (n < max) {
+      count.set(p.sector, n + 1)
+      kept.push(p)
+    } else over.push(p)
+  }
+  return { kept, over }
+}
+
+const daysBetween = (a, b) => (Date.parse(a) - Date.parse(b)) / 864e5
+
+/**
+ * How strong a pick is for the shared five: the model's attention score (1-5, from discovery),
+ * a fresh "why now" (dated press or round in the last 30 / 90 days) and the links that passed
+ * verification. Deterministic: the same pool always gives the same five.
+ */
+export function featureScore(p, date) {
+  const attention = Math.min(5, Math.max(1, Number(p.attention) || 3))
+  const dated = [p.funding?.latest_round?.date, ...(p.trending_reason?.media_mentions || []).map((m) => m.date)]
+    .filter((d) => /^\d{4}-\d{2}/.test(d || ''))
+    .map((d) => (d.length === 7 ? `${d}-15` : d.slice(0, 10)))
+  const freshest = dated.length ? Math.min(...dated.map((d) => daysBetween(date, d)).filter((n) => n >= -3)) : Infinity
+  const recency = freshest <= 30 ? 2 : freshest <= 90 ? 1 : 0
+  const links = (p.trending_reason?.media_mentions || []).length + (p.related_links || []).length
+  return attention * 2 + recency + Math.min(5, links) * 0.5
+}
+
+/**
+ * The shared five from the day's pool: different sectors, at most `maxPerCountry` per country,
+ * highest score first (ties: pool order). Returns ids.
+ */
+export function pickFeatured(pool, { date, want = 5, maxPerCountry = 2 } = {}) {
+  const ranked = pool
+    .map((p, i) => ({ p, i, score: featureScore(p, date) }))
+    .sort((a, b) => b.score - a.score || a.i - b.i)
+  const sectors = new Set()
+  const countries = new Map()
+  const ids = []
+  for (const { p } of ranked) {
+    if (ids.length >= want) break
+    const country = countryOf(p)
+    if (sectors.has(p.sector) || (country && (countries.get(country) || 0) >= maxPerCountry)) continue
+    sectors.add(p.sector)
+    if (country) countries.set(country, (countries.get(country) || 0) + 1)
+    ids.push(p.id)
+  }
+  // a thin day (few sectors) still gets five: relax the sector rule, keep the country cap
+  for (const { p } of ranked) {
+    if (ids.length >= want) break
+    const country = countryOf(p)
+    if (ids.includes(p.id) || (country && (countries.get(country) || 0) >= maxPerCountry)) continue
+    if (country) countries.set(country, (countries.get(country) || 0) + 1)
+    ids.push(p.id)
+  }
+  return ids
+}
+
+/** The day file's order: the featured five first (in pick order), then the pool by sector. */
+export function orderDay(records, featuredIds) {
+  const featured = featuredIds.map((id) => records.find((r) => r.id === id)).filter(Boolean)
+  const rest = records
+    .filter((r) => !featuredIds.includes(r.id))
+    .sort((a, b) => SECTOR_KEYS.indexOf(a.sector) - SECTOR_KEYS.indexOf(b.sector))
+  return [...featured.map((r) => ({ ...r, featured: true })), ...rest.map((r) => ({ ...r, featured: false }))]
 }
 
 /* ---------- Merge ---------- */

@@ -1,12 +1,15 @@
 /**
  * The list view of a company: what the issue list, explore, saved and search need.
- * Shipped as /data/index.json (about a tenth of startups.json) so the first screen
- * can paint before the full records arrive. Used by vite.config.js at build time.
+ * Shipped as /data/index.json (about a tenth of the full records) so the first screen
+ * can paint before a day's full records (/data/days/<date>.json) arrive. Used by vite.config.js at build time.
  */
 export function liteRecord(s) {
   return {
     id: s.id,
     date: s.date,
+    // false: a sector-pool company that is not in the day's shared five (_workspace/14)
+    featured: s.featured !== false,
+    sector: s.sector,
     name_ko: s.name_ko,
     name_en: s.name_en,
     tagline: s.tagline,

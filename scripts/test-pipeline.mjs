@@ -1,6 +1,6 @@
 // Guard tests for the daily pipeline: duplicate detection, amount normalization, logo checks.
 // No network, no LLM. Run: npm run test:pipeline
-import { companyKey, dropDuplicates, fixAmount, merge, normalize, registrableDomain, selectCandidates, stripCitations } from './lib/pipeline.mjs'
+import { capPerSector, companyKey, dropDuplicates, featureScore, fixAmount, merge, normalize, orderDay, pickFeatured, poolSector, registrableDomain, selectCandidates, stripCitations } from './lib/pipeline.mjs'
 import { checkImage, iconLinks, imageSize, sniffType } from './lib/logos.mjs'
 
 let fails = 0
@@ -152,6 +152,25 @@ eq('icon links: touch first, then largest icon', iconLinks(`
   <link rel="stylesheet" href="/a.css">`, 'https://x.com/en/'), [
   'https://cdn.x.com/touch.png', 'https://x.com/icon-192.png', 'https://x.com/favicon-16.png', 'https://x.com/favicon.ico',
 ])
+
+/* ---------- sector pools and the featured five ---------- */
+eq('own sector key kept', poolSector({ sector: 'Health' }, 'ai'), 'health')
+eq('devtools folds into infra', poolSector({ sector: 'devtools' }), 'infra')
+eq('unknown key → asked pool', poolSector({ sector: 'space' }, 'mobility'), 'mobility')
+eq('no key, no pool → category guess', poolSector({ category: ['핀테크'] }), 'fintech')
+const P = (id, sector, country, attention = 3, extra = {}) => ({ id, sector, attention, headquarters: { country_ko: country }, ...extra })
+eq('cap per sector', capPerSector([P('a', 'ai'), P('b', 'ai'), P('c', 'ai'), P('d', 'ai'), P('e', 'health')], 3).kept.map((p) => p.id), ['a', 'b', 'c', 'e'])
+const recent = { funding: { latest_round: { date: '2026-10' } } }
+eq('fresh round scores higher', featureScore(P('x', 'ai', '미국', 3, recent), '2026-10-31') > featureScore(P('y', 'ai', '미국', 3), '2026-10-31'), true)
+const pool = [
+  P('ai1', 'ai', '미국', 5), P('ai2', 'ai', '미국', 4), P('h1', 'health', '미국', 4), P('f1', 'fintech', '미국', 4),
+  P('c1', 'climate', '한국', 2), P('r1', 'robotics', '독일', 1), P('m1', 'mobility', '일본', 3),
+]
+eq('one per sector, two per country, best first', pickFeatured(pool, { date: '2026-10-31' }), ['ai1', 'h1', 'm1', 'c1', 'r1'])
+eq('deterministic', pickFeatured(pool, { date: '2026-10-31' }), pickFeatured([...pool], { date: '2026-10-31' }))
+eq('thin day relaxes sectors', pickFeatured([P('a', 'ai', '미국', 5), P('b', 'ai', '한국', 4), P('c', 'ai', '일본', 3)], { date: '2026-10-31' }), ['a', 'b', 'c'])
+const ordered = orderDay([P('x', 'ai', '미국'), P('y', 'health', '미국'), P('z', 'fintech', '미국')], ['z'])
+eq('featured first and flagged', ordered.map((r) => [r.id, r.featured]), [['z', true], ['y', false], ['x', false]])
 
 console.log(fails ? `\n${fails} failed` : '\nall passed')
 process.exit(fails ? 1 : 0)

@@ -12,9 +12,9 @@ npm run build && npm run lint
 실패 시 로그를 보고서에 그대로 첨부한다.
 
 ## 2. 데이터 경계 교차 검증
-`src/data/startups.json`의 실제 레코드로 확인한다. 스크립트 예:
+`src/data/days/*.json`의 실제 레코드로 확인한다. 스크립트 예:
 ```bash
-node -e 'const d=require("./src/data/startups.json");/* 누락 필드 집계 */'
+node --input-type=module -e 'const d=(await import("./scripts/lib/store.mjs")).readAll();/* 누락 필드 집계 */'
 ```
 - 필드 누락(founders 빈 배열, funding 없음, funding_history 내 investors/lead_investor 혼재, related_links의 label/title 혼재)에서 렌더가 깨지지 않는가.
 - 긴 텍스트(태그라인, 회사명), 많은 카테고리, 비정형 company_stage("Public (NASDAQ: RXRX)")에서 레이아웃이 넘치지 않는가.

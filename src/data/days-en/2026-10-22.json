@@ -1,0 +1,696 @@
+{
+  "deepfine-deepfine-2026": {
+    "tagline": "Industrial AI agent platform connecting on-site operations through smart glasses and spatial AI",
+    "category": [
+      "Spatial computing",
+      "Industrial AI agents",
+      "Smart glasses SaaS"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO (Representative Director). The only founder information confirmed as a founding member and representative figure. No co-founder information has been confirmed",
+        "background": "Founded the company after about 18 years at an IT company, rising from new hire to general director. While preparing for an AI-related doctoral program, he decided to start the company, stating that he believed the center of industry would shift to AI",
+        "notable_achievement": "At the company level, it won the CES 2025 Innovation Award and is leading projects with public institutions and large corporations, including Korea Western Power. In July 2026, it announced its participation as a co-research institution in a five-year national strategic research project led by ETRI (KRW 45B total), where it is responsible for developing spatial alignment and VPS technology"
+      }
+    ],
+    "team_highlights": "Since its founding in 2019, CEO Kim Hyeon-bae's consistent focus on one direction (smart glasses-based industrial solutions) has drawn external recognition. In a 2024 interview, he said that in the company's second year, funding was barely enough to last two months. Employee counts vary widely across sources: Tracxn lists 23 as of April 2026, Rocketpunch lists 38, and JobKorea lists 57 (est., based on data as of end-2024), among others. The headquarters address is confirmed as Yongsan-gu, Seoul, but Rocketpunch lists Siheung, Gyeonggi-do, so the latest data needs to be verified. The company says it developed spatial positioning technology such as VPS and vision AI in-house, and emphasizes that it handles the entire process internally, from device development to platform",
+    "product": {
+      "summary": "Centers on DAO (DEEP.FINE AR.ON), an industrial AI solution that lets workers wearing smart glasses check drawings, search manuals, perform checklists, log work, and collaborate remotely using voice commands alone, and DSC (DEEP.FINE Spatial Crafter), which creates 3D data of indoor and outdoor spaces using only a smartphone. In its August 2026 investment announcement, the company described it as an industrial AI agent platform that connects with WMS, ERP, and MES",
+      "problem_statement": "Industrial field workers rely on paper documents or tablets to find drawings and manuals, which ties up their hands and takes time. GPS does not work indoors, and QR code methods become less scalable as the number of equipment units grows. There is also the problem that recording and managing spaces in 3D without specialized equipment is difficult",
+      "solution": "DAO uses vision AI to recognize equipment tags or QR codes and displays the equipment's history and drawings within the user's field of view, while handling operations and queries through an LLM-based voice interface. DSC scans a space with a camera and embeds equipment locations, hazard zones, and inspection targets as digital data. VPS determines indoor position and orientation to connect the two functions",
+      "key_features": [
+        "Voice-command-based drawing and manual lookup, checklist execution, and work logging (DAO)",
+        "Vision Assist: recognizes equipment tag numbers or QR codes to display equipment information and history (update announced April 2026)",
+        "Remote collaboration feature in which managers share workers' views and give instructions",
+        "DSC for creating 3D spatial data with a smartphone or tablet, and AR guidance based on indoor positioning (VPS)",
+        "Feature linking past inspection history and defect data to improve work accuracy",
+        "Integration with existing enterprise systems such as WMS, ERP, and MES (SaaS direction)"
+      ],
+      "tech_stack_or_innovation": "The core is a proprietary VPS (visual positioning system) and transformer-based vision AI that aligns drawings with real-time AR. 2D image recognition (DAO) and 3D spatial recognition (DSC) are used separately, while LLMs play a supporting role in voice Q&A and automatic 3D content generation. The company says it has proprietary technology from devices through to the platform, but the smart glasses hardware itself appears to use external devices (public materials do not specify hardware manufacturing)",
+      "target_customer": "Large enterprises in logistics, manufacturing, shipbuilding and heavy industry, defense, and MRO (equipment maintenance) sites. Customers mentioned in public materials include large corporations such as Hanjin Parcel, major domestic logistics companies, and shipbuilders. The company signed an application agreement with Korea Western Power for power generation facility sites. It said it secured the Gyeonggi Provincial Government as its first customer in 2020",
+      "business_model": "Initially, it supplied smart glasses devices and software as a package. Recently, it has been transitioning to an enterprise SaaS platform that integrates with internal corporate systems. It cited expanding SaaS in logistics and MRO and building industry-specific standard models as uses for its investment funds. Pricing and revenue breakdown have not been disclosed"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "VIRNECT",
+          "comparison": "Has provided remote support solutions based on industrial smart glasses since 2017, and is reportedly pursuing mass production of its own smart glasses. It appears to be the most direct remote collaboration competitor in Korea. DEEP.FINE claims differentiation by adding spatial recognition and VPS"
+        },
+        {
+          "name": "SMARTWORKER",
+          "comparison": "An Android-based remote work support platform usable across multiple devices, including smartphones, smart glasses, tablets, and RealWear devices. Its strengths are device neutrality and multi-party calling. Compared with DEEP.FINE, its vision AI and 3D spatial data capabilities are not clearly evident in public materials"
+        },
+        {
+          "name": "PNC Solution",
+          "comparison": "Developed MetaLens, a finished industrial smart glasses product, and supplies it to manufacturing, defense, and energy sites, also offering AR remote collaboration. It leans toward finished hardware products, so its focus differs from DEEP.FINE's software and spatial data platform, but the two could compete for customer budgets"
+        },
+        {
+          "name": "VSight (overseas)",
+          "comparison": "An AR remote support and digital work instruction platform that runs on multiple industrial smart glasses, including RealWear, Vuzix, and Rokid. It offers broad device compatibility and promotes AI copilot features, but does not emphasize indoor positioning based on its own VPS and spatial maps as DEEP.FINE does"
+        },
+        {
+          "name": "RealWear (overseas)",
+          "comparison": "An industrial smart glasses hardware company with voice control capability. Since it sells the devices themselves, it could be a partner or compatibility target for DEEP.FINE rather than purely a competitor"
+        }
+      ],
+      "key_differentiator": "A structure that creates 3D maps of on-site spaces using only a smartphone, determines indoor position without GPS using proprietary VPS, and layers work instructions and AI agents on top of that spatial data. Reports say investors valued this combined with deployment experience at logistics, shipbuilding, and defense sites",
+      "moat": "Spatial data accumulated site by site and industry domain knowledge are described as the core moat. The company also aims for a structure where integration with internal corporate systems (WMS, ERP, MES) creates switching costs once adopted. However, public materials do not confirm whether this is actually lowering customer churn",
+      "competitive_position_summary": "A mid-sized startup competing in Korea's industrial smart glasses remote collaboration market alongside VIRNECT, SMARTWORKER, and others. Its proprietary spatial recognition and VPS are differentiating factors, but public data to independently verify its customer count and revenue scale is limited. Participation in national defense-related research projects appears to be a signal that strengthens technical credibility"
+    },
+    "trending_reason": {
+      "summary": "Closed and announced a KRW 10B Series B round in August 2026. The investment will be used to advance industrial AI agents, expand logistics and MRO SaaS, and prepare for overseas expansion. As domestic VC interest in the smart glasses market grew over the same period, DEEP.FINE was mentioned in related articles",
+      "catalysts": [
+        "Announcement of KRW 10B Series B funding on August 17–18, 2026 (participants include Hyosung Ventures, POSCO Technology Investment, and LIG D&A-IBKC)",
+        "Featured in a late July 2026 article on smart glasses market growth and expanding startup investment, introduced as a company playing the 'brain' role",
+        "Vision Assist update announced in April 2026 (outside the 90-day window but referenced as evidence of product direction). As of April, the company said Vision Assist was being used for cable connection work at a major domestic shipbuilder's site",
+        "Announcement of participation as a co-research institution in a KRW 45B, five-year national research project led by ETRI, July 2026 (outside the 90-day window but evidence of defense and military expansion)"
+      ],
+      "growth_metrics": "The company's 2024 revenue is approx. KRW 1.84B according to JobKorea data (external estimate, not an official company announcement). Cumulative funding has been announced at approx. KRW 18B. There is a reference to '50-plus large corporate clients' (April 2025 report), but the exact number of contracts has not been confirmed. Revenue growth rate and user numbers are undisclosed",
+      "media_mentions": [
+        {
+          "source": "Unicorn Factory",
+          "title": "DEEP.FINE Raises KRW 10B in Series B, Kicks Off Solution Upgrades and Global Expansion"
+        },
+        {
+          "source": "Edaily",
+          "title": "DEEP.FINE Raises KRW 10B in Series B to Advance Industrial AI Agents"
+        },
+        {
+          "source": "Venture Square",
+          "title": "DEEP.FINE Raises KRW 10B in Series B, Turning Site-by-Site AI Deployments into a Recurring Revenue Platform"
+        },
+        {
+          "source": "Wowtale",
+          "title": "DEEP.FINE Raises KRW 10B in Series B, Cumulative Funding Reaches KRW 18B"
+        },
+        {
+          "source": "Unicorn Factory",
+          "title": "Smart Glasses Growth Takes Off as Money Flows Into Domestic Startups"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Approx. KRW 18B (cumulative, per company announcement, as of August 2026)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "KRW 10B",
+        "lead_investor": "Undisclosed (no source confirming a sole lead investor)",
+        "notable_investors": [
+          "Hyosung Ventures",
+          "POSCO Technology Investment",
+          "LIG D&A-IBKC (some reports list it as IBK Capital)"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "amount": "KRW 6.5B",
+          "lead_investor": "Undisclosed (reported as involving IBK Industrial Bank of Korea, Korea Technology Finance Corporation, and Smilegate XR Content Fund)"
+        },
+        {
+          "amount": "KRW 10B",
+          "lead_investor": "Undisclosed (involving Hyosung Ventures, POSCO Technology Investment, and LIG D&A-IBKC)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed. No public market size data for industrial smart glasses or spatial computing was found, and no company-internal estimate has been confirmed",
+      "market_trend": "As big tech companies such as Meta, Alibaba, and Samsung Electronics launch AI smart glasses one after another, domestic VCs are increasing investment in related startups. On industrial sites, the shift toward replacing paper documents and tablets continues. Declining device prices and the spread of AI voice interfaces are progressing together",
+      "growth_potential": "Expansion of SaaS in logistics and MRO, along with defense and national research project participation, appear to be the main growth drivers. A structural advantage is that as spatial data accumulates, it becomes easier to build industry-standard models. Overseas expansion is at the preparation stage, and specific countries and contracts have not been confirmed (est.)",
+      "risks": [
+        "Dependence on smart glasses devices: risk of performance issues or discontinuation of specific devices",
+        "Transition from large enterprise PoCs to commercial contracts may be slow",
+        "Possible entry of early competitors such as VIRNECT and big tech platform companies",
+        "Lack of public materials to independently verify customer count and revenue scale",
+        "Basic information such as employee count and headquarters location varies across sources and requires verification"
+      ],
+      "risk_mitigation": "The company is pursuing both a bundled device and software model and a transition to SaaS. It has chosen a strategy of reducing customer churn through integration with internal corporate systems. Participation in defense and national research projects is strengthening technical credibility, and it appears to be using existing investors' industry networks as a channel for customer acquisition. However, the actual results of these strategies still require further verification"
+    },
+    "related_links": [
+      {
+        "title": "DEEP.FINE official website"
+      },
+      {
+        "title": "THE VC: DEEP.FINE company profile"
+      },
+      {
+        "title": "The Electronic Times: DEEP.FINE Leads Spatial Computing Market with AI and XR (includes founder interview)"
+      },
+      {
+        "title": "MoneyToday: DEEP.FINE Joins KRW 45B National Project (ETRI Joint Research)"
+      },
+      {
+        "title": "MoneyToday: Ditched Barcode Scanners, Interview with DEEP.FINE CEO Kim Hyeon-bae"
+      },
+      {
+        "title": "Venture Square: DEEP.FINE Signs Business Agreement with Korea Western Power"
+      },
+      {
+        "title": "VSight: Industrial Smart Glasses AR Remote Support (for competitive reference)"
+      }
+    ],
+    "editor_pick_comment": "The question that will define this company's next two years is whether its technology for creating 3D spaces from smartphone cameras and determining indoor position without GPS can be turned into recurring revenue at logistics and shipbuilding sites."
+  },
+  "the-phage-inc-2026": {
+    "tagline": "A Tokyo health tech that uses AI to predict post-meal blood glucose, linking diabetes management to personalized prevention.",
+    "category": [
+      "Digital Healthcare",
+      "AI Predictive Medicine",
+      "CGM (Continuous Glucose Monitoring) Data Analysis"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "Born in Tokyo in 1989. After graduating from Aoyama Gakuin University, he worked at several medical device manufacturers, contributing to the revision of clinical guidelines and the development of new medical devices. He has stated that he conceived the idea for the company after seeing the change brought about by the Apple Watch, which allowed ordinary people to routinely obtain biometric data during his tenure at a previous workplace that dealt with biometric information-related businesses.",
+        "notable_achievement": "After founding the company in July 2021, selected for the Plug and Play Japan 2023 Summer/Fall batch. Raised ¥570M in the first close of Series A in October 2026 and led a capital and business alliance with Tokio Marine Holdings."
+      },
+      {
+        "role": "Co-founder (Designer)",
+        "background": "Introduced as a designer and co-founder on the Crunchbase profile. Other career details not confirmed.",
+        "notable_achievement": "Undisclosed (No confirmed public achievements)"
+      }
+    ],
+    "team_highlights": "Based on job postings, the company promotes itself as a small, elite team of about 30 people, currently recruiting for product development, product management, and HR/general affairs positions. The team also includes medical professionals such as registered dietitians. The official website announced that the head office moved to Nagatacho, Chiyoda-ku, in October 2026. According to officially disclosed profiles, the confirmed founding members are Tokunaga and Shiren.",
+    "product": {
+      "summary": "A company with two pillars: the diabetes clinical support app \"Glucose Flight,\" which uses AI to analyze post-meal blood glucose fluctuations and provide lifestyle improvement suggestions, and the blood glucose-based foundation model \"CGFM\" pre-trained on continuous glucose monitoring (CGM) data.",
+      "problem_statement": "Patients with diabetes and prediabetes find it difficult to understand the relationship between meals and glucose responses on an individual basis, and medical professionals also struggle to provide nutritional guidance tailored to a patient's lifestyle rhythm. The company believes this problem should be solved by focusing on blood glucose.",
+      "solution": "A system that evaluates CGM-derived blood glucose data on a per-meal basis to create personalized dietary and lifestyle behavioral suggestions, which are then shared with medical professionals to facilitate guidance. The strategy is to layer CGFM as a common foundation model on top of this, enabling multiple prediction tasks to be handled by a single model.",
+      "key_features": [
+        "Evaluates meal content based on post-meal blood glucose fluctuations and supports daily meal management",
+        "Visualizes lifestyle data to facilitate information sharing with healthcare professionals",
+        "Announced a partnership in May 2025 to automatically send Abbott's FreeStyle Libre data to the app",
+        "CGFM: A concept of pre-training on large-scale continuous glucose data to perform future blood glucose fluctuation prediction, metabolic type classification, and health risk assessment with a single model",
+        "Started providing a blood glucose management program for corporate health insurance associations and local governments to link with the health and insurance domains"
+      ],
+      "tech_stack_or_innovation": "The core is an approach that learns blood glucose patterns from individual users into a common foundation model. Instead of creating separate AI for each use case, the structure reuses a single foundation model for multiple purposes. The training data is time-series data from CGM devices, and the company has also disclosed a method of scoring blood glucose responses per meal using its own algorithms. However, technical details such as model architecture, parameter size, and accuracy metrics were not confirmed in publicly available materials.",
+      "target_customer": "Primary customers are hospitals and clinics that treat diabetes and their patients. The app is currently provided only to certain hospitals/clinics and R&D participants. Secondary customers include corporate health insurance associations, local governments, food manufacturers (R&D support), and insurance companies (Tokio Marine Group). The Fukui Prefecture trial involved 4,165 adults at risk of diabetes.",
+      "business_model": "B2B2C structure. It sells programs to institutional customers such as medical institutions, insurers, and local governments, while simultaneously conducting R&D support services for food and medical companies. The capital and business alliance with the insurance group is being explored for joint commercialization of lifestyle disease severity prevention services. Pricing and revenue share are not disclosed."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "No confirmed direct competitors",
+          "comparison": "In this survey, no public startup in Japan selling the same post-meal blood glucose prediction SaaS as THE PHAGE was identified. No names were included without basis."
+        },
+        {
+          "name": "Dexcom (Indirect competition, device major)",
+          "comparison": "As a CGM device manufacturer, there are analyses that it has filed at least 5 patents related to machine learning-based blood glucose prediction in Japan between 2023 and 2025. If the device side internalizes prediction functionality, it could overlap with THE PHAGE's analytics layer. However, THE PHAGE aims for a foundation model not tied to a specific device."
+        },
+        {
+          "name": "Chiba University Hideyoshi Kawakami Research Team (Academic Alternative)",
+          "comparison": "An academic team is developing an AI foundation model based on CGM data, stating it is considering pre-disease intervention. As it is research-stage rather than a commercial service, it can be seen as an alternative in terms of technology validation, talent, and data rather than direct competition."
+        }
+      ],
+      "key_differentiator": "It bundles a seamless flow from simple blood glucose visualization to per-meal evaluation, lifestyle suggestions, and sharing with medical professionals, and aims to scale this with a single foundation model (CGFM). Additionally, it secured data from approximately 4,000 participants in the Fukui Prefecture trial reported in 2026.",
+      "moat": "The large-scale CGM dataset built through its own trials and collaborative relationships with various institutions such as local governments, food companies, and insurers appear to be its greatest assets. The device manufacturer data integration (Abbott) is also a barrier to entry. However, data exclusivity and regulatory approvals have not yet been demonstrated.",
+      "competitive_position_summary": "Appears to be an early-stage specialized startup in Japan's CGM×AI prevention domain. No market share or revenue comparison data was obtained. The capital alliance with a major insurer is a strength in distribution, but verification of actual commercial scale remains a future challenge."
+    },
+    "trending_reason": {
+      "summary": "The announcement of the first close of Series A on October 9, 2026, which included a capital and business alliance with the Tokio Marine Group, was followed by news of the head office relocation and coverage by specialized media on CGM×AI in the same week. Results of the Fukui Prefecture trial were also reported.",
+      "catalysts": [
+        "Announcement of the first close of Series A (total ¥570M in shares and loans) on October 9, 2026",
+        "Announcement of a capital and business alliance with Tokio Marine Holdings on October 9, 2026",
+        "Joint project selected for the NEDO fund program (PoP stage) with Tokio Marine & Nichido in March 2026",
+        "Additional funding from a fund managed by Fukui Capital Partners on March 3, 2026",
+        "Relocation of head office to Nagatacho, Chiyoda-ku, Tokyo on October 14, 2026",
+        "Announcement of a partnership with Abbott Japan for FreeStyle Libre data integration in May 2025"
+      ],
+      "growth_metrics": "Fukui Prefecture trial: 4,165 adults at risk of diabetes wore CGM for two weeks; data from 3,881 individuals was analyzed. About 1 in 4 recorded post-meal blood glucose levels ≥200 mg/dL at least twice, and approximately 70% of participants reported improvements in dietary or lifestyle habits. Revenue, number of paid institutions, and user numbers are undisclosed.",
+      "media_mentions": [
+        null,
+        null,
+        null,
+        {
+          "source": "PR TIMES (Zaikei distribution)"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Undisclosed (cumulative ¥440M as of September 2024 announcement; it is unclear whether the 2026 round amount is included in that cumulative figure)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Total ¥570M (combination of third-party allocation share issuance and loans; the equity portion is undisclosed). USD equivalent approx. $3.6M–$3.8M, varying by media outlet",
+        "notable_investors": [
+          "Tokio Marine & Nichido Fire Insurance Co., Ltd. (new shareholder)",
+          "Fukui Capital Partners (new shareholder)",
+          "Genesia Ventures (existing lead investor, additional investment)",
+          "Vision Incubate (existing investor, additional investment)",
+          "Shoko Chukin Bank (loan)",
+          "Tokio Marine Holdings (capital and business alliance partner)"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "lead_investor": "Vision Incubate (per Crunchbase)"
+        },
+        {
+          "amount": "Undisclosed (cumulative ¥440M at announcement)"
+        },
+        {
+          "stage": "Corporate / Fund investment (minori fund)",
+          "amount": "Undisclosed",
+          "lead_investor": "Fukui Capital Partners managed fund 'minori'"
+        },
+        {
+          "amount": "¥570M (total of equity and loan)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Not assessed. A publicly available reference is a research estimate valuing Japan's continuous glucose monitoring device market at approximately $95.64M in 2024, with a projected CAGR of 11.5% from 2026 to 2032. However, this is a device market and does not directly correspond to THE PHAGE's SAM.",
+      "market_trend": "Research analyzing CGM data with AI has begun in Japan, following the US, China, and Israel, and aligns with the Japanese government's 'aggressive preventive healthcare' policy. Insurers and local governments are showing interest in the prevention domain.",
+      "growth_potential": "If the alliance with the insurance group leads to actual product or insurance linkage, B2B sales channels could expand. Conversely, if monetization centered on medical institutions proves difficult, growth speed could be limited.",
+      "risks": [
+        "Glucose Flight is currently only available to a limited number of hospitals/clinics and R&D participants, indicating its commercial scale is still small",
+        "It depends on CGM device data integration, so it could be affected by changes in device manufacturer policies (dependence on the Abbott partnership)",
+        "Device manufacturers (e.g., Dexcom) may internalize prediction capabilities in their own platforms",
+        "The regulatory approval pathway as a medical device or therapeutic support software and the applicability of insurance reimbursement are uncertain",
+        "Expansion into the food and insurance sectors could broaden the business domain and disperse resources"
+      ],
+      "risk_mitigation": "Based on publicly available materials, the company has not disclosed specific mitigation measures. Identified responses include the device data integration partnership (Abbott), diversified collaborations with insurers, local governments, and food companies, and evidence accumulation through a 4,000-person trial. The regulatory and reimbursement issues were not confirmed in public materials, requiring further investigation."
+    },
+    "related_links": [
+      {
+        "title": "THE PHAGE Official Website"
+      },
+      {
+        "title": "Series A First Close Press Release (Zaikei Distribution)"
+      },
+      {
+        "title": "BRIDGE English Article (Series A and Tokio Marine Alliance)"
+      },
+      {
+        "title": "nstartup Article (Series A and Tokio Marine Alliance)"
+      },
+      {
+        "title": "Nikkei Medical Experience Report (Glucose Flight)"
+      }
+    ],
+    "editor_pick_comment": "The equity portion of the ¥570M is undisclosed, and commercial revenue is not public, so it is accurate to view this as an early-stage company where data and partnerships have gathered first."
+  },
+  "switchwon-2026": {
+    "tagline": "Currency exchange and foreign currency storage app for individuals and small businesses, expanding into corporate foreign exchange risk management",
+    "category": [
+      "Fintech",
+      "Foreign Exchange (FX)",
+      "Digital Assets"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO, Founder",
+        "background": "A graduate of Korea University's Department of French Language and Literature, she is said to have served as an offshore fund investment manager at HSBC, a manager at Samsung Asset Management, and a senior analyst at Franklin Templeton. According to her own account, the idea for the startup came from personally experiencing the burden of currency exchange fees while investing in overseas stocks.",
+        "notable_achievement": "Announced that cumulative transaction volume exceeded KRW 200B within about a year of launching the service in July 2022. As of October 2026, cumulative transaction volume was reported at KRW 8T."
+      },
+      {
+        "role": "CSO, Co-founder",
+        "background": "Identified as a co-founder in charge of strategy and planning. Previous career could not be confirmed.",
+        "notable_achievement": "Not confirmed"
+      }
+    ],
+    "team_highlights": "As of a 2022 interview, the team had 8 people, half of whom were IT/development engineers and the rest in business and UI/UX design. The current exact headcount has not been confirmed. Crunchbase lists 11-50 employees, but other corporate information sites list 1, showing significant variation across sources. The company name is not 'SwitchOne' as you entered, but the official spelling 'Switchwon' (스위치원).",
+    "product": {
+      "summary": "Switchwon started as a non-face-to-face currency exchange and foreign currency storage app offering fee-free exchange rate benefits (100% exchange rate preference). It later expanded into real asset-based digital assets, offline gold sales, and an AI trading agent, and also operates a corporate foreign exchange risk management product.",
+      "problem_statement": "Individuals and small business owners find it difficult to know how much they are paying in fees when exchanging currency at banks or exchange bureaus, and it is cumbersome to compare exchange rates across institutions. CEO Seo Jeong-a says she personally experienced the burden of KRW/USD exchange fees while investing in overseas stocks.",
+      "solution": "The app allows users to exchange major currencies and store foreign currency, providing exchange rate benefits through its own foreign currency algorithm. The structure is said to secure foreign exchange trading profits via its own AI system to lower customer fees.",
+      "key_features": [
+        "Exchange of 5 major currencies: KRW, USD, JPY, EUR, CNY",
+        "24-hour exchange, free/automatic/split exchange functions",
+        "Exchange and foreign currency storage offering up to 100% exchange rate preference",
+        "Digital asset trading based on physical assets such as gold, silver, and copper, and under construction for gold trading infrastructure (wholesale trading system, vault operation)",
+        "AI-based exchange rate prediction reports and trading agent",
+        "Corporate FX risk management solution 'Switchflow' (beta)",
+        "Operation of AI-based dealing room 'SFXT'"
+      ],
+      "tech_stack_or_innovation": "It has built an economic indicator database to analyze variables affecting real-time exchange rates and a proprietary foreign currency algorithm system that sets hedge ratios according to customer preferences. The company introduces itself as a blockchain-based platform, but specific technical composition has not been confirmed in public materials. The exchange rate prediction model is undergoing a proof of concept (PoC) by applying it to NH Bank's FX report, with accuracy verification planned by November 2026.",
+      "target_customer": "Individuals investing in overseas stocks, small businesses looking to reduce exchange burden, and corporate customers seeking to manage FX risk. It also pursues alliance sales through financial institution partners such as securities firms and banks.",
+      "business_model": "The main revenue sources appear to be foreign exchange trading profits from the exchange process and partner-linked services. However, according to the 2025 audit report, over 99% of operating revenue came from FX trading gains, while significant FX trading losses were also recorded in the same period. Media reports indicate that platform fee revenue is limited. It is also pushing to expand enterprise-facing API and risk management services."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Hana Bank Travelog",
+          "comparison": "A travel rechargeable check card, said to offer the most free exchange currencies. Switchwon differs by combining exchange, foreign currency storage, and investment functions in one app."
+        },
+        {
+          "name": "Travel Wallet",
+          "comparison": "It focuses on card-based overseas payment and top-up services. Fee-free currencies are reportedly limited to USD, EUR, and JPY. Switchwon competes in terms of currency variety and investment features."
+        },
+        {
+          "name": "Toss Bank Foreign Currency Account",
+          "comparison": "It has strengths in bank account-based foreign currency storage and exchange. It has an ecosystem that connects overseas investment and payments within its own trading app. Switchwon emphasizes its position as an independent FX platform."
+        },
+        {
+          "name": "Kantox (BNP Paribas subsidiary)",
+          "comparison": "A corporate FX trading automation software, an overseas case compared to Switchwon's corporate Switchflow. Switchwon differs in that it started from personal FX fintech."
+        }
+      ],
+      "key_differentiator": "Unlike domestic travel cards or banking apps, it started as an FX-specialized platform and aims to combine exchange, foreign currency storage, real asset digital assets, and AI exchange rate prediction into one flow. The fact that the founder is a financial expert with experience in FX funds and asset management is also a differentiator.",
+      "moat": "Entry barriers appear to be the FX algorithm and data, financial institution partnerships (securities firms, banks, institutional investors), and regulatory approval for foreign exchange transactions. However, the actual strength of regulatory approvals and partnership contracts is difficult to confirm from public materials.",
+      "competitive_position_summary": "It holds a differentiated position as an FX-specialized independent platform in the domestic personal currency exchange market. However, it directly competes with travel cards and banking apps, and controversies over cash flow have not been resolved, creating a weakness in trust."
+    },
+    "trending_reason": {
+      "summary": "On October 14, 2026, it announced raising approximately KRW 30B in a Series A round. The company said it would use the funds for gold trading infrastructure, entry into the Japanese digital asset market, and advancing AI trading technology.",
+      "catalysts": [
+        "Announcement of approximately KRW 30B Series A investment on October 14, 2026 (existing shareholders and partners participated as strategic investors)",
+        "Plans to build gold trading infrastructure including wholesale gold trading system and vault operation",
+        "Preparation for JPY stablecoin business through a Japanese subsidiary",
+        "Signed an MOU with Shinhan Investment Corp. in 2025 to pursue a service linking currency exchange and overseas stock investment",
+        "As of October 2026, cumulative transaction volume of KRW 8T and H1 2026 revenue of KRW 96.6B reported"
+      ],
+      "growth_metrics": "As of August 2025, monthly exchange transaction volume was reported at around KRW 150B, annualized KRW 2T. As of July 2025, cumulative exchange volume was KRW 1.7T, with an average monthly exchange volume of KRW 150B. In the October 2026 announcement, cumulative transaction volume was KRW 8T and H1 revenue KRW 96.6B. However, the basis for cumulative transaction volume and revenue calculation method were not disclosed.",
+      "media_mentions": [
+        {
+          "source": "Money Today",
+          "title": "Switchwon raises KRW 30B Series A... expands gold and digital asset business"
+        },
+        {
+          "source": "NewsToop",
+          "title": "[VC Portfolio] Switchwon fails to shake off 'customer deposit misappropriation' suspicions despite KRW 30B funding"
+        },
+        {
+          "source": "Money Today",
+          "title": "Despite stock market plunge, unlisted market remains solid... venture investment market continues bull run"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Approximately KRW 35B (est.; sum of approx. KRW 5B cumulative investment and grants as of 2023 plus this KRW 30B; whether grants are included is unclear)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Approximately KRW 30B (based on reports, in KRW; USD conversion figures vary by article)",
+        "lead_investor": "Undisclosed (no report specifying the lead investor found)",
+        "notable_investors": [
+          "Busan United Tech Holdings (existing shareholder)",
+          "POSCO Technology Investment (existing shareholder)",
+          "Infobank (partner, strategic investor)",
+          "Daekyo Investment (existing shareholder)"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "KRW 1.1B",
+          "lead_investor": "Undisclosed (Busan United Tech Holdings, Rising S Ventures, POSCO Technology Investment participated)"
+        },
+        {
+          "amount": "KRW 1.7B",
+          "lead_investor": "Daekyo Investment"
+        },
+        {
+          "amount": "Approximately KRW 30B",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed (could not confirm domestic FX service market size from reliable sources)",
+      "market_trend": "Demand for currency exchange is increasing due to the expansion of individual overseas stock investments, and fee competition among travel cards and bank foreign currency accounts is intense. Interest in digital assets and tokenization of real assets is also rising.",
+      "growth_potential": "The rapid growth in exchange transaction volume is positive. However, the high dependence on FX trading revenue means further verification is needed on the stability of the revenue structure.",
+      "risks": [
+        "Suspicions of customer deposit misappropriation: Investigative reports pointed out a gap between customer deposits and liquid assets, and unclear sources of investment assets",
+        "Financial soundness controversy: Reports that investment assets increased significantly despite being in a capital impairment state",
+        "Revenue composition issue: The majority of operating revenue is FX trading gains, and platform fee revenue is small",
+        "Headquarters relocation controversy: Reports that after moving to Busan, actual operations continued in Seoul, raising questions about compliance with regional fund investment requirements",
+        "Regulatory risk: Foreign exchange transaction regulations and licensing requirements for digital asset and stablecoin business in Japan and Singapore entities"
+      ],
+      "risk_mitigation": "The company states that it has never used customer deposits for operating expenses or investments, and that it manages customer asset protection and compliance with relevant regulations carefully. It also received regulatory exemption approval for online currency exchange business from financial authorities in 2021. However, independent audit results on cash flow have not been confirmed."
+    },
+    "related_links": [
+      {
+        "title": "Switchwon official website"
+      },
+      {
+        "title": "Switchflow (corporate FX solution) introduction page"
+      },
+      {
+        "title": "Money Today: Switchwon raises KRW 30B Series A article (2026-10-14)"
+      },
+      {
+        "title": "NewsToop: Report on customer deposit misappropriation suspicions (2026-10-15)"
+      },
+      {
+        "title": "Asia Economy: Shinhan Investment Corp. and Switchwon MOU (2025-08-01)"
+      },
+      {
+        "title": "Unicorn Factory: CEO Seo Jeong-a interview (2025-08-26)"
+      },
+      {
+        "title": "Sisa Journal e: Switchwon interview (2024)"
+      }
+    ],
+    "editor_pick_comment": "The cumulative transaction volume growth and KRW 30B Series A are notable, but until the suspicions about the use of customer deposits are resolved, verifying cash flow takes precedence over investment news."
+  },
+  "satlyt-2026": {
+    "tagline": "Software that runs AI on third-party satellites to reduce data at the source in orbit",
+    "category": [
+      "Space Software",
+      "Onboard AI / Space Edge Computing"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Kenyan-American engineer who worked at Google Cloud before a brief stint in 2024 at SpaceX's Starlink organization. According to one report, he proposed orbital computing ideas to both Google and SpaceX but was rejected. Educational background varies by source. Crunchbase lists a B.S. in Mechanical Engineering from the University of Cape Town (2010–2014), while LinkedIn lists Johns Hopkins Whiting School of Engineering. One interview introduction also mentions experience launching Tesla's African energy business.",
+        "notable_achievement": "Led the $8M seed round announced in October 2026, and reported deploying a Google DeepMind Gemma model on a Momentus satellite, reducing software error-related data transmission by over 60%."
+      }
+    ],
+    "team_highlights": "Public records show only one co-founder: Rama Afullo (according to Tracxn). TechCrunch photo captions mention CTO Nelson Psenjen and engineers Leina Moli and Junn Wangari, though the CTO's background could not be confirmed. Leadership is Kenyan-American, and the Nairobi office hosts a Kenyan entity and a sizable engineering workforce. Total headcount varies by source: Tracxn reports 9 as of August 31, 2026; Space Index reports 11. Official headcount is not disclosed. The Nairobi office announced an MoU with the Kenya Space Agency and Angola's GGPEN, but this is not a confirmed commercial contract.",
+    "product": {
+      "summary": "Software that enables satellite operators or payload providers to run AI models on their existing onboard computers. Satlyt does not build its own satellites and plans to expand by pooling satellites from multiple companies as a single computing resource.",
+      "problem_statement": "Satellites must downlink most raw captured data to ground. Satlyt explains that operators pay about $20 per GB to bring satellite data to Earth, of which approximately 80% ends up discarded, and over 90% of onboard computing capacity sits idle. In other words, transmission costs and idle compute resources are wasted simultaneously.",
+      "solution": "The solution runs models in orbit, downlinking only summarized results and anomaly detections instead of raw data. On a Momentus satellite, Satlyt quantized and deployed the Gemma 3 model, which analyzes telemetry, logs, and software errors in situ to generate brief diagnostics and recommended actions.",
+      "key_features": [
+        "Onboard AI inference: run AI models on existing satellite computers",
+        "Selective data transmission: summarize error and sensor data to fit limited downlink windows",
+        "Telemetry-based diagnostics: analyze software error logs in situ and suggest actions",
+        "Multi-satellite compute sharing (planned): target to demonstrate shared computing across two satellites next year"
+      ],
+      "tech_stack_or_innovation": "Quantized the Google DeepMind Gemma 3 model to reduce memory and compute load, and ran it on the llama.cpp inference framework. The core is deploying only software on third-party satellites' existing computers, without custom hardware. The company describes this as an operating system-like model that abstracts underlying infrastructure, akin to VMware or Snowflake.",
+      "target_customer": "Satellite operators, payload providers, and developers who want to run applications on satellites. Currently confirmed partners are Momentus (satellite operator) and Indian startup TakeMe2Space (satellite manufacturing). One report also mentions NASA and Stellerian as customers or collaborators on this mission.",
+      "business_model": "Does not sell its own satellites; instead, deploys software on third-party satellites. Articles describe it as turning satellites into revenue-generating managed services. Pricing and revenue structure are not disclosed."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A Redmond-based company building orbital data centers by putting GPUs on its own satellites. Raised $170M in Series A in March 2026 and filed an FCC application for 88,000 satellites. The key difference is that Satlyt leverages others' satellites, while Starcloud builds dedicated satellites."
+        },
+        {
+          "comparison": "A startup promoting orbital computing hardware; reported raising $3.5M. Its hardware-centric approach differs from Satlyt's software layer approach."
+        },
+        {
+          "comparison": "A provider that puts compute modules on optical relay satellites for low-latency processing and relay. Overlaps in satellite network infrastructure, but Satlyt does not build its own network; instead, it software-bonds other operators' satellites."
+        },
+        {
+          "comparison": "Pushing orbital edge cloud nodes that provide cloud/AI services on the ISS and in LEO. Its core business is space station-based, so its customer base and business structure differ from Satlyt's."
+        },
+        {
+          "comparison": "Provides data storage and backup services on the Moon and in LEO. Focused on storage rather than compute, so only partially overlaps with Satlyt's orbital onboard inference market."
+        }
+      ],
+      "key_differentiator": "Aims to be a software layer installed on third-party satellites already in orbit, without manufacturing or launching satellites. The company describes this as an open ecosystem, comparing SpaceX to iPhone and itself to Android.",
+      "moat": "The confirmed moat is still weak. Actual orbital demonstrations are limited to one Momentus satellite and a mission via TakeMe2Space's satellite; no long-term contracts or exclusive data from multiple operators have been confirmed. The long-term potential moat is a network effect as the same software is deployed across many satellites.",
+      "competitive_position_summary": "Unlike vertically integrated competitors (e.g., Starcloud), Satlyt has lower hardware capital burden but depends on operators adopting its software. Its current position is close to early-stage onboard processing, and multi-satellite shared compute is still in the planning phase."
+    },
+    "trending_reason": {
+      "summary": "The main catalyst was the $8M seed announcement on October 1, 2026 (per af.net and Ventureburn). Subsequently, TechCrunch (October 13) covered the founder's background and plans to launch on a SpaceX rocket. The date 'as of October 16 report' mentioned in the request could not be confirmed; the earliest confirmed announcement date is October 1. The only actual demonstration result within the last 90 days is the Gemma onboard execution on a Momentus satellite.",
+      "catalysts": [
+        "$8M seed round announced October 1, 2026, led by non sibi ventures",
+        "September 2026: onboard Gemma model execution on a Momentus satellite, reported over 60% reduction in transmitted data",
+        "Planned mission to launch software on a SpaceX rocket using a TakeMe2Space satellite",
+        "Announced partnership with Star Catcher (however, this is about a year old, outside the last 90 days)"
+      ],
+      "growth_metrics": "Public quantitative metrics are limited. CEO has stated total funding is 'over $10M', but an official tally is unconfirmed. Discrepancies exist: Tracxn counts $8M across two rounds; Payload cites the CEO's claim that total raised exceeds $10M. Customer count and revenue are not disclosed. The target of deploying on 20% of all satellites by 2030 is a stated management goal.",
+      "media_mentions": [
+        null,
+        {
+          "source": "af.net (TechCrunch republication)"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Over $10M (per CEO statement; not officially disclosed)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "lead_investor": "non sibi ventures (Houston-based)",
+        "notable_investors": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Existing investor follow-on"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "No publicly disclosed TAM, SAM, or SOM estimates. However, given the scale of satellite transmission costs and idle onboard compute, the starting point for the market is the total downlink costs of existing satellite operators.",
+      "market_trend": "The orbital data center competition is moving quickly with dedicated satellite approaches (e.g., Starcloud) and large players like Google and SpaceX. Satlyt targets the software layer instead of hardware in this trend.",
+      "growth_potential": "Short-term demand is likely to come first from onboard processing and selective data transmission. Long-term, if multi-satellite shared compute succeeds, Satlyt could expand into a third-party orbital cloud provider. However, this second stage has not yet been demonstrated.",
+      "risks": [
+        "Small scale of validation: confirmed orbital demonstrations involve only a few satellites",
+        "Possibility that operators build their own computing or large platforms absorb the market",
+        "Basic info (headquarters location, headcount, education) varies by source, requiring further verification",
+        "MoUs are not confirmed contracts, and the scale of NASA support has not been independently verified"
+      ],
+      "risk_mitigation": "Building proof points by collaborating with actual satellite operators like Momentus and TakeMe2Space for deployment on third-party platforms. The investor mix includes both US space investors and African venture, diversifying fundraising risk. However, the effectiveness of these mitigations will be judged by the planned shared compute demonstration between two satellites in 2027."
+    },
+    "related_links": [
+      {
+        "title": "Satlyt official blog: Satlyt raises $8 million Seed"
+      }
+    ],
+    "editor_pick_comment": "An ambitious goal for orbital AI software, but what has been validated so far is only onboard inference on one or two third-party satellites and a planned but not yet executed two-satellite compute demo."
+  },
+  "auxoai-2026": {
+    "tagline": "An FDE company that deploys AI strategists and engineers to enterprise sites to build operational systems.",
+    "category": [
+      null,
+      "Forward-deployed engineering (FDE) services",
+      "AI implementation consulting"
+    ],
+    "headquarters": {
+      "city": "San Francisco Bay Area (Milpitas office also listed)",
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "role": "Co-founder, Managing Partner (also referred to as CEO)",
+        "notable_achievement": "Involved in establishing the UNC Charlotte School of Data Science and served as the inaugural chair of its advisory board",
+        "background": "Amaresh Tripathy reportedly served as SVP and head of the global analytics business at Genpact, leading an AI and analytics organization of approx. 15K people. Before that, he was a partner at PwC, where he reportedly expanded the firm's data analytics business in the U.S. He also has experience as a partner at Diamond Management & Technology Consultants."
+      },
+      {
+        "role": "Co-founder (overseeing enterprise AI implementation and Damia development)",
+        "background": "After working at Infosys for about 20 years, he co-founded Enquero, where he served as CEO. According to Crunchbase, Enquero was later acquired by Genpact.",
+        "notable_achievement": "Led the development of AuxoAI's proprietary FDE workbench, Damia"
+      },
+      {
+        "role": "Co-founder, Managing Partner (overseeing growth, regional delivery teams, and strategic partnerships)",
+        "background": "He was co-founder and Chief Revenue Officer (CRO) of Enquero from 2013 to 2022, and previously worked at Infosys, Aricent, Microsoft, and Hughes. He holds an MBA from the Indian School of Business.",
+        "notable_achievement": "Known for building Enquero's global sales and partnership organization (a growth pillar for AuxoAI after founding)"
+      }
+    ],
+    "team_highlights": "The three founders all come from major IT services and consulting firms and previously worked together at their earlier co-founded company, Enquero. Some media outlets spell the founder's name as 'Avaneesh Tripathi,' but the company's press releases use 'Amaresh Tripathy.' Employee count varies by source. Tracxn reports 246 as of August 31, 2026, RocketReach 241, and LinkedIn's 11-50 figure appears outdated. There are both an Indian entity (AuxoAI Engineering Pvt. Ltd.) and a US entity (AUXO AI, INC.), with Indian offices in Mumbai, Bengaluru, Hyderabad, and Gurgaon.",
+    "product": {
+      "summary": "AuxoAI deploys FDE teams of strategists and engineers into large enterprises to redesign AI workflows and build actual production systems. It also uses its proprietary FDE workbench, Damia.",
+      "problem_statement": "Large enterprises often conduct many AI pilots but get stuck at the transition to production systems that fit their actual business processes, internal data, and organizational rules. Generic AI models do not have enough context about each client.",
+      "solution": "They deploy strategic consultants and engineers together at the client site to understand the work, build AI systems connected to data and workflows, and manage deployment and operational change. The company states it aims to go from strategy to production in weeks.",
+      "key_features": [
+        "DataNext: Enterprise data foundation modernization (building AI-native data foundations)",
+        "AINext: Custom AI agent and system building",
+        "MarketNext: Sales and GTM acceleration (automating marketing and sales workflows)",
+        "ProcessNext: Business process redesign",
+        "Damia: An FDE workbench that accumulates past deployment experience to accelerate new project implementation",
+        "Echo: Synthetic market intelligence product; Kimavi: Sales acceleration product (listed on official site)"
+      ],
+      "tech_stack_or_innovation": "The key differentiator is the deployment methodology, not the model itself. Damia is designed to collect implementation assets from multiple client projects and reuse them in future projects. The company is an AI specialist partner for the Google Cloud Gemini Enterprise Transformation program and is also an AWS advanced partner. It also mentions Microsoft, Glean, Snowflake, and Databricks as part of its ecosystem.",
+      "target_customer": "Global 2000 enterprises. Disclosed client sectors include manufacturing, consumer goods, healthcare, telecommunications, retail, semiconductors, and software. Named clients include athenahealth, Fogo de Chão, and UKG. The company says it has worked with over 40 clients.",
+      "business_model": "The revenue structure appears to be centered on project and implementation services. Because it deploys engineering manpower at client sites, personnel costs are significant. Revenue and contract sizes have not been disclosed. Some external databases provide estimated revenue figures, but these have not been confirmed by the company. It remains unclear how much software licensing and workbench usage fees will contribute."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A data and AI services company that positions itself as a platform-independent FDE partner with a specialized FDE organization using its own accelerator. Often cited as the closest alternative to AuxoAI."
+        },
+        {
+          "comparison": "An AI implementation company focused on FDE, offering a service model that handles end-to-end delivery within the client's stack. It falls into the same service-based FDE category as AuxoAI."
+        },
+        {
+          "comparison": "Classified as an AI-focused FDE partner, catering to the need for quickly adding external manpower. It is more about providing implementation personnel than strategic consulting for large enterprises."
+        },
+        {
+          "name": "Palantir (FDE model)",
+          "comparison": "The company that first popularized the FDE concept. It deploys engineers within its own Foundry platform, making it platform-specific, whereas AuxoAI emphasizes platform neutrality."
+        },
+        {
+          "name": "Deloitte, Accenture (large consulting FDE organizations)",
+          "comparison": "Large consulting firms with FDE organizations. Their strengths are a large client base and experience in regulated industries, but the project scale and cost structure are different. AuxoAI can leverage its relatively agile smaller deployments and proprietary workbench."
+        },
+        {
+          "name": "Mechanical Orchard, Plank and other emerging FDE companies",
+          "comparison": "Emerging FDE companies like Mechanical Orchard and Plank. They specialize in legacy system modernization or FDE workforce training, partially overlapping with AuxoAI's client segments. However, AuxoAI has a broader scope spanning from strategic design to operations."
+        }
+      ],
+      "key_differentiator": "It handles both strategic consulting and engineering within a single team and accumulates deployment experience as an asset in Damia. It also emphasizes the ability to combine multiple clouds and AI tools without platform lock-in.",
+      "moat": "For now, its core defensibility lies in per-client field data, deployment know-how, and reusable assets accumulated in Damia. However, public evidence is limited, so actual reuse rates or margin improvements have not been confirmed.",
+      "competitive_position_summary": "In a period of surging FDE demand, an Indian-origin founding team is targeting the US large enterprise market. Large AI companies are also building their own FDE organizations, so maintaining differentiation as an independent service provider will be key. The labor-intensive model is also expected to face margin pressure as it scales."
+    },
+    "trending_reason": {
+      "summary": "On October 20, 2026, it announced a $20.7M Series A led by NTTVC, and also gained attention with a Google Cloud partner selection and the expansion of the FDE market.",
+      "catalysts": [
+        "October 20, 2026: $20.7M Series A led by NTTVC announced (press release)",
+        "First half of 2026: Selected as an AI pure-play partner in Google Cloud's Gemini Enterprise Transformation program (linked to Google's $750M enterprise AI investment initiative)",
+        "May 2026: OpenAI launched its deployment-focused subsidiary The Deployment Company with an approx. $4B budget, adopting the FDE model",
+        "June 2026: AWS announced it would invest $1B in its FDE organization",
+        "July 2026: Anthropic announced an FDE-based enterprise venture (with Blackstone etc. participating)",
+        "Industry data cited that FDE job postings increased by over 1,000% in January-August 2026 compared to the previous year"
+      ],
+      "growth_metrics": "The company publicly reports over 40 clients. Employee count: Tracxn reports 246 as of August 2026 (not an estimate, an aggregate count). Revenue, contract size, and retention rate are undisclosed. RocketReach's $11.3M revenue figure is an unverified estimate. Tracxn presents the Indian entity's revenue as ₹10–50 Cr as of March 2025, but this is not an exact figure."
+    },
+    "funding": {
+      "total_raised": "$20.7M (based on confirmed public round; previous rounds undisclosed or unconfirmed)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "lead_investor": "NTTVC (a Silicon Valley VC established in partnership with Japan's NTT)",
+        "notable_investors": [
+          "George Still Jr. (Partner Emeritus at Norwest Venture Partners, Workday board member)",
+          "Amit Zavery (President, CPO, and COO of ServiceNow)",
+          "Giacomo Sonnino (Managing Director at Charlesbank Capital Partners, former COO of QuantumBlack North America) — some media outlets spell it 'Santina'"
+        ]
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed. No reliable public figures have been confirmed for the enterprise FDE and AI implementation services market size.",
+      "market_trend": "The demand for moving from AI pilots to actual production systems is driving the rapid spread of the FDE role. The model pioneered by Palantir is being adopted in-house by OpenAI, Anthropic, AWS, and others.",
+      "growth_potential": "If large enterprise demand for AI implementation continues, the company can scale its workforce, but as a labor-dependent model, growth quality will depend on how much software assets like Damia contribute (est.).",
+      "risks": [
+        "Large AI and cloud companies are building their own FDE organizations, which could intensify competition for clients.",
+        "The labor-intensive structure means rising labor costs and margin pressure.",
+        "Revenue and retention rates are undisclosed, making performance verification difficult.",
+        "Some databases like Tracxn label it 'unfunded,' showing inconsistent information across sources."
+      ],
+      "risk_mitigation": "A strategy of increasing reusable assets like Damia to reduce per-project headcount is expected. Expanding sales channels through platform partnerships with Google Cloud, AWS, etc. is also a mitigating factor. However, this is based on company announcements and results have not yet been disclosed."
+    },
+    "related_links": [
+      {
+        "title": "AuxoAI official website"
+      },
+      {
+        "title": "AuxoAI about us (About Us)"
+      },
+      {
+        "title": "AuxoAI Series A press release (PR Newswire)"
+      },
+      {
+        "title": "Amaresh Tripathy profile (UNC Charlotte)"
+      },
+      {
+        "title": "Kabir Singh profile (The Org)"
+      }
+    ],
+    "editor_pick_comment": "AuxoAI's key battleground is how quickly it can transform the FDE manpower model into a reusable asset via Damia, and with few public metrics available, proving this is its greatest challenge."
+  }
+}

@@ -1,5 +1,5 @@
 /**
- * English edition of a company record (src/data/startups.en.json).
+ * English edition of a company record (src/data/days-en, see scripts/lib/store.mjs).
  *
  *   extract  — every Korean prose string in the record → { "product.summary": "…", "founders.0.role": "…" }
  *   translate — one JSON-mode call per record (no web), same keys back
@@ -279,7 +279,7 @@ function summarize(bad) {
 }
 
 /**
- * One company → { ok, overlay, failed, warnings, models }. `overlay` is the startups.en.json
+ * One company → { ok, overlay, failed, warnings, models }. `overlay` is the stored English
  * value (null when ok is false: a half-English record is worse than the Korean fallback).
  */
 export async function translateRecord(llm, record, { log = () => {} } = {}) {
@@ -295,7 +295,7 @@ export function readTranslations(fs, file) {
   return JSON.parse(fs.readFileSync(file, 'utf-8')) || {}
 }
 
-/** Write translations in startups.json order (stable diffs); ids no longer in the data are kept at the end. */
+/** Write translations in record order (stable diffs); ids no longer in the data are kept at the end. */
 export function writeTranslations(fs, file, store, order = []) {
   const out = {}
   for (const id of order) if (store[id]) out[id] = store[id]
@@ -323,8 +323,11 @@ export async function mapLimit(items, limit, fn) {
  * Translate records into the store file, saving after each company (an interrupted run picks
  * up where it stopped). Never throws for a single company. → { done, failed: [{ id, failed }], cost }
  */
-export async function translateRecords(llm, records, { file, order, concurrency = 4, fs, log = console.log } = {}) {
-  const store = readTranslations(fs, file)
+export async function translateRecords(
+  llm,
+  records,
+  { file, order, concurrency = 4, fs, log = console.log, store = readTranslations(fs, file), save = (s) => writeTranslations(fs, file, s, order) } = {},
+) {
   const done = []
   const failed = []
   await mapLimit(records, concurrency, async (r) => {
@@ -332,7 +335,7 @@ export async function translateRecords(llm, records, { file, order, concurrency 
       const res = await translateRecord(llm, r, { log })
       if (res.ok) {
         store[r.id] = res.overlay
-        writeTranslations(fs, file, store, order)
+        save(store)
         done.push(r.id)
         const warn = Object.keys(res.warnings).length
         log(`  translated ${r.id}: ${res.keys} strings (${res.models.join(', ')})${warn ? `, ${warn} number warnings: ${JSON.stringify(res.warnings)}` : ''}`)

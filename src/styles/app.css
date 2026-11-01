@@ -1131,3 +1131,17 @@ a.hero .hero__ai { display: inline-block; margin-right: 6px; padding: 0 4px; bor
 .share-options { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
 .share-options .btn { justify-content: flex-start; }
 .cmp__text { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* ============================================================
+   "내 5곳 | 모두의 5곳" (_workspace/14 §2-2)
+   ============================================================ */
+.home-tabs { display: flex; width: 100%; margin: 4px 0 14px; }
+.home-tabs .segmented__tab { flex: 1; }
+
+/* First run in the app: the taste sheet fills the screen (_workspace/14 §3) */
+.sheet--first, .sheet--first .sheet__panel { max-height: none; height: 100dvh; }
+.sheet--first { width: 100%; max-width: none; margin: 0; border-radius: 0; }
+.sheet--first .sheet__panel { border-radius: 0; }
+.sheet--first .sheet__body { flex: 1; }
+.sheet--first .sheet__handle { display: none; }
+.sheet--first .sheet__panel { padding-top: env(safe-area-inset-top); }

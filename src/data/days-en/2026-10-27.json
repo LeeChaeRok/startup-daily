@@ -1,0 +1,500 @@
+{
+  "traceweave-2026": {
+    "tagline": "Post-Transformer on-device AI with constant memory regardless of context length",
+    "category": [
+      "On-Device AI",
+      "AI Architecture",
+      "Edge Computing"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "employee_count": "11-50 (est.)",
+    "founders": [
+      {
+        "background": "Former Consumer Insights Analyst at Google and corporate strategy at 42dot, global marketing at Kia, MBA from ESADE (including exchange at Duke), industrial engineering at Yonsei University. Founder, Antler Korea Cohort 7.",
+        "notable_achievement": "Led company formation in October 2025 through Antler Korea's 'Startup Generator.' In the investment announcement, said: 'Removing the KV cache was easy; the key was maintaining capability without it.'"
+      },
+      {
+        "background": "PhD in Computational Neuroscience from ETH Zurich. Research experience in blockchain and network science at the University of Zurich.",
+        "notable_achievement": "Oversaw in-house development across architecture design, foundation model pretraining, and the inference engine."
+      },
+      {
+        "background": "Researcher from the Vision AI Lab at KAIST.",
+        "notable_achievement": "Led validation of vision and world model systems and in-vehicle agents based on Phase-TITAN."
+      }
+    ],
+    "team_highlights": "Three co-founders with backgrounds from ETH Zurich, Google, and KAIST. CEO Jaeyoung Park (strategy and BD at Google, 42dot, and Kia), CTO Kim Tae-hoon (PhD in Computational Neuroscience from ETH Zurich), and Head of AI Park Geun-cheol (Vision AI Lab at KAIST) have built architecture design, pretraining, and the inference engine in-house. The company is currently based at Naver D2SF @Gangnam and is expanding its research and engineering staff.",
+    "product": {
+      "summary": "Built on Phase-TITAN, a post-Transformer architecture that keeps memory usage constant regardless of context length, the company is developing AI agent and world model technology that runs on edge devices such as smartphones, vehicles, and robots without cloud calls.",
+      "problem_statement": "In Transformer-based LLMs, the KV cache grows as input context gets longer, increasing memory usage. In on-device environments with tight memory, battery, and thermal constraints, it is difficult to run AI agents that understand long contexts and perform multi-step reasoning and tool calls.",
+      "solution": "Phase-TITAN compresses context into a fixed-size 'evolving state' instead of a KV cache. This keeps memory usage constant even as the processed information grows, and enables the device itself to handle the full loop of calling external tools, interpreting results, and deciding the next action.",
+      "key_features": [
+        "Phase-TITAN: a post-Transformer inference architecture that replaces the Transformer structure itself",
+        "PT Language Model v5: an on-device language model that supports long contexts and tool use without a KV cache that grows with tokens",
+        "PT Training-Free Dynamics Monitor: equipment condition monitoring that estimates normal dynamics for each device in real time without training weights",
+        "PT World Model: the first demonstrated persistent interactive video world model (33 minutes, real-time control across 10+ labs)",
+        "Runs multi-step agents on a single smartphone CPU core with fixed memory under 1GB (company demonstration)"
+      ],
+      "tech_stack_or_innovation": "Designed on computational neuroscience and physics foundations. Learns the world as a stable dynamical attractor using a fixed-size, attention-free temporal state. Does not use open-source models such as Qwen or Llama; develops its own models and keeps pretraining through inference engine in-house. At 1M-token context, the KV cache of a 1B-parameter model is 0.04GB (company measurement; a reduction of tens of GB versus comparison models).",
+      "target_customer": "OEMs and platform companies for physical and digital edge devices, including automotive (global automakers, autonomous driving affiliates, and automotive software companies), robots, drones, smart glasses, wearables, and smart TVs.",
+      "business_model": "Starts with paid technology proof-of-concept (PoC) contracts in customer environments, then shifts to licensing or subscription supply of AI agents and world models for vehicles and devices. Specific contract terms are undisclosed."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "NOTA",
+          "comparison": "A leader in lightweighting and optimizing on-device AI in Korea (listed on KOSDAQ). It takes the approach of compressing and optimizing existing Transformer models, while TraceWeave replaces the architecture itself, so the strategies differ, though the target customers (hardware manufacturers) overlap."
+        },
+        {
+          "name": "SqueezeBits",
+          "comparison": "A Korean startup specializing in model compression and quantization that was acquired by AI chip company Rebellions. TraceWeave remains independent and unlisted."
+        },
+        {
+          "name": "UnderMilli",
+          "comparison": "Specializes in on-device inference with 'Malhaega,' a real-time speech interpretation AI for medical settings. Indirect competitor in the digital edge (voice) segment."
+        },
+        {
+          "comparison": "Overseas AI lightweighting startups that were acquired by NVIDIA, Red Hat, and others, reshaping the market. The gap left by independent optimization players has grown."
+        }
+      ],
+      "key_differentiator": "Rather than optimizing by shrinking models, it addresses the memory problem at its source with a 'post-Transformer architecture without a KV cache.' Its differentiators include its own demonstration of running agents on a single CPU core with under 1GB of memory, and a persistent world model that learns the world as a fixed-size state.",
+      "moat": "Proprietary architecture design capability grounded in computational neuroscience and physics, in-house pretraining and inference engines (no open-source dependence), paid automotive PoC results, and a collaborative relationship with Naver D2SF. Patents and papers on the architecture and world model are undisclosed.",
+      "competitive_position_summary": "Korea's on-device AI market has formed around 'lightweighting and optimization (compression).' TraceWeave is an early-stage startup approaching the market along a different axis, 'architecture replacement.' At one year old, it is in the early stage of market validation."
+    },
+    "trending_reason": {
+      "catalysts": [
+        "Seed round announced on October 21, 2026, led by Mirae Asset Capital with participation from Naver D2SF, Quad Ventures, and Antler Korea",
+        "Successful demonstration of in-vehicle agents running on a single smartphone CPU core with under 1GB of memory, and public release of a 33-minute real-time demo of the PT world model",
+        "Completed a paid PoC for driving data analysis with an autonomous driving affiliate of a global automaker group, and ongoing in-vehicle agent validation with a U.S. automotive software company",
+        "Move into Naver D2SF @Gangnam brings ecosystem collaboration into full swing"
+      ],
+      "growth_metrics": "Raised approx. KRW 3.0B (approx. $2.2M) in seed funding, with a company valuation of approx. KRW 30B (pre-money basis). Based on internal measurement, the KV cache of a 1B model at 1M-token context is around 0.04GB. Revenue and customer count are undisclosed.",
+      "media_mentions": [
+        {
+          "source": "Naver D2SF press release",
+          "title": "Naver D2SF Makes New Investment in On-Device AI Startup TraceWeave"
+        },
+        {
+          "source": "Chosun Biz",
+          "title": "TraceWeave Develops On-Device AI Agents Based on a Single CPU Core"
+        },
+        {
+          "source": "Maeil Business Newspaper",
+          "title": "Naver D2SF Makes New Investment in On-Device AI Startup TraceWeave"
+        },
+        {
+          "source": "Yonhap News",
+          "title": "Running Agents on Smartphone CPUs Without the Cloud: Naver D2SF Invests in TraceWeave"
+        },
+        {
+          "source": "NewsPim",
+          "title": "Naver D2SF Invests in On-Device AI Startup TraceWeave"
+        },
+        {
+          "source": "The Fact",
+          "title": "Naver Invests in On-Device AI Startup That Reduces Memory Constraints"
+        },
+        {
+          "source": "MoneyToday"
+        },
+        {
+          "title": "TraceWeave Raises KRW 3B in Seed Funding, Develops AI Agent Architecture That Runs Inside Devices"
+        },
+        {
+          "source": "PRNewswire (published on Morningstar)"
+        },
+        {
+          "source": "ETNews",
+          "title": "Naver D2SF Makes New Investment in On-Device AI Startup TraceWeave"
+        }
+      ],
+      "summary": "On October 21, 2026, Naver D2SF announced a new investment in on-device AI startup TraceWeave. The company raised approx. KRW 3.0B in a seed round led by Mirae Asset Capital and was valued at approx. KRW 30B (pre-money basis)."
+    },
+    "funding": {
+      "total_raised": "$2.2M (seed round only; Antler pre-seed portion undisclosed)",
+      "valuation_estimate": "$22M (est., approx. KRW 30B on a pre-money basis)",
+      "latest_round": {
+        "amount": "$2.2M (approx. KRW 3.0B)"
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed"
+        },
+        {
+          "amount": "$2.2M (approx. KRW 3.0B)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The total addressable market (TAM) is viewed as the entire field of on-device AI inference and agents across smartphones, vehicles, robots, drones, and smart glasses (size figures undisclosed; est.). For now, the serviceable addressable market (SAM) is centered on automotive and in-vehicle agent and world model PoCs, and the serviceable obtainable market (SOM) is assumed to be initial pilot contracts with global automakers and automotive software customers.",
+      "market_trend": "AI agents are spreading from the cloud to the edge, and research on post-Transformer and state space models that address Transformer limitations is accelerating. Hardware companies continue to invest in edge AI ecosystems, such as Qualcomm selecting five Korean edge AI startups for the Qualcomm AI Innovators Program (QAIPI). The Korean government is also expanding support, including the K-on-device AI semiconductor project (2026–2030, KRW 800.2B total).",
+      "growth_potential": "After completing its paid PoC in mobility, the company plans to expand horizontally into robots, drones, smart glasses, and wearables. Its strategy of running agents on the chip specifications already present in devices, without a dedicated NPU add-on, gives it strong access to mass-market device segments. The commercialization timeline is undisclosed; estimated around 2027.",
+      "risks": [
+        "Lack of large-scale external benchmarks and validation: most performance claims rely on internal measurements",
+        "Competition with Big Tech such as Apple, Qualcomm, and Samsung, which are bringing on-device AI in-house, and with existing optimization companies such as NOTA",
+        "As a team only one year old, competition for research and engineering talent is intense",
+        "Uncertain whether paid PoCs will convert into commercial license agreements"
+      ],
+      "risk_mitigation": "The company maintains technology leadership through its own architecture that does not depend on open source or the cloud, and validates demand through paid PoCs conducted directly in customer device environments. Using its move into Naver D2SF @Gangnam and D2SF's network of device ecosystem investments (including NOTA), it is pursuing customer and partner development."
+    },
+    "related_links": [
+      {
+        "title": "TraceWeave official website"
+      },
+      {
+        "title": "NAVER D2SF Portfolio - TraceWeave"
+      },
+      {
+        "title": "THE VC Company Profile - TraceWeave"
+      },
+      null,
+      {
+        "title": "NAVER D2SF investment press release"
+      }
+    ],
+    "editor_pick_comment": "Phase-TITAN's ambition to fully replace the Transformer is intriguing, but the real test is how quickly a seed-stage startup valued at KRW 30B can convert global automotive and in-vehicle software customers into actual contracts."
+  },
+  "oqt-2026": {
+    "tagline": "A KAIST spinoff developing error-tolerant quantum computers based on neutral-atom qubits",
+    "category": [
+      "Quantum Computing",
+      "Deep Tech Hardware",
+      "Quantum Error Correction"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "employee_count": "11-50 (est.)",
+    "founders": [
+      {
+        "role": "CEO; also a professor in the Department of Physics at KAIST",
+        "background": "Born in 1985. Earned a Ph.D. in mechanical engineering at MIT with research in atom- and optics-based quantum technology, then served as a founding member of QuEra, a U.S. full-stack quantum computing company. Currently a professor in the Department of Physics at KAIST, and founded OQT in January 2025.",
+        "notable_achievement": "As a founding member of QuEra, which developed the world's first 256-qubit neutral-atom quantum computer, contributed to research results on logical qubits"
+      }
+    ],
+    "team_highlights": "Reportedly co-founded by doctoral researchers from the KAIST Department of Physics lab. According to THE VC, there are two registered executive directors; total headcount is undisclosed. As of 2026, the company is continuously hiring in four areas: optical system engineering, system operations, quantum simulation, and quantum information (KAIST Munji Campus, Daejeon).",
+    "product": {
+      "summary": "A full-stack quantum computing company that designs everything from the quantum processing unit (QPU) hardware, which uses laser-cooled neutral atoms as qubits, to control software, error correction, and algorithms in an integrated manner. It aims to build error-tolerant, fault-tolerant quantum computers based on logical qubits, and as of October 2026 remains in the R&D stage prior to commercial product launch.",
+      "problem_statement": "Quantum computers are vulnerable to external noise, causing errors to accumulate during computation. Adding more physical qubits does not solve the problem, as calculations still break down, so they cannot address real industrial problems. The key barrier to commercialization is implementing error tolerance that can detect and correct errors in real time.",
+      "solution": "The company uses logical qubits, which bundle multiple physical qubits through error-correction codes, and builds error-tolerant systems through the Software-Defined Quantum Processor (SDQ), which reconfigures processor structure and operation to meet algorithmic requirements, along with co-design of hardware, software, error correction, and algorithms.",
+      "key_features": [
+        "QPU that uses neutral atoms as qubits, cooled by lasers and arranged with optical tweezers",
+        "Logical qubit operations based on quantum error correction (QEC) codes",
+        "SDQ: reconfigures processor structure and operation in software according to the algorithm",
+        "Integrated co-design of hardware, software, error correction, and quantum algorithms",
+        "Large-scale scalability and power efficiency characteristic of the neutral-atom approach"
+      ],
+      "tech_stack_or_innovation": "Neutral-atom arrays, Rydberg interactions, quantum error correction (QEC), and the SDQ architecture. The core driver is reproducing and advancing logical qubit technology, which the founder validated at MIT and QuEra, in Korea.",
+      "target_customer": "Industrial companies and domestic and international research institutions working on drug and materials development and optimization problems. In the short term, the focus is on government quantum flagship programs and research collaborations; in the medium to long term, it targets proof-of-concept (PoC) projects with industry in Japan and the United States.",
+      "business_model": "Undisclosed. As the company is still pre-commercialization, the leading candidates (est.) are QPU system supply and cloud access in a Quantum-as-a-Service model."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A Boston-based U.S. company where OQT's founder previously worked. It has demonstrated the world's first 256-qubit neutral-atom QPU and the implementation of approximately 50 logical qubit operations, and is a global leader in neutral-atom technology with investment from Google and SoftBank."
+        },
+        {
+          "comparison": "A French company targeting 1,000-qubit-class systems using the neutral-atom approach. It is testing applications in finance and energy industries, including Crédit Agricole, and has partnerships with companies such as LG Electronics."
+        },
+        {
+          "comparison": "A U.S. company that uses strontium atoms and emphasizes long coherence times on the order of tens of seconds as its key strength."
+        },
+        {
+          "comparison": "A domestic quantum hardware company based in Daejeon that develops quantum measurement and control equipment rather than QPUs, creating an indirect competitive relationship."
+        }
+      ],
+      "key_differentiator": "As a KAIST spinoff, it takes a co-design and SDQ approach that integrates hardware, software, and error correction from the outset. It is the only full-stack developer of neutral-atom QPUs in Korea.",
+      "moat": "The founder's experience as a founding member of QuEra and in logical qubit research, a talent pipeline from KAIST labs, connections to the national quantum ecosystem such as the Korea Quantum Flagship, and the first-mover advantage of being the first domestic neutral-atom hardware company.",
+      "competitive_position_summary": "Effectively the leading domestic player in neutral-atom quantum computing hardware. On a global basis, it is a late entrant behind QuEra, Pasqal, and Atom Computing, pursuing catch-up through differentiation in logical qubits and SDQ. Through its 2026 pre-Series A, it secured a technology partnership with U.S. SRI and networks in Japan and the United States."
+    },
+    "trending_reason": {
+      "summary": "Announced a KRW 14B pre-Series A funding round on October 15, 2026. DSC Investment led the round, with Kakao Ventures and Bluepoint Partners making follow-on investments, and Murex Partners, Stonebridge Ventures, Schmidt, ZVC, and GIL joining as new investors.",
+      "catalysts": [
+        "KRW 14B pre-Series A funding on 2026-10-15 (led by DSC Investment)",
+        "Announced technology cooperation with U.S. SRI (formerly Stanford Research Institute) through GIL, and plans to expand Japan and U.S. industry networks through ZVC",
+        "Policy momentum, including the Korea Quantum Flagship (targeting a 1,000-qubit-class neutral-atom QPU by 2032) and Quantum Korea 2026 (July, DDP)",
+        "Global industry assessment that the neutral-atom approach is the only path that has actually implemented logical qubit operations"
+      ],
+      "growth_metrics": "Cumulative investment of approximately KRW 17B (KRW 3B seed plus KRW 14B pre-Series A) within 21 months of founding. Valuation in the KRW 60B range was recognized during the pre-Series A process (based on Hankyung reporting, June 2026). Specific technical metrics such as revenue and qubit count are undisclosed.",
+      "media_mentions": [
+        {
+          "source": "Venture Square",
+          "title": "OQT Raises KRW 14B in Pre-Series A Funding…Accelerating Commercialization of Error-Tolerant Quantum Computers"
+        },
+        {
+          "source": "Edaily",
+          "title": "OQT Raises KRW 14B in Investment…Accelerating Development of Error-Tolerant Quantum Computers"
+        },
+        {
+          "source": "Maeil Business Newspaper",
+          "title": "Neutral-Atom Quantum Computing Company OQT Raises KRW 14B in Pre-Series A Funding"
+        },
+        {
+          "source": "Money Today",
+          "title": "“Fixing Quantum Computer Errors”…OQT Raises KRW 14B in Pre-A Funding"
+        },
+        {
+          "source": "Chosun Ilbo",
+          "title": "Quantum Computing Company OQT Raises KRW 14B in Investment"
+        },
+        {
+          "source": "Asia Economy",
+          "title": "Quantum Computing Company OQT to Receive KRW 14B in Pre-Series A Funding"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$12.6M (est.)",
+      "valuation_estimate": "$45M (est.)",
+      "latest_round": {
+        "amount": "₩14B (약 $10.4M)"
+      },
+      "funding_history": [
+        {
+          "amount": "₩3B (약 $2.2M (추정))"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: The global quantum computing market in the 2030s is projected to reach tens of trillions of KRW (industry estimates). SAM: The market for neutral-atom QPU hardware and systems and for error-correction technology. SOM: PoC demand from research institutions and industrial companies in Korea and Asia (est.).",
+      "market_trend": "The neutral-atom approach is currently viewed as the only quantum computing path that has actually implemented logical qubits, and global players such as QuEra (backed by Google and SoftBank), Pasqal, and Atom Computing are competing to scale up. Korea is pursuing a 1,000-qubit-class neutral-atom QPU (targeted for 2032), led by KRISS, under the Korea Quantum Flagship program.",
+      "growth_potential": "As the only full-stack neutral-atom QPU startup in Korea, it has significant room for growth, aligned with policy momentum such as government flagship programs and Quantum Korea. It has already been recognized with a valuation in the KRW 60B range at the pre-Series A stage.",
+      "risks": [
+        "Technological uncertainty, as commercialization could take several years or more",
+        "Smaller scale of funding and talent compared with global leaders such as QuEra",
+        "Shortage of specialized quantum talent in Korea",
+        "Dependence on overseas suppliers for core supply chain components such as lasers and optical parts",
+        "No guarantee that the neutral-atom approach itself will become the mainstream architecture"
+      ],
+      "risk_mitigation": "Risks are being diversified through technology cooperation with U.S. SRI via GIL, network expansion in Japan and the United States via ZVC, talent from KAIST labs and linkage to government projects, and additional funding capacity from domestic deep-tech-focused VCs such as DSC Investment."
+    },
+    "related_links": [
+      {
+        "title": "OQT Official Website"
+      },
+      {
+        "title": "OQT Careers"
+      },
+      {
+        "title": "THE VC Company Profile - OQT"
+      },
+      {
+        "title": "Maeil Business Newspaper Interview – After Semiconductors, ‘Quantum Computers’…A Look at Korea's Position Through a Brilliant Physicist"
+      },
+      {
+        "title": "Hankyung – Quantum Startups Heating Up the Venture Market"
+      },
+      {
+        "title": "Science Donga – Meeting the Master of Logical Qubits (August 2025 issue)"
+      }
+    ],
+    "editor_pick_comment": "A KAIST professor and former QuEra founding member is taking on the challenge of domestic neutral-atom quantum computing hardware, and with KRW 14B in pre-Series A funding, the company is now a test case for Korea's quantum ecosystem."
+  },
+  "unisieve-2026": {
+    "tagline": "A MOF molecular sieve membrane startup decarbonizing industrial separation processes.",
+    "category": [
+      "Cleantech",
+      "Industrial membranes",
+      "Carbon capture"
+    ],
+    "headquarters": {
+      "country_ko": "Switzerland"
+    },
+    "founders": [
+      {
+        "background": "ETH Zurich alumni. Co-founded in 2018 after experience in strategic consulting and the energy sector.",
+        "notable_achievement": "Commercialized MOF membrane technology for industrial use and raised a $9M Series A in October 2026."
+      },
+      {
+        "background": "ETH Zurich chemical engineering major.",
+        "notable_achievement": "Participated in the research of MOF-based membranes, the core technology of UniSieve, at ETH Zurich."
+      }
+    ],
+    "product": {
+      "summary": "UniSieve develops hybrid membranes that integrate MOFs (metal-organic frameworks) and zeolites into polymer membranes. They separate gases based solely on molecular size differences without heat, replacing energy-intensive processes like distillation.",
+      "problem_statement": "In industrial processes such as petrochemicals, hydrogen purification, and carbon capture, separation and purification are mostly done via heat-based distillation. A significant portion of global industrial energy consumption goes to separation processes, a major source of carbon emissions and costs.",
+      "solution": "Provides precise cutoff molecular sieve membranes that distinguish molecular size differences at the 0.1 angstrom level. Can save up to 90% energy compared to thermal separation and is supplied as container-type modules that can be fitted onto existing infrastructure.",
+      "key_features": [
+        "Hybrid membrane integrating MOFs and zeolites into polymer membranes",
+        "Separates even similar molecules like propylene/propane based solely on molecular size differences",
+        "Up to 90% energy savings",
+        "Container-type modules that can be retrofitted onto existing facilities"
+      ],
+      "tech_stack_or_innovation": "Based on MOF molecular sieve technology developed at ETH Zurich's Process Chemistry Laboratory since 2013. The core is the oriented arrangement of crystalline molecular sieves in polymer membranes to maintain selectivity at industrial scale.",
+      "target_customer": "Energy-intensive industries such as petrochemicals (olefin production), carbon capture (cement, waste incineration, soda ash), hydrogen purification, and hydrogen blending in gas networks. Currently, chemical companies in Europe and the US are key customers.",
+      "business_model": "Supplies container-type module systems directly rather than membrane components, scaling up from pilot tests to commercial use. Operated via software control and easily integrated into existing facilities."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A Canadian carbon capture company based on solid sorbents. Uses MOF-based materials but requires heating and cooling cycles, not a membrane approach."
+        },
+        {
+          "comparison": "An early-stage startup for carbon capture from low-concentration flue gas. Raised €2.2M in 2025 and is not yet at commercial stage."
+        },
+        {
+          "comparison": "A US gas separation membrane company. Has commercialized CO2 capture membranes, but not MOF-based precise cutoff."
+        }
+      ],
+      "key_differentiator": "A hybrid membrane that separates based solely on molecular size differences without thermal cycles. Has prepared for commercialization simultaneously in olefin production and carbon capture, with the differentiator being the scaling up of MOF crystalline material into industrial membranes.",
+      "competitive_position_summary": "Among European carbon capture and industrial membrane startups, shows the most advanced commercialization results at the Series A stage. Has secured strategic investors like Orano Venture Fund and is conducting a real-world CO2 capture demonstration with Poland's Qemetica.",
+      "moat": "Patents and manufacturing know-how for MOF-polymer mixed-matrix membranes, researched at ETH Zurich for over a decade. The technology, which aligns crystalline molecular sieves with uniform pore sizes within polymer membranes, is difficult for competitors to replicate."
+    },
+    "trending_reason": {
+      "summary": "Raised a $9M Series A led by Orano Venture Fund on October 8, 2026, pushing forward the commercialization of MOF-based industrial membranes. The 2025 Nobel Prize in Chemistry awarded for MOFs has also boosted interest in the material technology.",
+      "catalysts": [
+        "2026-10-08 Series A of $9M led by Orano Venture Fund",
+        "Total funding reached $25M",
+        "Started CO2 capture demonstration with Polish chemical company Qemetica (formerly CIECH)",
+        "2025 Nobel Prize in Chemistry for MOFs brought attention to MOF-based startups"
+      ]
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        null,
+        {
+          "amount": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global industrial gas separation membrane market is estimated at around $2B–$3B as of the mid-2020s and is expected to grow further with carbon capture and the hydrogen economy. The olefin separation and point-source carbon capture markets UniSieve targets are estimated at several billion dollars.",
+      "market_trend": "Industrial decarbonization pressure, carbon capture support policies, maturing MOF material research, expansion of hydrogen infrastructure. In particular, the 2025 Nobel Prize in Chemistry for MOFs is driving investment in material commercialization.",
+      "growth_potential": "Once the first commercial system is installed, can expand into chemical, cement, and waste incineration markets based on energy savings. The container-type modules are easy to retrofit onto existing plants, making them suitable for replacement demand.",
+      "risks": [
+        "Lack of long-term membrane durability and large-scale demonstration data",
+        "Conservative purchasing cycles in the chemical industry",
+        "Carbon capture market heavily influenced by regulation and subsidy policies",
+        "Technology competition from well-funded competitors"
+      ],
+      "risk_mitigation": "Proving performance through pilots at actual customer sites like Qemetica. Expanding industrial network via strategic investors like Orano, and maintaining differentiation through MOF patents."
+    },
+    "related_links": [
+      {
+        "title": "UniSieve Official Website"
+      },
+      {
+        "title": "UniSieve Technology Description"
+      },
+      {
+        "title": "UniSieve Team Introduction"
+      },
+      {
+        "title": "UniSieve Press Release"
+      }
+    ],
+    "editor_pick_comment": "A Swiss startup commercializing a 'Nobel Prize material' into industrial separation membranes just one year after MOFs won the Nobel Prize."
+  },
+  "sonexos-2026": {
+    "tagline": "A Swiss deep tech startup using plasma to cancel low-frequency noise.",
+    "category": [
+      "Deep tech",
+      "Acoustics",
+      "Noise control"
+    ],
+    "headquarters": {
+      "city": "Lausanne",
+      "country_ko": "Switzerland"
+    },
+    "founders": [
+      {
+        "background": "Over 20 years of experience in active noise control. Founded SoundChip (now Synaptics) and sold it to the DSP Group. Bachelor's and Master's in Mechanical Engineering from the University of Auckland.",
+        "notable_achievement": "EY Technology Entrepreneur of the Year Award"
+      },
+      {
+        "background": "PhD from EPFL (Swiss Federal Institute of Technology Lausanne). Originated the concept of plasma acoustic metamaterials. Published in Nature Communications. Worked at Schlumberger.",
+        "notable_achievement": "ABB Research Award, publication in a Nature journal"
+      },
+      {
+        "background": "Spent over 30 years at STMicroelectronics, serving as Vice President and General Manager of the MEMS division. Expert in audio semiconductors and sensors.",
+        "notable_achievement": "General Manager of the MEMS division at STMicroelectronics"
+      }
+    ],
+    "team_highlights": "CEO is the founder of SoundChip, which was sold to the DSP Group; CTO is an EPFL alumnus and developer of the core plasma acoustic technology; COO is a former head of the MEMS business division at STMicroelectronics with mass production experience.",
+    "product": {
+      "summary": "Sonexos has developed the 'Plasmacoustic Metalayer' technology that uses plasma discharge to actively absorb low-frequency noise. Unlike traditional passive sound absorbers, it is thin, lightweight, and has no moving parts.",
+      "problem_statement": "Low-frequency noise (humming) from home appliances, HVAC systems, and data center cooling fans is difficult to control effectively with traditional sound absorbers or speaker-based active noise cancellation (ANC). As frequency decreases, absorbers become thicker, and headphone ANC performs poorly in 3D spaces.",
+      "solution": "A layer of plasma (ionized gas) generated by corona discharge is actively controlled to absorb incident sound energy. The system detects the noise environment in real time and adjusts the plasma impedance, providing high absorption performance especially in the low-frequency range.",
+      "key_features": [
+        "Thin panel format under 10mm thickness",
+        "No moving parts, lightweight, solid-state",
+        "Absorption performance up to 20 dB at low frequencies (below 100 Hz) for HVAC systems",
+        "Software-controlled adaptive active absorption",
+        "Sealed inert gas-filled package (Plasmapanel®)"
+      ],
+      "tech_stack_or_innovation": "Proprietary 'Plasmacoustic' technology using low-temperature atmospheric plasma discharge as an acoustic metamaterial. Based on core technology patented by EPFL, three generations of hardware evolution have reduced weight and volume by over 80%.",
+      "target_customer": "Home appliance and HVAC OEMs, data center cooling system manufacturers, automotive parts suppliers, industrial fan/motor manufacturers",
+      "business_model": "Supplies Plasmapanel modules to OEMs (B2B). Currently running paid integration programs based on engineering prototypes, with first mass production targeted for early 2028."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Silentium (Israel)",
+          "comparison": "Provides ANC solutions for home appliances and IT, but is speaker-based with limitations in low-frequency spatial control."
+        },
+        {
+          "name": "Soft dB (Canada)",
+          "comparison": "Provides active noise control for industrial use, but mainly limited to ducts or headsets."
+        },
+        {
+          "name": "MuGen (Japan)",
+          "comparison": "Researching active absorption using magnetostrictive elements but is still at the pre-commercialization stage."
+        }
+      ],
+      "key_differentiator": "The only approach using plasma as an acoustic absorber. Thin profile, excellent low-frequency performance, and does not obstruct airflow. Overcomes spatial limitations of speaker-based active control.",
+      "moat": "Patented core plasma acoustic metamaterial technology, EPFL license, third-generation hardware and control algorithms, collaboration with global OEM network including Bosch Ventures.",
+      "competitive_position_summary": "Still at an early stage, but with clear technological differentiation and paid integration programs with major customers, positioning it to capture first-mover advantage."
+    },
+    "trending_reason": {
+      "summary": "On October 21, 2026, the news of a CHF 5M (approx. $6.1M) Pre-Series A round led by Valquest Partners with participation from Bosch Ventures attracted attention. Combined with rapidly growing market demand for data center cooling noise solutions, it is gaining traction in the deep tech sector.",
+      "catalysts": [
+        "2026-10-21: CHF 5M pre-Series A round closed (led by Valquest Partners, with participation from Bosch Ventures)",
+        "2026-10-21: Official press release issued by Bosch Ventures",
+        "Paid prototype integration programs underway with existing HVAC and home appliance OEMs",
+        "Technology aligns with tightening regulations on data center cooling fan noise"
+      ],
+      "growth_metrics": "Undisclosed"
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "notable_investors": [
+          null,
+          "Industry angels and individual investors"
+        ]
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global noise control market is projected to grow from approximately $1.2B in 2024 to over $2B by 2030 (est.). Demand for low-frequency noise control is particularly increasing in HVAC, data centers, and electric vehicles.",
+      "market_trend": "Tightening regulations on data center cooling fan noise, trend toward quieter home appliances, and increasing need for electric vehicle road noise reduction.",
+      "growth_potential": "Groundbreaking performance and form factor compared to existing technologies enable rapid adoption upon market entry. Targets 2-3x annual growth after first mass production in 2028 (est.).",
+      "risks": [
+        "Need for long-term reliability and safety verification of plasma technology",
+        "Possibility of higher unit cost compared to traditional absorbers in mass production",
+        "Competing speaker-based ANC technologies are also evolving",
+        "Time required for regulatory certifications (home appliances, automotive)"
+      ],
+      "risk_mitigation": "Support for mass production and certifications through industrial partners such as Bosch Ventures; volume and cost reduction via third-generation hardware; patent-based entry barriers."
+    },
+    "related_links": [
+      {
+        "title": "Sonexos Official Website"
+      },
+      {
+        "title": "Sonexos Leadership Page"
+      },
+      {
+        "title": "Sonexos Technology Overview"
+      },
+      {
+        "title": "Sonexos Market Page"
+      },
+      {
+        "title": "Sonexos Newsroom"
+      }
+    ],
+    "editor_pick_comment": "Sonexos is impressive in its attempt to solve a century-old problem of low-frequency noise with an unfamiliar technology, plasma, and it stands out for having turned interest from global OEMs into a paid program."
+  }
+}

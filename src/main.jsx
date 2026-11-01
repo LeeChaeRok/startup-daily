@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './styles/app.css'
 import App from './App.jsx'
 import { loadData } from './lib/load.js'
+import { track } from './lib/analytics.js'
 import { watchForUpdates } from './lib/update.js'
 import { L } from './lib/i18n.js'
 
@@ -28,6 +29,7 @@ loadData().then(
       </StrictMode>,
     )
     watchForUpdates()
+    track('app_open', { standalone: window.matchMedia('(display-mode: standalone)').matches })
   },
   showLoadError,
 )

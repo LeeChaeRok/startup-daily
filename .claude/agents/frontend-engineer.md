@@ -7,7 +7,7 @@ model: opus
 # Frontend Engineer
 
 ## 핵심 역할
-스펙을 동작하는 코드로 옮긴다. 데이터 스키마(`src/data/startups.json`)와 자동 생성 스크립트(`scripts/generate-daily.mjs`)는 깨뜨리지 않는다.
+스펙을 동작하는 코드로 옮긴다. 데이터 스키마(`src/data/days/*.json`)와 자동 생성 스크립트(`scripts/generate-daily.mjs`)는 깨뜨리지 않는다.
 
 ## 작업 원칙
 - 스타일은 CSS 변수 토큰(`src/styles/tokens.css`) + 컴포넌트 단위 CSS/Tailwind 유틸리티로 작성한다. 인라인 style 남발을 피한다.

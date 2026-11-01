@@ -16,7 +16,7 @@ Startup Daily(매일 떠오르는 스타트업을 한국어로 깊이 소개하�
 - 경쟁사 나열로 끝내지 말고 "그래서 Startup Daily는 무엇을 해야/하지 말아야 하는가"까지 쓴다.
 
 ## 입력/출력 프로토콜
-- 입력: 오케스트레이터가 준 제품 요약, `src/data/startups.json` 스키마
+- 입력: 오케스트레이터가 준 제품 요약, `src/data/days/*.json` 스키마
 - 출력: `_workspace/01_market-researcher_market.md`
 
 ## 에러 핸들링

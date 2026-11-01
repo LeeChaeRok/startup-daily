@@ -1,0 +1,1651 @@
+[
+  {
+    "id": "decagon-ai-2026",
+    "date": "2026-04-26",
+    "featured": true,
+    "sector": "enterprise",
+    "name_en": "Decagon",
+    "name_ko": "데카곤",
+    "tagline": "엔터프라이즈 고객지원을 통째로 대체하는 AI 에이전트",
+    "category": [
+      "버티컬 AI",
+      "고객지원 자동화",
+      "엔터프라이즈 SaaS"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "100-200",
+    "website": "https://decagon.ai/",
+    "logo_url": "/logos/decagon-ai-2026.png",
+    "logo_svg_description": "10각형(decagon) 기하학 마크와 차분한 인디고·화이트 톤의 산세리프 'Decagon' 워드마크",
+    "founders": [
+      {
+        "name_en": "Jesse Zhang",
+        "name_ko": "제시 장",
+        "role": "Co-Founder & CEO",
+        "background": "Lowkey(Niantic 인수) 창업자, Citadel 출신 퀀트",
+        "linkedin": "",
+        "notable_achievement": "두 번째 회사로 1년 만에 ARR 수천만 달러 규모, AI 에이전트 카테고리의 대표 주자"
+      },
+      {
+        "name_en": "Ashwin Sreenivas",
+        "name_ko": "아슈윈 스리니바스",
+        "role": "Co-Founder & CTO",
+        "background": "Helia AI(Palantir 인수) 창업자, MIT 컴퓨터과학",
+        "linkedin": "",
+        "notable_achievement": "Palantir 인수 경력의 AI 인프라 베테랑, Decagon 멀티 에이전트 아키텍처 설계"
+      }
+    ],
+    "team_highlights": "Citadel·Palantir·Niantic 출신 시리얼 창업자 + 전직 OpenAI·Scale AI 엔지니어, 엔터프라이즈 영업 인력 적극 영입",
+    "product": {
+      "summary": "고객지원 메일·챗·전화·SMS 채널을 자율적으로 운영하는 AI 컨시어지 에이전트 플랫폼. 기업의 지식베이스·CRM·내부 시스템을 학습해 80~90% 문의를 사람 없이 끝까지 해결하고, 결과는 결제 가능한 'autonomous resolution' 단위로 측정·과금된다",
+      "problem_statement": "전통적 챗봇은 단순 FAQ만 처리하고 복잡한 문의는 사람으로 에스컬레이션되는 한계가 있다. 기업은 인건비 상승과 고객 만족 압박 사이에서 진짜 '해결되는' 자동화를 원한다",
+      "solution": "여러 LLM과 자체 추론 모델을 조합한 멀티 에이전트 아키텍처로 도메인별 워크플로우를 학습. Salesforce·Zendesk·Intercom과 깊게 통합되며, 회사별 에이전트 디자이너로 비개발자도 정책·톤·예외 흐름을 정의할 수 있다",
+      "key_features": [
+        "AI Agent Engine: 멀티 채널 자율 응대 코어",
+        "Agent Operating Procedures(AOP): 비개발자용 워크플로우 빌더",
+        "Knowledge Engine: 사내 문서·티켓 학습 및 자동 갱신",
+        "Voice Agent: 콜센터 음성 자동 응대",
+        "Outcome Analytics: 해결 비율·CSAT 실시간 대시보드"
+      ],
+      "tech_stack_or_innovation": "멀티 LLM 라우팅, 자체 평가·검증 에이전트, 도메인별 강화학습, 음성 스트리밍 인프라",
+      "target_customer": "이커머스·핀테크·SaaS·통신·헬스케어 등 콜센터 비용 비중이 큰 중대형 기업",
+      "business_model": "해결당 결제(Outcome-based) + 엔터프라이즈 SaaS 라이선스",
+      "demo_or_screenshot_url": "https://decagon.ai/product"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Sierra",
+          "comparison": "Bret Taylor의 AI 컨시어지 강자. Decagon은 결과 기반 가격제와 음성 채널 통합에서 차별화"
+        },
+        {
+          "name": "Ada",
+          "comparison": "기존 AI 챗봇 1세대. Decagon은 LLM 기반 자율 해결률에서 압도적 격차"
+        },
+        {
+          "name": "Intercom Fin",
+          "comparison": "기존 SaaS의 AI 에이전트. Decagon은 멀티 채널·도메인 깊이로 차별화"
+        }
+      ],
+      "key_differentiator": "결과 기반 가격제 + 멀티 채널 자율 해결 + 비개발자용 에이전트 디자이너의 조합",
+      "moat": "엔터프라이즈 락인된 워크플로우 데이터, 음성·채팅 멀티모달 인프라, AOP를 통한 비기술 부서 락인",
+      "competitive_position_summary": "AI 고객지원 에이전트 카테고리에서 Sierra와 양강 구도, 엔터프라이즈 빠르게 침투"
+    },
+    "trending_reason": {
+      "summary": "2025년 가을 Series C $131M으로 $1.5B 밸류에이션 달성, Hertz·Bilt·Notion 등 대형 고객 락인. AI 에이전트 영역에서 가장 빠르게 매출이 검증된 회사 중 하나",
+      "catalysts": [
+        "2025년 Series C $131M, $1.5B 밸류에이션",
+        "Hertz·Bilt·Webflow 등 대형 엔터프라이즈 사례",
+        "Voice Agent 라인업 출시로 콜센터 시장 진입",
+        "결과 기반 가격제로 매출 가시성 확보"
+      ],
+      "media_mentions": [
+        {
+          "source": "Forbes",
+          "title": "Decagon raises $131M as AI agents start ending the call-center era",
+          "url": "https://www.forbes.com/decagon-131m/",
+          "date": "2025-10-09"
+        },
+        {
+          "source": "The Information",
+          "title": "Why enterprise CIOs pick Decagon over Sierra",
+          "url": "https://www.theinformation.com/articles/decagon-vs-sierra",
+          "date": "2026-01-23"
+        }
+      ],
+      "growth_metrics": "ARR 1년 만에 10배+, 엔터프라이즈 고객 100+, autonomous resolution 비율 80%+"
+    },
+    "funding": {
+      "total_raised": "$200M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$131M",
+        "date": "2025-10",
+        "lead_investor": "Bain Capital Ventures",
+        "notable_investors": [
+          "Andreessen Horowitz",
+          "Accel",
+          "ICONIQ"
+        ]
+      },
+      "valuation_estimate": "$1.5B",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$5M",
+          "date": "2023-08",
+          "lead_investor": "Andreessen Horowitz"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$35M",
+          "date": "2024-05",
+          "lead_investor": "Accel"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$65M",
+          "date": "2024-12",
+          "lead_investor": "Bain Capital Ventures"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$131M",
+          "date": "2025-10",
+          "lead_investor": "Bain Capital Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 고객지원·콜센터 인건비 시장 $300B+, AI 에이전트 자동화 SOM 2030년 $50B",
+      "market_trend": "콜센터 BPO 비용 상승, 결과 기반 AI 도입의 표준화, 음성·메시징 통합 에이전트 수요 폭증",
+      "growth_potential": "음성·SMS·이메일 통합 멀티모달 확장, 헬스·금융 규제 산업 진입, 글로벌 다국어 라인업",
+      "risks": [
+        "Sierra·Salesforce·OpenAI의 동시 진입",
+        "LLM 환각으로 인한 잘못된 응대 책임 리스크",
+        "결과 기반 가격제의 단위 경제 변동"
+      ],
+      "risk_mitigation": "도메인별 검증 에이전트와 SLA 보장, 보안·컴플라이언스 인증 강화, 마진 구조 정교화"
+    },
+    "related_links": [
+      {
+        "title": "Decagon 공식 사이트",
+        "url": "https://decagon.ai/"
+      },
+      {
+        "title": "Forbes: Series C 보도",
+        "url": "https://www.forbes.com/decagon-131m/"
+      },
+      {
+        "title": "AOP 빌더 소개",
+        "url": "https://decagon.ai/aop"
+      }
+    ],
+    "editor_pick_comment": "콜센터 인력의 80%를 'AI가 끝까지 해결'한다고 청구서에 적는 회사. 챗봇 1세대의 한계를 결과 기반 가격으로 정면 돌파한, 가장 자신감 있는 AI 에이전트 베팅."
+  },
+  {
+    "id": "cartesia-2026",
+    "date": "2026-04-26",
+    "featured": true,
+    "sector": "ai",
+    "name_en": "Cartesia",
+    "name_ko": "카르테시아",
+    "tagline": "차세대 아키텍처(Mamba) 기반 실시간 음성 AI — 디바이스 위에서 도는 보이스 에이전트",
+    "category": [
+      "AI 음성",
+      "온디바이스 AI",
+      "차세대 아키텍처"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "30-60",
+    "website": "https://cartesia.ai/",
+    "logo_url": "/logos/cartesia-2026.png",
+    "logo_svg_description": "데카르트 좌표계의 곡선이 음파로 변하는 추상 마크와 미니멀한 'Cartesia' 워드마크",
+    "founders": [
+      {
+        "name_en": "Karan Goel",
+        "name_ko": "카란 고엘",
+        "role": "Co-Founder & CEO",
+        "background": "Stanford Hazy Research, Mamba/SSM 논문 공저자",
+        "linkedin": "",
+        "notable_achievement": "트랜스포머 대안인 State Space Model을 음성에 적용, 실시간 저지연 보이스 AI 카테고리 정의"
+      },
+      {
+        "name_en": "Albert Gu",
+        "name_ko": "앨버트 구",
+        "role": "Co-Founder & Chief Scientist",
+        "background": "Carnegie Mellon 교수, Mamba 논문 1저자",
+        "linkedin": "",
+        "notable_achievement": "Mamba 아키텍처의 창시자 — 트랜스포머 이후 가장 영향력 있는 시퀀스 모델 연구자"
+      }
+    ],
+    "team_highlights": "Stanford·CMU·DeepMind 출신 SSM 연구자, 음성·로보틱스 엔지니어, 온디바이스 추론 전문가",
+    "product": {
+      "summary": "Mamba/SSM 기반 자체 음성 합성·인식 모델 'Sonic'을 중심으로 한 실시간 음성 AI 플랫폼. 90ms 미만 초저지연으로 사람과 실시간 대화 가능한 보이스 에이전트를 만들 수 있고, 모델 일부는 노트북·차량·가전에서도 동작",
+      "problem_statement": "전통 음성 합성·대화 AI는 트랜스포머 기반이라 길이가 길어질수록 비용·지연이 폭증하고, 디바이스 위 실시간 대화 응용에 부적합하다",
+      "solution": "선형 시간 복잡도의 SSM(Mamba) 아키텍처로 음성 합성·인식·대화 전체를 재설계. 클라우드와 온디바이스 양쪽에서 동작하는 'Sonic' 모델 라인업과 실시간 보이스 에이전트 SDK 제공",
+      "key_features": [
+        "Sonic: SSM 기반 실시간 음성 합성·인식 모델",
+        "Voice Cloning: 짧은 샘플로 보이스 복제",
+        "Realtime Voice API: 90ms 이하 지연 대화 SDK",
+        "On-device 모델: 차량·로보틱스·웨어러블 통합",
+        "엔터프라이즈 음성 에이전트 빌더"
+      ],
+      "tech_stack_or_innovation": "Mamba/State Space Models, 스트리밍 합성 디코더, 온디바이스 양자화 추론, 멀티모달 시퀀스 모델",
+      "target_customer": "콜센터·헬스 음성 에이전트, 자동차 OEM, 로보틱스·웨어러블 디바이스, 게임·미디어 스튜디오",
+      "business_model": "API 사용량 + 엔터프라이즈 라이선스 + 온디바이스 SDK 라이선스",
+      "demo_or_screenshot_url": "https://cartesia.ai/sonic"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "ElevenLabs",
+          "comparison": "음성 합성 표현력 강자. Cartesia는 실시간 지연·온디바이스에서 차별화"
+        },
+        {
+          "name": "OpenAI Realtime API",
+          "comparison": "GPT-4o 기반 대화 음성. Cartesia는 모델 자체를 디바이스에 올리는 옵션 제공"
+        },
+        {
+          "name": "Deepgram",
+          "comparison": "음성 인식 강자. Cartesia는 합성·대화·인식 통합 모델로 풀스택 차별화"
+        }
+      ],
+      "key_differentiator": "Mamba SSM 기반 선형 추론 + 90ms 초저지연 + 클라우드/온디바이스 듀얼 배포",
+      "moat": "Mamba 창시자 보유 연구 IP, SSM 기반 음성 모델 선점, 자동차·로보틱스 OEM 통합 경험",
+      "competitive_position_summary": "차세대 아키텍처 기반 실시간 음성 AI의 사실상 유일한 풀스택 사업자, ElevenLabs의 가장 진지한 도전자"
+    },
+    "trending_reason": {
+      "summary": "2025년 Series B $64M으로 $700M 밸류에이션, Sonic 모델로 실시간 보이스 에이전트 시장의 기술 표준 후보로 부상. 자동차·로보틱스 OEM과의 통합 사례 확산",
+      "catalysts": [
+        "2025년 Series B $64M, $700M 밸류에이션",
+        "Sonic 2.0 출시로 90ms 미만 지연 달성",
+        "자동차 OEM(Toyota·BMW) PoC 보도",
+        "Mamba 후속 연구의 산업 적용"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Cartesia raises $64M to bring Mamba models to voice",
+          "url": "https://techcrunch.com/cartesia-64m/",
+          "date": "2025-03-12"
+        },
+        {
+          "source": "The Verge",
+          "title": "Cartesia's Sonic talks faster than humans expect",
+          "url": "https://www.theverge.com/cartesia-sonic-2/",
+          "date": "2025-11-04"
+        }
+      ],
+      "growth_metrics": "Realtime API 호출 월 수억, 자동차·로보틱스 PoC 다수, 개발자 SDK 다운로드 급증"
+    },
+    "funding": {
+      "total_raised": "$91M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$64M",
+        "date": "2025-03",
+        "lead_investor": "Kleiner Perkins",
+        "notable_investors": [
+          "Lightspeed",
+          "A* Capital",
+          "Index Ventures",
+          "Conviction"
+        ]
+      },
+      "valuation_estimate": "$700M",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$27M",
+          "date": "2024-03",
+          "lead_investor": "Index Ventures"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$64M",
+          "date": "2025-03",
+          "lead_investor": "Kleiner Perkins"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 음성 AI 시장 2030년 $50B+, 실시간 보이스 에이전트 SOM $20B, 온디바이스 음성 $10B",
+      "market_trend": "트랜스포머 한계와 SSM 부상, 자동차·로보틱스의 음성 인터페이스 표준화, 온디바이스 LLM 가속",
+      "growth_potential": "자동차 OEM 표준 음성 스택, 콜센터 실시간 에이전트, 웨어러블·가전 음성 통합",
+      "risks": [
+        "OpenAI·ElevenLabs의 SSM 추격",
+        "온디바이스 모델 품질·정확도 검증",
+        "자동차 OEM 사이클의 긴 도입 시간"
+      ],
+      "risk_mitigation": "SSM IP 선점·논문 지속 발표, 클라우드와 디바이스 듀얼 매출, OEM 다변화"
+    },
+    "related_links": [
+      {
+        "title": "Cartesia 공식 사이트",
+        "url": "https://cartesia.ai/"
+      },
+      {
+        "title": "TechCrunch: Series B 보도",
+        "url": "https://techcrunch.com/cartesia-64m/"
+      },
+      {
+        "title": "Sonic 모델 페이지",
+        "url": "https://cartesia.ai/sonic"
+      }
+    ],
+    "editor_pick_comment": "트랜스포머 다음을 진지하게 베팅하는 거의 유일한 음성 회사. Mamba 논문 1저자가 직접 차린 회사라는 점만으로도, 음성 AI 판도를 흔들 가능성이 가장 높다."
+  },
+  {
+    "id": "crusoe-energy-2026",
+    "date": "2026-04-26",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "Crusoe",
+    "name_ko": "크루소",
+    "tagline": "버려지는 에너지로 AI를 돌린다 — 청정 컴퓨트의 새로운 모델",
+    "category": [
+      "AI 인프라",
+      "클린에너지",
+      "GPU 클라우드"
+    ],
+    "founded_year": 2018,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series D",
+    "employee_count": "500-1000",
+    "website": "https://crusoe.ai/",
+    "logo_url": "/logos/crusoe-energy-2026.png",
+    "logo_svg_description": "산업용 파이프라인과 데이터 센터 격자가 결합된 그래픽, 짙은 청록색·오렌지 그라데이션의 'Crusoe' 워드마크",
+    "founders": [
+      {
+        "name_en": "Chase Lochmiller",
+        "name_ko": "체이스 로크밀러",
+        "role": "Co-Founder & CEO",
+        "background": "MIT 물리학, Goldman Sachs·Polychain Capital 출신 헤지펀드 매니저",
+        "linkedin": "",
+        "notable_achievement": "비트코인 채굴에서 시작해 AI GPU 클라우드로 피벗, 청정 컴퓨트 모델의 선구자"
+      },
+      {
+        "name_en": "Cully Cavness",
+        "name_ko": "컬리 캐브니스",
+        "role": "Co-Founder & President",
+        "background": "Middlebury College, 미국 에너지부 출신, 석유·가스 산업 전문가",
+        "linkedin": "",
+        "notable_achievement": "유전 플레어 가스를 활용한 분산 컴퓨트 모델 구축"
+      }
+    ],
+    "team_highlights": "에너지 산업·핀테크·클라우드 인프라 출신의 하이브리드 팀, 데이터센터 운영·전력 거래·GPU 엔지니어링 전문가",
+    "product": {
+      "summary": "유전에서 버려지는 플레어 가스, 폐 천연가스, 잉여 재생에너지를 활용해 AI GPU 클라우드를 운영한다. 자체 데이터센터·전력 인프라·GPU 운영을 수직 통합하여 NVIDIA H100/H200 클러스터를 가장 빠르게 공급하는 사업자 중 하나",
+      "problem_statement": "AI 학습·추론 수요 폭증으로 GPU 컴퓨트가 가장 큰 병목이 되었지만, 기존 데이터센터는 전력·부지 확보에 18~36개월이 필요하고 환경 부담이 크다",
+      "solution": "유전 플레어 가스·잉여 풍력·태양광 등 '낭비되는 에너지' 부지에 모듈러 데이터센터를 빠르게 배치하여 6~12개월 내 GPU 클러스터를 가동. 동시에 환경 영향을 줄이는 청정 컴퓨트 솔루션",
+      "key_features": [
+        "Crusoe Cloud: NVIDIA H100/H200 GPU 클러스터 임대",
+        "Digital Flare Mitigation: 플레어 가스 발전 모듈러 데이터센터",
+        "AI Data Center: 텍사스·아이슬란드·노르웨이 대규모 캠퍼스",
+        "Liquid Cooling: 차세대 GPU용 액침 냉각 인프라",
+        "Long-term Capacity Contracts: 멀티 년간 GPU 용량 계약"
+      ],
+      "tech_stack_or_innovation": "모듈러 컨테이너형 데이터센터, 가스 발전기-GPU 직결 전력 시스템, 액침 냉각, 수직 통합 클라우드 운영 스택",
+      "target_customer": "AI 모델 학습 기업(파운데이션 모델 랩), 엔터프라이즈 AI 사업자, 정부·국방 AI 컴퓨트, 하이퍼스케일러 백업 캐파시티",
+      "business_model": "GPU 시간당 종량제 + 멀티 년간 캐파시티 계약 + 데이터센터 BTS(Build-to-Suit)",
+      "demo_or_screenshot_url": "https://crusoe.ai/cloud"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "CoreWeave",
+          "comparison": "GPU 클라우드 대표 사업자. Crusoe는 전력·부지 자체 확보 모델로 비용 우위"
+        },
+        {
+          "name": "Lambda Labs",
+          "comparison": "AI 전용 GPU 클라우드. Crusoe는 데이터센터 자산 자체 보유로 캐파시티 확장 속도 우위"
+        },
+        {
+          "name": "AWS / Azure / GCP",
+          "comparison": "하이퍼스케일러. Crusoe는 GPU 전용·청정에너지 차별화로 틈새 공략"
+        }
+      ],
+      "key_differentiator": "버려지는 에너지원 활용 + 모듈러 데이터센터 + GPU 클라우드의 수직 통합",
+      "moat": "유전·가스 사업자와의 장기 계약, 자체 데이터센터 부지 확보, NVIDIA 전략 파트너십, 빠른 캐파시티 확장 능력",
+      "competitive_position_summary": "AI 인프라 카테고리에서 청정 컴퓨트·빠른 캐파시티의 대표 주자, CoreWeave 다음의 GPU 네오클라우드 강자"
+    },
+    "trending_reason": {
+      "summary": "2025년 12월 $600M Series D를 $2.8B 밸류에이션으로 유치, 텍사스 1.2GW 규모 AI 캠퍼스 착공으로 GPU 캐파시티 시장의 핵심 공급자로 부상",
+      "catalysts": [
+        "2025년 12월 Series D $600M, $2.8B 밸류에이션",
+        "텍사스 아빌린 1.2GW AI 데이터센터 캠퍼스 착공",
+        "Oracle·OpenAI 등과 멀티 년간 캐파시티 계약 보도",
+        "북미 GPU 캐파시티 부족 사태에서 핵심 공급자로 부각"
+      ],
+      "media_mentions": [
+        {
+          "source": "Bloomberg",
+          "title": "Crusoe raises $600M as AI data center boom intensifies",
+          "url": "https://www.bloomberg.com/news/crusoe-600m/",
+          "date": "2025-12-10"
+        },
+        {
+          "source": "Wall Street Journal",
+          "title": "Crusoe's Texas data center bets on AI's energy hunger",
+          "url": "https://www.wsj.com/tech/crusoe-texas-data-center/",
+          "date": "2026-02-08"
+        }
+      ],
+      "growth_metrics": "운영 GPU 10만+ 규모, 멀티 년간 캐파시티 계약 수십억 달러, 데이터센터 캐파시티 1.2GW 추가 착공"
+    },
+    "funding": {
+      "total_raised": "$1.6B+",
+      "latest_round": {
+        "stage": "Series D",
+        "amount": "$600M",
+        "date": "2025-12",
+        "lead_investor": "Founders Fund",
+        "notable_investors": [
+          "Fidelity",
+          "Mubadala",
+          "Valor Equity Partners"
+        ]
+      },
+      "valuation_estimate": "$2.8B",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$70M",
+          "date": "2021-04",
+          "lead_investor": "Valor Equity Partners"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$128M",
+          "date": "2022-04",
+          "lead_investor": "G2 Venture Partners"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$500M",
+          "date": "2024-12",
+          "lead_investor": "Founders Fund"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$600M",
+          "date": "2025-12",
+          "lead_investor": "Founders Fund"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 AI 데이터센터 시장 2030년 $400B+, GPU 클라우드 SOM $50B, 청정 AI 컴퓨트 세그먼트 $20B",
+      "market_trend": "AI 컴퓨트 수요가 전력 인프라 한계에 부딪힘, 데이터센터의 에너지 효율·청정 전력 요구 강화",
+      "growth_potential": "텍사스·중동·북유럽 청정 전력 부지로 글로벌 확장, 정부·국방 AI 컴퓨트 사업 진출",
+      "risks": [
+        "AI 캐파시티 과잉 공급에 따른 GPU 가격 하락",
+        "전력·부지 확보 경쟁 심화",
+        "환경 단체의 가스 기반 채굴 비판"
+      ],
+      "risk_mitigation": "장기 캐파시티 계약 기반 매출 확보, 재생에너지 비중 점진 확대, 플레어 가스 활용의 환경 효익 데이터화"
+    },
+    "related_links": [
+      {
+        "title": "Crusoe 공식 사이트",
+        "url": "https://crusoe.ai/"
+      },
+      {
+        "title": "Bloomberg: Series D 보도",
+        "url": "https://www.bloomberg.com/news/crusoe-600m/"
+      },
+      {
+        "title": "WSJ: 텍사스 캠퍼스 분석",
+        "url": "https://www.wsj.com/tech/crusoe-texas-data-center/"
+      }
+    ],
+    "editor_pick_comment": "AI 시대의 진짜 자원은 GPU가 아니라 '전기'다. 버려지는 가스로 AI를 돌리는 발상으로 시작한 회사가, 지금은 OpenAI·Oracle의 GPU 공급원이 됐다."
+  },
+  {
+    "id": "sakana-ai-2026",
+    "date": "2026-04-26",
+    "featured": true,
+    "sector": "ai",
+    "name_en": "Sakana AI",
+    "name_ko": "사카나 AI",
+    "tagline": "물고기 떼처럼 진화하는 AI — 도쿄에서 시작된 새로운 파운데이션 모델",
+    "category": [
+      "AI 연구",
+      "파운데이션 모델",
+      "진화 알고리즘"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "Tokyo",
+      "country": "Japan",
+      "country_ko": "일본"
+    },
+    "company_stage": "Series A",
+    "employee_count": "30-50",
+    "website": "https://sakana.ai/",
+    "logo_url": "",
+    "logo_svg_description": "물고기 떼가 흐름을 형성하는 추상 그래픽, 사쿠라 핑크·딥블루 그라데이션의 'sakana.ai' 워드마크",
+    "founders": [
+      {
+        "name_en": "David Ha",
+        "name_ko": "데이비드 하",
+        "role": "Co-Founder & CEO",
+        "background": "전 Google Brain 도쿄 리드, Stability AI 헤드 오브 리서치, '월드 모델' 논문 저자",
+        "linkedin": "",
+        "notable_achievement": "AI 연구 커뮤니티에서 진화·생성 모델 분야의 대표 연구자, 일본 최대 AI 스타트업 창업"
+      },
+      {
+        "name_en": "Llion Jones",
+        "name_ko": "라이언 존스",
+        "role": "Co-Founder & CTO",
+        "background": "Google Brain 출신, 'Attention is All You Need'(트랜스포머) 논문 공저자",
+        "linkedin": "",
+        "notable_achievement": "트랜스포머 아키텍처의 8인 공동저자 중 한 명, 현대 LLM의 토대를 만든 인물"
+      },
+      {
+        "name_en": "Ren Ito",
+        "name_ko": "이토 렌",
+        "role": "Co-Founder & COO",
+        "background": "Mercari 전 임원, 외무성 출신 외교관",
+        "linkedin": "",
+        "notable_achievement": "일본 정부·기업 네트워크 활용해 일본 AI 생태계 조성"
+      }
+    ],
+    "team_highlights": "Google Brain·DeepMind 출신 연구자 + 일본 정부·대기업 네트워크, 트랜스포머 공동저자 보유",
+    "product": {
+      "summary": "거대 모델을 처음부터 학습시키는 대신, 기존 오픈소스 모델들을 진화 알고리즘으로 결합·개량해 새로운 파운데이션 모델을 만든다. 일본어·다국어 특화 모델과 모델 머징 자동화 도구를 함께 제공",
+      "problem_statement": "거대 모델 학습은 막대한 비용이 들고 미국·중국 빅테크에 집중되어 있어, 다른 지역·언어·도메인에 최적화된 모델을 만들기 어렵다",
+      "solution": "진화 알고리즘으로 오픈소스 모델 가중치를 자동 결합하는 'Evolutionary Model Merge' 기법을 통해 학습 비용의 일부로 특정 도메인·언어에 최적화된 모델을 생성. 일본어 LLM·비전·코드 모델을 SOTA 수준으로 빠르게 개발",
+      "key_features": [
+        "Evolutionary Model Merge: 오픈소스 모델 자동 진화 결합",
+        "Sakana 일본어 LLM: 일본어·영어 이중 특화 파운데이션 모델",
+        "AI Scientist: AI가 스스로 ML 논문을 작성·실험하는 자율 연구 에이전트",
+        "Continuous Thought Machines: 시간 차원을 모델링하는 차세대 아키텍처",
+        "엔터프라이즈 일본어 모델 커스터마이징"
+      ],
+      "tech_stack_or_innovation": "진화 알고리즘 기반 모델 머징, 자체 일본어 토크나이저, AI 자율 연구 에이전트, 분산 학습 인프라",
+      "target_customer": "일본·아시아 엔터프라이즈, 일본 정부·공공 기관, 글로벌 AI 연구 기관, 제조·금융업의 일본어 특화 AI 도입 기업",
+      "business_model": "엔터프라이즈 모델 라이선싱 + AI 컨설팅 + 정부·공공 프로젝트",
+      "demo_or_screenshot_url": "https://sakana.ai/blog"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Preferred Networks",
+          "comparison": "일본 대표 AI 스타트업. Sakana는 LLM·생성 모델에 집중, 글로벌 연구 인지도 우위"
+        },
+        {
+          "name": "Mistral AI",
+          "comparison": "비미국권 LLM 강자. Sakana는 진화 알고리즘과 일본어 특화로 차별화"
+        },
+        {
+          "name": "Cohere",
+          "comparison": "엔터프라이즈 LLM 사업자. Sakana는 비용 효율적 모델 머징 기법으로 차별점"
+        }
+      ],
+      "key_differentiator": "진화 알고리즘 기반 모델 머징으로 학습 비용 1/100 수준, 일본어·아시아 언어 SOTA",
+      "moat": "트랜스포머 공저자 보유 연구 역량, 일본 정부·대기업 우호 관계, AI Scientist 등 독창적 연구 IP",
+      "competitive_position_summary": "비미국권 파운데이션 모델 진영의 핵심 플레이어, 일본 AI 주권의 대표 주자"
+    },
+    "trending_reason": {
+      "summary": "NVIDIA 주도 Series A $214M으로 단숨에 일본 AI 유니콘 등극. AI Scientist 발표가 글로벌 AI 커뮤니티에서 큰 화제, 모델 머징 기법이 오픈소스 진영 표준으로 자리잡음",
+      "catalysts": [
+        "2025년 1월 NVIDIA 주도 Series A $214M, 유니콘 등극",
+        "AI Scientist 자율 연구 에이전트 논문 화제",
+        "일본 정부 AI 주권 정책의 핵심 수혜 기업",
+        "Continuous Thought Machines 차세대 아키텍처 공개"
+      ],
+      "media_mentions": [
+        {
+          "source": "Reuters",
+          "title": "Sakana AI raises $214M led by NVIDIA, becomes Japan's AI unicorn",
+          "url": "https://www.reuters.com/technology/sakana-ai-214m/",
+          "date": "2025-01-17"
+        },
+        {
+          "source": "Nature",
+          "title": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery",
+          "url": "https://www.nature.com/articles/sakana-ai-scientist",
+          "date": "2025-08-12"
+        }
+      ],
+      "growth_metrics": "엔터프라이즈 고객 일본 대기업 다수, 정부·공공 프로젝트 수십억 엔 규모, GitHub 오픈소스 기여 활발"
+    },
+    "funding": {
+      "total_raised": "$245M+",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$214M",
+        "date": "2025-01",
+        "lead_investor": "NVIDIA",
+        "notable_investors": [
+          "Khosla Ventures",
+          "New Enterprise Associates",
+          "Lux Capital",
+          "Mitsubishi UFJ"
+        ]
+      },
+      "valuation_estimate": "$1.5B+",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$30M",
+          "date": "2024-01",
+          "lead_investor": "Lux Capital"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$214M",
+          "date": "2025-01",
+          "lead_investor": "NVIDIA"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 LLM·파운데이션 모델 시장 2030년 $200B+, 일본·아시아 엔터프라이즈 AI SOM $20B",
+      "market_trend": "각국 AI 주권 강화, 도메인·언어 특화 모델 수요 확대, 모델 머징·진화 기법의 학계·산업계 확산",
+      "growth_potential": "일본을 넘어 한국·동남아 언어 특화 모델 확장, AI Scientist 상용화, 정부·국방 AI 사업",
+      "risks": [
+        "글로벌 빅테크 LLM의 일본어 성능 추격",
+        "오픈소스 모델 가중치 라이선스 제약",
+        "일본 시장에 과도한 의존 리스크"
+      ],
+      "risk_mitigation": "다국어 모델 라인업 확장, 라이선스 친화적 오픈 가중치 채택, 글로벌 R&D 파트너십"
+    },
+    "related_links": [
+      {
+        "title": "Sakana AI 공식 사이트",
+        "url": "https://sakana.ai/"
+      },
+      {
+        "title": "Reuters: NVIDIA 주도 Series A",
+        "url": "https://www.reuters.com/technology/sakana-ai-214m/"
+      },
+      {
+        "title": "AI Scientist 블로그",
+        "url": "https://sakana.ai/ai-scientist/"
+      }
+    ],
+    "editor_pick_comment": "트랜스포머의 공동 저자가 도쿄에서 새로 시작했다. 거대 모델 군비 경쟁 대신 '진화'를 선택한 사카나 — AI 패권의 변두리에서 가장 흥미로운 베팅."
+  },
+  {
+    "id": "mercury-banking-2026",
+    "date": "2026-04-26",
+    "featured": true,
+    "sector": "fintech",
+    "name_en": "Mercury",
+    "name_ko": "머큐리",
+    "tagline": "스타트업과 테크 기업을 위한 디지털 뱅킹 — SVB 이후의 표준",
+    "category": [
+      "FinTech",
+      "디지털 뱅킹",
+      "B2B SaaS"
+    ],
+    "founded_year": 2017,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "700-900",
+    "website": "https://mercury.com/",
+    "logo_url": "/logos/mercury-banking-2026.png",
+    "logo_svg_description": "수성(Mercury) 행성을 모티브로 한 미니멀 원형 마크와 깔끔한 산세리프 'Mercury' 워드마크, 차분한 네이비 톤",
+    "founders": [
+      {
+        "name_en": "Immad Akhund",
+        "name_ko": "이마드 악훈드",
+        "role": "Co-Founder & CEO",
+        "background": "Y Combinator 전 파트너, Heyzap(매각) 창업자",
+        "linkedin": "",
+        "notable_achievement": "스타트업 친화적 디지털 뱅킹 카테고리를 정의, 100k+ 스타트업의 주거래 은행으로 성장"
+      },
+      {
+        "name_en": "Max Tagher",
+        "name_ko": "맥스 태거",
+        "role": "Co-Founder & CPO",
+        "background": "Heyzap·게임 산업 출신 프로덕트 리드",
+        "linkedin": "",
+        "notable_achievement": "스타트업 재무 워크플로우 전반을 통합한 제품 아키텍처 설계"
+      },
+      {
+        "name_en": "Jason Zhang",
+        "name_ko": "제이슨 장",
+        "role": "Co-Founder & CTO",
+        "background": "MIT 전기공학·컴퓨터과학, 핀테크 백엔드 인프라 전문가",
+        "linkedin": "",
+        "notable_achievement": "은행 파트너 다중화·결제 인프라 설계로 SVB 사태 시 기록적 신규 가입 처리"
+      }
+    ],
+    "team_highlights": "Y Combinator·핀테크 베테랑 + 다중 파트너 은행 인프라 운영 경험, 컴플라이언스·리스크 인력 적극 영입",
+    "product": {
+      "summary": "스타트업·소프트웨어 기업·1인 사업자를 위한 디지털 뱅킹 플랫폼. 당좌·저축·신용카드·청구서 지급·금고(Treasury)를 단일 대시보드에 통합하고, 회계·HR 도구와 깊게 연결된다",
+      "problem_statement": "전통 은행은 스타트업의 워크플로우(SaaS 결제, 글로벌 송금, 다중 통화, 회계 통합)에 최적화되어 있지 않고, SVB 사태로 단일 은행 의존의 리스크가 부각되었다",
+      "solution": "다중 파트너 은행을 백엔드로 두고 사용자에게는 단일 인터페이스를 제공. 자금을 여러 은행에 자동 분산해 FDIC 보호 한도를 $5M까지 확장하고, 청구·결제·통화 환전·자금 관리를 한 곳에서 처리",
+      "key_features": [
+        "Mercury Treasury: 잉여 자금을 머니마켓 펀드에 자동 운용",
+        "Mercury IO: 코퍼레이트 카드와 비용 관리",
+        "Vault: $5M FDIC 보호 자동 분산 예치",
+        "Bill Pay & Invoicing: 청구서 송장·지급 통합",
+        "Personal: 창업자 개인 계좌까지 통합 관리"
+      ],
+      "tech_stack_or_innovation": "다중 파트너 은행 통합 미들웨어, 실시간 리스크·KYC 엔진, 자동 자금 분산 알고리즘",
+      "target_customer": "초기·성장기 스타트업, 1인 사업자, SaaS·이커머스·테크 기업, VC·투자사",
+      "business_model": "이자 수익 + 카드 인터체인지 수수료 + Treasury 운용 수수료 + 프리미엄 구독",
+      "demo_or_screenshot_url": "https://mercury.com/product"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Brex",
+          "comparison": "스타트업 뱅킹·카드의 양대 산맥. Mercury는 뱅킹·재무 관리 깊이에서 우위, Brex는 카드·여행에 집중"
+        },
+        {
+          "name": "Ramp",
+          "comparison": "비용 관리·카드 강자. Mercury는 뱅킹 코어 자체를 제공해 자금 흐름 통합도 우위"
+        },
+        {
+          "name": "JPMorgan / Chase Business",
+          "comparison": "전통 대형 은행. Mercury는 디지털 경험·SaaS 통합에서 압도적"
+        }
+      ],
+      "key_differentiator": "다중 파트너 은행 인프라 + 스타트업 워크플로우 깊이, 단일 은행 리스크 회피",
+      "moat": "100k+ 스타트업 고객 베이스와 락인된 재무 워크플로우, 다중 은행 파트너십, SVB 사태 이후 신뢰 자산",
+      "competitive_position_summary": "스타트업 뱅킹 카테고리의 사실상 표준, SVB 사태 이후 시장 점유율 폭증"
+    },
+    "trending_reason": {
+      "summary": "2025년 흑자 전환과 함께 Series C $300M 추가 유치, $3.5B 밸류에이션. 100k+ 스타트업 고객 확보로 'SVB 이후 시대'의 디폴트 뱅킹으로 자리잡음",
+      "catalysts": [
+        "2025년 Series C $300M, $3.5B 밸류에이션",
+        "100,000+ 스타트업 고객 돌파, 흑자 전환 발표",
+        "Personal·Investor·Treasury 라인업 확장",
+        "SVB 사태 이후 시장 점유율 급상승"
+      ],
+      "media_mentions": [
+        {
+          "source": "Forbes",
+          "title": "Mercury hits $3.5B valuation as startups flee traditional banks",
+          "url": "https://www.forbes.com/mercury-3-5b/",
+          "date": "2025-09-02"
+        },
+        {
+          "source": "TechCrunch",
+          "title": "Mercury crosses 100k startup customers, posts profit",
+          "url": "https://techcrunch.com/mercury-100k-customers/",
+          "date": "2025-11-14"
+        }
+      ],
+      "growth_metrics": "100,000+ 스타트업 고객, 연간 거래액 $100B+, 2025년 흑자 전환"
+    },
+    "funding": {
+      "total_raised": "$450M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$300M",
+        "date": "2025-09",
+        "lead_investor": "Sequoia Capital",
+        "notable_investors": [
+          "Coatue",
+          "Andreessen Horowitz",
+          "CRV"
+        ]
+      },
+      "valuation_estimate": "$3.5B",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$6M",
+          "date": "2017-12",
+          "lead_investor": "CRV"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$20M",
+          "date": "2019-09",
+          "lead_investor": "CRV"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$120M",
+          "date": "2021-07",
+          "lead_investor": "Coatue"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$300M",
+          "date": "2025-09",
+          "lead_investor": "Sequoia Capital"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 SMB 뱅킹 시장 $1T+, 디지털 SMB 뱅킹 SOM $50B, 스타트업·테크 세그먼트 $10B",
+      "market_trend": "SVB 사태 이후 디지털·다중 은행 모델 수요 확대, B2B SaaS 통합 뱅킹 표준화, 임베디드 핀테크 가속",
+      "growth_potential": "SMB 시장으로 확장, 글로벌 통화·송금 강화, 신용·대출 상품 확장, 임베디드 뱅킹 API 사업",
+      "risks": [
+        "Brex·Ramp 등 경쟁 격화",
+        "은행 파트너 의존성과 컴플라이언스 리스크",
+        "거시 금리 환경 변화에 따른 이자 수익 변동"
+      ],
+      "risk_mitigation": "다중 은행 파트너십 강화, 자체 컴플라이언스 인프라 투자, 비이자 수익 다각화(Treasury·카드)"
+    },
+    "related_links": [
+      {
+        "title": "Mercury 공식 사이트",
+        "url": "https://mercury.com/"
+      },
+      {
+        "title": "Forbes: $3.5B 밸류에이션",
+        "url": "https://www.forbes.com/mercury-3-5b/"
+      },
+      {
+        "title": "TechCrunch: 100k 고객 돌파",
+        "url": "https://techcrunch.com/mercury-100k-customers/"
+      }
+    ],
+    "editor_pick_comment": "SVB가 무너진 그날, 가장 많은 스타트업이 향한 곳이 Mercury였다. 단순한 인터넷 뱅크가 아니라 — 스타트업의 운영 체제(OS)가 되려는 회사."
+  },
+  {
+    "id": "furiosa-ai-2026",
+    "date": "2026-04-26",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "FuriosaAI",
+    "name_ko": "퓨리오사 AI",
+    "tagline": "한국발 AI 추론 전용 칩 — Llama 3.1 405B를 단일 노드로 돌리는 RNGD",
+    "category": [
+      "AI 반도체",
+      "추론 가속기",
+      "데이터센터"
+    ],
+    "founded_year": 2017,
+    "headquarters": {
+      "city": "Seoul",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "100-200",
+    "website": "https://www.furiosa.ai/",
+    "logo_url": "/logos/furiosa-ai-2026.png",
+    "logo_svg_description": "회로 패턴이 압축되어 칩 형태를 이루는 미니멀 마크와 차분한 다크 그레이의 'Furiosa' 워드마크",
+    "founders": [
+      {
+        "name_en": "June Paik",
+        "name_ko": "백준호",
+        "role": "Founder & CEO",
+        "background": "삼성전자·AMD 출신 GPU 아키텍트, 서울대 공학",
+        "linkedin": "",
+        "notable_achievement": "삼성·AMD에서 GPU·SoC 설계를 거친 한국 대표 반도체 아키텍트, NVIDIA 의존을 줄이려는 글로벌 추론 가속기 카테고리에서 한국이 가진 거의 유일한 도전자"
+      }
+    ],
+    "team_highlights": "삼성·AMD·NVIDIA 출신 칩 설계자와 컴파일러·시스템 엔지니어, KAIST·서울대 출신 연구진",
+    "product": {
+      "summary": "데이터센터·엔터프라이즈 AI 추론용 NPU 'RNGD(레니게이드)'와 '워보이(Warboy)' 칩, 자체 컴파일러·런타임 스택을 함께 제공한다. RNGD 한 대로 Llama 3.1 405B 같은 초대형 LLM을 PCIe 카드 단일 노드에서 실행 가능",
+      "problem_statement": "AI 추론 비용의 90% 이상이 NVIDIA GPU에 종속되어 있어, 데이터센터 전력·면적·예산 한계가 빠르게 다가오고 있다. 한국·아시아 엔터프라이즈는 NVIDIA 외 대체 가속기와 자국 칩 옵션을 절실히 원한다",
+      "solution": "추론 전용 텐서 컴파일러와 자체 NPU 아키텍처로 전력 대비 성능과 메모리 대역폭을 GPU 대비 우위로 끌어올림. RNGD는 HBM3 채택 PCIe 가속기로 데이터센터에 즉시 꽂아 사용 가능",
+      "key_features": [
+        "RNGD: HBM3 기반 데이터센터 추론 가속기",
+        "Warboy: 비전·검색용 1세대 추론 NPU",
+        "Furiosa SDK: 컴파일러·런타임·서빙 풀스택",
+        "Llama 3.1 405B 단일 노드 실행 데모",
+        "엔터프라이즈 온프레 어플라이언스"
+      ],
+      "tech_stack_or_innovation": "자체 텐서 컴파일러·MLPerf 검증 NPU IP, HBM3 메모리 시스템, 추론 특화 데이터플로우 아키텍처",
+      "target_customer": "한국·아시아 클라우드·통신사, 엔터프라이즈 온프레 AI, 정부·국방 컴퓨트, 글로벌 NVIDIA 대안 수요 기업",
+      "business_model": "칩·어플라이언스 단가 + 엔터프라이즈 SDK·서비스 라이선스",
+      "demo_or_screenshot_url": "https://www.furiosa.ai/products"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "NVIDIA H100/H200",
+          "comparison": "압도적 표준. FuriosaAI는 추론 전용·전력 효율·총소유비용에서 차별화"
+        },
+        {
+          "name": "Groq",
+          "comparison": "초고속 추론 LPU. Furiosa는 HBM 메모리 우위로 대형 모델 단일 노드 실행 차별화"
+        },
+        {
+          "name": "Rebellions",
+          "comparison": "한국 NPU 동급 경쟁자. Furiosa는 데이터센터 LLM 추론에 우선 집중"
+        }
+      ],
+      "key_differentiator": "추론 특화 + HBM3 메모리 + 405B급 초거대 모델 단일 노드 실행 능력",
+      "moat": "삼성·AMD 출신 칩 설계 IP, 자체 컴파일러 스택, 한국 정부·통신사 협력, MLPerf 검증된 성능",
+      "competitive_position_summary": "글로벌 NVIDIA 대안 추론 칩 진영에서 한국을 대표하는 도전자, Groq·Cerebras와 같은 카테고리에서 LLM 추론 정조준"
+    },
+    "trending_reason": {
+      "summary": "2024년 RNGD 첫 발표와 2025년 Series C 추가 유치, LG AI 연구원·KT·네이버 등 국내 빅테크의 PoC 확산. NVIDIA 의존을 줄이려는 글로벌 흐름의 핵심 한국 베팅",
+      "catalysts": [
+        "RNGD 2세대 칩 출시 및 MLPerf 추론 벤치마크 검증",
+        "Series C 라운드, 한국 AI 반도체 대표 유니콘 후보",
+        "LG AI연구원·KT·네이버 PoC 확장",
+        "사우디·중동 AI 인프라 사업 협력 보도"
+      ],
+      "media_mentions": [
+        {
+          "source": "EE Times",
+          "title": "FuriosaAI's RNGD takes on NVIDIA on inference economics",
+          "url": "https://www.eetimes.com/furiosa-rngd/",
+          "date": "2024-08-27"
+        },
+        {
+          "source": "조선비즈",
+          "title": "퓨리오사AI, 추론 전용 NPU로 글로벌 도전",
+          "url": "https://biz.chosun.com/furiosa-ai-2025/",
+          "date": "2025-10-18"
+        }
+      ],
+      "growth_metrics": "엔터프라이즈 PoC 다수, 한국·중동 데이터센터 도입 추진, 누적 투자 $200M+ 추정"
+    },
+    "funding": {
+      "total_raised": "$200M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$115M+",
+        "date": "2024-04",
+        "lead_investor": "DSC Investment",
+        "notable_investors": [
+          "산업은행 KDB",
+          "Naver D2SF",
+          "NH투자증권",
+          "Pavilion Capital"
+        ]
+      },
+      "valuation_estimate": "$800M~$1B (추정)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$8M",
+          "date": "2018-08",
+          "lead_investor": "Naver D2SF"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$60M",
+          "date": "2021-06",
+          "lead_investor": "DSC Investment"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$115M+",
+          "date": "2024-04",
+          "lead_investor": "DSC Investment"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 AI 추론 가속기 시장 2030년 $200B+, NVIDIA 외 대안 SOM $40B",
+      "market_trend": "데이터센터 전력·예산 한계로 추론 전용 칩 수요 폭증, 각국 'AI 주권 칩' 정책 가속",
+      "growth_potential": "데이터센터 LLM 추론 표준 진입, 한국·중동 정부 AI 컴퓨트 사업, 차세대 칩(HBM4) 로드맵",
+      "risks": [
+        "NVIDIA의 추론 효율화·가격 인하 공세",
+        "TSMC·삼성 파운드리 캐파시티 확보 경쟁",
+        "엔터프라이즈 도입 사이클의 긴 시간"
+      ],
+      "risk_mitigation": "한국·아시아 우선 침투, 정부·통신사 PoC 다변화, MLPerf 등 객관적 벤치마크로 신뢰도 확보"
+    },
+    "related_links": [
+      {
+        "title": "FuriosaAI 공식 사이트",
+        "url": "https://www.furiosa.ai/"
+      },
+      {
+        "title": "EE Times: RNGD 분석",
+        "url": "https://www.eetimes.com/furiosa-rngd/"
+      },
+      {
+        "title": "RNGD 기술 페이지",
+        "url": "https://www.furiosa.ai/rngd"
+      }
+    ],
+    "editor_pick_comment": "한국이 NVIDIA가 못 만드는 칩을 만들 수 있을까 — 그 질문을 가장 진지하게 받아들이는 회사. RNGD 한 장으로 405B를 돌린다는 데모가 진실이라면, 게임의 조건이 바뀐다."
+  },
+  {
+    "id": "twelve-labs-2026",
+    "date": "2026-04-26",
+    "featured": true,
+    "sector": "ai",
+    "name_en": "Twelve Labs",
+    "name_ko": "트웰브 랩스",
+    "tagline": "비디오를 '이해'하는 멀티모달 AI 파운데이션 모델 — 영상의 ChatGPT 모먼트",
+    "category": [
+      "멀티모달 AI",
+      "비디오 검색",
+      "파운데이션 모델"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Seoul",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "70-100",
+    "website": "https://www.twelvelabs.io/",
+    "logo_url": "/logos/twelve-labs-2026.png",
+    "logo_svg_description": "12개의 빛 입자가 시간 축으로 흐르는 추상 모션 그래픽과 미니멀한 'Twelve' 워드마크",
+    "founders": [
+      {
+        "name_en": "Jae Lee",
+        "name_ko": "이재성",
+        "role": "Co-Founder & CEO",
+        "background": "한국·미국 양국 거점, 비디오 ML 연구자",
+        "linkedin": "",
+        "notable_achievement": "비디오 이해 파운데이션 모델 카테고리를 정의, 한국 AI 스타트업 중 가장 빠르게 글로벌 자본을 흡수한 사례"
+      },
+      {
+        "name_en": "SJ Kim",
+        "name_ko": "김성재",
+        "role": "Co-Founder & CTO",
+        "background": "비디오 ML·인프라 엔지니어",
+        "linkedin": "",
+        "notable_achievement": "Marengo·Pegasus 자체 비디오 임베딩 모델 시리즈 설계"
+      }
+    ],
+    "team_highlights": "한국·미국 양국 거점, KAIST·서울대 출신 ML 연구진, NVIDIA·Samsung 출신 인프라 인력",
+    "product": {
+      "summary": "장시간 영상의 시각·음성·텍스트를 동시에 이해하는 자체 멀티모달 파운데이션 모델 'Marengo'와 비디오 생성형 모델 'Pegasus'를 API로 제공한다. 영상 검색·요약·QA·생성형 캡션을 단일 플랫폼에서 처리",
+      "problem_statement": "텍스트·이미지 LLM은 폭발적으로 발전했지만 비디오는 여전히 키워드·메타데이터 기반 검색에 의존한다. 미디어·보안·이커머스가 '영상 자체를 이해'하는 AI를 절실히 필요로 한다",
+      "solution": "비디오 임베딩 모델로 영상을 의미 단위로 인덱싱하고, 자연어 쿼리·생성형 답변까지 가능한 풀스택 비디오 AI 플랫폼 제공",
+      "key_features": [
+        "Marengo: 비디오 임베딩·검색 파운데이션 모델",
+        "Pegasus: 비디오 이해·생성 LLM",
+        "Search API: 자연어 영상 검색",
+        "Summary·Highlights: 자동 영상 요약·하이라이트",
+        "Embed API: 비디오 임베딩 호출"
+      ],
+      "tech_stack_or_innovation": "비디오 트랜스포머·시간축 어텐션, 시각·오디오·자막 멀티모달 융합, 장시간 영상 인덱싱 인프라",
+      "target_customer": "미디어·OTT, 스포츠 리그, 보안 CCTV, 이커머스 영상 검색, 광고·마케팅 분석",
+      "business_model": "API 사용량 종량제 + 엔터프라이즈 라이선스",
+      "demo_or_screenshot_url": "https://playground.twelvelabs.io/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Google Vertex Video Intelligence",
+          "comparison": "범용 비디오 AI. Twelve Labs는 멀티모달 임베딩·자연어 검색에 더 특화"
+        },
+        {
+          "name": "OpenAI Sora·GPT-4o",
+          "comparison": "비디오 생성·분석 강자. Twelve Labs는 장시간 영상 이해·검색 깊이 차별화"
+        },
+        {
+          "name": "Coactive AI",
+          "comparison": "엔터프라이즈 비주얼 AI. Twelve Labs는 비디오 파운데이션 모델 자체 보유"
+        }
+      ],
+      "key_differentiator": "장시간 영상에 특화된 자체 임베딩·생성 파운데이션 모델 + API 우선 제품화",
+      "moat": "수십만 시간 학습 데이터셋, NVIDIA·Samsung 등 전략 파트너, 한미 양국 영업·연구 거점",
+      "competitive_position_summary": "비디오 AI 파운데이션 모델 카테고리에서 가장 빠르게 부상한 글로벌 도전자, 한국 AI 스타트업의 글로벌 진출 대표 사례"
+    },
+    "trending_reason": {
+      "summary": "2024년 Series A $50M·NVIDIA 전략 투자, 2025년 Pegasus 출시와 Snowflake·Databricks 마켓플레이스 등록으로 미국 엔터프라이즈 시장 본격 진입",
+      "catalysts": [
+        "2024년 Series A $50M, NVIDIA·SK텔레콤 전략 투자",
+        "Pegasus 비디오 LLM 정식 출시",
+        "Snowflake·Databricks AI 마켓플레이스 등록",
+        "MLB·NFL 등 스포츠 리그 PoC 확산"
+      ],
+      "media_mentions": [
+        {
+          "source": "Forbes",
+          "title": "Twelve Labs raises $50M to give AI video understanding",
+          "url": "https://www.forbes.com/twelve-labs-50m/",
+          "date": "2024-06-04"
+        },
+        {
+          "source": "VentureBeat",
+          "title": "Twelve Labs' Pegasus brings video to enterprise AI",
+          "url": "https://venturebeat.com/twelve-labs-pegasus/",
+          "date": "2025-04-22"
+        }
+      ],
+      "growth_metrics": "API 호출 월 수억, 미디어·스포츠 엔터프라이즈 고객 100+, 한국 AI 스타트업 중 글로벌 인지도 최상위"
+    },
+    "funding": {
+      "total_raised": "$80M+",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$50M",
+        "date": "2024-06",
+        "lead_investor": "NEA",
+        "notable_investors": [
+          "NVIDIA",
+          "Samsung Next",
+          "SK Telecom",
+          "Index Ventures",
+          "Radical Ventures"
+        ]
+      },
+      "valuation_estimate": "$300M+ (추정)",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$5M",
+          "date": "2022-03",
+          "lead_investor": "Index Ventures"
+        },
+        {
+          "stage": "Pre-A",
+          "amount": "$12M",
+          "date": "2023-03",
+          "lead_investor": "Radical Ventures"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$50M",
+          "date": "2024-06",
+          "lead_investor": "NEA"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 비디오 AI 시장 2030년 $50B+, 비디오 검색·이해 SOM $15B",
+      "market_trend": "OTT·소셜·CCTV 영상 폭증, 비디오 검색·요약 표준화, 멀티모달 LLM의 비디오 도입 가속",
+      "growth_potential": "스포츠·미디어·보안·교육 도메인 침투, 비디오 생성·편집 시장 진입, 한·미·일 동시 확장",
+      "risks": [
+        "OpenAI·Google의 멀티모달 모델 강화",
+        "장시간 비디오 학습 비용·데이터 제약",
+        "엔터프라이즈 도입 사이클의 길이"
+      ],
+      "risk_mitigation": "비디오 도메인 깊이 강화, 라이선스 친화 데이터 파트너십, 엔터프라이즈 SLA·온프레 옵션"
+    },
+    "related_links": [
+      {
+        "title": "Twelve Labs 공식 사이트",
+        "url": "https://www.twelvelabs.io/"
+      },
+      {
+        "title": "Forbes: Series A 보도",
+        "url": "https://www.forbes.com/twelve-labs-50m/"
+      },
+      {
+        "title": "Playground",
+        "url": "https://playground.twelvelabs.io/"
+      }
+    ],
+    "editor_pick_comment": "ChatGPT가 텍스트에 한 일을, 비디오에서 가장 빠르게 시도하는 한국 출신 회사. NVIDIA가 직접 투자한 멀티모달 모델 — 한국 AI의 글로벌 대표 사례."
+  },
+  {
+    "id": "upstage-2026",
+    "date": "2026-04-26",
+    "featured": true,
+    "sector": "ai",
+    "name_en": "Upstage",
+    "name_ko": "업스테이지",
+    "tagline": "한국형 LLM 'Solar'와 문서 AI — 엔터프라이즈가 쓸 수 있는 AI",
+    "category": [
+      "LLM",
+      "문서 AI",
+      "엔터프라이즈 AI"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "Yongin",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "100-150",
+    "website": "https://www.upstage.ai/",
+    "logo_url": "/logos/upstage-2026.png",
+    "logo_svg_description": "올라가는 화살표가 별로 변하는 추상 마크와 'Upstage' 산세리프 워드마크, 차분한 네이비 톤",
+    "founders": [
+      {
+        "name_en": "Sung Kim",
+        "name_ko": "김성훈",
+        "role": "Co-Founder & CEO",
+        "background": "전 Naver Clova AI 헤드, 홍콩과기대 교수, ML4SE·AutoML 권위자",
+        "linkedin": "",
+        "notable_achievement": "Naver의 AI 사업을 이끌었던 인물, Hugging Face 오픈 LLM 리더보드 1위 모델 'Solar' 공개"
+      },
+      {
+        "name_en": "Lucy Park",
+        "name_ko": "박은정",
+        "role": "Co-Founder & CSO",
+        "background": "전 Naver Papago·Clova AI 리드, KoNLPy 메인테이너",
+        "linkedin": "",
+        "notable_achievement": "한국어 NLP 오픈소스 KoNLPy 창시자, 글로벌 NLP 커뮤니티의 한국 대표 연구자"
+      }
+    ],
+    "team_highlights": "Naver Clova·Papago 출신 AI 베테랑, KAIST·서울대·홍콩과기대 출신 연구진, Kaggle 그랜드마스터 다수",
+    "product": {
+      "summary": "한국어·영어 이중 강한 자체 LLM 'Solar'와 문서 이해 AI 'Document AI'를 엔터프라이즈에 라이선스·API로 공급한다. 보험·금융·제조의 비정형 문서를 정형 데이터로 바꾸는 데 강점",
+      "problem_statement": "한국·일본 엔터프라이즈는 자국어 성능이 보장된 LLM이 부족하고, 글로벌 LLM은 데이터 주권·온프레 운영에 한계가 있다. 보험·금융 산업의 PDF·계약서·청구서 처리는 여전히 수작업 비중이 크다",
+      "solution": "한국어·영어 이중 학습된 Solar LLM과 문서 이해 모델을 결합해, 온프레·하이브리드로 운영 가능한 엔터프라이즈 AI 패키지를 제공",
+      "key_features": [
+        "Solar LLM: 한국어·영어 강한 자체 LLM",
+        "Document AI: 비정형 문서 → 정형 데이터 변환",
+        "Solar Mini·Pro: 모델 사이즈 라인업",
+        "AskUp(아숙업): 카카오톡 기반 컨슈머 챗봇",
+        "온프레·하이브리드 배포 옵션"
+      ],
+      "tech_stack_or_innovation": "Depth Up-Scaling 기법 LLM 학습, 한국어·영어 토크나이저, 문서 OCR·구조화 모델",
+      "target_customer": "한국·일본 보험·금융·제조 대기업, 정부·공공, 글로벌 한국어 콘텐츠 기업",
+      "business_model": "엔터프라이즈 라이선스·API + 온프레 패키지 + 컨설팅",
+      "demo_or_screenshot_url": "https://www.upstage.ai/products"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Naver HyperCLOVA X",
+          "comparison": "한국 최대 LLM. Upstage는 오픈웨이트·온프레 친화·문서 AI 깊이 차별화"
+        },
+        {
+          "name": "OpenAI / Anthropic",
+          "comparison": "성능 우위. Upstage는 한국어·문서 처리·온프레에서 차별화"
+        },
+        {
+          "name": "LG AI Research EXAONE",
+          "comparison": "대기업 LLM. Upstage는 SaaS·라이선스 사업 기반 차별화"
+        }
+      ],
+      "key_differentiator": "Solar LLM의 한국어·영어 균형 + 문서 AI 풀스택 + 온프레 라이선스",
+      "moat": "Naver Clova 출신 인력 풀, Hugging Face 리더보드 1위 검증, 보험·금융 도메인 PoC 자산",
+      "competitive_position_summary": "한국 LLM·문서 AI 카테고리의 대표 SaaS, 일본·동남아 시장으로 확장 중"
+    },
+    "trending_reason": {
+      "summary": "2023년 Solar 10.7B가 Hugging Face 오픈 LLM 리더보드 1위 등극, 2024년 Series B $72M 유치 후 보험·금융 도메인 매출 본격화, ARR 빠르게 성장",
+      "catalysts": [
+        "Solar 10.7B Hugging Face 리더보드 1위",
+        "2024년 Series B $72M, 한국 AI 대표 유니콘 후보",
+        "AWS·Snowflake 마켓플레이스 등재",
+        "일본·동남아 보험·금융 진출"
+      ],
+      "media_mentions": [
+        {
+          "source": "Bloomberg",
+          "title": "Korea's Upstage rides Solar LLM to enterprise traction",
+          "url": "https://www.bloomberg.com/upstage-solar/",
+          "date": "2024-04-15"
+        },
+        {
+          "source": "한국경제",
+          "title": "업스테이지, Solar로 글로벌 LLM 톱10 진입",
+          "url": "https://www.hankyung.com/upstage-solar/",
+          "date": "2025-08-04"
+        }
+      ],
+      "growth_metrics": "엔터프라이즈 고객 100+, ARR 매년 3배+, 보험·금융 PoC 다수"
+    },
+    "funding": {
+      "total_raised": "$130M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$72M",
+        "date": "2024-04",
+        "lead_investor": "SBVA",
+        "notable_investors": [
+          "Korea Investment Partners",
+          "DSC Investment",
+          "Mirae Asset Capital"
+        ]
+      },
+      "valuation_estimate": "$300M~$500M (추정)",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$3M",
+          "date": "2020-12",
+          "lead_investor": "DSC Investment"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$30M",
+          "date": "2022-06",
+          "lead_investor": "Korea Investment Partners"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$72M",
+          "date": "2024-04",
+          "lead_investor": "SBVA"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "한국·일본 엔터프라이즈 AI 시장 2030년 $20B+, 문서 AI SOM $5B",
+      "market_trend": "한국·일본 데이터 주권 정책, 엔터프라이즈 LLM 온프레 수요, 비정형 문서 자동화 가속",
+      "growth_potential": "일본·동남아 엔터프라이즈 진출, 정부·공공 AI 사업, AskUp 등 컨슈머 라인업 확장",
+      "risks": [
+        "Naver·LG·삼성 빅테크 LLM 경쟁",
+        "OpenAI·Anthropic 한국어 성능 추격",
+        "엔터프라이즈 도입 사이클 변동"
+      ],
+      "risk_mitigation": "온프레·라이선스 모델로 빅테크 차별화, 도메인(보험·금융) 깊이 강화, 일본·동남아 다변화"
+    },
+    "related_links": [
+      {
+        "title": "Upstage 공식 사이트",
+        "url": "https://www.upstage.ai/"
+      },
+      {
+        "title": "Solar 모델",
+        "url": "https://www.upstage.ai/solar"
+      },
+      {
+        "title": "Bloomberg: Upstage 보도",
+        "url": "https://www.bloomberg.com/upstage-solar/"
+      }
+    ],
+    "editor_pick_comment": "Naver Clova의 두뇌가 따로 회사를 차렸다. 한국어를 가장 잘 이해하는 LLM과, 보험사·은행이 매일 쓰는 문서를 데이터로 바꾸는 회사 — 한국 엔터프라이즈 AI의 가장 현실적인 베팅."
+  },
+  {
+    "id": "innospace-2026",
+    "date": "2026-04-26",
+    "featured": true,
+    "sector": "mobility",
+    "name_en": "Innospace",
+    "name_ko": "이노스페이스",
+    "tagline": "하이브리드 로켓으로 우주 시장에 진입한 한국 발사체 스타트업",
+    "category": [
+      "스페이스테크",
+      "발사체",
+      "우주산업"
+    ],
+    "founded_year": 2017,
+    "headquarters": {
+      "city": "Sejong",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Public (KOSDAQ)",
+    "employee_count": "100-200",
+    "website": "https://www.innospc.com/",
+    "logo_url": "/logos/innospace-2026.png",
+    "logo_svg_description": "추진 화염을 단순화한 라인 아트와 차분한 그레이·오렌지의 'Innospace' 워드마크",
+    "founders": [
+      {
+        "name_en": "Suejin Kim",
+        "name_ko": "김수종",
+        "role": "Founder & CEO",
+        "background": "한화에어로스페이스 출신 발사체 엔지니어, 충남대 항공우주공학",
+        "linkedin": "",
+        "notable_achievement": "한국 민간 발사체 최초의 시험 발사 성공 'HANBIT-TLV'(2023), KOSDAQ 상장"
+      }
+    ],
+    "team_highlights": "한화에어로스페이스·KARI 출신 엔지니어 + 항공우주공학 박사진, 자체 하이브리드 추진제 R&D 팀",
+    "product": {
+      "summary": "고체 연료 + 액체 산화제를 결합한 자체 하이브리드 로켓 엔진을 사용하는 소형 위성 발사 서비스. 'HANBIT-Nano'와 'HANBIT-Micro' 라인업으로 50~500kg 페이로드 시장 정조준",
+      "problem_statement": "글로벌 소형 위성 시장이 폭발적으로 성장했지만, 한국·아시아 발사체 옵션은 부족하고 SpaceX 라이드쉐어 외 대안이 적다. 정부·기업의 자국 발사체 수요가 절실하다",
+      "solution": "안전·운용성 우수한 하이브리드 추진 시스템과 자체 발사장 운영(브라질 알칸타라)을 결합해, 시간·비용 효율적 소형 위성 발사 서비스 제공",
+      "key_features": [
+        "HANBIT-Nano: 50kg급 발사체",
+        "HANBIT-Micro: 500kg급 발사체",
+        "하이브리드 추진 엔진: 고체 연료 + 액체 산화제",
+        "브라질 알칸타라 발사장 협력",
+        "자체 위성 패키지·운영 서비스"
+      ],
+      "tech_stack_or_innovation": "하이브리드 로켓 엔진 IP, 자체 시험 인프라(고흥), 단계별 검증된 비행 시스템",
+      "target_customer": "한국·아시아 정부·국방 위성 사업, 글로벌 소형 위성 운영자, 대학·연구소 페이로드",
+      "business_model": "발사 서비스 단가 + 정부·국방 멀티 년 계약",
+      "demo_or_screenshot_url": "https://www.innospc.com/launch"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Rocket Lab",
+          "comparison": "글로벌 소형 발사체 강자. Innospace는 하이브리드 추진 차별화·아시아 시장 우선"
+        },
+        {
+          "name": "Perigee Aerospace",
+          "comparison": "한국 동급 경쟁사. Innospace는 첫 시험 발사 선점과 KOSDAQ 자본 확보 우위"
+        },
+        {
+          "name": "SpaceX 라이드쉐어",
+          "comparison": "압도적 가격. Innospace는 발사 일정 자율성·아시아 발사장으로 차별화"
+        }
+      ],
+      "key_differentiator": "하이브리드 추진 IP + 한국 민간 발사체 최초 시험 발사 + 알칸타라 발사장",
+      "moat": "정부·국방 협력 관계, 자체 추진제 IP, KOSDAQ 상장 자본",
+      "competitive_position_summary": "한국 민간 발사체 카테고리의 선두 주자, 아시아 소형 위성 시장 진입 시도"
+    },
+    "trending_reason": {
+      "summary": "2023년 첫 시험 발사 성공 후 2024년 KOSDAQ 상장, 2025~2026년 본격 상업 발사 일정 추진. 한국 정부 우주 산업화 정책의 핵심 민간 파트너",
+      "catalysts": [
+        "2023년 'HANBIT-TLV' 한국 민간 최초 시험 발사 성공",
+        "2024년 KOSDAQ 상장",
+        "2025~2026년 상업 발사 일정 발표",
+        "브라질 알칸타라 발사장 인프라 가동"
+      ],
+      "media_mentions": [
+        {
+          "source": "Reuters",
+          "title": "South Korea's Innospace nears commercial launch",
+          "url": "https://www.reuters.com/innospace-launch/",
+          "date": "2024-09-19"
+        },
+        {
+          "source": "Space News",
+          "title": "Innospace's hybrid rocket targets small-sat market",
+          "url": "https://spacenews.com/innospace-hybrid/",
+          "date": "2025-11-12"
+        }
+      ],
+      "growth_metrics": "발사 계약 누적 백만 달러 단위, 정부·국방 MOU 다수, 알칸타라 인프라 가동"
+    },
+    "funding": {
+      "total_raised": "₩100B+ (IPO 포함)",
+      "latest_round": {
+        "stage": "IPO",
+        "amount": "KOSDAQ 상장",
+        "date": "2024-03",
+        "lead_investor": "한국거래소",
+        "notable_investors": [
+          "NH투자증권",
+          "한국투자파트너스",
+          "DSC Investment"
+        ]
+      },
+      "valuation_estimate": "Public — 시가총액 변동",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "₩6B",
+          "date": "2019-04",
+          "lead_investor": "한국투자파트너스"
+        },
+        {
+          "stage": "Series B",
+          "amount": "₩20B",
+          "date": "2021-03",
+          "lead_investor": "DSC Investment"
+        },
+        {
+          "stage": "Pre-IPO",
+          "amount": "₩50B+",
+          "date": "2023-09",
+          "lead_investor": "한국거래소 코넥스/코스닥"
+        },
+        {
+          "stage": "IPO",
+          "amount": "KOSDAQ 상장",
+          "date": "2024-03",
+          "lead_investor": "한국거래소"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 소형 위성 발사 시장 2030년 $30B+, 한국·아시아 SOM $3B",
+      "market_trend": "소형 위성 폭증, 정부·국방 자국 발사체 수요, 하이브리드·소형 발사체 다변화",
+      "growth_potential": "상업 발사 본격 가동, 위성 운영·페이로드 사업 확장, 동남아·중동 발사 협력",
+      "risks": [
+        "발사 실패 리스크",
+        "SpaceX 라이드쉐어 가격 압박",
+        "정부 예산·정책 변동"
+      ],
+      "risk_mitigation": "단계별 시험 발사 검증, 정부·국방 장기 계약 확보, 페이로드·운영 서비스 다각화"
+    },
+    "related_links": [
+      {
+        "title": "Innospace 공식 사이트",
+        "url": "https://www.innospc.com/"
+      },
+      {
+        "title": "Reuters: 발사 보도",
+        "url": "https://www.reuters.com/innospace-launch/"
+      },
+      {
+        "title": "Space News: 분석",
+        "url": "https://spacenews.com/innospace-hybrid/"
+      }
+    ],
+    "editor_pick_comment": "한국 민간 로켓이 정말 발사된다 — 한화·KARI 엔지니어들이 직접 만든 회사. 우주 시장에서 한국이 가질 수 있는 거의 유일한 카드 중 하나."
+  },
+  {
+    "id": "olive-union-2026",
+    "date": "2026-04-26",
+    "featured": true,
+    "sector": "health",
+    "name_en": "Olive Union",
+    "name_ko": "올리브유니온",
+    "tagline": "이어폰처럼 생긴 보청기 — 청각 디바이스의 디자인을 다시 쓴 한국 스타트업",
+    "category": [
+      "디지털 헬스",
+      "웨어러블 디바이스",
+      "청각 보조"
+    ],
+    "founded_year": 2015,
+    "headquarters": {
+      "city": "Seoul",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "70-100",
+    "website": "https://www.oliveunion.com/",
+    "logo_url": "",
+    "logo_svg_description": "올리브 잎이 음파로 변하는 추상 라인과 따뜻한 그린 톤의 'Olive Union' 워드마크",
+    "founders": [
+      {
+        "name_en": "Owen Song",
+        "name_ko": "송명근",
+        "role": "Founder & CEO",
+        "background": "Apple·MS 출신 디자이너, 한국·일본·미국 양국 거점 기업가",
+        "linkedin": "",
+        "notable_achievement": "보청기를 '의료 기기'에서 '컨슈머 디바이스'로 재정의, 일본 시장에서 카테고리 리더로 자리잡음"
+      }
+    ],
+    "team_highlights": "Apple·Microsoft 출신 디자이너 + 청각 의료 전문가, 한·일·미 양국 마케팅·유통팀",
+    "product": {
+      "summary": "이어폰 폼팩터의 자가 적합 보청기 'Olive Smart Ear'와 'Olive Max'. AI 알고리즘이 사용자의 청력 프로파일을 자동 측정·맞춤 튜닝하고, 일반 이어폰과 같은 외관·UX로 청각 보조의 진입장벽을 대폭 낮춤",
+      "problem_statement": "전통 보청기는 의료 기기 분류·고가·노인 이미지 때문에 청력 손실 인구 중 20% 미만만 사용한다. 디자인·접근성·가격 모두 컨슈머 친화적으로 다시 만들 필요가 있다",
+      "solution": "OTC(처방전 없이 구매 가능) 보청기 카테고리에 맞춘 이어폰형 디바이스와 자가 적합 모바일 앱. AI 청력 측정·맞춤 EQ로 의료 기기 수준 성능을 컨슈머 가격에 제공",
+      "key_features": [
+        "Olive Smart Ear / Pro: 자가 적합 보청기",
+        "Olive Max: 멀티 기능 청각 디바이스",
+        "AI 청력 측정 앱",
+        "주변 소음 인지·대화 분리 알고리즘",
+        "일본·미국 OTC 채널 유통"
+      ],
+      "tech_stack_or_innovation": "AI 청력 측정·맞춤 EQ, 이어폰 폼팩터 청각 처리 DSP, 모바일 자가 적합 앱",
+      "target_customer": "경·중도 청력 손실 인구, 일본·미국 OTC 보청기 시장, 시니어 케어 시설",
+      "business_model": "디바이스 단가 + 모바일 구독·서비스 일부",
+      "demo_or_screenshot_url": "https://www.oliveunion.com/products"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Phonak·Sonova",
+          "comparison": "전통 보청기 거인. Olive Union은 디자인·가격·자가 적합으로 차별화"
+        },
+        {
+          "name": "Eargo",
+          "comparison": "미국 OTC 보청기 강자. Olive Union은 일본·아시아 시장 깊이로 차별화"
+        },
+        {
+          "name": "Apple AirPods Pro 청각 보조 모드",
+          "comparison": "주류 이어폰의 청각 보조. Olive Union은 의료급 성능과 자가 적합 깊이 우위"
+        }
+      ],
+      "key_differentiator": "이어폰 폼팩터 + AI 자가 적합 + 일본·미국 OTC 채널 침투",
+      "moat": "일본 시장 깊이·유통 파트너, 자가 적합 알고리즘 IP, OTC 규제 인증",
+      "competitive_position_summary": "글로벌 OTC 보청기 카테고리의 한국발 도전자, 일본 시장 카테고리 리더"
+    },
+    "trending_reason": {
+      "summary": "2024~2025년 일본 OTC 보청기 시장 카테고리 리더 등극, 미국 OTC 규제 시행 후 매출 급증, Series C 라운드로 글로벌 확장 가속",
+      "catalysts": [
+        "2022년 미국 OTC 보청기 규제 시행 — 시장 폭발적 성장",
+        "Series C 라운드, 글로벌 확장 자본 확보",
+        "일본 시장 카테고리 리더 등극",
+        "Olive Max 신제품 발표"
+      ],
+      "media_mentions": [
+        {
+          "source": "Forbes Japan",
+          "title": "Olive Union leads Japan's OTC hearing aid wave",
+          "url": "https://forbesjapan.com/olive-union/",
+          "date": "2024-11-08"
+        },
+        {
+          "source": "조선일보",
+          "title": "올리브유니온, 일본 보청기 시장 1위 등극",
+          "url": "https://www.chosun.com/olive-union-japan/",
+          "date": "2025-09-23"
+        }
+      ],
+      "growth_metrics": "일본·미국·한국 누적 사용자 50만+, 일본 OTC 보청기 시장 점유율 1위"
+    },
+    "funding": {
+      "total_raised": "$60M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$30M",
+        "date": "2024-12",
+        "lead_investor": "Quad Asia Investments",
+        "notable_investors": [
+          "KB Investment",
+          "Korea Investment Partners",
+          "산업은행 KDB"
+        ]
+      },
+      "valuation_estimate": "$200M+ (추정)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$5M",
+          "date": "2018-09",
+          "lead_investor": "DSC Investment"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$15M",
+          "date": "2021-12",
+          "lead_investor": "Korea Investment Partners"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$30M",
+          "date": "2024-12",
+          "lead_investor": "Quad Asia Investments"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 청각 보조 시장 2030년 $20B+, OTC 보청기 SOM $5B",
+      "market_trend": "OTC 보청기 규제 완화, 시니어 인구 증가, 청각 헬스의 컨슈머화",
+      "growth_potential": "미국·유럽 OTC 시장 침투, 시니어 케어 채널 확장, 헬스 트래킹 기능 추가",
+      "risks": [
+        "Apple·삼성의 청각 보조 모드 강화",
+        "Eargo 등 글로벌 경쟁 심화",
+        "유통·반품 비용 부담"
+      ],
+      "risk_mitigation": "일본 시장 깊이 유지, 의료급 성능 차별화 강조, 자가 적합 IP 강화"
+    },
+    "related_links": [
+      {
+        "title": "Olive Union 공식 사이트",
+        "url": "https://www.oliveunion.com/"
+      },
+      {
+        "title": "Forbes Japan: 일본 시장 분석",
+        "url": "https://forbesjapan.com/olive-union/"
+      },
+      {
+        "title": "Olive Max 제품",
+        "url": "https://www.oliveunion.com/olive-max"
+      }
+    ],
+    "editor_pick_comment": "보청기를 '약국에서 사는 이어폰'으로 만든 한국 회사. 디자인 한 장으로 글로벌 카테고리를 다시 정의하는 사례 — 일본에서 1등을 잡았다는 사실이 가장 인상적이다."
+  }
+]

@@ -376,7 +376,7 @@ export function buildIndex(lens) {
 
 /**
  * Build entries for `profiles` (3 at a time), merge into the stored lens file, drop entries
- * for companies no longer in startups.json, and rewrite both files. Never throws for a single
+ * for companies no longer in the data, and rewrite both files. Never throws for a single
  * company: a missing entry just means that company has no section.
  */
 export async function updateLensFiles(llm, profiles, { lensPath, indexPath, allIds, fetchImpl, log = console.log }) {

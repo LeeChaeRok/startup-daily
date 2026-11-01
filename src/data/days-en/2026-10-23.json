@@ -1,0 +1,655 @@
+{
+  "mach9-2026": {
+    "tagline": "AI CAD for civil engineering that turns laser scans into draft design drawings",
+    "category": [
+      null,
+      "Construction & infrastructure software (AECO)",
+      "Surveying & geospatial data"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "employee_count": "Undisclosed",
+    "founders": [
+      {
+        "background": "Former researcher at the Carnegie Mellon University Robotics Institute. According to the company's About page, the founding team has experience developing systems that perceive and navigate the physical world at Tesla, SpaceX, NASA, Apple, and Google X. A separate interview article reports that while at SpaceX he worked on The Boring Company projects and later conducted underground mapping and perception research with support from a NASA Space Technology Research Fellowship.",
+        "notable_achievement": "After founding Mach9 Robotics in 2021, led the shift from a hardware-focused business to AI CAD software. Announced a $34M Series A in October 2026."
+      },
+      {
+        "background": "Researcher from the Carnegie Mellon University Robotics Institute. Included in the founding team's shared background (Tesla, SpaceX, NASA, Apple, Google X), but detailed individual career history has not been confirmed.",
+        "notable_achievement": "Undisclosed (individual key achievements unconfirmed)"
+      },
+      {
+        "background": "Researcher from the Carnegie Mellon University Robotics Institute. Detailed individual career history has not been confirmed.",
+        "notable_achievement": "Undisclosed (individual key achievements unconfirmed)"
+      },
+      {
+        "background": "Former member of the Carnegie Mellon University Robotics Institute. Included in the founding team's shared background (Tesla, SpaceX, NASA, Apple, Google X); serves as CTO according to a directory profile.",
+        "notable_achievement": "Undisclosed (individual key achievements unconfirmed)"
+      }
+    ],
+    "team_highlights": "All four co-founders met at the Carnegie Mellon University Robotics Institute, where they built robotic systems together, making this a research-driven team. The investor (Bessemer) explains that the team's robotic perception (3D perception) expertise became the foundation for the current product's point cloud recognition and feature extraction technology. The number of employees has not been disclosed. The company plans to use funds from this round to hire industry specialists and expand its sales and customer support organization.",
+    "product": {
+      "summary": "Mach9 is AI CAD software that takes 3D laser scan (LiDAR) and image data collected in the field and uses AI to automatically generate draft drawings of roads, utilities, and construction sites. Engineers then review and edit these drafts to complete the final drawings. The product is reportedly known as Digital Surveyor.",
+      "problem_statement": "Converting survey data into drawings usable for design still relies heavily on manual work. Drafters trace curves, lane lines, utility poles, and drainage structures one point at a time. Co-founder Baikovitz has said that with existing software this takes about one week per mile. This is the company's claim, and no independent verification has been confirmed.",
+      "solution": "Customers upload scan data from the survey equipment they already use, and Mach9's proprietary AI model automatically extracts curves, signs, poles, lane markings, and power lines to create a draft. Users refine the results with drawing, deletion, vertex adjustment, and quality assessment tools for the generated model. The company claims centimeter-level accuracy, 10x faster work speed, and one-fifth the cost (company claim).",
+      "key_features": [
+        "Automatic recognition of 3D laser scan and image data (curves, road signs, utility poles, lane markings, power lines, etc.)",
+        "Drawing creation based on AI-generated drafts, with editing tools for surveyors and engineers",
+        "Quality assessment function for AI-generated models",
+        "Integration with major capture equipment such as Leica, Trimble, and RIEGL (per press reports)",
+        "Processing of infrastructure data for roads, utilities, and construction sites"
+      ],
+      "tech_stack_or_innovation": "The company believes general-purpose models struggle to achieve centimeter-level accuracy, so it trained its own AI model. The core lies in the data processing stage that converts raw scan data into accurate survey outputs, and the company explains that the founding team's 3D perception and robotics background was applied to this area. Detailed architecture and the scale of training data have not been disclosed.",
+      "target_customer": "Surveying firms, civil design engineering companies, public agencies (transportation and infrastructure-related agencies), and utility operators. The company aims to increase capacity so these customers can meet demand for road and infrastructure maintenance.",
+      "business_model": "Undisclosed (pricing structure and billing method not public). Presumed to be software subscription or per-project billing (est.), but unconfirmed. Currently in a private beta phase with about 100 customer companies participating."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "The de facto standard for civil design CAD, where converting survey data into drawings is mainly performed by people. Mach9 focuses on automating this drafting stage with AI. However, Autodesk is also expanding its AI features (such as Smart Blocks)."
+        },
+        {
+          "name": "Bentley Systems (OpenSite+ and others)",
+          "comparison": "A large infrastructure design software company that has added generative AI-based field design features (Copilot) to OpenSite+. Like Mach9, it is moving toward reducing design work with AI, but Mach9 goes narrower and deeper with its specialized feature for creating draft drawings directly from scan data."
+        },
+        {
+          "comparison": "A third-party tool that automatically generates production drawings from 3D models. Its input is a 3D design model, whereas Mach9 uses field scan data as input, so the starting point of the workflow differs."
+        },
+        {
+          "comparison": "A software company promoting CAD productivity gains for civil engineers, surveyors, and geospatial professionals (per CB Insights). Its automation targets overlap with Mach9's, but based on public information, it is difficult to compare the depth of its AI scan recognition capabilities."
+        },
+        {
+          "comparison": "An alternative CAD product with strengths in DWG compatibility and low-cost licensing. It offers an option for customers who do not want to change their existing drawing environment, but its AI automation that creates drafts from scans is far from Mach9's core differentiator."
+        }
+      ],
+      "key_differentiator": "Uses field scan data as input and AI directly extracts curves, signs, utility poles, lane markings, power lines, and more to create drafts. Rather than replacing existing CAD, it targets the bottleneck in survey data processing.",
+      "moat": "Centimeter-level accuracy from a proprietary AI model, real project data (claimed over 2,500 projects and more than 100,000 miles of infrastructure corridor survey data), and editing tools tailored to workflows reviewed by survey and civil engineering professionals. However, independent verification of the data scale and model performance has not been confirmed.",
+      "competitive_position_summary": "An early challenger focused on a specific stage, scan-to-drawing conversion, competing against large CAD companies such as Autodesk and Bentley. It is at a disadvantage in financial resources and distribution networks, but its position is distinct because it redesigned the workflow from the ground up rather than attaching AI features to existing tools. Commercial validation, including the number of enterprise customers, remains at the private beta stage."
+    },
+    "trending_reason": {
+      "summary": "Drew attention with the announcement of a $34M Series A on October 21, 2026. Press coverage reported co-founders' shift from hardware-focused Mach9 Robotics to AI CAD software, and the fact that two prominent venture capital firms co-led the round drew interest.",
+      "catalysts": [
+        "$34M Series A announced on October 21, 2026 (co-led by First Round Capital and Bessemer Venture Partners, with participation from Prudence and Quiet Capital)",
+        "Pivot from hardware to software and removal of 'Robotics' from the company name",
+        "Market backdrop of aging U.S. infrastructure and rebuilding demand, with roughly 4.2 million miles of roads",
+        "Disclosure of about 100 private beta customers and usage records of over 2,500 projects"
+      ],
+      "growth_metrics": "Approx. 100 private beta customers (nearly 100), over 2,500 projects, and processing of infrastructure corridor survey data covering projects across all 50 states and more than 100,000 miles (per company blog). Revenue, ARR, and paying customer count have not been disclosed."
+    },
+    "funding": {
+      "total_raised": "$49M (per company announcement)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "lead_investor": "First Round Capital, Bessemer Venture Partners (co-led)",
+        "notable_investors": [
+          null,
+          "Quiet Capital (existing investor, led seed round)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed and early rounds (approx. $15M cumulative, calculated)",
+          "amount": "$15M (est., calculated as total $49M minus Series A $34M)",
+          "lead_investor": "Quiet Capital (seed lead, per company blog)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed. There are no market size estimates in public sources. For reference, U.S. public roads total about 4.2 million miles, and according to the investor, the addressable scope broadens when other infrastructure such as power lines, fiber optic cable, and railways is included.",
+      "market_trend": "Demand for reconstruction and maintenance is growing as U.S. infrastructure ages, and investment in AI software for construction is also increasing. In the same period, design automation startups such as CivilGrid (underground infrastructure mapping, $26M) and Blueprints AI (architectural drawing automation) also raised funding (per TechCrunch).",
+      "growth_potential": "The step from survey scan to design drawing is a time-consuming bottleneck across the design process. The fact that beta customers are using it on real projects is positive, but growth will likely depend on conversion to paid plans after general release and on whether the product can expand within existing CAD workflows.",
+      "risks": [
+        "Established giants such as Autodesk and Bentley could quickly release AI drafting features, reducing differentiation",
+        "Survey and civil drawings carry significant legal liability and require approval from licensed engineers, so accuracy requirements for AI are very high",
+        "Performance figures (10x speed, one-fifth cost, centimeter accuracy) remain company claims and need independent verification",
+        "The lack of public revenue or paying customer data makes it difficult to judge the pace of commercialization",
+        "Given the rename and pivot history, the possibility that product direction changes again cannot be ruled out"
+      ],
+      "risk_mitigation": "The company distributes liability by adopting a structure in which AI creates drafts and licensed surveyors and engineers review and edit them. It designed editing tools so users can directly assess the quality of AI results, and plans to bring in industry experts with funds from this round to strengthen domain depth. Integration with existing capture equipment also lowers entry barriers by reducing the burden on customers to replace their hardware."
+    },
+    "related_links": [
+      {
+        "title": "Mach9 official website"
+      },
+      {
+        "title": "About Mach9"
+      },
+      {
+        "title": "Mach9 $34M Series A announcement blog"
+      }
+    ],
+    "editor_pick_comment": "Whether the strategy of focusing AI on the single step from survey scan to design drawing is the right one will become clear when beta customers convert to paid plans."
+  },
+  "baba-2026": {
+    "tagline": "A New York startup pairing human advisors and AI for Medicare and Medicaid patients",
+    "category": [
+      "Digital Healthcare",
+      "AI Care Coordination"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "employee_count": "11-50 (est.)",
+    "founders": [
+      {
+        "role": "Co-founder & CEO",
+        "background": "Connor Sweeney studied bioengineering and computer science at MIT, and co-founded and served as CEO of Robigo, an agricultural synthetic biology startup. According to his Crunchbase profile, he later worked as Chief of Staff at Passes. His personal website says he grew up in Delaware, graduated from MIT, and co-founded Robigo.",
+        "notable_achievement": "Founded Baba in 2025, announced a seed round in February 2026, and raised a $40M Series A in October of the same year. The founding inspiration is reportedly his experience caring for his grandmother after her stroke."
+      }
+    ],
+    "team_highlights": "Based on public materials, the only confirmed key figure is CEO Connor Sweeney. At the time of the seed round in February 2026, the team had 10 people, and the founder explained that because the team did not come from the healthcare industry, they moved quickly. Around the same time, MIT economist Jon Gruber was introduced as an advisor. In the announcement of this round, the company said it strengthened clinical and product leadership. However, the names and backgrounds of other executives such as CTO and clinical head were not confirmed. The employee count of 11-50 is estimated from the 10-person figure reported at seed stage.",
+    "product": {
+      "summary": "Baba assigns a dedicated care team to Medicare, Medicare Advantage, and Medicaid beneficiaries and their families. The care team consists of care coordinators, licensed therapists, and AI agents. It covers hospital discharge planning, specialist appointment scheduling, insurance denial appeals, home care connections, and social needs like housing and transportation.",
+      "problem_statement": "Medicare patients today see more specialists than 20 years ago, and family caregivers bear the burden of scheduling, insurance, and medication management. The company sees that this administrative work falls on families and patients, while traditional case management is too expensive to adequately serve low-income and elderly populations.",
+      "solution": "Human advisors handle complex cases while AI handles repetitive, high-volume tasks. At the seed stage, a phone- and text-based AI companion sends daily reminders and detects early signals like missed medications, triggering human intervention. This model was described as core when announced in February 2026.",
+      "key_features": [
+        "Dedicated care team per patient (care coordinator, licensed therapist, AI agent)",
+        "Inter-specialist clinical information linking and appointment coordination",
+        "Post-discharge follow-up management",
+        "Insurance denial and claim appeals, medical billing dispute resolution",
+        "Benefit application assistance such as SNAP and Medicaid enrollment",
+        "Daily check-ins and early alerts via phone/text AI companion",
+        "B2B connections with nursing homes and home care agencies"
+      ],
+      "tech_stack_or_innovation": "Public technical details are limited. The company emphasizes a 'human-in-the-loop' model combining specialists and AI. It also released BabaBench, a benchmark that evaluates whether AI agents can complete long-term, multi-step administrative tasks. The benchmark was published as an arXiv preprint and accepted for a NeurIPS workshop presentation. The underlying model architecture or base models were not confirmed.",
+      "target_customer": "The customer is not the patient but the insurer. The primary targets are Medicare and Medicare Advantage beneficiaries, Medicaid beneficiaries, and their caregivers. Nursing homes, home care agencies, and home health agencies are also partner connections.",
+      "business_model": "Patients pay nothing. The company generates revenue through contracts with health insurance plans (mainly Medicare Advantage plans) and value-based arrangements. At the seed stage, it was described as a service covered by Medicare and Medicare Advantage insurance. The future goal is to move toward risk-bearing contracts from insurers."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "It is a patient advisor service for Medicare and Medicare Advantage beneficiaries. It handles insurance denials, claim disputes, and chronic disease coordination. In March 2026, it was reported to have secured over $8M for its AI-assisted advisory business targeting Medicare. Having a clinical team of doctors and nurses makes it the closest comparison to Baba."
+        },
+        {
+          "comparison": "According to a Dealroom report, this company in the same category raised a $130M Series C in February 2026. Product specifics and pricing structure were not confirmed in this research. It serves as a benchmark for capital flows in the category."
+        },
+        {
+          "name": "BeneLynk (Aetna affiliated)",
+          "comparison": "Aetna Medicare's benefit application service for members. It helps with applications for Medicaid, Medicare Savings Programs (MSP), and prescription drug assistance. Costs and contract terms are not disclosed. This is the most direct overlap with Baba's benefit application function."
+        },
+        {
+          "name": "Abby Care (adjacent category)",
+          "comparison": "A paid family care service company that announced an $82M Series C on October 15, 2026. Its model of directly supplying caregivers does not directly compete with Baba. However, they compete for the same demand in the family caregiver market."
+        }
+      ],
+      "key_differentiator": "Baba differentiates by using AI to cheaply handle insurance claims and administrative tasks, then layering human advisors on top. Additionally, because its business assumes Medicare coverage, patients pay nothing.",
+      "moat": "Three defensible elements are identified: First, track record with insurers and member base—the company says it partners with plans covering up to 4 million Medicare beneficiaries. Second, accumulated administrative data and workflow automation know-how. Third, academic and public institution connections. However, whether these are long-term barriers remains unverified.",
+      "competitive_position_summary": "A startup rapidly establishing itself in the Medicare Advantage market. Its Series A is large compared to peers, but actual sustainability depends on how much it expands risk contracts with insurers. Based on public information, it's difficult to judge a scale or price advantage over competitors."
+    },
+    "trending_reason": {
+      "summary": "Baba announced a $40M Series A on October 20, 2026. This large investment came eight months after a seed round of over $6.5M in February 2026, and captures the wave of capital flowing into the Medicare care coordination category. The company said it will use the funds to expand the care team, advance AI research, and grow insurer partnerships.",
+      "catalysts": [
+        "2026-10-20: $40M Series A announced (led by FirstMark Capital, with CVS Health Ventures and Valtruis)",
+        "BabaBench benchmark released and arXiv preprint published in October 2026; accepted for presentation at a NeurIPS workshop",
+        "June 2026: CMS selected Baba for all four tracks of the 10-year chronic disease technology support model ACCESS (90-day scope, but a background event)",
+        "Expanded partnerships with American Stroke Foundation and American Breast Cancer Foundation",
+        "Planning a Series B in 2027, with a stated goal of transitioning to risk-based insurer contracts"
+      ],
+      "growth_metrics": "According to company announcements, it has supported over 10,000 patients and families, with over 100,000 families on the waitlist. Partner insurance plans cover over 4 million Medicare beneficiaries. At the time of the seed round in February 2026, it said it supported over 6,000 families. These are company-reported figures, not independently verified. An interpretation is that it covers less than 1% of the roughly 70 million Medicare beneficiaries."
+    },
+    "funding": {
+      "total_raised": "Approximately $46.5M (based on seed 'over $6.5M' + Series A $40M, est.)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "notable_investors": [
+          null,
+          null,
+          "General Catalyst (existing investor)",
+          "Genius Ventures (existing investor)",
+          "Ground Up Ventures (existing investor)"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Over $6.5M (some media reported approximately under $7M)",
+          "lead_investor": "General Catalyst (per Dealroom and announcement; TBPN reported Dermocatalyst, conflicting)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed. No publicly available market size estimates were found. Based on the company and reports, the addressable base is roughly 70 million Medicare beneficiaries and over 63 million family caregivers. Calculating SAM or SOM from these numbers requires separate assumptions.",
+      "market_trend": "Growing Medicare enrollment, increasing specialist visits, and rising caregiver burden are driving insurers' demand to reduce care coordination costs. In 2026, the category saw large fundraises including Rival Solace's $130M Series C and Understood Care's $8M+ round. At the same time, CMS is expanding technology-enabled chronic disease management models.",
+      "growth_potential": "If value-based contracts with insurers become mainstream, the revenue structure may shift. The company plans a Series B in 2027. However, growth rate depends on coverage criteria, partner expansion, and clinical evidence demonstration. Current revenue or contract scope is not disclosed, making growth rate estimates difficult.",
+      "risks": [
+        "Changes in Medicare and Medicare Advantage coverage policies could destabilize the revenue structure",
+        "Transitioning to risk-bearing contracts with insurers would increase responsibility for clinical outcomes and costs",
+        "Errors by AI agents in complex, long-term tasks could become patient safety issues",
+        "Price competition may intensify with well-funded competitors like Understood Care and Rival Solace",
+        "The company's reported member and waitlist numbers are not independently verified"
+      ],
+      "risk_mitigation": "The company says it manages AI errors by keeping human advisors in the loop. AI agent performance is measured via BabaBench, and in the February 2026 announcement, it said it would conduct clinical research with Johns Hopkins. Revenue is based on insurance-covered services, and it plans to use Series A funds to grow the clinical team and insurer partnerships."
+    },
+    "related_links": [
+      {
+        "title": "Baba Official Site"
+      },
+      {
+        "title": "GlobeNewswire Series A Announcement"
+      },
+      {
+        "title": "FirstMark Capital Investment Leader Note"
+      },
+      {
+        "title": "Fierce Healthcare Series A Coverage"
+      },
+      {
+        "title": "Connor Sweeney Personal Site"
+      },
+      {
+        "title": "TBPN Seed Interview (2026-02-25)"
+      },
+      {
+        "title": "HLTH Series A and BabaBench Announcement"
+      },
+      {
+        "title": "Understood Care Medicare Advisor Comparison Guide"
+      }
+    ],
+    "editor_pick_comment": "This company's bet hinges less on AI model performance and more on how low insurers will accept the cost of human advisors thanks to AI. Proving that with numbers will be the condition for the next round."
+  },
+  "beff-2026": {
+    "tagline": "A battery manufacturing platform that unifies battery development and mass production data.",
+    "category": [
+      "Battery software",
+      "Manufacturing data platform",
+      "Battery joint development"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "employee_count": "1-10 (est.)",
+    "founders": [
+      {
+        "role": "Co-CEO",
+        "background": "Reportedly a former Nissan battery engineer and previously participated in all-solid-state battery material process technology development at Toyota. Some sources list name as Yukihiro Nagano (notation discrepancy).",
+        "notable_achievement": "No specific achievements confirmed in public materials. Co-CEO who led company founding and Series A fundraising."
+      },
+      {
+        "role": "Co-CEO",
+        "background": "Former Nissan battery engineer. Reported to have led advanced development of EV battery packs at Mercedes-Benz.",
+        "notable_achievement": "No specific achievements confirmed in public materials. As co-CEO, jointly led company founding and fundraising."
+      }
+    ],
+    "team_highlights": "Both co-CEOs come from automotive and battery development backgrounds, incorporating industry experience into platform design. Besides Tokyo HQ, the company has a base in Stuttgart, Germany, and has stated that hiring international talent is a primary use of Series A funds. Job postings confirm recruitment of joint development engineers targeting automakers and battery manufacturers.",
+    "product": {
+      "summary": "A platform combining software (Beff Navigator) that digitizes the process from development to mass production verification by integrating battery development data, with next-generation battery joint development services conducted in its own lab.",
+      "problem_statement": "In battery manufacturing, material data, designs, evaluation conditions, and measurement results are scattered across different places, and process know-how is tied to individual engineers, leading to slow production transitions and low yield. There is also a shortage of skilled personnel.",
+      "solution": "The Virtual Factory Platform (VFP) integrates and analyzes data on the software side, while the Real Factory Platform (RFP) conducts prototype verification and joint development in its own lab. The company started officially offering the 'Battery Manufacturing Infrastructure System' combining these two pillars in fall 2026.",
+      "key_features": [
+        "Beff Navigator: Integrates material data, design drawings, evaluation conditions, and measurement results into a single analysis model",
+        "VFP chat-based query: interactive access to battery technology trends, material selection, and process information",
+        "Expert connection: ability to ask the company's experts directly",
+        "RFP: prototype production, evaluation, and mass production transition support in owned lab",
+        "Early identification of defect causes based on process parameters and inspection results"
+      ],
+      "tech_stack_or_innovation": "Based on public materials, the company applies its own database and large language model (LLM) technology to VFP, and aims to automate battery development using AI and machine learning in the future. However, public information on model architecture and training data size is limited. The combination of software and a physical lab is presented as a differentiator.",
+      "target_customer": "B2B customers involved in battery development and mass production, such as battery cell manufacturers and automakers. Foreign battery manufacturers are specifically mentioned as main customers for RFP services.",
+      "business_model": "VFP software is offered on a subscription basis, while RFP and expert consulting are reportedly provided on a project-based fee. Pricing details and revenue scale are undisclosed."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A company listed by Crunchbase as a potential competitor. There is overlap in battery data analysis and operational software, but whether Beff's model includes joint development through its own lab can only be compared at an (est.) level."
+        },
+        {
+          "comparison": "A company mentioned by Crunchbase. Known for battery materials and cell-side business, so only partial overlap with Beff's software-centric platform (est.)."
+        },
+        {
+          "comparison": "A company mentioned by Crunchbase. An information service providing battery raw materials and market data, likely differing in customer purchase purpose from Beff's focus on process development data (est.)."
+        }
+      ],
+      "key_differentiator": "It combines a software data platform with in-house lab-based joint development under a single contract, creating a structure where development data feeds back into actual production conditions.",
+      "moat": "Accumulating process data and the company's lab facilities that reproduce experimental results may increase switching costs. However, neither element has yet been publicly validated at scale.",
+      "competitive_position_summary": "An early-stage niche player. While investor interest is confirmed, including from corporate CVCs, competitiveness in terms of market share or customer count is not substantiated by public materials."
+    },
+    "trending_reason": {
+      "summary": "Following the first closing of Series A on September 1, 2026 (¥450M), an additional ¥300M was raised at the final closing on October 16, bringing the total Series A to approximately ¥750M. This coincided with the official platform launch and new investments from Japanese CVCs.",
+      "catalysts": [
+        "2026-09-01: Series A first closing of ¥450M announced (led by Genesia Ventures, MUFG Capital participating)",
+        "2026-10-16: Additional ¥300M announced at Series A final closing, with new participation from Sumisho Venture Partners and JM Strategic Innovation Fund",
+        "Fall 2026: Official launch of battery manufacturing infrastructure system combining VFP and RFP",
+        "Announcement of international talent hiring and in-house lab expansion plans"
+      ],
+      "growth_metrics": "Customer count, revenue, and number of subscription contracts are not disclosed. Reliable figures are limited to cumulative funding (¥950M) and Series A total (approx. ¥750M).",
+      "media_mentions": [
+        null,
+        null,
+        {
+          "source": "STARTUP LOG"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "¥950M (approx., per The Bridge)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "stage": "Series A (final closing)",
+        "amount": "¥300M (additional from final closing). Series A total is approx. ¥750M."
+      },
+      "funding_history": [
+        null,
+        {
+          "stage": "Series A first closing",
+          "amount": "¥450M"
+        },
+        {
+          "stage": "Series A final closing",
+          "amount": "¥300M"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed. No public estimates confirmed for the market size of battery development/manufacturing software and joint development services.",
+      "market_trend": "Battery production is shifting from a concentration on mass production in Asia (e.g., China) to regional, multi-variant manufacturing due to economic security concerns. The company and investors share the logic that this creates demand for transferring process know-how into data.",
+      "growth_potential": "If software subscriptions and joint development services grow together, recurring revenue could increase. However, with no disclosed customer numbers or revenue, the growth rate remains unverified.",
+      "risks": [
+        "Customer development budgets may fluctuate significantly with the battery industry's capital investment cycles",
+        "The combined software and lab service structure may not yield expected scalability and profitability",
+        "Major battery manufacturers or existing analytics companies may internalize similar functions",
+        "Operational complexity due to business bases divided between Japan and Germany"
+      ],
+      "risk_mitigation": "The company proposes to build customer trust through actual yield improvement cases from RFP services. It appears to be creating a structure that links its own lab with VFP data, making it difficult for competitors to replicate. It has announced plans to leverage networks of overseas CVCs and corporate investors."
+    },
+    "related_links": [
+      {
+        "title": "Beff official site (Japanese)"
+      },
+      {
+        "title": "Beff recruitment page (Wantedly)"
+      },
+      {
+        "title": "Beff STARTUP DB company information"
+      }
+    ],
+    "editor_pick_comment": "The key to the next investment round will be whether the structure tying battery process know-how to software and its own lab can be proven through actual yield improvements."
+  },
+  "letara-ltd-2026": {
+    "tagline": "Hybrid propulsion using plastic as fuel, expanding from satellites to rockets",
+    "category": [
+      "Aerospace",
+      "Propulsion Systems (Hybrid Rocket Engines)"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "Co-CEO (Founder)",
+        "background": "A former doctoral researcher studying rocket propulsion at Hokkaido University, founded the company in 2020 based on his university research. He has been primarily responsible for the hybrid propulsion technology that enables re-ignition.",
+        "notable_achievement": "Led the development of Letara's hybrid propulsion re-ignition technology and represented the company in a TechCrunch interview when the Pre-Series A was announced in August 2026."
+      },
+      {
+        "role": "Co-CEO (Founder)",
+        "background": "Served as a U.S. Army intelligence officer deployed to Afghanistan in 2012, later earned a Ph.D. in aerospace engineering from Hokkaido University. According to the official team page, he describes this experience as the starting point for addressing space accessibility challenges. However, Payload introduces him as a professor at Hokkaido University, leading to conflicting title information.",
+        "notable_achievement": "The company states that he led the development of the CAMUI hybrid rocket engine."
+      },
+      {
+        "role": "CTO and Technology Advisor (Official page shows both CTO and CSO titles)",
+        "background": "Professor in the Graduate School of Engineering at Hokkaido University; after receiving his Ph.D. from the University of Tokyo, he researched propulsion technology at IHI and Nissan Motor's aerospace division.",
+        "notable_achievement": "Introduced as a leading researcher in Japan's hybrid propulsion field, having devised the CAMUI-type hybrid rocket, the axial injection end-burning engine, and the low-concentration hydrogen peroxide hybrid rocket."
+      }
+    ],
+    "team_highlights": "The founding members are three individuals who worked together in a Hokkaido University laboratory. The core consists of an authority on university-based technology (Nagata) and two co-CEOs handling technology development (Hirai, Kamps). Keisuke Sakurai of Sakai Law Office serves as Director & CFO, and Tsutomu Umatsu of Umatsu Electric is introduced on the team page as having experience in Japan's private space sector. Since titles vary by document (e.g., Nagata's CTO/CSO), official titles are difficult to confirm without reviewing investment materials.",
+    "product": {
+      "summary": "A hybrid chemical propulsion system using plastic-based solid fuel and liquid or gaseous oxidizer. The company explains that it aims to build both a satellite propulsion system and a large rocket engine based on the same combustion technology.",
+      "problem_statement": "Existing propellants used in satellites are toxic, flammable, and explosive, creating significant burdens in handling and pre-launch operations. Small satellites increasingly need maneuvering capabilities such as orbital changes, collision avoidance, and atmospheric re-entry, but there is a lack of safe yet sufficiently thrusty thrusters.",
+      "solution": "The company explains that solid plastic fuel is inert until oxidizer flows, reducing accident risk during manufacturing and launch preparation. It claims to have independently developed fuel mixing, molding, and compression processes to improve ignition stability and combustion control.",
+      "key_features": [
+        "Hybrid structure combining solid plastic fuel with liquid or gaseous oxidizer",
+        "Re-ignition capability enabling repeated orbital maneuvers",
+        "Company reported achieving 5,000N thrust in a ground combustion test in 2025",
+        "Product line includes two satellite thrusters and one rocket hybrid engine in development",
+        "Proprietary fuel processing process claims to reduce fuel material costs and waste"
+      ],
+      "tech_stack_or_innovation": "CAMUI (Cascaded Multistage Impinging-jet) combustion technology is core. This technology is known for stabilizing combustion by injecting oxidizer in multiple stages within the combustion chamber. The fuel uses HTPB-based plastic, claimed to produce greater thrust with less material loss compared to conventional hybrid rockets using paraffin wax. There are reports of using 3D printing to design fuel grain shapes, but this was not confirmed in official documents.",
+      "target_customer": "Primary customers are commercial satellite operators and rocket development companies. The company also targets demand from the Japanese government and the defense and security sectors. Most customer names are undisclosed.",
+      "business_model": "A B2B hardware model selling thrusters and engines. Pricing and contract sizes are undisclosed. Currently, the company combines government grants (NEDO support) with private and public contracts."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Interstellar Technologies (Japan)",
+          "comparison": "A leading Japanese rocket development company that handles entire launch vehicles. Letara differs by focusing on propulsion system components and engines."
+        },
+        {
+          "name": "InnoSpace (South Korea)",
+          "comparison": "A domestic launch vehicle startup. It is closer to full launch vehicle system development, while Letara is centered on hybrid propulsion technology."
+        },
+        {
+          "name": "Galactic Energy (China)",
+          "comparison": "A Chinese commercial launch vehicle company. It centers on rocket launch services, which differs from selling propulsion technology itself."
+        },
+        {
+          "name": "Equatorial Space (Singapore)",
+          "comparison": "A Southeast Asian space startup mentioned as a competitor in hybrid rocket technology development."
+        },
+        {
+          "name": "HyImpulse (Germany)",
+          "comparison": "A European small launch vehicle startup that develops full-stage rocket technology. It overlaps with Letara in the launch vehicle engine area."
+        },
+        {
+          "name": "Gilmour Space (Australia)",
+          "comparison": "An Australian small launch vehicle company. Its focus is on developing its own launch vehicles, unlike the propulsion technology sales model."
+        }
+      ],
+      "key_differentiator": "The hybrid structure using non-toxic plastic fuel and re-ignition capability are differentiators. Also notable is developing satellite thrusters and rocket engines based on the same combustion foundation.",
+      "moat": "Hokkaido University's CAMUI combustion technology and Professor Nagata's hybrid propulsion research base serve as entry barriers. The know-how in fuel molding and compression processes also appears protected. However, patent status was not confirmed.",
+      "competitive_position_summary": "One of the few companies with a clear technology base in the narrow field of hybrid propulsion. However, actual in-orbit demonstration has not yet been completed, and moving to large rocket engines will inevitably require capital and test facility competition."
+    },
+    "funding": {
+      "total_raised": "approx. ¥4.4B (est., sum of reported cumulative ¥1.8B as of June 2025 and ¥2.6B in August 2026; unclear if grants included)",
+      "valuation_estimate": "approx. ¥7.8B (est., post-money valuation estimated by Initial)",
+      "latest_round": {
+        "stage": "Series A (company calls it Pre-Series A)",
+        "amount": "¥2.6B (approx. $16M)",
+        "lead_investor": "Varies by source. Fundz and Project Startups list Headline Asia, JIC Venture Growth Investments, and Incubate Fund as leads; Dealroom records Frontier Innovations No.1 Investment Partnership as the main investor."
+      },
+      "funding_history": [
+        {
+          "stage": "J-KISS type new share subscription rights and loans",
+          "amount": "¥120M",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "stage": "Funding including venture debt",
+          "amount": "¥275M",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "stage": "Seed Round 1",
+          "amount": "¥480M",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "stage": "Seed Round Additional (Preferred shares, convertible bonds, loans)",
+          "amount": "¥650M",
+          "lead_investor": "ANA Trading, JST, SMBC Venture Capital, Toyoda Gosei, etc. (based on preferred share subscribers)"
+        },
+        {
+          "stage": "Seed Final Close",
+          "amount": "Seed total ¥800M (company disclosed)",
+          "lead_investor": "Frontier Innovations No.1 Investment Partnership"
+        },
+        {
+          "stage": "Pre-Series A",
+          "lead_investor": "Headline Asia, etc. (varies by source)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "According to industry estimates cited by the company, the global hybrid rocket propulsion market is expected to grow at a CAGR of 15% from approx. $848M in 2024 to approx. $2.6B in 2032. The company's own SAM and SOM are undisclosed.",
+      "market_trend": "The Japanese government is increasing space industry investment and easing defense export regulations. The growing demand for orbital maneuvers due to an increase in commercial satellites also aligns.",
+      "growth_potential": "A scenario is possible where, after building a track record in satellite thrusters, the company expands into large rocket engines and defense/security demand. However, the timeline for completing in-orbit demonstration has not been disclosed.",
+      "risks": [
+        "In-space demonstration timing is undetermined, which could delay technology validation",
+        "Expanding to large rocket engines may sharply increase test facility and capital requirements",
+        "Could become highly dependent on government grants and defense contracts",
+        "Rapid technological progress by U.S., Chinese, and European competitors"
+      ],
+      "risk_mitigation": "The company has secured public validation pathways through the NEDO program and JAXA partner startup status. It stated that this round will be used for in-orbit demonstration funding, making test schedule management critical. The structure of splitting satellite and rocket applications from the same technology base is a way to spread development risk."
+    },
+    "trending_reason": {
+      "summary": "In August 2026, the company closed a Pre-Series A of approx. ¥2.6B, and is expanding from satellite thrusters to large rocket engines and the defense/security market. It reported passing a 5,000N ground combustion test in 2025 and securing both government and private contracts.",
+      "catalysts": [
+        "August 2026 Pre-Series A announcement (¥2.6B, approx. $16M)",
+        "2025: Advanced from STS to PCA stage in NEDO's deep-tech startup support program, securing up to approx. ¥1B in support",
+        "2025: Achieved 5,000N thrust in ground combustion test (company announced)",
+        "Orders from Japanese government and undisclosed rocket/satellite companies (company announced)",
+        "Japan's increasing space investment and easing of defense export regulations"
+      ],
+      "growth_metrics": "Cumulative funding approx. ¥1.8B as of June 2025 (including grants). With the August 2026 Pre-Series A, cumulative total is approx. ¥4.4B (est.). Employee count is 11-50. Revenue and order sizes are undisclosed.",
+      "media_mentions": [
+        null,
+        {
+          "source": "Letara Official Blog"
+        }
+      ]
+    },
+    "related_links": [
+      {
+        "title": "Letara Official Website (Team Introduction)"
+      },
+      {
+        "title": "Letara Official Blog: 5,000N Combustion Test and Pre-Series A Announcement"
+      },
+      {
+        "title": "PR TIMES: Letara Corporate Press Release List"
+      },
+      {
+        "title": "NEDO Startup Support Profile"
+      },
+      {
+        "title": "JST Investment Execution Announcement (SUCCESS Program)"
+      }
+    ],
+    "editor_pick_comment": "The safety claim of using plastic fuel is interesting, but with no disclosed timeline for in-orbit demonstration, the plan to expand to large rocket engines needs to be validated in the next few quarters."
+  },
+  "hunarai-2026": {
+    "tagline": "Bengaluru startup automating India's frontline hiring and workforce management with multilingual voice AI agents",
+    "category": [
+      "Voice AI",
+      "HR Tech",
+      "Frontline Workforce Management"
+    ],
+    "headquarters": {
+      "country_ko": "India"
+    },
+    "employee_count": "Undisclosed",
+    "founders": [
+      {
+        "role": "Co-founder & CEO",
+        "background": "Reportedly an IIT Kanpur alumnus who served as Chief Business Officer (CBO) at logistics platform Locus. Says it operated an actual recruitment agency for about two years before founding the company, accumulating frontline hiring conversation data.",
+        "notable_achievement": "Undisclosed (per company announcements, growing the voice AI call volume is cited as the flagship achievement)"
+      },
+      {
+        "role": "Co-founder & CTO",
+        "background": "Carnegie Mellon University alumnus, listed on his LinkedIn profile; the press release introduces him with the title Dr. Based in Bengaluru.",
+        "notable_achievement": "Undisclosed"
+      }
+    ],
+    "team_highlights": "Entrackr, citing registry filings, reported that the two co-founders each hold a 26.96% stake. Together Fund is the lead early institutional investor, and the founding team is presented as combining frontline hiring operations experience with AI engineering. To verify: Together Fund's portfolio page lists Hunar with an 'Exited' label, but the same fund is reported to have participated in this Series A, so the label may be an error. The judgment that the company remains independent is based on the absence of any reports of acquisition, listing, or shutdown.",
+    "product": {
+      "summary": "A frontline workforce management platform that handles recruitment, onboarding, training, and retention for field workers through voice, WhatsApp, and chat-based AI agents.",
+      "problem_statement": "Companies in logistics, retail, and quick commerce that need mass hiring, multi-region management, and multilingual communication spend heavily on repetitive phone-based tasks (candidate outreach, screening, interview scheduling, follow-ups). According to the company, existing HR software handles these frontline tasks poorly.",
+      "key_features": [
+        "Voice AI support for 20+ languages (including Tamil, Telugu, and Kannada)",
+        "Integrated voice, WhatsApp, and chat channels",
+        "Automated candidate screening, interview scheduling, and follow-up outreach",
+        "Handling of repetitive communication for onboarding, training, and retention",
+        "Workflow management for large-scale workforce operations across multiple regions"
+      ],
+      "tech_stack_or_innovation": "Rather than layering a general-purpose LLM onto existing processes, the company emphasizes a proprietary voice agent stack tailored to industry-specific workflows and multilingual voice conversations. According to company statements, the average call lasts over 3 minutes, which it says differentiates it from simple transactional voice AI with calls of around 30 seconds. The company states on its website that the system is designed to handle real-world conversation traits such as interruptions, background noise, and silence. Technical details (models used, infrastructure) have not been confirmed.",
+      "target_customer": "Companies that hire and manage large numbers of frontline workers in quick commerce, e-commerce, logistics, mobility, retail, and financial services. Confirmed customers include Swiggy, Delhivery, Instamart, Flipkart, Blue Dart, Aditya Birla Capital, and Tata Croma; customer lists vary across articles (e.g., Zepto, Starbucks, and Bajaj Finserv are mentioned additionally).",
+      "business_model": "Undisclosed. Early reports said the company is shifting away from per-user pricing toward outcome-based pricing, but price levels and contract structures have not been disclosed.",
+      "solution": "The AI places voice calls directly to candidates and employees, conducts conversations, and feeds the results into existing hiring workflows such as CRM systems. The company says it leverages roughly 4 to 5 million frontline conversation data points accumulated from its live recruitment operations to train its models."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A voice AI for Indian recruitment that supports Hindi and 8 regional languages and promotes integrations with Indian HR systems such as Darwinbox and Keka. However, the comparison is based on a competitor's blog and needs verification."
+        },
+        {
+          "comparison": "An API-centric voice agent development platform offering open-source and managed pricing tiers. Because companies build their own solutions rather than buying a ready-made recruiting product, its target market differs from Hunar's turnkey hiring service."
+        },
+        {
+          "comparison": "An Indian voice AI company founded in 2014, with Blume Ventures also participating as an investor. It overlaps in customer-service-focused voice AI, but whether it specializes in frontline hiring and onboarding has not been confirmed."
+        },
+        {
+          "comparison": "An Indian voice and chat customer experience automation company. Its focus is customer service, so its product scope differs from Hunar's, which combines candidate screening with workforce management after hiring."
+        },
+        {
+          "comparison": "A global recruiting chatbot and AI recruiter platform whose strengths include integrations with large enterprise HR systems such as Workday. A comparison source indicates it is limited in multilingual voice-based frontline hiring in India."
+        }
+      ],
+      "key_differentiator": "Handles live phone calls in multiple Indian regional languages and combines the full hiring process (recruitment, screening, training, retention) into a single agent workflow.",
+      "moat": "Frontline conversation data reportedly accumulated through the company's own recruitment agency operations, along with a track record of handling high-volume calls for large enterprise customers. However, the scale and exclusivity of the data have not been independently verified.",
+      "competitive_position_summary": "The Indian voice AI market includes several players such as Bolna, Verloop, and SquadStack, but turnkey products specialized in frontline hiring and management are relatively scarce. Hunar touts its high-volume call operations as a strength, but no market share or pricing advantage over competitors has been confirmed."
+    },
+    "trending_reason": {
+      "summary": "Drew attention around October 19, 2026, as Series A announcements followed. The company says its AI agent handled more than 15 million conversations in September alone and that conversation volume is doubling every quarter.",
+      "catalysts": [
+        "Series A announced in October 2026, led by Blume Ventures (approx. ₹40 crore, or about $4.2M)",
+        "Announcement of more than 15 million conversations handled as of September 2026",
+        "Public comments by a Blume Ventures partner on an 'India-built frontline AI platform'",
+        "Major consumer and logistics companies such as Swiggy, Flipkart, and Tata Croma are cited as key customers",
+        "Rising demand for hiring automation driven by the growth of India's gig and shift-based workforce"
+      ],
+      "growth_metrics": "Per company announcements, more than 15 million AI agent conversations in September 2026, with conversation volume doubling every quarter. However, the founder's LinkedIn post cited '1 million conversations a day,' so daily figures differ across sources (15 million per month corresponds to roughly 500,000 per day). A 2024 press release said it connects with more than 2 million candidates per month. Revenue for FY25 operating income was reported by Entrackr at about ₹1.70 crore."
+    },
+    "funding": {
+      "total_raised": "₹65 crore (approx. $6.8M, per company announcement)",
+      "valuation_estimate": "$19M (est., based on Entrackr's ₹180 crore estimate)",
+      "latest_round": {
+        "amount": "₹40 crore (approx. $4.2M). Per registry filings, the issued amount was ₹39.3 crore",
+        "lead_investor": "Blume Ventures (₹29 crore invested)",
+        "notable_investors": [
+          "Seedstars (₹3.31 crore, per registry)",
+          "Hyderabad Angels Fund (₹3 crore, per registry)",
+          "AVNM Ventures (₹2 crore, per registry)",
+          "Together Fund (participated as an existing investor)",
+          "PhysicsWallah co-founders Alakh Pandey and Prateek Maheshwari (₹1 crore each, per registry)",
+          "MediaMint co-founder Aditya Vuchi"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "approx. ₹18 crore"
+        },
+        {
+          "amount": "₹40 crore (approx. $4.2M)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed. According to Tracxn's tally of Indian voice AI companies, there are about 30 companies with roughly $87.1M in cumulative funding, so the market is still at an early stage; the market size specific to frontline hiring has not been confirmed.",
+      "market_trend": "As India's gig and shift-based workforce grows, companies increasingly want to expand hiring capacity without growing recruiter headcount at the same pace. This also aligns with the shift from transactional voice AI toward task-oriented AI agents.",
+      "growth_potential": "If the company's claim of rapidly growing customer conversation volume holds, there is room to expand from large Indian platform companies into financial services, healthcare, retail, and other sectors. Blume Ventures mentioned the possibility of overseas expansion, but no specific plans have been disclosed.",
+      "risks": [
+        "Conversation and customer figures differ between articles and company announcements, making it difficult to verify the actual revenue-based scale",
+        "With FY25 operating income reported at about ₹1.70 crore, the valuation multiple relative to revenue scale may be high",
+        "Accuracy and regional-language quality of multilingual voice AI must be maintained at scale",
+        "Expansion costs could rise as customer-specific HR system integrations and custom work increase",
+        "Competition from low-cost or developer-oriented voice AI platforms such as BabbleBots and Bolna"
+      ],
+      "risk_mitigation": "The company says it will use the Series A funds for AI infrastructure, product development, and sales expansion. On operations, it claims to be growing monthly conversation volume alongside several large enterprise customers. Reports also describe a move to outcome-based pricing to link customer value with revenue. However, the effectiveness of these measures has not been independently confirmed."
+    },
+    "related_links": [
+      {
+        "title": "Hunar.AI official website"
+      },
+      null,
+      null,
+      {
+        "title": "Together Fund portfolio: Hunar"
+      },
+      {
+        "title": "How Hunar.AI is Revolutionizing Frontline Hiring (Business Standard press release, 2024)"
+      },
+      {
+        "title": "Voice AI Recruitment Platforms in India 2026 (BabbleBots comparison guide, for competitive landscape reference)"
+      }
+    ],
+    "editor_pick_comment": "The conversation volume and customer figures are specific but differ across articles, and revenue scale is small. Whether frontline hiring automation expands into paid contracts will be the key test in the next round."
+  }
+}

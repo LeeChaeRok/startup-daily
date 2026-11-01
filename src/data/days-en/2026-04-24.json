@@ -1,0 +1,446 @@
+{
+  "exa-2026": {
+    "tagline": "Semantic search infrastructure for AI agents — the 'real' search API that developers call",
+    "category": [
+      "AI Infrastructure",
+      "Semantic Search",
+      "Developer Tools"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Dropped out of Harvard computer science; former OpenAI intern",
+        "notable_achievement": "Rebranded Metaphor to Exa and defined the search API category for the AI era"
+      },
+      {
+        "background": "Harvard computer science; ML search systems engineer",
+        "notable_achievement": "Designed proprietary embedding and web index infrastructure"
+      }
+    ],
+    "team_highlights": "Search ML engineers from Harvard and MIT; infrastructure talent from OpenAI, Google, and Anthropic",
+    "product": {
+      "summary": "A semantic web search API built to be called by AI agents, not humans. Instead of keyword matching, it offers embedding-based semantic search, result summarization, and web content extraction in a single API, giving LLMs and agents a reliable external information source.",
+      "problem_statement": "ChatGPT and agents need external information, but Google and Bing search APIs are keyword-based and polluted by SEO and ads, making them unsuitable as LLM input. A new 'AI-friendly' search infrastructure is needed.",
+      "solution": "Crawls and embeds billions of pages itself; returns the most relevant results, summaries, and full-text extraction for semantic queries through a single API. Result format and ranking were redesigned on the assumption that the user is an AI agent, not a person.",
+      "key_features": [
+        "Search API: embedding-based semantic web search",
+        "Find Similar: input a URL to find similar pages",
+        "Contents API: extracts page body, summaries, and highlights",
+        "Websets: generates structured result sets from natural-language queries",
+        "Research API: multi-step autonomous research agent"
+      ],
+      "tech_stack_or_innovation": "Proprietary web crawler and embedding index, transformer-based ranking, and large-scale content extraction pipeline",
+      "target_customer": "AI agent and app developers, enterprises building RAG systems, and research, legal, and financial analysis tools",
+      "business_model": "Usage-based API pricing + enterprise subscriptions + premium Websets"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Search API for AI agents. Exa differentiates through the depth of its own index and embeddings."
+        },
+        {
+          "comparison": "Traditional search API. Exa has an advantage in semantic, AI-friendly result formats."
+        },
+        {
+          "comparison": "Scraping-based search API. Exa differentiates by integrating semantic search and content extraction."
+        }
+      ],
+      "key_differentiator": "AI-agent-first design + proprietary embedding index + content extraction integrated into a single API",
+      "moat": "Proprietary index of billions of pages, embedding and ranking IP, and developer/agent lock-in workflows",
+      "competitive_position_summary": "Strongest position in the AI search API category on index depth; a candidate standard for the RAG and agent market"
+    },
+    "trending_reason": {
+      "summary": "Grew from a $22M Series A in 2024 to a $50M Series B at a $700M valuation in late 2025. Anthropic, Cursor, Hebbia and others adopted Exa as their RAG backend, making it a rising search infrastructure for the AI agent era.",
+      "catalysts": [
+        "2025 Series B of $50M at a $700M valuation",
+        "Adoption by major AI companies such as Anthropic and Cursor",
+        "Websets launch expanded no-code research users",
+        "Entered the autonomous research agent market with Research API"
+      ],
+      "growth_metrics": "Billions of API calls per month, tens of thousands of developers, and rapidly growing enterprise RAG customers"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global search API and web data market reaches $30B+ by 2030; SOM for AI agent search infrastructure is $10B",
+      "market_trend": "Standardization of external information calls for RAG and AI agents, avoidance of general search polluted by media and SEO, and semantic search becoming an industry standard",
+      "growth_potential": "Expansion into domain-specific search indexes (legal, financial, medical), the autonomous research agent market, and enterprise RAG standardization",
+      "risks": [
+        "Google and Bing strengthen their AI search APIs",
+        "Progress of open-source embedding search tools",
+        "Web crawling costs and legal disputes"
+      ],
+      "risk_mitigation": "Lock-in through AI-agent-friendly UX and SLAs, domain-specific index IP, and license-friendly content partnerships"
+    },
+    "related_links": [
+      {
+        "title": "Exa Official Site"
+      },
+      {
+        "title": "TechCrunch: Series B coverage"
+      },
+      {
+        "title": "Websets Introduction"
+      }
+    ],
+    "editor_pick_comment": "The era of humans searching is ending; the era of AI agents searching in their place is coming — this is the company moving fastest to own that infrastructure. If you build RAG, this is an API you've probably already called."
+  },
+  "aleph-alpha-2026": {
+    "tagline": "Sovereign AI model for European governments and industries — LLM from Germany",
+    "category": [
+      "AI Model",
+      "Sovereign AI",
+      "Enterprise LLM"
+    ],
+    "headquarters": {
+      "country_ko": "Germany"
+    },
+    "founders": [
+      {
+        "background": "Former Apple AI Research Director, Karlsruhe Institute of Technology",
+        "notable_achievement": "Developed Europe's first proprietary large LLM, key partner of German government's sovereign AI policy"
+      },
+      {
+        "background": "ML researcher at Heidelberg University",
+        "notable_achievement": "Oversees Aleph Alpha's proprietary LLM training infrastructure and model lineup"
+      }
+    ],
+    "team_highlights": "Researchers from Apple and DeepMind, German/European government and industry experts, multilingual NLP talent pool",
+    "product": {
+      "summary": "Provides proprietary LLM and enterprise AI operating system 'PhariaAI' tailored to German/European data sovereignty requirements. Supplies on-premise AI solutions to regulated industries such as government, defense, finance, and healthcare.",
+      "problem_statement": "European governments and regulated industries find it difficult to meet data processing, sovereignty, and audit requirements of US LLMs, and need AI infrastructure trained and operated within their own country/EU.",
+      "solution": "Delivers on-premise/hybrid deployment, audit and traceability features, and multilingual EU language support with its proprietary LLM trained in Germany/EU and the PhariaAI OS.",
+      "key_features": [
+        "Pharia LLM: Proprietary large model trained in Germany/EU",
+        "PhariaAI OS: Enterprise AI operations and governance platform",
+        "Explainability: Tools for tracing and auditing model response rationale",
+        "On-premise and sovereign cloud deployment",
+        "Security certification for government and defense"
+      ],
+      "tech_stack_or_innovation": "Proprietary multilingual LLM training infrastructure, model response rationale tracing (attention attribution), sovereign cloud deployment",
+      "target_customer": "Large enterprises in regulated industries: German/EU government and defense, finance/insurance, pharma/healthcare, energy",
+      "business_model": "Enterprise license + government/public contracts + consulting"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "European LLM powerhouse. Aleph Alpha differentiates in German/government/defense domains and with PhariaAI OS."
+        },
+        {
+          "comparison": "Performance advantage. Aleph Alpha benefits from data sovereignty and audit requirement compliance."
+        },
+        {
+          "comparison": "Enterprise LLM. Aleph Alpha's strength is its friendliness to the EU regulatory environment."
+        }
+      ],
+      "key_differentiator": "German/EU sovereign training data + PhariaAI OS + audit and explainability tools",
+      "moat": "Deep relationships with German government and industry, European sovereign data training infrastructure, EU AI Act-friendly design",
+      "competitive_position_summary": "Leading vendor of European sovereign AI, strong position in government and regulated industry markets"
+    },
+    "trending_reason": {
+      "summary": "After a €500M Series B in 2024, pivoted to PhariaAI OS in 2025, accelerating the enterprise AI OS business and establishing itself as a key partner for German/EU government digitalization.",
+      "catalysts": [
+        "2024 Series B €500M",
+        "Launch of PhariaAI OS, pivot from model to enterprise OS",
+        "AI adoption contracts with German federal and state governments",
+        "Standardization of EU AI Act-compliant solutions"
+      ],
+      "growth_metrics": "100+ customers in German/EU government and large enterprises, expanding market share in enterprise AI governance"
+    },
+    "funding": {
+      "valuation_estimate": "€2B+ (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "European enterprise and government AI market $50B+ by 2030, SOM in sovereign AI and regulated industries $15B",
+      "market_trend": "EU AI Act enforcement, strengthening data sovereignty demands from governments and regulated industries, standardization of enterprise AI governance",
+      "growth_potential": "Industry standardization of PhariaAI OS, expansion to EU member states beyond Germany, defense/health/finance domain solutions",
+      "risks": [
+        "Intensifying competition with Mistral in the European market",
+        "Performance gap with global big tech LLMs",
+        "Dependence on government budgets"
+      ],
+      "risk_mitigation": "Expanding enterprise OS business share, strengthening industry-specific solutions, differentiating governance value beyond models"
+    },
+    "related_links": [
+      {
+        "title": "Aleph Alpha Official Website"
+      },
+      {
+        "title": "Reuters: Sovereign AI Report"
+      },
+      {
+        "title": "PhariaAI Introduction"
+      }
+    ],
+    "editor_pick_comment": "A company building 'AI for Germany/EU only' between OpenAI and Mistral. Rather than aiming for top model performance, it plays a different game of capturing government and regulated markets with 'trustworthy AI'."
+  },
+  "plenty-2026": {
+    "tagline": "Industrializing agriculture with vertical farming — an indoor farmer from California",
+    "category": [
+      "AgTech",
+      "Vertical farming",
+      "Sustainability"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Environmental engineer, agriculture and water industry expert",
+        "notable_achievement": "Defined the vertical farming category, established Plenty's industrialization vision"
+      },
+      {
+        "background": "PhD in Agriculture from University of Wyoming, founder of Bright Agrotech",
+        "notable_achievement": "Developed key IP for vertical farm lighting, irrigation, and cultivation systems"
+      }
+    ],
+    "team_highlights": "Combination of agricultural scientists, environmental engineers, and robotics engineers; partnerships with major players including Walmart, Driscoll's, and Mayo Clinic",
+    "product": {
+      "summary": "Produces fresh greens, strawberries, tomatoes, and more year-round near cities using vertical farming technology. Achieves 350x productivity per area compared to open fields through proprietary LED light spectra, robotic automation, and cultivation algorithms.",
+      "problem_statement": "Climate change, water scarcity, pesticides, and logistics costs are degrading the cost, freshness, and quality of open-field agriculture, making it difficult for urban consumers to reliably access consistent fresh produce.",
+      "solution": "Builds vertical farm facilities near cities, using LEDs, environmental control, and robotic automation to produce consistent fresh produce 365 days a year. Water usage is less than 1% of open fields, and zero pesticides.",
+      "key_features": [
+        "Vertical Farm OS: Integrated automatic control of lighting, environment, and irrigation",
+        "Plenty Compton Farm: World's largest vertical strawberry farm",
+        "Driscoll's partnership: Strawberry R&D and production",
+        "Walmart supply agreement: Baby greens and fresh vegetables",
+        "Single Plant Genetics: Seed R&D"
+      ],
+      "tech_stack_or_innovation": "Custom LED light spectra, robotic planting and harvesting, ML algorithms for environmental control, vertical growing tower IP",
+      "target_customer": "Large grocery chains (Walmart, Albertsons), global agriculture companies (Driscoll's), restaurant chains",
+      "business_model": "B2B wholesale produce + joint venture vertical farm operations (JV) + technology licensing"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Strong eastern vertical farm. Plenty differentiates with strawberry and fruit R&D and the Driscoll's partnership."
+        },
+        {
+          "comparison": "Struggled after an IPO attempt. Plenty secures stable demand through Walmart and Driscoll's partnerships."
+        },
+        {
+          "comparison": "European vertical farm. Plenty dominates the US large retail market."
+        }
+      ],
+      "key_differentiator": "Vertical farm IP expandable to strawberries and fruit; large retail and production partnerships with Walmart, Driscoll's, and others.",
+      "moat": "Over 10 years of accumulated cultivation IP, long-term contracts with major retailers, capital-efficient expansion via the JV model.",
+      "competitive_position_summary": "Most stable position in the vertical farming category due to advantages in capital and partnerships."
+    },
+    "trending_reason": {
+      "summary": "Despite a crisis among first-generation vertical farms, Plenty's Driscoll's joint venture strawberry farm is in full operation, and expanded Walmart supply is stabilizing the business model. Reports indicate it attracted additional capital in 2025 and is preparing for an IPO.",
+      "catalysts": [
+        "Full operation of the Driscoll's joint venture vertical strawberry farm in 2025",
+        "Significant expansion of Walmart supply",
+        "Benefiting from market restructuring after the collapse of early-generation vertical farms",
+        "Reported IPO consideration in 2026"
+      ],
+      "growth_metrics": "Supplying 250+ Walmart stores; Driscoll's joint venture farm produces millions of pounds of strawberries annually."
+    },
+    "funding": {
+      "valuation_estimate": "$1.9B+ (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global fresh produce market $1.5T+, vertical farm SOM $30B by 2030, premium berry market $20B.",
+      "market_trend": "Increasing instability of open-field agriculture due to climate change; growth in premium berry and leafy green markets; restructuring of the vertical farming industry.",
+      "growth_potential": "Securing unit economics with high-value crops like strawberries and blueberries; expansion into the Middle East and Asia outside the US; technology licensing business.",
+      "risks": [
+        "Unit economics deterioration due to energy cost volatility",
+        "Market skepticism from the failures of first-generation vertical farms",
+        "Open-field berry price volatility"
+      ],
+      "risk_mitigation": "Long-term contracts with major partners like Driscoll's; increasing proportion of high-value crops; signing renewable energy PPAs."
+    },
+    "related_links": [
+      {
+        "title": "Plenty Official Site"
+      },
+      {
+        "title": "Bloomberg: Driscoll's Joint Venture Report"
+      },
+      {
+        "title": "Compton Farm Introduction"
+      }
+    ],
+    "editor_pick_comment": "Producing strawberries year-round in California — the reason Plenty survived while first-generation vertical farms collapsed lies in its strategic bet on 'berries' as the crop."
+  },
+  "stytch-2026": {
+    "tagline": "Passwordless authentication infrastructure — an ID platform for developers",
+    "category": [
+      "Security",
+      "Authentication",
+      "Developer tools"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "PM from Plaid, fintech authentication and KYC expert",
+        "notable_achievement": "Pioneered the passwordless infrastructure category by leveraging authentication experience from Plaid"
+      },
+      {
+        "background": "Engineer from Plaid, backend for auth and payments infrastructure",
+        "notable_achievement": "Designed SDK integrating magic links, SMS, and biometric authentication"
+      }
+    ],
+    "team_highlights": "Hires auth and fintech infrastructure veterans from Plaid, Auth0, and Okta, along with security and compliance talent",
+    "product": {
+      "summary": "A developer-friendly ID platform that integrates passwordless authentication in a few lines of code. It provides SDKs for authentication, sessions, MFA, and fraud detection for both B2C and B2B via a single API, expanding into bot blocking and device fingerprinting.",
+      "problem_statement": "Authentication is needed by every service, but passwords are security-weak and integrating OTP/MFA is costly for developers. Existing auth solutions have limitations such as separating B2C and B2B and lacking bot and fraud defenses.",
+      "solution": "Integrates passwordless authentication (magic links, SMS, email OTP, biometrics) with B2B SSO/SCIM and fraud/bot blocking into a single API. Prioritizes developer experience with polished SDKs, docs, and examples.",
+      "key_features": [
+        "Consumer Authentication: Passwordless B2C authentication",
+        "B2B Authentication: SAML SSO, SCIM, organization-level identity",
+        "Device Fingerprinting: Bot and fraud detection",
+        null,
+        "Strong CIAM: Mobile app, web, and API integration"
+      ],
+      "tech_stack_or_innovation": "Standards-based passwordless SDK, device fingerprinting and ML bot detection, B2B multi-tenant authentication",
+      "target_customer": "Developers at startups, fintechs, health, and SaaS companies; B2B SaaS enterprises; mobile app developers",
+      "business_model": "MAU-based SaaS subscription plus usage-based pricing for device fingerprinting"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Enterprise authentication category leader. Stytch differentiates with passwordless, DX, and B2B SaaS separation"
+        },
+        {
+          "comparison": "Developer-friendly auth upstart. Stytch leads in the breadth of its B2B and fraud detection lineup."
+        },
+        {
+          "comparison": "Strong in B2B SSO. Stytch differentiates with integrated B2C/B2B and device fingerprinting."
+        }
+      ],
+      "key_differentiator": "Single-platform integration of passwordless, B2B, and bot/fraud detection",
+      "moat": "Deep authentication domain expertise from Plaid and Auth0 alumni, B2B multi-tenancy model, and device fingerprinting IP",
+      "competitive_position_summary": "A developer-friendly challenger threatening Auth0 in the next-generation CIAM market"
+    },
+    "trending_reason": {
+      "summary": "After its 2024–2025 Series B round, adoption spread among major SaaS companies like Cognism and Replicate; demand for bot-blocking solutions surged in the AI era; and device fingerprinting revenue climbed sharply.",
+      "catalysts": [
+        "Series B of $90M at a $1B+ valuation",
+        "Accelerating adoption of the Passkeys standard",
+        "Surge in demand for bot and fraud detection in the AI era",
+        "Standardization of multi-tenant authentication for B2B SaaS"
+      ],
+      "growth_metrics": "Thousands of customers, increasing B2B SaaS lock-in, and rapid ARR growth from device fingerprinting"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global CIAM and authentication market to exceed $25B by 2030; bot and fraud detection SOM of $15B",
+      "market_trend": "Passwordless and Passkeys standardization, rising AI bot threats, and growing demand for multi-tenant authentication in B2B SaaS",
+      "growth_potential": "Expanding AI bot defense lineup, deeper penetration of the global SaaS market, and large enterprise contracts",
+      "risks": [
+        "Price competition with Auth0 and Clerk",
+        "Changes in authentication standards by platforms such as Apple and Google",
+        "Reputation risk in the event of a security incident"
+      ],
+      "risk_mitigation": "Standards-based multi-channel support, strengthened SOC2 and ISO certifications, and continued investment in security R&D"
+    },
+    "related_links": [
+      {
+        "title": "Stytch official website"
+      },
+      {
+        "title": "Forbes: Bot defense coverage"
+      }
+    ],
+    "editor_pick_comment": "In an era where AI-made bots impersonate real people, proving who a user is becomes increasingly costly infrastructure. Stytch aims to be that infrastructure."
+  },
+  "recursion-pharma-2026": {
+    "tagline": "Finding drugs through cell images — industrializing AI drug discovery",
+    "category": [
+      "AI drug discovery",
+      "Biotech",
+      "Health AI"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "PhD in bioengineering from the University of Utah; physician-scientist",
+        "notable_achievement": "Industrialized the AI drug discovery category; listed on NASDAQ in 2021"
+      },
+      {
+        "background": "PhD from Stanford; expert in ML and image analysis",
+        "notable_achievement": "Designed ML pipeline for automated cell image analysis"
+      }
+    ],
+    "team_highlights": "Fusion of MD-PhDs, ML engineers, and robotics engineers; holds the world's largest automated cell phenome dataset",
+    "product": {
+      "summary": "Applies drugs and genetic perturbations to millions of cells, automatically captures microscope images, and AI analyzes patterns to identify drug candidates. With its own 'Recursion OS' platform, it enables data-driven drug development from target discovery to clinical stages.",
+      "problem_statement": "Drug development takes an average of 10 years and $2B, with a 90% failure rate. Without reducing the cost and time of target discovery and candidate validation, the industry's overall ROI deteriorates.",
+      "solution": "A 'phenome' platform combining automated cell experiments, high-resolution microscopy images, and AI analysis cuts target discovery time by 90%. Industrializes drug development through its own pipeline plus big pharma partnerships.",
+      "key_features": [
+        "Recursion OS: automated cell experiment and image analysis platform",
+        "Phenomap: database of billions of cell phenomes",
+        "BioHive-2: NVIDIA-powered AI supercomputer",
+        "Proprietary clinical pipeline (rare diseases, oncology, etc.)",
+        "Big pharma partnerships with Roche, Bayer, Sanofi and others"
+      ],
+      "tech_stack_or_innovation": "Automated cell phenome experiment robotics, ML analysis of microscopy images, and NVIDIA H100-based BioHive supercomputer",
+      "target_customer": "Proprietary drug pipeline + drug development partnerships with big pharma (Roche, Bayer, Sanofi)",
+      "business_model": "Big pharma milestones and royalties + proprietary pipeline + integrated platform following Exscientia merger"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Similar AI drug discovery company. Recursion has an advantage in phenome dataset scale and big pharma partnerships."
+        },
+        {
+          "comparison": "Acquired and merged into Recursion in 2024 — synergy through an integrated platform"
+        },
+        {
+          "comparison": "Knowledge graph-based AI drug discovery. Recursion differentiates with cell image phenomes."
+        }
+      ],
+      "key_differentiator": "Full-stack: automated generation of billions of cell phenome data points + AI analysis + big pharma partnerships",
+      "moat": "World's largest phenome dataset, in-house BioHive-2 supercomputer, long-term big pharma contracts",
+      "competitive_position_summary": "The representative listed company in the AI drug discovery category; strengthened position through Exscientia merger"
+    },
+    "trending_reason": {
+      "summary": "Signaled industry consolidation with the Exscientia merger in 2024, NVIDIA's $50M investment and BioHive-2 supercomputer buildout, and first proprietary clinical pipeline entering Phase 2",
+      "catalysts": [
+        "Integrated platform through acquisition and merger of Exscientia in 2024",
+        "NVIDIA strategic investment of $50M",
+        "BioHive-2 supercomputer operational",
+        "Proprietary drug pipeline entered Phase 2"
+      ],
+      "growth_metrics": "Cumulative potential value of big pharma partnerships $20B+, 10+ proprietary clinical programs, phenome data from billions of cells"
+    },
+    "funding": {
+      "total_raised": "$700M+ (including IPO)",
+      "valuation_estimate": "Public — market cap around $2B (fluctuating)",
+      "funding_history": [
+        null,
+        null,
+        {
+          "lead_investor": "NASDAQ listing"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global drug R&D market $200B+/year; AI drug discovery SOM of $50B by 2030",
+      "market_trend": "Expansion of big pharma AI drug discovery partnerships, industrialization of phenome and multi-omics data, rise of integrated AI-bio platforms",
+      "growth_potential": "Value realization from clinical-stage proprietary pipeline, expansion of long-term big pharma contracts, licensing of phenome data",
+      "risks": [
+        "Clinical failure risk",
+        "AI drug discovery skepticism and stock price volatility",
+        "Dependence on big pharma partnerships"
+      ],
+      "risk_mitigation": "Diversification across multiple pipelines, diversification of big pharma partners, independent monetization of data assets"
+    },
+    "related_links": [
+      {
+        "title": "Recursion official website"
+      },
+      {
+        "title": "Endpoints: Exscientia merger"
+      },
+      {
+        "title": "BioHive-2 overview"
+      }
+    ],
+    "editor_pick_comment": "A company standing at the point where AI drug discovery moves from 'papers' to 'industry.' The idea of finding drugs from billions of cell images — if this bet pays off, the entire healthcare sector changes."
+  }
+}

@@ -1,0 +1,768 @@
+[
+  {
+    "id": "codeium-2026",
+    "date": "2026-04-17",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "Codeium",
+    "name_ko": "코디움",
+    "tagline": "AI 코딩 에이전트의 새 시대, 개발자 생산성을 10배로 끌어올리다",
+    "category": [
+      "AI 코딩 도구",
+      "개발자 플랫폼",
+      "생성형 AI"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Mountain View",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "150-200",
+    "website": "https://codeium.com/",
+    "logo_url": "/logos/codeium-2026.png",
+    "logo_svg_description": "녹색 그라데이션 배경 위에 코드 편집기 커서를 형상화한 추상적 심볼과 'Codeium' 텍스트가 결합된 모던한 로고",
+    "founders": [
+      {
+        "name_en": "Varun Mohan",
+        "name_ko": "바룬 모한",
+        "role": "CEO & Co-Founder",
+        "background": "전 Nuro 자율주행 엔지니어, MIT 컴퓨터과학 졸업, 대규모 AI 시스템 설계 전문가",
+        "linkedin": "https://www.linkedin.com/in/vaaborern/",
+        "notable_achievement": "무료 AI 코드 자동완성 서비스를 통해 출시 2년 만에 개발자 100만 명 이상 확보"
+      },
+      {
+        "name_en": "Douglas Chen",
+        "name_ko": "더글라스 첸",
+        "role": "CTO & Co-Founder",
+        "background": "전 Google Brain 연구원, 대규모 언어모델 최적화 및 추론 가속 전문가",
+        "linkedin": "",
+        "notable_achievement": "독자적 코드 특화 LLM 아키텍처 설계로 경쟁사 대비 2배 빠른 추론 속도 달성"
+      }
+    ],
+    "team_highlights": "MIT·Google Brain 출신 창업팀, Nuro 자율주행 AI 경험을 코드 생성에 접목. 엔지니어링 중심 문화로 자체 LLM 개발",
+    "product": {
+      "summary": "IDE 내장형 AI 코딩 에이전트로, 코드 자동완성·리팩토링·테스트 생성·코드 리뷰까지 소프트웨어 개발 전 과정을 지능적으로 보조하는 플랫폼",
+      "problem_statement": "기업 개발팀은 반복적인 보일러플레이트 코드 작성, 레거시 코드 이해, 테스트 작성 등에 전체 업무 시간의 60% 이상을 소비하며, 기존 AI 코딩 도구는 보안·정확성·커스터마이징 한계로 엔터프라이즈 도입이 어려움",
+      "solution": "자체 개발 코드 특화 LLM을 기반으로 코드 자동완성, 멀티파일 에이전트 편집, 자동 테스트 생성, 코드 리뷰 자동화를 하나의 IDE 확장으로 통합 제공. 온프레미스 배포로 기업 보안 요구사항 충족",
+      "key_features": [
+        "Windsurf IDE: AI 네이티브 통합 개발 환경 (Cascade 에이전트 내장)",
+        "멀티파일 에이전트 편집: 프로젝트 전체 맥락을 이해한 코드 수정",
+        "자동 테스트 생성: 코드 변경에 맞춘 유닛·통합 테스트 자동 작성",
+        "코드 리뷰 자동화: PR 단위 AI 코드 리뷰 및 보안 취약점 탐지",
+        "온프레미스/VPC 배포: 엔터프라이즈 보안 요구사항에 맞는 자체 호스팅 옵션",
+        "40+ IDE 지원: VS Code, JetBrains, Vim, Emacs 등 주요 에디터 통합"
+      ],
+      "tech_stack_or_innovation": "자체 개발 코드 특화 대규모 언어모델, 트리시터 기반 코드 파싱, RAG(검색 증강 생성)를 활용한 프로젝트 맥락 이해, GPU 추론 최적화로 50ms 이내 응답 속도 구현",
+      "target_customer": "엔터프라이즈 개발팀, 스타트업 엔지니어링 조직, 개인 개발자",
+      "business_model": "프리미엄 모델 (개인 무료, Pro 월 $15, 엔터프라이즈 사용자당 월 $30~) + 온프레미스 라이선스",
+      "demo_or_screenshot_url": "https://codeium.com/windsurf"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "GitHub Copilot",
+          "comparison": "Microsoft/OpenAI 기반으로 시장 점유율 1위이나, 온프레미스 배포 제한적이고 커스터마이징 어려움. Codeium은 자체 LLM으로 유연한 배포와 빠른 추론 제공"
+        },
+        {
+          "name": "Cursor",
+          "comparison": "AI 네이티브 IDE로 개발자 경험 우수하나, 엔터프라이즈 기능과 온프레미스 배포 미지원. Codeium Windsurf는 에이전트 기능과 기업용 배포를 동시 제공"
+        },
+        {
+          "name": "Tabnine",
+          "comparison": "온프레미스 배포에 강점이 있으나, 에이전트 기반 멀티파일 편집 기능이 부족. Codeium은 에이전트 + 온프레미스를 모두 지원"
+        }
+      ],
+      "key_differentiator": "자체 개발 코드 특화 LLM으로 외부 API 의존 없이 빠른 추론 속도와 온프레미스 배포를 동시에 달성한 유일한 AI 코딩 플랫폼",
+      "moat": "100만+ 개발자 사용 데이터 기반 모델 개선 플라이휠, 자체 LLM 기술력, 엔터프라이즈 고객 네트워크 (Dell, Zillow 등)",
+      "competitive_position_summary": "GitHub Copilot에 이은 2위권 AI 코딩 도구로, 자체 LLM과 에이전트 기반 IDE(Windsurf)로 빠르게 차별화 중. 엔터프라이즈 시장에서 온프레미스 강점으로 포지셔닝"
+    },
+    "trending_reason": {
+      "summary": "Windsurf IDE 출시 후 개발자 커뮤니티에서 폭발적 반응, Series C $150M 유치로 유니콘 등극, 에이전트 기반 코딩의 대중화를 주도",
+      "catalysts": [
+        "Windsurf IDE 출시 후 6개월 만에 DAU 50만 돌파",
+        "Series C $150M 유치, 기업가치 $1.25B로 유니콘 진입",
+        "에이전트 기반 코딩(Agentic Coding) 패러다임 전환 주도",
+        "Fortune 500 기업 다수 엔터프라이즈 계약 체결"
+      ],
+      "media_mentions": [
+        {
+          "source": "Forbes",
+          "title": "Codeium Raises $150M Series C To Build AI-Native IDE",
+          "url": "https://www.forbes.com/sites/kenrickcai/2024/10/codeium-series-c/",
+          "date": "2024-10-29"
+        },
+        {
+          "source": "TechCrunch",
+          "title": "Codeium launches Windsurf, an AI-native IDE challenging Cursor",
+          "url": "https://techcrunch.com/2024/11/codeium-windsurf-launch/",
+          "date": "2024-11-13"
+        }
+      ],
+      "growth_metrics": "개발자 사용자 100만+ 명, 연 매출 성장률 400%+, 엔터프라이즈 고객 수백 곳"
+    },
+    "funding": {
+      "total_raised": "$250M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$150M",
+        "date": "2024-10",
+        "lead_investor": "General Catalyst",
+        "notable_investors": [
+          "Greenoaks Capital",
+          "Kleiner Perkins",
+          "Founders Fund"
+        ]
+      },
+      "valuation_estimate": "$1.25B",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$32M",
+          "date": "2023-04",
+          "lead_investor": "General Catalyst"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$65M",
+          "date": "2024-04",
+          "lead_investor": "General Catalyst"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$150M",
+          "date": "2024-10",
+          "lead_investor": "General Catalyst"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 AI 코딩 도구 시장 2027년 $30B 전망, 엔터프라이즈 AI 개발도구 SAM $8B, 초기 타깃 SOM $500M",
+      "market_trend": "에이전트 기반 코딩이 단순 자동완성을 넘어 소프트웨어 개발 전 과정으로 확장, 기업의 AI 코딩 도구 도입률 2026년 75% 예상",
+      "growth_potential": "AI 코딩 에이전트에서 AI 소프트웨어 엔지니어링 플랫폼으로 확장, DevOps·QA·문서화까지 통합 가능",
+      "risks": [
+        "GitHub Copilot의 Microsoft 생태계 번들링 전략에 의한 시장 점유율 압박",
+        "OpenAI·Anthropic 등 기초 모델 기업의 직접 코딩 도구 출시 가능성",
+        "AI 코딩 도구 시장의 가격 경쟁 심화와 무료화 압력"
+      ],
+      "risk_mitigation": "자체 LLM 개발로 외부 모델 의존도 최소화, 엔터프라이즈 온프레미스 시장에서의 차별적 포지셔닝, Windsurf IDE를 통한 개발자 록인 전략"
+    },
+    "related_links": [
+      {
+        "title": "Codeium 공식 웹사이트",
+        "url": "https://codeium.com/"
+      },
+      {
+        "title": "Windsurf IDE 소개",
+        "url": "https://codeium.com/windsurf"
+      },
+      {
+        "title": "Forbes Series C 보도",
+        "url": "https://www.forbes.com/sites/kenrickcai/2024/10/codeium-series-c/"
+      }
+    ],
+    "editor_pick_comment": "GitHub Copilot이 장악한 AI 코딩 시장에서 자체 LLM과 에이전트 기반 IDE로 정면 승부를 건 Codeium. Windsurf의 Cascade 에이전트는 '코드 자동완성'을 넘어 '자율 코딩'의 가능성을 보여준다."
+  },
+  {
+    "id": "iqm-quantum-2026",
+    "date": "2026-04-17",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "IQM Quantum Computers",
+    "name_ko": "IQM 퀀텀 컴퓨터스",
+    "tagline": "유럽 최대 양자 컴퓨터 제조사, 초전도 프로세서로 산업용 양자 시대를 열다",
+    "category": [
+      "양자 컴퓨팅",
+      "하드웨어",
+      "딥테크"
+    ],
+    "founded_year": 2018,
+    "headquarters": {
+      "city": "Espoo",
+      "country": "Finland",
+      "country_ko": "핀란드"
+    },
+    "company_stage": "Series A2",
+    "employee_count": "280-350",
+    "website": "https://www.meetiqm.com/",
+    "logo_url": "/logos/iqm-quantum-2026.png",
+    "logo_svg_description": "양자 큐비트의 에너지 준위를 상징하는 기하학적 다이아몬드 형태의 파란색 아이콘에 IQM 텍스트가 결합된 미래지향적 로고",
+    "founders": [
+      {
+        "name_en": "Jan Goetz",
+        "name_ko": "얀 괴츠",
+        "role": "CEO & Co-Founder",
+        "background": "독일 출신 물리학자, 알토대학교 양자 컴퓨팅 연구원, 초전도 양자 회로 전문가",
+        "linkedin": "https://www.linkedin.com/in/jangoetz/",
+        "notable_achievement": "유럽 최대 양자 컴퓨터 기업 IQM을 설립하여 누적 €300M+ 투자 유치, 핀란드·독일·스페인에 양자 컴퓨터 납품"
+      },
+      {
+        "name_en": "Mikko Möttönen",
+        "name_ko": "미코 뫼퇴넨",
+        "role": "Chief Scientist & Co-Founder",
+        "background": "알토대학교 양자 컴퓨팅 교수, 초전도 양자 비트 설계 분야 세계적 권위자",
+        "linkedin": "",
+        "notable_achievement": "초전도 큐비트 리셋 프로토콜 발명, Nature Physics 등 최상위 저널 논문 100편+ 발표"
+      }
+    ],
+    "team_highlights": "알토대학교(핀란드)·VTT 기술연구소 스핀아웃, 유럽 양자 물리학 최전선 연구자 집결. 핀란드·독일·프랑스·스페인 5개국에 연구소 운영",
+    "product": {
+      "summary": "초전도 큐비트 기반 양자 프로세서를 설계·제조하고, 온프레미스 양자 컴퓨터 시스템과 클라우드 양자 서비스를 기업·연구기관에 제공하는 풀스택 양자 컴퓨팅 기업",
+      "problem_statement": "양자 컴퓨팅의 상용화를 위해서는 고성능 양자 프로세서뿐 아니라 극저온 냉각·제어 전자장치·소프트웨어 스택까지 통합된 시스템이 필요하나, 대부분의 양자 스타트업은 칩 또는 소프트웨어 한 영역에만 집중하여 실제 기업이 사용 가능한 완성형 시스템 제공이 어려움",
+      "solution": "초전도 양자 프로세서 설계부터 극저온 시스템 통합, 제어 소프트웨어, 클라우드 접근까지 풀스택 양자 컴퓨팅 시스템을 제공. 유럽 각국의 국가 양자 전략에 맞춘 온프레미스 양자 컴퓨터를 납품하여 데이터 주권 확보",
+      "key_features": [
+        "풀스택 양자 시스템: 프로세서·극저온 장비·제어 전자장치·소프트웨어를 일체형으로 제공",
+        "온프레미스 납품: 고객 데이터센터에 양자 컴퓨터를 직접 설치하여 데이터 주권 보장",
+        "IQM Resonance: 클라우드 기반 양자 컴퓨팅 서비스 (원격 접근)",
+        "20큐비트 상용 시스템: 핀란드 VTT, 독일 LRZ 등에 납품 완료",
+        "공동 설계(co-design): 고객의 유스케이스에 맞춤형 양자 프로세서 설계 서비스"
+      ],
+      "tech_stack_or_innovation": "독자적 초전도 큐비트 아키텍처(Star 토폴로지), 핀란드 VTT 클린룸에서 양자 프로세서 직접 제조, 실시간 오류 보정을 위한 디코더 FPGA 시스템, Qiskit·Cirq 호환 소프트웨어 스택",
+      "target_customer": "국가 양자 연구기관, 대기업 R&D (금융·제약·물류), 국방 부문, 대학교 연구실",
+      "business_model": "온프레미스 양자 시스템 판매·유지보수 계약 + 클라우드 양자 컴퓨팅 서비스(시간 기반 과금) + 공동 설계 컨설팅",
+      "demo_or_screenshot_url": "https://www.meetiqm.com/products/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "IBM Quantum",
+          "comparison": "IBM은 1,000+ 큐비트 로드맵을 추진하나 클라우드 전용. IQM은 온프레미스 납품이 가능하여 유럽 데이터 주권 요구사항 충족"
+        },
+        {
+          "name": "Rigetti Computing",
+          "comparison": "미국 기반 초전도 양자 기업으로 클라우드 서비스 중심. IQM은 유럽 시장에서 지리적·규제적 이점과 풀스택 온프레미스 접근에서 차별화"
+        },
+        {
+          "name": "Alice & Bob (프랑스)",
+          "comparison": "캣큐비트(cat qubit) 기반 오류 보정에 집중하는 유럽 경쟁사. IQM은 이미 상용 시스템을 납품한 실적에서 앞섬"
+        }
+      ],
+      "key_differentiator": "유럽 유일의 풀스택 양자 컴퓨터 제조사로, 온프레미스 납품 실적을 보유한 유일한 양자 스타트업. 유럽 데이터 주권 규제와 국가 양자 전략에 최적화",
+      "moat": "유럽 국가 양자 프로젝트 다수 수주 실적(핀란드·독일·스페인), VTT 제조 인프라 접근, €300M+ 누적 투자로 구축한 풀스택 역량, 유럽 양자 인력 네트워크",
+      "competitive_position_summary": "유럽 양자 컴퓨팅의 챔피언으로, IBM·Google이 지배하는 미국 양자 시장에 대한 유럽의 전략적 대안. 온프레미스 납품 모델로 차별화"
+    },
+    "trending_reason": {
+      "summary": "€150M 대규모 투자 유치와 유럽 국가 양자 프로젝트 연이은 수주, 54큐비트 프로세서 로드맵 발표로 유럽 양자 컴퓨팅의 대표주자로 부상",
+      "catalysts": [
+        "€150M 투자 유치(유럽 양자 스타트업 사상 최대 규모)",
+        "핀란드 VTT 국가 양자 컴퓨터, 독일 LRZ 슈퍼컴퓨팅 센터에 시스템 납품",
+        "스페인 바르셀로나 슈퍼컴퓨팅 센터(BSC)와 양자-HPC 하이브리드 프로젝트 수주",
+        "2025년 54큐비트 프로세서 로드맵 발표, 오류 보정 양자 연산 목표"
+      ],
+      "media_mentions": [
+        {
+          "source": "Financial Times",
+          "title": "IQM raises €150M to build Europe's quantum computing champion",
+          "url": "https://www.ft.com/content/iqm-quantum-computing-funding/",
+          "date": "2024-01-24"
+        },
+        {
+          "source": "Sifted",
+          "title": "IQM becomes Europe's best-funded quantum computing startup",
+          "url": "https://sifted.eu/articles/iqm-quantum-150m-funding/",
+          "date": "2024-01-24"
+        }
+      ],
+      "growth_metrics": "직원 300명+, 유럽 5개국 사무소, 양자 컴퓨터 3대+ 납품 완료, 정부·기업 계약 파이프라인 €100M+"
+    },
+    "funding": {
+      "total_raised": "€300M+ (약 M)",
+      "latest_round": {
+        "stage": "Series A2",
+        "amount": "€150M",
+        "date": "2024-01",
+        "lead_investor": "World Fund",
+        "notable_investors": [
+          "European Investment Bank (EIB)",
+          "Tesi (핀란드 국부펀드)",
+          "MiQ Partners"
+        ]
+      },
+      "valuation_estimate": "€1B+ (약.1B)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "€39M",
+          "date": "2022-07",
+          "lead_investor": "World Fund"
+        },
+        {
+          "stage": "Series A2",
+          "amount": "€150M",
+          "date": "2024-01",
+          "lead_investor": "World Fund"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 양자 컴퓨팅 시장 2030년 B 전망, 유럽 양자 시장 TAM B, IQM 초기 타깃 SOM €500M",
+      "market_trend": "EU의 양자 기술 €1B+ 공공 투자, 각국 국가 양자 전략 수립 가속, 데이터 주권 규제로 온프레미스 양자 시스템 수요 증가",
+      "growth_potential": "유럽 시장 장악 후 중동·아시아·남미 등 비미국 시장으로 확장, 양자-AI 하이브리드 컴퓨팅 시장 개척 가능",
+      "risks": [
+        "IBM·Google 등 미국 빅테크의 유럽 양자 시장 공격적 진출",
+        "양자 컴퓨팅의 실질적 비즈니스 가치 입증 지연(양자 겨울 가능성)",
+        "정부 지원금 의존도가 높아 정책 변동에 취약"
+      ],
+      "risk_mitigation": "다국가 고객 분산으로 단일 정부 의존도 완화, 양자-HPC 하이브리드 유스케이스(신약, 최적화)로 단기 가치 입증, 풀스택 접근으로 유럽 시장 내 대체 불가능한 포지셔닝"
+    },
+    "related_links": [
+      {
+        "title": "IQM Quantum Computers 공식 웹사이트",
+        "url": "https://www.meetiqm.com/"
+      },
+      {
+        "title": "Financial Times 투자 유치 보도",
+        "url": "https://www.ft.com/content/iqm-quantum-computing-funding/"
+      }
+    ],
+    "editor_pick_comment": "양자 컴퓨팅에서도 데이터 주권이 중요하다. IQM은 유럽 각국에 양자 컴퓨터를 직접 납품하며, IBM·Google에 의존하지 않는 유럽의 양자 독립을 현실로 만들고 있다."
+  },
+  {
+    "id": "beehiiv-2026",
+    "date": "2026-04-17",
+    "featured": true,
+    "sector": "consumer",
+    "name_en": "beehiiv",
+    "name_ko": "비하이브",
+    "tagline": "뉴스레터를 넘어 크리에이터 미디어 제국을 구축하는 올인원 퍼블리싱 플랫폼",
+    "category": [
+      "크리에이터 이코노미",
+      "퍼블리싱 플랫폼",
+      "SaaS"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "New York",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "80-120",
+    "website": "https://www.beehiiv.com/",
+    "logo_url": "/logos/beehiiv-2026.png",
+    "logo_svg_description": "벌집 육각형 패턴을 활용한 노란색·검은색 조합의 미니멀한 로고, 'beehiiv' 소문자 텍스트가 모던한 산세리프체로 표기",
+    "founders": [
+      {
+        "name_en": "Tyler Denk",
+        "name_ko": "타일러 덴크",
+        "role": "CEO & Co-Founder",
+        "background": "전 Morning Brew 초기 엔지니어, 뉴스레터 성장 엔진 설계 경험",
+        "linkedin": "https://www.linkedin.com/in/tylerdenk/",
+        "notable_achievement": "Morning Brew를 일일 구독자 400만 명 뉴스레터로 성장시킨 기술 핵심 인력, beehiiv를 2년 만에 ARR $25M+ 성장 주도"
+      },
+      {
+        "name_en": "Benjamin Hargett",
+        "name_ko": "벤저민 하겟",
+        "role": "CTO & Co-Founder",
+        "background": "전 Morning Brew 엔지니어, 대규모 이메일 인프라 및 광고 시스템 설계 전문가",
+        "linkedin": "",
+        "notable_achievement": "beehiiv의 대규모 이메일 전송 인프라와 광고 네트워크 아키텍처 설계"
+      }
+    ],
+    "team_highlights": "Morning Brew 핵심 엔지니어 3명이 독립 창업, 뉴스레터 성장의 실전 경험을 제품에 직접 반영. 크리에이터 출신이 만든 크리에이터 도구",
+    "product": {
+      "summary": "뉴스레터 발행·구독자 성장·수익화를 원스톱으로 제공하는 크리에이터 퍼블리싱 플랫폼으로, 광고 네트워크·추천 프로그램·웹사이트 빌더까지 통합",
+      "problem_statement": "크리에이터가 뉴스레터를 시작하려면 이메일 발송, 구독자 관리, 수익화, 웹사이트를 각기 다른 도구로 조합해야 하며, 특히 광고 수익화는 대형 퍼블리셔만 접근 가능한 구조",
+      "solution": "뉴스레터 작성·발송부터 구독자 성장 도구(추천 프로그램, 부스트), 수익화(유료 구독, 광고 네트워크), 웹사이트까지 하나의 플랫폼에서 통합 제공. 1인 크리에이터도 미디어 기업 수준의 도구를 사용 가능",
+      "key_features": [
+        "비주얼 이메일 에디터: 드래그앤드롭 뉴스레터 작성 및 A/B 테스트",
+        "beehiiv Ad Network: 크리에이터가 직접 광고 수익을 창출할 수 있는 내장 광고 네트워크",
+        "Boosts: 크리에이터 간 상호 추천으로 유료 구독자 성장 촉진",
+        "Referral Program: 구독자가 구독자를 데려오는 바이럴 성장 시스템",
+        "커스텀 웹사이트 빌더: 뉴스레터와 연동되는 퍼블리싱 웹사이트 자동 생성",
+        "고급 분석 대시보드: 오픈율·클릭률·구독자 세그먼트별 심층 분석"
+      ],
+      "tech_stack_or_innovation": "대규모 이메일 전송 최적화 인프라(일 수억 통 처리), 머신러닝 기반 전송 타이밍 최적화, 크리에이터 간 구독자 매칭 알고리즘(Boosts), 실시간 광고 입찰 시스템",
+      "target_customer": "뉴스레터 크리에이터, 블로거, 미디어 스타트업, 기업 마케팅팀, 언론사",
+      "business_model": "프리미엄 SaaS (무료~Scale $99/월~Enterprise 맞춤) + 광고 네트워크 수수료",
+      "demo_or_screenshot_url": "https://www.beehiiv.com/features"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Substack",
+          "comparison": "유료 구독 기반 수익화에 강점이나, 광고 수익화·성장 도구가 제한적. beehiiv는 광고 네트워크·추천 프로그램 등 성장·수익화 도구가 포괄적"
+        },
+        {
+          "name": "ConvertKit (Kit)",
+          "comparison": "이메일 마케팅에 특화된 도구로 기능이 풍부하나, 뉴스레터 퍼블리싱 특화 기능(Boosts, 광고 네트워크)이 부족. beehiiv는 뉴스레터 전용 설계"
+        },
+        {
+          "name": "Ghost",
+          "comparison": "오픈소스 블로깅·뉴스레터 플랫폼으로 기술적 자유도 높으나, 성장·수익화 생태계 부재. beehiiv는 원스톱 솔루션"
+        }
+      ],
+      "key_differentiator": "Morning Brew 성장 경험을 제품화한 유일한 플랫폼. 광고 네트워크와 크리에이터 간 상호 추천(Boosts)으로 기존 뉴스레터 도구에 없던 성장 엔진을 내장",
+      "moat": "크리에이터 네트워크 효과 (Boosts 참여 크리에이터가 많을수록 가치 증가), 광고 네트워크 양면 시장 효과, Morning Brew 실전 노하우 기반 제품 설계",
+      "competitive_position_summary": "Substack의 '크리에이터 독립' 철학과 Mailchimp의 '마케팅 도구' 사이에서, '성장 중심 퍼블리싱 플랫폼'으로 빠르게 틈새를 점유 중"
+    },
+    "trending_reason": {
+      "summary": "ARR $25M 돌파와 크리에이터 7,500명+ 활성 사용, Series B 유치로 Substack 대안으로 급부상",
+      "catalysts": [
+        "ARR $25M 돌파, 전년 대비 300% 성장",
+        "활성 뉴스레터 7,500개 이상으로 크리에이터 커뮤니티 급성장",
+        "beehiiv Ad Network를 통한 크리에이터 광고 수익 총 $10M+ 지급",
+        "Substack 대안을 찾는 크리에이터들의 대규모 이주 현상"
+      ],
+      "media_mentions": [
+        {
+          "source": "The Verge",
+          "title": "beehiiv is the anti-Substack newsletter platform picking up creators",
+          "url": "https://www.theverge.com/2024/beehiiv-newsletter-platform-growth/",
+          "date": "2024-08-15"
+        }
+      ],
+      "growth_metrics": "ARR $25M+, 활성 뉴스레터 7,500+, 월간 이메일 발송량 10억+ 통, Boosts를 통한 신규 구독자 매칭 500만+ 건"
+    },
+    "funding": {
+      "total_raised": "$62.5M",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$33M",
+        "date": "2024-01",
+        "lead_investor": "Lightspeed Venture Partners",
+        "notable_investors": [
+          "Sapphire Ventures",
+          "NEA",
+          "Morning Brew 창업자"
+        ]
+      },
+      "valuation_estimate": "$200M+",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$2.5M",
+          "date": "2022-01",
+          "lead_investor": "지인 네트워크"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$12.5M",
+          "date": "2023-01",
+          "lead_investor": "NEA"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$33M",
+          "date": "2024-01",
+          "lead_investor": "Lightspeed Venture Partners"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 크리에이터 이코노미 시장 2027년 $480B 전망, 뉴스레터·퍼블리싱 도구 SAM $10B, 초기 타깃 SOM $300M",
+      "market_trend": "소셜 미디어 알고리즘 피로감으로 크리에이터들이 '소유 가능한 오디언스(이메일)'로 회귀, 뉴스레터 르네상스 지속",
+      "growth_potential": "뉴스레터에서 팟캐스트·커뮤니티·코스까지 크리에이터 비즈니스 통합 플랫폼으로 확장 가능",
+      "risks": [
+        "Substack·Ghost 등 기존 플랫폼의 유사 기능 추가로 차별화 약화",
+        "이메일 마케팅 규제 강화(GDPR, CAN-SPAM 등)로 전송률 영향",
+        "크리에이터 이코노미 버블 붕괴 시 핵심 고객 기반 축소 가능성"
+      ],
+      "risk_mitigation": "광고 네트워크·Boosts 등 네트워크 효과 기반 기능으로 전환 비용 구축, B2B 엔터프라이즈 시장으로 고객 다변화, 이메일 전송 인프라 자체 최적화로 전송률 유지"
+    },
+    "related_links": [
+      {
+        "title": "beehiiv 공식 웹사이트",
+        "url": "https://www.beehiiv.com/"
+      },
+      {
+        "title": "The Verge 보도",
+        "url": "https://www.theverge.com/2024/beehiiv-newsletter-platform-growth/"
+      }
+    ],
+    "editor_pick_comment": "Morning Brew를 400만 구독자로 키운 팀이 '그 비법'을 제품으로 만들었다. beehiiv의 Boosts와 광고 네트워크는 1인 크리에이터에게 미디어 기업의 무기를 쥐어준다."
+  },
+  {
+    "id": "iontra-2026",
+    "date": "2026-04-17",
+    "featured": true,
+    "sector": "climate",
+    "name_en": "Iontra",
+    "name_ko": "이온트라",
+    "tagline": "배터리를 더 빨리, 더 안전하게, 더 오래 — 충전 방식의 근본적 혁신",
+    "category": [
+      "배터리 기술",
+      "EV 인프라",
+      "클린테크"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "Denver",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "50-80",
+    "website": "https://www.iontra.com/",
+    "logo_url": "/logos/iontra-2026.png",
+    "logo_svg_description": "전류 흐름을 상징하는 유선형 곡선과 번개 모양 아이콘이 결합된 그라데이션 블루 로고에 'Iontra' 텍스트",
+    "founders": [
+      {
+        "name_en": "Daniel Konopka",
+        "name_ko": "다니엘 코놉카",
+        "role": "CEO & Founder",
+        "background": "전 Qualcomm 충전 기술 연구원, 배터리 충전 최적화 15년+ 경력",
+        "linkedin": "https://www.linkedin.com/in/danielkonopka/",
+        "notable_achievement": "리튬이온 배터리 충전 속도 50% 향상 및 수명 3배 연장 기술 개발, 관련 특허 40건+ 보유"
+      }
+    ],
+    "team_highlights": "Qualcomm·Panasonic·Samsung SDI 출신 배터리 과학자와 반도체 엔지니어로 구성. 배터리 화학을 바꾸지 않고 충전 알고리즘만으로 혁신을 추구하는 독특한 접근",
+    "product": {
+      "summary": "기존 리튬이온 배터리의 화학적 변경 없이, 독자적 충전 알고리즘과 전용 반도체 칩을 통해 충전 속도를 50% 높이고 배터리 수명을 3배 이상 연장하는 스마트 충전 기술",
+      "problem_statement": "EV 배터리는 기존 정전류-정전압(CC-CV) 방식으로 충전 시 리튬 도금(plating)이 발생하여 수명이 단축되고 열 폭주 위험이 있음. 급속 충전은 이 문제를 악화시켜 배터리 교체 비용과 안전 우려를 높임",
+      "solution": "배터리 셀 내부 전기화학 상태를 실시간 모니터링하여 리튬 도금 직전에 충전 프로파일을 동적으로 조정하는 AI 기반 충전 알고리즘 + 전용 ASIC 칩을 개발. 기존 배터리에 칩만 추가하면 즉시 적용 가능",
+      "key_features": [
+        "비파괴적 리튬 도금 감지: 충전 중 실시간으로 배터리 내부 상태를 모니터링",
+        "동적 충전 프로파일: AI가 매 충전 사이클마다 최적 충전 전류를 실시간 조정",
+        "전용 ASIC 칩: 배터리 팩에 내장 가능한 소형 반도체로 충전 제어",
+        "배터리 수명 3배 연장: 리튬 도금 최소화로 사이클 수명 획기적 증가",
+        "충전 속도 50% 향상: 안전 한계 내에서 최대 속도로 충전 자동 최적화"
+      ],
+      "tech_stack_or_innovation": "전기화학 임피던스 분광법(EIS)을 실시간 충전에 최초 적용, 머신러닝 기반 배터리 상태 예측 모델, 커스텀 ASIC 칩으로 밀리초 단위 충전 전류 제어",
+      "target_customer": "EV 제조사, 배터리 팩 제조사, 충전 인프라 기업, 에너지 저장 시스템(ESS) 운영사",
+      "business_model": "B2B 반도체 칩 + 라이선스 (배터리/EV 제조사에 칩 판매 + 충전 알고리즘 라이선스 수수료)",
+      "demo_or_screenshot_url": "https://www.iontra.com/technology"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Qnovo (Renault 인수)",
+          "comparison": "소프트웨어 기반 배터리 관리에 특화되었으나 전용 하드웨어(칩) 없이 기존 BMS에 의존. Iontra는 전용 ASIC으로 하드웨어 수준의 정밀 제어 구현"
+        },
+        {
+          "name": "StoreDot",
+          "comparison": "새로운 배터리 화학(실리콘 음극)으로 초급속 충전을 추구. Iontra는 기존 배터리 화학을 바꾸지 않고 충전 알고리즘만으로 성능 향상, 적용이 훨씬 빠름"
+        }
+      ],
+      "key_differentiator": "배터리 화학 변경 없이 칩 하나로 충전 성능을 혁신하는 접근. 기존 배터리 제조 라인에 즉시 적용 가능하여 시장 진입 속도가 경쟁사 대비 훨씬 빠름",
+      "moat": "충전 최적화 관련 특허 40건+, 전용 ASIC 칩 설계 역량, EV·ESS 제조사와의 파일럿 프로그램 진행 중",
+      "competitive_position_summary": "배터리 화학을 바꾸는 대신 '충전 방식'을 바꾸는 역발상으로, 기존 배터리 생태계와 호환되면서도 극적인 성능 향상을 제공하는 유일한 솔루션"
+    },
+    "trending_reason": {
+      "summary": "EV 급속 충전 수요 폭증 속에서 배터리 수명·안전 문제의 근본적 해결책으로 부상, Series B 유치와 주요 OEM 파일럿 계약 체결",
+      "catalysts": [
+        "주요 글로벌 EV OEM과 파일럿 프로그램 착수 (NDA 하 비공개)",
+        "Series B 대규모 유치로 ASIC 칩 양산 준비",
+        "미국 에너지부(DOE) 배터리 기술 지원 프로그램 선정",
+        "EV 배터리 화재 사고 증가로 안전 충전 기술 수요 급등"
+      ],
+      "media_mentions": [
+        {
+          "source": "Bloomberg",
+          "title": "Iontra's Smart Charging Chip Could Triple EV Battery Life",
+          "url": "https://www.bloomberg.com/news/articles/2024-iontra-ev-battery-charging/",
+          "date": "2024-09-18"
+        }
+      ],
+      "growth_metrics": "배터리 충전 최적화 시장 연 40% 성장 중, 파일럿 참여 OEM 3곳+, 특허 포트폴리오 40건+"
+    },
+    "funding": {
+      "total_raised": "$60M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$38M",
+        "date": "2024-06",
+        "lead_investor": "Volta Energy Technologies",
+        "notable_investors": [
+          "Bill Gates (개인 투자)",
+          "Clean Energy Ventures",
+          "Bandera Partners"
+        ]
+      },
+      "valuation_estimate": "$250M+",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$5M",
+          "date": "2020",
+          "lead_investor": "Clean Energy Ventures"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$18M",
+          "date": "2022-09",
+          "lead_investor": "Volta Energy Technologies"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$38M",
+          "date": "2024-06",
+          "lead_investor": "Volta Energy Technologies"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 EV 배터리 관리 시장 2030년 $25B 전망, 스마트 충전 기술 SAM $5B, 초기 타깃 SOM $200M",
+      "market_trend": "EV 판매 연 30%+ 성장, 급속 충전 인프라 확대, 배터리 수명·안전에 대한 규제와 소비자 우려 증가",
+      "growth_potential": "EV에서 ESS, 드론, 전동 킥보드, 휴대전자기기까지 리튬이온 배터리를 사용하는 모든 영역으로 확장 가능",
+      "risks": [
+        "전고체 배터리 등 차세대 배터리 기술이 충전 문제를 원천 해결할 가능성",
+        "BMS 기업들의 소프트웨어 기반 충전 최적화 기능 강화",
+        "OEM 자체 배터리 충전 알고리즘 내재화 추세"
+      ],
+      "risk_mitigation": "하드웨어(ASIC) + 소프트웨어(알고리즘) 통합 접근으로 소프트웨어 전용 솔루션 대비 기술적 우위 유지, 차세대 배터리에도 적용 가능한 범용 충전 최적화 기술로 포지셔닝"
+    },
+    "related_links": [
+      {
+        "title": "Iontra 공식 웹사이트",
+        "url": "https://www.iontra.com/"
+      },
+      {
+        "title": "Bloomberg 보도",
+        "url": "https://www.bloomberg.com/news/articles/2024-iontra-ev-battery-charging/"
+      }
+    ],
+    "editor_pick_comment": "배터리를 바꾸지 않고 충전 방법만 바꿔서 수명 3배, 속도 50% 향상? Iontra의 접근은 천재적이다. 빌 게이츠가 개인 투자한 이유가 분명하다."
+  },
+  {
+    "id": "bionaut-labs-2026",
+    "date": "2026-04-17",
+    "featured": true,
+    "sector": "health",
+    "name_en": "Bionaut Labs",
+    "name_ko": "바이오넛 랩스",
+    "tagline": "마이크로 로봇이 뇌 속을 항해한다 — 비침습 정밀 약물 전달의 새 시대",
+    "category": [
+      "의료기기",
+      "마이크로로보틱스",
+      "정밀의료"
+    ],
+    "founded_year": 2016,
+    "headquarters": {
+      "city": "Los Angeles / Berlin",
+      "country": "United States / Germany",
+      "country_ko": "미국 / 독일"
+    },
+    "company_stage": "Series B",
+    "employee_count": "60-90",
+    "website": "https://bionautlabs.com/",
+    "logo_url": "",
+    "logo_svg_description": "미세 로봇의 형상을 추상화한 원형 아이콘과 신경 회로를 연상시키는 패턴이 결합된 하늘색·흰색 로고에 Bionaut Labs 텍스트",
+    "founders": [
+      {
+        "name_en": "Michael Shpigelmacher",
+        "name_ko": "미하엘 슈피겔마허",
+        "role": "CEO & Co-Founder",
+        "background": "이스라엘·독일 출신 물리학자, 막스 플랑크 연구소에서 마이크로 로보틱스 연구",
+        "linkedin": "https://www.linkedin.com/in/michael-shpigelmacher/",
+        "notable_achievement": "밀리미터 크기의 자기구동 마이크로 로봇을 인체 내 항해시키는 기술을 세계 최초로 대형 동물 모델에서 시연"
+      },
+      {
+        "name_en": "Aviad Maizels",
+        "name_ko": "아비아드 마이젤스",
+        "role": "CTO & Co-Founder",
+        "background": "이스라엘 테크니온 출신 로보틱스 엔지니어, 정밀 제어 시스템 전문가",
+        "linkedin": "",
+        "notable_achievement": "외부 자기장으로 체내 마이크로 로봇을 밀리미터 정밀도로 제어하는 내비게이션 시스템 개발"
+      }
+    ],
+    "team_highlights": "막스 플랑크 연구소·테크니온 출신 물리학자·로보틱스 엔지니어 창업팀, 독일·이스라엘·미국 3국의 의공학 전문성 결합. Cedars-Sinai 의료센터와 임상 협력",
+    "product": {
+      "summary": "밀리미터 크기의 자기구동 마이크로 로봇(Bionaut)을 외부 자기장으로 제어하여, 뇌 깊숙한 곳에 약물을 정밀 전달하는 최소 침습 의료기기 플랫폼",
+      "problem_statement": "뇌종양(교모세포종)·뇌낭종 등 뇌 심부 질환은 수술 접근이 어렵고, 전신 투여 약물은 혈뇌장벽(BBB)을 통과하지 못하여 극히 소량만 병변에 도달. 기존 치료법의 한계로 교모세포종 5년 생존율은 5% 미만",
+      "solution": "바늘 끝을 통해 주입된 밀리미터 크기 마이크로 로봇이 외부 자기장 유도로 뇌 내부를 항해하여 병변에 직접 도달, 약물을 정밀 방출 후 안전하게 회수. 혈뇌장벽을 우회하여 기존 대비 1,000배 이상의 약물 농도를 병변에 전달 가능",
+      "key_features": [
+        "Bionaut 마이크로 로봇: 밀리미터 크기, 자기 반응성 소재, 약물 탑재 카트리지 내장",
+        "자기 내비게이션 시스템: 외부 전자석으로 체내 로봇을 실시간 제어 (MRI 호환)",
+        "정밀 약물 방출: 병변 도달 후 자기장 트리거로 약물을 국소 방출",
+        "로봇 회수: 약물 방출 후 로봇을 자기장으로 유도하여 체외로 안전 회수",
+        "대형 동물 모델 검증: 양(sheep) 모델에서 뇌 내 항해·약물 전달·회수 성공 시연"
+      ],
+      "tech_stack_or_innovation": "자기 반응성 마이크로 구조체 제조 (MEMS 기반), 외부 전자석 어레이를 통한 3차원 정밀 위치 제어, 실시간 이미징(형광 투시·MRI) 연동 내비게이션, 생체적합성 약물 방출 메커니즘",
+      "target_customer": "신경외과 의료기관, 제약사(뇌질환 약물 파이프라인 보유 기업), 뇌종양·뇌낭종 환자 대상 임상 시험 기관",
+      "business_model": "의료기기 판매(마이크로 로봇 + 내비게이션 시스템) + 시술당 소모품(로봇·약물 카트리지) 수수료 + 제약사 파트너십(약물 전달 플랫폼 라이선스)",
+      "demo_or_screenshot_url": "https://bionautlabs.com/technology/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "MagnebotiX (ETH Zurich 스핀오프)",
+          "comparison": "학술 연구용 자기 마이크로 로봇에 집중, 임상 적용 단계에 미도달. Bionaut Labs는 대형 동물 모델 시연 완료로 임상 진입에 가장 근접"
+        },
+        {
+          "name": "Diffusion Pharmaceuticals",
+          "comparison": "약물 확산 기술로 뇌종양 치료를 시도하나 물리적 약물 전달 정밀도 부족. Bionaut는 마이크로 로봇으로 밀리미터 정밀도의 국소 전달 가능"
+        }
+      ],
+      "key_differentiator": "체내 항해 가능한 마이크로 로봇을 대형 동물 모델에서 성공적으로 시연한 세계 유일의 기업. SF 수준의 기술을 임상 현실로 가져온 최초 사례",
+      "moat": "마이크로 로봇 제조·자기 내비게이션·약물 방출 통합 특허 포트폴리오, 대형 동물 전임상 데이터, Cedars-Sinai 등 유력 의료기관 파트너십, FDA Breakthrough Device 지정 추진",
+      "competitive_position_summary": "체내 마이크로 로봇 의료기기의 실질적 선두주자로, SF 영화에서나 보던 기술을 임상 현실로 전환하는 과정에서 경쟁사보다 2-3년 앞서 있음"
+    },
+    "trending_reason": {
+      "summary": "Series B M 유치, 대형 동물 뇌 내 마이크로 로봇 항해 성공 발표가 글로벌 미디어의 폭발적 관심을 받으며 정밀 약물 전달의 패러다임 전환 기업으로 부상",
+      "catalysts": [
+        "대형 동물(양) 뇌에서 마이크로 로봇 항해·약물 전달·회수 성공 — Science Robotics 논문 게재",
+        "Series B M 유치, Khosla Ventures 주도",
+        "뇌낭종(Dandy-Walker 증후군) 적응증으로 FDA 임상 시험 준비 중",
+        "체내 마이크로 로봇 기술에 대한 대중·미디어의 SF적 관심 폭발"
+      ],
+      "media_mentions": [
+        {
+          "source": "MIT Technology Review",
+          "title": "These tiny robots can navigate inside the brain to deliver drugs",
+          "url": "https://www.technologyreview.com/2024/bionaut-labs-micro-robots-brain/",
+          "date": "2024-03-12"
+        },
+        {
+          "source": "STAT News",
+          "title": "Bionaut Labs raises M for microscopic robots that travel through the brain",
+          "url": "https://www.statnews.com/2024/bionaut-labs-50m-micro-robots/",
+          "date": "2024-05-08"
+        }
+      ],
+      "growth_metrics": "전임상 데이터 다수 축적, FDA 임상 진입 2025년 목표, 뇌질환 정밀 약물 전달 시장 2030년 B 전망"
+    },
+    "funding": {
+      "total_raised": "M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "M",
+        "date": "2024-05",
+        "lead_investor": "Khosla Ventures",
+        "notable_investors": [
+          "Upfront Ventures",
+          "Revolution",
+          "id8 Investments"
+        ]
+      },
+      "valuation_estimate": "M+",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "M",
+          "date": "2021-10",
+          "lead_investor": "Upfront Ventures"
+        },
+        {
+          "stage": "Series B",
+          "amount": "M",
+          "date": "2024-05",
+          "lead_investor": "Khosla Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 뇌질환 치료 시장 2030년 B+ 전망, 정밀 약물 전달 SAM B, 마이크로 로봇 기반 SOM M",
+      "market_trend": "뇌종양·신경퇴행성 질환 치료제 시장 급성장, 정밀의료·최소침습 시술에 대한 의료계 패러다임 전환, 마이크로 로보틱스 기술의 성숙",
+      "growth_potential": "뇌에서 척수·관절·종양 등 접근 어려운 모든 병변으로 적응증 확장, 제약사 파트너십을 통한 다양한 약물 전달 플랫폼으로 진화 가능",
+      "risks": [
+        "FDA 임상 시험에서 안전성·효능 입증 실패 가능성",
+        "마이크로 로봇의 대량 생산·품질 관리 기술적 난제",
+        "경쟁 약물 전달 기술(나노파티클, 초음파 개방 BBB)의 발전"
+      ],
+      "risk_mitigation": "전임상 단계에서 충분한 안전성 데이터 축적, FDA Breakthrough Device 지정으로 신속 심사 추진, 제약사 파트너십으로 개발 리스크·비용 분산"
+    },
+    "related_links": [
+      {
+        "title": "Bionaut Labs 공식 웹사이트",
+        "url": "https://bionautlabs.com/"
+      },
+      {
+        "title": "MIT Technology Review 보도",
+        "url": "https://www.technologyreview.com/2024/bionaut-labs-micro-robots-brain/"
+      }
+    ],
+    "editor_pick_comment": "뇌 속을 항해하는 마이크로 로봇이 SF가 아닌 현실이 되었다. Bionaut Labs가 양의 뇌에서 로봇을 조종해 약물을 전달하고 회수하는 데 성공한 것은 의료 역사의 한 페이지다."
+  }
+]

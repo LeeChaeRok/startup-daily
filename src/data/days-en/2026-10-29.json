@@ -1,0 +1,575 @@
+{
+  "galux-2026": {
+    "tagline": "A biotech that uses AI to design proteins not found in nature from scratch.",
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "Co-CEO",
+        "background": "Professor at Seoul National University Department of Chemistry. Entered SNU Chemistry in 1989 as the top female scorer in the national college entrance exam. PhD from the University of Chicago. Postdoctoral researcher at MIT and UCSF. Professor at SNU since 2004.",
+        "notable_achievement": "Maintained global TOP3 in CASP (Critical Assessment of Structure Prediction) for over 10 years since 2010. Served as a CASP judge in 2018 and 2020, witnessing the emergence of AlphaFold firsthand."
+      },
+      {
+        "role": "Co-CEO",
+        "background": "B.S. in Chemistry from KAIST, Ph.D. from SNU Department of Chemistry. From Professor Chaok Seok's lab. Oversaw investment, management, and business development in the early startup phase. Appointed Co-CEO in July 2026.",
+        "notable_achievement": "Key figure who proposed the startup to Professor Chaok Seok. Led the transition to a co-CEO system in 2026 and is preparing for an IPO in 2027."
+      },
+      {
+        "role": "CTO",
+        "background": "From Professor Chaok Seok's lab at SNU Department of Chemistry. Co-founder. Oversees macromolecular new drug (antibody) design.",
+        "notable_achievement": "Led the development of de novo antibody design technology on the GaluxDesign platform."
+      },
+      {
+        "role": "CAIO",
+        "background": "From Professor Chaok Seok's lab at SNU Department of Chemistry. Co-founder. Oversees small molecule new drug and AI model development.",
+        "notable_achievement": "Implemented a proprietary approach to teach AI the principles of physics and chemistry."
+      }
+    ],
+    "team_highlights": "In addition to the four founding members, the company recruited Kim Sung-hyun as CFO in May 2026, strengthening financial strategy and capital market response. With approximately 60-100 employees, the company has internalized both dry lab (AI design) and wet lab (experimental validation). The R&D center is located in Magok, Seoul.",
+    "product": {
+      "summary": "GaluxDesign is a platform that combines AI with the first principles of physics and chemistry to design proteins not found in nature from scratch (de novo). It supports various therapeutic modalities including antibodies, VHH, miniproteins, and cytokines, and has demonstrated a 1.1Å level agreement with Cryo-EM experimental structures.",
+      "problem_statement": "Traditional antibody drug development relies on animal immunization or large-scale library screening, taking over a year with extremely low success rates. Difficult targets such as GPCRs and ion channels are nearly inaccessible with conventional methods.",
+      "solution": "AI learns the physical principles of protein folding and molecular interactions, and given only the target structure, generates optimal antibody sequences within days. Through a fast feedback loop of dry lab design → wet lab validation, it achieves a hit rate of over 30% with just 50 designs.",
+      "key_features": [
+        "Modality-independent: can design all protein therapeutic formats including antibodies, VHH, miniproteins, and cytokines.",
+        "De novo antibody design: generates new antibodies specific to target epitopes without existing antibody data.",
+        "Multi-parameter optimization: simultaneously optimizes binding affinity, stability, immunogenicity, and developability.",
+        "Cryo-EM validation: achieves 1.1Å RMSD agreement between AI-designed and experimental structures.",
+        "Over 30% hit rate with only 50 minimal designs: industry-leading design efficiency.",
+        "Expanding to difficult targets such as GPCRs and ion channels."
+      ],
+      "tech_stack_or_innovation": "Unlike data-driven prediction models such as AlphaFold, the key differentiator is that it trains AI to learn the physicochemical first principles of protein folding and molecular interactions, enabling the AI to understand 'why this sequence is the answer'. Built on the GALAXY modeling suite accumulated over 20 years.",
+      "target_customer": "R&D departments of global and domestic pharmaceutical companies and biotechs. Companies developing antibody and protein therapeutics, especially those interested in high-difficulty targets such as multispecific antibodies, GPCRs, and ion channels.",
+      "business_model": "Upfront fee + milestone + royalties through joint research and development agreements. Targeting technology export or clinical entry after preclinical development of its own pipeline (PD-1/IL-18v immuno-oncology drug, etc.)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Designs de novo antibodies with its own JAM (Join Atomic Model) platform. Partners with AstraZeneca and BMS. In a comparative study, Galux secured verified binding antibodies for 8 out of 9 targets (JAM-2 achieved 5)."
+        },
+        {
+          "comparison": "Founded by former OpenAI and Meta researchers, designs zero-shot antibodies with the Chai-2 model. Raised a $400M Series C in July 2026 (valuation $3.8B). In a comparative study, Galux succeeded in 8 out of 9 targets (Chai-2 succeeded in 4)."
+        },
+        {
+          "comparison": "Founded by Flagship Pioneering, has raised over $420M. Based in Boston. Designs various protein therapeutics with AI. Started earlier than Galux and has a capital advantage."
+        },
+        {
+          "comparison": "First to demonstrate zero-shot antibody design with generative AI. Partnership with AstraZeneca valued at $800M+. Listed company. Galux is unlisted with a technology-focused approach."
+        },
+        {
+          "name": "Biolojic Design (Israel)",
+          "comparison": "Structure-based AI antibody design. First to enter clinical trials with an AI-designed antibody (2022). Galux differentiates by learning physical principles."
+        },
+        {
+          "name": "Proteina (South Korea)",
+          "comparison": "AI antibody design based on Professor Baek Min-kyung's lab at SNU. Combines ultra-fast protein analysis platform. Galux is ahead in partnerships and pipeline scale."
+        }
+      ],
+      "key_differentiator": "Internalizing the first principles of physics and chemistry into AI, rather than data pattern learning. Protein modeling capabilities validated in CASP and CAPRI competitions for over 20 years. Fully internalized dry and wet labs enable a fast design-verification cycle.",
+      "moat": "20 years of accumulated protein structure prediction and modeling know-how at SNU Department of Chemistry. TOP3 in CASP for 10 consecutive years, 1st place in CAPRI. The physics-based AI approach can generalize to new targets without large-scale data. The 1.1Å level agreement with experimental structures (Cryo-EM) is the highest level in the de novo design field.",
+      "competitive_position_summary": "In a comparative study published in May 2026, Galux demonstrated the widest target coverage (8 out of 9 targets) compared to global AI models such as Nabla Bio (JAM-2) and Chai Discovery (Chai-2), proving its technological prowess. However, it is significantly behind in capital (total $47M) compared to Chai ($400M+) and Generate ($420M+). Partnerships with global big pharma (BI, AZ) are evidence of its competitiveness."
+    },
+    "trending_reason": {
+      "summary": "Amid the paradigm shift in AI drug discovery from 'prediction' to 'design', Galux has attracted global attention by demonstrating the accuracy and efficiency of de novo protein design with physics-based AI. Key events in the last 90 days include being named to Forbes Asia 100 to Watch 2026, superiority in a global comparative study, and partnerships with Boehringer Ingelheim and AstraZeneca.",
+      "catalysts": [
+        "2026-10: Joint research agreement with Dong-A ST on ADC antibodies.",
+        "2026-08: Named to Forbes Asia 100 to Watch 2026 (the only Korean bio-healthcare company selected).",
+        "2026-07: Appointment of Taeyong Park as Co-CEO and transition to a co-CEO system (IPO preparation).",
+        "2026-05: Demonstrated best performance in a global AI antibody design comparison study (succeeded in 8/9 targets).",
+        "2025-12: Joint research agreement with Boehringer Ingelheim.",
+        "2025-12: Joint development agreement with Celltrion for multispecific antibodies."
+      ],
+      "media_mentions": [
+        null,
+        null,
+        {
+          "source": "Herald Economy",
+          "title": "Global companies lining up for Galux... CEO Taeyong Park: 'Solving difficult targets impossible with traditional experiments.'"
+        },
+        {
+          "source": "News1",
+          "title": "No More Sifting Through a Million Candidates: Galux Says \"AI Designs Molecules From the Ground Up\""
+        },
+        {
+          "source": "Herald Economy"
+        },
+        {
+          "source": "Business Korea",
+          "title": "Professor and students start a company and attract ₩26B... a technology owned by only 5 places in the world."
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Includes ₩68B. Seed round (est. ₩5B) + Series A ₩21B + Series B ₩42B. Based on Galux's official announcement.",
+      "valuation_estimate": "$150M–$200M (est.)",
+      "latest_round": {
+        "note": "₩42B. Initially announced February 10, 2026, with final closing on October 28, 2026 (est.). Possibly split closing due to a large number of investors."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "₩5B (est.) - InterVest and others participated. Series A announcement confirmed 'continued investment after seed'."
+        },
+        {
+          "note": "₩21B. Closed in 2022. InterVest, DAYLI Partners, PATHWAY Investment, LG Corp, KDB Capital, etc. participated."
+        },
+        {
+          "note": "₩42B. Announced in February 2026. Some media reported final closing in October 2026."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "AI drug discovery market: $1.5B in 2025 → $10B+ by 2030 (45%+ CAGR). Protein therapeutics market: $400B+ (a significant portion of the total pharmaceutical market). De novo antibody design is the most technology-intensive and high-value-added segment.",
+      "market_trend": "Since AlphaFold, AI drug discovery is shifting paradigm from 'structure prediction' to 'protein design (de novo)'. Global big pharma (Boehringer Ingelheim, AstraZeneca, Novartis) are forming large-scale partnerships with AI design startups. Competition is intensifying with large funding rounds in 2026, such as $400M for Chai Discovery and $787M for Earendil Labs.",
+      "growth_potential": "A 30%+ hit rate from 50 designs is the most efficient level in the industry. The physics-based approach is strong for rare and novel targets with limited data. 'Difficult target' markets such as GPCRs and ion channels are virtually untapped. Targeting a KOSDAQ IPO in 2027 and technology export plans.",
+      "risks": [
+        "Lack of clinical validation for AI drug design: No Galux AI-designed molecule has entered clinical trials yet.",
+        "Capital disadvantage: Smaller fundraising compared to global competitors (Chai $230M+, Generate $420M+, Absci listed).",
+        "Brain drain risk: Limited talent pool at the intersection of AI and biology.",
+        "Technical limitations: De novo antibodies require further optimization in immunogenicity, pharmacokinetics, etc., as actual therapeutics.",
+        "Currency and economic fluctuations: Uncertainty in achieving 2027 IPO target."
+      ],
+      "risk_mitigation": "Concurrent technology validation and revenue generation through partnerships with multiple global and domestic pharmaceutical companies, including Boehringer Ingelheim, AstraZeneca, Celltrion, and LG Chem. Demonstrating corporate value through preclinical progress of its own pipeline, such as PD-1/IL-18v bispecific antibody. Securing a funding channel through a KOSDAQ special listing in 2027."
+    },
+    "related_links": [
+      {
+        "title": "Galux official website"
+      },
+      {
+        "title": "GaluxDesign Platform Introduction"
+      },
+      {
+        "title": "Galux Newsroom"
+      },
+      {
+        "title": "Galux Series B official press release"
+      },
+      null,
+      {
+        "title": "Galux comparative study: widest target coverage"
+      },
+      {
+        "title": "Boehringer Ingelheim partnership announcement"
+      },
+      {
+        "title": "AI drug company founded by AlphaFold judge (Herald Economy)"
+      },
+      {
+        "title": "Dong-A ST and Galux ADC joint research"
+      },
+      {
+        "title": "Galux KOSDAQ listing push (Seoul Economy)"
+      }
+    ],
+    "editor_pick_comment": "A case where a professor and three students founded a startup in 2020, and a founder who was an AlphaFold judge used a unique approach of teaching physical principles to AI to secure consecutive partnerships with global big pharma."
+  },
+  "flyle-2026": {
+    "tagline": "AI agents turn contact centers into strategic hubs for CX innovation.",
+    "category": [
+      null,
+      "Contact Center",
+      "CX Analytics"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "background": "After the Great East Japan Earthquake, studied in the US, gained IPO experience at ZUU, and founded the company in 2020.",
+        "notable_achievement": "IPO experience at ZUU, pioneer of AI-native CX platform."
+      },
+      {
+        "background": "Co-founder overseeing business operations and customer support."
+      },
+      {
+        "background": "Co-founder leading technology and product development."
+      }
+    ],
+    "product": {
+      "summary": "An AI agent platform for contact centers and CX operations, offering automation of phone, chat, and email inquiries, VOC analysis, quality assessment, and surveys.",
+      "problem_statement": "Contact centers are struggling with labor shortages and an aging workforce, and vast amounts of customer data remain unanalyzed, failing to drive CX improvement.",
+      "solution": "Processes unstructured data like voice and text with AI to simultaneously automate inquiries and extract insights. Transforms contact centers into hubs for enterprise-wide CX improvement.",
+      "key_features": [
+        "AI Operator: 24/7 automated handling of phone, chat, and email inquiries, integrated with systems to complete orders and changes.",
+        "AI VOC Analysis: Detects signals for product, service, and process improvement from customer inquiries from multiple angles.",
+        "AI Interaction Quality Evaluation: Evaluates all calls comprehensively, providing feedback on strengths and areas for improvement.",
+        "CX Survey & AI Interview: AI conducts personalized questions to silent customers, churned customers, and even competitors' users.",
+        "AI Data Platform: Integrates analytics, dashboards, natural language queries, and automated report generation."
+      ],
+      "tech_stack_or_innovation": "Utilizes large language models (LLMs) for unstructured data processing; launched Japan's first VOC × LLM service in early 2023.",
+      "target_customer": "Large enterprises and corporate contact centers in Japan, CX departments, and product planning departments.",
+      "business_model": "SaaS subscription (cloud software) + project consulting (customized implementation support for enterprises)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global CS platforms, while adding AI features, are weak in deep VOC analysis for large Japanese enterprises."
+        },
+        {
+          "comparison": "Global CRMs with AI agent capabilities, but differentiated by Japanese-language unstructured data processing and local consulting."
+        }
+      ],
+      "key_differentiator": "A consistent product suite from VOC analysis to AI Operator, offering an 'analysis → automation → improvement' cycle on a single platform.",
+      "moat": "Custom AI models built on actual contact center data from large Japanese enterprises, investor network including Salesforce Ventures, and local enterprise sales channels.",
+      "competitive_position_summary": "The only end-to-end platform covering from VOC analysis to AI agents in Japan. Holds numerous enterprise references."
+    },
+    "trending_reason": {
+      "summary": "Raised ¥1.88B in Series A in October 2026 and officially launched AI Operator, with participation from global investors including Salesforce Ventures.",
+      "catalysts": [
+        "Rapid increase in AI demand due to worsening labor shortages in Japanese contact centers.",
+        "Advances in generative AI (LLMs) break through limits of unstructured data processing.",
+        "Salesforce Ventures joining the Series A round boosts global credibility."
+      ],
+      "growth_metrics": "Cumulative funding approx. ¥2.27B, adopted by major enterprises including NH Foods, Orient Corporation, Kaunet, and JTB."
+    },
+    "funding": {
+      "total_raised": "approx. ¥2.27B",
+      "total_raised_note": "Includes ¥1.88B Series A. Approx. $15.2M USD in equivalent (estimated based on 1 USD ≈ 149 JPY).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "¥1.88B",
+        "note": "Participation from new and existing investors, announced in October 2026."
+      },
+      "funding_history": [
+        {
+          "stage": "Seed/Initial",
+          "amount": "Undisclosed",
+          "note": "Partially raised from founding until 2023, included in total ¥2.27B.",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The Japanese contact center market is approx. ¥1T (est.). The AI-based CX platform market is growing over 20% annually. Flyle focuses on enterprise customers.",
+      "market_trend": "Japan's population decline is worsening contact center labor shortages, accelerating AI replacement demand. Large enterprises are moving to integrate VOC analysis and AI automation for enterprise-wide CX improvement.",
+      "growth_potential": "Expansion within large enterprise customers (cross-sell, upsell) and penetration into mid-sized companies, with potential for global expansion.",
+      "risks": [
+        "As a Japan-specific solution, localization burden when entering overseas markets.",
+        "Intensifying competition from global platforms (Zendesk, Salesforce) strengthening their AI capabilities.",
+        "Slow decision-making at large Japanese enterprises may limit revenue growth speed."
+      ],
+      "risk_mitigation": "Global access through partnership with Salesforce Ventures, market expansion based on enterprise success stories, and deepening product offering with AI agent lineup."
+    },
+    "related_links": [
+      {
+        "title": "Official Service Site"
+      },
+      {
+        "title": "Company Overview (corp.flyle.io)"
+      },
+      {
+        "title": "FIRST CVC Company Information"
+      }
+    ],
+    "editor_pick_comment": "All-in-one platform for AI transformation of large Japanese enterprise contact centers; even Salesforce Ventures took note in the Series A round."
+  },
+  "machenta-2026": {
+    "tagline": "Physical AI that enables robots to learn a task from a single demonstration through simulation-based training.",
+    "category": [
+      "Robotics",
+      "AI-based robot software"
+    ],
+    "headquarters": {
+      "country_ko": "United Kingdom"
+    },
+    "founders": [
+      {
+        "background": "Professor of Robotics at Imperial College London. As founder of the Robot Learning Lab, he led one-shot robot learning research for six years.",
+        "notable_achievement": "Author of foundational papers on in-context learning-based robot learning, including Implicit Graph Alignment (CoRL 2023) and Instant Policy (ICLR 2025)."
+      },
+      {
+        "role": "Co-founder (presumed to have served as CTO)",
+        "background": "He was a top doctoral student at Imperial College London's Robot Learning Lab, where he researched under Professor Edward Johns.",
+        "notable_achievement": "First author of the Instant Policy (ICLR 2025) paper, which introduced in-context learning to robots."
+      }
+    ],
+    "team_highlights": "An 11-person team formed when nearly all researchers from Imperial College's Robot Learning Lab joined the startup. The team has opened a new office and lab in King's Cross, London.",
+    "product": {
+      "summary": "Machenta develops robot foundation models trained exclusively on simulation data. It delivers 'Instant Robot Learning,' where a robot can immediately perform a task after a human demonstrates it once.",
+      "problem_statement": "Traditional robot automation requires expert engineers to program robots for each task or collect large-scale real-world data. This is time-consuming and costly, and must be repeated every time a new task is added—a core bottleneck preventing robot adoption in industrial settings. Major VLA (vision-language-action) competitors are pouring enormous resources into collecting hundreds of thousands of real-world demonstration data.",
+      "solution": "Machenta trains its models entirely in simulation, without using a single pixel of real-world data. The core is a Vision-Demo-Action (VDA) model that describes tasks through demonstrations rather than language instructions. Trained with a meta-learning objective that learns 'how to learn new tasks' instead of memorizing specific tasks, the model can perform a new task from just a single demonstration in the real world.",
+      "key_features": [
+        "Single model handles all tasks: the same pretrained model is used without per-task fine-tuning.",
+        "Cross-embodiment: the same model runs on six different robots (including a humanoid).",
+        "Camera-agnostic: works with various sensor configurations.",
+        "Supports four teaching methods: leader-follower, VR controller, kinesthetic teaching, and bare-hand demonstrations.",
+        "One-shot one-person factory: three robots with different grippers and cameras automate an assembly line in two minutes, each using a different teaching method.",
+        "Runs on all hardware, from industrial robots to low-cost hobby robots."
+      ],
+      "tech_stack_or_innovation": "The entire model is trained on meta-learning data generated in simulation. By generating countless random combinations of objects, tasks, environments, and embodiments, it optimizes the ability to learn tasks itself—so at test time, the real world is just another adaptation target. The company says this approach avoids the sim-to-real gap problem. Related research includes Implicit Graph Alignment (CoRL 2023) and Instant Policy (ICLR 2025) from Imperial College's Robot Learning Lab.",
+      "target_customer": "It targets small-batch, high-mix manufacturing lines in industrial settings, factories that need assembly, packing, and tidying tasks, and small and medium-sized manufacturers that want to use robots without expert programming. It is also designed to work on hobby robots for home users.",
+      "business_model": "Undisclosed. It is estimated to monetize by licensing its robot foundation model software to robot manufacturers or system integrators."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A US startup building general-purpose robot foundation models through large-scale real-world data collection. Machenta takes the opposite approach: learning 'how to learn' from simulation alone, without real-world data."
+        },
+        {
+          "comparison": "A competitor that is scaling real-world data collection and beginning to adopt in-context learning. Machenta argues that simulation-based meta-learning can dramatically reduce data pipeline costs."
+        },
+        {
+          "comparison": "A new company implementing in-context learning through scaled real-world data collection. Machenta sees simulation, not real-world data, as a faster path to diversity."
+        },
+        {
+          "comparison": "A competitor pursuing a generalization strategy centered on real-world data collection. Contrasts with Machenta's simulation strategy."
+        }
+      ],
+      "key_differentiator": "100% simulation-based training with zero real-world data. While competitors pour massive capital into physical data collection, Machenta runs a meta-learning data flywheel in simulation, handling all robots, all tasks, and all teaching methods with a single model.",
+      "moat": "VDA architecture built on six years of Imperial College research, plus a simulation data generation recipe. The core that is hard for competitors to replicate is the 'simulation data generation method that yields a meta-learning objective'—know-how accumulated by the company over many years.",
+      "competitive_position_summary": "It proved its presence by raising $40 million at seed stage—the largest seed round in UK robotics history. Its scale falls far short of Physical Intelligence ($400M raised), but it is a lean 11-person team with a distinct edge, entering the competition with no real-world data collection infrastructure."
+    },
+    "trending_reason": {
+      "summary": "The announcement on October 27, 2026, of a $40 million seed investment drew major attention as the largest seed round in UK robotics startup history. As the robot foundation model field races toward real-world data competition, the opposite approach—simulation-based learning—is gaining attention as an alternative.",
+      "catalysts": [
+        "2026-10-27: Announcement of a $40M seed round co-led by Creandum and Union Square Ventures",
+        "Creandum publishes official investment note 'Backing Machenta: the era of Instant Robot Learning'",
+        "USV discloses its investment thesis under the name 'Physical Vibe Coding'",
+        "Business Insider covers it in an article titled 'This 11-Person Startup Raised $40 Million to Train Robots...'",
+        "It is emerging as an industry alternative as the first commercial robot foundation model attempt trained only on simulation, in contrast to competitors that rely on real-world data."
+      ],
+      "growth_metrics": "With 11 people, supports 6 robot types, 4 teaching methods, and various tasks. Specific user numbers and revenue are undisclosed."
+    },
+    "funding": {
+      "total_raised_note": "According to PitchBook, there was a separate first seed round in November 2025; its size is undisclosed. The October 2026 $40M seed round is the largest seed round for a UK robotics startup.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Co-led by Creandum and USV. Hoxton Ventures, an existing investor, also invested. The company declined to disclose valuation."
+      },
+      "funding_history": [
+        {
+          "note": "Largest seed round for a UK robotics startup. Announced on October 27, 2026."
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Early seed round recorded in PitchBook. Hoxton Ventures participated."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global robot industrial software and services market is estimated at tens of billions of dollars, while the physical AI foundation model market is still in its early stages. Specific figures are undisclosed (est.).",
+      "market_trend": "Between 2025 and 2026, major investments in the robot foundation model space—including Physical Intelligence ($400M) and Skild AI—made physical AI one of venture capital's biggest themes. Though real-world data collection is the standard strategy, interest in simulation-based alternatives is growing due to cost and scalability issues.",
+      "growth_potential": "Mass production lines in automotive and electronics are already automated with robots, but small-batch, high-mix manufacturing still relies on manual labor. If one-demo learning matures, this market could expand significantly. The team's achievement of cross-embodiment versatility—supporting six robot types with just 11 people—demonstrates scalability potential.",
+      "risks": [
+        "The sim-to-real gap is a persistent problem in robotics history: the model may fail in environments beyond its demonstrated range.",
+        "Financial gap with well-capitalized competitors such as Physical Intelligence.",
+        "Lack of commercial proof yet that the VDA model truly generalizes 'how to learn.'",
+        "Safety certification and regulatory issues for each robot hardware platform."
+      ],
+      "risk_mitigation": "The company argues that its simulation data generation recipe, which produces a meta-learning objective, treats the real world at test time as just another environment, structurally avoiding the gap problem. It is expanding validation across a range of hardware, from industrial to hobby robots."
+    },
+    "related_links": [
+      {
+        "title": "Machenta official website"
+      },
+      {
+        "title": "Introducing Instant Robot Learning (official blog)"
+      },
+      {
+        "title": "PitchBook profile"
+      },
+      {
+        "title": "Hoxton Ventures portfolio page"
+      }
+    ],
+    "editor_pick_comment": "Bucking the real-world data collection war, an 11-person team that teaches 'how to learn' through 100% simulation has secured the UK's largest robotics seed round."
+  },
+  "concretene-2026": {
+    "tagline": "Low-carbon concrete with 10-20% less cement using graphene",
+    "category": [
+      "Construction",
+      "Materials",
+      "Environment"
+    ],
+    "headquarters": {
+      "country_ko": "United Kingdom"
+    },
+    "founders": [
+      {
+        "background": "Background from the University of Manchester, researched at GEIC (Graphene Engineering Innovation Centre)"
+      }
+    ],
+    "team_highlights": "CEO Mike Harrison (formerly in the construction industry), CSO Dr. Craig Dawson (PhD in nanomaterials), CFO Dave Evans, Head of Product Alan Beck",
+    "product": {
+      "summary": "A graphene-based liquid admixture added as usual at concrete batch plants, reducing cement usage by 10-20% while maintaining or improving strength and durability.",
+      "problem_statement": "Cement production accounts for about 8% of global CO₂ emissions, but low-carbon alternatives have limitations in strength, durability, and cost.",
+      "solution": "Graphene nanoplatelets strengthen the microstructure of the cement paste, achieving equal or better performance with less cement. No additional cost in mass production (cost-neutral).",
+      "key_features": [
+        "10-20% cement reduction, 15-30% strength improvement (depending on mix and curing method)",
+        "No need for new batch equipment or staff training; dosed like a regular admixture",
+        "Aiming for code compliance (design standards), BRE testing underway",
+        "Compatible with low-carbon concrete (e.g., blended with GGBS or limestone)"
+      ],
+      "tech_stack_or_innovation": "Agnostic to graphene source; can use carbon-negative graphene produced from waste streams like wastewater biogas.",
+      "target_customer": "Ready-mix and precast concrete manufacturers (Breedon, Cemex, Roger Bullivant, etc.), water and infrastructure construction companies, global engineering consultancy (Arup)",
+      "business_model": "Supplies graphene admixture to batch plants; at mass production, price equals cement savings, sold without a 'green premium'"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "CarbonCure (Canada)",
+          "comparison": "Reduces concrete carbon by injecting CO₂, uses mineral carbonation instead of graphene"
+        },
+        {
+          "name": "Solidia Technologies (USA)",
+          "comparison": "Low-temperature cement and CO₂ curing technology; a new binder rather than replacing existing cement"
+        }
+      ],
+      "key_differentiator": "Can be used like a conventional admixture and aims for cost neutrality, allowing construction companies to reduce carbon without additional expense.",
+      "moat": "Partnership with the University of Manchester GEIC, pending patent portfolio in graphene formulation and quality control know-how, track record of over 300m³ of real-world pours.",
+      "competitive_position_summary": "Most advanced commercialization stage in the graphene-construction sector; collaborating with industry leaders like Arup and Cemex on certification and standardization."
+    },
+    "trending_reason": {
+      "summary": "First close of Series A on October 27, 2026, for £4.5M (approx. KRW 7.4B), with government-backed NPIF II and existing VCs (LocalGlobe, Molten Ventures) participating.",
+      "catalysts": [
+        "Linked to UK Northern innovation investment policy via the 'Manchester graphene' concept",
+        "Awarded a £1M grant from Ofwat (UK water regulator) in May 2026, cooperating with United Utilities, Tarmac, and Levidian.",
+        "Increased industry interest confirmed at the UK Concrete Show in March 2026."
+      ],
+      "growth_metrics": "Over 300m³ poured on-site, 20 employees (as of July 2025), 3 completed Innovate UK projects."
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "First close, includes £2M from NPIF II – PXN Equity Finance, with existing investors LocalGlobe and Molten Ventures participating."
+      },
+      "funding_history": [
+        {
+          "note": "Led by LocalGlobe, with strategic investments from Arup and Black Swan Graphene."
+        },
+        {
+          "note": "Three Innovate UK projects (GraphEnhance, SMART, GCRE) cumulatively."
+        }
+      ],
+      "total_raised_note": "Seed £3.5M + government grant £1.9M + Series A first tranche £4.5M. Sources: University of Manchester news (July 2025) and BusinessCloud (October 2026)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global concrete admixture market approx. $20B (2025), SAM: Low-carbon, high-performance admixture segment approx. $3B.",
+      "market_trend": "Strengthening global carbon regulations (ETS, CBAM) and construction companies' Scope 3 reduction targets are driving surging demand for low-carbon concrete; graphene applications are emerging as a representative case of nanomaterial commercialization.",
+      "growth_potential": "After obtaining CE marking in the UK, expansion into Europe; further Series A closing to build production capacity of hundreds of thousands of m³ per year.",
+      "risks": [
+        "Conservative approval system in the construction industry (potential delays in certification and standardization)",
+        "Environmental and cost risks of mass-producing graphene feedstock",
+        "Uncertainty in sustaining technological advantage over competitors"
+      ],
+      "risk_mitigation": "Certification partnership with Arup, diversification of graphene supply chain (waste-derived graphene), already over 300m³ field track record."
+    },
+    "related_links": [
+      {
+        "title": "Concretene Official Website"
+      },
+      {
+        "title": "University of Manchester Concretene-GEIC Partnership Extension News"
+      }
+    ],
+    "editor_pick_comment": "The approach of commercializing Manchester-sourced graphene as a concrete admixture to reduce carbon without a premium stands out; with the 2026 Series A raise and Ofwat grant, the company has begun scaling up mass production."
+  },
+  "rabot-energy-2026": {
+    "tagline": "German power startup bundling home batteries into a virtual power plant",
+    "category": [
+      "Energy",
+      "CleanTech",
+      "FinTech"
+    ],
+    "headquarters": {
+      "country_ko": "Germany"
+    },
+    "founders": [
+      {
+        "background": "Background in physics (LMU Munich) and a master's in sustainable development (EOI Business School Madrid). Previously founded energy broker Wechselpilot and has experience in energy trading.",
+        "notable_achievement": "Founded Wechselpilot (energy comparison and switching automation service)"
+      },
+      {
+        "background": "Collaborated with Rabe since 2014, developing energy optimization solutions. The company name 'Rabot' is a combination of the two co-founders' surnames (Rabe + Both).",
+        "notable_achievement": "Co-founded an energy trading and procurement optimization platform (2014)"
+      }
+    ],
+    "team_highlights": "Konrad Schade, CCO. Former Head of Global Commercial Operations at Wayfair, former McKinsey consultant (PhD in Physics, Heidelberg).",
+    "product": {
+      "summary": "A platform based on dynamic tariffs that automatically controls home batteries (Rabot Flow), EV charging (Wallbox), and heat pumps according to real-time electricity prices. It bundles homes into a virtual power plant to contribute to grid stability.",
+      "problem_statement": "Over 90% of German households pay unnecessarily high electricity costs with static tariffs, and grid instability due to the intermittency of renewable energy is worsening.",
+      "solution": "Through the Rabot Energy app, it offers dynamic tariffs reflecting real-time wholesale electricity prices (EPEX Spot) and automatically optimizes home batteries, EVs, and heat pumps. Additionally, the 'Rabot Flow' plug-and-play battery (2.12kWh) allows charging and discharging during low-price periods without requiring separate solar panels.",
+      "key_features": [
+        "Dynamic tariffs (real-time pricing at 1-hour or 15-minute intervals)",
+        "Rabot Flow – 2.12kWh plug-and-play battery (3-day installation, 2-minute app activation)",
+        "EV charging optimization (Rabot Charge Fix: fixed 30 ct/kWh, cashback offered)",
+        "Automatic control of heat pumps and Wallbox integration",
+        "Instant use without a smart meter based on SLP (standard load profile)"
+      ],
+      "tech_stack_or_innovation": "In-house developed AI-based energy trading and portfolio management system for wholesale market price prediction and demand response optimization. An IoT platform that integrates each home's battery status and grid signals for battery cluster control (Virtual Power Plant).",
+      "target_customer": "Residential customers in Germany (especially tenants, apartment dwellers, households without solar panels) and SMEs/industrial customers (about 15,000 B2B customers).",
+      "business_model": "Electricity sales margin + battery hardware sold at cost (for customer retention) + grid service fees (compensation for virtual power plant participation). Guarantees savings of approx. €120 per customer per year."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "UK-based global neo-utility, similar dynamic tariffs, but Rabot has deeper battery and EV integration."
+        },
+        {
+          "comparison": "Swedish-based dynamic tariff app. Expanded into several European countries, but direct provision of battery hardware is minimal."
+        },
+        {
+          "comparison": "German neo-utility, focusing on tariff simplification. No battery or VPP (virtual power plant) functionality."
+        }
+      ],
+      "key_differentiator": "The only German company that maximizes the profitability of dynamic tariffs with home batteries alone, without solar, and bundles them in groups of hundreds of thousands of households to provide grid services (VPP).",
+      "moat": "Network effect of 200,000+ customer base (virtual power plant scale), proprietary energy trading and prediction AI, plug-and-play battery hardware-software integration, high customer retention (90%+ of battery buyers maintain app connectivity).",
+      "competitive_position_summary": "Leader in the German dynamic tariff market. Accelerating growth after its 2026 Series B, positioning itself beyond simple tariff sales as an integrated platform for residential distributed energy resources."
+    },
+    "trending_reason": {
+      "summary": "In October 2026, Rabot Energy raised a €50M (approx. $56.7M) Series B led by Endeit Capital and DeepTech & Climate Fonds (DTCF). Since its founding in 2021, it has acquired 200,000 customers in 3.5 years and achieved annual revenues of €200M.",
+      "catalysts": [
+        "Surge in demand for dynamic tariffs due to Germany's smart meter mandate and expansion of renewable energy.",
+        "The Rabot Flow plug-and-play battery, launched in June 2026, opens new horizons in the tenant and apartment dweller market.",
+        "Alignment with European energy independence policies such as the IRA and REPowerEU."
+      ],
+      "growth_metrics": "200,000+ customers (approx. 185,000 B2C, 15,000 B2B), annual electricity supply of 600 GWh+, cumulative customer savings of €45M in 2025. Series B target: 1 million customers."
+    },
+    "funding": {
+      "total_raised_note": "Amount from Series B single round according to press. Previous round amounts are undisclosed.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Approx. USD $56.7M (based on exchange rate on 2026-10-14: 1 EUR ≈ 1.134 USD)"
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Investors: HV Capital, HTGF, Bosch Ventures, among others.",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "note": "Approx. USD $56.7M"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: European household electricity market ~€500B (est.). SAM: Of Germany's 42 million households, ~10M–20M can switch to dynamic tariffs (est.). SOM: 200,000 customers in 2026 → target of 1 million.",
+      "market_trend": "Germany's smart meter mandate (required for new installations from 2026), increased electricity price volatility due to renewable energy share reaching 60%+, and growing importance of flexible demand response (DR) with the spread of EVs and heat pumps.",
+      "growth_potential": "Potential for 5x growth from the current 200,000 customers to the target of 1 million. Virtual power plant (VPP) capabilities can generate additional revenue through the sale of TSO/DSO grid stabilization services.",
+      "risks": [
+        "Regulatory risk: changes in German electricity market regulations, delays in smart meter rollout",
+        "Intensifying competition: large neo-utilities like Octopus and Ostrom entering the German market",
+        "Battery supply chain risk (raw material prices, geopolitical factors)",
+        "Rising customer acquisition costs (intensifying marketing competition)"
+      ],
+      "risk_mitigation": "Prioritizes customer retention by selling battery hardware at cost, spreading CAC through high retention rates. Optimizes electricity procurement costs with its own AI trading engine. Secures capital stability with diverse investors (including policy fund DTCF)."
+    },
+    "related_links": [
+      {
+        "title": "Rabot Energy Official Website"
+      },
+      {
+        "title": "Rabot Energy Über Uns (Team Information)"
+      },
+      {
+        "title": "PitchBook Company Profile"
+      }
+    ],
+    "editor_pick_comment": "A novel energy platform that monetizes dynamic tariffs without solar, using plug-and-play batteries for German apartment tenants."
+  }
+}

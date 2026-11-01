@@ -1,0 +1,835 @@
+[
+  {
+    "id": "exa-2026",
+    "date": "2026-04-24",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "Exa",
+    "name_ko": "엑사",
+    "tagline": "AI 에이전트를 위한 시맨틱 검색 인프라 — 개발자가 호출하는 '진짜' 검색 API",
+    "category": [
+      "AI 인프라",
+      "시맨틱 검색",
+      "개발자 도구"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "30-50",
+    "website": "https://exa.ai/",
+    "logo_url": "",
+    "logo_svg_description": "두 개의 호가 만나 '검색 빔'을 그리는 추상 마크와 미니멀 산세리프 'Exa' 워드마크",
+    "founders": [
+      {
+        "name_en": "Will Bryk",
+        "name_ko": "윌 브릭",
+        "role": "Co-Founder & CEO",
+        "background": "Harvard 컴퓨터과학 중퇴, OpenAI 인턴 출신",
+        "linkedin": "",
+        "notable_achievement": "Metaphor에서 Exa로 리브랜딩하며 AI 시대 검색 API 카테고리 정의"
+      },
+      {
+        "name_en": "Jeff Wang",
+        "name_ko": "제프 왕",
+        "role": "Co-Founder & CTO",
+        "background": "Harvard 컴퓨터과학, ML 검색 시스템 엔지니어",
+        "linkedin": "",
+        "notable_achievement": "자체 임베딩·웹 인덱스 인프라 설계"
+      }
+    ],
+    "team_highlights": "Harvard·MIT 출신 검색 ML 엔지니어, OpenAI·Google·Anthropic 출신 인프라 인력",
+    "product": {
+      "summary": "사람이 아니라 AI 에이전트가 호출하기 위해 만들어진 시맨틱 웹 검색 API. 키워드 매칭 대신 임베딩 기반 의미 검색·결과 요약·웹 콘텐츠 추출을 단일 API로 제공해 LLM·에이전트가 신뢰할 수 있는 외부 정보 소스를 확보",
+      "problem_statement": "ChatGPT·에이전트는 외부 정보가 필요하지만, 구글·빙 검색 API는 키워드 기반이고 SEO·광고에 오염돼 있어 LLM 입력으로 부적합하다. 'AI에 친화적'인 새 검색 인프라가 필요하다",
+      "solution": "수십억 페이지를 자체 크롤링·임베딩하고, 시맨틱 쿼리에 가장 관련도 높은 결과·요약·전문(全文) 추출까지 단일 API로 반환. 사용자가 사람이 아니라 AI 에이전트라는 가정 하에 결과 형식·랭킹을 재설계",
+      "key_features": [
+        "Search API: 임베딩 기반 시맨틱 웹 검색",
+        "Find Similar: URL을 입력해 유사 페이지 검색",
+        "Contents API: 페이지 본문·요약·하이라이트 추출",
+        "Websets: 자연어 쿼리로 구조화된 결과 집합 생성",
+        "Research API: 다단계 자율 리서치 에이전트"
+      ],
+      "tech_stack_or_innovation": "자체 웹 크롤러·임베딩 인덱스, 트랜스포머 기반 랭킹, 대규모 콘텐츠 추출 파이프라인",
+      "target_customer": "AI 에이전트·앱 개발자, RAG 시스템을 만드는 엔터프라이즈, 리서치·법률·금융 분석 도구",
+      "business_model": "API 호출 종량제 + 엔터프라이즈 정액 + Websets 프리미엄",
+      "demo_or_screenshot_url": "https://exa.ai/search"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Tavily",
+          "comparison": "AI 에이전트용 검색 API. Exa는 자체 인덱스·임베딩 깊이로 차별화"
+        },
+        {
+          "name": "Bing Search API / Google Custom Search",
+          "comparison": "전통 검색 API. Exa는 시맨틱·AI 친화 결과 형식에서 우위"
+        },
+        {
+          "name": "SerpAPI / Brave Search API",
+          "comparison": "스크래핑 기반 검색 API. Exa는 의미 검색·콘텐츠 추출 통합 차별화"
+        }
+      ],
+      "key_differentiator": "AI 에이전트 우선 설계 + 자체 임베딩 인덱스 + 콘텐츠 추출까지 단일 API 통합",
+      "moat": "수십억 페이지 자체 인덱스, 임베딩·랭킹 IP, 개발자·에이전트 락인 워크플로우",
+      "competitive_position_summary": "AI용 검색 API 카테고리에서 인덱스 깊이로 가장 강한 포지션, RAG·에이전트 시장 표준 후보"
+    },
+    "trending_reason": {
+      "summary": "2024년 Series A $22M에서 2025년 후반 Series B $50M·$700M 밸류에이션으로 성장. Anthropic·Cursor·Hebbia 등이 RAG 백엔드로 Exa 채택, AI 에이전트 시대의 검색 인프라로 부상",
+      "catalysts": [
+        "2025년 Series B $50M, $700M 밸류에이션",
+        "Anthropic·Cursor 등 대형 AI 회사 채택",
+        "Websets 출시로 노코드 리서치 사용자 확장",
+        "Research API로 자율 리서치 에이전트 시장 진입"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Exa raises $50M to be 'Google for AI agents'",
+          "url": "https://techcrunch.com/exa-50m/",
+          "date": "2025-09-28"
+        },
+        {
+          "source": "The Information",
+          "title": "How Exa quietly became RAG's default search backend",
+          "url": "https://www.theinformation.com/articles/exa-rag-default",
+          "date": "2026-02-19"
+        }
+      ],
+      "growth_metrics": "API 월 호출 수십억, 개발자 수만, 엔터프라이즈 RAG 고객 빠르게 증가"
+    },
+    "funding": {
+      "total_raised": "$80M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$50M",
+        "date": "2025-09",
+        "lead_investor": "Benchmark",
+        "notable_investors": [
+          "Lightspeed",
+          "Y Combinator",
+          "Nat Friedman & Daniel Gross"
+        ]
+      },
+      "valuation_estimate": "$700M",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$5M",
+          "date": "2022-04",
+          "lead_investor": "Y Combinator"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$22M",
+          "date": "2024-02",
+          "lead_investor": "Lightspeed"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$50M",
+          "date": "2025-09",
+          "lead_investor": "Benchmark"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 검색 API·웹 데이터 시장 2030년 $30B+, AI 에이전트 검색 인프라 SOM $10B",
+      "market_trend": "RAG·AI 에이전트의 외부 정보 호출 표준화, 미디어·SEO 오염된 일반 검색 회피, 시맨틱 검색의 산업 표준화",
+      "growth_potential": "도메인 특화 검색 인덱스(법률·금융·의료) 확장, 자율 리서치 에이전트 시장, 엔터프라이즈 RAG 표준화",
+      "risks": [
+        "Google·Bing의 AI 검색 API 강화",
+        "오픈소스 임베딩 검색 도구 발전",
+        "웹 크롤링 비용·법적 분쟁"
+      ],
+      "risk_mitigation": "AI 에이전트 친화 UX·SLA로 락인, 도메인 특화 인덱스 IP, 라이선스 친화 콘텐츠 파트너십"
+    },
+    "related_links": [
+      {
+        "title": "Exa 공식 사이트",
+        "url": "https://exa.ai/"
+      },
+      {
+        "title": "TechCrunch: Series B 보도",
+        "url": "https://techcrunch.com/exa-50m/"
+      },
+      {
+        "title": "Websets 소개",
+        "url": "https://exa.ai/websets"
+      }
+    ],
+    "editor_pick_comment": "사람이 검색하는 시대가 끝나고, AI 에이전트가 대신 검색하는 시대가 온다 — 그 인프라를 가장 빨리 가져가려는 회사. RAG를 만드는 사람이라면 이미 한 번쯤 호출해본 API."
+  },
+  {
+    "id": "aleph-alpha-2026",
+    "date": "2026-04-24",
+    "featured": true,
+    "sector": "ai",
+    "name_en": "Aleph Alpha",
+    "name_ko": "알레프 알파",
+    "tagline": "유럽 정부·산업을 위한 주권 AI 모델 — 독일발 LLM",
+    "category": [
+      "AI 모델",
+      "주권 AI",
+      "엔터프라이즈 LLM"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "Heidelberg",
+      "country": "Germany",
+      "country_ko": "독일"
+    },
+    "company_stage": "Series B",
+    "employee_count": "100-200",
+    "website": "https://aleph-alpha.com/",
+    "logo_url": "/logos/aleph-alpha-2026.png",
+    "logo_svg_description": "히브리 문자 알레프(א)와 그리스 문자 알파(α)를 결합한 추상 마크, 짙은 인디고와 화이트의 차분한 톤",
+    "founders": [
+      {
+        "name_en": "Jonas Andrulis",
+        "name_ko": "요나스 안드룰리스",
+        "role": "Founder & CEO",
+        "background": "Apple AI 연구 디렉터 출신, 카를스루에 공대",
+        "linkedin": "",
+        "notable_achievement": "유럽 최초 자체 거대 LLM 개발, 독일 정부의 주권 AI 정책 핵심 파트너"
+      },
+      {
+        "name_en": "Samuel Weinbach",
+        "name_ko": "사무엘 바인바흐",
+        "role": "Co-Founder & VP of Research",
+        "background": "하이델베르크대 ML 연구원",
+        "linkedin": "",
+        "notable_achievement": "Aleph Alpha 자체 LLM 학습 인프라·모델 라인업 총괄"
+      }
+    ],
+    "team_highlights": "Apple·DeepMind 출신 연구자, 독일·유럽 정부·산업 전문가, 다국어 NLP 인재 풀",
+    "product": {
+      "summary": "독일·유럽 데이터 주권 요건에 맞춘 자체 LLM과 엔터프라이즈 AI 운영체제 'PhariaAI'를 제공한다. 정부·국방·금융·헬스 등 규제 산업에 온프레 기반 AI 솔루션을 공급한다",
+      "problem_statement": "유럽 정부·규제 산업은 미국 LLM의 데이터 처리·주권·감사 요건을 충족하기 어렵고, 자국·EU 내에서 학습·운영되는 AI 인프라가 필요하다",
+      "solution": "독일·EU에서 학습된 자체 LLM과 PhariaAI 운영체제로 온프레·하이브리드 배포, 감사·트레이서빌리티 기능, 다국어 EU 언어 지원을 제공",
+      "key_features": [
+        "Pharia LLM: 독일·EU에서 학습된 자체 거대 모델",
+        "PhariaAI OS: 엔터프라이즈 AI 운영·거버넌스 플랫폼",
+        "Explainability: 모델 응답의 근거 추적·감사 도구",
+        "온프레·소버린 클라우드 배포",
+        "정부·국방용 보안 인증"
+      ],
+      "tech_stack_or_innovation": "자체 다국어 LLM 학습 인프라, 모델 응답 근거 추적(attention attribution), 주권 클라우드 배포",
+      "target_customer": "독일·EU 정부·국방, 금융·보험, 제약·헬스, 에너지 등 규제 산업 대기업",
+      "business_model": "엔터프라이즈 라이선스 + 정부·공공 계약 + 컨설팅",
+      "demo_or_screenshot_url": "https://aleph-alpha.com/pharia-ai"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Mistral AI",
+          "comparison": "유럽 LLM 강자. Aleph Alpha는 독일·정부·국방 영역과 PhariaAI 운영체제에서 차별화"
+        },
+        {
+          "name": "OpenAI / Anthropic",
+          "comparison": "성능 우위. Aleph Alpha는 데이터 주권·감사 요건 충족도에서 유리"
+        },
+        {
+          "name": "Cohere",
+          "comparison": "엔터프라이즈 LLM. Aleph Alpha는 EU 규제 환경 친화도 강점"
+        }
+      ],
+      "key_differentiator": "독일·EU 주권 학습 데이터 + PhariaAI OS + 감사·설명가능성 도구",
+      "moat": "독일 정부·산업과의 깊은 관계, 유럽 주권 데이터 학습 인프라, EU AI Act 친화 설계",
+      "competitive_position_summary": "유럽 주권 AI의 대표 벤더, 정부·규제 산업 시장에서 강한 포지션"
+    },
+    "trending_reason": {
+      "summary": "2024년 €500M Series B 후 2025년 PhariaAI OS 전환으로 엔터프라이즈 AI 운영체제 사업 본격화, 독일·EU 정부 디지털화 핵심 파트너로 자리매김",
+      "catalysts": [
+        "2024년 Series B €500M",
+        "PhariaAI OS 출시로 모델→엔터프라이즈 운영체제 피벗",
+        "독일 연방·주 정부 AI 도입 계약",
+        "EU AI Act 준수 솔루션 표준화"
+      ],
+      "media_mentions": [
+        {
+          "source": "Handelsblatt",
+          "title": "Aleph Alpha pivots to enterprise AI operating system",
+          "url": "https://www.handelsblatt.com/aleph-alpha-pivot/",
+          "date": "2024-09-04"
+        },
+        {
+          "source": "Reuters",
+          "title": "Germany's Aleph Alpha pushes sovereign AI for European governments",
+          "url": "https://www.reuters.com/aleph-alpha-sovereign-ai/",
+          "date": "2025-11-18"
+        }
+      ],
+      "growth_metrics": "독일·EU 정부·대기업 고객 100+, 엔터프라이즈 AI 거버넌스 시장 점유 확대"
+    },
+    "funding": {
+      "total_raised": "€600M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "€500M",
+        "date": "2023-11",
+        "lead_investor": "Innovation Park Artificial Intelligence",
+        "notable_investors": [
+          "Bosch",
+          "SAP",
+          "Schwarz Group",
+          "Hewlett Packard Enterprise"
+        ]
+      },
+      "valuation_estimate": "€2B+ (추정)",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "€5.3M",
+          "date": "2020-07",
+          "lead_investor": "Earlybird"
+        },
+        {
+          "stage": "Series A",
+          "amount": "€23M",
+          "date": "2021-07",
+          "lead_investor": "Lakestar"
+        },
+        {
+          "stage": "Series B",
+          "amount": "€500M",
+          "date": "2023-11",
+          "lead_investor": "Innovation Park Artificial Intelligence"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "유럽 엔터프라이즈·정부 AI 시장 2030년 $50B+, 주권 AI·규제 산업 SOM $15B",
+      "market_trend": "EU AI Act 시행, 정부·규제 산업의 데이터 주권 요구 강화, 엔터프라이즈 AI 거버넌스 표준화",
+      "growth_potential": "PhariaAI OS의 산업 표준화, 독일 외 EU 회원국 확장, 국방·헬스·금융 도메인 솔루션",
+      "risks": [
+        "Mistral과의 유럽 시장 경쟁 격화",
+        "글로벌 빅테크 LLM 성능 격차",
+        "정부 예산 의존 리스크"
+      ],
+      "risk_mitigation": "엔터프라이즈 OS 사업 비중 확대, 산업별 솔루션 강화, 모델 외 거버넌스 가치 차별화"
+    },
+    "related_links": [
+      {
+        "title": "Aleph Alpha 공식 사이트",
+        "url": "https://aleph-alpha.com/"
+      },
+      {
+        "title": "Reuters: 주권 AI 보도",
+        "url": "https://www.reuters.com/aleph-alpha-sovereign-ai/"
+      },
+      {
+        "title": "PhariaAI 소개",
+        "url": "https://aleph-alpha.com/pharia-ai"
+      }
+    ],
+    "editor_pick_comment": "OpenAI·Mistral 사이에서 '독일·EU만의 AI'를 만드는 회사. 모델 성능 1등을 노리지 않고, '믿을 수 있는 AI'로 정부·규제 시장을 잡겠다는 다른 게임."
+  },
+  {
+    "id": "plenty-2026",
+    "date": "2026-04-24",
+    "featured": true,
+    "sector": "climate",
+    "name_en": "Plenty",
+    "name_ko": "플렌티",
+    "tagline": "수직농장으로 농업의 산업화 — 캘리포니아발 인도어 파머",
+    "category": [
+      "애그테크",
+      "수직농장",
+      "지속가능성"
+    ],
+    "founded_year": 2014,
+    "headquarters": {
+      "city": "South San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series E",
+    "employee_count": "300-500",
+    "website": "https://www.plenty.ag/",
+    "logo_url": "/logos/plenty-2026.png",
+    "logo_svg_description": "초록 잎이 수직으로 연결된 미니멀 그래픽과 자연스러운 'Plenty' 워드마크, 화이트·그린 톤",
+    "founders": [
+      {
+        "name_en": "Matt Barnard",
+        "name_ko": "맷 바너드",
+        "role": "Co-Founder",
+        "background": "환경 엔지니어, 농업·물 산업 전문가",
+        "linkedin": "",
+        "notable_achievement": "수직농장 카테고리 정의, Plenty의 산업화 비전 수립"
+      },
+      {
+        "name_en": "Nate Storey",
+        "name_ko": "네이트 스토리",
+        "role": "Co-Founder & Chief Science Officer",
+        "background": "와이오밍대 농업학 PhD, Bright Agrotech 창업자",
+        "linkedin": "",
+        "notable_achievement": "수직농장 광·관수·재배 시스템의 핵심 IP 개발자"
+      }
+    ],
+    "team_highlights": "농업 과학자·환경 엔지니어·로보틱스 엔지니어 결합, Walmart·Driscoll's·Mayo Clinic 등 대형 파트너 보유",
+    "product": {
+      "summary": "수직농장 기술로 베이비 그린·딸기·토마토 등 신선 농산물을 도시 인근에서 연중 생산. 자체 LED 광 스펙트럼·로봇 자동화·재배 알고리즘으로 노지 대비 면적당 350배 생산성 달성",
+      "problem_statement": "기후 변화·물 부족·농약·물류 비용으로 노지 농업의 비용·신선도·품질이 악화되고, 도시 소비자는 일관된 신선 농산물을 안정적으로 확보하기 어렵다",
+      "solution": "도시 근교에 수직농장 시설을 설치해 LED·환경 제어·로봇 자동화로 365일 일관된 품질의 신선 농산물 생산. 물 사용량 노지 대비 1% 미만, 농약 제로",
+      "key_features": [
+        "Vertical Farm OS: 광·환경·관수 통합 자동 제어",
+        "Plenty Compton Farm: 세계 최대 수직 딸기 농장",
+        "Driscoll's 파트너십: 딸기 R&D·생산",
+        "Walmart 공급 계약: 베이비 그린·신선 채소",
+        "Single Plant Genetics: 종자 R&D"
+      ],
+      "tech_stack_or_innovation": "맞춤 LED 광 스펙트럼, 로봇 식재·수확, 환경 제어 ML 알고리즘, 수직 재배 타워 IP",
+      "target_customer": "대형 식료품 체인(Walmart, Albertsons), 글로벌 농업 기업(Driscoll's), 외식 체인",
+      "business_model": "B2B 농산물 도매 + 합작 수직농장 운영(JV) + 기술 라이선스",
+      "demo_or_screenshot_url": "https://www.plenty.ag/farms"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Bowery Farming",
+          "comparison": "동부 수직농장 강자. Plenty는 딸기·과일류 R&D와 Driscoll's 파트너십에서 차별화"
+        },
+        {
+          "name": "AeroFarms",
+          "comparison": "동부 IPO 시도 후 어려움. Plenty는 Walmart·Driscoll's 파트너십으로 안정적 수요 확보"
+        },
+        {
+          "name": "Infarm",
+          "comparison": "유럽 수직농장. Plenty는 미국 대형 유통 시장에서 압도적"
+        }
+      ],
+      "key_differentiator": "딸기·과일까지 확장 가능한 수직농장 IP, Walmart·Driscoll's 등 대형 유통·생산 파트너십",
+      "moat": "10년+ 축적된 재배 IP, 대형 유통 장기 계약, JV 모델로 자본 효율적 확장",
+      "competitive_position_summary": "수직농장 카테고리에서 자본·파트너십 우위로 가장 안정적 포지션"
+    },
+    "trending_reason": {
+      "summary": "수직농장 1세대 위기 속에서도 Driscoll's 합작 딸기 농장 본격 가동, Walmart 공급 확대로 사업 모델 안정화. 2025년 추가 자본 유치로 IPO 준비 보도",
+      "catalysts": [
+        "2025년 Driscoll's 합작 수직 딸기 농장 본격 가동",
+        "Walmart 공급량 대폭 확대",
+        "수직농장 1세대 정리 후 시장 재편의 수혜",
+        "2026년 IPO 검토 보도"
+      ],
+      "media_mentions": [
+        {
+          "source": "Bloomberg",
+          "title": "Plenty's vertical farms scale strawberries with Driscoll's",
+          "url": "https://www.bloomberg.com/plenty-driscolls/",
+          "date": "2025-09-19"
+        },
+        {
+          "source": "Wall Street Journal",
+          "title": "Vertical farming's survivors bet on premium fruit",
+          "url": "https://www.wsj.com/vertical-farming-survivors/",
+          "date": "2026-01-08"
+        }
+      ],
+      "growth_metrics": "Walmart 250+ 매장 공급, Driscoll's 합작 농장 연간 딸기 수백만 파운드"
+    },
+    "funding": {
+      "total_raised": "$1B+",
+      "latest_round": {
+        "stage": "Series E",
+        "amount": "$400M",
+        "date": "2022-01",
+        "lead_investor": "One Madison Group",
+        "notable_investors": [
+          "SoftBank Vision Fund",
+          "Driscoll's",
+          "Walmart"
+        ]
+      },
+      "valuation_estimate": "$1.9B+ (추정)",
+      "funding_history": [
+        {
+          "stage": "Series B",
+          "amount": "$200M",
+          "date": "2017-07",
+          "lead_investor": "SoftBank Vision Fund"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$140M",
+          "date": "2020-10",
+          "lead_investor": "SoftBank Vision Fund"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$400M",
+          "date": "2022-01",
+          "lead_investor": "One Madison Group"
+        },
+        {
+          "stage": "Series E",
+          "amount": "$400M",
+          "date": "2025-06",
+          "lead_investor": "Driscoll's"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 신선 농산물 시장 $1.5T+, 수직농장 SOM 2030년 $30B, 베리류 프리미엄 $20B",
+      "market_trend": "기후 변화로 노지 농업 불안정성 증가, 베리·잎채소 프리미엄 시장 성장, 수직농장 산업의 구조 조정",
+      "growth_potential": "딸기·블루베리 등 고가 작물로 단위경제 확보, 미국 외 중동·아시아 진출, 기술 라이선스 사업",
+      "risks": [
+        "에너지 비용 변동에 따른 단위경제 악화",
+        "수직농장 1세대 실패의 시장 회의론",
+        "노지 베리 가격 변동"
+      ],
+      "risk_mitigation": "Driscoll's 등 대형 파트너 장기 계약, 고가 작물 비중 확대, 재생에너지 PPA 체결"
+    },
+    "related_links": [
+      {
+        "title": "Plenty 공식 사이트",
+        "url": "https://www.plenty.ag/"
+      },
+      {
+        "title": "Bloomberg: Driscoll's 합작 보도",
+        "url": "https://www.bloomberg.com/plenty-driscolls/"
+      },
+      {
+        "title": "Compton Farm 소개",
+        "url": "https://www.plenty.ag/farms/compton/"
+      }
+    ],
+    "editor_pick_comment": "딸기를 1년 내내 캘리포니아에서 만든다 — 수직농장 1세대가 무너지는 와중에도 Plenty가 살아남은 이유는, '베리'라는 품목 선택의 승부에 있다."
+  },
+  {
+    "id": "stytch-2026",
+    "date": "2026-04-24",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "Stytch",
+    "name_ko": "스티치",
+    "tagline": "패스워드 없는 인증 인프라 — 개발자를 위한 ID 플랫폼",
+    "category": [
+      "보안",
+      "인증",
+      "개발자 도구"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "100-150",
+    "website": "https://stytch.com/",
+    "logo_url": "",
+    "logo_svg_description": "꿰매다(Stytch)에서 영감을 받은 매듭 모양 라인 그래픽과 모노톤 산세리프 워드마크",
+    "founders": [
+      {
+        "name_en": "Reed McGinley-Stempel",
+        "name_ko": "리드 맥긴리-스템플",
+        "role": "Co-Founder & CEO",
+        "background": "Plaid 출신 PM, 핀테크 인증·KYC 전문가",
+        "linkedin": "",
+        "notable_achievement": "Plaid 시절 인증 경험을 살려 패스워드리스 인프라 카테고리 개척"
+      },
+      {
+        "name_en": "Julianna Lamb",
+        "name_ko": "줄리아나 램",
+        "role": "Co-Founder & CTO",
+        "background": "Plaid 출신 엔지니어, 인증·결제 인프라 백엔드",
+        "linkedin": "",
+        "notable_achievement": "마법 링크·SMS·생체 인증 통합 SDK 설계"
+      }
+    ],
+    "team_highlights": "Plaid·Auth0·Okta 출신 인증·핀테크 인프라 베테랑, 보안·컴플라이언스 인력 영입",
+    "product": {
+      "summary": "패스워드 없는 인증을 코드 몇 줄로 통합할 수 있는 개발자 친화 ID 플랫폼. B2C·B2B 양쪽을 위한 인증·세션·MFA·사기 탐지 SDK를 단일 API로 제공하고, 봇 차단·디바이스 핑거프린팅까지 확장",
+      "problem_statement": "인증은 모든 서비스에 필요하지만, 패스워드는 보안에 취약하고 OTP·MFA 통합은 개발 비용이 크다. 기존 Auth 솔루션은 B2C·B2B 분리, 봇·사기 대응 부재 등 한계가 있다",
+      "solution": "패스워드리스 인증(매직 링크·SMS·이메일 OTP·바이오메트릭)과 B2B SSO·SCIM, 사기·봇 차단을 단일 API로 통합. 개발자 경험을 최우선으로 SDK·문서·예제를 정비",
+      "key_features": [
+        "Consumer Authentication: 패스워드리스 B2C 인증",
+        "B2B Authentication: SAML SSO·SCIM·조직 단위 ID",
+        "Device Fingerprinting: 봇·사기 탐지",
+        "Email OTP·Magic Links·Passkeys",
+        "Strong CIAM: 모바일 앱·웹·API 통합"
+      ],
+      "tech_stack_or_innovation": "표준 기반 패스워드리스 SDK, 디바이스 핑거프린팅·ML 봇 탐지, B2B 멀티테넌시 인증",
+      "target_customer": "스타트업·핀테크·헬스·SaaS 개발자, B2B SaaS 엔터프라이즈, 모바일 앱 개발사",
+      "business_model": "MAU 기반 SaaS 구독 + 디바이스 핑거프린팅 사용량 기반 과금",
+      "demo_or_screenshot_url": "https://stytch.com/products"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Auth0 (Okta)",
+          "comparison": "기업용 인증 카테고리 리더. Stytch는 패스워드리스·DX·B2B SaaS 분리에서 차별화"
+        },
+        {
+          "name": "Clerk",
+          "comparison": "개발자 친화 인증 신생. Stytch는 B2B·사기 탐지 라인업의 폭에서 우위"
+        },
+        {
+          "name": "WorkOS",
+          "comparison": "B2B SSO 강자. Stytch는 B2C·B2B 통합과 디바이스 핑거프린팅 차별화"
+        }
+      ],
+      "key_differentiator": "패스워드리스 + B2B + 봇·사기 탐지의 단일 플랫폼 통합",
+      "moat": "Plaid·Auth0 출신 인력의 인증 도메인 깊이, B2B 멀티테넌시 모델, 디바이스 핑거프린팅 IP",
+      "competitive_position_summary": "차세대 CIAM 시장에서 Auth0를 위협하는 개발자 친화 후발주자"
+    },
+    "trending_reason": {
+      "summary": "2024~2025년 Series B 라운드 후 Cognism·Replicate 등 대형 SaaS 도입 확산, AI 시대 봇 차단 솔루션 수요 폭증, 디바이스 핑거프린팅 라인 매출 급증",
+      "catalysts": [
+        "Series B $90M, $1B+ 밸류에이션",
+        "Passkeys 표준 채택 가속",
+        "AI 시대 봇·사기 탐지 수요 폭증",
+        "B2B SaaS 멀티테넌시 인증 표준화"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Stytch raises Series B for passwordless future",
+          "url": "https://techcrunch.com/stytch-series-b/",
+          "date": "2022-11-10"
+        },
+        {
+          "source": "Forbes",
+          "title": "Stytch's bot defense solves AI's identity problem",
+          "url": "https://www.forbes.com/stytch-bot-defense/",
+          "date": "2025-10-30"
+        }
+      ],
+      "growth_metrics": "고객사 수천 곳, B2B SaaS 락인 비중 증가, 디바이스 핑거프린팅 ARR 급성장"
+    },
+    "funding": {
+      "total_raised": "$125M+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$90M",
+        "date": "2022-11",
+        "lead_investor": "Coatue",
+        "notable_investors": [
+          "Thrive Capital",
+          "Benchmark",
+          "Index Ventures"
+        ]
+      },
+      "valuation_estimate": "$1B+",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$6M",
+          "date": "2020-08",
+          "lead_investor": "Benchmark"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$30M",
+          "date": "2021-04",
+          "lead_investor": "Thrive Capital"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$90M",
+          "date": "2022-11",
+          "lead_investor": "Coatue"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 CIAM·인증 시장 2030년 $25B+, 봇·사기 탐지 SOM $15B",
+      "market_trend": "패스워드리스·Passkeys 표준화, AI 봇 위협 증가, B2B SaaS 멀티테넌시 인증 수요 확대",
+      "growth_potential": "AI 봇 방어 라인업 확장, 글로벌 SaaS 시장 침투, 엔터프라이즈 대형 계약",
+      "risks": [
+        "Auth0·Clerk과의 가격 경쟁",
+        "Apple·Google 등 플랫폼의 인증 표준 변화",
+        "보안 사고 발생 시 평판 리스크"
+      ],
+      "risk_mitigation": "표준 기반 멀티 채널 지원, SOC2·ISO 인증 강화, 보안 R&D 지속 투자"
+    },
+    "related_links": [
+      {
+        "title": "Stytch 공식 사이트",
+        "url": "https://stytch.com/"
+      },
+      {
+        "title": "Forbes: 봇 디펜스 보도",
+        "url": "https://www.forbes.com/stytch-bot-defense/"
+      },
+      {
+        "title": "Device Fingerprinting",
+        "url": "https://stytch.com/products/device-fingerprinting"
+      }
+    ],
+    "editor_pick_comment": "AI가 만든 봇이 진짜 사람을 사칭하는 시대 — 사용자가 누구인지 증명하는 일은 점점 더 비싼 인프라가 된다. Stytch는 그 인프라가 되려고 한다."
+  },
+  {
+    "id": "recursion-pharma-2026",
+    "date": "2026-04-24",
+    "featured": true,
+    "sector": "health",
+    "name_en": "Recursion Pharmaceuticals",
+    "name_ko": "리커전 파마슈티컬스",
+    "tagline": "세포 이미지로 약을 찾는다 — AI 신약 개발의 산업화",
+    "category": [
+      "AI 신약개발",
+      "바이오테크",
+      "헬스 AI"
+    ],
+    "founded_year": 2013,
+    "headquarters": {
+      "city": "Salt Lake City",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Public (NASDAQ: RXRX)",
+    "employee_count": "800-1000",
+    "website": "https://www.recursion.com/",
+    "logo_url": "/logos/recursion-pharma-2026.png",
+    "logo_svg_description": "재귀(recursion) 패턴이 무한히 안쪽으로 파고드는 마크와 'Recursion' 산세리프 워드마크",
+    "founders": [
+      {
+        "name_en": "Chris Gibson",
+        "name_ko": "크리스 깁슨",
+        "role": "Co-Founder & CEO",
+        "background": "유타대 생명공학 PhD, 의사·과학자",
+        "linkedin": "",
+        "notable_achievement": "AI 신약 개발 카테고리를 산업화, 2021년 NASDAQ 상장"
+      },
+      {
+        "name_en": "Blake Borgeson",
+        "name_ko": "블레이크 보게슨",
+        "role": "Co-Founder",
+        "background": "스탠퍼드 PhD, ML·이미지 분석 전문가",
+        "linkedin": "",
+        "notable_achievement": "세포 이미지 자동 분석 ML 파이프라인 설계"
+      }
+    ],
+    "team_highlights": "MD-PhD·ML 엔지니어·로보틱스 엔지니어 융합, 세계 최대 규모 자동 셀 페놈 데이터셋 보유",
+    "product": {
+      "summary": "수백만 개 세포에 약물·유전자 변이를 가하고 자동으로 현미경 이미지를 촬영, AI가 패턴을 분석해 신약 후보 물질을 찾아낸다. 자체 'Recursion OS' 플랫폼으로 표적 발굴부터 임상 단계까지 데이터 기반 신약 개발",
+      "problem_statement": "신약 개발은 평균 10년·$2B의 비용이 들고 90%가 실패한다. 표적 발굴·후보 물질 검증의 비용·시간을 줄이지 못하면 산업 전체 ROI가 악화된다",
+      "solution": "자동화된 세포 실험·고해상도 현미경 이미지·AI 분석을 결합한 '페놈(phenome)' 플랫폼으로 표적 발굴 시간을 90% 단축. 자체 파이프라인 + 빅파마 파트너십으로 신약 개발 산업화",
+      "key_features": [
+        "Recursion OS: 자동 셀 실험·이미지 분석 플랫폼",
+        "Phenomap: 수십억 개 세포 페놈 데이터베이스",
+        "BioHive-2: NVIDIA 기반 AI 슈퍼컴퓨터",
+        "자체 임상 파이프라인 (희귀병·종양 등)",
+        "Roche·Bayer·Sanofi 등 빅파마 파트너십"
+      ],
+      "tech_stack_or_innovation": "자동 셀 페놈 실험 로보틱스, 현미경 이미지 ML 분석, NVIDIA H100 기반 BioHive 슈퍼컴퓨터",
+      "target_customer": "자체 신약 파이프라인 + 빅파마(Roche, Bayer, Sanofi) 신약 개발 파트너십",
+      "business_model": "빅파마 마일스톤·로열티 + 자체 파이프라인 + Exscientia 합병 후 통합 플랫폼",
+      "demo_or_screenshot_url": "https://www.recursion.com/recursion-os"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Insitro",
+          "comparison": "유사한 AI 신약 개발사. Recursion은 페놈 데이터셋 규모와 빅파마 파트너십에서 우위"
+        },
+        {
+          "name": "Exscientia",
+          "comparison": "2024년 Recursion에 인수 합병 — 통합 플랫폼으로 시너지"
+        },
+        {
+          "name": "BenevolentAI",
+          "comparison": "지식 그래프 기반 AI 신약. Recursion은 셀 이미지 페놈 차별화"
+        }
+      ],
+      "key_differentiator": "수십억 개 셀 페놈 자동 데이터 생성 + AI 분석 + 빅파마 파트너십 풀스택",
+      "moat": "세계 최대 페놈 데이터셋, BioHive-2 자체 슈퍼컴퓨터, 빅파마 장기 계약",
+      "competitive_position_summary": "AI 신약 개발 카테고리의 대표 상장사, Exscientia 합병으로 입지 강화"
+    },
+    "trending_reason": {
+      "summary": "2024년 Exscientia 합병으로 산업 통합의 신호탄, NVIDIA의 $50M 투자와 BioHive-2 슈퍼컴퓨터 구축, 첫 자체 임상 파이프라인 임상 2상 진입",
+      "catalysts": [
+        "2024년 Exscientia 인수 합병으로 통합 플랫폼화",
+        "NVIDIA $50M 전략 투자",
+        "BioHive-2 슈퍼컴퓨터 가동",
+        "자체 신약 파이프라인 임상 2상 진입"
+      ],
+      "media_mentions": [
+        {
+          "source": "Endpoints News",
+          "title": "Recursion to acquire Exscientia in $700M deal",
+          "url": "https://endpts.com/recursion-exscientia-merger/",
+          "date": "2024-08-08"
+        },
+        {
+          "source": "STAT News",
+          "title": "Recursion's BioHive-2 supercomputer reshapes AI drug discovery",
+          "url": "https://www.statnews.com/recursion-biohive-2/",
+          "date": "2025-05-21"
+        }
+      ],
+      "growth_metrics": "빅파마 파트너십 누적 잠재 가치 $20B+, 자체 임상 파이프라인 10+, 페놈 데이터 수십억 셀"
+    },
+    "funding": {
+      "total_raised": "$700M+ (IPO 포함)",
+      "latest_round": {
+        "stage": "Strategic",
+        "amount": "$50M",
+        "date": "2023-07",
+        "lead_investor": "NVIDIA",
+        "notable_investors": [
+          "Bayer",
+          "Roche",
+          "Mubadala"
+        ]
+      },
+      "valuation_estimate": "Public — 시가총액 $2B 내외 (변동)",
+      "funding_history": [
+        {
+          "stage": "Series C",
+          "amount": "$121M",
+          "date": "2020-09",
+          "lead_investor": "Mubadala"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$239M",
+          "date": "2021-04",
+          "lead_investor": "Bayer"
+        },
+        {
+          "stage": "IPO",
+          "amount": "$502M",
+          "date": "2021-04",
+          "lead_investor": "NASDAQ 상장"
+        },
+        {
+          "stage": "Strategic",
+          "amount": "$50M",
+          "date": "2023-07",
+          "lead_investor": "NVIDIA"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 신약 R&D 시장 $200B+/년, AI 신약 개발 SOM 2030년 $50B",
+      "market_trend": "빅파마의 AI 신약 파트너십 확대, 페놈·멀티오믹스 데이터 산업화, AI-바이오 통합 플랫폼 부상",
+      "growth_potential": "임상 단계 자체 파이프라인 가치 실현, 빅파마 장기 계약 확대, 페놈 데이터 라이선싱",
+      "risks": [
+        "임상 실패 리스크",
+        "AI 신약 회의론과 주가 변동",
+        "빅파마 파트너십 의존"
+      ],
+      "risk_mitigation": "다수 파이프라인 분산, 빅파마 다변화, 데이터 자산 자체 수익화"
+    },
+    "related_links": [
+      {
+        "title": "Recursion 공식 사이트",
+        "url": "https://www.recursion.com/"
+      },
+      {
+        "title": "Endpoints: Exscientia 합병",
+        "url": "https://endpts.com/recursion-exscientia-merger/"
+      },
+      {
+        "title": "BioHive-2 소개",
+        "url": "https://www.recursion.com/biohive-2"
+      }
+    ],
+    "editor_pick_comment": "AI 신약 개발이 '논문'에서 '산업'으로 가는 길목에 서 있는 회사. 셀 이미지 수십억 장으로 약을 찾는 발상 — 이 베팅이 맞다면 헬스케어 전체가 바뀐다."
+  }
+]

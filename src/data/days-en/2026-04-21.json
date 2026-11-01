@@ -1,0 +1,427 @@
+{
+  "nuro-2026": {
+    "tagline": "A fridge on the road delivers — the pinnacle of autonomous last-mile delivery",
+    "category": [
+      "Autonomous driving",
+      "Delivery robotics",
+      "Last-mile logistics"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Former core engineer of Google's self-driving car project (now Waymo), Ph.D. in Robotics from Carnegie Mellon University",
+        "notable_achievement": "As an early member of Google's self-driving car project, designed the architecture of the autonomous driving perception system"
+      },
+      {
+        "background": "Former lead software engineer of Google's self-driving car project, Ph.D. in Computer Science from University of Virginia",
+        "notable_achievement": "Led the development of core modules in Waymo's autonomous driving software stack"
+      }
+    ],
+    "team_highlights": "Founding team from Google/Waymo self-driving project, over 1,000 PhD-level engineers in robotics and AI, obtained the first NHTSA regulatory exemption for commercial autonomous delivery vehicles",
+    "product": {
+      "summary": "A last-mile delivery platform that develops and operates a small unmanned autonomous delivery vehicle, R3, optimized for pedestrian safety, delivering groceries, pharmaceuticals, parcels, etc., completely unmanned to the customer's doorstep",
+      "problem_statement": "Last-mile delivery costs account for over 50% of total logistics costs, and the structure is unsustainable due to labor shortages and wage increases. Existing large autonomous vehicles pose high pedestrian safety risks and regulatory barriers",
+      "solution": "Maximizes pedestrian safety with a small, dedicated delivery vehicle (R3) that does not carry people, and realizes fully unmanned delivery even in complex residential areas with its proprietary autonomous driving stack. As of 2026, commercial service is operating in multiple cities",
+      "key_features": [
+        "R3 autonomous delivery vehicle: a small dedicated vehicle designed to minimize impact in pedestrian collisions",
+        "Nuro Driver: self-developed L4 autonomous driving software stack",
+        "Temperature-controlled cargo compartment: capable of simultaneous refrigerated and ambient temperature delivery",
+        "Nuro App: real-time delivery tracking and remote cargo compartment access",
+        "Multi-partner platform: integrated operation with large retailers such as Kroger, Walmart, FedEx"
+      ],
+      "tech_stack_or_innovation": "Self-developed autonomous driving stack (camera, LiDAR, radar fusion), pedestrian safety design for small vehicles (external airbags, low speed limit), cloud-based remote monitoring system, delivery route optimization AI",
+      "target_customer": "Large grocery chains (Kroger, Walmart), convenience store/pharmacy chains (CVS, 7-Eleven), logistics companies (FedEx), local commerce operators",
+      "business_model": "B2B platform model based on per-delivery fee + autonomous driving technology licensing"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Performs last-mile delivery with small sidewalk-driving robots. Nuro, with its road-driving vehicles, offers wider delivery radius and larger cargo capacity"
+        },
+        {
+          "comparison": "Focuses on middle-mile autonomous trucks. Nuro specializes in last-mile doorstep delivery, positioning itself as complementary"
+        },
+        {
+          "comparison": "Was a sidewalk-driving delivery robot but scaled down the project in 2022. Nuro succeeded in practical commercialization with road-driving vehicles"
+        }
+      ],
+      "key_differentiator": "Pioneered a unique category of small, dedicated delivery vehicles that do not carry people, obtaining the first NHTSA regulatory exemption, achieving both pedestrian safety and commercialization",
+      "moat": "NHTSA regulatory exemption (2-3 years ahead of competitors), large partnership network including Walmart, Kroger, FedEx, over 1 billion miles of autonomous driving data, $2.1B+ cumulative investment",
+      "competitive_position_summary": "As the de facto leading company that defined the road-driving unmanned delivery vehicle category, it holds a multi-year lead over competitors in regulation, partnerships, and technology"
+    },
+    "trending_reason": {
+      "summary": "In 2026, with commercial service expansion to 5 states including Texas and California, a large-scale partnership with FedEx, and a trend toward deregulation of autonomous delivery, it is being reexamined",
+      "catalysts": [
+        "Expansion of commercial service to 5 states including Texas, Arizona, and California in early 2026",
+        "Signing of a nationwide autonomous delivery partnership with FedEx",
+        "Progress in the U.S. federal autonomous driving regulatory framework making nationwide expansion more visible",
+        "Establishment of mass production system for R3 vehicles and nearing break-even point for delivery unit cost"
+      ],
+      "growth_metrics": "Monthly deliveries surpassing 500,000, 3x growth year-over-year, over 20 partner retailers"
+    },
+    "funding": {
+      "valuation_estimate": "$8.6B (as of 2025)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global last-mile delivery market projected at $200B in 2030, autonomous delivery segment expected at $30B, U.S. market at $12B",
+      "market_trend": "Surge in last-mile delivery demand due to e-commerce growth, worsening delivery labor shortage, accelerating overhaul of autonomous driving regulatory framework",
+      "growth_potential": "Expansion of delivery categories from grocery to pharmaceuticals, parcels, convenience store products; potential for expansion from nationwide U.S. to global",
+      "risks": [
+        "Possibility of strengthened regulations in the event of an autonomous driving safety accident",
+        "Entry of large tech companies (Amazon, Waymo) into self-developed delivery robots",
+        "High capital consumption until securing delivery unit cost profitability"
+      ],
+      "risk_mitigation": "Minimize accident risk with pedestrian-first design, secure volume through large retailer partnerships, accelerate unit cost reduction with mass production system"
+    },
+    "related_links": [
+      {
+        "title": "Nuro Official Website"
+      },
+      {
+        "title": "TechCrunch: Nuro FedEx Partnership Coverage"
+      },
+      {
+        "title": "Bloomberg: Nuro Autonomous Delivery Analysis"
+      }
+    ],
+    "editor_pick_comment": "The 'driverless delivery vehicle' created by the Waymo duo has finally gained real traction. The first regulatory exemption, FedEx partnership, expansion to 5 states — a company that will become the textbook for autonomous delivery."
+  },
+  "propertyguru-2026": {
+    "tagline": "Real estate transactions for Southeast Asia's 600 million people on one platform — Asia's No.1 proptech",
+    "category": [
+      "Proptech",
+      "Real estate platform",
+      "Fintech"
+    ],
+    "headquarters": {
+      "country_ko": "Singapore"
+    },
+    "founders": [
+      {
+        "background": "Finnish serial entrepreneur, pioneer of Southeast Asia's digital real estate market, graduate of Helsinki University of Technology",
+        "notable_achievement": "Grew PropertyGuru into Southeast Asia's largest real estate platform and achieved NYSE listing (SPAC, 2022)"
+      },
+      {
+        "background": "British tech entrepreneur, specialist in Asian digital marketplaces",
+        "notable_achievement": "Led PropertyGuru's expansion into five countries: Singapore, Malaysia, Thailand, Vietnam, and Indonesia"
+      }
+    ],
+    "team_highlights": "A co-founding team from Finland and the UK built Southeast Asia's largest proptech in Singapore; NYSE-listed company with a global team of over 1,200 across five countries",
+    "product": {
+      "summary": "The largest real estate platform in Southeast Asia, offering buying, selling, renting, and new development listings across five countries (Singapore, Malaysia, Thailand, Vietnam, Indonesia). Integrates AI-based price estimation, mortgage comparison, and real estate data analytics.",
+      "problem_statement": "Southeast Asia's real estate market suffers from severe information asymmetry, opaque transactions, and fragmented financial services such as loans and insurance, causing inefficiencies for buyers, renters, and developers.",
+      "solution": "A one-stop real estate platform combining Southeast Asia's largest property listing database with AI price estimation (PropertyGuru Lens), mortgage comparison (PropertyGuru Finance), and data analytics (DataSense).",
+      "key_features": [
+        "PropertyGuru Lens: AI-based property valuation and market analysis",
+        "PropertyGuru Finance: one-stop mortgage, insurance comparison, and application service",
+        "DataSense: B2B market data analytics platform for property developers and agencies",
+        "Agent Toolkit: lead management and marketing automation tools for real estate agents",
+        "Integrated listings across five Southeast Asian countries: property listing data of over 35 million units"
+      ],
+      "tech_stack_or_innovation": "AI-based automated property valuation (AVM) model, computer vision-based listing photo analysis and quality assessment, big data-driven market trend prediction engine, and embedded finance APIs (integrating loans and insurance).",
+      "target_customer": "Prospective property buyers and renters (B2C), real estate agencies and brokers (B2B), property developers (B2B), and financial institutions (loan/insurance partnerships).",
+      "business_model": "Listing and advertising fees from agencies and developers (core revenue) + PropertyGuru Finance financial brokerage fees + DataSense SaaS subscriptions + premium agent tool subscriptions."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A Singapore-based real estate platform but limited to Singapore and Indonesia. PropertyGuru holds an overwhelming advantage with five-country coverage and integrated financial services."
+        },
+        {
+          "comparison": "Acquired by PropertyGuru in 2023 and integrated into its platform. Secured the No.1 position in Vietnam's market."
+        },
+        {
+          "comparison": "A Southeast Asian real estate platform under Australia's REA Group. Trails PropertyGuru in listing count and MAU."
+        }
+      ],
+      "key_differentiator": "Economies of scale from an integrated five-country Southeast Asian platform and a full-stack value chain spanning listings → finance → data analytics.",
+      "moat": "Southeast Asia's largest property listing database (35 million listings), network effects from 35 million monthly visitors, deep local market understanding across five countries, and credibility as a NYSE-listed company.",
+      "competitive_position_summary": "The dominant No.1 in Southeast Asia's digital real estate platform space, with a strong moat built on vertical integration of listings, finance, and data, plus five-country network effects."
+    },
+    "trending_reason": {
+      "summary": "Rerate in 2026 on the back of PropertyGuru Finance's expanded embedded mortgage services in Southeast Asia, AI Lens enhancements, and a recovering regional property market.",
+      "catalysts": [
+        "PropertyGuru Finance expands to more countries in 2026 — accelerating the financialization (fintech-ification) of real estate transactions.",
+        "AI Lens achieves 95% accuracy in property valuation, driving a surge in users.",
+        "Southeast Asia's property market has been recovering since H2 2025, with rising transaction volume.",
+        "DataSense B2B revenue grows 70% year-over-year."
+      ],
+      "growth_metrics": "35 million monthly visitors, processed mortgage applications surpassed B+, DataSense B2B revenue up 70% YoY, 35 million listings across five countries."
+    },
+    "funding": {
+      "total_raised": "$700M+ (including IPO)",
+      "valuation_estimate": "$1.2B (based on NYSE market capitalization)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Southeast Asia's total real estate transaction value: $300B+ annually; online real estate platform market projected to reach $15B by 2030; Southeast Asia mortgage tech market: $5B.",
+      "market_trend": "Rising urbanization in Southeast Asia (projected 50% by 2030), digital real estate transaction penetration still below 10% with enormous growth headroom, and accelerating convergence of embedded finance and real estate.",
+      "growth_potential": "Expansion from real estate transactions into a lifestyle super-app covering mortgages, insurance, interior design, and moving services; entry into new markets such as India and the Philippines; and scaling of B2B data analytics SaaS.",
+      "risks": [
+        "Declining transaction volume due to a downturn in Southeast Asia's property market or interest rate hikes.",
+        "Operational complexity from varied regulatory environments across countries.",
+        "Local competitors such as 99.co targeting niche segments."
+      ],
+      "risk_mitigation": "Diversifying reliance on transaction volume through financial and B2B data revenue; regulatory response capabilities built on five-country operating experience; and a strategy of consolidating competitors via M&A (e.g., Batdongsan acquisition)."
+    },
+    "related_links": [
+      {
+        "title": "PropertyGuru Group Official Website"
+      },
+      {
+        "title": "Nikkei Asia: Analysis of PropertyGuru's AI and fintech strategy"
+      },
+      {
+        "title": "Tech in Asia: PropertyGuru Finance mortgage milestone"
+      }
+    ],
+    "editor_pick_comment": "PropertyGuru is changing how Southeast Asia's 600 million people buy and rent homes. Its evolution from listings into a real estate super-app encompassing loans and insurance is impressive."
+  },
+  "gradiant-2026": {
+    "tagline": "Recovers clean water and resources from industrial wastewater simultaneously — a watertech innovation",
+    "category": [
+      "Watertech",
+      "Water treatment",
+      "Cleantech"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "PhD in chemical engineering from MIT; expert in industrial wastewater treatment technology research",
+        "notable_achievement": "Commercialized Carrier Gas Extraction (CGE) technology developed at MIT, pioneering the semiconductor fab wastewater treatment market"
+      },
+      {
+        "background": "PhD in mechanical engineering from MIT; specialist in desalination and thermal-based water treatment systems",
+        "notable_achievement": "Invented Counter-Flow Reverse Osmosis (CFRO) technology, improving energy efficiency by 50% compared to conventional reverse osmosis"
+      }
+    ],
+    "team_highlights": "Two MIT PhD co-founders, more than 50 patents in water treatment, and global semiconductor companies including TSMC, Intel, and Samsung as customers",
+    "product": {
+      "summary": "An industrial water treatment solution that processes ultra-high-concentration wastewater from semiconductor, pharmaceutical, and energy facilities through a proprietary technology portfolio (CGE, CFRO, SmartOps), achieving 99% water recovery and zero liquid discharge (ZLD)",
+      "problem_statement": "A single semiconductor fab consumes millions of gallons of water daily, and wastewater from ultrapure water (UPW) production is highly concentrated and difficult to treat with existing technologies. With global water scarcity worsening, industrial water reuse has become an essential challenge",
+      "solution": "Using CGE (gas extraction desalination) and CFRO (counter-flow reverse osmosis) technologies developed at MIT, treats even ultra-high-concentration wastewater that conventional methods cannot handle, achieving 99% water recovery. AI-based SmartOps optimizes water treatment processes in real time",
+      "key_features": [
+        "Carrier Gas Extraction (CGE): thermal desalination technology designed for ultra-high-concentration wastewater",
+        "Counter-Flow Reverse Osmosis (CFRO): next-generation reverse osmosis with 50% improved energy efficiency",
+        "SmartOps: AI-based real-time water treatment process optimization platform",
+        "Zero Liquid Discharge (ZLD): zero-wastewater-discharge system",
+        "Free Radical Disinfection (FRD): chemical-free advanced oxidation treatment"
+      ],
+      "tech_stack_or_innovation": "CGE: extracts pure water from ultra-high-concentration wastewater using gas at temperatures below boiling point; CFRO: maximizes energy efficiency through bidirectional operation of reverse osmosis membranes; AI SmartOps: predictive maintenance and automated process optimization based on IoT sensor data",
+      "target_customer": "Semiconductor manufacturers (TSMC, Intel, Samsung), pharmaceutical and biotech companies, petrochemical and energy companies, data centers, and government water resource management agencies",
+      "business_model": "Water treatment system design and construction (EPC) + long-term operation and maintenance contracts (O&M) + SaaS-based SmartOps platform subscription"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "The world's largest water treatment company, but focused on general-purpose solutions. Gradiant holds differentiated technology specialized for ultra-high-purity industrial wastewater such as semiconductors"
+        },
+        {
+          "comparison": "An Israeli company specializing in large-scale desalination plants. Gradiant's strength lies in treating small-scale, high-concentration wastewater within industrial facilities"
+        }
+      ],
+      "key_differentiator": "With a proprietary water treatment technology portfolio (CGE, CFRO) specialized for cutting-edge industries such as semiconductor fabs, Gradiant pioneers the ultra-high-concentration wastewater segment that existing technologies cannot address",
+      "moat": "More than 50 core water treatment patents, long-term contracts with major semiconductor companies including TSMC and Intel, accumulated semiconductor fab water treatment references, and MIT technology license",
+      "competitive_position_summary": "A technology leader in high-difficulty industrial water treatment, with the explosive growth of the semiconductor industry and the water scarcity crisis acting as simultaneous catalysts"
+    },
+    "trending_reason": {
+      "summary": "The global semiconductor fab construction boom and intensifying water crisis have driven a surge in industrial water treatment demand; entered the unicorn club with a large $225M Series D round in 2025",
+      "catalysts": [
+        "Soaring water treatment demand from construction of new global semiconductor fabs including TSMC's Arizona, Japan, and Germany plants",
+        "Raised $225M in Series D in 2025, reaching unicorn valuation",
+        "Mandatory industrial water reuse regulations expanding worldwide as the global water scarcity crisis deepens",
+        "Watertech in the spotlight again as AI data center water consumption issues gain prominence"
+      ],
+      "growth_metrics": "Revenue grew 80% year-over-year, operations at more than 50 industrial facilities globally, and over 20 semiconductor fab projects won"
+    },
+    "funding": {
+      "valuation_estimate": "$1B+ (unicorn)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global industrial water treatment market projected at $50B by 2030; semiconductor fab water treatment segment $8B; ultra-high-purity wastewater treatment $3B",
+      "market_trend": "Semiconductor fab construction boom (CHIPS Act etc.), surging demand for data center cooling water, and mandatory zero wastewater discharge driven by stronger ESG standards",
+      "growth_potential": "Industry expansion from semiconductors to pharmaceuticals, petrochemicals, and lithium extraction; geographic expansion into water-scarce regions in the Middle East and Southeast Asia; growing recurring revenue from the SaaS SmartOps platform",
+      "risks": [
+        "Fab investment fluctuations due to semiconductor industry cycles",
+        "Technological catch-up from large water treatment companies such as Veolia",
+        "Long-term operational stability of new technology still needs to be proven"
+      ],
+      "risk_mitigation": "Diversifying revenue across industries beyond semiconductors, securing stable recurring revenue through long-term O&M contracts, and demonstrating technology reliability with more than 10 years of operational track record"
+    },
+    "related_links": [
+      {
+        "title": "Gradiant official website"
+      },
+      {
+        "title": "Reuters: Gradiant achieves unicorn status"
+      }
+    ],
+    "editor_pick_comment": "When TSMC was building its fab in Arizona, Gradiant was the first call. In an era of water scarcity, the technology that 'recovers 99% of water from wastewater' is no longer an option but a necessity."
+  },
+  "insilico-medicine-2026": {
+    "tagline": "AI decodes the secrets of aging and designs new drugs — the AI revolution in longevity science",
+    "category": [
+      "Longevity science",
+      "AI drug discovery",
+      "Biotech"
+    ],
+    "headquarters": {
+      "country_ko": "Hong Kong / China"
+    },
+    "founders": [
+      {
+        "background": "PhD in computer science and biophysics from Johns Hopkins University, world-renowned aging researcher, author of multiple books on longevity science",
+        "notable_achievement": "Established the first case of achieving target discovery→molecular design→clinical entry within 18 months using an AI-driven drug development pipeline; ISB-056 IPF treatment is in Phase 2 clinical trials"
+      }
+    ],
+    "team_highlights": "World-class researchers in aging biology and AI/deep learning, four hubs in Hong Kong, Shanghai, New York, and Abu Dhabi, multiple clinical-stage pipelines, 200+ papers in top journals including Nature and Science",
+    "product": {
+      "summary": "An end-to-end AI drug discovery company that uses its proprietary AI platforms (PandaOmics, Chemistry42, InClinico) to identify drug targets for aging-related diseases, generate and optimize novel molecules, and predict clinical trial success probability. Its lead pipeline is ISB-056, a treatment for idiopathic pulmonary fibrosis (IPF).",
+      "problem_statement": "Drug development takes an average of 10-15 years and costs.6B, with clinical success rates below 10%. Aging-related diseases (fibrosis, cancer, neurodegeneration) are especially difficult because their targets are complex and conventional methods make drug design extremely challenging.",
+      "solution": "Three AI platforms innovate the entire drug development process: PandaOmics (aging biomarker and target discovery), Chemistry42 (AI molecular generation and optimization), and InClinico (clinical trial success prediction and design). This shortens drug development to 18 months.",
+      "key_features": [
+        "PandaOmics: AI platform for disease target and biomarker discovery based on multi-omics data",
+        "Chemistry42: Generative AI engine for novel molecule design and optimization",
+        "InClinico: AI tool for predicting clinical trial success and optimizing trial design",
+        "ISB-056: IPF treatment discovered and designed by AI in 18 months (Phase 2)",
+        "Pharma.AI: B2B service providing the three AI platforms to pharma companies as SaaS",
+        "Aging Clock: diagnostic tool that uses AI to measure biological age"
+      ],
+      "tech_stack_or_innovation": "Transformer-based generative AI for molecular design (Chemistry42), GAN-based aging biomarker discovery, integrated multi-omics (genomics, transcriptomics, proteomics) analysis, reinforcement learning-based molecular optimization, NLP models for clinical outcome prediction",
+      "target_customer": "Global pharma companies (partners such as Sanofi, Inariel), biotech firms, longevity science research institutions, and developers of treatments for aging-related diseases",
+      "business_model": "Proprietary pipeline development (internal R&D) + AI platform licensing to pharma companies (Pharma.AI SaaS) + co-development partnerships with milestones and royalties"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A cell imaging-based AI drug discovery platform. Insilico is stronger in molecular generation (Chemistry42) and offers a full stack from target discovery to molecular design to clinical prediction."
+        },
+        {
+          "comparison": "A UK AI drug discovery company. Insilico differentiates itself with aging/longevity-focused pipelines and generative molecular design, and is also ahead in clinical advancement speed."
+        }
+      ],
+      "key_differentiator": "The only company with a full AI stack spanning target discovery to molecular generation to clinical prediction, and it holds aging/longevity-specialized pipelines and Aging Clock technology.",
+      "moat": "Integrated synergy across three AI drug discovery platforms, AI drug execution proven by ISB-056's Phase 2 trial, partnerships with major pharma companies like Sanofi, 200+ papers in journals such as Nature, and a global network spanning Hong Kong, China, and the Middle East.",
+      "competitive_position_summary": "Among the global leaders in AI drug discovery, with an unrivaled position in the aging/longevity science space. One of the very few companies to have an AI-designed drug reach Phase 2 clinical trials."
+    },
+    "trending_reason": {
+      "summary": "Positive interim Phase 2 results for ISB-056, the IPF treatment, combined with a longevity science investment boom from Saudi Arabia and UAE governments, expansion in the Middle East, and global attention as a proof point for AI-driven drugs.",
+      "catalysts": [
+        "ISB-056 (IPF treatment) Phase 2 interim results positive — first demonstration of clinical efficacy for an AI-designed drug",
+        "Surge in longevity science R&D investment from Saudi Arabia and UAE governments, expansion of the Abu Dhabi hub",
+        "Expansion of AI drug co-development partnership with Sanofi (up to.2B)",
+        "Growing application of Aging Clock technology in the wellness and insurance industries"
+      ],
+      "growth_metrics": "9 clinical pipelines of AI-designed drugs, total pharma partnership contract value B+, 30+ Pharma.AI platform customers"
+    },
+    "funding": {
+      "valuation_estimate": "B+ (unicorn)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global AI drug discovery market projected to reach B by 2030; aging-related disease treatment market B+; longevity science diagnostics and wellness market B",
+      "market_trend": "Growing application of generative AI to drug design, longevity science investment boom (especially in the Middle East and Asia), increasing clinical success cases of AI-designed drugs, and regulatory agencies establishing review frameworks for AI drugs.",
+      "growth_potential": "Expansion of pipelines beyond IPF into cancer, neurodegeneration, and metabolic diseases; wider adoption of Pharma.AI B2B SaaS by pharma companies; entry into consumer wellness and insurance markets based on the Aging Clock; and further expansion in the Middle East.",
+      "risks": [
+        "Uncertainty around late-stage (Phase 3) success of AI-designed drugs",
+        "Large pharma companies internalizing their own AI drug capabilities",
+        "Global business risk for Hong Kong/China-based companies due to U.S.-China technology competition"
+      ],
+      "risk_mitigation": "Diversified pipelines to mitigate single-trial failure risk, platform licensing to pharma companies (a partnership rather than competition strategy), and multi-hub operations in Abu Dhabi and the U.S. to spread geopolitical risk."
+    },
+    "related_links": [
+      {
+        "title": "Insilico Medicine official website"
+      },
+      {
+        "title": "Nature Biotechnology: Analysis of AI drug Phase 2 trials"
+      },
+      {
+        "title": "STAT News: IPF clinical trial results"
+      }
+    ],
+    "editor_pick_comment": "AI-designed drugs are starting to show real clinical efficacy. Insilico Medicine is the company running farthest ahead at the intersection of longevity science and AI drug discovery. From target to clinical trial in 18 months — that's a game changer."
+  },
+  "fourcasting-2026": {
+    "tagline": "If you can see your global supply chain in real time — the benchmark for logistics visibility",
+    "category": [
+      "Supply chain visibility",
+      "Logistics platform"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Kellogg MBA from Northwestern University, 15 years in supply chain management software, and a background at Oracle SCM",
+        "notable_achievement": "Grew FourKites into a category leader in supply chain visibility platforms, surpassing 3 million freight tracking events per day globally"
+      }
+    ],
+    "team_highlights": "Leadership team from enterprise SCM backgrounds at Oracle, SAP, and others; four global locations including an R&D center in Chennai, India; recognized as a Leader by Gartner in supply chain visibility",
+    "product": {
+      "summary": "End-to-end supply chain visibility SaaS platform that tracks cargo in real time across all transportation modes—truck, ocean, air, and rail—and offers AI-based ETA prediction, exception management, and carbon emission tracking",
+      "problem_statement": "Global supply chains pass through dozens of carriers, warehouses, and ports, making it difficult to understand cargo location and status in real time. When supply chain disruptions occur, slow responses result in lost revenue, excess inventory, and customer dissatisfaction",
+      "solution": "Integrates with more than 200 ERP, TMS, and telematics systems to track cargo around the world on a single platform in real time. AI predicts arrival times and detects anomalies in advance, allowing proactive responses",
+      "key_features": [
+        "Real-Time Visibility: Real-time multimodal freight tracking for truck, ocean, air, and rail",
+        "Dynamic ETA: AI/ML-based arrival time prediction (95%+ accuracy)",
+        "Exception Management: Automatic detection and alerts for anomalies such as delays and route deviations",
+        "Sustainability Hub: Automatic carbon emission tracking by transport mode and ESG reporting",
+        "Control Tower: Integrated dashboard with a full view of the supply chain",
+        "Yard Management: Management of vehicles and containers in warehouse and distribution center yards"
+      ],
+      "tech_stack_or_innovation": "Integration hub for 200+ ERP, TMS, and telematics systems; real-time GPS, IoT, and ELD data collection; ML-based ETA prediction engine; infrastructure processing more than 3 million freight tracking events per day; automated Scope 3 carbon emission calculation engine",
+      "target_customer": "Global manufacturing and consumer goods companies (Coca-Cola, AB InBev, Nestlé), 3PL logistics providers (XPO, DHL), retailers (Walmart), and energy/chemical companies",
+      "business_model": "Annual SaaS subscription (priced based on tracked freight volume and modules) plus premium analytics and consulting services"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Similar supply chain visibility platform, but primarily focused on North America and Europe. FourKites has broader global coverage including Asia, the Middle East, and South America, and is differentiated by its yard management capabilities"
+        },
+        {
+          "comparison": "Transport management platform with strong European presence. FourKites has an edge in multimodal visibility (including ocean and air) and AI ETA prediction"
+        }
+      ],
+      "key_differentiator": "Multimodal visibility tracking all modes—truck, ocean, air, rail—on a single platform, plus an ecosystem of 200+ system integrations that minimizes enterprise adoption barriers",
+      "moat": "Global network of 200+ system integrations (network effects), a large base of Fortune 500 customers, AI prediction models trained on 3 million daily tracking data points, and Gartner Leader recognition",
+      "competitive_position_summary": "One of the top two global leaders in supply chain visibility platforms, with strengths in a large enterprise customer base and multimodal coverage"
+    },
+    "trending_reason": {
+      "summary": "Persistent supply chain instability including the Red Sea crisis and Panama Canal drought is driving surging demand for visibility platforms; the 2026 launch of Sustainability Hub expands into the ESG regulatory compliance market",
+      "catalysts": [
+        "Ongoing global supply chain crises: Houthi attacks in the Red Sea and low water levels in the Panama Canal",
+        "Mandatory supply chain carbon disclosure regulations such as the EU CSRD are driving surging demand for Sustainability Hub",
+        "Platform evolution toward AI-based predictive logistics",
+        "Daily tracking volume surpassed 3 million; ARR estimated at $200M"
+      ],
+      "growth_metrics": "ARR estimated at $200M+, 3 million daily tracking events, 1,000+ global enterprise customers, 40% year-over-year revenue growth"
+    },
+    "funding": {
+      "valuation_estimate": "$2.2B (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global supply chain visibility market projected to reach $15B by 2030; enterprise supply chain SaaS market at $50B; supply chain carbon tracking market at $5B",
+      "market_trend": "New normal of supply chain crises, mandatory ESG disclosure, evolution toward predictive logistics and autonomous supply chains, and accelerating digital transformation of enterprise supply chains",
+      "growth_potential": "Evolution from visibility to predictive and automated decision-making, early entry into the supply chain carbon management market, expansion into the mid-market, and integration with supply chain finance",
+      "risks": [
+        "Intense market share competition with competitors such as project44",
+        "Reduced enterprise SaaS spending during an economic downturn",
+        "Lower priority for visibility solution investments when supply chains stabilize"
+      ],
+      "risk_mitigation": "Expand the demand base with new value propositions such as ESG reporting and carbon tracking, lock in customers through long-term contracts, and create natural switching costs via network effects"
+    },
+    "related_links": [
+      {
+        "title": "FourKites official website"
+      },
+      null,
+      {
+        "title": "FreightWaves: Supply chain visibility market analysis"
+      }
+    ],
+    "editor_pick_comment": "The Red Sea crisis taught us one lesson: if you don't know where your cargo is in real time, it's already too late. FourKites is the company that provides that 'eye'. Now, it goes as far as carbon tracking."
+  }
+}

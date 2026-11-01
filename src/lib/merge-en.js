@@ -1,6 +1,6 @@
 /**
  * English edition of a company record: the Korean record with the translated text from
- * startups.en.json laid over it (same shape, strings only). The Korean values the app
+ * English day files (src/data/days-en) laid over it (same shape, strings only). The Korean values the app
  * derives things from (sector, region, amounts) are kept under `_ko`, and name_ko
  * carries the English name so every "display name" spot shows English without a
  * second code path. Used at build time (vite.config.js).

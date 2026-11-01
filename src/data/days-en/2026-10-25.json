@@ -1,0 +1,669 @@
+{
+  "azoo-inc-wasimil-2026": {
+    "tagline": "A Kyoto startup adding AI agents to an all-in-one hotel OS for small and mid-sized hotels and ryokan in Japan",
+    "category": [
+      "Hotel Tech",
+      "Hospitality SaaS",
+      "AI Agent"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "Representative Director and CEO. Responsible for business development, marketing and sales",
+        "background": "Born in 1985 in Hyogo Prefecture. After graduating from the Faculty of Engineering at Kyoto University, joined Mainichi Broadcasting System (MBS), where he worked on programming and production. He later studied at a local university in Indonesia as a government scholarship student (Darmasiswa). After returning to Japan, he worked on overseas expansion support for small and mid-sized companies at the Ministry of the Environment, JETRO and JICA. He founded AZOO in January 2020.",
+        "notable_achievement": "Since founding the company in 2020, has sold WASIMIL to the Japanese small and mid-sized hotel and ryokan market. In October 2026, led the Series A funding round led by Mobile Internet Capital."
+      },
+      {
+        "role": "Co-founder. Responsible for product development (est.)",
+        "background": "Introduced as a foreign-national data scientist. The company's introductory materials state that the foreign data scientist co-founder handles product development, while the CEO handles marketing and business development. In one interview, the CEO identified this co-founder as her husband.",
+        "notable_achievement": "Appears to have designed and implemented WASIMIL's data-driven features (such as demand forecasting and sales analysis). No specific performance figures have been disclosed."
+      }
+    ],
+    "product": {
+      "summary": "WASIMIL is an all-in-one hotel OS that brings together a booking engine, property management (PMS), inventory and rate management, channel integration, sales analytics, and CRM and marketing on one screen. On top of this data foundation, AZOO is at the stage of deploying AI agents that autonomously handle tasks such as demand-based staff scheduling.",
+      "problem_statement": "Japanese hotels and ryokan use separate tools for reservations, room management, accounting and marketing, so data is fragmented and much work is done by hand. The company claims that despite the tourism boom, the hotel industry faces a shortage of approx. 150K workers. For this reason, it believes the structure of people repeatedly handling back-office work has reached its limits.",
+      "solution": "The company designed WASIMIL not as a simple PMS but as an integrated OS covering the entire room operations process. On the same data foundation, it runs AI features such as demand forecasting, rate optimization, chatbots and housekeeping management, and it is now transitioning to the next stage, where agents autonomously handle repetitive tasks such as shift scheduling.",
+      "key_features": [
+        "Property management (PMS) including a booking engine and integration with OTAs and site controllers",
+        "Inventory and rate management with dynamic pricing based on demand forecasting",
+        "Customer management (CRM), marketing automation and direct booking (official website) support",
+        "Accounting, business intelligence (BI) analytics and reporting",
+        "Housekeeping management mobile app and integration with smart locks and key card systems (launched from 2025)",
+        "Automation of back-office tasks, including demand-based staff scheduling, via AI agents (in development)"
+      ],
+      "tech_stack_or_innovation": "Official materials do not disclose the technology stack in detail. Two innovation points can be confirmed. First, the design consolidates booking, customer and sales data in one place to improve the accuracy of AI features. Second, the company emphasizes API integration with external systems. Confirmed integration examples include site controllers, Square, smart locks (Baycom) and key card systems.",
+      "target_customer": "The main customers are small and mid-sized hotels and ryokan across Japan. According to the company's job postings, more than 135 hotels and ryokan have adopted the product. Starting in 2026, the company is also pursuing AX (AI transformation) partnership business targeting large hotel chains and lodging groups.",
+      "business_model": "A subscription-based SaaS model appears to be the foundation (est.). However, pricing has not been disclosed, so the exact structure has not been confirmed. On top of this, the model adds implementation consulting and AX partnerships (strategy and implementation services for large chains)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "An overseas cloud-based PMS and channel manager that uses usage-based pricing (from €15.90 per month). It is particularly strong in vacation rentals, guesthouses and campgrounds. It can be assessed that it is weaker than WASIMIL in Japanese local hotel operations and in handling Japanese OTAs (est.)."
+        },
+        {
+          "comparison": "A global hospitality PMS with a built-in channel manager. In Japan, it is positioned at approx. ¥15,000–40,000 per month, and its main customers are small and mid-sized hotels and guesthouses. It is not a product that prominently features an 'AI back-office agent.'"
+        },
+        {
+          "comparison": "A PMS specialized in the Japanese minshuku and lodging market, with its strength being integration with Japanese site controllers. It centers on smart check-in and automated messaging features. Rather than being an OS that integrates all hotel functions, it focuses on minshuku operations."
+        },
+        {
+          "comparison": "A PMS that supports both on-premises and cloud deployment. It includes front office, food and beverage, accounting and housekeeping modules. It does not prominently feature an AI agent strategy, and it overlaps with the on-site installed legacy structure."
+        },
+        {
+          "comparison": "Provides guest-facing AI agents (question answering, customized lodging recommendations, multilingual support) for direct hotel booking sales. Unlike the back-office automation AZOO is pursuing, it focuses on guest service channels."
+        }
+      ],
+      "key_differentiator": "The company's differentiation lies in being an integrated OS that unifies booking, customer and accounting data on a single data foundation, and in building agents that autonomously handle back-office tasks on top of that data. It also highlights integration with Japanese OTAs and site controllers, as well as Japanese language support.",
+      "moat": "The confirmed defensive elements are as follows: (1) field data and operating know-how from more than 135 adoption records, (2) integration partnerships already established with multiple systems, and (3) a deployment staffing structure responsible for on-site implementation. However, the customer count has not been independently verified, so the possibility that the scale is overstated must be kept in mind.",
+      "competitive_position_summary": "The company appears to be a niche player in the Japanese small and mid-sized hotel PMS market. Compared with global PMS vendors, its capital and staff are smaller, but its Japan-specific focus and timing of the shift to AI agents align well. However, if large PMS vendors add AI features, competition could change quickly (est.)."
+    },
+    "trending_reason": {
+      "summary": "On October 14, 2026, the Series A announcement officially confirmed WASIMIL's transition to AI agents. Multiple domestic and international media outlets reported on it the same day. The background includes staff shortages in Japan's hotel industry and growing inbound demand.",
+      "catalysts": [
+        "2026-10-14: ¥490M (cumulative) Series A announced, led by Mobile Internet Capital",
+        "October 2026: Participation of existing investors DNX Capital, Kyoshin Social Capital and ALL STAR SAAS FUND disclosed",
+        "October 2026: Announcement of Deployment Strategist hiring and pursuit of AX partnership business targeting large hotel chains",
+        "June 2025 to February 2026: Continued product launches, including a housekeeping app, smart lock integration, support for Google Hotel Search and Square integration"
+      ],
+      "growth_metrics": "Confirmed metrics are as follows: more than 135 hotels and ryokan adopting the product (based on job postings) and approx. 20 employees (based on Wantedly and job postings). Sales and ARR have not been disclosed. The post-funding valuation shown on Speeda is approx. ¥885M (as of 2026-06-11, est.).",
+      "media_mentions": [
+        null,
+        null,
+        null,
+        {
+          "title": "Citadel AI Inc. — Seranova AI Map (AZOO entry)"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Approx. ¥490M cumulative (approx. $3.1M converted, est.). The size of the Series A round itself is Undisclosed",
+      "valuation_estimate": "Undisclosed (post-funding valuation shown on Speeda approx. ¥885M as of 2026-06-11, est.)",
+      "latest_round": {
+        "amount": "¥490M cumulative (round-only size Undisclosed; some media converted it to approx. $3.09M, while others listed $3.77M, so figures are inconsistent)",
+        "notable_investors": [
+          null,
+          "Kyoshin Social Capital"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed (late seed)",
+          "amount": "Undisclosed",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "stage": "Pre-Series A",
+          "amount": "Undisclosed"
+        },
+        {
+          "amount": "¥490M cumulative (round size Undisclosed)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed. No confirmed figures exist for the Japanese hotel PMS or AI agent market size. The company's announcement cites a hotel industry staff shortage of approx. 150K workers, but there is no data converting this into a market size.",
+      "market_trend": "Japan has seen record growth in inbound tourism demand, while on-site staff remain in short supply. Demand for AI-based operations automation is also growing among small lodging businesses. However, actual adoption rates have not been confirmed.",
+      "growth_potential": "The path from small and mid-sized hotel and ryokan SaaS to expansion through AX partnerships with large chains is clear. Because the raised funds will be used to hire Deployment Strategists, on-site implementation capacity may become a bottleneck for growth.",
+      "risks": [
+        "The Series A size has not been disclosed, making it difficult to assess financial capacity",
+        "Key metrics such as sales, churn rate and ARR have not been disclosed",
+        "If large PMS vendors or global players add AI agent features, the company's differentiation could weaken",
+        "The actual automation rate and effectiveness of the AI agents have not been independently verified",
+        "A small team (approx. 20 people) must handle both product development and large customer implementations at the same time"
+      ],
+      "risk_mitigation": "The company appears to be responding through its staffing structure. It is building on-site implementation capacity by hiring Deployment Strategists, and it plans to retain existing customers based on its external integrations and more than 135 adoption records. However, this response could be verified once the funding size and performance metrics are disclosed (est.)."
+    },
+    "related_links": [
+      {
+        "title": "AZOO Official Website (WASIMIL)"
+      },
+      {
+        "title": "AZOO Careers Site"
+      },
+      {
+        "title": "PR TIMES Series A Press Release (2026-10-14)"
+      },
+      null,
+      {
+        "title": "Changeup Notebook: 2026 Series A Article"
+      }
+    ],
+    "editor_pick_comment": "The approach of adding AI agents to Japanese hotel operations automation is compelling, but the disclosed ¥490M is a cumulative figure. Expectations should be kept modest until the round size and actual sales and adoption results are confirmed.",
+    "team_highlights": "Approximately 20 people (based on job postings and Wantedly), and according to job postings, more than half of the staff live overseas, making it a remote-friendly team. The Kyoto headquarters is a corporation established in January 2020. The company stated it will use the Series A funds to hire 'Deployment Strategists.' This role recruits people with strategy consulting and customer success (CS) backgrounds to handle everything from hotel chain strategy development to on-site implementation. In addition to the founders, the company is also hiring for business operations (BizOps), CS and marketing roles on the premise of using AI agents."
+  },
+  "kinish-inc-2026": {
+    "tagline": "Tokyo foodtech making milk protein from a single grain of rice, already selling rice ice cream",
+    "category": [
+      "Foodtech",
+      "Plant-based dairy (milk alternatives)",
+      "Molecular Farming"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "Founder and CEO (President and CEO)",
+        "background": "According to the official website, he previously worked in strategy consulting at a global management consulting firm and served as a business development director at a global food company. He is also described as having led vertical farm operations at companies in Japan and abroad. External profiles (SignalHire, ZoomInfo) list PwC consultant and McDonald's business development experience, but the periods and titles do not match, requiring cross-verification.",
+        "notable_achievement": "In October 2026, he led the first close of Series A (¥490M), and the company was included in Food and Beverage Tech Review's 'APAC Molecular Farming Top 10 (2025)' (company-level award, no individual award confirmed)."
+      }
+    ],
+    "team_highlights": "The official website's team introduction emphasizes a structure that brings together strategy, operations, technology, and product development experts. Atsushi Shibuya is listed as COO, and Eri Mesuda De Leon as US COO on Caplight profiles. Employee count varies by source: Crunchbase reports 1-10, PitchBook 3, ZoomInfo 11-50, so it is pegged at 1-10 but needs confirmation. The use of this Series A funding includes hiring a head of corporate administration and business personnel in Japan and the US.",
+    "product": {
+      "summary": "Sells non-dairy ice cream 'The Rice Creamery' made from rice in Japan and the US. Long-term goal is to produce casein, a milk protein, in rice plants for use as a dairy alternative ingredient.",
+      "problem_statement": "The company believes that current plant-based milk still lacks sufficient improvement in taste and texture, making widespread acceptance one step away. It also points out the heavy burden of dairy on water and land resources and high greenhouse gas emissions.",
+      "solution": "Current product is ice cream made from ordinary field-grown rice in Japan; technology to produce casein in rice is at research stage. The research-stage technology involves growing dwarf rice in indoor plant factories to produce casein, and the company is working with Shizuoka University on plant factory design. Shimadzu is jointly developing analysis, quality control, and measurement technologies for indoor cultivation.",
+      "key_features": [
+        "Rice-based non-dairy ice cream 'The Rice Creamery' (3 flavors, no milk or eggs)",
+        "Nutritional design: 120 kcal or less per serving, 60% less sugar at the time of launch",
+        "Price ¥347 (approx. $2.35), sold in about 500 stores in Japan and online",
+        "Rice-derived casein expression technology (research stage, pre-commercial production)",
+        "Dwarf rice-based indoor plant factory cultivation model (test harvest of 2,079.7 g/m² of rice over 3 months reported)"
+      ],
+      "tech_stack_or_innovation": "Uses plant molecular farming to produce casein inside rice grains, and grows dwarf rice using vertical farming methods. The company cites the advantage that plants act as bioreactors, eliminating the need for fermentation tanks. However, the currently sold ice cream uses ordinary domestic rice, not genetically modified rice.",
+      "target_customer": "General consumers in Japan and the US (ice cream and plant-based food buyers) and future food companies seeking dairy alternative ingredients. In October 2025, it was also sold at retail stores in Washington DC and at Meta DC offices.",
+      "business_model": "Currently, retail sales of The Rice Creamery are the main revenue source. Long-term goal is to commercialize milk proteins like casein and dairy products such as cheese and yogurt. Revenue size has not been disclosed."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A molecular farming company that inserts animal protein genes such as casein into plants, using the same technological path as Kinish. It is similar in that it is also building a consumer brand. Total raised is reported as $75M."
+        },
+        {
+          "comparison": "An Israeli company that uses potatoes as bioreactors to produce casein. It differs from Kinish's consumer ice cream business in that it aims to be a B2B ingredient supplier rather than a consumer product company."
+        },
+        {
+          "comparison": "A Mexican company that uses discarded fruit as bioreactors to produce casein. Differs in using fruit instead of rice and focusing on ingredient supply."
+        }
+      ],
+      "key_differentiator": "Centered on rice, a familiar ingredient, and already selling consumer rice ice cream while expanding with casein technology on the same rice platform. Unlike competitors focused only on technology research, it has store sales data.",
+      "moat": "Plant factory cultivation data, know-how in dwarf rice varieties and cultivation conditions, and potential patents for casein expression could be barriers to entry. However, patent and intellectual property status was not confirmed in this research.",
+      "competitive_position_summary": "Unique as one of the few early-stage companies that simultaneously sells consumer products and conducts casein technology research. Commercial production and large-scale validation have not yet been achieved, so it is at a similar technology stage to competitors."
+    },
+    "trending_reason": {
+      "summary": "Following the announcement of the Series A first close on October 20-21, 2026, the company has attracted attention for securing funds to expand in Japan and US markets and scale casein research. Product sales began in Japanese retail stores after seed investment in February 2025.",
+      "catalysts": [
+        "Series A first close of ¥490M (approx. $3.1M) announced on October 20, 2026",
+        "Expansion to about 500 stores in Japan and start of US sales in Washington DC in October 2025",
+        "New York office opening, US business expansion plans",
+        "Participation of Japanese conglomerates like Shimadzu CVC and Obayashi as investors",
+        "Started sales at Okinawa FamilyMart in December 2025 (per official data)"
+      ],
+      "growth_metrics": "Sold in about 500 stores in Japan (official announcement, October 2026). Started sales at Washington DC retail stores and Meta DC office in October 2025. Indoor cultivation test harvested 2,079.7 g/m² of rice over 3 months (rice yield, not casein production). Revenue size not disclosed; ZoomInfo estimates annual revenue under $5M (est., unverified)."
+    },
+    "funding": {
+      "total_raised": "¥610M (approx. $3.9M, est.: sum of seed ¥120M and Series A first close ¥490M. Excludes other grants and accelerator investments)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "stage": "Series A (first close)",
+        "amount": "¥490M (approx. $3.1M, reported as $3.09M–$3.3M depending on exchange rate)",
+        "lead_investor": "Undisclosed (lead investor not disclosed in official announcement)",
+        "notable_investors": [
+          null,
+          "Shimadzu Future Innovation Fund (Shimadzu CVC)",
+          "Obayashi Corporation",
+          "Love Veggies Holding Ltd. (Canada)"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "¥120M (approx. $800K)",
+          "lead_investor": "Genesia Ventures (via Genesia Venture Fund No. 3). Co-investors included Lifetime Ventures, Full Commit Partners, and Mitsubishi UFJ Capital."
+        },
+        {
+          "stage": "Series A (first close)",
+          "amount": "¥490M (approx. $3.1M)",
+          "lead_investor": "Undisclosed (INSPiRE, Shimadzu CVC, Obayashi, Love Veggies participated)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed. No company-level TAM/SAM/SOM data confirmed. Industry estimates project the molecular farming-based animal protein market to reach $3.5B by 2029 (industry estimate, varies by source).",
+      "market_trend": "The plant-based milk alternative market faces challenges in taste and texture improvement, and molecular farming is gaining attention as a method using plants as production platforms without fermentation tanks. The US has relatively streamlined approval procedures for genetically modified ingredients, attracting related startups.",
+      "growth_potential": "Structure allows expansion of casein ingredients to B2B based on consumer ice cream sales. 500 stores in Japan, US DC sales, and New York office opening provide evidence of early expansion. However, revenue size is not disclosed, making it difficult to judge growth rate.",
+      "risks": [
+        "Rice-derived casein has not yet reached commercial production stage, and current ice cream uses ordinary rice, not engineered rice",
+        "Plant factory production technology has not been validated at scale; 2,079.7 g/m² is rice yield, not casein production",
+        "Regulatory approval and food safety procedures required; the company itself mentioned regulatory approval as a challenge in its seed stage announcement",
+        "Small team (estimated 1-10) and funding size of approx. $3.1M in October 2026 relative to simultaneous expansion in two countries"
+      ],
+      "risk_mitigation": "The company stated it will allocate this funding to expanding retail sales in the US and Japan, plant factory research with Shizuoka University, and cooperation with Shimadzu on measurement and quality control. The structure of generating revenue from current products while conducting casein research helps diversify technology risk. However, specific commercial launch timelines have not been disclosed."
+    },
+    "related_links": [
+      {
+        "title": "Kinish official website (including Series A first close announcement)"
+      },
+      {
+        "title": "Kinish official press release: Series A first close ¥490M"
+      },
+      null,
+      {
+        "title": "Genesia Ventures: Kinish seed round lead investment announcement"
+      },
+      null,
+      null,
+      {
+        "title": "Food and Beverage Tech Review: Kinish profile (APAC Molecular Farming Top 10, 2025)"
+      }
+    ],
+    "editor_pick_comment": "While revenue is undisclosed, the structure of first generating cash from rice ice cream in 500 stores and then tackling the unproven rice casein as the next challenge stands out."
+  },
+  "nationa-neuroid-2026": {
+    "tagline": "A GPU-native startup bundling AI video and animation production tools into a single workflow.",
+    "category": [
+      "Generative AI",
+      "AI Video Production",
+      "3D Motion Generation"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO (Chief Executive Officer, Founder)",
+        "background": "Started as a developer at Samsung SDS for over 10 years, served as head of an in-house venture and AI new business leader. Since 2018, has been an angel investor focusing on AI startups. Majored in physics, and holds a master's in engineering from KAIST according to his profile.",
+        "notable_achievement": "After founding in 2022, the company launched Neuroid, a 3D motion generation SaaS, and claims to have secured 1M global subscribers in about a month. At CES 2026, the company's products received Innovation Awards."
+      }
+    ],
+    "team_highlights": "Based on public materials, co-founder names have not been confirmed. The company's recruitment page and corporate DB state that the CTO is a 15-year full-stack and AI developer from Samsung SDS, but the name is not disclosed. According to a 2024 report, most key personnel are veterans with around 10 years of experience, and talent from Meta and Disney has also joined. Employee count was 15 as of June 2026 (THE VC). The company has announced industry-academia collaborations with AI labs at Seoul National University, POSTECH, and Korea University.",
+    "product": {
+      "summary": "Neuroid is a generative AI production tool that creates 3D motion and animation from text, voice, and video inputs. The company is currently preparing an integrated AI video production platform that unifies image, sound, and voice generation along with video generation and editing into a single workflow. It also operates Glaze, an interactive drama platform.",
+      "problem_statement": "The problem is that working across multiple generative AI tools increases costs and complexity. Traditional 3D animation production is a time- and labor-intensive process. The company also sees reliance on external APIs and per-generation costs as obstacles.",
+      "solution": "Neuroid takes the approach of structuring characters, scenes, and shots of an entire work into a single producible animation. The company says this differentiates it from first-generation AI video that generates single clips at a time. It aims to lower generation costs and reduce reliance on external APIs by optimizing model inference on its own GPU infrastructure.",
+      "key_features": [
+        "Pre-production: Structuring story intent, character/style bibles, and scene data into a single plan.",
+        "Main production: Generation that maintains shot-level consistency with 3D-based scene and camera control.",
+        "Post-production: Direct editing with built-in AI agent Cosmo and rearranging scene order.",
+        "Neuroid Playmaker: Converts text, voice, and video inputs into 3D motion (CES 2026 Innovation Award winner).",
+        "Neuroid Motion: Create and distribute 3D motion from smartphones and tablets (CES 2026 Innovation Award winner).",
+        "Glaze: An interactive drama platform where the storyline changes based on user choices."
+      ],
+      "tech_stack_or_innovation": "The company highlights its proprietary Large Action Model (LAM) as core technology. According to the company, it was trained on over 1B human motion data points and is improved by feedback from over 1M users in 150 countries. As of the October 2026 announcement, the company is optimizing inference for video generation models on its own GPU infrastructure. It has carried out government R&D projects in generative AI, 3D motion generation, and digital humans, and holds 16 patents as counted by THE VC (as of 2026).",
+      "target_customer": "Primary target: overseas creators and animation/video producers. Secondary target: enterprise clients. The company says it has an existing B2C user base among 3D creators, game developers, and Roblox producers.",
+      "business_model": "It appears to combine SaaS subscriptions with usage-based pricing. An official pricing page exists, but detailed prices were not confirmed. The company stated its goal is to increase paid customers and operational efficiency to reach breakeven soon."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A global generative video model company that integrates video generation and editing into a general creator's workflow. News reports note it raised significantly more funding than NationA. NationA differentiates by focusing on the entire animation production process and its own GPU infrastructure."
+        },
+        {
+          "comparison": "Targets corporate training and marketing video demand with AI avatar-based video generation. Its target customers and output format differ from NationA's story-based animation production."
+        },
+        {
+          "comparison": "A pay-as-you-go motion capture tool that converts video into 3D motion, also offering an API. Specialized in motion data conversion, it does not provide an integrated flow from story to shot composition and editing like NationA."
+        },
+        {
+          "comparison": "Creates textured 3D models from text and images and provides auto-rigging and animation presets. Has a Roblox integration path, so game asset creators are its main customers. NationA focuses on scene and story unit production rather than individual models."
+        },
+        {
+          "comparison": "An open-source mesh generation model released by Roblox for its own ecosystem. It's free to use but limited to asset generation within Roblox Studio. NationA aims for a platform-independent animation production flow."
+        }
+      ],
+      "key_differentiator": "Combining story-level structuring (characters, scenes, shots) with its own GPU infrastructure. It ties generation and editing into a single workflow while reducing reliance on external API costs.",
+      "moat": "Structure that accumulates proprietary motion data, a trained model (LAM), user feedback data, and consumption data from Glaze. The company says it will create a virtuous cycle of data and content by linking the creation tool and consumption platform. However, GPU infrastructure and model improvement require ongoing funding.",
+      "competitive_position_summary": "In Korea, it is relatively ahead among 3D/animation generation SaaS, but in the global video generation market, it is a latecomer pushed by competitors with larger funding. The speed of acquiring paid customers after the integrated platform launch will likely determine its position."
+    },
+    "trending_reason": {
+      "summary": "On October 21, 2026, the company announced its Series A of KRW 8.5B and previewed the launch of an integrated AI video production platform that ties everything from generation to editing. The funds will be used for GPU infrastructure, product advancement, and acquiring overseas customers.",
+      "catalysts": [
+        "Announced Series A of KRW 8.5B on October 21, 2026 (cumulative KRW 11.7B)",
+        "Follow-on investment from existing shareholder Hana Securities and new participation from KDB Industrial Bank, Hyundai Investment Partners, and Ilshin Startup Investment",
+        "Planned renewal into an integrated platform connecting image, sound, and voice to video generation and editing",
+        "Pursuing reduction of external API dependency by directly operating own GPU infrastructure",
+        "Won CES 2026 Innovation Awards (Neuroid Playmaker, Neuroid Motion), securing product validation signals"
+      ],
+      "growth_metrics": "1M global subscribers within a month of Neuroid's launch (company announcement, based on October 2023 launch). 15 employees as of June 2026 (THE VC). Cumulative funding of KRW 11.7B. Latest paid customer count and revenue have not been disclosed.",
+      "media_mentions": [
+        null,
+        null,
+        null,
+        {
+          "title": "AI Video Production Startup NationA Raises KRW 8.5B"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "KRW 11.7B (approx. $8.9M, based on WOWTALE conversion)",
+      "valuation_estimate": "$7–10M (est., based on Dealroom valuation range)",
+      "latest_round": {
+        "amount": "KRW 8.5B (approx. $5.9M–$6.5M, depending on exchange rate)",
+        "lead_investor": "Undisclosed (Existing shareholder Hana Securities made a follow-on investment; Dealroom lists it as lead)",
+        "notable_investors": [
+          "Hana Securities",
+          "KDB Industrial Bank",
+          "Hyundai Investment Partners",
+          "Ilshin Startup Investment"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "stage": "Government support (TIPS selection)",
+          "amount": "Undisclosed",
+          "lead_investor": "Ministry of SMEs and Startups TIPS program"
+        },
+        {
+          "amount": "KRW 2B",
+          "lead_investor": "Undisclosed (Participated by Mirae Science and Technology Holdings, Hana Securities, Magna Investment, and Infobank)"
+        },
+        {
+          "amount": "Undisclosed",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "amount": "KRW 8.5B",
+          "lead_investor": "Undisclosed (Hana Securities follow-on investment)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "No confirmed data. Source did not provide market size figures, so TAM/SAM/SOM are not listed.",
+      "market_trend": "As generative AI video tools multiply, the cost and complexity of moving between image, voice, and video tools have emerged as new challenges. Reports highlight the trend of solving this with integrated workflows. In Korea, investor interest in AI content creation-specific startups is also growing.",
+      "growth_potential": "As demand for animation and 3D content creation grows, the value of a tool that handles the entire production process may increase. If the integrated platform and own GPU can lower unit costs, it could be advantageous in acquiring overseas creators and enterprise clients. However, actual growth rates have not been verified by public materials.",
+      "risks": [
+        "Smaller funding scale compared to global competitors (Runway, Synthesia, etc.) may put it at a disadvantage in infrastructure and marketing competition.",
+        "No disclosed paid customer conversion performance, so the revenue model is unvalidated.",
+        "If GPU infrastructure operating costs and model training expenses increase, the Series A funds may be consumed faster.",
+        "Total funding of KRW 11.7B in 2026 may limit large-scale global expansion.",
+        "If platform companies like Roblox strengthen their own creation tools, competition in the game production market could intensify."
+      ],
+      "risk_mitigation": "The company has stated it will reduce external API dependency and increase processing efficiency with its own GPU infrastructure. The integrated platform aims to reduce tool-switching costs and retain paid customers. A data virtuous cycle using Glaze's consumption data to improve the creation tool is also presented as a defense. The goal of reaching breakeven has been stated, but a specific timeline has not been confirmed."
+    },
+    "related_links": [
+      {
+        "title": "NationA Official Site"
+      },
+      {
+        "title": "NationA Neuroid Product Page"
+      },
+      {
+        "title": "NationA Glaze Page"
+      },
+      null,
+      null,
+      {
+        "title": "Platum: NationA Raises KRW 8.5B Series A"
+      },
+      {
+        "title": "VentureSquare: NationA Raises KRW 8.5B Series A"
+      },
+      {
+        "title": "Korea Economic Daily: NationA (Neuroid) Renewal and Series A Launch (2026-03)"
+      },
+      {
+        "title": "THE VC: NationA Company Information"
+      },
+      {
+        "title": "THE VC: NationA Investment Status"
+      }
+    ],
+    "editor_pick_comment": "The own GPU and story-based production structure are intriguing, but judgment should be withheld until paid customer conversion figures for the integrated platform are available."
+  },
+  "mybenefit-virtual-mate-2026": {
+    "tagline": "A healthcare company providing exercise prescriptions and fitness assessments via motion-recognition AI kiosks.",
+    "category": [
+      "Digital Healthcare",
+      "AI Motion Recognition",
+      "Fitness Tech"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "Founder, largest shareholder (responsible for planning and development, not an executive title)",
+        "background": "Over 15 years of fitness industry experience, operating Asia World Gym (exclusive licensee of WORLD GYM), a major domestic fitness chain. MyBenefit's predecessor is noted as Asia World Gym.",
+        "notable_achievement": "Company history records that in January 2018, he first presented and exhibited a service combining motion-recognition technology with sports at CES in the U.S. (per the company's public history)."
+      },
+      {
+        "role": "CEO (as of the Series A announcement in 2026)",
+        "background": "Not confirmed (no personal history found in search results).",
+        "notable_achievement": "In the October 2026 Series A announcement, he stated that the company's technology and content competitiveness were recognized by investors and mentioned overseas expansion to Japan, Thailand, and Singapore."
+      },
+      {
+        "role": "CEO (listed as CEO while in office)",
+        "background": "Not confirmed.",
+        "notable_achievement": "Signed on behalf of MyBenefit in a nutrition-exercise convergence healthcare content MOU with Pulmuone and Doctor Exol around 2023."
+      },
+      {
+        "role": "Founder (listed as departed on corporate information sites)",
+        "background": "Not confirmed.",
+        "notable_achievement": "Listed as a representative on corporate information platforms but currently marked as departed. No officially announced role."
+      }
+    ],
+    "team_highlights": "Founder Insu Song leads product planning and development based on his fitness operations experience, while current management appears to be co-CEOs Chung Suk-mo and Kwon Hee-jin. As of August 2026, employees are listed at 20, and 2025 revenue is approximately KRW 1.91889B per disclosure sites. The founding year appears to be May 2014 based on incorporation date (corporate information site), but other articles cite 2016 founding, and job sites mention a 2018 name change, so sources vary. Headquarters is also split between a Seoul Seocho-gu address (official site) and Daejeon (corporate information site); this article uses Seoul, but verification is needed.",
+    "product": {
+      "summary": "Virtual Mate is a kiosk-type 3D motion-recognition device that measures joint movement and physical fitness, with AI coaching exercises based on the measurements. It is a healthcare platform that pairs with the trainer-facing Virtual Mate Plus app and the member-facing myBenefit app.",
+      "problem_statement": "Existing healthcare data is well-structured like hospital medical records, but personal exercise records and posture information remain analog. Older adults and those with chronic conditions find it hard to verify they are exercising with correct posture on their own.",
+      "solution": "It uses non-contact 3D sensors to measure posture and fitness, provides personalized exercise routines based on the results, and accumulates performance records and fitness changes in the app for users to see.",
+      "key_features": [
+        "3D motion-recognition-based joint movement and 6-type fitness assessment (guided approx. 30-second measurement)",
+        "AI-customized exercise prescriptions based on measurement results with voice and screen posture feedback",
+        "579 exercise programs including specialized content for 4 major chronic diseases such as sarcopenia and pre-diabetes",
+        "Trainer app provides class registration, exercise prescriptions, schedule management, and completion signature features",
+        "Member myBenefit app shows class history and fitness change graphs",
+        "Plans to integrate body composition analyzer (InBody) data with posture and fitness data on one screen (based on 2026 partnership)"
+      ],
+      "tech_stack_or_innovation": "Core is 3D motion-recognition sensors and an AI coaching engine. Since the 2018 CES announcement, it has combined motion recognition with sports services. The company states product efficacy is validated by 12 clinical papers, including 6 SCI-indexed ones. It has received the Public Procurement Service's Innovative Product designation, GS quality certification Grade 1, and medical device manufacturing GMP certification. With InBody, a co-investor in the 2026 Series A, it plans to jointly conduct a five-year R&D project under the Ministry of Trade, Industry and Energy on bioimpedance-based AI healthcare.",
+      "target_customer": "Primary customers are public institutions (nationwide public health centers, welfare centers, central government employee fitness tests, Seoul City's 'Seoul-type AI Physical Fitness Test', school AI physical education classes, community care facilities) and large corporate smart offices, residential complexes (in partnership with Hyundai Engineering & Construction). Mid- to long-term expansion targets general consumers (B2C), and overseas aims for Asian markets including Japan, Thailand, and Singapore.",
+      "business_model": "Revenue is fundamentally B2G and B2B, centered on kiosk equipment supply and public procurement, supplemented by content and app-based services. Pricing and subscription structure are not disclosed, so left as undisclosed. Public procurement track record appears to serve as sales references (est.)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "iPIXEL (Houfit)",
+          "comparison": "A Seoul-based healthcare company operating AI exercise coaching service (Houfit) and object recognition AI vision solutions. Classified as a similar company to MyBenefit in corporate information site comparison tables. No direct comparison of product composition and public track record."
+        },
+        {
+          "name": "Fitrix",
+          "comparison": "A Seoul-based company making smart devices where users self-measure and receive coaching feedback. Overlaps with MyBenefit's kiosk measurement approach in that it is measurement-device-centric. No public procurement track record identified."
+        },
+        {
+          "name": "WeHeald (LikeFit)",
+          "comparison": "A Seoul-based company providing AI-based home training coaching services. Targets the home fitness market, differing from MyBenefit's B2G-focused strategy. The column layout in corporate information site comparison tables is unclear, so mapping is for reference."
+        }
+      ],
+      "key_differentiator": "Operating camera-based posture measurement via kiosks installed in public sites, combined with chronic disease-specific content and clinical paper validation. The Public Procurement Service's Innovative Product designation also differentiates it in public sales.",
+      "moat": "Public procurement references, certifications like the Public Procurement Service's Innovative Product and medical device GMP, 12 clinical papers, and a library of 579 content items appear to be entry barriers. Combining InBody's body composition data could add defensibility on the data side (est.).",
+      "competitive_position_summary": "Appears to be a mid-sized domestic healthcare company with references and certifications in the public market. However, it will need further validation in B2C as it directly competes with home training app companies. Competitor financials and revenue lack public data for comparison."
+    },
+    "trending_reason": {
+      "summary": "On October 19, 2026, it announced a KRW 3B Series A investment, with InBody joining as a strategic investor (SI). This led to plans to integrate body composition data with posture and fitness data. Its selection for the Ministry of Industry's Scale-Up Technology Commercialization Support Program in the same year also signals recent growth.",
+      "catalysts": [
+        "October 19, 2026: Series A closes at KRW 3B and InBody joins as a strategic investor",
+        "Joint R&D with InBody (bioimpedance-based AI healthcare solution, 5-year project) and data integration plans",
+        "Selected for the Ministry of Trade, Industry and Energy's Scale-Up Technology Commercialization Support Program in 2026 (per press reports)",
+        "Announced Asia export plans to Japan, Thailand, and Singapore",
+        "Announced B2C market expansion plans"
+      ],
+      "growth_metrics": "Cumulative institutional investment of over KRW 7B (per press), 2025 revenue of approx. KRW 1.91889B (per corporate information site), 20 employees (as of August 2026), 579 exercise programs, 12 clinical papers (including 6 SCI-indexed). Customer count and installed equipment numbers are not disclosed, so left undisclosed.",
+      "media_mentions": [
+        {
+          "source": "Unicorn Factory",
+          "title": "MyBenefit attracts KRW 3B Series A investment... InBody joins as strategic investor"
+        },
+        {
+          "source": "Money Today",
+          "title": "MyBenefit attracts KRW 3B Series A investment... InBody joins as strategic investor"
+        },
+        {
+          "source": "Nate News (Edaily)",
+          "title": "MyBenefit closes KRW 3B Series A round"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Approximately KRW 7B (cumulative institutional investment, per press). Approximately $5M (est., assuming exchange rate of KRW 1,400/USD)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "KRW 3B (approx. $2.1M, estimated at KRW 1,400/USD)",
+        "lead_investor": "Undisclosed (lead investor not specified)",
+        "notable_investors": [
+          "InBody (strategic investor, SI)",
+          "Korea Sports Promotion Foundation Sports Industry Mother Fund"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Early-stage rounds (with NH Investment & Securities, WE Local Business Growth Fund, Korea Bio Technology Investment, Bokwang Investment, T Investment, Alpenroute Asset Management, before 2025)",
+          "amount": "Undisclosed (reported at KRW 4B total)",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "stage": "Pre-Series A (Sports Innovation Investment Association, co-managed by Kyobo Securities, NBH Capital, and Alpenroute Asset Management)",
+          "amount": "Undisclosed (reported on achieving cumulative KRW 4B)",
+          "lead_investor": "Undisclosed (three co-managing firms)"
+        },
+        {
+          "amount": "KRW 3B",
+          "lead_investor": "Undisclosed (InBody as SI, Sports Industry Mother Fund participation)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "No confirmed market size data available, so left undisclosed. Primary targets appear to be public health management for a super-aged society and corporate wellness.",
+      "market_trend": "Public institutions and local governments are expanding elderly fitness management and health programs, with growing demand to digitally connect posture and fitness measurement. There is also a trend toward combining body composition and motion data.",
+      "growth_potential": "With public procurement references, there is room to expand into corporate wellness and overseas Asian markets. However, B2C expansion and localization abroad remain unvalidated.",
+      "risks": [
+        "High dependence on public procurement could make revenue susceptible to budget and procurement schedule fluctuations",
+        "Kiosk equipment model may limit expansion due to installation space and maintenance costs",
+        "Must compete with low-cost home training services in the B2C app market",
+        "Overseas expansion may increase costs for local certifications and content localization",
+        "Handling health and fitness data may increase regulatory compliance burden for personal information protection"
+      ],
+      "risk_mitigation": "Plans to diversify revenue streams across public, corporate, and individual customers have been publicized, and certifications like GS Grade 1 and GMP are already secured. The data partnership with InBody could broaden measurement scope and serve as a basis for B2C expansion. However, specific overseas partners and B2C revenue targets are not disclosed, requiring further verification."
+    },
+    "related_links": [
+      {
+        "title": "MyBenefit official site"
+      },
+      {
+        "title": "Unicorn Factory: MyBenefit Series A KRW 3B investment article"
+      },
+      {
+        "title": "Money Today: MyBenefit Series A KRW 3B investment article"
+      },
+      {
+        "title": "Nate News: MyBenefit closes Series A round of KRW 3B"
+      },
+      {
+        "title": "The VC corporate information: MyBenefit (Virtual Mate)"
+      },
+      {
+        "title": "Money Today: MyBenefit achieves cumulative investment of KRW 4B (June 2025)"
+      }
+    ],
+    "editor_pick_comment": "A kiosk-based motion-recognition company with references built through public procurement and certifications, but the next checkpoint is whether data integration with InBody translates into actual B2C revenue."
+  },
+  "reuse-2026": {
+    "tagline": "A B2B operator that handles trade-ins of used devices for South American companies, refurbishes them, and resells them.",
+    "category": [
+      "Circular Economy (Recommerce)",
+      "Trade-in B2B Operations / Refurbished Electronics"
+    ],
+    "headquarters": {
+      "country_ko": "Chile"
+    },
+    "employee_count": "101-150 (approx. 120, per reports)",
+    "founders": [
+      {
+        "role": "Co-founder, Co-CEO",
+        "background": "CB Insights profile lists work experience at Universidad de los Andes, Banco BICE, Viña Las Araucarias. Dealroom reported that he came up with the business idea as a student and officially founded the company after graduating from university.",
+        "notable_achievement": "Mentioned as the company representative for the $21M Series A announced in October 2026. Reported as the person who co-founded the company in 2018 and led the pivot to the B2B trade-in model."
+      },
+      {
+        "role": "Co-founder",
+        "background": "Detailed career history could not be confirmed from public reports (no estimate, unverified).",
+        "notable_achievement": "Identified by multiple media as the co-founder who established the company with Ulloa in 2018."
+      }
+    ],
+    "team_highlights": "Multiple outlets including LatamList and Dealroom consistently report that the two founders (Ulloa, Sateler) founded the company together in 2018. However, FinSMEs lists the CEO as Maximiliano Silva and co-founder as José Tomás Alvarado, showing conflicting personnel information between articles. Signalbase records the founding year as 2017, differing from 2018. As of 2026, several media outlets commonly report employee count at 120. Crunchbase shows an older figure of 51-100. This article uses the most widely confirmed names (Ulloa and Sateler) and 2018 as the founding year.",
+    "product": {
+      "summary": "An operating platform that collects, diagnoses, refurbishes, and resells used smartphones, laptops, etc., behind the trade-in programs of retailers, telecom carriers, and brands. Customers transact under the partner brand name with Reuse's name barely visible.",
+      "problem_statement": "Retailers and phone manufacturers in Latin America want to launch trade-in programs but lack the capability to handle the subsequent process of testing, refurbishing, and reselling collected devices (per LatamList and Angellinx reports).",
+      "solution": "Diagnoses collected devices with proprietary software, grades them, performs necessary repairs, applies a 13-month hardware warranty, and resells them at up to 30% less than new. Connected to partner networks via API, it automatically handles trade-ins, collection logistics, and buybacks (per FinSMEs).",
+      "key_features": [
+        "Device condition assessment and grading based on proprietary diagnostic software",
+        "Physical repair and refurbishment process",
+        "13-month hardware warranty, up to 30% cheaper than new",
+        "Automation of trade-ins, collection, and buybacks via API integration with partner systems",
+        "Over 50 active programs, more than 700 store connections, annual refurbishment capacity of 200K units (per Portafolio)"
+      ],
+      "tech_stack_or_innovation": "Core is proprietary diagnostic software for device condition assessment and an API integration layer that attaches to retailer systems. Specific tech stack (language, cloud, AI models, etc.) is not confirmed in public materials. The company stated it will use part of the 2026 funding for technology investment and diagnostic software enhancement (per FinSMEs and Dealroom).",
+      "target_customer": "Key B2B customers include retailers (Falabella, Coppel, Cencosud, Ripley, etc.), phone manufacturers/brands (Samsung, Apple premium partner MacStore, etc.), and telecom carriers (Claro, WOM, etc.). End consumers are those buying used products affordably.",
+      "business_model": "Revenue primarily from B2B trade-in operation fees and resale margins. However, fee rates and revenue composition are not public, so the exact structure is unconfirmed (est.). Reported that revenue is 60% from Mexico and 30% from Chile. Recently, Dealroom and Techla reported that the company is considering expanding into financial services."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Bogotá-based refurbished phone marketplace, started in Colombia and expanding to Mexico. Similar to Reuse in sourcing devices via trade-ins and offering a 14-month warranty. Received a $4M seed extension led by Latin Leap after 2025 (ImpactAlpha, approx. 9 months ago)."
+        },
+        {
+          "name": "Mercado Libre / Amazon México and other major e-commerce",
+          "comparison": "Largest channel for used/refurbished online sales in Mexico (est. share 35-45%, per IndexBox market report). Distribution scale is overwhelming, but it does not serve as a B2B operator managing trade-in programs on behalf of retailers."
+        },
+        {
+          "name": "Back Market and other global refurbished marketplaces",
+          "comparison": "Refurbished platforms originating from Europe and the US, also selling online in Latin America. Focus on direct-to-consumer sales; unlike Reuse, they do not operate trade-in programs for local retailers and carriers."
+        },
+        {
+          "name": "Carrier and manufacturer in-house trade-in and certified refurbished programs",
+          "comparison": "Carriers like Claro, Movistar and manufacturers like Samsung, Apple operate their own trade-in hubs and certified used sales. Large partners with in-house capabilities are both Reuse's customers and potential insourcers, creating indirect competition."
+        }
+      ],
+      "key_differentiator": "A B2B operator that fully manages the 'backend' of retailers' trade-in programs. Customers hardly see Reuse's name; transactions happen under the partner brand.",
+      "moat": "Entry barriers include the collection network, store connections, and device diagnostic data accumulated by operating multiple trade-in programs for various retailers and manufacturers. Hardware refurbishment processes and 13-month warranty operation experience are also difficult for new entrants to replicate quickly (analysis est.).",
+      "competitive_position_summary": "Appears to lead in scale and number of partners in Latin American refurbished B2B trade-in operations. However, public data to compare market share and competitor performance is insufficient. The possibility of major e-commerce and carriers insourcing operations is a medium-to-long-term threat."
+    },
+    "trending_reason": {
+      "summary": "Raised a $21M Series A led by At One Ventures in October 2026, marking the start of Colombia entry and Latin America expansion. Also reported that 2025 revenue doubled year-on-year, drawing attention.",
+      "catalysts": [
+        "Around 2026-10-05, LatamList, Gunderson Dettmer, ColombiNews and others reported on the Series A news",
+        "On 2026-10-09, FinSMEs and others officially reported a $21M Series A led by At One Ventures",
+        "Announcement of Colombia market entry and disclosure of new fund deployment plans.",
+        "Participation of strategic and local investors including Coppel Ventures, ALIVE Ventures, Endeavor Catalyst.",
+        "Target to expand trade-in program stores to over 1,500 locations by end of 2026 (per Portafolio)."
+      ],
+      "growth_metrics": "2025 revenue $30M, double the previous year (LatamList, Ecosistema Startup). Some reports say current monthly revenue is approx. $5M (Dealroom). 2026 revenue target is $55M (LatamList, Dealroom), while ColombiNews mentions $60M, creating a discrepancy. As of 2026, reported over 50 active trade-in programs, more than 700 stores linked, and over 170K cumulative refurbished devices. 2025 revenue is based on company and media reports, not independently verified."
+    },
+    "funding": {
+      "total_raised": "Approx. $27.5M (per Dealroom and FinSMEs; CB Insights totals $25.5M)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "notable_investors": [
+          null,
+          null,
+          null,
+          "IGNIA Partners (existing investor)",
+          "Dalus Capital (existing investor)",
+          "Cathay Innovation (as per ColombiNews)"
+        ]
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: The Latin American refurbished smartphone market is expected to exceed $4B in 2026, with annual growth of 12% (citing Ecosistema Startup, per The Investor Society report). SAM and SOM are not confirmed from public sources, so left undisclosed.",
+      "market_trend": "As new product prices rise relative to local incomes, replacement cycles lengthen and refurbished demand grows. Common reporting indicates that few companies in the region have refurbishment processes. Also mentioned are strengthening electronic waste (EPR) regulations in Chile, Peru, Colombia, etc. (Cathay Innovation contribution, around 2024).",
+      "growth_potential": "If trade-ins become a standard process at partner stores, an increase in partner count directly leads to revenue growth. If the Colombia entry and 1,500-store target are achieved, revenue scale could grow rapidly (est.).",
+      "risks": [
+        "High dependence on a single market due to Mexico concentration (60% of revenue).",
+        "Possibility that large retailers and carriers insource trade-in operations.",
+        "2025 revenue and 2026 revenue targets not independently verified, with conflicting figures between reports.",
+        "Supply of used devices tied to partner programs, leading to supply volatility.",
+        "Regulatory and operational cost increases from entering new countries."
+      ],
+      "risk_mitigation": "Partners are diversified across multiple retailers and brands; reports indicate collaboration with over 20 partners. With the 2026 funding, the company aims to expand operational bases in Chile and Colombia to reduce country concentration. Financial figures require further verification as audit reports are not public."
+    },
+    "related_links": [
+      {
+        "title": "Reuse Official Site"
+      }
+    ],
+    "editor_pick_comment": "A B2B refurbishment operator that handles the backend of retailer trade-ins and expands across Latin America, rather than a consumer app. For Korean readers, this is a good example of an 'invisible infrastructure' business model."
+  }
+}

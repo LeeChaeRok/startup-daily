@@ -1,0 +1,809 @@
+[
+  {
+    "id": "nuro-2026",
+    "date": "2026-04-21",
+    "featured": true,
+    "sector": "mobility",
+    "name_en": "Nuro",
+    "name_ko": "뉴로",
+    "tagline": "도로 위의 냉장고가 배달한다 — 자율주행 라스트마일 배송의 완성",
+    "category": [
+      "자율주행",
+      "배송 로보틱스",
+      "라스트마일 물류"
+    ],
+    "founded_year": 2016,
+    "headquarters": {
+      "city": "Mountain View",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series C+",
+    "employee_count": "1,100-1,500",
+    "website": "https://www.nuro.ai/",
+    "logo_url": "/logos/nuro-2026.png",
+    "logo_svg_description": "깔끔한 산세리프체의 'nuro' 로고타입, 소문자로 구성되며 'n'의 아치가 자율주행 차량의 실루엣을 연상시키는 미니멀한 디자인",
+    "founders": [
+      {
+        "name_en": "Dave Ferguson",
+        "name_ko": "데이브 퍼거슨",
+        "role": "Co-Founder & President",
+        "background": "Google 자율주행차 프로젝트(현 Waymo) 핵심 엔지니어 출신, 카네기멜론대 로보틱스 박사",
+        "linkedin": "https://www.linkedin.com/in/dave-ferguson-b tried/",
+        "notable_achievement": "Google 자율주행차 프로젝트 초기 멤버로 자율주행 인지 시스템 아키텍처 설계"
+      },
+      {
+        "name_en": "Jiajun Zhu",
+        "name_ko": "주자준",
+        "role": "Co-Founder & CEO",
+        "background": "Google 자율주행차 프로젝트 수석 소프트웨어 엔지니어 출신, 버지니아대 컴퓨터과학 박사",
+        "linkedin": "https://www.linkedin.com/in/jiajun-zhu/",
+        "notable_achievement": "Waymo 자율주행 소프트웨어 스택의 핵심 모듈 개발을 주도"
+      }
+    ],
+    "team_highlights": "Google/Waymo 자율주행 프로젝트 출신 창업팀, 로보틱스·AI 분야 박사급 엔지니어 1,000명 이상 보유, NHTSA 최초 상업용 자율주행 배송 차량 규제 면제 획득",
+    "product": {
+      "summary": "보행자 안전에 최적화된 소형 무인 자율주행 배송 차량 R3를 개발·운영하여, 식료품·의약품·택배 등을 고객 문 앞까지 완전 무인으로 배달하는 라스트마일 배송 플랫폼",
+      "problem_statement": "라스트마일 배송 비용은 전체 물류비의 50% 이상을 차지하며, 인력 부족과 임금 상승으로 지속 불가능한 구조. 기존 대형 자율주행차는 보행자 안전 리스크와 규제 장벽이 높음",
+      "solution": "사람을 태우지 않는 소형 전용 배송 차량(R3)으로 보행자 안전성을 극대화하고, 독자 자율주행 스택으로 복잡한 주거 지역에서도 완전 무인 배송을 실현. 2026년 다수 도시에서 상용 서비스 운영 중",
+      "key_features": [
+        "R3 자율주행 배송 차량: 보행자 충돌 시 충격 최소화 설계의 소형 전용 차량",
+        "Nuro Driver: 자체 개발 L4 자율주행 소프트웨어 스택",
+        "온도 관리 화물칸: 냉장·상온 동시 배송 가능",
+        "Nuro App: 실시간 배송 추적 및 원격 화물칸 개폐",
+        "멀티 파트너 플랫폼: Kroger, Walmart, FedEx 등 대형 리테일러와 통합 운영"
+      ],
+      "tech_stack_or_innovation": "자체 개발 자율주행 스택(카메라·LiDAR·레이더 퓨전), 소형 차량 전용 보행자 안전 설계(에어백 외장, 저속 제한), 클라우드 기반 원격 모니터링 시스템, 배송 루트 최적화 AI",
+      "target_customer": "대형 식료품 체인(Kroger, Walmart), 편의점·약국 체인(CVS, 7-Eleven), 물류 기업(FedEx), 지역 커머스 사업자",
+      "business_model": "배송 건당 수수료(per-delivery fee) 기반 B2B 플랫폼 모델 + 자율주행 기술 라이선싱",
+      "demo_or_screenshot_url": "https://www.nuro.ai/r3"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Serve Robotics",
+          "comparison": "보도 주행 소형 로봇으로 라스트마일 배송 수행. Nuro는 도로 주행 차량으로 더 넓은 배송 반경과 대용량 화물 처리 가능"
+        },
+        {
+          "name": "Gatik",
+          "comparison": "중거리(Middle-mile) 자율주행 트럭에 집중. Nuro는 라스트마일 문전 배송에 특화되어 보완적 포지셔닝"
+        },
+        {
+          "name": "Amazon Scout",
+          "comparison": "보도 주행 배송 로봇이었으나 2022년 프로젝트 축소. Nuro는 도로 주행 차량으로 실질적 상용화에 성공"
+        }
+      ],
+      "key_differentiator": "사람을 태우지 않는 소형 전용 배송 차량이라는 독자적 카테고리를 개척하여 NHTSA 최초 규제 면제 획득, 보행자 안전과 상용화를 동시에 달성",
+      "moat": "NHTSA 규제 면제(경쟁사 대비 2-3년 선행), Walmart·Kroger·FedEx 등 대형 파트너십 네트워크, 10억 마일 이상 자율주행 데이터, $2.1B+ 누적 투자",
+      "competitive_position_summary": "도로 주행 무인 배송 차량 카테고리를 사실상 정의한 선도 기업으로, 규제·파트너십·기술 모든 면에서 경쟁사 대비 수 년의 리드를 보유"
+    },
+    "trending_reason": {
+      "summary": "2026년 텍사스·캘리포니아 등 5개 주 상용 서비스 확장, FedEx와의 대규모 파트너십 체결, 자율주행 배송 규제 완화 흐름과 맞물려 재조명",
+      "catalysts": [
+        "2026년 초 텍사스·애리조나·캘리포니아 등 5개 주로 상용 서비스 확대",
+        "FedEx와 전국 규모 자율주행 배송 파트너십 체결",
+        "미국 연방 자율주행 규제 프레임워크 진전으로 전국 확장 가시화",
+        "R3 차량 양산 체제 구축 및 배송 단가 손익분기점 근접"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Nuro expands autonomous delivery to five US states with FedEx partnership",
+          "url": "https://techcrunch.com/2026/03/nuro-fedex-autonomous-delivery/",
+          "date": "2026-03-15"
+        },
+        {
+          "source": "Bloomberg",
+          "title": "The tiny self-driving car delivering your groceries",
+          "url": "https://www.bloomberg.com/news/articles/2026-02-nuro-autonomous-delivery",
+          "date": "2026-02-20"
+        }
+      ],
+      "growth_metrics": "월간 배송 건수 50만 건 돌파, 전년 대비 3배 성장, 파트너 리테일러 20개 이상"
+    },
+    "funding": {
+      "total_raised": "$2.1B+",
+      "latest_round": {
+        "stage": "Series D",
+        "amount": "$600M",
+        "date": "2025-06",
+        "lead_investor": "Tiger Global",
+        "notable_investors": [
+          "SoftBank Vision Fund",
+          "Alphabet",
+          "Greylock Partners",
+          "Fidelity"
+        ]
+      },
+      "valuation_estimate": "$8.6B (2025년 기준)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$92M",
+          "date": "2019-02",
+          "lead_investor": "SoftBank Vision Fund"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$500M",
+          "date": "2019-11",
+          "lead_investor": "SoftBank Vision Fund"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$600M",
+          "date": "2021-11",
+          "lead_investor": "Tiger Global"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$600M",
+          "date": "2025-06",
+          "lead_investor": "Tiger Global"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 라스트마일 배송 시장 2030년 $200B 전망, 자율주행 배송 세그먼트 $30B 예상, 미국 시장 $12B",
+      "market_trend": "이커머스 성장에 따른 라스트마일 배송 수요 폭증, 배송 인력 부족 심화, 자율주행 규제 프레임워크 정비 가속",
+      "growth_potential": "식료품 배송에서 의약품·택배·편의점 상품까지 배송 카테고리 확장, 미국 전역→글로벌 확장 잠재력",
+      "risks": [
+        "자율주행 안전 사고 발생 시 규제 강화 가능성",
+        "대형 테크 기업(Amazon, Waymo)의 자체 배송 로봇 진출",
+        "배송 단가 수익성 확보까지의 높은 자본 소모"
+      ],
+      "risk_mitigation": "보행자 안전 최우선 설계로 사고 리스크 최소화, 대형 리테일러 파트너십으로 물량 확보, 양산 체제 구축으로 단가 절감 가속"
+    },
+    "related_links": [
+      {
+        "title": "Nuro 공식 웹사이트",
+        "url": "https://www.nuro.ai/"
+      },
+      {
+        "title": "TechCrunch: Nuro FedEx 파트너십 보도",
+        "url": "https://techcrunch.com/2026/03/nuro-fedex-autonomous-delivery/"
+      },
+      {
+        "title": "Bloomberg: Nuro 자율주행 배송 분석",
+        "url": "https://www.bloomberg.com/news/articles/2026-02-nuro-autonomous-delivery"
+      }
+    ],
+    "editor_pick_comment": "Waymo 출신 듀오가 만든 '사람 없는 배송차'가 드디어 본궤도에 올랐다. 규제 면제 1호, FedEx 파트너십, 5개 주 확장까지 — 자율주행 배송의 교과서가 될 기업."
+  },
+  {
+    "id": "propertyguru-2026",
+    "date": "2026-04-21",
+    "featured": true,
+    "sector": "consumer",
+    "name_en": "PropertyGuru",
+    "name_ko": "프로퍼티구루",
+    "tagline": "동남아 6억 인구의 부동산 거래를 하나의 플랫폼에서 — 아시아 No.1 프롭테크",
+    "category": [
+      "프롭테크",
+      "부동산 플랫폼",
+      "핀테크"
+    ],
+    "founded_year": 2007,
+    "headquarters": {
+      "city": "Singapore",
+      "country": "Singapore",
+      "country_ko": "싱가포르"
+    },
+    "company_stage": "Public (NYSE: PGRU)",
+    "employee_count": "1,200-1,500",
+    "website": "https://www.propertygurugroup.com/",
+    "logo_url": "",
+    "logo_svg_description": "빨간색 집 지붕 아이콘 안에 돋보기를 결합한 심볼, 그 옆에 굵은 산세리프체의 'PropertyGuru' 텍스트, 레드·화이트 배색",
+    "founders": [
+      {
+        "name_en": "Jani Rautiainen",
+        "name_ko": "야니 라우티아이넨",
+        "role": "Co-Founder",
+        "background": "핀란드 출신 연쇄 창업가, 동남아 디지털 부동산 시장 개척자, 헬싱키공대 출신",
+        "linkedin": "https://www.linkedin.com/in/janirautiainen/",
+        "notable_achievement": "PropertyGuru를 동남아 최대 부동산 플랫폼으로 성장시키며 NYSE 상장(SPAC, 2022년) 달성"
+      },
+      {
+        "name_en": "Steve Melhuish",
+        "name_ko": "스티브 멜위시",
+        "role": "Co-Founder",
+        "background": "영국 출신 테크 기업가, 아시아 디지털 마켓플레이스 전문가",
+        "linkedin": "https://www.linkedin.com/in/stevemelhuish/",
+        "notable_achievement": "PropertyGuru의 싱가포르·말레이시아·태국·베트남·인도네시아 5개국 확장을 주도"
+      }
+    ],
+    "team_highlights": "핀란드·영국 출신 공동 창업팀이 싱가포르에서 동남아 최대 프롭테크를 구축, NYSE 상장 기업, 5개국 1,200명 이상의 글로벌 팀",
+    "product": {
+      "summary": "동남아시아 5개국(싱가포르, 말레이시아, 태국, 베트남, 인도네시아)에서 부동산 매매·임대·신축 분양 정보를 제공하는 최대 부동산 플랫폼. AI 기반 가격 추정·주택담보대출 비교·부동산 데이터 분석까지 통합 제공",
+      "problem_statement": "동남아 부동산 시장은 정보 비대칭이 심하고, 거래 과정이 불투명하며, 대출·보험 등 금융 서비스가 분절되어 있어 매수자·임차인·개발사 모두 비효율을 겪음",
+      "solution": "동남아 최대 부동산 리스팅 데이터베이스에 AI 가격 추정(PropertyGuru Lens)·주택담보대출 비교(PropertyGuru Finance)·데이터 분석(DataSense) 서비스를 결합한 원스톱 부동산 플랫폼",
+      "key_features": [
+        "PropertyGuru Lens: AI 기반 부동산 가치 추정 및 시장 분석",
+        "PropertyGuru Finance: 주택담보대출·보험 비교·신청 원스톱 서비스",
+        "DataSense: 부동산 개발사·에이전시용 시장 데이터 분석 B2B 플랫폼",
+        "Agent Toolkit: 부동산 에이전트를 위한 리드 관리·마케팅 자동화 도구",
+        "동남아 5개국 통합 리스팅: 3,500만 개 이상 부동산 매물 데이터"
+      ],
+      "tech_stack_or_innovation": "AI 기반 자동 부동산 가치 평가(AVM) 모델, 컴퓨터 비전 기반 매물 사진 분석·품질 평가, 빅데이터 기반 시장 동향 예측 엔진, 임베디드 금융 API(대출·보험 통합)",
+      "target_customer": "부동산 매수·임차 희망자(B2C), 부동산 에이전시·중개인(B2B), 부동산 개발사(B2B), 금융기관(대출·보험 제휴)",
+      "business_model": "에이전시·개발사 대상 리스팅·광고 수수료(핵심 매출) + PropertyGuru Finance 금융 중개 수수료 + DataSense SaaS 구독 + 프리미엄 에이전트 도구 구독",
+      "demo_or_screenshot_url": "https://www.propertyguru.com.sg/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "99.co",
+          "comparison": "싱가포르 기반 부동산 플랫폼이나 싱가포르·인도네시아에 한정. PropertyGuru는 5개국 커버리지와 금융 서비스 통합으로 압도적 우위"
+        },
+        {
+          "name": "Batdongsan (PropertyGuru Vietnam)",
+          "comparison": "PropertyGuru가 2023년 인수하여 자사 플랫폼에 통합. 베트남 시장 1위 확보"
+        },
+        {
+          "name": "iProperty (REA Group)",
+          "comparison": "호주 REA Group 산하 동남아 부동산 플랫폼. PropertyGuru 대비 리스팅 수·MAU에서 열세"
+        }
+      ],
+      "key_differentiator": "동남아 5개국 통합 부동산 플랫폼이라는 규모의 경제와, 리스팅→금융→데이터 분석의 풀스택 가치 사슬",
+      "moat": "동남아 최대 부동산 리스팅 데이터(3,500만 매물), 월간 방문자 3,500만 명의 네트워크 효과, 5개국 로컬 시장 깊은 이해, NYSE 상장 기업 신뢰도",
+      "competitive_position_summary": "동남아 부동산 디지털 플랫폼의 압도적 1위로, 리스팅·금융·데이터의 수직 통합과 5개국 네트워크 효과로 견고한 해자 보유"
+    },
+    "trending_reason": {
+      "summary": "2026년 PropertyGuru Finance의 동남아 임베디드 모기지 서비스 확대, AI Lens 기능 고도화, 동남아 부동산 시장 회복세와 맞물려 재평가",
+      "catalysts": [
+        "2026년 PropertyGuru Finance 출시 국가 확대 — 부동산 거래의 금융화(fintech化) 가속",
+        "AI Lens 부동산 가치 추정 정확도 95% 달성, 사용자 급증",
+        "동남아 부동산 시장 2025년 하반기부터 회복세, 거래량 증가",
+        "DataSense B2B 매출 전년 대비 70% 성장"
+      ],
+      "media_mentions": [
+        {
+          "source": "Nikkei Asia",
+          "title": "PropertyGuru bets on AI and fintech to deepen Southeast Asia dominance",
+          "url": "https://asia.nikkei.com/Business/PropertyGuru-AI-fintech-2026",
+          "date": "2026-02-28"
+        },
+        {
+          "source": "Tech in Asia",
+          "title": "PropertyGuru Finance crosses B in mortgage applications processed",
+          "url": "https://www.techinasia.com/propertyguru-finance-mortgage-milestone",
+          "date": "2026-03-15"
+        }
+      ],
+      "growth_metrics": "월간 방문자 3,500만 명, 처리 모기지 신청 B+ 돌파, DataSense B2B 매출 70% YoY 성장, 5개국 리스팅 3,500만 건"
+    },
+    "funding": {
+      "total_raised": "$700M+ (IPO 포함)",
+      "latest_round": {
+        "stage": "SPAC IPO (NYSE)",
+        "amount": "$254M",
+        "date": "2022-03",
+        "lead_investor": "Bridgetown Holdings (Pacific Century Group / Thiel Capital)",
+        "notable_investors": [
+          "KKR",
+          "TPG",
+          "Emtek Group",
+          "REA Group"
+        ]
+      },
+      "valuation_estimate": "$1.2B (NYSE 시가총액 기준)",
+      "funding_history": [
+        {
+          "stage": "Series D",
+          "amount": "$220M",
+          "date": "2018-07",
+          "lead_investor": "KKR"
+        },
+        {
+          "stage": "Series E",
+          "amount": "$300M",
+          "date": "2020-05",
+          "lead_investor": "TPG"
+        },
+        {
+          "stage": "SPAC IPO",
+          "amount": "$254M",
+          "date": "2022-03",
+          "lead_investor": "Bridgetown Holdings"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "동남아 부동산 시장 총 거래액 연 $300B+, 온라인 부동산 플랫폼 시장 2030년 $15B 전망, 동남아 모기지 테크 시장 $5B",
+      "market_trend": "동남아 도시화율 상승(2030년 50% 전망), 디지털 부동산 거래 침투율 아직 10% 미만으로 성장 여지 막대, 임베디드 금융과 부동산의 결합 가속",
+      "growth_potential": "부동산 거래에서 모기지·보험·인테리어·이사까지 생활 서비스 슈퍼앱 확장, 인도·필리핀 등 신규 시장 진출, B2B 데이터 분석 SaaS 확대",
+      "risks": [
+        "동남아 부동산 시장 침체·금리 인상에 따른 거래량 감소",
+        "각국 규제 환경 상이로 인한 멀티마켓 운영 복잡성",
+        "99.co 등 로컬 경쟁사의 니치 시장 공략"
+      ],
+      "risk_mitigation": "금융·데이터 B2B 매출로 거래량 의존도 분산, 5개국 운영 경험 기반 규제 대응 역량, M&A를 통한 경쟁사 통합 전략(Batdongsan 인수 사례)"
+    },
+    "related_links": [
+      {
+        "title": "PropertyGuru Group 공식 웹사이트",
+        "url": "https://www.propertygurugroup.com/"
+      },
+      {
+        "title": "Nikkei Asia: PropertyGuru AI·핀테크 전략 분석",
+        "url": "https://asia.nikkei.com/Business/PropertyGuru-AI-fintech-2026"
+      },
+      {
+        "title": "Tech in Asia: PropertyGuru Finance 모기지 마일스톤",
+        "url": "https://www.techinasia.com/propertyguru-finance-mortgage-milestone"
+      }
+    ],
+    "editor_pick_comment": "동남아 6억 인구가 집을 사고 빌리는 방법을 바꾼 PropertyGuru. 리스팅을 넘어 대출·보험까지 품은 부동산 슈퍼앱으로의 진화가 인상적이다."
+  },
+  {
+    "id": "gradiant-2026",
+    "date": "2026-04-21",
+    "featured": true,
+    "sector": "climate",
+    "name_en": "Gradiant",
+    "name_ko": "그래디언트",
+    "tagline": "산업 폐수에서 깨끗한 물과 자원을 동시에 회수한다 — 워터테크의 혁신",
+    "category": [
+      "워터테크",
+      "수처리",
+      "클린테크"
+    ],
+    "founded_year": 2013,
+    "headquarters": {
+      "city": "Boston",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series D",
+    "employee_count": "200-300",
+    "website": "https://www.gradiant.com/",
+    "logo_url": "/logos/gradiant-2026.png",
+    "logo_svg_description": "물결 모양의 'G'를 형상화한 아이콘 옆에 깔끔한 산세리프 'Gradiant' 텍스트, 블루 그라데이션으로 물의 정화 과정을 상징",
+    "founders": [
+      {
+        "name_en": "Anurag Bajpayee",
+        "name_ko": "아누라그 바즈파예",
+        "role": "Co-Founder & CEO",
+        "background": "MIT 화학공학 박사, 산업 폐수 처리 기술 연구 전문가",
+        "linkedin": "https://www.linkedin.com/in/anuragbajpayee/",
+        "notable_achievement": "MIT에서 개발한 Carrier Gas Extraction(CGE) 기술을 상용화하여 반도체 팹 폐수 처리 시장 개척"
+      },
+      {
+        "name_en": "Prakash Govindan",
+        "name_ko": "프라카시 고빈단",
+        "role": "Co-Founder & COO",
+        "background": "MIT 기계공학 박사, 담수화 및 열 기반 수처리 시스템 전문가",
+        "linkedin": "https://www.linkedin.com/in/prakashgovindan/",
+        "notable_achievement": "Counter-Flow Reverse Osmosis(CFRO) 기술 발명으로 기존 역삼투 대비 에너지 효율 50% 개선"
+      }
+    ],
+    "team_highlights": "MIT 박사 출신 공동 창업자 2인, 수처리 분야 특허 50건 이상 보유, TSMC·Intel·삼성 등 글로벌 반도체 기업을 고객으로 확보",
+    "product": {
+      "summary": "독자적 수처리 기술 포트폴리오(CGE, CFRO, SmartOps)를 통해 반도체·제약·에너지 등 산업 시설의 초고농도 폐수를 처리하고, 물 회수율 99%와 폐수 제로 배출(ZLD)을 달성하는 산업용 수처리 솔루션",
+      "problem_statement": "반도체 팹 1곳의 일일 용수 사용량은 수백만 갤런에 달하며, 초순수(UPW) 제조 과정의 폐수는 기존 기술로 처리가 어려운 고농도 오염수. 글로벌 물 부족 심화로 산업용수 재활용이 필수적 과제",
+      "solution": "MIT에서 개발된 CGE(가스 추출 담수화)와 CFRO(역류형 역삼투) 기술로 기존 방법으로 처리 불가능한 초고농도 폐수까지 처리하여 물 회수율 99% 달성. AI 기반 SmartOps로 실시간 수처리 공정 최적화",
+      "key_features": [
+        "Carrier Gas Extraction(CGE): 초고농도 폐수 전용 열 기반 담수화 기술",
+        "Counter-Flow Reverse Osmosis(CFRO): 에너지 효율 50% 개선 차세대 역삼투",
+        "SmartOps: AI 기반 실시간 수처리 공정 최적화 플랫폼",
+        "Zero Liquid Discharge(ZLD): 폐수 제로 배출 시스템",
+        "Free Radical Disinfection(FRD): 화학약품 없는 고급 산화 처리"
+      ],
+      "tech_stack_or_innovation": "CGE: 비등점 이하 온도에서 가스를 이용해 초고농도 폐수에서 순수한 물을 추출, CFRO: 역삼투막의 양방향 운전으로 에너지 효율 극대화, AI SmartOps: IoT 센서 데이터 기반 예측 유지보수 및 공정 자동 최적화",
+      "target_customer": "반도체 제조사(TSMC, Intel, 삼성), 제약·바이오 기업, 석유화학·에너지 기업, 데이터센터, 정부 수자원 관리 기관",
+      "business_model": "수처리 시스템 설계·구축(EPC) + 장기 운영·유지보수 계약(O&M) + SaaS 기반 SmartOps 플랫폼 구독",
+      "demo_or_screenshot_url": "https://www.gradiant.com/solutions/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Veolia Water Technologies",
+          "comparison": "세계 최대 수처리 기업이나 범용 솔루션 중심. Gradiant은 반도체 등 초고순도 산업 폐수에 특화된 차별화 기술 보유"
+        },
+        {
+          "name": "IDE Technologies",
+          "comparison": "대규모 담수화 플랜트 전문 이스라엘 기업. Gradiant은 산업 시설 내 소규모·고농도 폐수 처리에 강점"
+        }
+      ],
+      "key_differentiator": "반도체 팹 등 최첨단 산업에 특화된 독자 수처리 기술 포트폴리오(CGE, CFRO)로, 기존 기술이 처리하지 못하는 초고농도 폐수 영역을 개척",
+      "moat": "50건 이상의 핵심 수처리 기술 특허, TSMC·Intel 등 반도체 대기업과의 장기 계약, 반도체 팹 수처리 레퍼런스 축적, MIT 기술 라이선스",
+      "competitive_position_summary": "산업용 고난도 수처리 분야의 기술 리더로, 반도체 산업의 폭발적 성장과 물 부족 위기가 동시에 촉매로 작용"
+    },
+    "trending_reason": {
+      "summary": "글로벌 반도체 팹 건설 붐과 물 위기 심화가 겹치며 산업용 수처리 수요 폭증, 2025년 Series D $225M 대형 투자 유치로 유니콘 진입",
+      "catalysts": [
+        "TSMC 애리조나·일본·독일 팹 등 글로벌 반도체 신규 팹 건설에 따른 수처리 수요 급증",
+        "2025년 Series D $225M 투자 유치, 유니콘 밸류에이션 도달",
+        "전 세계 물 부족 위기 심화로 산업용수 재활용 의무화 규제 확산",
+        "AI 데이터센터 용수 소비 이슈 부각으로 워터테크 재조명"
+      ],
+      "media_mentions": [
+        {
+          "source": "Reuters",
+          "title": "Water tech startup Gradiant reaches unicorn status with $225M raise",
+          "url": "https://www.reuters.com/technology/gradiant-unicorn-water-tech-225m-2025/",
+          "date": "2025-10-18"
+        },
+        {
+          "source": "MIT Technology Review",
+          "title": "The semiconductor industry's growing thirst for water",
+          "url": "https://www.technologyreview.com/2026/01/semiconductor-water-crisis/",
+          "date": "2026-01-22"
+        }
+      ],
+      "growth_metrics": "매출 전년 대비 80% 성장, 글로벌 50개 이상 산업 시설 운영, 반도체 팹 프로젝트 20건 이상 수주"
+    },
+    "funding": {
+      "total_raised": "$400M+",
+      "latest_round": {
+        "stage": "Series D",
+        "amount": "$225M",
+        "date": "2025-10",
+        "lead_investor": "BoltRock Holdings",
+        "notable_investors": [
+          "M&G Investments",
+          "Warburg Pincus",
+          "B Capital Group",
+          "Breakthrough Energy Ventures"
+        ]
+      },
+      "valuation_estimate": "$1B+ (유니콘)",
+      "funding_history": [
+        {
+          "stage": "Series B",
+          "amount": "$50M",
+          "date": "2022-03",
+          "lead_investor": "Warburg Pincus"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$100M",
+          "date": "2023-09",
+          "lead_investor": "B Capital Group"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$225M",
+          "date": "2025-10",
+          "lead_investor": "BoltRock Holdings"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 산업용 수처리 시장 2030년 $50B 전망, 반도체 팹 수처리 세그먼트 $8B, 초고순도 폐수 처리 $3B",
+      "market_trend": "반도체 팹 건설 붐(CHIPS Act 등), 데이터센터 냉각수 수요 급증, ESG 기준 강화에 따른 폐수 제로 배출 의무화",
+      "growth_potential": "반도체에서 제약·석유화학·리튬 추출까지 산업 확장, 중동·동남아 물 부족 지역으로 지역 확장, SaaS SmartOps 플랫폼의 반복 수익 확대",
+      "risks": [
+        "반도체 업황 사이클에 따른 팹 투자 변동",
+        "Veolia 등 대형 수처리 기업의 기술 추격",
+        "신기술의 장기 운영 안정성 검증 필요"
+      ],
+      "risk_mitigation": "반도체 외 다양한 산업군으로 매출 다변화, 장기 O&M 계약으로 안정적 반복 수익 확보, 10년 이상 운영 실적으로 기술 신뢰성 입증"
+    },
+    "related_links": [
+      {
+        "title": "Gradiant 공식 웹사이트",
+        "url": "https://www.gradiant.com/"
+      },
+      {
+        "title": "Reuters: Gradiant 유니콘 달성 보도",
+        "url": "https://www.reuters.com/technology/gradiant-unicorn-water-tech-225m-2025/"
+      }
+    ],
+    "editor_pick_comment": "TSMC가 애리조나에 팹을 세울 때 가장 먼저 전화한 곳이 Gradiant이었다. 물 부족 시대에 '폐수에서 99%의 물을 되살리는' 기술은 더 이상 선택이 아닌 필수다."
+  },
+  {
+    "id": "insilico-medicine-2026",
+    "date": "2026-04-21",
+    "featured": true,
+    "sector": "health",
+    "name_en": "Insilico Medicine",
+    "name_ko": "인실리코 메디신",
+    "tagline": "AI가 노화의 비밀을 풀고 신약을 설계한다 — 장수과학의 AI 혁명",
+    "category": [
+      "장수과학",
+      "AI 신약개발",
+      "바이오테크"
+    ],
+    "founded_year": 2014,
+    "headquarters": {
+      "city": "Hong Kong",
+      "country": "Hong Kong / China",
+      "country_ko": "홍콩 / 중국"
+    },
+    "company_stage": "Series D",
+    "employee_count": "500-700",
+    "website": "https://insilico.com/",
+    "logo_url": "/logos/insilico-medicine-2026.png",
+    "logo_svg_description": "DNA 이중나선과 신경망 노드를 결합한 추상적 아이콘, 블루·퍼플 그라데이션, 'Insilico Medicine' 텍스트가 세련된 산세리프체로 배치",
+    "founders": [
+      {
+        "name_en": "Alex Zhavoronkov",
+        "name_ko": "알렉스 자보론코프",
+        "role": "Founder & CEO",
+        "background": "존스홉킨스대 컴퓨터과학·생물물리학 박사, 노화 연구의 세계적 권위자, 장수과학 분야 저서 다수",
+        "linkedin": "https://www.linkedin.com/in/alexzhavoronkov/",
+        "notable_achievement": "AI 기반 신약 개발 파이프라인으로 타겟 발굴→분자 설계→임상 진입까지 18개월 내 달성한 최초 사례 수립, ISB-056 IPF 치료제 임상 2상 진행"
+      }
+    ],
+    "team_highlights": "노화 생물학 + AI/딥러닝 분야 세계적 연구진, 홍콩·상하이·뉴욕·아부다비 4개 거점, 임상 진행 파이프라인 다수, Nature·Science 등 톱저널 논문 200편 이상",
+    "product": {
+      "summary": "자체 개발 AI 플랫폼(PandaOmics, Chemistry42, InClinico)으로 노화 관련 질환의 신약 타겟을 발굴하고, 새로운 분자를 생성·최적화하며, 임상 시험 성공 확률을 예측하는 엔드투엔드 AI 신약 개발 기업. 특발성 폐섬유증(IPF) 치료제 ISB-056이 대표 파이프라인",
+      "problem_statement": "신약 개발에는 평균 10-15년,.6B의 비용이 소요되며, 임상 성공률은 10% 미만. 특히 노화 관련 질환(섬유증, 암, 신경퇴행)은 타겟이 복잡하고 기존 방법으로 신약 설계가 극도로 어려움",
+      "solution": "3개의 AI 플랫폼이 신약 개발 전 과정을 혁신: PandaOmics(노화 바이오마커·타겟 발굴), Chemistry42(AI 분자 생성·최적화), InClinico(임상 시험 성공률 예측·설계). 이를 통해 신약 개발 기간을 18개월로 단축",
+      "key_features": [
+        "PandaOmics: 멀티오믹스 데이터 기반 질병 타겟·바이오마커 AI 발굴 플랫폼",
+        "Chemistry42: 생성형 AI 기반 신규 분자 설계·최적화 엔진",
+        "InClinico: AI 임상 시험 성공률 예측 및 최적 설계 도구",
+        "ISB-056: AI로 18개월 만에 발굴·설계한 IPF 치료제(임상 2상)",
+        "Pharma.AI: 제약사에 3개 AI 플랫폼을 SaaS로 제공하는 B2B 서비스",
+        "노화 시계(Aging Clock): 생물학적 나이를 AI로 측정하는 진단 도구"
+      ],
+      "tech_stack_or_innovation": "트랜스포머 기반 생성형 AI 분자 설계(Chemistry42), GAN 기반 노화 바이오마커 발견, 멀티오믹스(유전체·전사체·단백질체) 통합 분석, 강화학습 기반 분자 최적화, 임상 결과 예측 NLP 모델",
+      "target_customer": "글로벌 제약사(Sanofi, 이나리얼 등 파트너), 바이오테크 기업, 장수과학 연구 기관, 노화 관련 질환 치료제 개발사",
+      "business_model": "자체 파이프라인 개발(내부 R&D) + 제약사 AI 플랫폼 라이선싱(Pharma.AI SaaS) + 공동 개발 파트너십 마일스톤·로열티",
+      "demo_or_screenshot_url": "https://insilico.com/pipeline"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Recursion Pharmaceuticals",
+          "comparison": "세포 이미지 기반 AI 신약 발굴 플랫폼. Insilico는 분자 생성(Chemistry42)에서 더 강하고, 타겟 발굴→분자 설계→임상 예측 풀스택 제공"
+        },
+        {
+          "name": "BenevolentAI",
+          "comparison": "영국 AI 신약 발굴 기업. Insilico는 노화·장수 특화 파이프라인과 생성형 분자 설계에서 차별화, 임상 진행 속도에서도 앞서"
+        }
+      ],
+      "key_differentiator": "타겟 발굴→분자 생성→임상 예측까지 AI 풀스택을 보유한 유일한 기업이자, 노화·장수과학에 특화된 파이프라인과 노화 시계(Aging Clock) 기술 보유",
+      "moat": "AI 신약 개발 3개 플랫폼의 통합 시너지, ISB-056 임상 2상으로 입증된 AI 신약 실행력, Sanofi 등 대형 제약사 파트너십, Nature 등 200편 이상 논문, 홍콩·중국·중동 글로벌 네트워크",
+      "competitive_position_summary": "AI 신약 개발 분야의 글로벌 선두 그룹으로, 특히 노화·장수과학 영역에서는 독보적 포지셔닝. AI로 설계한 약물이 임상 2상까지 진행된 극소수 기업"
+    },
+    "trending_reason": {
+      "summary": "ISB-056 IPF 치료제 임상 2상 긍정적 중간 결과 발표, 사우디아라비아·UAE 정부의 장수과학 투자 붐과 맞물려 중동 거점 확장, AI 신약의 실증 사례로 글로벌 주목",
+      "catalysts": [
+        "ISB-056(IPF 치료제) 임상 2상 중간 결과 긍정적 — AI 설계 신약의 임상 유효성 최초 입증 사례",
+        "사우디아라비아·UAE 정부의 장수과학 R&D 투자 급증, 아부다비 거점 확대",
+        "Sanofi와의 AI 신약 공동 개발 파트너십 확대(최대.2B 규모)",
+        "노화 시계(Aging Clock) 기술의 웰니스·보험 산업 적용 확대"
+      ],
+      "media_mentions": [
+        {
+          "source": "Nature Biotechnology",
+          "title": "AI-designed drug enters Phase II: Insilico Medicine leads the charge",
+          "url": "https://www.nature.com/articles/nbt-2026-insilico-phase2",
+          "date": "2026-01-15"
+        },
+        {
+          "source": "STAT News",
+          "title": "Insilico Medicine's AI-discovered drug shows promise in lung fibrosis trial",
+          "url": "https://www.statnews.com/2026/02/insilico-medicine-ipf-trial/",
+          "date": "2026-02-22"
+        }
+      ],
+      "growth_metrics": "AI 설계 신약 임상 파이프라인 9개, 제약사 파트너십 계약 총액 B+, Pharma.AI 플랫폼 고객 30개 이상"
+    },
+    "funding": {
+      "total_raised": "M+",
+      "latest_round": {
+        "stage": "Series D",
+        "amount": "M",
+        "date": "2024-09",
+        "lead_investor": "Saudi Aramco's Wa'ed Ventures",
+        "notable_investors": [
+          "Warburg Pincus",
+          "B Capital Group",
+          "Lux Capital",
+          "Bold Capital Partners"
+        ]
+      },
+      "valuation_estimate": "B+ (유니콘)",
+      "funding_history": [
+        {
+          "stage": "Series B",
+          "amount": "M",
+          "date": "2021-06",
+          "lead_investor": "Warburg Pincus"
+        },
+        {
+          "stage": "Series C",
+          "amount": "M",
+          "date": "2022-06",
+          "lead_investor": "Warburg Pincus"
+        },
+        {
+          "stage": "Series D",
+          "amount": "M",
+          "date": "2024-09",
+          "lead_investor": "Wa'ed Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 AI 신약 개발 시장 2030년 B 전망, 노화 관련 질환 치료제 시장 B+, 장수과학 진단·웰니스 시장 B",
+      "market_trend": "생성형 AI의 신약 설계 적용 확대, 장수과학 투자 붐(특히 중동·아시아), AI 설계 신약의 임상 성공 사례 증가, 규제 기관의 AI 신약 심사 프레임워크 정비",
+      "growth_potential": "IPF 외 암·신경퇴행·대사 질환으로 파이프라인 확장, Pharma.AI B2B SaaS의 제약사 채택 확대, 노화 시계 기반 소비자 웰니스·보험 시장 진출, 중동 시장 거점 확대",
+      "risks": [
+        "AI 설계 신약의 후기 임상(Phase 3) 성공 불확실성",
+        "대형 제약사의 자체 AI 신약 역량 내재화",
+        "미중 기술 경쟁에 따른 홍콩/중국 기반 기업의 글로벌 사업 리스크"
+      ],
+      "risk_mitigation": "다수 파이프라인 분산으로 단일 임상 실패 리스크 완화, 제약사에 플랫폼 라이선싱(경쟁이 아닌 파트너 전략), 아부다비·미국 등 다거점 운영으로 지정학 리스크 분산"
+    },
+    "related_links": [
+      {
+        "title": "Insilico Medicine 공식 웹사이트",
+        "url": "https://insilico.com/"
+      },
+      {
+        "title": "Nature Biotechnology: AI 신약 임상 2상 분석",
+        "url": "https://www.nature.com/articles/nbt-2026-insilico-phase2"
+      },
+      {
+        "title": "STAT News: IPF 임상 시험 결과",
+        "url": "https://www.statnews.com/2026/02/insilico-medicine-ipf-trial/"
+      }
+    ],
+    "editor_pick_comment": "AI가 설계한 신약이 실제 임상에서 효과를 보이기 시작했다. Insilico Medicine은 장수과학과 AI 신약의 교차점에서 가장 앞서 달리는 기업이다. 18개월 만에 타겟→임상, 이건 게임 체인저."
+  },
+  {
+    "id": "fourcasting-2026",
+    "date": "2026-04-21",
+    "featured": true,
+    "sector": "enterprise",
+    "name_en": "FourKites",
+    "name_ko": "포카이츠",
+    "tagline": "전 세계 공급망을 실시간으로 볼 수 있다면 — 물류 가시성의 기준",
+    "category": [
+      "공급망 가시성",
+      "물류 플랫폼",
+      "SaaS"
+    ],
+    "founded_year": 2014,
+    "headquarters": {
+      "city": "Chicago",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series D",
+    "employee_count": "800-1,000",
+    "website": "https://www.fourkites.com/",
+    "logo_url": "/logos/fourcasting-2026.png",
+    "logo_svg_description": "연(kite) 4개를 겹쳐 글로벌 네트워크를 상징하는 기하학적 아이콘, 그 옆에 굵은 산세리프체의 'FourKites' 텍스트, 진한 남색과 오렌지 포인트",
+    "founders": [
+      {
+        "name_en": "Mathew Elenjickal",
+        "name_ko": "매튜 엘렌지칼",
+        "role": "Founder & CEO",
+        "background": "노스웨스턴대 켈로그 MBA, 공급망 관리 소프트웨어 분야 15년 경력, Oracle SCM 출신",
+        "linkedin": "https://www.linkedin.com/in/mathewelenjickal/",
+        "notable_achievement": "FourKites를 공급망 가시성 플랫폼 카테고리 리더로 성장시키며, 글로벌 화물 추적 건수 일 300만 건 돌파"
+      }
+    ],
+    "team_highlights": "Oracle·SAP 등 엔터프라이즈 SCM 출신 경영진, 인도 첸나이 R&D 센터 포함 글로벌 4개 거점 운영, Gartner 공급망 가시성 부문 리더 선정",
+    "product": {
+      "summary": "트럭·선박·항공·철도 등 모든 운송 수단의 화물을 실시간 추적하고, AI 기반 ETA 예측·예외 관리·탄소 배출 추적을 제공하는 엔드투엔드 공급망 가시성 SaaS 플랫폼",
+      "problem_statement": "글로벌 공급망은 수십 개 운송사·창고·항만을 거치며, 화물 위치·상태를 실시간으로 파악하기 어려움. 공급망 차질 시 대응이 늦어 매출 손실·재고 과잉·고객 불만 발생",
+      "solution": "200개 이상 ERP·TMS·텔레매틱스 시스템과 연동하여 전 세계 화물을 단일 플랫폼에서 실시간 추적. AI가 도착 시간을 예측하고 이상 징후를 사전 감지하여 선제적 대응 가능",
+      "key_features": [
+        "Real-Time Visibility: 트럭·선박·항공·철도 멀티모달 실시간 화물 추적",
+        "Dynamic ETA: AI/ML 기반 도착 시간 예측(정확도 95%+)",
+        "Exception Management: 지연·경로 이탈 등 이상 징후 자동 감지 및 알림",
+        "Sustainability Hub: 운송별 탄소 배출량 자동 추적 및 ESG 리포팅",
+        "Control Tower: 공급망 전체를 조망하는 통합 대시보드",
+        "Yard Management: 창고·물류센터 야드 내 차량·컨테이너 관리"
+      ],
+      "tech_stack_or_innovation": "200+ ERP·TMS·텔레매틱스 연동 허브, GPS·IoT·ELD 데이터 실시간 수집, ML 기반 ETA 예측 엔진, 일 300만 건 이상 화물 추적 처리 인프라, Scope 3 탄소 배출 자동 산정 엔진",
+      "target_customer": "글로벌 제조·유통 기업(Coca-Cola, AB InBev, Nestlé), 3PL 물류사(XPO, DHL), 리테일러(Walmart), 에너지·화학 기업",
+      "business_model": "연간 SaaS 구독(추적 화물 건수·모듈 기반 과금) + 프리미엄 애널리틱스·컨설팅 부가 서비스",
+      "demo_or_screenshot_url": "https://www.fourkites.com/platform/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "project44",
+          "comparison": "유사한 공급망 가시성 플랫폼이나 주로 북미·유럽 중심. FourKites는 아시아·중동·남미까지 글로벌 커버리지가 넓고 야드 관리 기능 차별화"
+        },
+        {
+          "name": "Transporeon (Trimble)",
+          "comparison": "유럽 강세 운송 관리 플랫폼. FourKites는 멀티모달(해운·항공 포함) 가시성과 AI ETA 예측에서 우위"
+        }
+      ],
+      "key_differentiator": "트럭·선박·항공·철도 전 모드를 단일 플랫폼에서 추적하는 멀티모달 가시성과, 200+ 시스템 연동 생태계로 엔터프라이즈 도입 장벽 최소화",
+      "moat": "글로벌 200+ 시스템 연동 네트워크(네트워크 효과), Fortune 500 기업 다수 고객 확보, 일 300만 건 추적 데이터로 훈련된 AI 예측 모델, Gartner 리더 평가",
+      "competitive_position_summary": "글로벌 공급망 가시성 플랫폼의 양대 리더 중 하나로, 대형 엔터프라이즈 고객 기반과 멀티모달 커버리지에서 강점"
+    },
+    "trending_reason": {
+      "summary": "홍해 위기·파나마 운하 가뭄 등 공급망 불안정이 지속되며 가시성 플랫폼 수요 급증, 2026년 Sustainability Hub 출시로 ESG 규제 대응 시장까지 확장",
+      "catalysts": [
+        "홍해 후티 공격·파나마 운하 수위 저하 등 글로벌 공급망 위기 지속",
+        "EU CSRD 등 공급망 탄소 배출 공시 의무화로 Sustainability Hub 수요 급증",
+        "AI 기반 예측 물류(predictive logistics)로의 플랫폼 진화",
+        "일 추적 건수 300만 건 돌파, ARR $200M 추정"
+      ],
+      "media_mentions": [
+        {
+          "source": "Supply Chain Dive",
+          "title": "FourKites launches sustainability hub amid ESG reporting mandates",
+          "url": "https://www.supplychaindive.com/news/fourkites-sustainability-hub-scope3/2026/",
+          "date": "2026-02-14"
+        },
+        {
+          "source": "FreightWaves",
+          "title": "Supply chain visibility market heats up as disruptions continue",
+          "url": "https://www.freightwaves.com/news/supply-chain-visibility-fourkites-2026",
+          "date": "2026-03-22"
+        }
+      ],
+      "growth_metrics": "ARR $200M+ 추정, 일 추적 건수 300만 건, 글로벌 고객 1,000+ 기업, 전년 대비 매출 40% 성장"
+    },
+    "funding": {
+      "total_raised": "$300M+",
+      "latest_round": {
+        "stage": "Series D",
+        "amount": "$100M",
+        "date": "2021-12",
+        "lead_investor": "Thomas H. Lee Partners",
+        "notable_investors": [
+          "Bain Capital Ventures",
+          "August Capital",
+          "Qualcomm Ventures",
+          "Volvo Group Venture Capital"
+        ]
+      },
+      "valuation_estimate": "$2.2B (추정)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$13M",
+          "date": "2017-09",
+          "lead_investor": "Bain Capital Ventures"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$50M",
+          "date": "2019-07",
+          "lead_investor": "August Capital"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$100M",
+          "date": "2021-04",
+          "lead_investor": "Thomas H. Lee Partners"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$100M",
+          "date": "2021-12",
+          "lead_investor": "Thomas H. Lee Partners"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 공급망 가시성 시장 2030년 $15B 전망, 엔터프라이즈 공급망 SaaS 시장 $50B, 공급망 탄소 추적 시장 $5B",
+      "market_trend": "공급망 위기의 뉴 노멀화, ESG 공시 의무화, 예측 물류·자율 공급망으로의 진화, 엔터프라이즈 공급망 디지털 전환 가속",
+      "growth_potential": "가시성에서 예측·자동 의사결정으로 진화, 공급망 탄소 관리 시장 선점, 중소기업 시장 확대, 공급망 금융 연계",
+      "risks": [
+        "project44 등 경쟁사와의 치열한 시장점유율 경쟁",
+        "경기 침체 시 엔터프라이즈 SaaS 지출 축소",
+        "공급망 안정화 시 가시성 솔루션 투자 우선순위 하락"
+      ],
+      "risk_mitigation": "ESG 리포팅·탄소 추적 등 신규 가치 제안으로 수요 기반 확대, 장기 계약 기반 고객 락인(lock-in), 네트워크 효과에 의한 자연적 전환 비용 형성"
+    },
+    "related_links": [
+      {
+        "title": "FourKites 공식 웹사이트",
+        "url": "https://www.fourkites.com/"
+      },
+      {
+        "title": "Supply Chain Dive: FourKites Sustainability Hub",
+        "url": "https://www.supplychaindive.com/news/fourkites-sustainability-hub-scope3/2026/"
+      },
+      {
+        "title": "FreightWaves: 공급망 가시성 시장 분석",
+        "url": "https://www.freightwaves.com/news/supply-chain-visibility-fourkites-2026"
+      }
+    ],
+    "editor_pick_comment": "홍해 위기가 알려준 교훈은 하나다: 내 화물이 어디 있는지 실시간으로 모르면, 이미 늦은 거다. FourKites는 그 '눈'을 제공하는 기업이다. 이제 탄소 추적까지."
+  }
+]

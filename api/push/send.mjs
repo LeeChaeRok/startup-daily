@@ -5,8 +5,9 @@
  * has none of them. Gone subscriptions (404/410) are removed.
  */
 import webpush from 'web-push'
-import startups from '../../src/data/startups.json' with { type: 'json' }
-import { sectorOf } from '../../src/lib/sectors.js'
+import { canonicalSector, sectorFor } from '../../src/lib/sectors.js'
+import { issueOf } from '../_lib/data.mjs'
+import { pickMine } from '../../src/lib/pick.js'
 import { redis, storeReady } from '../_lib/store.mjs'
 import { readBody, send } from '../_lib/http.mjs'
 
@@ -25,11 +26,10 @@ export default async function handler(req, res) {
   if (!storeReady || !process.env.VAPID_PRIVATE_KEY) return send(res, 503, { error: 'disabled' })
 
   const body = await readBody(req).catch(() => ({}))
-  const date = /^\d{4}-\d{2}-\d{2}$/.test(body.date || '') ? body.date : startups.map((s) => s.date).sort().at(-1)
-  const issue = startups.filter((s) => s.date === date)
+  const { date, issue, pool } = await issueOf(body.date).catch(() => ({ date: body.date, issue: [], pool: [] }))
   if (!issue.length) return send(res, 404, { error: 'no issue', date })
 
-  const sectors = issue.map((s) => sectorOf(s.category || []))
+  const sectors = issue.map(sectorFor)
   const labels = [...new Set(sectors.map((s) => s.label))].slice(0, 2).join('·')
   const payload = (count) =>
     JSON.stringify({
@@ -39,13 +39,29 @@ export default async function handler(req, res) {
       badge: count,
       tag: `issue-${date}`,
     })
+  // with a public sector pool, a reader who follows sectors hears about their own five
+  // (the same rule as the app's "내 5곳", src/lib/pick.js): "기후·에너지·푸드 리페어랩 외 4곳"
+  const hasPool = pool.length > issue.length
+  const minePayload = (sectorKeys, count) => {
+    const mine = hasPool && sectorKeys?.length ? pickMine({ days: [pool], interests: sectorKeys }) : null
+    const first = mine?.interest[0]
+    if (!first) return payload(count)
+    return JSON.stringify({
+      title: `${monthDay(date)} · 내 5곳`,
+      body: `${sectorFor(first).label} ${first.name_ko} 외 4곳`,
+      url: '/#/',
+      badge: count,
+      tag: `issue-${date}`,
+    })
+  }
 
   webpush.setVapidDetails(process.env.VAPID_SUBJECT || 'https://startup-daily.vercel.app', process.env.VAPID_PUBLIC_KEY, process.env.VAPID_PRIVATE_KEY)
   const all = (await redis('HGETALL', KEY)) || []
   let sent = 0
   let failed = 0
   let skipped = 0
-  const issueSectors = new Set(sectors.map((s) => s.key))
+  // the whole public pool counts: with "내 5곳" there is something in their sectors
+  const issueSectors = new Set(pool.map((s) => sectorFor(s).key))
   for (let i = 0; i < all.length; i += 2) {
     const id = all[i]
     let rec
@@ -54,12 +70,12 @@ export default async function handler(req, res) {
     } catch {
       continue
     }
-    if (rec.onlyInterests && rec.sectors?.length && !rec.sectors.some((k) => issueSectors.has(k))) {
+    if (rec.onlyInterests && rec.sectors?.length && !rec.sectors.some((k) => issueSectors.has(canonicalSector(k)))) {
       skipped++
       continue
     }
     try {
-      await webpush.sendNotification(rec.subscription, payload(issue.length), { TTL: 12 * 3600, urgency: 'normal' })
+      await webpush.sendNotification(rec.subscription, minePayload(rec.sectors, issue.length), { TTL: 12 * 3600, urgency: 'normal' })
       sent++
     } catch (err) {
       failed++

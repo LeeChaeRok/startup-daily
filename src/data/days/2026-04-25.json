@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "liquid-ai-2026",
+    "date": "2026-04-25",
+    "featured": true,
+    "sector": "ai",
+    "name_en": "Liquid AI",
+    "name_ko": "리퀴드 AI",
+    "tagline": "MIT발 'Liquid Neural Network' — 트랜스포머가 아닌 길을 가는 파운데이션 모델",
+    "category": [
+      "파운데이션 모델",
+      "차세대 아키텍처",
+      "온디바이스 AI"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "Cambridge",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "60-100",
+    "website": "https://www.liquid.ai/",
+    "logo_url": "/logos/liquid-ai-2026.png",
+    "logo_svg_description": "유체 흐름이 신경망 형태로 응결되는 추상 그래픽과 차분한 청록 톤의 'Liquid' 워드마크",
+    "founders": [
+      {
+        "name_en": "Ramin Hasani",
+        "name_ko": "라민 하사니",
+        "role": "Co-Founder & CEO",
+        "background": "MIT CSAIL 연구원, Liquid Neural Networks 논문 1저자",
+        "linkedin": "",
+        "notable_achievement": "Liquid Neural Networks 발명, 자율주행·로보틱스에 적용 가능한 차세대 아키텍처 개척"
+      },
+      {
+        "name_en": "Mathias Lechner",
+        "name_ko": "마티아스 레흐너",
+        "role": "Co-Founder & CTO",
+        "background": "MIT CSAIL 연구원, LNN 공동 발명자",
+        "linkedin": "",
+        "notable_achievement": "선충(C. elegans) 신경망에서 영감 받은 LNN 아키텍처 설계"
+      },
+      {
+        "name_en": "Daniela Rus",
+        "name_ko": "다니엘라 러스",
+        "role": "Co-Founder",
+        "background": "MIT CSAIL 디렉터, 세계적 로보틱스 연구자",
+        "linkedin": "",
+        "notable_achievement": "MIT CSAIL 디렉터 — 로보틱스·자율 시스템 분야 최고 권위자 중 한 명"
+      },
+      {
+        "name_en": "Alexander Amini",
+        "name_ko": "알렉산더 아미니",
+        "role": "Co-Founder",
+        "background": "MIT CSAIL PhD, 자율주행·딥러닝 연구자",
+        "linkedin": "",
+        "notable_achievement": "MIT 6.S191 강좌 운영, 자율 시스템 안전성 연구"
+      }
+    ],
+    "team_highlights": "MIT CSAIL 코어 연구진 4인 + 자동차·국방·산업 도메인 전문가, 트랜스포머 외 아키텍처 연구의 가장 강력한 팀",
+    "product": {
+      "summary": "트랜스포머 대신 'Liquid Neural Network' 기반 자체 파운데이션 모델 'LFM(Liquid Foundation Models)' 시리즈를 개발. 같은 성능을 더 작은 파라미터로 달성해 자동차·드론·산업 디바이스에 직접 탑재 가능",
+      "problem_statement": "트랜스포머 기반 LLM은 거대해 클라우드 의존이 심하고, 추론 비용·지연·전력 소비가 디바이스·로봇 응용에 부적합하다",
+      "solution": "선충 신경망에서 영감 받은 동적·연속 시간 LNN 아키텍처로 시퀀스 모델을 재설계. 같은 벤치마크 성능을 1/10 수준 파라미터로 구현해 엣지·온디바이스에서도 LLM 수준의 추론 가능",
+      "key_features": [
+        "LFM 1·3·7B 시리즈: 다양한 사이즈의 LNN 기반 LLM",
+        "STAR: 자동차·국방용 시퀀스 추론 모델",
+        "Edge SDK: 차량·드론·산업 디바이스용 추론 런타임",
+        "Liquid Cloud: 클라우드 추론 API",
+        "엔터프라이즈 커스텀 LFM 학습"
+      ],
+      "tech_stack_or_innovation": "Liquid Neural Network 아키텍처, 동적 연속 시간 ODE 솔버, 컴팩트한 파라미터 효율 모델, 엣지 양자화 추론",
+      "target_customer": "자동차·드론·로보틱스 OEM, 국방·항공우주, 엣지 컴퓨팅 인프라, 데이터 주권 필요 정부·기업",
+      "business_model": "엔터프라이즈 라이선스 + 디바이스 SDK 단가 + 정부·국방 계약 + 클라우드 API",
+      "demo_or_screenshot_url": "https://www.liquid.ai/lfm"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Mistral AI",
+          "comparison": "오픈웨이트 LLM 강자. Liquid AI는 트랜스포머 외 아키텍처와 엣지 디바이스 우위"
+        },
+        {
+          "name": "Cohere",
+          "comparison": "엔터프라이즈 LLM. Liquid AI는 컴팩트 모델과 디바이스 탑재로 차별화"
+        },
+        {
+          "name": "MIT Spinout(Inceptive 등)",
+          "comparison": "MIT 출신 차세대 모델 회사. Liquid AI는 LNN 선점 연구로 격차"
+        }
+      ],
+      "key_differentiator": "Liquid Neural Network 아키텍처 + 컴팩트한 파라미터 효율 + 엣지·차량 우선 설계",
+      "moat": "MIT CSAIL 코어 연구진의 LNN 핵심 IP, 자동차·국방 파일럿 경험, 트랜스포머 외 도메인 선점",
+      "competitive_position_summary": "트랜스포머 외 파운데이션 모델 진영의 대표 주자, 엣지·자율 시스템 시장에서 강점"
+    },
+    "trending_reason": {
+      "summary": "2024년 12월 Series A $250M으로 $2.3B 밸류에이션 달성, AMD·삼성 등 디바이스 OEM과 전략 협력. 트랜스포머 대안 진영에서 가장 빠르게 자본·고객 확보",
+      "catalysts": [
+        "2024년 12월 Series A $250M, $2.3B 밸류에이션",
+        "AMD 전략 투자 — 엣지 추론 칩 통합",
+        "자동차·국방 PoC 다수 보도",
+        "LFM 3·7B 모델 공개"
+      ],
+      "media_mentions": [
+        {
+          "source": "Bloomberg",
+          "title": "Liquid AI hits $2.3B valuation as alternative to transformers",
+          "url": "https://www.bloomberg.com/liquid-ai-2-3b/",
+          "date": "2024-12-13"
+        },
+        {
+          "source": "MIT Technology Review",
+          "title": "Why MIT's Liquid Neural Networks could change AI's footprint",
+          "url": "https://www.technologyreview.com/liquid-neural-networks-mit/",
+          "date": "2025-06-04"
+        }
+      ],
+      "growth_metrics": "엔터프라이즈·OEM 파일럿 수십 건, AMD·삼성 등 전략 파트너, 정부·국방 PoC 진행"
+    },
+    "funding": {
+      "total_raised": "$280M+",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$250M",
+        "date": "2024-12",
+        "lead_investor": "AMD Ventures",
+        "notable_investors": [
+          "Samsung Next",
+          "OSS Capital",
+          "Duke Capital Partners"
+        ]
+      },
+      "valuation_estimate": "$2.3B",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$37.6M",
+          "date": "2023-12",
+          "lead_investor": "OSS Capital"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$250M",
+          "date": "2024-12",
+          "lead_investor": "AMD Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 엣지 AI·온디바이스 시장 2030년 $80B+, 자동차·드론·국방 SOM $30B",
+      "market_trend": "엣지 LLM·온디바이스 AI 가속, 차량·로봇의 AI 통합 표준화, 트랜스포머 외 아키텍처 연구 본격화",
+      "growth_potential": "자동차 OEM 표준 모델 채택, 국방·항공우주 컴퓨트, 가전·웨어러블 통합 LLM",
+      "risks": [
+        "트랜스포머 진영의 효율화 가속",
+        "OEM 도입 사이클의 긴 시간",
+        "신규 아키텍처에 대한 산업 보수성"
+      ],
+      "risk_mitigation": "AMD·삼성 등 칩 파트너 전략 협력, 다중 도메인 PoC 다변화, 학계 연구 지속 발표"
+    },
+    "related_links": [
+      {
+        "title": "Liquid AI 공식 사이트",
+        "url": "https://www.liquid.ai/"
+      },
+      {
+        "title": "Bloomberg: $2.3B 밸류에이션",
+        "url": "https://www.bloomberg.com/liquid-ai-2-3b/"
+      },
+      {
+        "title": "LFM 모델 소개",
+        "url": "https://www.liquid.ai/lfm"
+      }
+    ],
+    "editor_pick_comment": "트랜스포머가 답이 아닐 수도 있다 — MIT가 가장 진지하게 그 가설을 베팅한 회사. 자동차·드론·로봇 위에서 도는 LLM이 만들어진다면, 거기엔 Liquid가 있을 가능성이 크다."
+  },
+  {
+    "id": "sword-health-2026",
+    "date": "2026-04-25",
+    "featured": true,
+    "sector": "health",
+    "name_en": "Sword Health",
+    "name_ko": "스워드 헬스",
+    "tagline": "AI 물리치료사 'Phoenix' — 가상 근골격계 케어의 글로벌 선두",
+    "category": [
+      "디지털 헬스",
+      "AI 헬스케어",
+      "물리치료"
+    ],
+    "founded_year": 2015,
+    "headquarters": {
+      "city": "Porto",
+      "country": "Portugal",
+      "country_ko": "포르투갈"
+    },
+    "company_stage": "Series E",
+    "employee_count": "800-1000",
+    "website": "https://swordhealth.com/",
+    "logo_url": "/logos/sword-health-2026.png",
+    "logo_svg_description": "검(sword) 형태를 단순화한 라인 그래픽과 차분한 미드나잇 블루의 'Sword' 워드마크",
+    "founders": [
+      {
+        "name_en": "Virgílio Bento",
+        "name_ko": "비르질리우 벤투",
+        "role": "Founder & CEO",
+        "background": "포르투갈 포르투 대학 전기공학 박사, 의료 영상·물리치료 연구자",
+        "linkedin": "",
+        "notable_achievement": "디지털 MSK 카테고리 정의, 미국·유럽·호주에서 1000개 이상의 기업 고객 확보"
+      }
+    ],
+    "team_highlights": "포르투갈 본사 + 미국·UK 거점, 물리치료사·AI 엔지니어·헬스 보험 전문가 결합",
+    "product": {
+      "summary": "기업 임직원에게 AI 기반 가상 물리치료를 제공하는 디지털 헬스 플랫폼. 모션 센서와 AI 코치 'Phoenix'로 환자의 자세·동작을 실시간 분석해 맞춤 운동 처방을 제공하고, 사람 물리치료사가 원격으로 관리한다",
+      "problem_statement": "근골격계(MSK) 통증은 미국에서 의료비 1위 항목 중 하나이지만, 대면 물리치료는 접근성이 낮고 약물·수술로 이어지는 비용이 막대하다",
+      "solution": "환자에게 모션 센서 키트를 발송하고, AI 코치가 운동을 실시간 가이드하며 사람 물리치료사가 원격 케어. 통증·기능 회복을 임상적으로 측정 가능한 결과로 제공해 보험사·고용주에게 비용 절감 효과 입증",
+      "key_features": [
+        "Phoenix AI: 실시간 자세 분석 AI 물리치료사",
+        "Move: 일반 MSK 케어 프로그램",
+        "Bloom: 여성 골반 건강 프로그램",
+        "Mind: 정신건강 디지털 케어",
+        "결과 기반 가격제(Outcome-based pricing)"
+      ],
+      "tech_stack_or_innovation": "모션 센서·컴퓨터 비전 자세 추정, 강화학습 기반 운동 처방, 임상 결과 데이터 기반 보험 청구",
+      "target_customer": "대형 고용주(자가보험), 의료보험사, 정부 의료 프로그램, 글로벌 연금·보험 펀드",
+      "business_model": "기업·보험사 PMPM(Per Member Per Month) 또는 결과 기반 결제",
+      "demo_or_screenshot_url": "https://swordhealth.com/demo"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Hinge Health",
+          "comparison": "디지털 MSK 양대 산맥. Sword는 결과 기반 가격제와 글로벌 확장(유럽·호주)에서 우위"
+        },
+        {
+          "name": "Omada Health",
+          "comparison": "당뇨·만성질환 중심. Sword는 MSK·여성건강 등 특화 도메인 깊이로 차별화"
+        },
+        {
+          "name": "Kaia Health",
+          "comparison": "유럽 디지털 MSK. Sword는 미국 시장 점유율과 자본 규모에서 압도적"
+        }
+      ],
+      "key_differentiator": "AI 코치 + 사람 물리치료사 하이브리드, 결과 기반 가격제, 유럽발 글로벌 확장",
+      "moat": "수백만 환자 임상 데이터, 1000+ 엔터프라이즈 고객, 결과 기반 보험 청구 모델 정착",
+      "competitive_position_summary": "디지털 MSK 카테고리의 글로벌 선두, Hinge Health와의 양대 구도에서 결과 기반 모델로 차별화"
+    },
+    "trending_reason": {
+      "summary": "2025년 후반 $40M 추가 유치로 $4B 밸류에이션, 결과 기반 가격제와 Phoenix AI 발표 후 매출 급증, 미국 IPO 가능성 보도",
+      "catalysts": [
+        "2025년 후반 $40M 추가 라운드, $4B 밸류에이션",
+        "Phoenix AI 코치 출시로 임상 결과 향상",
+        "결과 기반 가격제로 보험사·자가보험 고용주 확산",
+        "미국 IPO 준비설"
+      ],
+      "media_mentions": [
+        {
+          "source": "Forbes",
+          "title": "Sword Health hits $4B as AI physical therapy scales",
+          "url": "https://www.forbes.com/sword-health-4b/",
+          "date": "2025-10-08"
+        },
+        {
+          "source": "Reuters",
+          "title": "Sword Health eyes 2026 US IPO",
+          "url": "https://www.reuters.com/sword-health-ipo/",
+          "date": "2026-02-22"
+        }
+      ],
+      "growth_metrics": "1000+ 엔터프라이즈 고객, 환자 누적 수백만 명, 흑자 운영 구간 진입"
+    },
+    "funding": {
+      "total_raised": "$340M+",
+      "latest_round": {
+        "stage": "Series E",
+        "amount": "$40M",
+        "date": "2025-10",
+        "lead_investor": "General Catalyst",
+        "notable_investors": [
+          "Khosla Ventures",
+          "Bond",
+          "Founders Fund"
+        ]
+      },
+      "valuation_estimate": "$4B",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$8M",
+          "date": "2019-04",
+          "lead_investor": "Khosla Ventures"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$25M",
+          "date": "2020-12",
+          "lead_investor": "Khosla Ventures"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$85M",
+          "date": "2021-06",
+          "lead_investor": "General Catalyst"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$163M",
+          "date": "2021-11",
+          "lead_investor": "Sapphire Ventures"
+        },
+        {
+          "stage": "Series E",
+          "amount": "$40M",
+          "date": "2025-10",
+          "lead_investor": "General Catalyst"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 MSK 의료 비용 시장 $400B+, 디지털 MSK SOM $30B, 결과 기반 디지털 헬스 세그먼트 확장",
+      "market_trend": "고용주·보험사의 결과 기반 디지털 헬스 채택 확대, AI 코치·원격 케어 표준화, 여성·정신건강 등 인접 도메인 성장",
+      "growth_potential": "여성 건강(Bloom)·정신건강(Mind) 라인 확장, 글로벌 시장(독일·UK·호주) 점유율 확대, 보험사 PMPM 채택",
+      "risks": [
+        "Hinge Health와의 가격 경쟁",
+        "임상 결과 입증 실패 시 결과 기반 결제 리스크",
+        "엔터프라이즈 헬스 예산 변동"
+      ],
+      "risk_mitigation": "임상 데이터 지속 축적·논문 발표, 결과 보장 계약 다각화, 신규 도메인으로 매출 분산"
+    },
+    "related_links": [
+      {
+        "title": "Sword Health 공식 사이트",
+        "url": "https://swordhealth.com/"
+      },
+      {
+        "title": "Forbes: $4B 밸류에이션",
+        "url": "https://www.forbes.com/sword-health-4b/"
+      },
+      {
+        "title": "Phoenix AI 소개",
+        "url": "https://swordhealth.com/phoenix"
+      }
+    ],
+    "editor_pick_comment": "포르투갈 포르투에서 시작된 회사가, 미국 의료비 1위 카테고리(MSK)를 디지털로 옮겨놓고 있다. '결과로만 받는다'는 가격제는 헬스케어에 보기 드문 자신감."
+  },
+  {
+    "id": "helsing-2026",
+    "date": "2026-04-25",
+    "featured": true,
+    "sector": "mobility",
+    "name_en": "Helsing",
+    "name_ko": "헬싱",
+    "tagline": "민주 진영을 위한 AI 방위 — 유럽 디펜스테크의 깃발",
+    "category": [
+      "디펜스테크",
+      "AI 국방",
+      "자율 시스템"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Munich",
+      "country": "Germany",
+      "country_ko": "독일"
+    },
+    "company_stage": "Series D",
+    "employee_count": "500-700",
+    "website": "https://helsing.ai/",
+    "logo_url": "/logos/helsing-2026.png",
+    "logo_svg_description": "기하학적 H 모노그램과 매트 블랙·골드 톤의 미니멀한 'Helsing' 워드마크, 방위 산업 특유의 절제된 톤",
+    "founders": [
+      {
+        "name_en": "Gundbert Scherf",
+        "name_ko": "군트베어트 셰르프",
+        "role": "Co-Founder & Co-CEO",
+        "background": "독일 국방부 전 자문관, McKinsey 출신",
+        "linkedin": "",
+        "notable_achievement": "독일 정부와 NATO 국방 디지털화 프로젝트 다수 자문, Helsing 공동창업"
+      },
+      {
+        "name_en": "Torsten Reil",
+        "name_ko": "토르스텐 라일",
+        "role": "Co-Founder & Co-CEO",
+        "background": "NaturalMotion(Zynga 인수) 창업자, AI·시뮬레이션 전문가",
+        "linkedin": "",
+        "notable_achievement": "AI 시뮬레이션 회사 Zynga 매각 후 디펜스테크로 전환"
+      },
+      {
+        "name_en": "Niklas Köhler",
+        "name_ko": "니클라스 쾰러",
+        "role": "Co-Founder & CTO",
+        "background": "AI 시스템 엔지니어, NaturalMotion 출신",
+        "linkedin": "",
+        "notable_achievement": "전장 데이터 융합·AI 의사결정 시스템 아키텍처 설계"
+      }
+    ],
+    "team_highlights": "정부·국방·AI 시뮬레이션 출신 융합팀, 독일·UK·프랑스 국방 인재 영입, NATO 출신 자문진",
+    "product": {
+      "summary": "센서·드론·차량·항공기에서 들어오는 방대한 데이터를 실시간으로 융합·분석해 전장 의사결정을 돕는 AI 소프트웨어 플랫폼. 우크라이나 전선에서 자율 드론 통합·전자전 솔루션을 실전 운영 중",
+      "problem_statement": "현대 전장은 센서·드론·통신 데이터가 폭증하지만, 기존 군 지휘 체계는 이를 통합 분석하고 빠르게 의사결정할 능력이 부족하다",
+      "solution": "센서 데이터를 통합 융합하는 AI 코어 플랫폼과, 자율 드론·전자전 시스템·정찰 항공기 등 하드웨어 파트너십을 결합. NATO 회원국에 한해 공급하는 폐쇄 생태계 운영",
+      "key_features": [
+        "Altra: AI 데이터 융합·전장 의사결정 코어 플랫폼",
+        "HX-2: 자율 정밀 타격 드론",
+        "Eurofighter AI 통합: 차세대 전투기 전자전·AI 모듈",
+        "Saab GlobalEye 통합 AI",
+        "전자전·통신 분석 솔루션"
+      ],
+      "tech_stack_or_innovation": "전장 데이터 융합·강화학습, 엣지 추론 인프라, 자율 드론 시스템, 사이버·전자전 AI 모듈",
+      "target_customer": "NATO 및 EU 국방부, 동유럽 국가, 우방국 군사 통합 사업, 방산 OEM 협력사",
+      "business_model": "정부·국방부 멀티 년 계약, OEM 통합 라이선스, 자율 시스템 단가 판매",
+      "demo_or_screenshot_url": "https://helsing.ai/products"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Anduril Industries",
+          "comparison": "미국 디펜스테크 선두. Helsing은 유럽·NATO 시장 친화·독자 공급망 차별화"
+        },
+        {
+          "name": "Palantir",
+          "comparison": "전장 데이터 분석 강자. Helsing은 자율 하드웨어 통합과 유럽 정부 협력에서 우위"
+        },
+        {
+          "name": "Rheinmetall·BAE Systems",
+          "comparison": "전통 방산. Helsing은 AI 소프트웨어 깊이와 빠른 통합에서 차별화"
+        }
+      ],
+      "key_differentiator": "유럽·NATO 친화 + AI 코어 + 자율 하드웨어 통합 풀스택, 우크라이나 실전 검증",
+      "moat": "정부 보안 인증과 폐쇄 생태계, 우크라이나 전선 실전 데이터, NATO 회원국 우호 관계",
+      "competitive_position_summary": "유럽 디펜스테크 카테고리의 대표 주자, Anduril에 맞서는 NATO 측 핵심 공급자"
+    },
+    "trending_reason": {
+      "summary": "2025년 €600M Series D 라운드로 €5B 밸류에이션 달성, NATO 국방비 증액과 우크라이나 전선 실전 운용으로 유럽 최대 디펜스테크 유니콘 등극",
+      "catalysts": [
+        "2025년 Series D €600M, €5B 밸류에이션",
+        "우크라이나 HX-2 드론 실전 운용",
+        "독일 정부 차세대 전투기 AI 통합 계약",
+        "NATO 회원국 국방 디지털화 우선 파트너"
+      ],
+      "media_mentions": [
+        {
+          "source": "Financial Times",
+          "title": "Helsing valued at €5B as Europe ramps up defense AI spending",
+          "url": "https://www.ft.com/helsing-5b/",
+          "date": "2025-07-15"
+        },
+        {
+          "source": "Reuters",
+          "title": "Helsing's drones see action in Ukraine",
+          "url": "https://www.reuters.com/helsing-ukraine-drones/",
+          "date": "2025-12-04"
+        }
+      ],
+      "growth_metrics": "정부 계약 누적 €1B+, 임직원 500+ (1년 만에 2배), NATO 회원국 다수 도입"
+    },
+    "funding": {
+      "total_raised": "€825M+",
+      "latest_round": {
+        "stage": "Series D",
+        "amount": "€600M",
+        "date": "2025-07",
+        "lead_investor": "General Catalyst",
+        "notable_investors": [
+          "Saab",
+          "Lightspeed",
+          "Accel",
+          "Plural"
+        ]
+      },
+      "valuation_estimate": "€5B",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "€102M",
+          "date": "2021-12",
+          "lead_investor": "Prima Materia"
+        },
+        {
+          "stage": "Series B",
+          "amount": "€209M",
+          "date": "2023-09",
+          "lead_investor": "General Catalyst"
+        },
+        {
+          "stage": "Series C",
+          "amount": "€450M",
+          "date": "2024-07",
+          "lead_investor": "General Catalyst"
+        },
+        {
+          "stage": "Series D",
+          "amount": "€600M",
+          "date": "2025-07",
+          "lead_investor": "General Catalyst"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 국방 IT·AI 시장 2030년 $80B+, NATO 디지털 국방 세그먼트 SOM $20B",
+      "market_trend": "유럽 국방비 GDP 2~3% 의무화, AI·자율 시스템의 전장 투입 가속, 미국 의존 축소·자체 공급망 강화",
+      "growth_potential": "유럽·동유럽·아시아 우방국 시장 확대, 해상·우주 도메인 진출, AI 사이버·전자전 솔루션",
+      "risks": [
+        "방위 산업 윤리·규제 논쟁",
+        "NATO 국방비 정치적 변동",
+        "정부 계약 의존 리스크"
+      ],
+      "risk_mitigation": "엄격한 윤리 위원회 운영, NATO 회원국 다변화, 비국방 보안 도메인 일부 진출"
+    },
+    "related_links": [
+      {
+        "title": "Helsing 공식 사이트",
+        "url": "https://helsing.ai/"
+      },
+      {
+        "title": "FT: €5B 밸류에이션",
+        "url": "https://www.ft.com/helsing-5b/"
+      },
+      {
+        "title": "HX-2 드론 소개",
+        "url": "https://helsing.ai/hx-2"
+      }
+    ],
+    "editor_pick_comment": "유럽이 미국 없이도 자국을 지킬 수 있는가 — 그 답을 만들고 있는 회사. AI 디펜스 시장에서 Anduril에 맞서는 가장 진지한 도전자."
+  },
+  {
+    "id": "glean-2026",
+    "date": "2026-04-25",
+    "featured": true,
+    "sector": "enterprise",
+    "name_en": "Glean",
+    "name_ko": "글린",
+    "tagline": "회사 안의 모든 정보를 한 번에 — 엔터프라이즈 AI 검색의 표준",
+    "category": [
+      "엔터프라이즈 AI",
+      "검색",
+      "지식관리"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "Palo Alto",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series F",
+    "employee_count": "700-900",
+    "website": "https://www.glean.com/",
+    "logo_url": "/logos/glean-2026.png",
+    "logo_svg_description": "사선의 빛이 페이지를 비추는 미니멀 마크와 'Glean' 산세리프 워드마크, 화이트·로열 블루 컬러",
+    "founders": [
+      {
+        "name_en": "Arvind Jain",
+        "name_ko": "아르빈드 자인",
+        "role": "Co-Founder & CEO",
+        "background": "Rubrik 공동창업자, 전 Google 디스팅귀시드 엔지니어",
+        "linkedin": "",
+        "notable_achievement": "Rubrik 공동창업·상장 후 Glean 창업, 엔터프라이즈 검색의 새 표준 정의"
+      },
+      {
+        "name_en": "Tony Gentilcore",
+        "name_ko": "토니 젠틸코어",
+        "role": "Co-Founder",
+        "background": "Google 검색 엔지니어 출신",
+        "linkedin": "",
+        "notable_achievement": "구글 웹 검색 인프라 경험을 엔터프라이즈로 이식"
+      },
+      {
+        "name_en": "Piyush Prahladka",
+        "name_ko": "피유시 프라흘라드카",
+        "role": "Co-Founder",
+        "background": "Google 검색 인프라·랭킹 엔지니어",
+        "linkedin": "",
+        "notable_achievement": "엔터프라이즈 권한 기반 검색 랭킹 시스템 설계"
+      }
+    ],
+    "team_highlights": "Google 검색·Rubrik 출신 핵심 엔지니어, 엔터프라이즈 SaaS·보안 전문가, 글로벌 GTM 임원",
+    "product": {
+      "summary": "회사 내 SaaS·문서·메신저·이메일을 권한에 맞춰 통합 검색하고, RAG 기반 AI 어시스턴트로 답변·요약을 제공하는 엔터프라이즈 AI 플랫폼. 100+ SaaS 커넥터와 권한 기반 검색이 핵심",
+      "problem_statement": "엔터프라이즈 직원은 100개 이상의 앱에 흩어진 정보를 찾는 데 평균 업무 시간의 20%를 소비하고, 권한·보안 때문에 일반 LLM 챗봇은 회사 데이터에 접근하기 어렵다",
+      "solution": "Slack·Google Workspace·Salesforce 등 100+ 커넥터로 회사 데이터를 인덱싱하고, 사용자 권한을 그대로 반영해 검색·요약·생성 답변을 제공. AI 어시스턴트와 워크플로우 자동화 에이전트까지 확장",
+      "key_features": [
+        "Glean Search: 엔터프라이즈 통합 검색",
+        "Glean Assistant: 회사 데이터 기반 RAG 챗봇",
+        "Work Hub: 개인화된 작업 허브 대시보드",
+        "Apps & Agents: 코드 없이 만드는 사내 AI 에이전트",
+        "Glean for Engineering·Sales·Support 등 도메인 솔루션"
+      ],
+      "tech_stack_or_innovation": "권한 인지(authorization-aware) 인덱싱, 100+ 커넥터, 자체 RAG·랭킹 엔진, 멀티 모델 라우팅",
+      "target_customer": "1000명 이상 엔터프라이즈, 테크·금융·제약 등 정보 집약 산업, 글로벌 분산 조직",
+      "business_model": "사용자당 연간 SaaS 구독, 엔터프라이즈 커스텀 라이선스",
+      "demo_or_screenshot_url": "https://www.glean.com/product"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Microsoft Copilot",
+          "comparison": "Microsoft 365 통합 강점. Glean은 SaaS 중립성과 도메인 깊이로 차별화"
+        },
+        {
+          "name": "ChatGPT Enterprise",
+          "comparison": "범용 LLM. Glean은 엔터프라이즈 데이터 검색·권한 통합에서 우위"
+        },
+        {
+          "name": "Notion AI",
+          "comparison": "콘텐츠 생산성 도구. Glean은 회사 전체 시스템 통합 검색에 특화"
+        }
+      ],
+      "key_differentiator": "권한 기반 엔터프라이즈 검색 + RAG 어시스턴트 + 100+ 커넥터의 결합",
+      "moat": "엔터프라이즈 보안·컴플라이언스 인증, 100+ 커넥터 라이브러리, 대형 고객 락인",
+      "competitive_position_summary": "엔터프라이즈 AI 검색 카테고리의 대표 주자, Microsoft·OpenAI에 맞서는 중립 플랫폼"
+    },
+    "trending_reason": {
+      "summary": "2025년 후반 Series F $260M 추가 유치, 밸류에이션 $7.2B로 상승. 엔터프라이즈 AI 도입 본격화의 최대 수혜 기업 중 하나",
+      "catalysts": [
+        "2025년 Series F $260M, $7.2B 밸류에이션",
+        "포춘 500 기업 100+ 도입",
+        "Apps & Agents 노코드 에이전트 출시",
+        "ChatGPT Enterprise 대체재로 자리잡음"
+      ],
+      "media_mentions": [
+        {
+          "source": "Forbes",
+          "title": "Glean's $7.2B valuation reflects enterprise AI race",
+          "url": "https://www.forbes.com/glean-7-2b/",
+          "date": "2025-09-11"
+        },
+        {
+          "source": "Wall Street Journal",
+          "title": "Why Fortune 500s pick Glean over Microsoft Copilot",
+          "url": "https://www.wsj.com/glean-vs-copilot/",
+          "date": "2026-01-22"
+        }
+      ],
+      "growth_metrics": "ARR $100M+, 고객사 수백 곳, 주요 글로벌 기업 락인 비중 높음"
+    },
+    "funding": {
+      "total_raised": "$615M+",
+      "latest_round": {
+        "stage": "Series F",
+        "amount": "$260M",
+        "date": "2025-09",
+        "lead_investor": "DST Global",
+        "notable_investors": [
+          "Sequoia Capital",
+          "Kleiner Perkins",
+          "Lightspeed",
+          "General Catalyst"
+        ]
+      },
+      "valuation_estimate": "$7.2B",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$15M",
+          "date": "2020-08",
+          "lead_investor": "Kleiner Perkins"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$40M",
+          "date": "2021-04",
+          "lead_investor": "Lightspeed"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$100M",
+          "date": "2022-05",
+          "lead_investor": "Sequoia Capital"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$200M",
+          "date": "2024-02",
+          "lead_investor": "Kleiner Perkins"
+        },
+        {
+          "stage": "Series E",
+          "amount": "$260M",
+          "date": "2024-09",
+          "lead_investor": "Altimeter"
+        },
+        {
+          "stage": "Series F",
+          "amount": "$260M",
+          "date": "2025-09",
+          "lead_investor": "DST Global"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 엔터프라이즈 검색·지식관리 시장 2030년 $50B+, AI 어시스턴트 SOM $20B",
+      "market_trend": "포춘 1000 기업의 AI 어시스턴트 도입 가속, 권한·보안 중심 RAG 표준화",
+      "growth_potential": "AI 에이전트·워크플로우 자동화로 확장, 산업별 도메인 솔루션, 글로벌 EU·아시아 시장 확대",
+      "risks": [
+        "Microsoft Copilot의 번들링 공세",
+        "대형 SaaS의 자체 AI 검색 강화",
+        "엔터프라이즈 AI 예산 변동"
+      ],
+      "risk_mitigation": "SaaS 중립성·멀티 모델 강조, 도메인별 고도화, 보안 인증 지속 강화"
+    },
+    "related_links": [
+      {
+        "title": "Glean 공식 사이트",
+        "url": "https://www.glean.com/"
+      },
+      {
+        "title": "Forbes: $7.2B 밸류에이션",
+        "url": "https://www.forbes.com/glean-7-2b/"
+      },
+      {
+        "title": "Apps & Agents 소개",
+        "url": "https://www.glean.com/products/apps-and-agents"
+      }
+    ],
+    "editor_pick_comment": "회사가 가진 모든 데이터를 검색·요약·실행하는 단 하나의 엔트리 포인트가 된다면 — 그건 마이크로소프트가 아니라 Glean일 가능성이 높다."
+  },
+  {
+    "id": "tractian-2026",
+    "date": "2026-04-25",
+    "featured": true,
+    "sector": "robotics",
+    "name_en": "Tractian",
+    "name_ko": "트락치안",
+    "tagline": "공장 설비의 'Apple Watch' — IoT 진동 센서로 고장을 예측한다",
+    "category": [
+      "산업 IoT",
+      "예지보전",
+      "스마트팩토리"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "São Paulo",
+      "country": "Brazil",
+      "country_ko": "브라질"
+    },
+    "company_stage": "Series C",
+    "employee_count": "300-500",
+    "website": "https://tractian.com/",
+    "logo_url": "/logos/tractian-2026.png",
+    "logo_svg_description": "기계 진동 그래프를 추상화한 라인 아트와 진한 그레이·시그니처 옐로의 'Tractian' 워드마크",
+    "founders": [
+      {
+        "name_en": "Igor Marinelli",
+        "name_ko": "이고르 마리넬리",
+        "role": "Co-Founder & CEO",
+        "background": "기계공학·소프트웨어 엔지니어, 산업 자동화 경력",
+        "linkedin": "",
+        "notable_achievement": "라틴아메리카 산업 IoT 대표 유니콘 등극, 미국·멕시코로 빠른 확장"
+      },
+      {
+        "name_en": "Gabriel Lameirinhas",
+        "name_ko": "가브리엘 라메이리냐스",
+        "role": "Co-Founder & COO",
+        "background": "기계 엔지니어, 제조업 컨설팅 경험",
+        "linkedin": "",
+        "notable_achievement": "북미 영업 조직 구축과 OEM 파트너십 주도"
+      }
+    ],
+    "team_highlights": "기계·전기 엔지니어와 ML 전문가 결합, 브라질·미국 양국 거점, 라틴아메리카 산업 IoT 인재 풀 활용",
+    "product": {
+      "summary": "공장 설비에 부착하는 진동·온도·전류 IoT 센서와 클라우드 분석 플랫폼을 결합해, 모터·펌프·컴프레서 등의 고장을 사전에 예측한다. 자체 ML 모델이 진동 패턴을 분석해 평균 30일 전에 고장을 감지",
+      "problem_statement": "전 세계 제조업은 예기치 못한 설비 고장으로 매년 수조 달러의 다운타임 손실을 본다. 기존 예지보전 솔루션은 비싸고 설치가 복잡해 라틴아메리카·중소 제조업체 도입이 어렵다",
+      "solution": "자석으로 부착하는 무선 IoT 센서 'Smart Trac'과 클라우드 'TracOS' 소프트웨어를 결합한 풀스택 예지보전 솔루션. 셀룰러·LoRa 통신으로 설치 30분 만에 가동, 자체 ML 모델로 진동·온도 패턴 학습",
+      "key_features": [
+        "Smart Trac: 무선 진동·온도 IoT 센서",
+        "TracOS: 설비 모니터링·CMMS 통합 SaaS",
+        "Energy Trac: 전력 사용량·이상 감지",
+        "AI Diagnostics: 진동 패턴 자동 진단",
+        "라틴아메리카 24/7 현장 지원"
+      ],
+      "tech_stack_or_innovation": "저전력 IoT 센서, 진동 신호 ML 분석, 셀룰러·LoRa 통신, 멀티테넌트 SaaS 플랫폼",
+      "target_customer": "라틴아메리카·북미 제조업체, 광산·발전·식품·자동차 산업, 중대형 공장",
+      "business_model": "센서 단가 + SaaS 구독(센서당 월 사용료)",
+      "demo_or_screenshot_url": "https://tractian.com/en/product"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Augury",
+          "comparison": "예지보전 글로벌 강자. Tractian은 라틴아메리카·미국 중소 제조업 시장에서 가격·도입 속도 우위"
+        },
+        {
+          "name": "Samsara",
+          "comparison": "물류·플릿 IoT 강자. Tractian은 공장 설비 진동 분석 깊이로 차별화"
+        },
+        {
+          "name": "GE Digital / Siemens MindSphere",
+          "comparison": "대기업 OT 플랫폼. Tractian은 설치 단순성과 SMB 친화성에서 우위"
+        }
+      ],
+      "key_differentiator": "라틴아메리카 시장 깊이 + SMB 친화 가격 + 30분 설치 가능한 무선 센서",
+      "moat": "수백만 시간 진동 데이터, 라틴아메리카 OEM·지역 영업망, 자체 ML 모델 정확도",
+      "competitive_position_summary": "라틴아메리카 산업 IoT 대표 주자, 미국 SMB 시장으로 빠르게 확장 중"
+    },
+    "trending_reason": {
+      "summary": "2025년 General Catalyst 주도 $120M Series C로 $1.4B 밸류에이션 — 라틴아메리카 산업 IoT 첫 유니콘 등극, 미국 진출 가속",
+      "catalysts": [
+        "2025년 Series C $120M, $1.4B 밸류에이션",
+        "라틴아메리카 산업 IoT 최초 유니콘",
+        "미국 텍사스·플로리다 거점 확대",
+        "AI Diagnostics 출시로 진단 정확도 90%+ 달성"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Tractian becomes LatAm's first industrial IoT unicorn",
+          "url": "https://techcrunch.com/tractian-unicorn/",
+          "date": "2025-08-29"
+        },
+        {
+          "source": "Bloomberg Línea",
+          "title": "How Tractian sells $100M of sensors to American factories",
+          "url": "https://www.bloomberglinea.com/tractian/",
+          "date": "2026-02-05"
+        }
+      ],
+      "growth_metrics": "센서 누적 30만대+, 고객 공장 5,000+, 라틴아메리카·북미 매출 전년비 3배"
+    },
+    "funding": {
+      "total_raised": "$170M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$120M",
+        "date": "2025-08",
+        "lead_investor": "General Catalyst",
+        "notable_investors": [
+          "Sapphire Ventures",
+          "Next47",
+          "Kaszek"
+        ]
+      },
+      "valuation_estimate": "$1.4B",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$5M",
+          "date": "2021-08",
+          "lead_investor": "Y Combinator"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$15M",
+          "date": "2022-04",
+          "lead_investor": "Next47"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$45M",
+          "date": "2023-09",
+          "lead_investor": "General Catalyst"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$120M",
+          "date": "2025-08",
+          "lead_investor": "General Catalyst"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 예지보전 시장 2030년 $30B+, 산업 IoT SOM $80B, 라틴아메리카·북미 SMB 세그먼트 빠르게 성장",
+      "market_trend": "제조업 디지털화·OEM AI 채택 확대, 에너지 비용 상승으로 ROI 명확한 IoT 솔루션 수요 증가",
+      "growth_potential": "에너지·HVAC·물류 등 인접 도메인 진입, 미국 대기업 엔터프라이즈 계약 확대, 유럽 진출",
+      "risks": [
+        "Augury·Samsara의 가격 경쟁",
+        "센서 하드웨어 공급망 리스크",
+        "거시 제조업 경기 변동"
+      ],
+      "risk_mitigation": "SaaS 비중 확대, 멀티 도메인(에너지·HVAC) 진출, 멕시코 자체 생산으로 공급망 안정화"
+    },
+    "related_links": [
+      {
+        "title": "Tractian 공식 사이트",
+        "url": "https://tractian.com/"
+      },
+      {
+        "title": "TechCrunch: 라틴아메리카 첫 산업 IoT 유니콘",
+        "url": "https://techcrunch.com/tractian-unicorn/"
+      },
+      {
+        "title": "TracOS 제품 페이지",
+        "url": "https://tractian.com/en/tracos"
+      }
+    ],
+    "editor_pick_comment": "공장 모터에 자석으로 붙이는 작은 센서 하나가 — 라틴아메리카 첫 산업 IoT 유니콘을 만들었다. 신흥국 제조업의 디지털 전환을 이끄는 가장 현실적인 베팅."
+  },
+  {
+    "id": "rebellions-2026",
+    "date": "2026-04-25",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "Rebellions",
+    "name_ko": "리벨리온",
+    "tagline": "한국 토종 NPU의 깃발 — 사피온과 합병한 AI 반도체 챔피언",
+    "category": [
+      "AI 반도체",
+      "NPU",
+      "데이터센터"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "Seongnam",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "200-300",
+    "website": "https://rebellions.ai/",
+    "logo_url": "/logos/rebellions-2026.png",
+    "logo_svg_description": "추상화된 'R'과 회로 패턴이 결합된 마크와 모던한 'Rebellions' 워드마크, 다크 그레이·옐로 톤",
+    "founders": [
+      {
+        "name_en": "Sunghyun Park",
+        "name_ko": "박성현",
+        "role": "Founder & CEO",
+        "background": "전 IBM Watson Research·MIT 박사, 칩 설계 전문가",
+        "linkedin": "",
+        "notable_achievement": "한국 AI 반도체 대표 유니콘 등극, 사피온과의 합병으로 한국 NPU 진영 통합 주도"
+      }
+    ],
+    "team_highlights": "IBM·Apple·Samsung·Qualcomm 출신 칩 설계자, 컴파일러·AI 시스템 엔지니어, KT·SK 등 한국 빅테크 협력",
+    "product": {
+      "summary": "데이터센터·엔터프라이즈용 NPU 'ATOM(Inference)'·'REBEL(LLM 추론)' 라인업과 SDK·런타임을 함께 공급. KT 클라우드·SK 등에 한국 토종 AI 칩으로 도입되며, 사피온과의 합병으로 한국 NPU 진영 통합",
+      "problem_statement": "한국·아시아 데이터센터의 AI 컴퓨트가 NVIDIA에 절대 의존하고 있어 비용·공급 리스크가 크다. 자국 AI 칩과 컴파일러 스택이 절실하다",
+      "solution": "추론 특화 NPU 아키텍처와 자체 컴파일러 'Rebellions Neural Engine'으로 LLM 추론 효율을 GPU 대비 끌어올림. 한국 클라우드·통신사·정부 데이터센터를 첫 거점으로 확장",
+      "key_features": [
+        "ATOM: 비전·검색용 추론 NPU",
+        "REBEL: LLM 추론 NPU(HBM 채택)",
+        "Rebellions Neural Engine SDK",
+        "KT·SK 데이터센터 통합",
+        "사피온 합병으로 라인업 확대"
+      ],
+      "tech_stack_or_innovation": "추론 특화 데이터플로우 NPU, 자체 컴파일러·런타임, HBM 메모리 시스템",
+      "target_customer": "한국·아시아 클라우드·통신사, 정부·국방, 엔터프라이즈 온프레 AI",
+      "business_model": "칩·서버 단가 + 엔터프라이즈 SDK 라이선스 + 정부 계약",
+      "demo_or_screenshot_url": "https://rebellions.ai/products"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "NVIDIA H100/H200",
+          "comparison": "글로벌 표준. Rebellions는 추론 효율·한국 시장 깊이 차별화"
+        },
+        {
+          "name": "FuriosaAI",
+          "comparison": "한국 동급 경쟁자. Rebellions는 사피온 합병·KT 협력에서 우위"
+        },
+        {
+          "name": "Groq·SambaNova",
+          "comparison": "글로벌 추론 칩. Rebellions는 한국 시장 우선 침투 전략"
+        }
+      ],
+      "key_differentiator": "사피온 합병으로 한국 NPU 진영 통합 + KT·SK 등 빅테크 락인 + 추론 특화",
+      "moat": "한국 정부·통신사·클라우드 협력, 통합된 한국 NPU IP 풀, 사피온 자산",
+      "competitive_position_summary": "한국 AI 반도체 진영의 통합 챔피언, FuriosaAI와 함께 한국 NPU 양강"
+    },
+    "trending_reason": {
+      "summary": "2024년 후반 사피온과 합병 합의로 한국 NPU 진영 통합, 사우디 PIF 주도 Series C $124M으로 한국 AI 반도체 첫 유니콘 등극",
+      "catalysts": [
+        "2024년 12월 사피온과 합병 합의",
+        "2024년 사우디 PIF 주도 Series C $124M, 유니콘 등극",
+        "KT 클라우드 NPU 기반 AI 데이터센터",
+        "REBEL LLM 추론 NPU 발표"
+      ],
+      "media_mentions": [
+        {
+          "source": "Reuters",
+          "title": "Saudi PIF backs Korea's Rebellions in $124M round",
+          "url": "https://www.reuters.com/rebellions-pif-124m/",
+          "date": "2024-12-09"
+        },
+        {
+          "source": "한국경제",
+          "title": "리벨리온·사피온 합병 — 한국 AI 반도체 통합",
+          "url": "https://www.hankyung.com/rebellions-sapeon/",
+          "date": "2024-12-15"
+        }
+      ],
+      "growth_metrics": "엔터프라이즈 PoC 다수, KT·SK 데이터센터 도입, 누적 투자 $230M+"
+    },
+    "funding": {
+      "total_raised": "$230M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$124M",
+        "date": "2024-12",
+        "lead_investor": "Saudi Arabia PIF",
+        "notable_investors": [
+          "KT",
+          "Singapore Temasek",
+          "Mirae Asset",
+          "Korea Development Bank"
+        ]
+      },
+      "valuation_estimate": "$1B+",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$10M",
+          "date": "2021-08",
+          "lead_investor": "Korea Development Bank"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$66M",
+          "date": "2023-01",
+          "lead_investor": "KT"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$124M",
+          "date": "2024-12",
+          "lead_investor": "Saudi Arabia PIF"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 AI 추론 가속기 시장 2030년 $200B+, 한국·아시아 SOM $20B",
+      "market_trend": "AI 컴퓨트 자국화 정책, NVIDIA 외 추론 칩 다양화, 한국 정부 K-반도체 정책",
+      "growth_potential": "한국·중동 정부 AI 데이터센터, 글로벌 NVIDIA 대안 시장 진입, 차세대 칩 로드맵",
+      "risks": [
+        "FuriosaAI와의 한국 시장 경쟁",
+        "NVIDIA의 추론 효율화 가속",
+        "사피온 합병 후 통합 리스크"
+      ],
+      "risk_mitigation": "합병 시너지 빠른 실현, KT·SK 등 락인 강화, 중동·아시아 다변화"
+    },
+    "related_links": [
+      {
+        "title": "Rebellions 공식 사이트",
+        "url": "https://rebellions.ai/"
+      },
+      {
+        "title": "Reuters: PIF 투자 보도",
+        "url": "https://www.reuters.com/rebellions-pif-124m/"
+      },
+      {
+        "title": "REBEL 칩 소개",
+        "url": "https://rebellions.ai/rebel"
+      }
+    ],
+    "editor_pick_comment": "한국 AI 반도체가 실제 데이터센터에 들어가는 첫 사례. 사우디 PIF가 베팅하고, 사피온까지 흡수한 — 진짜 큰 게임이 시작됐다."
+  },
+  {
+    "id": "doctor-now-2026",
+    "date": "2026-04-25",
+    "featured": true,
+    "sector": "health",
+    "name_en": "Doctor Now",
+    "name_ko": "닥터나우",
+    "tagline": "비대면 진료·약 배송의 한국 표준 — 디지털 헬스의 카테고리 리더",
+    "category": [
+      "디지털 헬스",
+      "원격의료",
+      "약 배송"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "Seoul",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "200-300",
+    "website": "https://doctornow.co.kr/",
+    "logo_url": "/logos/doctor-now-2026.png",
+    "logo_svg_description": "청진기 라인이 시계처럼 회전하는 미니멀 마크와 채도 낮은 블루의 'doctornow' 워드마크",
+    "founders": [
+      {
+        "name_en": "Jangmin Lee",
+        "name_ko": "장지호",
+        "role": "Founder & CEO",
+        "background": "한양대 의예과 출신, 의대 재학 중 창업한 기업가",
+        "linkedin": "",
+        "notable_achievement": "한국 비대면 진료 카테고리를 0에서 1로 만든 창업자, 코로나 이후 정책·시장 변화의 핵심 플레이어"
+      }
+    ],
+    "team_highlights": "의사·약사·정책 전문가 + 모바일 헬스 엔지니어, 정부·병원 협력 인력 적극 영입",
+    "product": {
+      "summary": "코로나 이후 한국 정부의 비대면 진료 한시 허용을 시작으로 1,000+ 의료기관과 4만+ 약국을 연결한 모바일 원격의료 플랫폼. 환자 → 의사 진료 → 처방 → 약 배송까지 단일 앱에서 처리",
+      "problem_statement": "한국 의료 시스템은 대면 중심이라 야간·주말·비도시 의료 접근성이 낮고, 만성질환·경증 환자의 의료비·시간 부담이 크다. 약국 영업시간·물리적 거리도 진입 장벽",
+      "solution": "환자가 앱에서 의사를 선택해 화상·전화 진료를 받고, 처방전을 받은 약국에서 약을 즉시 배송 받는 풀스택 디지털 헬스. 한국 비대면 진료 정책 변화에 맞춰 합법 운영 모델 정착",
+      "key_features": [
+        "비대면 진료: 화상·전화 진료 매칭",
+        "전자 처방전: 의사 → 약국 자동 전달",
+        "약 배송: 1시간~퀵 배송",
+        "건강 다이어리: 만성질환 모니터링",
+        "기업 복지 솔루션 'Doctor Now Care'"
+      ],
+      "tech_stack_or_innovation": "의료기관 EMR 통합, 전자 처방전 표준, 약국 라스트마일 배송 매칭, 정책·법적 컴플라이언스 엔진",
+      "target_customer": "20~50대 일반 진료 환자, 만성질환 환자, 야간·주말 진료 수요, 기업 복지 고객",
+      "business_model": "약 배송·진료 수수료 + 기업 복지 B2B + 헬스 데이터 사업",
+      "demo_or_screenshot_url": "https://doctornow.co.kr/about"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "굿닥(Goodoc)",
+          "comparison": "한국 헬스 앱 강자. Doctor Now는 비대면 진료·약 배송 통합 깊이로 차별화"
+        },
+        {
+          "name": "올라케어",
+          "comparison": "비대면 진료 동급 경쟁사. Doctor Now는 시장 점유율·약국 네트워크 우위"
+        },
+        {
+          "name": "Naver·Kakao 헬스케어",
+          "comparison": "빅테크 헬스 시도. Doctor Now는 전문 카테고리 깊이로 차별화"
+        }
+      ],
+      "key_differentiator": "1000+ 의료기관 + 4만+ 약국 네트워크 + 정책 변화 대응 운영 모델",
+      "moat": "정부·의료기관·약국과의 깊은 관계, 비대면 진료 정책 변화에 대응한 운영 노하우, 사용자 락인 데이터",
+      "competitive_position_summary": "한국 비대면 진료 카테고리의 사실상 1위, 정책 정상화에 대비한 가장 큰 플랫폼"
+    },
+    "trending_reason": {
+      "summary": "2023년 비대면 진료 시범사업 시행 후 정책 변화 가속, 2024~2025년 추가 자본·B2B 라인 출시로 매출 다각화. 한국 디지털 헬스 정책 변화의 최대 수혜",
+      "catalysts": [
+        "2023년 비대면 진료 시범사업 시행",
+        "Series C 추가 자본 유치",
+        "기업 복지 B2B 라인 출시",
+        "2025~2026년 비대면 진료 본 사업 정착"
+      ],
+      "media_mentions": [
+        {
+          "source": "조선비즈",
+          "title": "닥터나우, 비대면 진료 1위 굳히기",
+          "url": "https://biz.chosun.com/doctornow-1/",
+          "date": "2024-08-20"
+        },
+        {
+          "source": "동아일보",
+          "title": "닥터나우 기업 복지 솔루션 출시",
+          "url": "https://www.donga.com/doctornow-care/",
+          "date": "2025-06-04"
+        }
+      ],
+      "growth_metrics": "누적 사용자 1000만+, 의료기관 1000+ / 약국 4만+, 월 진료 수십만 건"
+    },
+    "funding": {
+      "total_raised": "₩70B+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "₩40B",
+        "date": "2024-09",
+        "lead_investor": "에이티넘인베스트먼트",
+        "notable_investors": [
+          "DSC Investment",
+          "Korea Investment Partners",
+          "삼성벤처투자"
+        ]
+      },
+      "valuation_estimate": "₩300B~500B (추정)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "₩5B",
+          "date": "2021-04",
+          "lead_investor": "Softbank Ventures Asia"
+        },
+        {
+          "stage": "Series B",
+          "amount": "₩40B",
+          "date": "2022-04",
+          "lead_investor": "Softbank Ventures Asia"
+        },
+        {
+          "stage": "Series C",
+          "amount": "₩40B",
+          "date": "2024-09",
+          "lead_investor": "에이티넘인베스트먼트"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "한국 디지털 헬스 시장 2030년 ₩10조+, 비대면 진료 SOM ₩2조",
+      "market_trend": "비대면 진료 본 사업 전환 논의, 시니어·만성질환 디지털 케어 수요 증가, 기업 복지 헬스 침투",
+      "growth_potential": "B2B 기업 복지 시장, 시니어 케어, 만성질환 모니터링 디바이스 통합",
+      "risks": [
+        "비대면 진료 정책 후퇴 리스크",
+        "약사회·의사회 등 직역 단체 반대",
+        "Naver·Kakao 등 빅테크 진입"
+      ],
+      "risk_mitigation": "정부·의료기관·약사회와의 신뢰 관계, 정책 변화 대응 유연성, B2B 매출 다각화"
+    },
+    "related_links": [
+      {
+        "title": "닥터나우 공식 사이트",
+        "url": "https://doctornow.co.kr/"
+      },
+      {
+        "title": "조선비즈: 시장 분석",
+        "url": "https://biz.chosun.com/doctornow-1/"
+      },
+      {
+        "title": "Doctor Now Care",
+        "url": "https://doctornow.co.kr/care"
+      }
+    ],
+    "editor_pick_comment": "코로나가 잠시 열어준 문을 '한국 디지털 헬스의 표준'으로 굳혀가는 회사. 정책 한 줄에 회사가 흔들리는 산업에서, 끝까지 살아남는 쪽에 베팅하는 가장 큰 플랫폼."
+  },
+  {
+    "id": "standigm-2026",
+    "date": "2026-04-25",
+    "featured": true,
+    "sector": "health",
+    "name_en": "Standigm",
+    "name_ko": "스탠다임",
+    "tagline": "AI 워크플로우로 신약 표적 발굴 — 한국발 AI 신약 개발사",
+    "category": [
+      "AI 신약개발",
+      "바이오테크",
+      "헬스케어 AI"
+    ],
+    "founded_year": 2015,
+    "headquarters": {
+      "city": "Seoul",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "70-100",
+    "website": "https://www.standigm.com/",
+    "logo_url": "/logos/standigm-2026.png",
+    "logo_svg_description": "분자 구조가 그래프 형태로 연결된 추상 마크와 다크 그린·화이트의 'Standigm' 워드마크",
+    "founders": [
+      {
+        "name_en": "Jinhan Kim",
+        "name_ko": "김진한",
+        "role": "Founder & CEO",
+        "background": "삼성 SDS·서울대 박사, AI·생물정보학 연구자",
+        "linkedin": "",
+        "notable_achievement": "한국 AI 신약 개발 카테고리의 선구자, 자체 신약 파이프라인을 임상 단계까지 진행"
+      }
+    ],
+    "team_highlights": "AI·생물정보학 연구자 + 약학·임상 전문가, 서울대·KAIST 출신 PhD 다수",
+    "product": {
+      "summary": "신약 후보 발굴부터 합성·검증까지 자동화하는 AI 워크플로우 'Standigm ASK·Standigm BEST·Standigm Insight' 시리즈를 운영. 자체 임상 파이프라인 + 빅파마 파트너십으로 매출 다각화",
+      "problem_statement": "신약 개발은 평균 10년·$2B의 비용이 들고, 표적 발굴·후보 물질 검증은 여전히 사람의 직관에 의존한다. 한국 바이오는 글로벌 빅파마 대비 자본·인프라 격차로 새 방법론이 절실하다",
+      "solution": "지식 그래프·생성형 ML·시뮬레이션을 결합한 AI 워크플로우로 표적·후보 물질 발굴 시간을 단축. 자체 합성·검증 인프라까지 갖춘 'AI-driven biotech'",
+      "key_features": [
+        "Standigm ASK: 표적 발굴 AI",
+        "Standigm BEST: 후보 물질 생성 AI",
+        "Standigm Insight: 약물 재창출 AI",
+        "자체 임상 파이프라인(섬유증·종양 등)",
+        "글로벌 빅파마 파트너십(머크·SK 등)"
+      ],
+      "tech_stack_or_innovation": "지식 그래프·생성형 분자 모델, 자체 합성·검증 자동화, 임상 데이터 통합",
+      "target_customer": "자체 신약 파이프라인 + 글로벌 빅파마, 한국·아시아 제약사",
+      "business_model": "빅파마 마일스톤·로열티 + 자체 파이프라인 임상 가치 + AI 워크플로우 라이선스",
+      "demo_or_screenshot_url": "https://www.standigm.com/research"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Recursion·Insilico Medicine",
+          "comparison": "글로벌 AI 신약 강자. Standigm은 워크플로우 자동화·한국 빅파마 협력 차별화"
+        },
+        {
+          "name": "BenevolentAI",
+          "comparison": "지식 그래프 기반 강자. Standigm은 표적·합성까지 통합 워크플로우 차별화"
+        },
+        {
+          "name": "Galux",
+          "comparison": "한국 AI 신약 동급. Standigm은 임상 단계 진행 우위"
+        }
+      ],
+      "key_differentiator": "표적 발굴 → 합성 → 검증 통합 워크플로우 + 자체 임상 파이프라인",
+      "moat": "자체 합성·검증 인프라, 빅파마 장기 계약, 한국 바이오 생태계 우호 관계",
+      "competitive_position_summary": "한국 AI 신약 개발 카테고리의 대표 주자, 글로벌 시장에서 한국 바이오의 AI 베팅"
+    },
+    "trending_reason": {
+      "summary": "2023~2024년 자체 파이프라인 IND 승인 가속, SK·Merck 등 글로벌 빅파마 파트너십 확장, 2025년 추가 자본 유치 보도",
+      "catalysts": [
+        "2023~2024년 섬유증·종양 파이프라인 IND 승인",
+        "Merck·SK·국내 제약사 파트너십 확장",
+        "Series C 추가 자본 유치 보도",
+        "한국 정부 AI 신약 R&D 정책 수혜"
+      ],
+      "media_mentions": [
+        {
+          "source": "Endpoints News",
+          "title": "Korea's Standigm advances AI-discovered drug to clinic",
+          "url": "https://endpts.com/standigm-ind/",
+          "date": "2024-04-18"
+        },
+        {
+          "source": "조선비즈",
+          "title": "스탠다임, AI 신약 임상 단계 진입",
+          "url": "https://biz.chosun.com/standigm-clinical/",
+          "date": "2025-07-10"
+        }
+      ],
+      "growth_metrics": "빅파마 파트너십 누적 가치 수억 달러, 자체 임상 파이프라인 5+, 정부 R&D 과제 다수"
+    },
+    "funding": {
+      "total_raised": "₩50B+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "₩30B",
+        "date": "2024-12",
+        "lead_investor": "산업은행 KDB",
+        "notable_investors": [
+          "SK",
+          "한국투자파트너스",
+          "DSC Investment"
+        ]
+      },
+      "valuation_estimate": "₩200B~300B (추정)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "₩7B",
+          "date": "2018-03",
+          "lead_investor": "한국투자파트너스"
+        },
+        {
+          "stage": "Series B",
+          "amount": "₩45B",
+          "date": "2021-09",
+          "lead_investor": "SK"
+        },
+        {
+          "stage": "Series C",
+          "amount": "₩30B",
+          "date": "2024-12",
+          "lead_investor": "산업은행 KDB"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 AI 신약 개발 시장 2030년 $50B, 한국·아시아 SOM $5B",
+      "market_trend": "빅파마의 AI 신약 파트너십 확대, 한국 정부 AI 신약 R&D 정책, 임상 단계 자체 파이프라인 산업화",
+      "growth_potential": "임상 단계 파이프라인 라이선스 아웃, 글로벌 빅파마 다변화, AI 워크플로우 라이선스 사업",
+      "risks": [
+        "임상 실패 리스크",
+        "글로벌 AI 신약 강자 경쟁",
+        "자본 집약 사업의 자금 조달"
+      ],
+      "risk_mitigation": "다수 파이프라인 분산, 빅파마 다변화, 라이선스 매출 비중 확대"
+    },
+    "related_links": [
+      {
+        "title": "Standigm 공식 사이트",
+        "url": "https://www.standigm.com/"
+      },
+      {
+        "title": "Endpoints: 임상 단계 진입",
+        "url": "https://endpts.com/standigm-ind/"
+      },
+      {
+        "title": "Standigm Research",
+        "url": "https://www.standigm.com/research"
+      }
+    ],
+    "editor_pick_comment": "한국 바이오가 글로벌 빅파마와 어떻게 협력할 수 있는지 보여주는 회사. AI로 약을 찾고, 직접 임상까지 들고 가는 — 한국에서 거의 유일한 AI-driven biotech."
+  },
+  {
+    "id": "lablup-2026",
+    "date": "2026-04-25",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "Lablup",
+    "name_ko": "래블업",
+    "tagline": "한국 GPU·AI 인프라의 실용 표준 'Backend.AI' — MLOps 풀스택",
+    "category": [
+      "AI 인프라",
+      "MLOps",
+      "GPU 클라우드"
+    ],
+    "founded_year": 2015,
+    "headquarters": {
+      "city": "Seoul",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "30-60",
+    "website": "https://www.lablup.com/",
+    "logo_url": "",
+    "logo_svg_description": "데이터 흐름이 'L'자로 응결되는 추상 마크와 모던한 'Lablup' 워드마크, 모노톤 그레이",
+    "founders": [
+      {
+        "name_en": "Joongi Kim",
+        "name_ko": "김준기",
+        "role": "Co-Founder & CEO",
+        "background": "KAIST 박사, asyncio·파이썬 코어 컨트리뷰터",
+        "linkedin": "",
+        "notable_achievement": "오픈소스 'Backend.AI'를 한국 정부·대기업의 사실상 표준 MLOps 플랫폼으로 만든 인물"
+      },
+      {
+        "name_en": "Jeongkyu Shin",
+        "name_ko": "신정규",
+        "role": "Co-Founder",
+        "background": "KAIST 박사, 분산 컴퓨팅·AI 인프라 연구자",
+        "linkedin": "",
+        "notable_achievement": "Backend.AI의 분산 GPU 스케줄러·세션 시스템 설계"
+      }
+    ],
+    "team_highlights": "KAIST·서울대 출신 분산 시스템 엔지니어, 오픈소스 코어 컨트리뷰터, 정부·연구기관 협력 인력",
+    "product": {
+      "summary": "오픈소스 + 엔터프라이즈 듀얼 라이선스로 운영되는 AI/HPC 컨테이너 오케스트레이션 플랫폼 'Backend.AI'. GPU 자원 가상화·세션 관리·MLOps 워크플로우를 단일 패키지로 제공해 한국 정부·연구소·대기업 데이터센터의 표준으로 자리잡음",
+      "problem_statement": "한국 정부·연구소·대기업은 NVIDIA GPU 클러스터를 운영해야 하지만, 쿠버네티스만으로는 ML 연구자·학생의 자유로운 GPU 사용·과금·격리가 어렵다",
+      "solution": "GPU 자원을 fGPU 단위로 가상화·할당하고, 노트북·세션·서비스 모드를 통합 관리하는 오케스트레이터. 자체 컨테이너 런타임과 연구자 친화 UI 제공",
+      "key_features": [
+        "Backend.AI: GPU 컨테이너 오케스트레이터",
+        "fGPU: GPU 자원 가상화·분할",
+        "Sokovan: 자체 컨테이너 런타임",
+        "FastTrack: 정부·연구소용 멀티테넌트",
+        "Cloud / On-Premises 듀얼 배포"
+      ],
+      "tech_stack_or_innovation": "GPU 가상화·분할 IP, 자체 컨테이너 런타임, ML 워크플로우 오케스트레이션",
+      "target_customer": "한국 정부·연구소(KAIST·KISTI), 대기업 R&D 데이터센터, 대학·교육기관, 글로벌 GPU 클라우드",
+      "business_model": "오픈소스 + 엔터프라이즈 라이선스 + 클라우드 SaaS + 정부·연구 계약",
+      "demo_or_screenshot_url": "https://docs.backend.ai/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Run:AI(NVIDIA)",
+          "comparison": "글로벌 GPU 오케스트레이션 강자. Backend.AI는 한국 시장 깊이·정부·연구소 친화 차별화"
+        },
+        {
+          "name": "Determined AI(HPE)",
+          "comparison": "ML 트레이닝 플랫폼. Lablup은 노트북·세션·서비스 통합 폭으로 차별화"
+        },
+        {
+          "name": "Anyscale·Modal",
+          "comparison": "글로벌 ML 인프라. Lablup은 온프레·정부 데이터센터 친화 차별화"
+        }
+      ],
+      "key_differentiator": "오픈소스 풀스택 + GPU 가상화·분할 + 한국 정부·연구소 표준 채택",
+      "moat": "한국 정부·연구소·대기업의 사실상 표준 지위, 오픈소스 커뮤니티, fGPU·Sokovan IP",
+      "competitive_position_summary": "한국 AI 인프라 카테고리의 대표 사업자, 정부·연구·대기업 시장 강세"
+    },
+    "trending_reason": {
+      "summary": "2024~2025년 한국 정부 AI 데이터센터·국가 AI 컴퓨팅 센터 사업 핵심 파트너로 선정, NVIDIA 파트너 라인업 등재로 글로벌 노출 확대",
+      "catalysts": [
+        "한국 정부 'K-클라우드' 핵심 파트너",
+        "KISTI·KAIST 등 정부·연구기관 표준 도입",
+        "Series B 투자 유치 및 NVIDIA 파트너 라인업",
+        "FastTrack 멀티테넌트 출시"
+      ],
+      "media_mentions": [
+        {
+          "source": "ZDNet Korea",
+          "title": "Backend.AI, K-클라우드 핵심 파트너로 선정",
+          "url": "https://zdnet.co.kr/lablup-k-cloud/",
+          "date": "2024-10-22"
+        },
+        {
+          "source": "한국경제",
+          "title": "래블업, 정부 AI 데이터센터 사업 본격화",
+          "url": "https://www.hankyung.com/lablup-government-ai/",
+          "date": "2025-07-30"
+        }
+      ],
+      "growth_metrics": "정부·연구·대기업 고객 100+, 오픈소스 GitHub 스타 수천, 글로벌 NVIDIA 파트너 등재"
+    },
+    "funding": {
+      "total_raised": "₩40B+",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "₩30B",
+        "date": "2024-04",
+        "lead_investor": "DSC Investment",
+        "notable_investors": [
+          "NH벤처투자",
+          "BNK캐피탈",
+          "Naver D2SF"
+        ]
+      },
+      "valuation_estimate": "₩150B~250B (추정)",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "₩2B",
+          "date": "2018-12",
+          "lead_investor": "Naver D2SF"
+        },
+        {
+          "stage": "Series A",
+          "amount": "₩9B",
+          "date": "2022-08",
+          "lead_investor": "DSC Investment"
+        },
+        {
+          "stage": "Series B",
+          "amount": "₩30B",
+          "date": "2024-04",
+          "lead_investor": "DSC Investment"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 MLOps·GPU 오케스트레이션 시장 2030년 $30B+, 한국 SOM ₩2조",
+      "market_trend": "정부 'AI 주권' 컴퓨팅 인프라 사업 확대, GPU 가상화 표준화, 온프레 ML 인프라 수요",
+      "growth_potential": "정부·연구·국방 AI 컴퓨팅 센터, 글로벌 NVIDIA 파트너십 확장, 클라우드 SaaS 라인",
+      "risks": [
+        "Run:AI(NVIDIA) 직접 경쟁",
+        "오픈소스 → 엔터프라이즈 전환 속도",
+        "정부 예산·정책 변동"
+      ],
+      "risk_mitigation": "오픈소스 커뮤니티 강화, 정부·연구기관 락인, 클라우드 SaaS 매출 다변화"
+    },
+    "related_links": [
+      {
+        "title": "Lablup 공식 사이트",
+        "url": "https://www.lablup.com/"
+      },
+      {
+        "title": "Backend.AI 문서",
+        "url": "https://docs.backend.ai/"
+      },
+      {
+        "title": "ZDNet Korea: K-클라우드 보도",
+        "url": "https://zdnet.co.kr/lablup-k-cloud/"
+      }
+    ],
+    "editor_pick_comment": "한국 정부와 연구소가 GPU를 어떻게 쓰는지 결정하는 회사. NVIDIA가 인정한 한국 AI 인프라의 사실상 표준 — 오픈소스로 시작해 정부 사업까지 들어간 가장 정공법적인 베팅."
+  },
+  {
+    "id": "mathpresso-qanda-2026",
+    "date": "2026-04-25",
+    "featured": true,
+    "sector": "consumer",
+    "name_en": "Mathpresso",
+    "name_ko": "매스프레소",
+    "tagline": "QANDA — 8억 명의 학생이 쓰는 AI 수학 풀이 앱, 동남아·일본의 EdTech 챔피언",
+    "category": [
+      "EdTech",
+      "AI 학습",
+      "모바일 앱"
+    ],
+    "founded_year": 2015,
+    "headquarters": {
+      "city": "Seoul",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "200-300",
+    "website": "https://mathpresso.com/",
+    "logo_url": "",
+    "logo_svg_description": "물음표가 수학 기호로 변하는 추상 그래픽과 비비드 옐로 톤의 'QANDA' 워드마크",
+    "founders": [
+      {
+        "name_en": "Yongjae Lee",
+        "name_ko": "이용재",
+        "role": "Co-Founder & CEO",
+        "background": "서울대 졸업, 학원 강사·과외 경험에서 출발한 시리얼 창업자",
+        "linkedin": "",
+        "notable_achievement": "한국 EdTech 최초로 동남아·일본·중동에서 카테고리 1위, QANDA를 글로벌 AI 학습 플랫폼으로 성장"
+      },
+      {
+        "name_en": "Jongheun Lee",
+        "name_ko": "이종흔",
+        "role": "Co-Founder & CSO",
+        "background": "서울대 출신, 모바일 프로덕트 전문가",
+        "linkedin": "",
+        "notable_achievement": "QANDA 모바일 앱·교사 매칭 시스템 설계"
+      }
+    ],
+    "team_highlights": "서울대 출신 창업자 + AI·교육 콘텐츠 전문가, 일본·동남아·중동 현지 운영팀, Google·네이버 출신 영입",
+    "product": {
+      "summary": "수학 문제를 사진 찍으면 AI가 단계별 풀이를 즉시 보여주는 'QANDA' 앱과, 1:1 AI·인간 강사 매칭 기능을 결합한 글로벌 학습 플랫폼. 한국·일본·동남아·중동에서 누적 사용자 8천만+ 돌파",
+      "problem_statement": "수학 학습은 정답이 아니라 '풀이 과정'이 핵심이지만, 학생이 막히면 도와줄 사람이 없다. 사교육 비용은 높고 학원·과외 접근성은 지역마다 격차가 크다",
+      "solution": "수학 문제 OCR + 자체 풀이 데이터베이스 + LLM을 결합한 단계별 풀이 엔진을 무료로 제공하고, 1:1 강사 매칭·AI 튜터 등 프리미엄 기능으로 매출. 일본·동남아·중동 현지화 콘텐츠로 글로벌 확장",
+      "key_features": [
+        "QANDA Search: 사진 한 장으로 풀이 검색",
+        "QANDA AI Tutor: GPT 기반 1:1 학습 튜터",
+        "QANDA Tutor: 인간 강사 1:1 매칭",
+        "QANDA Study: 학습 관리·플래너",
+        "다국어(일본·동남아·중동) 콘텐츠"
+      ],
+      "tech_stack_or_innovation": "수학 수식 OCR, 풀이 데이터베이스 매칭, LLM 기반 단계별 설명 생성, 다국어 콘텐츠 파이프라인",
+      "target_customer": "한국·일본·동남아·중동의 중·고등학생 및 학부모, 대학 입시 준비생",
+      "business_model": "프리미엄 구독(AI 튜터·강사 매칭) + 광고 + 학원·콘텐츠 파트너십",
+      "demo_or_screenshot_url": "https://mathpresso.com/qanda"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Photomath(Google)",
+          "comparison": "글로벌 수학 풀이 앱. QANDA는 동남아·일본·중동 현지화와 1:1 강사 매칭으로 차별화"
+        },
+        {
+          "name": "Riiid",
+          "comparison": "AI 토익·SAT 학습. Mathpresso는 K-12 수학·동남아 시장 깊이 차별화"
+        },
+        {
+          "name": "Byju's",
+          "comparison": "인도 EdTech 거인. Mathpresso는 모바일 우선·AI 풀이 깊이로 차별화"
+        }
+      ],
+      "key_differentiator": "수학 풀이 데이터베이스 + 모바일 우선 + 일본·동남아·중동 현지화의 결합",
+      "moat": "8천만+ 사용자 데이터·풀이 데이터셋, 일본·동남아 카테고리 1위 지위, 다국어 콘텐츠 IP",
+      "competitive_position_summary": "한국 EdTech의 글로벌 챔피언, 일본·동남아·중동 K-12 수학 학습 카테고리 리더"
+    },
+    "trending_reason": {
+      "summary": "2022년 Google·소프트뱅크 주도 Series C $50M으로 한국 EdTech 첫 유니콘 후보 등극, 2024~2025년 GPT 기반 'QANDA AI Tutor' 출시로 매출 다각화 가속",
+      "catalysts": [
+        "2022년 Google·소프트뱅크 주도 Series C $50M",
+        "QANDA AI Tutor(GPT 기반) 출시",
+        "동남아·일본·중동 카테고리 1위 굳히기",
+        "MENA 지역 진출 본격화"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Mathpresso raises $50M from Google and SoftBank",
+          "url": "https://techcrunch.com/mathpresso-50m/",
+          "date": "2022-08-30"
+        },
+        {
+          "source": "Nikkei Asia",
+          "title": "Korea's QANDA dominates Japanese math app market",
+          "url": "https://asia.nikkei.com/qanda-japan/",
+          "date": "2025-05-20"
+        }
+      ],
+      "growth_metrics": "누적 사용자 8천만+, 일본·태국·인도네시아·베트남 카테고리 1위, MAU 수천만"
+    },
+    "funding": {
+      "total_raised": "$120M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$50M",
+        "date": "2022-08",
+        "lead_investor": "Google",
+        "notable_investors": [
+          "SoftBank Ventures Asia",
+          "GGV Capital",
+          "Mirae Asset",
+          "Goodwater Capital"
+        ]
+      },
+      "valuation_estimate": "$300M~$500M (추정)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$3M",
+          "date": "2018-06",
+          "lead_investor": "Mirae Asset"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$15M",
+          "date": "2020-04",
+          "lead_investor": "Legend Capital"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$50M",
+          "date": "2022-08",
+          "lead_investor": "Google"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 K-12 EdTech 시장 2030년 $200B+, 모바일 학습 SOM $30B, 일본·동남아·중동 SOM $10B",
+      "market_trend": "AI 튜터·학습 도구 표준화, 동남아·중동 모바일 학습 폭증, 입시 사교육 디지털화",
+      "growth_potential": "MENA·LATAM 진출, AI 튜터 라인업 확장, B2B 학원·학교 파트너십",
+      "risks": [
+        "Google Photomath 무료 강화",
+        "현지 EdTech 경쟁(베트남·태국 로컬 앱)",
+        "AI 튜터 콘텐츠 정확성 리스크"
+      ],
+      "risk_mitigation": "강사 매칭 인간 자원 결합, 현지 콘텐츠 강화, AI 검수 워크플로우"
+    },
+    "related_links": [
+      {
+        "title": "QANDA 공식 사이트",
+        "url": "https://mathpresso.com/qanda"
+      },
+      {
+        "title": "TechCrunch: Series C 보도",
+        "url": "https://techcrunch.com/mathpresso-50m/"
+      },
+      {
+        "title": "Nikkei Asia: 일본 시장 분석",
+        "url": "https://asia.nikkei.com/qanda-japan/"
+      }
+    ],
+    "editor_pick_comment": "한국 EdTech 회사 중에서 가장 멀리 간 곳. 일본·태국·베트남 학생 수천만 명이 매일 여는 앱이, 서울에서 만들어졌다는 사실 자체가 카테고리의 이정표다."
+  }
+]

@@ -1,0 +1,1030 @@
+{
+  "skild-ai-2026": {
+    "tagline": "A 'universal robot brain' foundation model for every robot",
+    "category": [
+      "Robot Foundation Model",
+      "Physical AI",
+      "General-Purpose Robotics"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Carnegie Mellon professor, UC Berkeley PhD, former Meta AI researcher",
+        "notable_achievement": "Leading researcher in self-supervised robot behavior learning, NeurIPS and CoRL Best Paper awardee"
+      },
+      {
+        "background": "Carnegie Mellon professor, former Meta AI Research (FAIR)",
+        "notable_achievement": "10K+ citation papers in vision and robotics learning, a spiritual pillar of top conferences like CVPR and ICCV"
+      }
+    ],
+    "team_highlights": "PhD-level researchers from CMU, Berkeley, and Meta FAIR, plus robotics engineers recruited from Tesla Optimus and Boston Dynamics",
+    "product": {
+      "summary": "Develops a 'universal robot foundation model' applicable regardless of form factor—humanoids, industrial robots, and autonomous vehicles. The model learns from internet videos, simulations, and real robot data, and once trained, operates in new environments without additional fine-tuning.",
+      "problem_statement": "The robotics industry struggles with generalization because models must be developed from scratch for each form factor and task; lack of data and the simulation-to-reality gap slow commercialization.",
+      "solution": "Integrates billions of hours of video, simulation, and teleoperation data into a multimodal transformer. Uses abstract action representations independent of robot end-effectors, enabling control of humanoids, robot arms, and mobile robots with a single model.",
+      "key_features": [
+        "Skild Brain: universal robot behavior foundation model",
+        "Embodiment Adapter: adapter layer supporting various robot form factors",
+        "Sim-to-Real Stack: large-scale simulation to real robot transfer",
+        "Teleoperation data collection tool",
+        "OEM SDK: integration kit for humanoids and industrial robots"
+      ],
+      "tech_stack_or_innovation": "Multimodal action tokenization, self-supervised learning from internet videos, large-scale simulation RL, form-invariant representation learning",
+      "target_customer": "Humanoid and industrial robot OEMs, logistics and warehouse automation companies, autonomous driving and mobile robot manufacturers",
+      "business_model": "OEM model license + cloud inference API + engineering integration fees"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Challenging with the π0 model for a similar universal robot brain. Skild differentiates in form invariance and breadth of industrial robot application."
+        },
+        {
+          "comparison": "A leader in warehouse robot foundation models. Skild is broader in form and industry diversity."
+        },
+        {
+          "comparison": "Full-stack humanoid. Skild's strategic difference: does not build hardware, focuses only on the model layer."
+        }
+      ],
+      "key_differentiator": "A universal robot brain that generalizes across form, task, and environment, plus top-tier academic research IP.",
+      "moat": "Billions of hours of video training data, CMU and Meta FAIR human network, OEM-locked model adapters",
+      "competitive_position_summary": "Among the leaders in the universal robot foundation model category, in a duopoly with Physical Intelligence."
+    },
+    "trending_reason": {
+      "summary": "In 2024, raised $300M Series A at $1.5B valuation; in 2025, attracted follow-on investment from Lightspeed, SoftBank, Coatue, etc. With the humanoid boom, the value of robot brain IP is skyrocketing.",
+      "catalysts": [
+        "2024 Series A $300M, $1.5B valuation",
+        "Lightspeed, SoftBank, Bezos Expeditions join",
+        "Reported PoCs with multiple humanoid OEMs",
+        "Additional recruitment of researchers from CMU and FAIR"
+      ],
+      "growth_metrics": "10+ OEM pilots, billions of frames of training data, hundreds of downstream tasks"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global robotics market 2030: $250B+. Robot brain (software/model) SAM: $40B. Foundation model SOM: $10B.",
+      "market_trend": "Humanoid mass production race heating up, OEM outsourcing trend for models, industrialization of data-driven RL.",
+      "growth_potential": "Expansion of the same model to humanoids, autonomous mobile robots, and drones; lock-in via industrial data flywheel.",
+      "risks": [
+        "Full-stack players like Tesla and Figure internalize their own models",
+        "Speed of OEM collaboration progress",
+        "Risk of failure in real-world generalization"
+      ],
+      "risk_mitigation": "OEM diversification and neutral model position, dual track of simulation and real data, continuous reinforcement of academic IP."
+    },
+    "related_links": [
+      {
+        "title": "Skild AI Official Site"
+      },
+      {
+        "title": "Forbes: Series A Coverage"
+      },
+      {
+        "title": "Skild Brain Introduction"
+      }
+    ],
+    "editor_pick_comment": "A company betting on the 'brain' inside the humanoid rather than the humanoid itself. The form-invariant model built by ex-CMU and Meta researchers is the most likely candidate to become the Android of the robotics industry."
+  },
+  "reflection-ai-2026": {
+    "tagline": "Autonomous coding agent built by DeepMind alumni — writes full-stack software on its own",
+    "category": [
+      "AI Coding Agent",
+      "Agentic AI",
+      "DevTools"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Google DeepMind Gemini Reinforcement Learning Lead, PhD from UC Berkeley",
+        "notable_achievement": "Core member who led Gemini's RLHF and agent workstreams, leading researcher in combining RL and LLMs"
+      },
+      {
+        "background": "Google DeepMind founding member, co-author of AlphaGo and AlphaZero",
+        "notable_achievement": "Core engineer of AlphaGo and AlphaZero, world-class experience in self-learning and planning algorithms"
+      }
+    ],
+    "team_highlights": "RL and LLM researchers from DeepMind, OpenAI, Google Brain; systems engineers from Stripe and Two Sigma",
+    "product": {
+      "summary": "Develops 'Asimov', a coding agent that autonomously explores, plans, edits, and verifies codebases over extended periods. Beyond simple IDE autocomplete, it defines the category of autonomous SWE agents that implement features, test, and complete PRs at the GitHub repository level.",
+      "problem_statement": "Current coding tools are limited to assisting at the line or function level and cannot autonomously perform real engineering work: understanding the entire repository, planning, implementing, testing, and reviewing.",
+      "solution": "SWE agent training pipeline combining long-horizon reasoning, self-verification, and tool use. It integrates code graph understanding models, RL-based planning models, and evaluation/rollback loops to stabilize multi-hour autonomous tasks.",
+      "key_features": [
+        "Asimov: Long-horizon autonomous SWE agent",
+        "Repo Memory: Repository-level code and domain knowledge cache",
+        "Self-Eval Harness: Self-testing and consistency verification loop",
+        "PR Pipeline: Issue → Branch → Test → PR automation",
+        "On-prem deployment option: Enterprise security environment"
+      ],
+      "tech_stack_or_innovation": "RLHF + RL on tool use, code graph embeddings, long-term memory architecture, self-verification and planning models",
+      "target_customer": "Enterprise engineering organizations with large codebases, fintech/infrastructure/gaming big tech",
+      "business_model": "Enterprise SaaS per-seat fee + per-autonomous-task usage fee + dedicated model training option"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "The first notable autonomous SWE agent. Reflection differentiates with RL strengths from DeepMind alumni and enterprise security options."
+        },
+        {
+          "comparison": "Long-context coding model. Reflection differentiates with its RL-based self-verification loop."
+        },
+        {
+          "comparison": "Enterprise coding copilot. Reflection has deeper autonomous task capabilities."
+        }
+      ],
+      "key_differentiator": "RL IP from DeepMind alumni + hour-scale autonomous SWE + enterprise on-premise option",
+      "moat": "Human capital from AlphaGo and Gemini, proprietary RL and verification loop IP, enterprise lock-in data",
+      "competitive_position_summary": "In a duopoly with Cognition in the autonomous SWE agent category, vying to capture the enterprise market first."
+    },
+    "trending_reason": {
+      "summary": "Series A $130M in 2024 at a $580M valuation, co-led by Sequoia Capital and Lightspeed Venture Partners. Asimov went into public beta in 2025 and became a hot topic for autonomously resolving GitHub Issues.",
+      "catalysts": [
+        "Series A $130M in 2024 at a $580M valuation",
+        "Asimov 1.0 beta sets new record on SWE-bench",
+        "Secured enterprise on-premise deployment references",
+        "Accelerated hiring of DeepMind and OpenAI alumni"
+      ],
+      "growth_metrics": "20+ enterprise beta customers, new record in SWE-bench autonomous resolution rate, tens of thousands of auto-generated GitHub PRs"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global developer tools market $50B+, SAM for autonomous SWE agents $30B by 2030, SOM $5B",
+      "market_trend": "Evolution from single-function assistance to repository-level autonomous work, driven by enterprise pressure to reduce coding automation costs.",
+      "growth_potential": "Expansion from autonomous coding to autonomous data and operations agents, a lineup of domain-specific SWE agents for various industries.",
+      "risks": [
+        "Autonomous agents from big tech like GitHub and OpenAI",
+        "Hallucination and rollback costs for long-horizon tasks",
+        "Enterprise security and audit requirements"
+      ],
+      "risk_mitigation": "Strengthen RL-based verification and evaluation loops, on-premise deployment with audit trails and policy engine, domain-specific fine-tuning."
+    },
+    "related_links": [
+      {
+        "title": "Reflection AI Official Site"
+      },
+      {
+        "title": "The Information: Series A Coverage"
+      },
+      {
+        "title": "Asimov Agent Page"
+      }
+    ],
+    "editor_pick_comment": "A company that addresses the trend Devin started with the 'DeepMind playbook.' The simple fact that the people who built AlphaGo are now building coding agents makes it worth a bet."
+  },
+  "hebbia-2026": {
+    "tagline": "Enterprise AI that handles Wall Street analysts' entire research workflow",
+    "category": [
+      "Enterprise AI",
+      "Knowledge Work Automation",
+      "Financial AI"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Stanford Applied Mathematics PhD dropout, Forbes 30 Under 30",
+        "notable_achievement": "A serial challenger who started at Stanford and successively brought in Andreessen Horowitz and Index Ventures, a leading founder in the AI research space."
+      }
+    ],
+    "team_highlights": "Engineers and analysts from Stanford, MIT, Goldman Sachs, Bridgewater; sales leaders recruited from Goldman Sachs.",
+    "product": {
+      "summary": "An enterprise LLM platform with a notebook/spreadsheet workspace called Matrix that analyzes hundreds of pages of IR, due diligence, and contracts at once. Its rows=documents, columns=questions structure directly automates analysts' research workflows.",
+      "problem_statement": "Investment banks, hedge funds, and law firms manually read, summarize, and compare hundreds of pages of unstructured documents every day. General chatbots have narrow context and weak source tracking, making them unsuitable for regulated industries.",
+      "solution": "Processes multiple documents simultaneously with multi-step reasoning in the Matrix UI, and provides all answers with original citations and page numbers. Uses proprietary search, ranking, and indexing models to generate evidence-based answers even from documents spanning hundreds of thousands of pages.",
+      "key_features": [
+        "Matrix: document×question matrix workspace",
+        "Sourced Answers: automatic tracking of original citations and pages",
+        "Workflow Templates: analysis of M&A due diligence, IR, and litigation materials",
+        "Custom Agents: automate analysis flows per company",
+        "Enterprise security: SOC2, on-prem options"
+      ],
+      "tech_stack_or_innovation": "Proprietary search and ranking models, multi-step LLM inference pipeline, source tracking indexing, domain-specific fine-tuning",
+      "target_customer": "Investment banks, hedge funds, private equity firms, law firms, consulting firms, financial regulatory agencies",
+      "business_model": "Enterprise seat SaaS + usage-based overage charges + dedicated workflow consulting"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "In-house knowledge search SaaS. Hebbia differentiates with matrix analysis and depth in financial regulatory industries."
+        },
+        {
+          "comparison": "Financial research search. Hebbia differentiates with LLM-based multi-step reasoning and customizable analysis."
+        },
+        {
+          "comparison": "Legal-specialized LLM. Hebbia applies to a broader range of knowledge work including finance, due diligence, and M&A."
+        }
+      ],
+      "key_differentiator": "Matrix UX + forced source citations + SOC2 security for financial and legal regulated industries",
+      "moat": "Lock-in data from top-tier Wall Street clients, domain-specific workflow assets, proprietary search and ranking models",
+      "competitive_position_summary": "In the enterprise LLM category, forms a Big Three with Glean and Harvey, unshakable #1 in financial research automation."
+    },
+    "trending_reason": {
+      "summary": "2024 Series B of $130M at a $700M valuation, accelerating lock-in of top-tier financial firms like Goldman Sachs and Citadel. After launching Matrix 2.0 in 2025, report output per user increased 4x.",
+      "catalysts": [
+        "2024 Series B $130M, $700M valuation",
+        "Follow-on investments from Andreessen Horowitz and Index Ventures",
+        "Adoption by top-tier financial firms including Goldman Sachs and Citadel",
+        "Matrix 2.0 release enabling multi-agent analysis"
+      ],
+      "growth_metrics": "100+ enterprise customers, analyzing hundreds of millions of pages per month, ARR growth per user 200%+"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global enterprise knowledge work automation market $200B+, financial research SAM $40B, SOM $8B",
+      "market_trend": "Mandatory AI adoption at investment banks and law firms, increasing source and audit requirements in regulated industries, proliferation of multi-document reasoning",
+      "growth_potential": "Expansion beyond finance into consulting, healthcare, and government research; proprietary domain model lineup",
+      "risks": [
+        "Direct push from OpenAI and Anthropic's enterprise RAG products",
+        "Slower financial IT decision-making cycles",
+        "Reputational risk from source accuracy incidents"
+      ],
+      "risk_mitigation": "Domain-specific models and evaluation infrastructure, strengthen top-tier customer references, diversify audit and compliance certifications"
+    },
+    "related_links": [
+      {
+        "title": "Hebbia Official Site"
+      },
+      {
+        "title": "WSJ: Series B Coverage"
+      },
+      {
+        "title": "Matrix Product Page"
+      }
+    ],
+    "editor_pick_comment": "If you ask whose job AI will take first, the answer is likely the Wall Street junior analyst. Hebbia is at the center of that change."
+  },
+  "tessl-2026": {
+    "tagline": "Spec before code — an AI-native software development platform",
+    "category": [
+      "AI dev tools",
+      "Spec-driven development",
+      "Enterprise SaaS"
+    ],
+    "headquarters": {
+      "country_ko": "United Kingdom"
+    },
+    "founders": [
+      {
+        "background": "Founder of Snyk (valuation $7.4B), security veteran and former Akamai CTO",
+        "notable_achievement": "Serial founder who defined the DevSecOps category, now zeroing in on AI-native development with his second company"
+      }
+    ],
+    "team_highlights": "Senior engineers from Snyk, GitHub, and Stripe; ex-Microsoft and AWS dev tool PMs; Y Combinator mentor network",
+    "product": {
+      "summary": "A Spec-centric development platform where AI takes natural-language specs, tests, and contracts as input to generate and maintain code, rather than humans writing code directly. It shifts the single source of truth for both humans and AI from code to specs.",
+      "problem_statement": "Current AI coding tools treat code as the unit of output; once generated, code is difficult to modify, understand, or regenerate. As a result, even AI-generated code ends up being maintained by humans.",
+      "solution": "Specs, tests, and docs are first-class objects; code is treated as a derived artifact. Changes always start from specs, and AI regenerates code, tests, and infrastructure. Humans and agents collaborate on the same spec.",
+      "key_features": [
+        "Spec Workspace: an integrated editor for natural-language specs and tests",
+        "Code Generator: auto-generates multilingual code and tests from specs",
+        "Drift Detector: automatically detects mismatches between code and specs",
+        "Agent SDK: autonomous agents that operate on top of specs",
+        "Enterprise security and audit logs"
+      ],
+      "tech_stack_or_innovation": "Spec/test DSL, bidirectional code-spec synchronization, multi-agent workflows, and formal verification integration",
+      "target_customer": "Startups starting new codebases in the AI era and enterprises driving legacy modernization",
+      "business_model": "Enterprise seat-based SaaS + usage-based pricing for autonomous work units + dedicated hosting option"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Autonomous SWE agents. Tessl's paradigm differs by demoting code itself from first-class status and putting specs at the center."
+        },
+        {
+          "comparison": "GitHub integrated workflows. Tessl differentiates with vendor neutrality, spec-centricity, and multilingual code generation."
+        },
+        {
+          "comparison": "Autonomous SWE from DeepMind alumni. Tessl's spec workflow assumes humans and agents coexist."
+        }
+      ],
+      "key_differentiator": "The paradigm of specs as first-class objects + Snyk founder's second act + vendor neutrality",
+      "moat": "Spec DSL and bidirectional sync IP, trust capital in the dev tools market (Snyk network), enterprise lock-in",
+      "competitive_position_summary": "Thought leader in the AI-native development category and the most serious challenger offering an alternative to autonomous coding"
+    },
+    "trending_reason": {
+      "summary": "Raised $150M in total in one year — a $25M Seed and a $125M Series A in 2024 — with GV and Index Ventures betting in successive rounds. One of the most frequently cited companies in the debate over the development paradigm in the AI era.",
+      "catalysts": [
+        "2024 Series A of $125M, led by GV",
+        "Defining the category by hosting the AI Native Dev conference itself",
+        "Halo effect of the Snyk founder accelerating enterprise adoption",
+        "Growing recognition of AI code maintenance limitations"
+      ],
+      "growth_metrics": "50+ enterprise beta customers, tens of thousands in the AI Native Dev community, hundreds of thousands of spec downloads"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global dev tools and SDLC market $80B+; AI-native development SAM $25B by 2030; SOM $5B",
+      "market_trend": "Soaring cost of maintaining AI-generated code, shift toward natural-language and spec-centric development, enterprises redefining the standard SDLC",
+      "growth_potential": "Spec marketplace, domain-specific patterns and libraries, standard interfaces for agents",
+      "risks": [
+        "Standardization of Copilot Workspace by GitHub/Microsoft",
+        "Learning curve for spec adoption",
+        "Pricing pressure in the AI coding market"
+      ],
+      "risk_mitigation": "Vendor-neutral positioning, migration tools and education, and differentiation through enterprise security and auditing"
+    },
+    "related_links": [
+      {
+        "title": "Tessl official site"
+      },
+      {
+        "title": "TechCrunch: Series A coverage"
+      },
+      {
+        "title": "AI Native Dev conference"
+      }
+    ],
+    "editor_pick_comment": "The question the Snyk creator asked with his second company is: “Should code really be a first-class object?” It doesn't have to be the right answer — few companies ask a question this big."
+  },
+  "distyl-ai-2026": {
+    "tagline": "Custom generative AI application builder for Fortune 100",
+    "category": [
+      "Enterprise AI",
+      "Generative AI Applications",
+      "AI Consulting & Platform"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Former Palantir Forward Deployed leader, veteran in enterprise data and AI adoption",
+        "notable_achievement": "Directly managed large government and enterprise contracts at Palantir, adapted the FDE model to enterprise AI"
+      },
+      {
+        "background": "Data infrastructure engineer from Palantir and Snowflake",
+        "notable_achievement": "Led multiple Fortune 500-level data integration projects; architect of domain-specific LLM pipelines"
+      }
+    ],
+    "team_highlights": "Actively hiring senior engineers and FDEs from Palantir, Snowflake, and OpenAI, along with industry domain experts",
+    "product": {
+      "summary": "Directly designs, builds, and operates custom generative AI applications on OpenAI and Anthropic models to automate core workflows for Fortune 100 companies. Uses a hybrid model combining AI consulting with its own platform, standardizing deployment in 6-week to 6-month cycles.",
+      "problem_statement": "Fortune 100 companies want to adopt LLMs but are mostly stuck at PoC due to high complexity of integrating domain data, security, and workflows. Consulting firms lack code assets, and AI startups lack enterprise operations capability.",
+      "solution": "Adopts the Palantir Forward Deployed model: domain engineers embed with customers to build workflows and assetize them on the Distyl platform. Model-, vendor-, and industry-neutral. Deliverables handed over in a form the customer can operate.",
+      "key_features": [
+        "Distyl Platform: core for LLM workflows, evaluation, and monitoring",
+        "Agent Builder: multi-agent designer for specific industries",
+        "Forward Deployed Engineering: on-site deployment team",
+        "Eval Harness: domain-specific accuracy and safety evaluation",
+        "Enterprise security and governance module"
+      ],
+      "tech_stack_or_innovation": "Multi-model routing, domain RAG and validation pipelines, enterprise data connectors, FDE operating model",
+      "target_customer": "Fortune 500, government, finance, telecommunications, logistics, and other large enterprises",
+      "business_model": "Hybrid of deployment consulting, platform licensing, and outcome-based pricing"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "The original enterprise AI platform. Distyl differentiates with faster deployment through its model-neutral, agile FDE model."
+        },
+        {
+          "comparison": "Enterprise AI data and tuning. Distyl differentiates at the workflow and application layer."
+        },
+        {
+          "comparison": "AI arm of traditional consulting. Distyl's critical difference: having its own platform and code assets."
+        }
+      ],
+      "key_differentiator": "Palantir FDE DNA + own platform + model/vendor neutrality",
+      "moat": "Fortune 100 locked-in workflow assets, FDE operating model, domain evaluation and governance IP",
+      "competitive_position_summary": "Positioned as the 'next-generation Palantir' for enterprise generative AI deployment, using short deployment times as a weapon for rapid penetration."
+    },
+    "trending_reason": {
+      "summary": "Raised a $52M Series A in 2024 at a $410M valuation, led by Coatue with participation from Khosla and Lightspeed. A previously stealth company rapidly emerged as the enterprise AI company that delivers real results.",
+      "catalysts": [
+        "2024 $52M Series A, $410M valuation",
+        "Simultaneous bets from Coatue, Khosla, and Lightspeed",
+        "Reports of multiple Fortune 100 deployment cases",
+        "Accelerated hiring of additional Palantir alumni"
+      ],
+      "growth_metrics": "30+ enterprise customers, 5x+ ARR in one year, 100+ FDE headcount"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global enterprise AI deployment market $300B+, application & platform SAM $80B, FDE model SOM $15B",
+      "market_trend": "Mandating of AI adoption among Fortune 500, spread of outcome-based pricing, trend toward model and vendor neutrality",
+      "growth_potential": "Expansion of vertical industry lineup, entry into government and defense markets, training of own domain models",
+      "risks": [
+        "Direct competition from Palantir AIP",
+        "Cost of securing FDE talent",
+        "Balance of consulting and platform revenue mix"
+      ],
+      "risk_mitigation": "Strengthening domain asset IP, expanding hiring and training pipeline, increasing platform revenue share"
+    },
+    "related_links": [
+      {
+        "title": "Distyl AI Official Site"
+      },
+      {
+        "title": "Forbes: Series A Coverage"
+      },
+      {
+        "title": "Distyl Platform Introduction"
+      }
+    ],
+    "editor_pick_comment": "A company aiming to do for Fortune 100 with generative AI what Palantir did for government. The most ambitious attempt to redraw the boundary between consulting and SaaS."
+  },
+  "nota-ai-2026": {
+    "tagline": "Squeezing giant AI models onto chips — On-device AI optimization specialist",
+    "category": [
+      "On-device AI",
+      "AI model lightweighting",
+      "Edge AI"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "KAIST PhD in Electrical and Electronic Engineering, former researcher at Samsung Advanced Institute of Technology",
+        "notable_achievement": "First generation in AI model compression & lightweighting in Korea, Korea representative partner for global chipmakers including NVIDIA and Qualcomm"
+      },
+      {
+        "background": "KAIST PhD, research in computer vision and deep learning optimization",
+        "notable_achievement": "Holds multiple IPs on pruning, quantization, and NAS automation; applied in automotive, home appliances, and CCTV domains"
+      }
+    ],
+    "team_highlights": "PhD-level researchers from KAIST, POSTECH, Samsung, and LG; joint R&D experience with NVIDIA, Qualcomm, and Renesas",
+    "product": {
+      "summary": "Operates the 'NetsPresso' platform that compresses and optimizes large deep learning and LLM models to run on small devices such as automotive ECUs, CCTVs, and home appliance SoCs. It automates quantization, pruning, NAS, and compilation to reduce model size and power consumption by 10x to 100x while maintaining accuracy.",
+      "problem_statement": "AI models have exploded in size, but devices like cars, CCTVs, and wearables need small, fast models that work without the cloud. Manual optimization is costly and chip-specific compatibility is tricky.",
+      "solution": "The NetsPresso automated pipeline takes a model as input and outputs compression, quantization, and compilation results per chip target. It is integrated with major chip SDKs such as NVIDIA, Qualcomm, Renesas, and Texas Instruments for instant deployment on devices.",
+      "key_features": [
+        "NetsPresso: Model compression & optimization automation SaaS",
+        "ModelZoo: Pre-optimized model catalog by domain",
+        "Edge Compiler: Per-chip compile & runtime package",
+        "AI Camera SDK: Real-time vision for CCTV and vehicles",
+        "LLM Edge: Toolchain for sLLM device deployment"
+      ],
+      "tech_stack_or_innovation": "Automatic model compression (NAS, pruning, quantization), chip-targeted compiler, domain sLLM fine-tuning, edge LLM inference optimization",
+      "target_customer": "Automotive OEMs and Tier 1 suppliers, CCTV and security camera manufacturers, home appliances & robotics, telecom equipment manufacturers",
+      "business_model": "NetsPresso SaaS license + chipmaker partnerships + project-based implementation consulting"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Embedded AI development SaaS. Nota differentiates with industrial-grade applications (automotive, CCTV) and sLLM edge optimization."
+        },
+        {
+          "comparison": "MLC compiler-based model optimization. Nota has a broader lineup of NAS, pruning, and domain models."
+        },
+        {
+          "comparison": "Model efficiency automation. Nota differentiates with direct chipmaker partnerships and Korean/Japanese automotive OEM references."
+        }
+      ],
+      "key_differentiator": "Direct chipmaker integration + automated compression + automotive and CCTV industry references",
+      "moat": "NVIDIA, Qualcomm, Renesas SDK lock-in, production-qualified automotive OEM use cases, pre-optimized model assets by domain",
+      "competitive_position_summary": "Global top-tier in on-device AI optimization, de facto standard in Korea and Japan automotive and home appliance markets"
+    },
+    "trending_reason": {
+      "summary": "Raised approx. KRW 51B in Series C in 2024, became global partner in NVIDIA Inception and Qualcomm Advantage. With the 2025 launch of its sLLM edge deployment lineup, it has emerged as a dark horse in on-device AI for the LLM era.",
+      "catalysts": [
+        "Raised approx. KRW 51B in Series C in 2024",
+        "Korea representative partner for NVIDIA Inception",
+        "Joined Qualcomm Advantage program",
+        "Launched sLLM Edge lineup and applied in automotive OEM mass production"
+      ],
+      "media_mentions": [
+        {
+          "source": "Maeil Business Newspaper",
+          "title": "Nota raises KRW 51B in Series C, accelerating global expansion of AI lightweighting"
+        },
+        {
+          "title": "The on-device LLM era: Nota's blueprint for edge AI"
+        }
+      ],
+      "growth_metrics": "Multiple mass production cases with global automotive OEMs and Tier 1 suppliers; tens of thousands of developers signed up for NetsPresso; revenue doubling annually or more"
+    },
+    "funding": {
+      "total_raised": "Approx. KRW 100B+",
+      "latest_round": {
+        "amount": "Approx. KRW 51B",
+        "lead_investor": "Korea Development Bank",
+        "notable_investors": [
+          "Stonebridge Ventures",
+          "LB Investment",
+          "Korea Investment Partners",
+          "Hyundai Motor Group"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Approx. KRW 8B",
+          "lead_investor": "Stonebridge Ventures"
+        },
+        {
+          "amount": "Approx. KRW 20B",
+          "lead_investor": "Stonebridge Ventures"
+        },
+        {
+          "amount": "Approx. KRW 51B",
+          "lead_investor": "Korea Development Bank"
+        }
+      ],
+      "valuation_estimate": "approx. KRW 250B–300B"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global edge AI market $100B+ by 2030; SAM in model optimization & middleware $20B; SOM $4B",
+      "market_trend": "On-device LLM boom, automotive SDV transition, cloud-to-edge shift accelerated by security and privacy concerns",
+      "growth_potential": "Expansion of sLLM edge lineup, entry into Japanese and US automotive markets, expansion into medical and home appliance domains",
+      "risks": [
+        "Big tech launching its own lightweight models directly",
+        "Strengthening of chipmakers' own SDKs",
+        "Delays in automotive production cycles"
+      ],
+      "risk_mitigation": "Diversification of chipmakers and OEMs, expansion of proprietary domain model assets, strengthening of presence in Japan and Europe"
+    },
+    "related_links": [
+      {
+        "title": "Nota AI Official Website"
+      },
+      {
+        "title": "NetsPresso Platform"
+      },
+      {
+        "title": "Maeil Business Newspaper: Series C Coverage"
+      }
+    ],
+    "editor_pick_comment": "In an era of giant models, the value of a 'company that makes things small' grows. Look at which company NVIDIA and Qualcomm partnered with first in Korea—the answer becomes clear."
+  },
+  "asleep-2026": {
+    "tagline": "Measures sleep with just a smartphone microphone — the global standard in AI sleep tech",
+    "category": [
+      "Sleep tech",
+      "Healthcare AI",
+      "Audio AI"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "PhD track in computer science at Seoul National University and KAIST; data scientist formerly at Kakao and Naver",
+        "notable_achievement": "Multiple SCI papers in sleep-measurement AI; signed direct licensing deals with global consumer electronics and telecom companies"
+      },
+      {
+        "background": "Former global consulting firm; digital health business development",
+        "notable_achievement": "Led negotiations for major partnerships with Samsung Electronics and SK Telecom; head of Japan and Middle East expansion"
+      }
+    ],
+    "team_highlights": "PhD-level AI talent from Seoul National University and KAIST plus clinical sleep medicine advisors; expanding global BD team",
+    "product": {
+      "summary": "'AsleepTrack' AI engine estimates sleep stages, apnea, and heart rate using only breathing and snoring sounds recorded via smartphone, speaker, or wearable mics. As a medical-device-certified contactless sleep measurement technology, it is embedded as an SDK in consumer electronics, telecom, and health apps",
+      "problem_statement": "Polysomnography is expensive and cumbersome, so most people never take it. Smartwatches have low accuracy and require buying another device. The sleep market is huge, but the measurement barrier itself is the biggest bottleneck",
+      "solution": "Analyzes breathing, movement, and ambient sounds collected from a smartphone microphone at 1m distance with its own deep learning model to estimate sleep stages, wakefulness, and apnea. Integrated as an SDK into consumer electronics, telecom, and health apps, it lets users measure daily without any extra device",
+      "key_features": [
+        "AsleepTrack SDK: sleep measurement SDK integrated into smartphones and speakers",
+        "Sleep Stage Engine: medical-grade sleep stage classification model",
+        "Apnea Detector: contactless sleep apnea risk estimation",
+        "Coaching API: sleep-pattern-based coaching and reports",
+        "Enterprise security with HIPAA compliance"
+      ],
+      "tech_stack_or_innovation": "Self-supervised audio learning, domain-agnostic noise-robust models, clinical-data-based calibration, edge inference optimization",
+      "target_customer": "Smartphone and consumer electronics OEMs, telecom value-added services, global insurers and digital health companies, consumer sleep apps",
+      "business_model": "SDK usage-based licensing + enterprise licenses + consumer app (Sleep Right) subscription"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Device-based sleep tracker. Asleep differentiates by measuring with just a smartphone, removing the device barrier"
+        },
+        {
+          "comparison": "Strong player in sleep apnea medical devices. Asleep complements in the consumer, contactless space"
+        },
+        {
+          "comparison": "First-generation audio-based sleep app. Asleep differentiates with medical-grade accuracy and an SDK business model"
+        }
+      ],
+      "key_differentiator": "Sleep measurement with just a smartphone + medical device certification + global SDK licensing",
+      "moat": "Scale of global sleep dataset, SDK lock-in with consumer electronics and telecom companies, continuous renewal of clinical certifications",
+      "competitive_position_summary": "Global top in contactless consumer sleep tech; de facto standard among Korean and Japanese telecom and electronics companies"
+    },
+    "trending_reason": {
+      "summary": "From 2024 to 2025, signed successive licensing deals with global telecom and electronics companies including SK Telecom, KT, Japan's NTT, and Middle East carriers. Raised approx. KRW 20B in a Series B in 2025, with Japan and Middle East revenue ramping up",
+      "catalysts": [
+        "2025 Series B of approx. KRW 20B",
+        "Officially embedded in SK Telecom's 'AI Sleep Care'",
+        "Licensing deals with Japanese telecom and automotive OEMs",
+        "Reported FDA 510(k) Class II medical device clearance"
+      ],
+      "media_mentions": [
+        {
+          "source": "The Korea Economic Daily",
+          "title": "Asleep accelerates global sleep tech standard with telecom and electronics companies"
+        }
+      ],
+      "growth_metrics": "Tens of millions of cumulative SDK-enabled devices, 1M+ MAU, 20+ global licensing partners"
+    },
+    "funding": {
+      "total_raised": "approx. KRW 40B+",
+      "latest_round": {
+        "amount": "approx. KRW 20B",
+        "lead_investor": "Korea Investment Partners",
+        "notable_investors": [
+          "SBI Investment",
+          "Samsung Venture Investment",
+          "DSC Investment"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "approx. KRW 2.5B",
+          "lead_investor": "Smilegate Investment"
+        },
+        {
+          "amount": "approx. KRW 10B",
+          "lead_investor": "Smilegate Investment"
+        },
+        {
+          "amount": "approx. KRW 20B",
+          "lead_investor": "Korea Investment Partners"
+        }
+      ],
+      "valuation_estimate": "approx. KRW 150B–200B"
+    },
+    "market_outlook": {
+      "tam_sam_som": "$700B+ global sleep market by 2030; $40B digital sleep tech SAM; $8B contactless measurement SOM",
+      "market_trend": "Growing awareness of sleep apnea and chronic disease; demand for complementary health data in the GLP-1 era; telecom value-added service competition",
+      "growth_potential": "Driver sleep monitoring in vehicles, insurance and risk prediction data, expanding lock-in with global telecom and electronics companies",
+      "risks": [
+        "Strengthening proprietary sleep algorithms from Apple and Samsung",
+        "Medical device regulations vary by country",
+        "Audio data privacy concerns"
+      ],
+      "risk_mitigation": "Ongoing renewal of clinical data and certifications, diversification of device OEMs, strengthened privacy through edge inference and anonymization"
+    },
+    "related_links": [
+      {
+        "title": "Asleep official website"
+      },
+      {
+        "title": "AsleepTrack SDK page"
+      },
+      {
+        "title": "The Korea Economic Daily: Global expansion coverage"
+      }
+    ],
+    "editor_pick_comment": "A company that created an era where you no longer need to buy a new device to measure sleep. A rare case of a Korean startup becoming the standard for Japanese and Middle Eastern telecom carriers."
+  },
+  "makinarocks-2026": {
+    "tagline": "Detects before factory equipment stops — Industrial AI leader",
+    "category": [
+      "Industrial AI",
+      "Predictive Maintenance",
+      "Smart Factory"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "From Hyundai Motor Group AI Research Lab, KAIST Industrial Engineering",
+        "notable_achievement": "Directly operated manufacturing AI adoption for large enterprises like Hyundai Motor, Kia, LG, Samsung; top player in domestic industrial AI field"
+      },
+      {
+        "background": "Stanford PhD, research in anomaly detection and reinforcement learning",
+        "notable_achievement": "Multiple papers in top conferences on anomaly detection and time series AI, holds extensive IP in industrial RL"
+      }
+    ],
+    "team_highlights": "Industrial AI engineers from Hyundai Motor, LG, Samsung; PhD-level researchers from Stanford and KAIST; recruited BD personnel from Japanese and US automotive industries",
+    "product": {
+      "summary": "The 'Link' industrial AI platform that analyzes equipment data from heavy industry plants such as automotive, semiconductor, secondary battery, and oil refining in real time to perform failure prediction, anomaly detection, and process optimization. It is expanding its scope to include unmanned automation lines and reinforcement learning-based autonomous process control.",
+      "problem_statement": "Manufacturing plants see data exploding, but most is not analyzed and disappears. When equipment failures or quality issues occur, entire lines stop, and losses amount to hundreds of millions of KRW per minute.",
+      "solution": "The Link platform collects and refines OT system data (PLC, SCADA, MES) in real time, and automatically trains and operates domain-specific anomaly detection and prediction models. It optimizes even process parameters through reinforcement learning-based autonomous control.",
+      "key_features": [
+        "Link Platform: Industrial data integration and AI operations platform",
+        "Anomaly Detection: Domain pre-trained anomaly detection model",
+        "Predictive Maintenance: Equipment failure prediction and remaining useful life estimation",
+        "Autonomous Control: Reinforcement learning-based process autonomous control",
+        "Edge Runtime: Edge inference for factory OT environments"
+      ],
+      "tech_stack_or_innovation": "Domain pre-trained anomaly detection, time series foundation models, industrial RL, OT edge inference infrastructure",
+      "target_customer": "Large manufacturing companies in automotive, semiconductor, secondary battery, oil refining, chemicals, etc., and Korean OEMs expanding to Japan and Southeast Asia",
+      "business_model": "Link platform license + AI model operations fees + consulting and deployment projects"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Major US player in industrial IoT and predictive maintenance. MakinaRocks differentiates in the deep domain of Korean automotive and semiconductor industries."
+        },
+        {
+          "comparison": "Enterprise industrial AI platform. MakinaRocks differentiates in automotive and secondary battery line applications and RL-based autonomous control."
+        },
+        {
+          "comparison": "South American industrial AI leader. MakinaRocks is a step ahead in reinforcement learning and autonomous control."
+        }
+      ],
+      "key_differentiator": "Depth in Korean heavy industry domain + RL autonomous control + automotive and secondary battery mass production references",
+      "moat": "Lock-in data from large enterprises like Hyundai Motor and LG Energy Solution, domain pre-trained model assets, industrial RL IP",
+      "competitive_position_summary": "De facto standard in the Korean industrial AI category, now entering the Japanese and Southeast Asian markets in earnest"
+    },
+    "trending_reason": {
+      "summary": "With a Series C of approx. KRW 38B raised in 2024, cumulative approx. KRW 70B. Expanded mass production applications with Hyundai Motor, LG Energy Solution, Samsung, etc. Started deployment at Japanese automotive OEMs and Southeast Asian secondary battery factories in 2025.",
+      "catalysts": [
+        "Raised approx. KRW 38B in Series C in 2024",
+        "Expanded mass production applications with Hyundai Motor Group and LG Energy Solution",
+        "Announced deployment at Japanese automotive OEMs",
+        "Revealed industrial RL autonomous control PoC"
+      ],
+      "media_mentions": [
+        {
+          "source": "Korea Economic Daily",
+          "title": "MakinaRocks, Series C KRW 38B... Industrial AI Global Expansion"
+        },
+        {
+          "source": "Electronic Times",
+          "title": "Process Automation through Reinforcement Learning — MakinaRocks' Next Move"
+        }
+      ],
+      "growth_metrics": "50+ enterprise customers, 100+ mass production lines, ARR growing 80% YoY"
+    },
+    "funding": {
+      "total_raised": "approx. KRW 70B+",
+      "latest_round": {
+        "amount": "approx. KRW 38B",
+        "lead_investor": "Hyundai Motor Group",
+        "notable_investors": [
+          "LG Energy Solution",
+          null,
+          null,
+          "Korea Development Bank"
+        ]
+      },
+      "valuation_estimate": "approx. KRW 300B+",
+      "funding_history": [
+        {
+          "amount": "approx. KRW 3B"
+        },
+        {
+          "amount": "approx. KRW 8B",
+          "lead_investor": "Hyundai Motor Group"
+        },
+        {
+          "amount": "approx. KRW 20B"
+        },
+        {
+          "amount": "approx. KRW 38B",
+          "lead_investor": "Hyundai Motor Group"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global industrial AI market $150B+ by 2030, predictive maintenance and autonomous control SAM $40B, SOM $6B",
+      "market_trend": "Surge of secondary battery and semiconductor factories, rise of OT-IT integration and industrial RL, Korean manufacturing expansion to Japan and Southeast Asia",
+      "growth_potential": "Global OEMs in automotive and secondary batteries, autonomous control in oil refining and chemicals, industrial foundation model lineup",
+      "risks": [
+        "Direct entry of global infrastructure players like GE and Siemens",
+        "OT environment security and certification requirements",
+        "Dependence on Hyundai Motor"
+      ],
+      "risk_mitigation": "Customer diversification and strengthening overseas BD, multiple industrial security certifications obtained, reinforcing RL and domain model IP"
+    },
+    "related_links": [
+      {
+        "title": "MakinaRocks Official Site"
+      },
+      {
+        "title": "Link Platform Introduction"
+      },
+      {
+        "title": "Korea Economic Daily: Series C Coverage"
+      }
+    ],
+    "editor_pick_comment": "A company that puts AI on top of what Korea does well. An industrial AI standard is being built on the core of Korean manufacturing: automotive, secondary batteries, and semiconductors."
+  },
+  "twinny-2026": {
+    "tagline": "Autonomous logistics robot that follows people — the 'second hand' for warehouses and stores",
+    "category": [
+      "Robotics",
+      "Logistics Automation",
+      "Autonomous Driving"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "KAIST Ph.D. in Mechanical Engineering, autonomous driving and robotics researcher",
+        "notable_achievement": "First-generation founder in the domestic autonomous driving robot market, multiple mass production applications in industrial and logistics sites"
+      },
+      {
+        "background": "KAIST Industrial Engineering, logistics operations and BD specialist",
+        "notable_achievement": "Led adoption negotiations with Korea's Big 3 logistics companies (Lotte, CJ, etc.), managed expansion into Japan and Southeast Asia"
+      }
+    ],
+    "team_highlights": "KAIST-affiliated Ph.D.-level robotics engineers, full-stack team integrating autonomous driving, mapping, SLAM, SW, and HW",
+    "product": {
+      "summary": "Operates the 'Nardi' autonomous following robot that follows workers and carries loads, and the 'T-ORDY' lineup that autonomously sorts and transports boxes in warehouses. Can switch from follow mode to autonomous driving mode, applicable to logistics, stores, and factories",
+      "problem_statement": "In logistics warehouses and stores, workers walk several kilometers carrying loads daily. Existing AGVs rely on infrastructure (QR codes, magnets), resulting in high deployment costs and difficulty avoiding collisions with people in tight spaces.",
+      "solution": "Using LiDAR, cameras, and its own SLAM algorithm, it performs autonomous following and driving without infrastructure, avoiding people and obstacles. It carries loads without worker intervention, and connects to the operations system to integrate work orders and inventory data.",
+      "key_features": [
+        "Nardi: Human-following autonomous transport robot",
+        "T-ORDY: Autonomous sorting and transport robot for warehouses",
+        "Fleet Manager: Multi-robot fleet operations and task assignment system",
+        "Inframeless SLAM: Infrastructure-free autonomous mapping",
+        "WMS/POS integration API"
+      ],
+      "tech_stack_or_innovation": "Proprietary SLAM and navigation stack, human behavior prediction model, narrow space avoidance, multi-robot fleet operations",
+      "target_customer": "e-commerce, CJ, Lotte-scale logistics warehouses, large stores and discount chains, automotive and electronics parts factory lineside",
+      "business_model": "Robot sales + RaaS (Robot-as-a-Service) monthly subscription + Fleet Manager license"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global leader in warehouse AMRs in the US. Twinny differentiates with human-following mode and application in narrow Korean and Japanese stores."
+        },
+        {
+          "comparison": "Cube automation system. Twinny has strength in flexible deployment without infrastructure."
+        },
+        {
+          "name": "Bear Robotics",
+          "comparison": "Strong in serving robots in Korea and US. Twinny focuses on logistics and warehouse domain."
+        }
+      ],
+      "key_differentiator": "Human-following mode + infrastructure-free autonomous driving + application in narrow Korean and Japanese spaces",
+      "moat": "Lock-in mass production data from Korea's Big 3 logistics companies, proprietary SLAM IP, multi-robot fleet operations assets",
+      "competitive_position_summary": "Top logistics AMR player in Korea, accelerating entry into Japanese store and logistics market"
+    },
+    "trending_reason": {
+      "summary": "From 2024 to 2025, mass production adoption with Korea's big logistics and retail players including CJ Logistics, Lotte, Coupang, and Emart. Raised approx. KRW 20B in Series B in 2025, started deployment with Japanese store chains.",
+      "catalysts": [
+        "Raised approx. KRW 20B in Series B in 2025",
+        "Mass production application with CJ Logistics, Lotte, Emart",
+        "Announced adoption by major Japanese retail and DIY chains",
+        "Expansion into stores and factories with new Nardi model launch"
+      ],
+      "media_mentions": [
+        {
+          "source": "Electronic Times",
+          "title": "Twinny raises KRW 20B in Series B... autonomous logistics robot enters Japan"
+        }
+      ],
+      "growth_metrics": "1,000+ mass-production robots in operation, cumulative operational distance millions of km, ARR 100%+ YoY growth"
+    },
+    "funding": {
+      "total_raised": "Approx. KRW 45B+",
+      "latest_round": {
+        "amount": "Approx. KRW 20B",
+        "lead_investor": "Korea Investment Partners",
+        "notable_investors": [
+          "IMM Investment",
+          "Atinum Investment",
+          "CJ Investment"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Approx. KRW 8B",
+          "lead_investor": "IMM Investment"
+        },
+        {
+          "stage": "Series A extension",
+          "amount": "Approx. KRW 13B",
+          "lead_investor": "Atinum Investment"
+        },
+        {
+          "amount": "Approx. KRW 20B",
+          "lead_investor": "Korea Investment Partners"
+        }
+      ],
+      "valuation_estimate": "approx. KRW 150B–200B"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global AMR market $25B+ by 2030, Korea-Japan logistics and stores SAM $5B, SOM $1B",
+      "market_trend": "Soaring logistics labor costs, standardization of last-mile and store automation, demand for flexible robots in narrow spaces",
+      "growth_potential": "Expansion into Japanese and Southeast Asian store chains, expansion into factory lineside and hospital pharmaceutical transport, combination with fleets and humanoids",
+      "risks": [
+        "Entry of global AMR leaders into Korea",
+        "Mass production and service operational costs",
+        "E-commerce capital investment cycles"
+      ],
+      "risk_mitigation": "Increase RaaS revenue share, strengthen operational automation IP, reinforce Japan base"
+    },
+    "related_links": [
+      {
+        "title": "Twinny Official Website"
+      },
+      {
+        "title": "Electronic Times: Series B Coverage"
+      },
+      {
+        "title": "Nardi Product Page"
+      }
+    ],
+    "editor_pick_comment": "The robots that arrive at workplaces before humanoids are ultimately 'wheeled collaborative robots.' Twinny is mass-producing the most realistic answer to that in Korea."
+  },
+  "vessl-ai-2026": {
+    "tagline": "AI model training and serving infrastructure in a few clicks — an MLOps platform from South Korea",
+    "category": [
+      null,
+      "AI Infrastructure",
+      "Enterprise SaaS"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Stanford MS, Google Brain & Apple AI intern, KAIST BS",
+        "notable_achievement": "First-generation founder of a Korean-origin MLOps company going global, Y Combinator W21"
+      },
+      {
+        "background": "KAIST PhD, Kubernetes & distributed systems specialist",
+        "notable_achievement": "Holds multiple Kubernetes-based training infrastructure IPs, OSS contributor"
+      }
+    ],
+    "team_highlights": "Alumni from Stanford, KAIST, Google Brain + senior Kubernetes & distributed systems engineers, hired US BD talent",
+    "product": {
+      "summary": "Integrated MLOps platform operating GPU training, hyperparameter tuning, experiment management, model serving, and LLM fine-tuning on a single screen. Supports on-premises GPU, hybrid cloud, and on-premise, and schedules multi-GPU jobs on AWS and GCP.",
+      "problem_statement": "AI teams operate GPU clusters, training pipelines, experiment management, and model serving separately, spending more than half their time on infrastructure. It's even harder to use on-premises GPUs and cloud efficiently together.",
+      "solution": "A Kubernetes-based unified control plane pools on-premises GPUs, cloud, and on-premise into one, and runs training to serving in the same workflow UI. Combined with LLM fine-tuning, LoRA, and RLHF lineup, it significantly reduces infrastructure overhead in the LLM era.",
+      "key_features": [
+        "VESSL Run: Unified workflow for training, experiments, and hyperparameter tuning",
+        "VESSL Serve: Model serving and auto-scaling",
+        "VESSL Hub: Pre-trained model and dataset catalog",
+        "Hybrid Cloud Scheduler: Unified scheduling of on-premises, AWS, GCP GPUs",
+        "LLM Studio: LoRA, RLHF, and fine-tuning pipeline"
+      ],
+      "tech_stack_or_innovation": "Kubernetes job scheduling, multi-cluster federation, GPU resource virtualization, LLM fine-tuning pipeline",
+      "target_customer": "AI teams in South Korea, US, Japan (startups, research labs, large enterprises); AI organizations in healthcare, finance, autonomous driving",
+      "business_model": "Enterprise SaaS per-seat + per-GPU-hour usage fee + on-premise license"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global leader in experiment management. VESSL differentiates with full-stack integration of training, serving, and infrastructure."
+        },
+        {
+          "comparison": "Ray-based distributed training. VESSL differentiates with Kubernetes-friendly, UI-first workflows."
+        },
+        {
+          "comparison": "MLOps training platform. VESSL has a broader LLM and hybrid cloud lineup."
+        }
+      ],
+      "key_differentiator": "Kubernetes unified control plane + training and serving full stack + dual BD in Korea and US",
+      "moat": "Enterprise GPU operations data, lock-in as standard tool for Korean AI teams, OSS community human capital",
+      "competitive_position_summary": "Standard MLOps tool in Korea, rapidly penetrating as a third global option"
+    },
+    "trending_reason": {
+      "summary": "Raised approx. KRW 20B in Series B in 2024, with follow-on bets from A16Z and Y Combinator. After launching LLM fine-tuning and serving lineup, word spread among AI startups in Korea and the US.",
+      "catalysts": [
+        "Raised approx. KRW 20B in Series B in 2024",
+        "Follow-on bets from A16Z and Y Combinator",
+        "LLM Studio launch integrating LoRA and RLHF",
+        "Increasing adoption by US AI startups and research labs"
+      ],
+      "media_mentions": [
+        null,
+        {
+          "source": "Venture Square",
+          "title": "VESSL AI accelerates global MLOps expansion... dual headquarters in Korea and US"
+        }
+      ],
+      "growth_metrics": "200+ enterprise customers, tens of millions of cumulative GPU operating hours, ARR growing 3x+ annually"
+    },
+    "funding": {
+      "total_raised": "Approx. KRW 32B+",
+      "latest_round": {
+        "amount": "Approx. KRW 20B",
+        "notable_investors": [
+          null,
+          null,
+          "Korea Investment Partners",
+          "IMM Investment"
+        ]
+      },
+      "valuation_estimate": "Approx. KRW 200B",
+      "funding_history": [
+        {
+          "amount": "Approx. KRW 3B"
+        },
+        {
+          "amount": "Approx. KRW 10B"
+        },
+        {
+          "amount": "Approx. KRW 20B"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global MLOps market by 2030 $40B+, Training & serving SAM $15B, SOM $3B",
+      "market_trend": "LLM and multimodal training costs surging, hybrid cloud standardization, pressure to operate on-premises GPUs efficiently",
+      "growth_potential": "Becoming global standard tool for LLM fine-tuning, expansion to Japan and Southeast Asia, own model marketplace",
+      "risks": [
+        "Full-stack expansion by W&B and Anyscale",
+        "Direct competition from AWS SageMaker and GCP Vertex",
+        "GPU price volatility"
+      ],
+      "risk_mitigation": "Vendor-neutral positioning & OSS-friendly, strengthen industry and language-specific use cases, refine usage-based pricing"
+    },
+    "related_links": [
+      {
+        "title": "VESSL AI Official Site"
+      },
+      {
+        "title": "TechCrunch: Series B coverage"
+      },
+      {
+        "title": "VESSL Run product page"
+      }
+    ],
+    "editor_pick_comment": "Among AI-building tools, a rare case where a Korean company is mentioned as a global standard candidate. The most realistic infrastructure shortcut in the LLM era."
+  }
+}

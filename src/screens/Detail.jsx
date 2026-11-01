@@ -15,6 +15,7 @@ import { dotDate, enDash, langOf, monthDay, numClass, pad2, ym } from '../lib/fo
 import { isColdStart } from '../lib/nav.js'
 import { isEn, L } from '../lib/i18n.js'
 import { recordOpen } from '../lib/personal.js'
+import { track } from '../lib/analytics.js'
 import {
   scrollToSection,
   sectionsFor,
@@ -983,7 +984,10 @@ export default function Detail({ id, from, desktop, wide }) {
   const active = useActiveSection(sections.map((x) => x.id))
   useReadTracking(summaryRef, id)
   // an open is a (weaker) signal for the reader's order, even when it isn't read
-  useEffect(() => recordOpen(id), [id])
+  useEffect(() => {
+    recordOpen(id)
+    track('detail_open', { id, featured: byId(id)?.featured !== false })
+  }, [id])
   const [reportSection, setReportSection] = useState(null)
   const articleRef = useRef(null)
 

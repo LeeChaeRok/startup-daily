@@ -14,7 +14,7 @@ import About from './screens/About.jsx'
 import Settings from './screens/Settings.jsx'
 import Weekly from './screens/Weekly.jsx'
 import Sector from './screens/Sector.jsx'
-import { SECTORS, byDate, byId, dates, issueNo, useDataLevel, weeks } from './lib/data.js'
+import { SECTORS, byDate, byId, canonicalSector, dates, issueNo, retryDay, useDayLevel, weeks } from './lib/data.js'
 import { navigate, useMediaQuery, useReadLog, useRoute } from './lib/hooks.js'
 import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
 import { longDate, monthDay, weekLabel } from './lib/format.js'
@@ -33,7 +33,7 @@ function resolve({ parts, params }) {
   if (head === 'about') return { kind: 'about', section: 'about' }
   if (head === 'settings') return { kind: 'settings', section: 'about' }
   if (head === 'w' && weeks.some((w) => w.key === arg)) return { kind: 'weekly', week: arg, section: 'explore' }
-  if (head === 't' && arg) return { kind: 'sector', sector: arg, section: 'explore' }
+  if (head === 't' && arg) return { kind: 'sector', sector: canonicalSector(arg), section: 'explore' }
   return { kind: 'missing', section: null, head, arg }
 }
 
@@ -164,14 +164,14 @@ function NotFound({ head, arg }) {
 }
 
 /** A company page opened before the full records arrived (usually a fraction of a second). */
-function DetailPending({ failed }) {
+function DetailPending({ failed, date }) {
   if (failed) {
     return (
       <EmptyState
         icon="explore"
         title={L('회사 정보를 불러오지 못했어요', 'Couldn’t load this company')}
         actions={
-          <button type="button" className="btn btn--primary" onClick={() => window.location.reload()}>
+          <button type="button" className="btn btn--primary" onClick={() => retryDay(date)}>
             {L('다시 시도', 'Try again')}
           </button>
         }
@@ -231,7 +231,8 @@ export default function App() {
   const route = resolve(loc)
   const desktop = useMediaQuery('(min-width: 1024px)')
   const wide = useMediaQuery('(min-width: 1280px)')
-  const dataLevel = useDataLevel()
+  // a company page needs its day's full records (data/days/<date>.json)
+  const dayLevel = useDayLevel(route.kind === 'detail' ? byId(route.id).date : null)
   useAppBadge()
   const routeKey = `${route.kind}:${route.date || route.id || ''}:${route.from || ''}`
   useRouteEffects(routeKey, titleFor(route))
@@ -252,10 +253,10 @@ export default function App() {
   if (route.kind === 'issue') content = desktop ? <IssueOverview date={route.date} wide={wide} /> : <IssueMobile date={route.date} />
   else if (route.kind === 'detail')
     content =
-      dataLevel === 'full' ? (
+      dayLevel === 'full' ? (
         <Detail key={route.id} id={route.id} from={route.from} desktop={desktop} wide={wide} />
       ) : (
-        <DetailPending failed={dataLevel === 'failed'} />
+        <DetailPending failed={dayLevel === 'failed'} date={byId(route.id).date} />
       )
   else if (route.kind === 'explore') content = <Explore params={loc.params} desktop={desktop} />
   else if (route.kind === 'saved') content = <Saved params={loc.params} />
@@ -265,7 +266,7 @@ export default function App() {
   else if (route.kind === 'sector') content = <Sector sector={route.sector} />
   else content = <NotFound head={route.head} arg={route.arg} />
 
-  const rail = wide && split && dataLevel === 'full' && (route.kind === 'detail' ? <DetailRail key={route.id} id={route.id} /> : <IssueRail date={route.date} />)
+  const rail = wide && split && (route.kind !== 'detail' || dayLevel === 'full') && (route.kind === 'detail' ? <DetailRail key={route.id} id={route.id} /> : <IssueRail date={route.date} />)
 
   return (
     <ToastProvider>

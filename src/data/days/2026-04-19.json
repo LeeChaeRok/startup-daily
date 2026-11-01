@@ -1,0 +1,763 @@
+[
+  {
+    "id": "zymergen-bio-2026",
+    "date": "2026-04-19",
+    "featured": true,
+    "sector": "climate",
+    "name_en": "Genomatica",
+    "name_ko": "제노마티카",
+    "tagline": "합성생물학으로 석유화학을 대체하는 바이오 기반 산업소재 플랫폼",
+    "category": [
+      "합성생물학",
+      "바이오소재",
+      "산업화학"
+    ],
+    "founded_year": 2000,
+    "headquarters": {
+      "city": "San Diego",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "201-500",
+    "website": "https://www.genomatica.com/",
+    "logo_url": "/logos/zymergen-bio-2026.png",
+    "logo_svg_description": "DNA 이중나선을 화학 분자 구조와 결합한 모던 로고에 'Genomatica' 텍스트, 생물학과 화학의 융합을 표현하는 클린 디자인",
+    "founders": [
+      {
+        "name_en": "Christophe Schilling",
+        "name_ko": "크리스토프 실링",
+        "role": "CEO & Co-Founder",
+        "background": "UC San Diego 생명공학 박사, 대사공학 및 합성생물학 분야 세계적 권위자",
+        "linkedin": "https://www.linkedin.com/in/christopheschilling/",
+        "notable_achievement": "바이오 기반 BDO(1,4-부탄다이올) 세계 최초 상업 생산 성공, 연간 수만 톤 규모 달성"
+      }
+    ],
+    "team_highlights": "UC San Diego 출신 대사공학 전문가 팀, 150건 이상 특허 보유, BASF·Lululemon 등 글로벌 기업과 장기 파트너십 운영",
+    "product": {
+      "summary": "미생물 발효 기반 플랫폼으로 석유화학 원료를 대체하는 바이오 기반 산업 화학소재를 대규모로 생산하는 합성생물학 기업",
+      "problem_statement": "나일론, 플라스틱, 섬유 등 산업 소재의 핵심 원료가 석유화학에 의존하며, 탄소 배출과 환경 오염의 주요 원인이 되고 있음",
+      "solution": "독자적 미생물 엔지니어링 플랫폼으로 설탕 등 재생 가능 원료를 BDO, 부틸렌 글리콜 등 고부가가치 화학소재로 전환. 기존 석유화학 공정 대비 탄소 배출 최대 80% 감소",
+      "key_features": [
+        "GENO BDO: 바이오 기반 1,4-부탄다이올 (스판덱스·플라스틱 원료)",
+        "GENO BG: 바이오 기반 부틸렌 글리콜 (화장품·개인용품 원료)",
+        "독자적 미생물 설계 플랫폼 (유전자 회로 최적화 AI)",
+        "상업 규모 발효 생산 시설 (연간 수만 톤 생산 능력)",
+        "Drop-in 대체: 기존 석유화학 제품과 동일 성능, 별도 공정 변경 불필요"
+      ],
+      "tech_stack_or_innovation": "AI 기반 대사경로 설계 플랫폼으로 미생물의 유전자 회로를 최적화하여 특정 화학물질 생산 효율을 극대화. 발효 공정 스케일업 기술로 실험실에서 상업 규모까지 원활한 전환 가능",
+      "target_customer": "섬유·패션 기업(Lululemon 등), 화학 대기업(BASF 등), 화장품·개인용품 브랜드, 플라스틱 제조사",
+      "business_model": "B2B 소재 공급 + 기술 라이선싱. 대형 화학기업과 합작 생산 계약을 통한 로열티 수익 모델 병행",
+      "demo_or_screenshot_url": "https://www.genomatica.com/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "LanzaTech",
+          "comparison": "산업 배기가스를 원료로 활용하는 가스 발효 기술 특화. Genomatica는 설탕 기반 발효로 더 다양한 화학소재 생산 가능"
+        },
+        {
+          "name": "Solugen",
+          "comparison": "효소 기반 화학소재 생산에 집중. Genomatica는 미생물 전체 대사경로를 설계하여 더 복잡한 고부가가치 소재 생산 가능"
+        }
+      ],
+      "key_differentiator": "실험실 수준이 아닌 상업 규모의 바이오 기반 화학소재 생산을 이미 증명한 몇 안 되는 기업. BDO 상업 생산 5년 이상 운영 실적 보유",
+      "moat": "150건 이상 특허 포트폴리오, BASF·Lululemon 등과의 장기 공급 계약, 상업 규모 생산 노하우 축적",
+      "competitive_position_summary": "합성생물학 기반 산업 화학소재 분야에서 '실험실에서 공장으로' 전환에 성공한 선두 기업으로, 후발 주자 대비 5년 이상의 상업화 경험 우위"
+    },
+    "trending_reason": {
+      "summary": "2026년 EU 탄소국경조정(CBAM) 본격 시행과 글로벌 패션 브랜드의 탈석유화학 선언이 잇따르며, 이미 상업 생산 체제를 갖춘 Genomatica에 대한 수요와 투자 관심이 급증",
+      "catalysts": [
+        "EU CBAM 본격 시행으로 석유화학 기반 소재의 탄소 비용 급증",
+        "Lululemon·H&M 등 글로벌 패션 브랜드의 바이오 소재 전환 가속",
+        "미국 바이오경제 행정명령에 따른 합성생물학 산업 지원 확대",
+        "BASF와의 협력 확장으로 유럽 시장 본격 진출"
+      ],
+      "media_mentions": [
+        {
+          "source": "Bloomberg",
+          "title": "Genomatica's Bio-Based Chemicals Win Big as Carbon Costs Rise",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-15/genomatica-bio-chemicals-carbon-costs",
+          "date": "2026-03-15"
+        },
+        {
+          "source": "TechCrunch",
+          "title": "Synthetic Biology Startup Genomatica Expands European Production",
+          "url": "https://techcrunch.com/2026/02/20/genomatica-european-expansion/",
+          "date": "2026-02-20"
+        }
+      ],
+      "growth_metrics": "바이오 BDO 생산량 전년 대비 40% 증가, 글로벌 파트너사 20개 이상 확보, 합성생물학 시장 2030년 $40B 전망"
+    },
+    "funding": {
+      "total_raised": "$450M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$118M",
+        "date": "2025-06",
+        "lead_investor": "BlackRock",
+        "notable_investors": [
+          "BASF Venture Capital",
+          "Viking Global Investors",
+          "Casdin Capital"
+        ]
+      },
+      "valuation_estimate": "$2B+",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$42M",
+          "date": "2014",
+          "lead_investor": "Alloy Ventures"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$90M",
+          "date": "2018",
+          "lead_investor": "Viking Global Investors"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$118M",
+          "date": "2025-06",
+          "lead_investor": "BlackRock"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 바이오 기반 화학소재 시장 TAM $150B(2030), SAM $30B(나일론·섬유·화장품 원료), SOM $3B(BDO·BG 중심 선점 가능 시장)",
+      "market_trend": "탄소 규제 강화, ESG 소싱 의무화, 소비재 기업의 탈석유화학 선언이 바이오 소재 수요를 구조적으로 견인",
+      "growth_potential": "BDO·BG 외에 나일론 중간체, 바이오 기반 고무 등 신규 소재 파이프라인 확장으로 TAM 진입 범위 확대 가능",
+      "risks": [
+        "유가 하락 시 석유화학 소재 대비 가격 경쟁력 약화",
+        "대규모 발효 시설 투자에 따른 자본 부담",
+        "대형 화학기업의 자체 바이오 소재 개발 진입"
+      ],
+      "risk_mitigation": "장기 공급 계약으로 가격 변동 리스크 헤지, 합작 생산 모델로 CAPEX 분산, 특허 포트폴리오로 기술 진입장벽 유지"
+    },
+    "related_links": [
+      {
+        "title": "Genomatica 공식 웹사이트",
+        "url": "https://www.genomatica.com/"
+      },
+      {
+        "title": "Bloomberg 바이오 화학소재 보도",
+        "url": "https://www.bloomberg.com/news/articles/2026-03-15/genomatica-bio-chemicals-carbon-costs"
+      }
+    ],
+    "editor_pick_comment": "합성생물학이 '미래 기술'이 아닌 '오늘의 공장'이 된 사례. 설탕으로 스판덱스 원료를 만드는 이 회사는 이미 연간 수만 톤을 찍어내고 있다. CBAM 시대, 가장 먼저 웃는 건 이미 준비된 자다."
+  },
+  {
+    "id": "form-energy-2026",
+    "date": "2026-04-19",
+    "featured": true,
+    "sector": "climate",
+    "name_en": "Form Energy",
+    "name_ko": "폼 에너지",
+    "tagline": "철-공기 배터리로 100시간 에너지 저장, 재생에너지 그리드의 게임 체인저",
+    "category": [
+      "에너지 저장",
+      "그리드 기술",
+      "클린테크"
+    ],
+    "founded_year": 2017,
+    "headquarters": {
+      "city": "Somerville, MA",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series E",
+    "employee_count": "501-1000",
+    "website": "https://formenergy.com/",
+    "logo_url": "/logos/form-energy-2026.png",
+    "logo_svg_description": "철 원소 기호 'Fe'를 모티브로 한 견고한 타이포그래피에 에너지 그리드를 연상시키는 기하학적 요소를 결합한 'Form Energy' 로고",
+    "founders": [
+      {
+        "name_en": "Mateo Jaramillo",
+        "name_ko": "마테오 하라미요",
+        "role": "CEO & Co-Founder",
+        "background": "Tesla Energy Storage 부문 전 부사장, 대규모 에너지 저장 시스템 상용화 경험",
+        "linkedin": "https://www.linkedin.com/in/mateo-jaramillo/",
+        "notable_achievement": "Tesla Powerpack·Powerwall 사업부 초기 구축을 주도한 에너지 저장 분야 핵심 인물"
+      },
+      {
+        "name_en": "Yet-Ming Chiang",
+        "name_ko": "장옛밍",
+        "role": "Co-Founder & Chief Scientist",
+        "background": "MIT 재료공학 교수, 배터리 기술 분야 세계적 석학",
+        "linkedin": "",
+        "notable_achievement": "A123 Systems 공동 창업, 리튬인산철 배터리 상용화의 선구자"
+      }
+    ],
+    "team_highlights": "Tesla Energy 출신 CEO + MIT 재료공학 석학의 조합, 700명 이상 엔지니어링 팀, 웨스트버지니아 기가팩토리 건설 진행 중",
+    "product": {
+      "summary": "철과 공기를 활용한 초장시간 에너지 저장 시스템(100시간)으로, 리튬이온 배터리 대비 1/10 비용으로 재생에너지의 간헐성 문제를 해결하는 그리드 스케일 배터리",
+      "problem_statement": "태양광·풍력 등 재생에너지는 날씨에 따른 간헐성이 최대 약점. 며칠간 구름·무풍이 지속되면 전력 공급이 불안정해지나, 기존 리튬이온 배터리는 4시간 저장이 한계이고 비용이 높아 장기 저장에 부적합",
+      "solution": "철의 산화·환원 반응(녹슬기·녹 제거)을 이용한 철-공기 배터리로 100시간 이상 전력 저장 가능. 지구상 가장 풍부한 원소인 철을 사용하여 kWh당 비용을 리튬이온 대비 1/10 수준으로 절감",
+      "key_features": [
+        "100시간 연속 방전 가능한 초장시간 에너지 저장",
+        "리튬이온 대비 1/10 수준의 kWh당 저장 비용",
+        "철·공기 등 지구상 풍부한 원소 기반으로 공급망 리스크 최소화",
+        "모듈형 설계로 MW~GW 규모까지 유연한 확장",
+        "웨스트버지니아 기가팩토리에서 대량 생산 예정"
+      ],
+      "tech_stack_or_innovation": "가역적 산화환원 반응(iron ↔ rust) 원리로 충전 시 산화철을 금속 철로 환원하고, 방전 시 철이 공기 중 산소와 반응하여 산화철이 되며 전기를 생성. 단순한 화학 원리를 나노소재 엔지니어링으로 효율화",
+      "target_customer": "전력 유틸리티 기업, 재생에너지 발전사, 그리드 운영자, 에너지 전환을 추진하는 정부 기관",
+      "business_model": "유틸리티 기업과의 장기 전력구매계약(PPA) 기반 프로젝트 수주 + 배터리 시스템 판매. 자체 기가팩토리 생산으로 원가 통제",
+      "demo_or_screenshot_url": "https://formenergy.com/technology/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "ESS Inc.",
+          "comparison": "철 흐름 배터리(iron flow battery) 기술로 8-12시간 저장. Form Energy는 100시간 저장으로 초장시간 영역에서 차별화"
+        },
+        {
+          "name": "Ambri",
+          "comparison": "액체 금속 배터리로 장시간 저장 도전. 아직 상업 생산 전 단계인 반면, Form Energy는 기가팩토리 건설 진행 중"
+        },
+        {
+          "name": "Energy Vault",
+          "comparison": "중력 기반 에너지 저장. 물리적 저장으로 장소 제약이 큰 반면, Form Energy는 모듈형으로 유연한 설치 가능"
+        }
+      ],
+      "key_differentiator": "100시간이라는 압도적 저장 시간과 철이라는 초저가·초풍부 원소 기반으로, '재생에너지 100% 그리드'를 경제적으로 실현할 수 있는 유일한 기술",
+      "moat": "철-공기 배터리 핵심 특허 수십 건, 웨스트버지니아 기가팩토리(미국 최초 대규모 장기 저장 배터리 공장), 유틸리티와의 GW 규모 수주 파이프라인",
+      "competitive_position_summary": "초장시간(100시간+) 에너지 저장 분야의 사실상 유일한 대규모 상업화 단계 기업으로, 리튬이온으로 해결 불가능한 시장 영역을 독점적으로 개척 중"
+    },
+    "trending_reason": {
+      "summary": "2026년 웨스트버지니아 기가팩토리 가동 임박, 미국 DOE $760M 지원 확정, 재생에너지 100% 전환의 핵심 퍼즐로 글로벌 주목",
+      "catalysts": [
+        "웨스트버지니아 기가팩토리 2026년 하반기 가동 예정",
+        "미국 에너지부(DOE) $760M 대출 보증 확정",
+        "미네소타·조지아 등 다수 유틸리티와 GW 규모 공급 계약 체결",
+        "IRA(인플레이션 감축법) 에너지 저장 세액공제 혜택 적용"
+      ],
+      "media_mentions": [
+        {
+          "source": "MIT Technology Review",
+          "title": "Form Energy's Iron-Air Battery Is About to Hit the Grid",
+          "url": "https://www.technologyreview.com/2026/03/28/form-energy-iron-air-battery-grid/",
+          "date": "2026-03-28"
+        },
+        {
+          "source": "Wall Street Journal",
+          "title": "The Rust Battery That Could Transform the Power Grid",
+          "url": "https://www.wsj.com/articles/form-energy-rust-battery-power-grid-2026",
+          "date": "2026-02-10"
+        }
+      ],
+      "growth_metrics": "누적 수주 파이프라인 20GWh 이상, 직원 700명 이상, 시리즈 E 기준 기업 가치 $4B 이상 추정"
+    },
+    "funding": {
+      "total_raised": "$1.2B+",
+      "latest_round": {
+        "stage": "Series E",
+        "amount": "$450M",
+        "date": "2025-10",
+        "lead_investor": "T. Rowe Price",
+        "notable_investors": [
+          "ArcelorMittal",
+          "Bill Gates (Breakthrough Energy Ventures)",
+          "GIC (싱가포르 국부펀드)"
+        ]
+      },
+      "valuation_estimate": "$4B+",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$9M",
+          "date": "2018",
+          "lead_investor": "Breakthrough Energy Ventures"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$240M",
+          "date": "2021",
+          "lead_investor": "ArcelorMittal"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$391M",
+          "date": "2022",
+          "lead_investor": "GIC"
+        },
+        {
+          "stage": "Series E",
+          "amount": "$450M",
+          "date": "2025-10",
+          "lead_investor": "T. Rowe Price"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 장기 에너지 저장 시장 TAM $500B(2040), SAM $80B(미국 유틸리티 장기 저장), SOM $8B(초기 수주 기반 추정)",
+      "market_trend": "재생에너지 비중 확대에 따른 장기 저장 필수 수요 증가, 리튬이온 가격 반등 및 공급망 불안정, 정부의 에너지 안보 강화 정책",
+      "growth_potential": "미국 외 유럽·아시아 시장 진출, 산업용 백업 전원·오프그리드 마이크로그리드 등 신규 용도 확장 가능",
+      "risks": [
+        "기가팩토리 건설·가동 지연 리스크",
+        "철-공기 배터리의 실제 현장 성능 검증 필요",
+        "리튬이온 배터리 가격 급락 시 경쟁력 압박"
+      ],
+      "risk_mitigation": "DOE 대출 보증으로 건설 자금 안정화, 파일럿 플랜트 3년 이상 운영 데이터 축적, 리튬이온과 용도가 다른 '100시간' 영역 집중으로 직접 경쟁 회피"
+    },
+    "related_links": [
+      {
+        "title": "Form Energy 공식 웹사이트",
+        "url": "https://formenergy.com/"
+      },
+      {
+        "title": "MIT Technology Review 보도",
+        "url": "https://www.technologyreview.com/2026/03/28/form-energy-iron-air-battery-grid/"
+      },
+      {
+        "title": "DOE 대출 보증 발표",
+        "url": "https://www.energy.gov/lpo/form-energy"
+      }
+    ],
+    "editor_pick_comment": "녹스는 것이 에너지가 된다. 철과 공기만으로 100시간 전력을 저장하는 이 배터리가 진짜라면, 재생에너지의 마지막 퍼즐이 맞춰진다. 기가팩토리 가동이 시작되는 2026년이 증명의 해다."
+  },
+  {
+    "id": "buildots-2026",
+    "date": "2026-04-19",
+    "featured": true,
+    "sector": "enterprise",
+    "name_en": "Buildots",
+    "name_ko": "빌도츠",
+    "tagline": "하드햇에 카메라를 달면 건설 현장이 디지털 트윈이 된다",
+    "category": [
+      "건설테크",
+      "컴퓨터비전",
+      "스마트 빌딩"
+    ],
+    "founded_year": 2018,
+    "headquarters": {
+      "city": "Tel Aviv",
+      "country": "Israel",
+      "country_ko": "이스라엘"
+    },
+    "company_stage": "Series B",
+    "employee_count": "101-200",
+    "website": "https://www.buildots.com/",
+    "logo_url": "/logos/buildots-2026.webp",
+    "logo_svg_description": "건물 블록을 추상화한 기하학적 아이콘에 데이터 포인트를 결합한 모던 로고, 'Buildots' 텍스트와 함께 건설과 기술의 융합을 표현",
+    "founders": [
+      {
+        "name_en": "Roy Danon",
+        "name_ko": "로이 다논",
+        "role": "CEO & Co-Founder",
+        "background": "이스라엘 방위군 엘리트 기술부대 탈피오트(Talpiot) 출신, 컴퓨터비전 전문가",
+        "linkedin": "https://www.linkedin.com/in/roydanon/",
+        "notable_achievement": "건설 현장 자동 모니터링 AI를 세계 최초로 상용화, 영국·유럽 대형 건설사 다수 고객 확보"
+      },
+      {
+        "name_en": "Aviv Leibovici",
+        "name_ko": "아비브 레이보비치",
+        "role": "CPO & Co-Founder",
+        "background": "탈피오트 출신 AI/ML 엔지니어, 3D 매핑 및 포인트 클라우드 분석 전문가",
+        "linkedin": "https://www.linkedin.com/in/avivleibovici/",
+        "notable_achievement": "360도 카메라 영상에서 BIM 대비 시공 진척률을 자동 분석하는 핵심 알고리즘 개발"
+      }
+    ],
+    "team_highlights": "이스라엘 엘리트 기술부대 탈피오트 출신 공동 창업자 3명, 컴퓨터비전·건설 도메인 전문가 조합, 영국 Tier 1 건설사 80% 이상 고객 확보",
+    "product": {
+      "summary": "360도 카메라를 안전모에 장착하여 건설 현장을 자동으로 촬영하고, AI가 BIM(건물정보모델링) 설계와 실제 시공 상태를 비교 분석하여 진척 관리·품질 검사·일정 예측을 자동화하는 건설 AI 플랫폼",
+      "problem_statement": "건설 프로젝트의 90%가 예산 초과, 70%가 일정 지연을 겪으며, 현장 관리자가 수작업으로 진행 상황을 파악하는 비효율적 방식이 근본 원인. 연간 $1.6T 규모의 생산성 손실 발생",
+      "solution": "하드햇 장착 360도 카메라로 현장을 자동 스캔하고, AI가 BIM 설계도와 실제 시공을 픽셀 단위로 비교하여 진척률·품질 이슈·일정 리스크를 실시간 대시보드로 제공. 주 1회 현장 촬영만으로 전체 프로젝트 가시성 확보",
+      "key_features": [
+        "하드햇 장착 360도 카메라로 현장 자동 촬영 (별도 조작 불필요)",
+        "BIM vs 현실 자동 비교 분석 (시공 진척률 AI 산출)",
+        "품질 이슈 자동 탐지 및 위치 기반 알림",
+        "공정 지연 예측 및 일정 리스크 조기 경보",
+        "클라우드 기반 대시보드로 원격 현장 관리 가능",
+        "기존 BIM 소프트웨어(Revit, Navisworks)와 원활한 연동"
+      ],
+      "tech_stack_or_innovation": "SLAM(동시 위치결정 및 매핑) + 딥러닝 기반 3D 재구성으로 2D 촬영 이미지를 BIM 좌표계와 자동 매칭. 수만 개 건축 요소(벽체, 배관, 전기 등)를 분류·추적하는 독자 컴퓨터비전 모델",
+      "target_customer": "대형 종합건설사(Tier 1 제너럴 컨트랙터), 인프라 개발사, 건설 프로젝트 관리 기업",
+      "business_model": "SaaS 구독 모델 (프로젝트당 월 과금). 카메라 하드웨어는 대여 또는 판매",
+      "demo_or_screenshot_url": "https://www.buildots.com/platform"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "OpenSpace",
+          "comparison": "360도 촬영 기반 현장 기록에 강점이나, BIM 대비 자동 분석 기능은 제한적. Buildots는 AI 기반 자동 진척 분석이 핵심 차별점"
+        },
+        {
+          "name": "Disperse",
+          "comparison": "영국 기반 건설 현장 모니터링. Buildots 대비 BIM 연동 깊이와 자동화 수준에서 차이"
+        }
+      ],
+      "key_differentiator": "촬영만 하면 끝. AI가 BIM과 자동 비교하여 '무엇이 늦고, 무엇이 잘못됐는지'를 자동으로 알려주는 완전 자동화 파이프라인",
+      "moat": "영국 Tier 1 건설사 레퍼런스(Balfour Beatty, Wates 등), 수십만 건의 건설 현장 이미지 학습 데이터, BIM 자동 매칭 특허 기술",
+      "competitive_position_summary": "건설 현장 AI 모니터링 시장에서 '촬영 자동화 + BIM 자동 분석' 통합 솔루션의 선두 주자로, 특히 유럽 시장에서 강력한 입지"
+    },
+    "trending_reason": {
+      "summary": "영국 정부의 BIM 의무화 확대 정책과 유럽 건설 노동력 부족 심화로, AI 기반 건설 관리 솔루션에 대한 수요가 폭증하며 Buildots의 성장이 가속",
+      "catalysts": [
+        "영국 정부 Golden Thread 규정으로 건설 디지털 기록 의무화 확대",
+        "유럽 건설 숙련공 부족(40% 인력 감소 전망)으로 AI 자동화 수요 급증",
+        "시리즈 B 펀딩 후 미국·아시아 시장 진출 가속",
+        "대형 건설사 Balfour Beatty 전사 도입 사례가 업계 확산 촉매"
+      ],
+      "media_mentions": [
+        {
+          "source": "Construction Dive",
+          "title": "Buildots Raises Series B to Bring AI Vision to More Construction Sites",
+          "url": "https://www.constructiondive.com/news/buildots-series-b-ai-construction/2026/",
+          "date": "2026-01-20"
+        }
+      ],
+      "growth_metrics": "ARR 전년 대비 3배 성장, 모니터링 프로젝트 수 500개 이상, 분석된 건설 현장 면적 1,000만㎡ 돌파"
+    },
+    "funding": {
+      "total_raised": "$96M",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$60M",
+        "date": "2025-12",
+        "lead_investor": "Lightspeed Venture Partners",
+        "notable_investors": [
+          "TLV Partners",
+          "Maor Investments",
+          "Viola Ventures"
+        ]
+      },
+      "valuation_estimate": "$400M",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$3M",
+          "date": "2019",
+          "lead_investor": "TLV Partners"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$30M",
+          "date": "2021",
+          "lead_investor": "TLV Partners"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$60M",
+          "date": "2025-12",
+          "lead_investor": "Lightspeed Venture Partners"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 건설테크 시장 TAM $25B(2030), SAM $6B(현장 모니터링·진척 관리), SOM $600M(유럽·북미 대형 건설사)",
+      "market_trend": "건설 디지털화 규제 강화, BIM 의무화 확산, 노동력 부족에 따른 자동화 투자 증가",
+      "growth_potential": "건설 모니터링에서 자재 관리·안전 관리·자동 검수까지 기능 확장, 인프라·리모델링 시장으로 용도 다변화 가능",
+      "risks": [
+        "건설 업계의 보수적 기술 도입 문화와 긴 영업 사이클",
+        "현장 환경(먼지, 조명 변화)에 따른 AI 정확도 변동",
+        "OpenSpace 등 경쟁사의 기능 추격"
+      ],
+      "risk_mitigation": "Tier 1 건설사 레퍼런스로 신뢰 구축, 다양한 현장 조건에서의 학습 데이터 축적으로 정확도 향상, BIM 자동 분석이라는 핵심 기능에서의 기술 선도 유지"
+    },
+    "related_links": [
+      {
+        "title": "Buildots 공식 웹사이트",
+        "url": "https://www.buildots.com/"
+      },
+      {
+        "title": "Construction Dive 시리즈 B 보도",
+        "url": "https://www.constructiondive.com/news/buildots-series-b-ai-construction/2026/"
+      }
+    ],
+    "editor_pick_comment": "안전모에 카메라 하나 붙이면 건설 현장 전체가 실시간 디지털 트윈이 된다. '왜 공사가 늦어지는지' 더 이상 감으로 판단하지 않아도 된다. 건설업의 디지털 전환, 의외로 이렇게 단순하게 시작된다."
+  },
+  {
+    "id": "talkiatry-2026",
+    "date": "2026-04-19",
+    "featured": true,
+    "sector": "health",
+    "name_en": "Talkiatry",
+    "name_ko": "토키아트리",
+    "tagline": "정신과 진료의 대기 시간을 주(weeks)에서 일(days)로, 보험 적용 온라인 정신과",
+    "category": [
+      "멘탈 헬스",
+      "원격의료",
+      "헬스테크"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "New York",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "501-1000",
+    "website": "https://www.talkiatry.com/",
+    "logo_url": "/logos/talkiatry-2026.png",
+    "logo_svg_description": "대화 말풍선과 의료 십자가를 결합한 따뜻한 색조의 아이콘에 'Talkiatry' 텍스트, 접근성 높은 정신과 케어를 표현하는 친근한 디자인",
+    "founders": [
+      {
+        "name_en": "Robert Krayn",
+        "name_ko": "로버트 크레인",
+        "role": "CEO & Co-Founder",
+        "background": "헬스케어 테크 연쇄 창업자, Columbia University 졸업, 정신건강 접근성 문제에 집중",
+        "linkedin": "https://www.linkedin.com/in/robertkrayn/",
+        "notable_achievement": "3년 만에 미국 최대 보험 적용 원격 정신과 플랫폼으로 성장시켜 Series C $130M 조달"
+      },
+      {
+        "name_en": "Georgia Gaveras",
+        "name_ko": "조지아 가베라스",
+        "role": "Co-Founder & Chief Medical Advisor",
+        "background": "정신과 전문의, NYU Langone Medical Center 출신, 정신과 접근성 격차 해소에 전념",
+        "linkedin": "",
+        "notable_achievement": "Talkiatry 진료 품질 프로토콜 수립, 정신과 전문의 500명 이상 네트워크 구축"
+      }
+    ],
+    "team_highlights": "헬스테크 창업 경험 CEO + 정신과 전문의 공동 창업자, 정신과 전문의 500명 이상 고용(미국 최대), 보험사 60개 이상 네트워크 계약",
+    "product": {
+      "summary": "보험 적용이 되는 온라인 정신과 진료 플랫폼으로, 정신과 전문의와의 약물 치료 및 심리상담을 원격으로 제공하며, 평균 5일 이내 초진 예약을 보장하는 디지털 정신과 서비스",
+      "problem_statement": "미국에서 정신과 전문의의 평균 초진 대기 시간이 6주 이상이며, 정신과 의사의 절반 이상이 보험을 받지 않아 환자들이 높은 자비 부담에 시달림. 정신질환 환자 5명 중 3명이 적절한 치료를 받지 못하는 접근성 위기",
+      "solution": "정신과 전문의를 직접 고용하는 모델로 보험 적용 원격 정신과 진료를 제공. AI 기반 매칭으로 환자와 적합한 전문의를 연결하고, 평균 5일 이내 초진 예약 보장. 약물 처방, 상담, 경과 관리를 통합 플랫폼에서 제공",
+      "key_features": [
+        "보험 적용 원격 정신과 진료 (60개+ 보험사 네트워크)",
+        "평균 5일 이내 초진 예약 보장 (기존 6주+ 대비 혁신적 단축)",
+        "AI 기반 환자-전문의 매칭 시스템",
+        "약물 처방 + 상담 통합 진료 (정신과 전문의 직접 고용)",
+        "진료 후 디지털 경과 관리 및 리마인더"
+      ],
+      "tech_stack_or_innovation": "독자 개발 진료 관리 플랫폼(EMR, 예약, 처방, 보험 청구 통합) + AI 기반 환자-의사 매칭 알고리즘 + 자동화된 보험 사전 승인·청구 시스템으로 행정 부담 최소화",
+      "target_customer": "정신과 진료가 필요한 성인 환자(우울증, 불안장애, ADHD, 양극성장애 등), 보험 가입자",
+      "business_model": "보험 청구 기반 수익 모델. 정신과 전문의를 W-2(정규직)로 고용하여 진료 품질 통제, 보험사에 진료비 청구하여 수익 창출. 환자 본인부담금은 보험 종류에 따라 결정",
+      "demo_or_screenshot_url": "https://www.talkiatry.com/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Cerebral",
+          "comparison": "온라인 정신건강 플랫폼이나 NP(간호사) 중심 처방 모델로 품질 논란. Talkiatry는 정신과 전문의(MD) 직접 고용으로 진료 품질 차별화"
+        },
+        {
+          "name": "Done Health",
+          "comparison": "ADHD 특화 원격 플랫폼. Talkiatry는 전체 정신과 영역을 커버하는 종합 정신과 서비스"
+        }
+      ],
+      "key_differentiator": "정신과 전문의(MD)를 정규직으로 직접 고용하는 유일한 대규모 원격 정신과 플랫폼. NP/PA가 아닌 전문의 중심으로 진료 품질과 신뢰도에서 차별화",
+      "moat": "500명 이상 정신과 전문의 직접 고용 네트워크(미국 최대), 60개 이상 보험사 네트워크 계약, 독자 EMR 시스템으로 운영 효율 최적화",
+      "competitive_position_summary": "보험 적용 + 정신과 전문의 직접 고용이라는 두 가지 차별점으로 '품질 있는 접근성'을 실현한 원격 정신과 분야의 리더"
+    },
+    "trending_reason": {
+      "summary": "미국 정신건강 위기 심화와 원격 정신과 보험 적용 확대 규제에 힘입어 급성장, 시리즈 C $130M 조달로 전국 확장 가속",
+      "catalysts": [
+        "미국 Surgeon General의 정신건강 위기 선언 이후 정책적 지원 확대",
+        "2026년 CMS(메디케어) 원격 정신과 영구 보험 적용 규정 확정",
+        "시리즈 C $130M 펀딩으로 전국 48개 주 서비스 확대",
+        "직장 내 정신건강 관리 수요 급증으로 B2B(고용주) 채널 성장"
+      ],
+      "media_mentions": [
+        {
+          "source": "Forbes",
+          "title": "Talkiatry Raises $130M to Scale In-Network Psychiatry Nationwide",
+          "url": "https://www.forbes.com/sites/katiejennings/2026/01/15/talkiatry-series-c-130m/",
+          "date": "2026-01-15"
+        }
+      ],
+      "growth_metrics": "환자 수 50만 명 돌파, 매출 전년 대비 150% 성장, 정신과 전문의 500명+ 고용, 미국 48개 주 서비스"
+    },
+    "funding": {
+      "total_raised": "$230M+",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$130M",
+        "date": "2025-11",
+        "lead_investor": "Andreessen Horowitz (a16z)",
+        "notable_investors": [
+          "Particle Health",
+          "OMERS Ventures",
+          "Health Velocity Capital"
+        ]
+      },
+      "valuation_estimate": "$1.5B",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$20M",
+          "date": "2022",
+          "lead_investor": "Raine Group"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$80M",
+          "date": "2023",
+          "lead_investor": "a16z"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$130M",
+          "date": "2025-11",
+          "lead_investor": "Andreessen Horowitz (a16z)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "미국 정신건강 서비스 시장 TAM $280B(2030), SAM $50B(원격 정신과 진료), SOM $5B(보험 적용 원격 정신과)",
+      "market_trend": "정신건강 위기 심화, 원격의료 보험 적용 영구화, 고용주의 정신건강 복지 투자 확대, 정신과 전문의 공급 부족 심화",
+      "growth_potential": "소아·청소년 정신과, 물질 남용 치료, 기업 EAP 통합 등으로 서비스 영역 확장 가능",
+      "risks": [
+        "원격의료 규제 변동(처방 제한 등) 가능성",
+        "정신과 전문의 채용 경쟁 심화로 인건비 상승",
+        "보험사 수가 인하 압박"
+      ],
+      "risk_mitigation": "원격 정신과 영구 적용 규정으로 규제 리스크 완화, 전문의 근무 유연성 제공으로 채용 경쟁력 확보, 진료 품질 데이터 기반 보험사 협상력 강화"
+    },
+    "related_links": [
+      {
+        "title": "Talkiatry 공식 웹사이트",
+        "url": "https://www.talkiatry.com/"
+      },
+      {
+        "title": "Forbes 시리즈 C 보도",
+        "url": "https://www.forbes.com/sites/katiejennings/2026/01/15/talkiatry-series-c-130m/"
+      }
+    ],
+    "editor_pick_comment": "정신과 진료를 6주 기다려야 한다는 건 아픈 사람에게 '나중에 오라'는 것과 같다. Talkiatry는 이 대기 시간을 5일로 줄이고, 보험까지 적용되게 만들었다. 정신건강의 접근성 혁명이 시작됐다."
+  },
+  {
+    "id": "legislate-2026",
+    "date": "2026-04-19",
+    "featured": true,
+    "sector": "enterprise",
+    "name_en": "Legislate",
+    "name_ko": "레지슬레이트",
+    "tagline": "계약서를 코드처럼 관리한다, AI 기반 지식 그래프 계약 플랫폼",
+    "category": [
+      "리갈테크",
+      "컴플라이언스",
+      "AI"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "London",
+      "country": "United Kingdom",
+      "country_ko": "영국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "31-50",
+    "website": "https://www.legislate.ai/",
+    "logo_url": "/logos/legislate-2026.png",
+    "logo_svg_description": "법률 문서와 네트워크 노드를 결합한 심플한 아이콘에 'Legislate' 텍스트, 기술과 법률의 교차점을 표현하는 깔끔한 디자인",
+    "founders": [
+      {
+        "name_en": "Charles Brecque",
+        "name_ko": "찰스 브레크",
+        "role": "CEO & Founder",
+        "background": "Oxford 대학 물리학 박사, 양자컴퓨팅 연구 중 계약서 관리의 비효율성을 발견하고 창업",
+        "linkedin": "https://www.linkedin.com/in/charlesbrecque/",
+        "notable_achievement": "계약서의 핵심 조항을 지식 그래프로 구조화하는 독자적 온톨로지 개발, Oxford 대학 스핀아웃으로 시작하여 영국 주요 리갈테크로 성장"
+      }
+    ],
+    "team_highlights": "Oxford 대학 스핀아웃, 물리학·AI 배경의 창업자가 법률 도메인에 기술적 접근, Techstars London 졸업, 영국 리갈테크 어워드 수상",
+    "product": {
+      "summary": "계약서의 핵심 조항과 의무사항을 지식 그래프(Knowledge Graph) 구조로 변환하여, 자연어 질의로 계약 포트폴리오 전체를 분석·관리할 수 있는 AI 기반 계약 관리 플랫폼",
+      "problem_statement": "기업은 수백~수천 건의 계약서를 보유하지만, 대부분 PDF나 Word 파일로 사일로화되어 있어 '우리 계약서 중 해지 통보 기간이 30일 미만인 것은 몇 개인가?' 같은 기본적 질문에도 답하기 어려움. 이로 인한 계약 리스크·기회 손실이 만연",
+      "solution": "AI가 계약서를 지식 그래프로 자동 구조화하여 각 조항의 의미와 관계를 추출. 사용자는 자연어로 '임대료 인상 조항이 있는 계약은?' 등을 질의하고, 계약 포트폴리오 전체에서 즉시 답변을 받을 수 있음",
+      "key_features": [
+        "AI 기반 계약서 자동 구조화 (지식 그래프 변환)",
+        "자연어 질의로 계약 포트폴리오 분석 (계약 인텔리전스)",
+        "핵심 조항 자동 추출 및 의무사항 트래킹",
+        "계약 템플릿 빌더 (법률 비전문가도 표준 계약서 생성)",
+        "만기·갱신·해지 자동 알림 및 리스크 대시보드"
+      ],
+      "tech_stack_or_innovation": "계약서 조항을 온톨로지 기반 지식 그래프로 구조화하는 독자 기술. LLM을 활용한 자연어 질의 처리 + 지식 그래프의 구조적 정확성을 결합하여, 단순 키워드 검색이 아닌 의미 기반 계약 분석 가능",
+      "target_customer": "중소기업 법무팀, 부동산 관리 기업, HR 부서(고용 계약), 법률 사무소, 컴플라이언스 부서",
+      "business_model": "SaaS 구독 모델 (사용자 수·계약서 수 기반 과금). 기업용 엔터프라이즈 플랜과 소기업용 스타터 플랜 구분",
+      "demo_or_screenshot_url": "https://www.legislate.ai/product"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Juro",
+          "comparison": "계약서 작성·협상·서명 워크플로우에 강점이나, 기존 계약서의 구조화 분석에서는 Legislate의 지식 그래프 접근이 우위"
+        },
+        {
+          "name": "Ironclad",
+          "comparison": "대기업 CLM(계약 생애주기 관리) 시장 리더이나 중소기업에는 복잡하고 고가. Legislate는 SME 친화적 UX와 가격으로 차별화"
+        }
+      ],
+      "key_differentiator": "계약서를 단순 문서가 아닌 '구조화된 데이터(지식 그래프)'로 변환하여, 기존 CLM 도구에서 불가능한 의미 기반 포트폴리오 분석을 가능하게 함",
+      "moat": "Oxford 출신 계약 온톨로지 독자 기술, 영국 법률 체계에 최적화된 템플릿 라이브러리, Techstars 네트워크 기반 고객 확보",
+      "competitive_position_summary": "'계약 인텔리전스'라는 새로운 카테고리를 개척한 영국 리갈테크 스타트업으로, 지식 그래프 + LLM 결합으로 차세대 계약 관리 패러다임을 제시"
+    },
+    "trending_reason": {
+      "summary": "EU AI Act·영국 FCA 규제 강화로 기업 컴플라이언스 계약 관리 수요 폭증, LLM 기술 발전으로 계약서 자동 분석 정확도가 상용 수준에 도달하며 주목",
+      "catalysts": [
+        "EU AI Act 시행으로 AI 관련 계약 조항 관리 수요 급증",
+        "영국 FCA 소비자 의무 규정(Consumer Duty)으로 금융 계약 컴플라이언스 강화",
+        "GPT-4 등 LLM 발전으로 계약서 자연어 분석 정확도 대폭 향상",
+        "시리즈 A 펀딩 완료 후 유럽 시장 확장 가속"
+      ],
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Legislate Uses Knowledge Graphs to Make Contract Management Smarter",
+          "url": "https://techcrunch.com/2026/02/08/legislate-knowledge-graph-contract-management/",
+          "date": "2026-02-08"
+        }
+      ],
+      "growth_metrics": "관리 계약 건수 10만 건 돌파, ARR 전년 대비 200% 성장, 영국 내 고객 기업 2,000개 이상"
+    },
+    "funding": {
+      "total_raised": "$15M",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$10M",
+        "date": "2025-09",
+        "lead_investor": "Episode 1 Ventures",
+        "notable_investors": [
+          "Techstars",
+          "SFC Capital",
+          "Oxford Angel Network"
+        ]
+      },
+      "valuation_estimate": "$60M",
+      "funding_history": [
+        {
+          "stage": "Pre-Seed",
+          "amount": "$1.5M",
+          "date": "2021",
+          "lead_investor": "Techstars"
+        },
+        {
+          "stage": "Seed",
+          "amount": "$3.5M",
+          "date": "2023",
+          "lead_investor": "SFC Capital"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$10M",
+          "date": "2025-09",
+          "lead_investor": "Episode 1 Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 CLM(계약 생애주기 관리) 시장 TAM $10B(2030), SAM $2.5B(유럽 SME CLM), SOM $250M(영국 중심 초기 시장)",
+      "market_trend": "규제 복잡화에 따른 컴플라이언스 부담 증가, AI 기반 법률 도구 수용도 상승, 중소기업의 디지털 법무 도입 가속",
+      "growth_potential": "영국에서 유럽·미국으로 시장 확장, 부동산·HR·조달 등 산업별 특화 솔루션 개발, 대기업 엔터프라이즈 시장 진입",
+      "risks": [
+        "대형 CLM 업체(Ironclad, DocuSign)의 AI 기능 강화로 경쟁 심화",
+        "법률 분야 특유의 보수적 기술 도입 문화",
+        "다국가 법률 체계 지원의 복잡성"
+      ],
+      "risk_mitigation": "SME 시장 집중으로 대형 CLM과 직접 경쟁 회피, 법률 전문가와의 협업으로 도메인 신뢰 구축, 지식 그래프의 확장 가능한 구조로 다국가 법률 지원"
+    },
+    "related_links": [
+      {
+        "title": "Legislate 공식 웹사이트",
+        "url": "https://www.legislate.ai/"
+      },
+      {
+        "title": "TechCrunch 보도",
+        "url": "https://techcrunch.com/2026/02/08/legislate-knowledge-graph-contract-management/"
+      }
+    ],
+    "editor_pick_comment": "계약서를 쌓아두고 '무슨 조건이었더라' 뒤적이는 시대는 끝났다. Legislate는 계약서를 코드처럼 쿼리할 수 있게 만들었다. 물리학 박사가 법률 시장에 던진 이 질문이 의외로 정곡을 찌른다."
+  }
+]

@@ -2,14 +2,14 @@
  * On-demand "한국에서는" analysis for one company (GET /api/korea-lens?id=<company id>).
  *
  * Cost and abuse controls — this endpoint spends money per call:
- *  - only ids that exist in startups.json are accepted; the prompt is built here, never by the client
+ *  - only ids of published companies are accepted; the prompt is built here, never by the client
  *  - successful answers are cached at Vercel's edge for 30 days, so the first reader pays and
  *    everyone after is free (errors are never cached)
  *  - same-site requests only, a per-visitor rate limit, and a cap on concurrent generations
  *  - LENS_ENABLED=0 switches the whole thing off without a deploy
  * The OPENROUTER_API_KEY lives only in this project's environment variables.
  */
-import startups from '../src/data/startups.json' with { type: 'json' }
+import { companyById } from './_lib/data.mjs'
 import { createClient, lensModelsFromEnv } from '../scripts/lib/openrouter.mjs'
 import { buildKoreaLens } from '../scripts/lib/korea-lens.mjs'
 
@@ -57,7 +57,7 @@ export default async function handler(req, res) {
   if (!sameSite(req)) return send(res, 403, { error: 'origin' })
 
   const id = new URL(req.url, SITE).searchParams.get('id') || ''
-  const startup = startups.find((s) => s.id === id)
+  const startup = await companyById(id).catch(() => null)
   if (!startup) return send(res, 404, { error: 'unknown', message: '없는 회사예요.' })
 
   const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'unknown'

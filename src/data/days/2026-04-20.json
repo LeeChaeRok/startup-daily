@@ -1,0 +1,754 @@
+[
+  {
+    "id": "lightspeed-restaurant-2026",
+    "date": "2026-04-20",
+    "featured": true,
+    "sector": "enterprise",
+    "name_en": "MarginEdge",
+    "name_ko": "마진엣지",
+    "tagline": "레스토랑 뒷방의 종이 영수증을 없앤다, 외식업 특화 백오피스 SaaS",
+    "category": [
+      "수직 SaaS",
+      "외식업테크",
+      "핀테크"
+    ],
+    "founded_year": 2015,
+    "headquarters": {
+      "city": "Fairfax, VA",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "101-200",
+    "website": "https://www.marginedge.com/",
+    "logo_url": "/logos/lightspeed-restaurant-2026.png",
+    "logo_svg_description": "레스토랑 접시 모티브와 차트 그래프를 결합한 심플한 아이콘에 'MarginEdge' 텍스트, 외식업의 데이터 기반 경영을 표현하는 디자인",
+    "founders": [
+      {
+        "name_en": "Bo Davis",
+        "name_ko": "보 데이비스",
+        "role": "CEO & Co-Founder",
+        "background": "20년 이상 외식업 경영 경험, 다수의 레스토랑을 직접 운영하며 백오피스 비효율을 체감하고 창업",
+        "linkedin": "https://www.linkedin.com/in/bodavis/",
+        "notable_achievement": "외식업 경영자 출신으로 레스토랑 백오피스 자동화 SaaS를 구축, 미국 전역 수천 개 레스토랑 도입"
+      },
+      {
+        "name_en": "Roy Phillips",
+        "name_ko": "로이 필립스",
+        "role": "CTO & Co-Founder",
+        "background": "소프트웨어 엔지니어, 외식업 자동화 시스템 개발 경력",
+        "linkedin": "",
+        "notable_achievement": "영수증 OCR 자동 인식·POS 연동·회계 자동 분개를 통합하는 원스톱 백오피스 플랫폼 개발"
+      }
+    ],
+    "team_highlights": "외식업 경영자 + 소프트웨어 엔지니어의 도메인 밀착 창업팀, 미국 외식업 POS 시장 주요 업체(Toast, Square 등) 전체와 통합 완료",
+    "product": {
+      "summary": "레스토랑의 구매·재고·원가·회계를 자동화하는 외식업 특화 백오피스 SaaS로, 종이 영수증 촬영만으로 식자재 원가를 실시간 추적하고 POS 매출 데이터와 자동 연결하여 수익성을 관리하는 플랫폼",
+      "problem_statement": "레스토랑은 매일 수십 장의 식자재 구매 영수증을 처리하지만, 대부분 수작업으로 엑셀에 입력하거나 구두 박스에 쌓아둠. 식재료 원가(매출의 28-35%)를 실시간으로 파악하지 못해 마진 관리가 불가능. 미국 레스토랑의 60%가 5년 내 폐업하는 핵심 원인 중 하나",
+      "solution": "구매 영수증을 사진 촬영하면 OCR+AI가 품목·단가·수량을 자동 인식하고, POS 매출 데이터와 연동하여 메뉴별 원가율·마진을 실시간 산출. 회계 소프트웨어와 자동 연동으로 장부 마감까지 자동화",
+      "key_features": [
+        "영수증 스캔 자동 인식 (OCR+AI, 식자재 품목·단가·업체 자동 분류)",
+        "POS 연동 실시간 매출-원가 대비 분석 (메뉴별 수익성 추적)",
+        "식자재 가격 변동 추적 및 업체별 비교 알림",
+        "레시피 원가 자동 계산 및 메뉴 가격 최적화 제안",
+        "회계 소프트웨어 자동 연동 (QuickBooks, Xero, Sage 등)",
+        "다점포 통합 대시보드 (체인 레스토랑 관리)"
+      ],
+      "tech_stack_or_innovation": "외식업 특화 OCR 모델(영수증 형식·식자재 용어 학습), POS API 통합 레이어(Toast·Square·Clover 등 20개+ 연동), 실시간 원가 산출 엔진으로 영수증 촬영부터 마진 분석까지 24시간 내 자동 처리",
+      "target_customer": "독립 레스토랑, 레스토랑 체인(다점포), 외식업 프랜차이즈, 케이터링 기업",
+      "business_model": "SaaS 월 구독 모델 (매장당 과금, 월 $300-500). 처리 영수증 수에 따른 추가 과금 없음",
+      "demo_or_screenshot_url": "https://www.marginedge.com/product"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "xtraCHEF (by Toast)",
+          "comparison": "Toast POS에 통합된 영수증 자동화 도구이나 Toast 전용. MarginEdge는 POS 무관하게 모든 레스토랑에서 사용 가능"
+        },
+        {
+          "name": "Plate IQ (by Ottimate)",
+          "comparison": "AP 자동화에 강점이나 매출-원가 연동 분석에서 MarginEdge 대비 기능 부족"
+        },
+        {
+          "name": "Restaurant365",
+          "comparison": "대형 체인용 올인원 솔루션이나 독립 레스토랑에는 과도하게 복잡. MarginEdge는 중소 레스토랑에 최적화된 UX"
+        }
+      ],
+      "key_differentiator": "POS 무관 호환성 + 영수증→원가→마진 분석의 완전 자동 파이프라인. 외식업 경영자가 만들어 현장의 고충을 정확히 해결",
+      "moat": "미국 전역 수천 개 레스토랑의 식자재 가격 데이터 축적(시장 인텔리전스), 20개 이상 POS 통합, 외식업 특화 OCR 정확도",
+      "competitive_position_summary": "미국 독립 레스토랑·중소 체인 시장에서 '영수증 자동화→마진 관리' 카테고리의 선두 주자로, 외식업 백오피스 SaaS의 대표 기업"
+    },
+    "trending_reason": {
+      "summary": "식자재 인플레이션 지속과 외식업 인건비 상승으로 마진 관리의 중요성이 최고조, 시리즈 C 펀딩 후 체인 레스토랑·해외 시장 확장 가속",
+      "catalysts": [
+        "2025-2026년 글로벌 식자재 가격 변동성 심화로 실시간 원가 추적 수요 급증",
+        "미국 외식업 인건비 상승(최저임금 인상)으로 백오피스 자동화 필수화",
+        "시리즈 C 펀딩으로 체인 레스토랑·프랜차이즈 대상 엔터프라이즈 기능 확장",
+        "Toast POS의 xtraCHEF 통합이 오히려 독립 POS 사용 레스토랑의 MarginEdge 수요를 증가시킴"
+      ],
+      "media_mentions": [
+        {
+          "source": "Nation's Restaurant News",
+          "title": "MarginEdge Secures Series C to Help Restaurants Fight Inflation",
+          "url": "https://www.nrn.com/technology/marginedge-series-c-restaurant-inflation-2026/",
+          "date": "2026-03-05"
+        }
+      ],
+      "growth_metrics": "도입 레스토랑 수 5,000개 이상, ARR 전년 대비 80% 성장, 월 처리 영수증 200만 장 이상"
+    },
+    "funding": {
+      "total_raised": "$68M",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$32M",
+        "date": "2025-12",
+        "lead_investor": "Harmony Partners",
+        "notable_investors": [
+          "Osage Venture Partners",
+          "Cultivation Capital",
+          "Motley Fool Ventures"
+        ]
+      },
+      "valuation_estimate": "$300M",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$8M",
+          "date": "2020",
+          "lead_investor": "Osage Venture Partners"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$28M",
+          "date": "2022",
+          "lead_investor": "Harmony Partners"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$32M",
+          "date": "2025-12",
+          "lead_investor": "Harmony Partners"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "미국 레스토랑 테크 시장 TAM $15B(2030), SAM $3B(백오피스 자동화), SOM $500M(독립 레스토랑·중소 체인)",
+      "market_trend": "외식업 디지털 전환 가속, 식자재 인플레이션으로 마진 관리 도구 필수화, POS 생태계의 오픈 API 확산",
+      "growth_potential": "미국 외 영어권 시장(영국, 캐나다, 호주) 확장, 식자재 공급업체 매칭·금융 서비스(선결제 할인 등) 추가 수익원",
+      "risks": [
+        "Toast 등 POS 대기업의 백오피스 기능 자체 확장",
+        "외식업 경기 불황 시 SaaS 비용 절감 대상 가능",
+        "국가별 영수증 형식·회계 기준 차이로 해외 진출 복잡성"
+      ],
+      "risk_mitigation": "POS 중립 포지션을 강점으로 멀티 POS 사용 레스토랑 공략, 원가 절감 효과(평균 2-5% 식비 절감) 입증으로 ROI 명확화, 영어권 시장 우선 진출"
+    },
+    "related_links": [
+      {
+        "title": "MarginEdge 공식 웹사이트",
+        "url": "https://www.marginedge.com/"
+      },
+      {
+        "title": "Nation's Restaurant News 시리즈 C 보도",
+        "url": "https://www.nrn.com/technology/marginedge-series-c-restaurant-inflation-2026/"
+      }
+    ],
+    "editor_pick_comment": "레스토랑이 망하는 이유 1순위가 '맛이 없어서'가 아니라 '마진을 몰라서'라는 걸 아는가. 종이 영수증 한 장을 찍는 것만으로 오늘의 원가율을 알 수 있게 된다면, 그건 혁명이다."
+  },
+  {
+    "id": "lilium-2026",
+    "date": "2026-04-20",
+    "featured": true,
+    "sector": "mobility",
+    "name_en": "Lilium",
+    "name_ko": "릴리움",
+    "tagline": "36개 전기 제트 엔진이 만드는 도시 간 항공 이동의 미래",
+    "category": [
+      "eVTOL",
+      "전기항공",
+      "미래 모빌리티"
+    ],
+    "founded_year": 2015,
+    "headquarters": {
+      "city": "Munich",
+      "country": "Germany",
+      "country_ko": "독일"
+    },
+    "company_stage": "Post-IPO (재상장 추진)",
+    "employee_count": "501-1000",
+    "website": "https://lilium.com/",
+    "logo_url": "",
+    "logo_svg_description": "유선형 항공기 실루엣을 추상화한 미니멀 아이콘에 'Lilium' 텍스트, 미래 항공 모빌리티의 우아함과 기술력을 표현하는 디자인",
+    "founders": [
+      {
+        "name_en": "Daniel Wiegand",
+        "name_ko": "다니엘 비간트",
+        "role": "Co-Founder",
+        "background": "TU Munich 항공우주공학 석사, eVTOL 개념 설계의 핵심 인물",
+        "linkedin": "https://www.linkedin.com/in/danielwiegand/",
+        "notable_achievement": "세계 최초 전기 수직이착륙 제트 항공기 Lilium Jet 설계, EASA 형식증명 과정 주도"
+      }
+    ],
+    "team_highlights": "TU Munich 항공우주 출신 엔지니어 중심, 前 Airbus·BMW 임원 영입, 900명 이상 엔지니어링 팀, EASA·FAA 동시 인증 추진",
+    "product": {
+      "summary": "36개 전기 제트 엔진을 탑재한 7인승 eVTOL(전기 수직이착륙) 항공기 'Lilium Jet'으로, 300km 이상 도시 간 항공 이동을 소음 없이 실현하는 차세대 항공 모빌리티",
+      "problem_statement": "도시 간 이동(100-300km)은 자동차로는 2-4시간, 기존 항공은 공항 접근 시간을 포함하면 비효율적. 헬리콥터는 소음·비용·탄소 배출 문제. 중거리 이동의 빠르고 친환경적인 대안이 부재",
+      "solution": "36개 소형 전기 제트 엔진이 날개에 분산 배치된 Lilium Jet으로 수직 이착륙 후 300km/h 이상 순항. 헬리콥터 대비 소음 60% 감소, 운영 비용 80% 절감, 제로 탄소 배출. 기존 인프라(소형 헬리패드)에서 운영 가능",
+      "key_features": [
+        "7인승 전기 수직이착륙 제트 (6명 승객 + 1명 조종사)",
+        "300km+ 항속 거리 (eVTOL 업계 최장 수준)",
+        "순항 속도 300km/h (헬리콥터급 속도)",
+        "36개 분산 전기 제트 엔진 (안전 이중화 + 저소음)",
+        "EASA 형식증명 진행 중 (2026년 인증 목표)"
+      ],
+      "tech_stack_or_innovation": "독자 개발 Ducted Electric Vectored Thrust(DEVT) 기술: 36개 소형 전기 팬을 날개 플랩 내부에 배치하여 수직 이착륙과 고속 순항을 하나의 시스템으로 구현. 틸트로터 대비 기계적 단순성과 안전성 우위",
+      "target_customer": "도시 간 항공 셔틀 운영사, 고급 교통 서비스 기업, 지역 항공사, 정부 공공 교통 기관",
+      "business_model": "항공기 제조·판매 + 항공 네트워크 운영 수수료. 초기에는 프리미엄 셔틀 서비스로 시작, 규모 확대에 따라 대중 교통 수준 가격 목표",
+      "demo_or_screenshot_url": "https://lilium.com/the-jet"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Joby Aviation",
+          "comparison": "미국 eVTOL 선두 주자로 FAA 인증에서 앞서나, 항속 거리 240km로 Lilium(300km+)에 비해 짧음. 틸트로터 방식 채택"
+        },
+        {
+          "name": "Archer Aviation",
+          "comparison": "Midnight 모델로 단거리 도심 에어택시에 집중. Lilium은 도시 간 중거리 항공으로 용도 차별화"
+        }
+      ],
+      "key_differentiator": "eVTOL 업계 최장 항속 거리(300km+)와 도시 간 이동이라는 독자적 유스케이스. 에어택시가 아닌 '지역 항공' 시장을 타겟",
+      "moat": "DEVT 추진 기술 특허, EASA·FAA 동시 인증 추진에 따른 규제 장벽, 사우디·브라질 등과의 대규모 사전 주문($7B+)",
+      "competitive_position_summary": "도심 에어택시(Joby, Archer)와 다른 '도시 간 중거리 항공'이라는 더 큰 시장을 타겟하는 유일한 대규모 eVTOL 기업"
+    },
+    "trending_reason": {
+      "summary": "2026년 EASA 형식증명 임박, 사우디 NEOM·브라질 Azul 등과의 대규모 계약 구체화, 파산 보호 탈출 후 기술 검증 비행 성공으로 재도약",
+      "catalysts": [
+        "2026년 EASA 형식증명 최종 단계 진입으로 상용화 가시화",
+        "사우디 NEOM 프로젝트 Lilium Jet 100대 이상 주문 확정",
+        "파산 보호 탈출 후 새로운 투자자 유치 성공으로 재무 안정화",
+        "독일 공장에서 양산형 프로토타입 조립 시작"
+      ],
+      "media_mentions": [
+        {
+          "source": "Reuters",
+          "title": "Lilium Nears Certification for Electric Jet as eVTOL Race Heats Up",
+          "url": "https://www.reuters.com/business/aerospace-defense/lilium-easa-certification-evtol-2026/",
+          "date": "2026-04-01"
+        },
+        {
+          "source": "Bloomberg",
+          "title": "Lilium's Second Life: How the eVTOL Maker Bounced Back from Bankruptcy",
+          "url": "https://www.bloomberg.com/news/features/2026-03-10/lilium-evtol-comeback/",
+          "date": "2026-03-10"
+        }
+      ],
+      "growth_metrics": "사전 주문 $7B 이상, EASA 인증 진행률 80%+, 직원 900명 이상, 독일·사우디·브라질 3개국 운영 거점"
+    },
+    "funding": {
+      "total_raised": "$1.5B+",
+      "latest_round": {
+        "stage": "구조조정 후 투자",
+        "amount": "$250M",
+        "date": "2025-08",
+        "lead_investor": "사우디 PIF 계열",
+        "notable_investors": [
+          "Mobilitas (前 Lilium 투자자 컨소시엄)",
+          "독일 바이에른주 정부"
+        ]
+      },
+      "valuation_estimate": "$2B (구조조정 후 추정)",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$90M",
+          "date": "2017",
+          "lead_investor": "Tencent"
+        },
+        {
+          "stage": "SPAC IPO",
+          "amount": "$584M",
+          "date": "2021",
+          "lead_investor": "Qell Acquisition Corp"
+        },
+        {
+          "stage": "구조조정 후 투자",
+          "amount": "$250M",
+          "date": "2025-08",
+          "lead_investor": "사우디 PIF 계열"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 UAM(도심항공모빌리티) 시장 TAM $1T(2040), SAM $150B(도시 간 eVTOL), SOM $10B(유럽·중동 초기 노선)",
+      "market_trend": "각국 UAM 규제 프레임워크 정비 완료 단계, 소음·탄소 규제로 헬리콥터 대체 수요, 사우디·UAE 등 중동 국가의 공격적 UAM 투자",
+      "growth_potential": "승객 수송에서 화물·긴급 의료 수송, 관광 노선까지 확장 가능. 배터리 기술 발전에 따라 항속 거리 500km+ 목표",
+      "risks": [
+        "형식증명 지연 시 상용화 일정 차질",
+        "배터리 에너지 밀도의 물리적 한계",
+        "파산 이력에 따른 투자자·고객 신뢰 회복 필요"
+      ],
+      "risk_mitigation": "EASA와의 긴밀한 인증 협력, 차세대 고에너지 밀도 배터리 파트너십, 사우디·브라질 확정 주문으로 상용화 신뢰 확보"
+    },
+    "related_links": [
+      {
+        "title": "Lilium 공식 웹사이트",
+        "url": "https://lilium.com/"
+      },
+      {
+        "title": "Reuters 인증 진행 보도",
+        "url": "https://www.reuters.com/business/aerospace-defense/lilium-easa-certification-evtol-2026/"
+      },
+      {
+        "title": "Bloomberg 재기 스토리",
+        "url": "https://www.bloomberg.com/news/features/2026-03-10/lilium-evtol-comeback/"
+      }
+    ],
+    "editor_pick_comment": "파산 직전에서 부활한 eVTOL 회사. 36개 전기 제트 엔진으로 300km를 날 수 있다면, 서울-대전이 30분이 된다는 이야기다. EASA 인증이 나오는 2026년, 하늘길이 정말 열릴까."
+  },
+  {
+    "id": "the-every-company-2026",
+    "date": "2026-04-20",
+    "featured": true,
+    "sector": "climate",
+    "name_en": "The Every Company",
+    "name_ko": "더 에브리 컴퍼니",
+    "tagline": "닭 없이 만든 달걀 단백질, 정밀 발효로 식품 혁명을 이끌다",
+    "category": [
+      "대체 단백질",
+      "푸드테크",
+      "합성생물학"
+    ],
+    "founded_year": 2014,
+    "headquarters": {
+      "city": "South San Francisco",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "101-200",
+    "website": "https://theeverycompany.com/",
+    "logo_url": "",
+    "logo_svg_description": "달걀 형태를 추상화한 부드러운 곡선 아이콘에 'Every' 텍스트, 자연과 기술의 조화를 표현하는 따뜻한 색감의 디자인",
+    "founders": [
+      {
+        "name_en": "Arturo Elizondo",
+        "name_ko": "아르투로 엘리존도",
+        "role": "CEO & Founder",
+        "background": "Clara Foods(현 The Every Company) 창업자, 합성생물학 기반 식품 혁신가, Y Combinator 출신",
+        "linkedin": "https://www.linkedin.com/in/arturoelizondo/",
+        "notable_achievement": "세계 최초로 동물 없이 생산한 달걀 단백질(오보알부민)의 FDA GRAS 승인 획득"
+      }
+    ],
+    "team_highlights": "Y Combinator 졸업, 합성생물학·식품과학 박사급 연구진 다수, FDA GRAS 승인 획득, ZX Ventures(AB InBev)·Temasek 등 전략적 투자자 확보",
+    "product": {
+      "summary": "정밀 발효(precision fermentation) 기술로 닭 없이 달걀 단백질(오보알부민, 리소자임 등)을 생산하는 대체 단백질 기업. 베이킹·음료·영양 보충제 등 식품 산업에 동물 유래 달걀 단백질을 1:1 대체하는 원료를 공급",
+      "problem_statement": "전 세계 연간 1.4조 개의 달걀이 생산되며, 공장식 양계장은 동물 복지·환경 오염·조류 인플루엔자 리스크를 수반. 그러나 달걀 단백질의 독특한 기능성(거품, 결합, 유화)을 대체할 식물성 대안이 없어 식품 산업이 달걀에 의존",
+      "solution": "효모에 달걀 단백질 유전자를 삽입하여 발효 탱크에서 오보알부민 등 달걀 핵심 단백질을 생산. 동물 달걀과 분자 수준에서 동일하여, 기존 식품 레시피의 변경 없이 그대로 사용 가능. 닭이 필요 없어 조류독감 리스크 제로",
+      "key_features": [
+        "동물 유래와 분자 구조가 동일한 달걀 단백질 (오보알부민)",
+        "FDA GRAS(일반적으로 안전한 물질) 승인 완료",
+        "정밀 발효 기반 생산으로 축산 대비 탄소 배출 60% 감소",
+        "베이킹·음료·단백질 보충제 등 다양한 식품 적용 가능",
+        "조류 인플루엔자·살모넬라 리스크 완전 제거"
+      ],
+      "tech_stack_or_innovation": "CRISPR 기반 효모 엔지니어링으로 달걀 단백질 생산 효율을 최적화하고, 대규모 발효(100,000L+ 발효조)를 통해 상업적 생산 비용을 달성. 정밀 발효 원료의 식품 안전성·기능성·맛을 동물 유래와 동등 수준으로 검증",
+      "target_customer": "식품 제조사(베이커리, 음료, 단백질 바), 외식 프랜차이즈, 건강기능식품 브랜드, 식품 원료 유통사",
+      "business_model": "B2B 원료 공급 모델. 식품 제조사에 달걀 단백질 파우더를 판매하고, 공동 개발(co-development) 계약으로 신제품 출시 지원",
+      "demo_or_screenshot_url": "https://theeverycompany.com/products"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "ONEGO Bio",
+          "comparison": "핀란드 기반 정밀 발효 달걀 단백질 기업. The Every Company는 FDA GRAS 승인에서 1년 이상 앞서며, 미국 시장 진출에서 유리"
+        },
+        {
+          "name": "JUST Egg (Eat Just)",
+          "comparison": "녹두 기반 식물성 달걀 대체품이나 '달걀 단백질 자체'가 아닌 식물 혼합물. The Every Company는 분자 수준에서 동일한 진짜 달걀 단백질 생산"
+        }
+      ],
+      "key_differentiator": "식물성 '모방'이 아닌, 동물과 분자 구조가 동일한 '진짜 달걀 단백질'을 발효로 생산. FDA 승인으로 미국 식품 시장 진입 장벽 클리어",
+      "moat": "FDA GRAS 승인(규제 선점), 정밀 발효 달걀 단백질 특허 포트폴리오, 대규모 발효 생산 스케일업 노하우, 글로벌 식품 기업과의 co-development 계약",
+      "competitive_position_summary": "정밀 발효 기반 달걀 단백질 분야에서 규제 승인·상업화 단계 모두 가장 앞선 글로벌 1위 기업"
+    },
+    "trending_reason": {
+      "summary": "2025-2026년 글로벌 조류 인플루엔자 대유행으로 달걀 가격이 사상 최고치를 기록하면서, 닭 없이 달걀 단백질을 생산하는 The Every Company에 대한 관심과 수요가 폭발적으로 증가",
+      "catalysts": [
+        "글로벌 조류 인플루엔자(H5N1) 대유행으로 달걀 공급 위기 및 가격 사상 최고치",
+        "식품 기업들의 달걀 단백질 대체 원료 긴급 소싱 수요 급증",
+        "FDA GRAS 승인에 이어 EU·싱가포르 등 해외 규제 승인 추진",
+        "정밀 발효 산업 전반의 투자 관심 재점화"
+      ],
+      "media_mentions": [
+        {
+          "source": "Wired",
+          "title": "Bird Flu Is Making Eggs Expensive. This Startup Makes Them Without Chickens",
+          "url": "https://www.wired.com/story/every-company-egg-protein-bird-flu-2026/",
+          "date": "2026-03-20"
+        }
+      ],
+      "growth_metrics": "2026년 매출 전년 대비 300% 성장 추정, 식품 기업 파트너 50개 이상, 정밀 발효 달걀 단백질 생산량 월 수십 톤 규모"
+    },
+    "funding": {
+      "total_raised": "$235M",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$80M",
+        "date": "2025-07",
+        "lead_investor": "Temasek",
+        "notable_investors": [
+          "ZX Ventures (AB InBev)",
+          "Ingredion",
+          "To Ventures Food"
+        ]
+      },
+      "valuation_estimate": "$800M",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$1.7M",
+          "date": "2015",
+          "lead_investor": "Y Combinator"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$175M",
+          "date": "2022",
+          "lead_investor": "McWin Capital Partners"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$80M",
+          "date": "2025-07",
+          "lead_investor": "Temasek"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 달걀 시장 TAM $230B(2030), SAM $15B(달걀 단백질 원료 시장), SOM $1.5B(정밀 발효 대체 가능 시장)",
+      "market_trend": "조류 인플루엔자 상시화로 동물 단백질 공급망 리스크 증가, 소비자의 지속가능 식품 수요 확대, 정밀 발효 기술 비용 하락",
+      "growth_potential": "달걀 단백질에서 유단백질(카세인, 유청), 콜라겐 등 다른 동물 단백질로 플랫폼 확장 가능",
+      "risks": [
+        "정밀 발효 생산 비용이 축산 달걀 단백질과 가격 동등에 도달하기까지의 시간",
+        "소비자의 '발효 단백질'에 대한 인식·수용도 형성",
+        "조류 인플루엔자 종식 시 기존 달걀 가격 정상화에 따른 수요 감소"
+      ],
+      "risk_mitigation": "식품 기업에 프리미엄 원료로 포지셔닝(클린 라벨·알레르기 프리), 공급 안정성을 핵심 가치로 소구, 생산 규모 확대로 원가 절감 지속"
+    },
+    "related_links": [
+      {
+        "title": "The Every Company 공식 웹사이트",
+        "url": "https://theeverycompany.com/"
+      },
+      {
+        "title": "Wired 조류 인플루엔자·대체 달걀 보도",
+        "url": "https://www.wired.com/story/every-company-egg-protein-bird-flu-2026/"
+      }
+    ],
+    "editor_pick_comment": "달걀 한 판에 만 원이 넘는 시대, 닭 없이 달걀 단백질을 만드는 이 회사가 갑자기 현실적으로 느껴진다. 조류 인플루엔자가 만든 위기가 정밀 발효의 기회가 되는 아이러니."
+  },
+  {
+    "id": "varjo-2026",
+    "date": "2026-04-20",
+    "featured": true,
+    "sector": "consumer",
+    "name_en": "Varjo",
+    "name_ko": "바르요",
+    "tagline": "인간 눈 해상도 VR/XR, 산업용 가상현실의 새로운 기준",
+    "category": [
+      "VR/XR",
+      "공간 컴퓨팅",
+      "산업테크"
+    ],
+    "founded_year": 2016,
+    "headquarters": {
+      "city": "Helsinki",
+      "country": "Finland",
+      "country_ko": "핀란드"
+    },
+    "company_stage": "Series D",
+    "employee_count": "201-500",
+    "website": "https://varjo.com/",
+    "logo_url": "",
+    "logo_svg_description": "인간의 눈동자를 추상화한 정밀한 원형 아이콘에 'Varjo' 텍스트, 극한의 시각적 선명도를 표현하는 미니멀 디자인",
+    "founders": [
+      {
+        "name_en": "Niko Eiden",
+        "name_ko": "니코 에이덴",
+        "role": "CEO & Co-Founder",
+        "background": "Nokia·Microsoft 출신 디스플레이 기술 전문가, 핀란드 VR 산업의 선구자",
+        "linkedin": "https://www.linkedin.com/in/nikoeiden/",
+        "notable_achievement": "인간 눈 해상도(70+ PPD) VR 헤드셋을 세계 최초로 상용화, Boeing·Volvo·미 공군 등 도입"
+      },
+      {
+        "name_en": "Urho Konttori",
+        "name_ko": "우르호 콘토리",
+        "role": "CTO & Co-Founder",
+        "background": "Nokia 디스플레이 연구팀 출신, 초고해상도 마이크로디스플레이 및 아이트래킹 기술 전문가",
+        "linkedin": "",
+        "notable_achievement": "Bionic Display 기술(중심와 렌더링) 개발로 VR 헤드셋 최초 인간 눈 해상도 돌파"
+      }
+    ],
+    "team_highlights": "Nokia·Microsoft 디스플레이 기술 출신 핵심팀, 핀란드 정부 R&D 지원 수혜, Boeing·Volvo·미 공군·Lockheed Martin 등 군산복합체 고객 확보",
+    "product": {
+      "summary": "인간 눈과 동등한 70+ PPD(Pixel Per Degree) 해상도를 구현하는 산업·국방용 VR/XR 헤드셋으로, 시뮬레이션·디자인 리뷰·훈련·원격 협업 등 정밀한 시각적 충실도가 요구되는 엔터프라이즈 영역에 특화된 프리미엄 XR 기기",
+      "problem_statement": "기존 소비자용 VR 헤드셋(Meta Quest, Vision Pro)은 해상도 한계로 작은 텍스트·계기판·정밀 설계 요소를 읽을 수 없어, 항공 시뮬레이션·자동차 디자인·의료 훈련 등 전문 분야에 적용 불가. '화면이 뿌옇다'는 것이 산업용 VR 채택의 최대 장벽",
+      "solution": "Bionic Display 기술로 시선이 향하는 중심부에 초고해상도를 집중하여 인간 눈 수준의 선명도를 구현. 통합 아이트래킹·혼합현실 패스스루·LiDAR 센서를 탑재하여 산업 현장에서의 정밀 작업을 지원",
+      "key_features": [
+        "인간 눈 해상도 70+ PPD (소비자 VR 대비 3-5배 선명)",
+        "Bionic Display: 중심와 렌더링으로 시선 중심부 초고해상도",
+        "통합 아이트래킹 (20Hz+ 정밀 시선 추적)",
+        "혼합현실(MR) 패스스루 + LiDAR 3D 환경 스캔",
+        "OpenXR·SteamVR 호환으로 기존 산업용 SW 생태계 연동"
+      ],
+      "tech_stack_or_innovation": "두 장의 디스플레이(고해상도 마이크로 OLED + 광시야각 LCD)를 광학적으로 결합하는 독자 Bionic Display 기술로, 시선이 향하는 중심부에만 극초고해상도를 투사하여 GPU 부하를 최적화하면서 인간 눈 수준의 선명도를 달성",
+      "target_customer": "항공우주·국방(시뮬레이션·훈련), 자동차 OEM(디자인 리뷰), 건축·엔지니어링(BIM 시각화), 의료(수술 시뮬레이션), 연구기관",
+      "business_model": "프리미엄 하드웨어 판매 (헤드셋 $3,000-6,000) + 클라우드 기반 소프트웨어 구독 (Varjo Reality Cloud). 엔터프라이즈 라이선스로 연간 계약",
+      "demo_or_screenshot_url": "https://varjo.com/products/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Apple Vision Pro",
+          "comparison": "프리미엄 MR 기기이나 소비자/크리에이터 시장 타겟. Varjo는 해상도에서 우위이며 산업·국방 특화 기능(LiDAR, 인증)에서 차별화"
+        },
+        {
+          "name": "HTC Vive Focus 3",
+          "comparison": "엔터프라이즈 VR로 포지셔닝하나 해상도와 아이트래킹 정밀도에서 Varjo에 크게 뒤처짐"
+        },
+        {
+          "name": "Magic Leap 2",
+          "comparison": "AR 디바이스로 산업용 시장 타겟이나, VR+MR 통합과 해상도에서 Varjo가 우위"
+        }
+      ],
+      "key_differentiator": "인간 눈 해상도라는 하드웨어 성능의 절대적 우위. '작은 글씨를 읽을 수 있는 유일한 VR 헤드셋'이라는 산업 현장의 핵심 요구를 충족",
+      "moat": "Bionic Display 핵심 특허, 군사·항공 인증(DO-178 등), Boeing·미 공군 등 고가치 레퍼런스, Nokia 출신 광학 엔지니어링 팀",
+      "competitive_position_summary": "산업·국방용 초고해상도 VR/XR 시장의 사실상 유일한 프리미엄 리더로, Apple Vision Pro조차 대체할 수 없는 정밀 시각 영역을 독점"
+    },
+    "trending_reason": {
+      "summary": "Apple Vision Pro 출시 이후 공간 컴퓨팅 시장이 전체적으로 확대되면서, 산업용 프리미엄 XR 수요도 급증. Varjo의 차세대 모델 출시와 국방 계약 확대가 성장을 견인",
+      "catalysts": [
+        "Apple Vision Pro가 촉발한 공간 컴퓨팅 시장 확대의 수혜",
+        "미 공군·NATO 시뮬레이션 훈련 프로그램에 Varjo 헤드셋 대규모 채택",
+        "2026년 신모델 출시로 가격 대비 성능 대폭 개선",
+        "Varjo Reality Cloud 출시로 하드웨어 + 클라우드 SaaS 통합 수익 모델 전환"
+      ],
+      "media_mentions": [
+        {
+          "source": "The Verge",
+          "title": "Varjo's New Headset Brings Human-Eye Resolution XR to More Industries",
+          "url": "https://www.theverge.com/2026/3/15/varjo-new-xr-headset-industrial/",
+          "date": "2026-03-15"
+        }
+      ],
+      "growth_metrics": "매출 전년 대비 120% 성장, 엔터프라이즈 고객 500개 이상, 국방 부문 매출 비중 40%로 확대"
+    },
+    "funding": {
+      "total_raised": "$200M+",
+      "latest_round": {
+        "stage": "Series D",
+        "amount": "$70M",
+        "date": "2025-11",
+        "lead_investor": "EQT Ventures",
+        "notable_investors": [
+          "Atomico",
+          "Tesi (Finnish Industry Investment)",
+          "NordicNinja VC"
+        ]
+      },
+      "valuation_estimate": "$800M",
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$31M",
+          "date": "2018",
+          "lead_investor": "Atomico"
+        },
+        {
+          "stage": "Series C",
+          "amount": "$54M",
+          "date": "2021",
+          "lead_investor": "Tesi"
+        },
+        {
+          "stage": "Series D",
+          "amount": "$70M",
+          "date": "2025-11",
+          "lead_investor": "EQT Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 산업용 VR/AR 시장 TAM $50B(2030), SAM $12B(시뮬레이션·디자인·훈련), SOM $1.2B(프리미엄 산업 XR)",
+      "market_trend": "Apple Vision Pro가 촉발한 공간 컴퓨팅 인식 확대, 국방·항공 시뮬레이션의 VR 전환 가속, 디지털 트윈 시장 성장과 연동",
+      "growth_potential": "국방·항공에서 자동차·건설·의료·교육까지 산업 확장, Reality Cloud로 원격 협업 시장 진입, 차세대 소형화 모델로 가격대 하향",
+      "risks": [
+        "Apple·Meta의 산업용 VR 시장 본격 진입 가능성",
+        "고가 프리미엄 포지션의 시장 규모 한계",
+        "핀란드 기반 스타트업의 미국·아시아 시장 영업력"
+      ],
+      "risk_mitigation": "해상도 기술 격차 유지(2년 이상 앞서), 국방 인증으로 진입장벽 확보, 미국 현지 영업팀 확대 및 파트너 채널 구축"
+    },
+    "related_links": [
+      {
+        "title": "Varjo 공식 웹사이트",
+        "url": "https://varjo.com/"
+      },
+      {
+        "title": "The Verge 신모델 보도",
+        "url": "https://www.theverge.com/2026/3/15/varjo-new-xr-headset-industrial/"
+      }
+    ],
+    "editor_pick_comment": "Vision Pro가 '비싼 VR'이라고? Varjo 앞에서는 그것도 입문기다. 조종사가 계기판 숫자를 읽고, 외과의가 혈관을 식별할 수 있는 해상도. 산업용 XR의 진짜 기준은 여기에 있다."
+  },
+  {
+    "id": "motherduck-2026",
+    "date": "2026-04-20",
+    "featured": true,
+    "sector": "infra",
+    "name_en": "MotherDuck",
+    "name_ko": "마더덕",
+    "tagline": "DuckDB를 클라우드로, 노트북에서 시작해 페타바이트까지 확장하는 분석 플랫폼",
+    "category": [
+      "데이터 플랫폼",
+      "ML 인프라",
+      "클라우드"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "Seattle",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "51-100",
+    "website": "https://motherduck.com/",
+    "logo_url": "/logos/motherduck-2026.png",
+    "logo_svg_description": "귀여운 오리 아이콘과 데이터베이스 심볼을 결합한 유쾌한 로고에 'MotherDuck' 텍스트, 친근하면서도 기술적인 이중성을 표현",
+    "founders": [
+      {
+        "name_en": "Jordan Tigani",
+        "name_ko": "조던 티가니",
+        "role": "CEO & Founder",
+        "background": "Google BigQuery 창립 엔지니어링 디렉터, 대규모 분석 데이터베이스 분야의 세계적 전문가",
+        "linkedin": "https://www.linkedin.com/in/jordantigani/",
+        "notable_achievement": "Google BigQuery를 0에서 수십억 달러 매출 제품으로 성장시킨 핵심 인물, 'BigQuery: The Definitive Guide' 저자"
+      }
+    ],
+    "team_highlights": "Google BigQuery 창립 멤버가 세운 회사, DuckDB 창시자들과 긴밀한 협력, a16z 주도 투자, 데이터 엔지니어링 커뮤니티에서 높은 인지도",
+    "product": {
+      "summary": "오픈소스 분석 DB인 DuckDB를 기반으로, 로컬 노트북의 분석 작업을 클라우드로 심리스하게 확장하는 서버리스 분석 플랫폼. '로컬에서 시작, 클라우드로 확장'이라는 하이브리드 패러다임을 제시",
+      "problem_statement": "데이터 분석가가 로컬에서 빠르게 탐색하고 싶지만, 데이터가 커지면 Snowflake·BigQuery 같은 클라우드 웨어하우스로 전환해야 하며, 이 과정에서 도구·쿼리·워크플로우가 단절됨. 클라우드 분석의 초기 설정·비용 부담도 진입장벽",
+      "solution": "DuckDB 쿼리 엔진을 로컬과 클라우드에 동일하게 실행하여, 노트북에서 쓰던 SQL 쿼리를 한 줄 변경 없이 클라우드 규모로 확장. 서버리스 아키텍처로 인프라 관리 불필요, 사용한 만큼만 과금",
+      "key_features": [
+        "DuckDB 호환 서버리스 클라우드 분석 (로컬-클라우드 심리스 전환)",
+        "하이브리드 실행: 작은 쿼리는 로컬, 큰 쿼리는 클라우드에서 자동 실행",
+        "데이터 공유: SQL 쿼리 결과를 URL 한 줄로 팀과 공유",
+        "Jupyter·dbt·Python 등 기존 데이터 도구와 원활한 통합",
+        "Snowflake·BigQuery 대비 최대 10배 비용 효율"
+      ],
+      "tech_stack_or_innovation": "DuckDB의 임베디드 분석 엔진을 클라우드 네이티브로 확장한 듀얼 실행 아키텍처. 쿼리 옵티마이저가 데이터 크기와 위치에 따라 로컬/클라우드 실행을 자동 결정. 컬럼 스토리지 + 벡터화 실행으로 분석 성능 극대화",
+      "target_customer": "데이터 분석가, 데이터 엔지니어, ML 엔지니어, 중소 스타트업 데이터팀, 개인 분석가·연구자",
+      "business_model": "프리미엄(freemium) + 사용량 기반 과금. 무료 티어로 개인 분석가 유입, 팀·기업 단위로 유료 전환. 스토리지 + 컴퓨트 사용량 기반 과금",
+      "demo_or_screenshot_url": "https://motherduck.com/"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Snowflake",
+          "comparison": "엔터프라이즈 클라우드 웨어하우스 시장 리더이나 초기 설정·비용이 높음. MotherDuck은 DuckDB 기반 경량 시작으로 개인~팀 레벨에서 강점"
+        },
+        {
+          "name": "Databricks",
+          "comparison": "레이크하우스 아키텍처의 선두 주자이나 복잡한 설정 필요. MotherDuck은 SQL 한 줄로 시작하는 단순성이 차별점"
+        },
+        {
+          "name": "ClickHouse Cloud",
+          "comparison": "실시간 분석에 강점이나, MotherDuck의 로컬-클라우드 하이브리드 실행 모델과는 다른 접근"
+        }
+      ],
+      "key_differentiator": "'로컬에서 시작, 클라우드로 확장'이라는 하이브리드 실행 패러다임. DuckDB 생태계의 폭발적 성장을 클라우드로 연결하는 유일한 플랫폼",
+      "moat": "DuckDB 창시자와의 공식 파트너십, Google BigQuery 창립 멤버의 대규모 분석 DB 설계 경험, 급성장하는 DuckDB 오픈소스 커뮤니티(GitHub 20K+ 스타)",
+      "competitive_position_summary": "Snowflake가 너무 크고, SQLite가 너무 작은 '중간 지대'를 DuckDB 기반으로 장악하는 신흥 분석 플랫폼"
+    },
+    "trending_reason": {
+      "summary": "DuckDB의 폭발적 인기(2025년 가장 빠르게 성장하는 DB)와 데이터 분석 민주화 트렌드가 MotherDuck의 성장을 견인, 시리즈 B $52.5M 조달로 엔터프라이즈 진출 가속",
+      "catalysts": [
+        "DuckDB가 2025-2026년 가장 빠르게 성장하는 DB 엔진으로 부상 (Stack Overflow 서베이)",
+        "데이터 분석가의 'Snowflake 피로감' (과도한 비용·복잡성)으로 경량 대안 수요",
+        "시리즈 B $52.5M 펀딩으로 엔터프라이즈 기능(SSO, 거버넌스, 감사 로그) 확충",
+        "dbt·Jupyter 등 데이터 도구 생태계와의 통합 확대"
+      ],
+      "media_mentions": [
+        {
+          "source": "InfoWorld",
+          "title": "MotherDuck Brings DuckDB to the Cloud with Hybrid Execution",
+          "url": "https://www.infoworld.com/article/motherduck-duckdb-cloud-hybrid-2026/",
+          "date": "2026-02-28"
+        }
+      ],
+      "growth_metrics": "월간 활성 사용자 10만 명 이상, 처리 쿼리 수 월 1억 건 이상, DuckDB 커뮤니티 GitHub 스타 20K+"
+    },
+    "funding": {
+      "total_raised": "$104.5M",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$52.5M",
+        "date": "2025-10",
+        "lead_investor": "Andreessen Horowitz (a16z)",
+        "notable_investors": [
+          "Redpoint Ventures",
+          "Madrona Ventures",
+          "Altimeter Capital"
+        ]
+      },
+      "valuation_estimate": "$600M",
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$12M",
+          "date": "2022",
+          "lead_investor": "Redpoint Ventures"
+        },
+        {
+          "stage": "Series A",
+          "amount": "$40M",
+          "date": "2023",
+          "lead_investor": "a16z"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$52.5M",
+          "date": "2025-10",
+          "lead_investor": "a16z"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 클라우드 분석 시장 TAM $100B(2030), SAM $20B(서버리스 분석·데이터 웨어하우스), SOM $2B(DuckDB 생태계 기반 시장)",
+      "market_trend": "데이터 분석 민주화, 서버리스·사용량 기반 과금 선호, 오픈소스 DB의 클라우드 서비스화(OSS→Cloud 트렌드)",
+      "growth_potential": "개인 분석가에서 엔터프라이즈 데이터팀으로 확장, ML 피처 스토어·임베딩 검색 등 AI 인프라 기능 추가, 글로벌 리전 확대",
+      "risks": [
+        "Snowflake·Databricks의 경량 티어 출시로 가격 경쟁",
+        "DuckDB 오픈소스의 자체 클라우드 기능 추가 가능성",
+        "엔터프라이즈 보안·거버넌스 요구 수준 충족 필요"
+      ],
+      "risk_mitigation": "DuckDB 창시자와의 공식 파트너십으로 생태계 분열 방지, 엔터프라이즈 보안 기능 투자, 비용 효율 10배 차이로 가격 경쟁력 유지"
+    },
+    "related_links": [
+      {
+        "title": "MotherDuck 공식 웹사이트",
+        "url": "https://motherduck.com/"
+      },
+      {
+        "title": "InfoWorld DuckDB 클라우드 보도",
+        "url": "https://www.infoworld.com/article/motherduck-duckdb-cloud-hybrid-2026/"
+      },
+      {
+        "title": "DuckDB 오픈소스 저장소",
+        "url": "https://github.com/duckdb/duckdb"
+      }
+    ],
+    "editor_pick_comment": "BigQuery를 만든 사람이 '이제 더 단순하게 할 수 있다'며 만든 회사. DuckDB라는 작은 오리가 Snowflake라는 눈송이를 녹일 수 있을까. 적어도 '분석에 Snowflake가 꼭 필요한가?'라는 질문은 이미 시작됐다."
+  }
+]

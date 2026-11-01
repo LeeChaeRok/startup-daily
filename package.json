@@ -12,6 +12,7 @@
     "test:pipeline": "node scripts/test-pipeline.mjs",
     "test:followups": "node scripts/test-followups.mjs",
     "test:translate": "node scripts/test-translate.mjs",
+    "test:pick": "node scripts/test-pick.mjs",
     "followups": "node scripts/followups.mjs",
     "translate:en": "node scripts/translate-en.mjs",
     "logos": "node scripts/fetch-logos.mjs"

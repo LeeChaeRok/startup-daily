@@ -1,5 +1,6 @@
 import { useCallback, useState, useSyncExternalStore } from 'react'
 import { load, save } from './storage.js'
+import { canonicalSector } from './sectors.js'
 
 /* ---------- Hash router ----------
    Static hosting on Vercel without rewrites, so routes live in the hash:
@@ -62,9 +63,9 @@ export function buildQuery(params) {
    localStorage can throw (private mode, blocked storage); every access is
    guarded and the in-memory value keeps the UI working.                   */
 
-export function createStore(key, fallback, validate = () => true) {
+export function createStore(key, fallback, validate = () => true, migrate = (v) => v) {
   const initial = load(key, fallback)
-  let value = validate(initial) ? initial : fallback
+  let value = validate(initial) ? migrate(initial) : fallback
   const listeners = new Set()
   return {
     get: () => value,
@@ -144,7 +145,8 @@ export function useReadLog() {
 /* Sectors the reader cares about (keys from SECTORS). Marks rows, seeds filters, can
    limit alerts, and moves those companies up in the reader's order of an issue
    (personal.js; the published order stays one tap away). */
-const interestStore = createStore('sd_interests', [], Array.isArray)
+// devtools was folded into infra (_workspace/14 §1-1)
+const interestStore = createStore('sd_interests', [], Array.isArray, (list) => [...new Set(list.map(canonicalSector))])
 
 export function useInterests() {
   const interests = useStore(interestStore)

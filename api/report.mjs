@@ -6,7 +6,7 @@
  * function log. Same-site requests only, a small per-visitor limit, and nothing about
  * the reader (IP, user agent) is stored: the issue is public.
  */
-import startups from '../src/data/startups.json' with { type: 'json' }
+import { companyById } from './_lib/data.mjs'
 
 const REPO = 'LeeChaeRok/startup-daily'
 const SITE = 'https://startup-daily.vercel.app'
@@ -63,7 +63,7 @@ export default async function handler(req, res) {
   } catch {
     return send(res, 400, { error: 'body' })
   }
-  const startup = startups.find((s) => s.id === body.id)
+  const startup = await companyById(body.id).catch(() => null)
   const reason = REASONS[body.reason]
   const section = SECTIONS[body.section] || null
   const detail = typeof body.detail === 'string' ? body.detail.trim().slice(0, 500) : ''

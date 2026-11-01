@@ -1,0 +1,928 @@
+{
+  "decagon-ai-2026": {
+    "tagline": "AI agent that fully replaces enterprise customer support",
+    "category": [
+      "Vertical AI",
+      "Customer Support Automation",
+      "Enterprise SaaS"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Founder of Lowkey (acquired by Niantic), ex-Citadel quant",
+        "notable_achievement": "Second company reached tens of millions in ARR within a year, leading AI agent category"
+      },
+      {
+        "background": "Founder of Helia AI (acquired by Palantir), MIT Computer Science",
+        "notable_achievement": "AI infrastructure veteran with Palantir acquisition experience, designed Decagon's multi-agent architecture"
+      }
+    ],
+    "team_highlights": "Serial founders from Citadel, Palantir, Niantic + former OpenAI and Scale AI engineers, actively hiring enterprise sales",
+    "product": {
+      "summary": "AI concierge agent platform that autonomously operates customer support email, chat, phone, and SMS channels. Learns from a company's knowledge base, CRM, and internal systems to resolve 80-90% of inquiries end-to-end without human involvement, with results measured and billed as 'autonomous resolution' units that can be paid for.",
+      "problem_statement": "Traditional chatbots only handle simple FAQs and escalate complex inquiries to humans. Companies want automation that truly 'resolves' issues amidst rising labor costs and customer satisfaction pressure.",
+      "solution": "Learns domain-specific workflows via a multi-agent architecture combining multiple LLMs and proprietary reasoning models. Deeply integrated with Salesforce, Zendesk, Intercom, and includes a company-specific agent designer that lets non-developers define policies, tone, and exception flows.",
+      "key_features": [
+        "AI Agent Engine: multi-channel autonomous response core",
+        "Agent Operating Procedures (AOP): workflow builder for non-developers",
+        "Knowledge Engine: learns from internal docs and tickets, auto-updates",
+        "Voice Agent: automated call center voice response",
+        "Outcome Analytics: real-time dashboard for resolution rate and CSAT"
+      ],
+      "tech_stack_or_innovation": "Multi-LLM routing, proprietary evaluation/validation agents, domain-specific reinforcement learning, voice streaming infrastructure",
+      "target_customer": "Mid-to-large enterprises with high call center cost share in e-commerce, fintech, SaaS, telecom, healthcare, etc.",
+      "business_model": "Outcome-based payment (per resolution) + enterprise SaaS license"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Strong AI concierge from Bret Taylor. Decagon differentiates with outcome-based pricing and voice channel integration."
+        },
+        {
+          "comparison": "First-generation AI chatbot. Decagon has overwhelming lead in LLM-based autonomous resolution rates."
+        },
+        {
+          "comparison": "AI agent from existing SaaS. Decagon differentiates with multi-channel and domain depth."
+        }
+      ],
+      "key_differentiator": "Combination of outcome-based pricing, multi-channel autonomous resolution, and non-developer agent designer",
+      "moat": "Enterprise-locked workflow data, multimodal voice/chat infrastructure, non-technical department lock-in via AOP",
+      "competitive_position_summary": "In the AI customer support agent category, a duopoly with Sierra, rapidly penetrating enterprises."
+    },
+    "trending_reason": {
+      "summary": "Achieved $1.5B valuation with $131M Series C in fall 2025, locked in large customers like Hertz, Bilt, Notion. Among the fastest revenue-validated companies in the AI agent space.",
+      "catalysts": [
+        "2025 Series C $131M, $1.5B valuation",
+        "Large enterprise cases: Hertz, Bilt, Webflow",
+        "Voice Agent launch, entering call center market",
+        "Outcome-based pricing ensures revenue visibility"
+      ],
+      "growth_metrics": "ARR grew 10x+ in one year, 100+ enterprise customers, autonomous resolution rate 80%+"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global customer support and call center labor market $300B+, AI agent automation SOM $50B by 2030",
+      "market_trend": "Rising call center BPO costs, standardization of outcome-based AI adoption, surging demand for voice-messaging integrated agents",
+      "growth_potential": "Multimodal expansion integrating voice, SMS, email; entry into regulated industries like health and finance; global multilingual lineup.",
+      "risks": [
+        "Simultaneous entry by Sierra, Salesforce, OpenAI",
+        "Liability risk from incorrect responses due to LLM hallucinations",
+        "Unit economics fluctuation under outcome-based pricing"
+      ],
+      "risk_mitigation": "Domain-specific validation agents and SLA guarantees, strengthened security/compliance certifications, refined margin structure."
+    },
+    "related_links": [
+      {
+        "title": "Decagon Official Site"
+      },
+      {
+        "title": "Forbes: Series C Coverage"
+      },
+      {
+        "title": "AOP Builder Introduction"
+      }
+    ],
+    "editor_pick_comment": "A company that bills saying AI resolves 80% of call center personnel's work end-to-end. The most confident AI agent bet, directly breaking through the limits of first-gen chatbots with outcome-based pricing."
+  },
+  "cartesia-2026": {
+    "tagline": "Next-gen architecture (Mamba)-based real-time voice AI — on-device voice agent",
+    "category": [
+      "AI Voice",
+      "On-device AI",
+      "Next-gen Architecture"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Stanford Hazy Research, Mamba/SSM paper co-author",
+        "notable_achievement": "Applied State Space Model (alternative to Transformers) to voice, defining the real-time low-latency voice AI category"
+      },
+      {
+        "background": "Carnegie Mellon professor, first author of the Mamba paper",
+        "notable_achievement": "Creator of the Mamba architecture — the most influential sequence model researcher since Transformers"
+      }
+    ],
+    "team_highlights": "SSM researchers from Stanford, CMU, DeepMind; voice and robotics engineers; on-device inference experts",
+    "product": {
+      "summary": "Real-time voice AI platform centered on its own Mamba/SSM-based speech synthesis and recognition model 'Sonic'. Enables voice agents that can converse in real time with sub-90ms ultra-low latency; some models run on laptops, vehicles, and home appliances.",
+      "problem_statement": "Traditional speech synthesis and conversational AI are Transformer-based, causing cost and latency to explode with length, making them unsuitable for real-time conversational applications on devices.",
+      "solution": "Redesigned speech synthesis, recognition, and conversation entirely with the linear-time-complexity SSM (Mamba) architecture. Provides the 'Sonic' model lineup operating both in cloud and on-device, along with a real-time voice agent SDK.",
+      "key_features": [
+        "Sonic: SSM-based real-time speech synthesis and recognition model",
+        "Voice Cloning: Clone voices from short samples",
+        "Realtime Voice API: Conversation SDK with ≤90ms latency",
+        "On-device models: Integration for vehicles, robotics, wearables",
+        "Enterprise voice agent builder"
+      ],
+      "tech_stack_or_innovation": "Mamba/State Space Models, streaming synthesis decoder, on-device quantized inference, multimodal sequence model",
+      "target_customer": "Call center and healthcare voice agents, automotive OEMs, robotics and wearable devices, gaming and media studios",
+      "business_model": "API usage + enterprise license + on-device SDK license"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Leader in voice synthesis expressiveness. Cartesia differentiates on real-time latency and on-device capability."
+        },
+        {
+          "comparison": "GPT-4o-based conversational voice. Cartesia offers the option to run the model directly on device."
+        },
+        {
+          "comparison": "Strong in speech recognition. Cartesia differentiates with a full-stack integrated model for synthesis, conversation, and recognition."
+        }
+      ],
+      "key_differentiator": "Linear inference based on Mamba SSM + ultra-low 90ms latency + dual cloud/on-device deployment",
+      "moat": "Research IP from Mamba creators, first-mover advantage in SSM-based voice models, experience integrating with automotive and robotics OEMs.",
+      "competitive_position_summary": "Virtually the only full-stack provider of real-time voice AI based on next-gen architecture, the most serious challenger to ElevenLabs."
+    },
+    "trending_reason": {
+      "summary": "In 2025, raised $64M Series B at a $700M valuation. With the Sonic model, emerged as a candidate for the technical standard in real-time voice agent market. Integration cases with automotive and robotics OEMs spreading.",
+      "catalysts": [
+        "2025 Series B $64M, $700M valuation",
+        "Sonic 2.0 launch achieves sub-90ms latency",
+        "Reported PoCs with automotive OEMs (Toyota, BMW)",
+        "Industrial application of Mamba follow-up research"
+      ],
+      "growth_metrics": "Hundreds of millions of Realtime API calls per month, multiple PoCs with automotive and robotics companies, surge in developer SDK downloads"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global voice AI market in 2030: $50B+, serviceable obtainable market for real-time voice agents: $20B, on-device voice: $10B",
+      "market_trend": "Transformer limitations and SSM rise; standardization of voice interfaces in automotive and robotics; acceleration of on-device LLMs",
+      "growth_potential": "Standard voice stack for automotive OEMs, real-time agents for call centers, voice integration for wearables and home appliances",
+      "risks": [
+        "OpenAI and ElevenLabs chasing SSM",
+        "Verification of on-device model quality and accuracy",
+        "Long adoption cycles for automotive OEMs"
+      ],
+      "risk_mitigation": "First-mover SSM IP, continuous paper publication, dual revenue from cloud and device, OEM diversification"
+    },
+    "related_links": [
+      {
+        "title": "Cartesia official website"
+      },
+      {
+        "title": "TechCrunch: Series B coverage"
+      },
+      {
+        "title": "Sonic model page"
+      }
+    ],
+    "editor_pick_comment": "Virtually the only voice company seriously betting on the post-Transformer era. The fact that it was founded by the first author of the Mamba paper alone makes it the most likely to shake up the voice AI landscape."
+  },
+  "crusoe-energy-2026": {
+    "tagline": "Running AI on wasted energy — a new model for clean compute",
+    "category": [
+      "AI Infrastructure",
+      "Clean Energy",
+      "GPU Cloud"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "MIT Physics, hedge fund manager formerly at Goldman Sachs and Polychain Capital",
+        "notable_achievement": "Started with Bitcoin mining, pivoted to AI GPU cloud, pioneer of clean compute model"
+      },
+      {
+        "background": "Middlebury College, former U.S. Department of Energy, oil and gas industry expert",
+        "notable_achievement": "Built distributed compute model using oilfield flare gas"
+      }
+    ],
+    "team_highlights": "Hybrid team from energy industry, fintech, and cloud infrastructure; experts in data center operations, power trading, and GPU engineering",
+    "product": {
+      "summary": "Operates an AI GPU cloud using flare gas, stranded natural gas, and surplus renewable energy from oil fields. Vertically integrated with its own data centers, power infrastructure, and GPU operations, making it one of the fastest suppliers of NVIDIA H100/H200 clusters.",
+      "problem_statement": "Surge in AI training and inference demand has made GPU compute the biggest bottleneck, but traditional data centers need 18–36 months to secure power and sites, with significant environmental burden.",
+      "solution": "Rapidly deploys modular data centers on sites with wasted energy—oilfield flare gas, surplus wind, solar—to get GPU clusters running in 6–12 months, while reducing environmental impact: a clean compute solution.",
+      "key_features": [
+        "Crusoe Cloud: NVIDIA H100/H200 GPU cluster rentals",
+        "Digital Flare Mitigation: flare gas-powered modular data centers",
+        "AI Data Center: large-scale campuses in Texas, Iceland, Norway",
+        "Liquid Cooling: immersion cooling infrastructure for next-gen GPUs",
+        "Long-term Capacity Contracts: multi-year GPU capacity agreements"
+      ],
+      "tech_stack_or_innovation": "Modular containerized data centers, gas generator-to-GPU direct power systems, immersion cooling, vertically integrated cloud operations stack",
+      "target_customer": "AI model training companies (foundation model labs), enterprise AI businesses, government/defense AI compute, hyperscaler backup capacity",
+      "business_model": "GPU per-hour pay-as-you-go + multi-year capacity contracts + build-to-suit data centers"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Leading GPU cloud provider. Crusoe has cost advantage through its own power and site acquisition model."
+        },
+        {
+          "comparison": "AI-focused GPU cloud. Crusoe has faster capacity expansion through owning its data center assets."
+        },
+        {
+          "comparison": "Hyperscaler. Crusoe targets a niche with GPU-dedicated and clean energy differentiation."
+        }
+      ],
+      "key_differentiator": "Wasted energy utilization + modular data centers + vertical integration of GPU cloud",
+      "moat": "Long-term contracts with oil and gas operators, own data center sites, strategic NVIDIA partnership, rapid capacity expansion capability",
+      "competitive_position_summary": "Leader in clean compute and fast capacity within AI infrastructure, the top GPU neocloud after CoreWeave."
+    },
+    "trending_reason": {
+      "summary": "In December 2025, raised $600M Series D at $2.8B valuation; broke ground on a 1.2GW AI campus in Texas, emerging as a key GPU capacity provider.",
+      "catalysts": [
+        "December 2025: Series D $600M at $2.8B valuation",
+        "Groundbreaking for 1.2GW AI data center campus in Abilene, Texas",
+        "Reported multi-year capacity contracts with Oracle, OpenAI, and others",
+        "Highlighted as a key supplier amid North American GPU capacity shortage"
+      ],
+      "growth_metrics": "Operating 100K+ GPUs; multi-year capacity contracts worth billions of dollars; additional 1.2GW data center capacity under construction."
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global AI data center market 2030: $400B+; GPU cloud SOM: $50B; clean AI compute segment: $20B",
+      "market_trend": "AI compute demand hitting power infrastructure limits; increasing need for energy efficiency and clean power in data centers.",
+      "growth_potential": "Global expansion into clean power sites in Texas, Middle East, Nordics; entry into government/defense AI compute.",
+      "risks": [
+        "GPU price decline due to AI capacity oversupply",
+        "Intensifying competition for power and sites",
+        "Environmental groups' criticism of gas-based mining"
+      ],
+      "risk_mitigation": "Secure revenue via long-term capacity contracts, gradually increase renewable energy share, quantify environmental benefits of flare gas usage."
+    },
+    "related_links": [
+      {
+        "title": "Crusoe Official Site"
+      },
+      {
+        "title": "Bloomberg: Series D Coverage"
+      },
+      {
+        "title": "WSJ: Texas Campus Analysis"
+      }
+    ],
+    "editor_pick_comment": "The real resource of the AI era isn't GPUs—it's electricity. A company that started with the idea of running AI on wasted gas has now become a GPU supplier for OpenAI and Oracle."
+  },
+  "sakana-ai-2026": {
+    "tagline": "AI evolving like a school of fish — a new foundation model born in Tokyo",
+    "category": [
+      "AI Research",
+      "Foundation Models",
+      "Evolutionary Algorithms"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "background": "Former Google Brain Tokyo lead, Head of Research at Stability AI, author of the 'World Model' paper",
+        "notable_achievement": "Leading researcher in evolutionary and generative models in AI research community, founded Japan's largest AI startup"
+      },
+      {
+        "background": "Former Google Brain, co-author of the 'Attention is All You Need' (Transformer) paper",
+        "notable_achievement": "One of the eight co-authors of the Transformer architecture, a figure who laid the foundation of modern LLMs"
+      },
+      {
+        "background": "Former Mercari executive, diplomat from the Ministry of Foreign Affairs",
+        "notable_achievement": "Leveraged Japanese government and corporate networks to build Japan's AI ecosystem"
+      }
+    ],
+    "team_highlights": "Researchers from Google Brain and DeepMind + Japanese government and large corporate networks, with a Transformer co-author on board",
+    "product": {
+      "summary": "Instead of training large models from scratch, it combines and improves existing open-source models using evolutionary algorithms to create new foundation models. Provides Japanese and multilingual specialized models along with automated model merging tools.",
+      "problem_statement": "Training large models is extremely costly and concentrated in US and Chinese big tech, making it difficult to build models optimized for other regions, languages, and domains.",
+      "solution": "Using the 'Evolutionary Model Merge' technique that automatically combines open-source model weights with evolutionary algorithms, it creates models optimized for specific domains and languages at a fraction of the training cost. Rapidly develops Japanese LLM, vision, and code models to SOTA level.",
+      "key_features": [
+        "Evolutionary Model Merge: automatic evolutionary combination of open-source models",
+        "Sakana Japanese LLM: a foundation model specialized in Japanese and English",
+        "AI Scientist: an autonomous research agent where AI writes and experiments with ML papers on its own",
+        "Continuous Thought Machines: next-generation architecture modeling time dimension",
+        "Enterprise Japanese model customization"
+      ],
+      "tech_stack_or_innovation": "Evolutionary algorithm-based model merging, proprietary Japanese tokenizer, AI autonomous research agent, distributed training infrastructure",
+      "target_customer": "Japanese and Asian enterprises, Japanese government and public institutions, global AI research organizations, companies in manufacturing and finance adopting Japanese-specialized AI",
+      "business_model": "Enterprise model licensing + AI consulting + government and public sector projects"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Representative Japanese AI startup. Sakana focuses on LLMs and generative models, with a global research recognition advantage."
+        },
+        {
+          "comparison": "A non-US LLM powerhouse. Sakana differentiates with evolutionary algorithms and Japanese specialization."
+        },
+        {
+          "comparison": "Enterprise LLM provider. Sakana's cost-efficient model merging technique is a differentiator."
+        }
+      ],
+      "key_differentiator": "Evolutionary algorithm-based model merging reduces training cost to 1/100, achieving SOTA in Japanese and Asian languages",
+      "moat": "Research capability with a Transformer co-author, friendly relations with Japanese government and large corporations, unique research IP such as AI Scientist",
+      "competitive_position_summary": "A key player in the non-US foundation model camp, a leading representative of Japanese AI sovereignty"
+    },
+    "trending_reason": {
+      "summary": "NVIDIA-led Series A of $214M quickly made it a Japanese AI unicorn. The AI Scientist announcement created a buzz in the global AI community, and the model merging technique has become a standard in the open-source ecosystem.",
+      "catalysts": [
+        "January 2025: NVIDIA-led Series A of $214M, achieving unicorn status",
+        "AI Scientist autonomous research agent paper goes viral",
+        "Key beneficiary of the Japanese government's AI sovereignty policy",
+        "Reveal of Continuous Thought Machines, a next-generation architecture"
+      ],
+      "growth_metrics": "Multiple large Japanese enterprises as enterprise customers, government and public projects worth several billion yen, active GitHub open-source contributions"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global LLM and foundation model market 2030: $200B+, Japan and Asia enterprise AI SOM: $20B",
+      "market_trend": "Strengthening AI sovereignty in each country, growing demand for domain- and language-specific models, spread of model merging and evolutionary techniques in academia and industry",
+      "growth_potential": "Expansion beyond Japan into Korean and Southeast Asian language-specific models, commercialization of AI Scientist, government and defense AI projects",
+      "risks": [
+        "Global big tech LLMs catching up in Japanese performance",
+        "License restrictions on open-source model weights",
+        "Risk of over-dependence on the Japanese market"
+      ],
+      "risk_mitigation": "Expanding multilingual model lineup, adopting license-friendly open weights, global R&D partnerships"
+    },
+    "related_links": [
+      {
+        "title": "Sakana AI Official Website"
+      },
+      {
+        "title": "Reuters: NVIDIA-led Series A"
+      },
+      {
+        "title": "AI Scientist Blog"
+      }
+    ],
+    "editor_pick_comment": "The co-author of the Transformer started fresh in Tokyo. Sakana chose 'evolution' over the large model arms race — the most interesting bet on the periphery of AI hegemony."
+  },
+  "mercury-banking-2026": {
+    "tagline": "Digital banking for startups and tech companies — the standard after SVB",
+    "category": [
+      null,
+      "Digital banking"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Former Y Combinator partner, founder of Heyzap (acquired)",
+        "notable_achievement": "Defined the startup-friendly digital banking category, grown into the primary bank for 100k+ startups"
+      },
+      {
+        "background": "Product lead from Heyzap and the gaming industry",
+        "notable_achievement": "Designed a product architecture integrating the full startup finance workflow"
+      },
+      {
+        "background": "MIT electrical engineering and computer science, fintech backend infrastructure expert",
+        "notable_achievement": "Designed multi-bank partner and payments infrastructure, handled record new signups during the SVB crisis"
+      }
+    ],
+    "team_highlights": "Y Combinator and fintech veterans + experience operating multi-partner bank infrastructure, actively hiring compliance and risk personnel",
+    "product": {
+      "summary": "Digital banking platform for startups, software companies, and solopreneurs. Combines checking, savings, credit cards, bill pay, and Treasury in a single dashboard, and integrates deeply with accounting and HR tools",
+      "problem_statement": "Traditional banks are not optimized for startup workflows (SaaS payments, global transfers, multi-currency, accounting integration), and the SVB crisis highlighted the risk of relying on a single bank",
+      "solution": "Multiple partner banks as the backend with a single interface for users. Funds are automatically distributed across banks to extend FDIC protection to $5M, and billing, payments, currency exchange, and cash management are handled in one place",
+      "key_features": [
+        "Mercury Treasury: automatically invests excess funds in money market funds",
+        "Mercury IO: corporate cards and expense management",
+        "Vault: automatic deposit diversification with $5M FDIC protection",
+        "Bill Pay & Invoicing: integrated invoicing and payments",
+        "Personal: integrated management of founder personal accounts"
+      ],
+      "tech_stack_or_innovation": "Multi-partner bank integration middleware, real-time risk and KYC engine, automated fund distribution algorithm",
+      "target_customer": "Early and growth-stage startups, solopreneurs, SaaS/e-commerce/tech companies, VCs and investment firms",
+      "business_model": "Interest income + card interchange fees + Treasury management fees + premium subscription"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "The two major pillars of startup banking and cards. Mercury has an edge in banking and financial management depth; Brex focuses on cards and travel"
+        },
+        {
+          "comparison": "Strong in expense management and cards. Mercury offers the banking core itself, giving it an edge in cash-flow integration"
+        },
+        {
+          "comparison": "Traditional large banks. Mercury is overwhelmingly superior in digital experience and SaaS integration"
+        }
+      ],
+      "key_differentiator": "Multi-partner bank infrastructure + deep startup workflow integration, avoiding single-bank risk",
+      "moat": "100k+ startup customer base and locked-in finance workflows, multi-bank partnerships, trust asset built after the SVB crisis",
+      "competitive_position_summary": "The de facto standard in the startup banking category, market share surged after the SVB crisis"
+    },
+    "trending_reason": {
+      "summary": "With a turn to profitability in 2025, raised an additional $300M Series C at a $3.5B valuation. With 100k+ startup customers, established itself as the default bank of the 'post-SVB era'",
+      "catalysts": [
+        "$300M Series C in 2025 at a $3.5B valuation",
+        "Surpassed 100,000 startup customers and announced profitability",
+        "Expanded lineup with Personal, Investor, and Treasury",
+        "Market share surged after the SVB crisis"
+      ],
+      "growth_metrics": "100,000+ startup customers, $100B+ in annual transaction volume, turned profitable in 2025"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global SMB banking market $1T+, digital SMB banking SOM $50B, startup and tech segment $10B",
+      "market_trend": "After the SVB crisis, demand for digital and multi-bank models is expanding, integrated banking is becoming standard for B2B SaaS, and embedded fintech is accelerating",
+      "growth_potential": "Expansion into the SMB market, strengthening global currency and transfers, expanding credit and lending products, embedded banking API business",
+      "risks": [
+        "Intensifying competition from Brex, Ramp, etc.",
+        "Dependence on bank partners and compliance risk",
+        "Fluctuation in interest income due to changes in the macro rate environment"
+      ],
+      "risk_mitigation": "Strengthening multi-bank partnerships, investing in proprietary compliance infrastructure, diversifying non-interest income (Treasury, cards)"
+    },
+    "related_links": [
+      {
+        "title": "Mercury official website"
+      },
+      {
+        "title": "Forbes: $3.5B valuation"
+      },
+      {
+        "title": "TechCrunch: 100k customer milestone"
+      }
+    ],
+    "editor_pick_comment": "On the day SVB collapsed, Mercury was where the most startups went. It's not just an internet bank — it's a company trying to become the operating system (OS) for startups."
+  },
+  "furiosa-ai-2026": {
+    "tagline": "AI inference chip from Korea — RNGD runs Llama 3.1 405B on a single node",
+    "category": [
+      "AI semiconductor",
+      "Inference accelerator",
+      "Data center"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "GPU architect from Samsung and AMD; engineering at Seoul National University",
+        "notable_achievement": "GPU and SoC architect from Samsung and AMD; Korea's premier semiconductor talent and nearly the only Korean challenger in the global inference accelerator space aiming to reduce reliance on NVIDIA"
+      }
+    ],
+    "team_highlights": "Chip designers and compiler and system engineers from Samsung, AMD, and NVIDIA; researchers from KAIST and Seoul National University",
+    "product": {
+      "summary": "NPU for datacenter and enterprise AI inference — the RNGD and Warboy chips — with a proprietary compiler and runtime stack. A single RNGD runs massive LLMs like Llama 3.1 405B on a single PCIe node.",
+      "problem_statement": "More than 90% of AI inference costs are tied to NVIDIA GPUs, rapidly approaching the limits of datacenter power, space, and budgets. Korean and Asian enterprises urgently want alternative accelerators beyond NVIDIA and domestic chip options.",
+      "solution": "With an inference-dedicated tensor compiler and proprietary NPU architecture, it delivers better performance-per-watt and memory bandwidth vs GPUs. RNGD is a PCIe accelerator with HBM3 that can be instantly plugged into datacenters.",
+      "key_features": [
+        "RNGD: HBM3-based datacenter inference accelerator",
+        "Warboy: 1st-gen inference NPU for vision and search",
+        "Furiosa SDK: full-stack compiler, runtime, serving",
+        "Llama 3.1 405B single-node execution demo",
+        "Enterprise on-prem appliance"
+      ],
+      "tech_stack_or_innovation": "Proprietary tensor compiler, MLPerf-verified NPU IP, HBM3 memory system, inference-optimized dataflow architecture",
+      "target_customer": "Korean and Asian cloud and telecom companies, enterprise on-prem AI, government/defense compute, global companies seeking NVIDIA alternatives",
+      "business_model": "Unit pricing for chips and appliances + enterprise SDK and service licenses"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "The overwhelming standard. FuriosaAI differentiates on inference-dedicated, power efficiency, and total cost of ownership."
+        },
+        {
+          "comparison": "Ultra-fast inference LPU. Furiosa differentiates with HBM memory advantage for single-node large model execution."
+        },
+        {
+          "comparison": "Korean NPU peer competitor. Furiosa focuses primarily on datacenter LLM inference."
+        }
+      ],
+      "key_differentiator": "Inference specialization + HBM3 memory + ability to run 405B-class giant models on a single node",
+      "moat": "Chip design IP from Samsung and AMD alumni, proprietary compiler stack, partnerships with Korean government and telecoms, MLPerf-validated performance",
+      "competitive_position_summary": "Korea's leading challenger in the global NVIDIA-alternative inference chip space, squarely targeting LLM inference in the same category as Groq and Cerebras."
+    },
+    "trending_reason": {
+      "summary": "First RNGD announcement in 2024 and an additional Series C in 2025, PoC spread among domestic big tech like LG AI Research, KT, and Naver. A key Korean bet in the global movement to reduce NVIDIA dependence.",
+      "catalysts": [
+        "RNGD 2nd-gen chip launch and MLPerf inference benchmark validation",
+        "Series C round, Korea's AI semiconductor unicorn candidate",
+        "PoC expansion with LG AI Research, KT, Naver",
+        "Reports of collaboration on Saudi/Middle East AI infrastructure projects"
+      ],
+      "media_mentions": [
+        null,
+        {
+          "source": "Chosun Biz",
+          "title": "FuriosaAI takes on the world with inference-dedicated NPU"
+        }
+      ],
+      "growth_metrics": "Multiple enterprise PoCs, pushing for datacenter adoption in Korea and the Middle East, cumulative investment estimated $200M+"
+    },
+    "funding": {
+      "latest_round": {
+        "notable_investors": [
+          "KDB (Korea Development Bank)",
+          null,
+          "NH Investment & Securities"
+        ]
+      },
+      "valuation_estimate": "$800M~$1B (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global AI inference accelerator market $200B+ in 2030, SOM for non-NVIDIA alternatives $40B",
+      "market_trend": "Surge in demand for inference-dedicated chips due to datacenter power and budget limits; acceleration of 'AI sovereignty chip' policies worldwide",
+      "growth_potential": "Potential to become a datacenter LLM inference standard, Korean and Middle Eastern government AI compute projects, next-gen chip (HBM4) roadmap",
+      "risks": [
+        "NVIDIA's inference efficiency improvements and price cuts",
+        "Competition for TSMC and Samsung foundry capacity",
+        "Long enterprise adoption cycle"
+      ],
+      "risk_mitigation": "Prioritize Korea and Asia first, diversify PoCs with governments and telecoms, secure credibility through objective benchmarks like MLPerf"
+    },
+    "related_links": [
+      {
+        "title": "FuriosaAI official website"
+      },
+      {
+        "title": "EE Times: RNGD analysis"
+      },
+      {
+        "title": "RNGD technical page"
+      }
+    ],
+    "editor_pick_comment": "Can Korea build the chip NVIDIA can't? FuriosaAI takes that question most seriously. If the demo of one RNGD running 405B is real, the game changes."
+  },
+  "twelve-labs-2026": {
+    "tagline": "A multimodal AI foundation model that 'understands' video — the ChatGPT moment for video",
+    "category": [
+      "Multimodal AI",
+      "Video Search",
+      "Foundation Model"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Based in South Korea and the US, video ML researcher",
+        "notable_achievement": "Defined the video understanding foundation model category; the fastest Korean AI startup to attract global capital"
+      },
+      {
+        "background": "Video ML and infrastructure engineer",
+        "notable_achievement": "Designed the proprietary video embedding model series Marengo and Pegasus"
+      }
+    ],
+    "team_highlights": "Dual hubs in South Korea and the US; ML researchers from KAIST and Seoul National University; infrastructure talent from NVIDIA and Samsung",
+    "product": {
+      "summary": "Offers APIs for its proprietary multimodal foundation model 'Marengo' (simultaneously understands visual, audio, and text in long-form video) and video generative model 'Pegasus'. Handles video search, summarization, QA, and generative captions on a single platform.",
+      "problem_statement": "Text and image LLMs have exploded, but video still relies on keyword and metadata-based search. Media, security, and e-commerce desperately need AI that 'understands video itself'.",
+      "solution": "Provides a full-stack video AI platform that indexes video by semantic units using video embedding models, enabling natural language queries and generative answers.",
+      "key_features": [
+        "Marengo: Video embedding and search foundation model",
+        "Pegasus: Video understanding and generation LLM",
+        "Search API: Natural language video search",
+        "Summary & Highlights: Automated video summarization and highlights",
+        "Embed API: Video embedding calls"
+      ],
+      "tech_stack_or_innovation": "Video transformers and temporal attention, multimodal fusion of visual/audio/subtitles, long-form video indexing infrastructure",
+      "target_customer": "Media & OTT, sports leagues, security/CCTV, e-commerce video search, advertising & marketing analytics",
+      "business_model": "Usage-based API pricing + enterprise license"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "General-purpose video AI. Twelve Labs is more specialized in multimodal embedding and natural language search."
+        },
+        {
+          "comparison": "Strong in video generation and analysis. Twelve Labs differentiates with deep long-form video understanding and search."
+        },
+        {
+          "comparison": "Enterprise visual AI. Twelve Labs owns its own video foundation model."
+        }
+      ],
+      "key_differentiator": "Proprietary embedding and generation foundation models specialized for long-form video + API-first productization",
+      "moat": "Hundreds of thousands of hours of training data, strategic partners like NVIDIA and Samsung, sales and research hubs in both South Korea and the US",
+      "competitive_position_summary": "The fastest-rising global challenger in the video AI foundation model category, a representative example of a Korean AI startup going global."
+    },
+    "trending_reason": {
+      "summary": "In 2024 raised $50M Series A with strategic investment from NVIDIA; in 2025 launched Pegasus and listed on Snowflake and Databricks marketplaces, marking full entry into the US enterprise market.",
+      "catalysts": [
+        "2024: $50M Series A with strategic investments from NVIDIA and SK Telecom",
+        "Official launch of Pegasus video LLM",
+        "Listed on Snowflake and Databricks AI marketplaces",
+        "Pilot programs expanding in sports leagues like MLB and NFL"
+      ],
+      "growth_metrics": "Hundreds of millions of API calls per month; 100+ enterprise customers in media and sports; top global recognition among Korean AI startups."
+    },
+    "funding": {
+      "valuation_estimate": "$300M+ (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global video AI market $50B+ by 2030; SOM for video search and understanding $15B.",
+      "market_trend": "Explosion of OTT, social, and CCTV video; standardization of video search and summarization; accelerating adoption of multimodal LLMs for video.",
+      "growth_potential": "Penetration into sports, media, security, and education domains; entry into video generation and editing market; simultaneous expansion in South Korea, US, and Japan.",
+      "risks": [
+        "Strengthening of multimodal models by OpenAI and Google",
+        "Cost and data constraints for long-form video training",
+        "Lengthy enterprise adoption cycles"
+      ],
+      "risk_mitigation": "Deepen video domain expertise, license-friendly data partnerships, enterprise SLA and on-premises options"
+    },
+    "related_links": [
+      {
+        "title": "Twelve Labs Official Website"
+      },
+      {
+        "title": "Forbes: Series A Coverage"
+      }
+    ],
+    "editor_pick_comment": "A Korean company attempting what ChatGPT did for text, but for video — and doing it fastest. A multimodal model directly invested by NVIDIA — a global representative of Korean AI."
+  },
+  "upstage-2026": {
+    "tagline": "Korea's LLM 'Solar' and Document AI — Enterprise-ready AI",
+    "category": [
+      null,
+      "Document AI",
+      "Enterprise AI"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Former Naver Clova AI head, professor at HKUST, authority in ML4SE and AutoML",
+        "notable_achievement": "Led Naver's AI business, released 'Solar' - #1 on Hugging Face Open LLM Leaderboard"
+      },
+      {
+        "background": "Former Naver Papago and Clova AI lead, KoNLPy maintainer",
+        "notable_achievement": "Creator of Korean NLP open-source KoNLPy, leading Korean researcher in global NLP community"
+      }
+    ],
+    "team_highlights": "AI veterans from Naver Clova and Papago, researchers from KAIST, Seoul National University, and HKUST, multiple Kaggle Grandmasters",
+    "product": {
+      "summary": "Supplies its own bilingual (Korean-English) LLM 'Solar' and Document AI via license/API to enterprises. Strong at converting unstructured documents in insurance, finance, and manufacturing into structured data.",
+      "problem_statement": "Korean and Japanese enterprises lack LLMs with guaranteed native language performance; global LLMs face limitations in data sovereignty and on-prem deployment. Processing PDFs, contracts, and invoices in insurance and finance is still heavily manual.",
+      "solution": "Combines the bilingual Solar LLM with document understanding models to provide an enterprise AI package deployable on-prem or hybrid.",
+      "key_features": [
+        "Solar LLM: strong bilingual Korean-English LLM",
+        "Document AI: unstructured document to structured data",
+        "Solar Mini and Pro: model size lineup",
+        "AskUp: KakaoTalk-based consumer chatbot",
+        "On-prem/hybrid deployment options"
+      ],
+      "tech_stack_or_innovation": "Depth Up-Scaling training method, Korean-English tokenizer, document OCR and structuring models",
+      "target_customer": "Large Korean and Japanese insurance, finance, and manufacturing companies; government/public; global Korean content companies",
+      "business_model": "Enterprise license/API + on-prem package + consulting"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Korea's largest LLM. Upstage differentiates with open weights, on-prem friendliness, and document AI depth."
+        },
+        {
+          "comparison": "Performance advantage. Upstage differentiates in Korean language, document processing, and on-prem."
+        },
+        {
+          "comparison": "Large corporation LLM. Upstage differentiates based on SaaS/license business model."
+        }
+      ],
+      "key_differentiator": "Solar LLM's Korean-English balance + full-stack Document AI + on-prem licensing",
+      "moat": "Talent pool from Naver Clova, #1 on Hugging Face Leaderboard validation, insurance/finance domain PoC assets",
+      "competitive_position_summary": "Leading SaaS in Korea's LLM and document AI category, expanding into Japan and Southeast Asia."
+    },
+    "trending_reason": {
+      "summary": "Solar 10.7B hit #1 on Hugging Face Open LLM Leaderboard in 2023; after raising Series B $72M in 2024, insurance and finance domain revenue ramped up; ARR growing rapidly.",
+      "catalysts": [
+        "Solar 10.7B #1 on Hugging Face Leaderboard",
+        "Series B $72M in 2024, top Korean AI unicorn candidate",
+        "Listed on AWS and Snowflake Marketplaces",
+        "Entering Japan and Southeast Asia insurance/finance"
+      ],
+      "media_mentions": [
+        null,
+        {
+          "source": "Hankyung (Korea Economic Daily)",
+          "title": "Upstage enters global LLM top 10 with Solar"
+        }
+      ],
+      "growth_metrics": "100+ enterprise customers, ARR growing 3x+ annually, numerous insurance/finance PoCs"
+    },
+    "funding": {
+      "valuation_estimate": "$300M–$500M (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Korea/Japan enterprise AI market $20B+ by 2030, document AI SOM $5B",
+      "market_trend": "Data sovereignty policies in Korea and Japan, enterprise LLM on-prem demand, accelerating unstructured document automation",
+      "growth_potential": "Enterprise expansion in Japan/Southeast Asia, government/public AI projects, consumer lineup expansion like AskUp",
+      "risks": [
+        "Competition from Naver, LG, Samsung big tech LLMs",
+        "OpenAI and Anthropic catching up in Korean language performance",
+        "Fluctuations in enterprise adoption cycles"
+      ],
+      "risk_mitigation": "Differentiates from big tech with on-prem/license model, deepens domain expertise (insurance/finance), diversifies into Japan/Southeast Asia"
+    },
+    "related_links": [
+      {
+        "title": "Upstage official site"
+      },
+      {
+        "title": "Solar model"
+      },
+      {
+        "title": "Bloomberg: Upstage coverage"
+      }
+    ],
+    "editor_pick_comment": "Naver Clova’s brains started their own company. The LLM that best understands Korean, and a company that turns the documents insurers and banks use daily into data — the most realistic bet in Korean enterprise AI."
+  },
+  "innospace-2026": {
+    "tagline": "A South Korean launch startup entering the space market with hybrid rockets.",
+    "category": [
+      "Space Tech",
+      "Launch Vehicles",
+      "Space Industry"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Former Hanwha Aerospace launch engineer; aerospace engineering at Chungnam National University.",
+        "notable_achievement": "Successful first test launch of a South Korean private launch vehicle 'HANBIT-TLV' (2023); listed on KOSDAQ."
+      }
+    ],
+    "team_highlights": "Engineers from Hanwha Aerospace and KARI + aerospace engineering PhDs; in-house hybrid propellant R&D team.",
+    "product": {
+      "summary": "Small satellite launch service using an in-house hybrid rocket engine combining solid fuel and liquid oxidizer. Targeting the 50–500 kg payload market with the 'HANBIT-Nano' and 'HANBIT-Micro' lineup.",
+      "problem_statement": "The global small satellite market has exploded, but Korea and Asia lack launch vehicle options beyond SpaceX rideshare. Government and corporate demand for domestic launch vehicles is urgent.",
+      "solution": "Combining a safe, operationally superior hybrid propulsion system with its own launch site (Alcântara, Brazil) to provide time- and cost-efficient small satellite launch services.",
+      "key_features": [
+        "HANBIT-Nano: 50 kg-class launch vehicle",
+        "HANBIT-Micro: 500 kg-class launch vehicle",
+        "Hybrid propulsion engine: solid fuel + liquid oxidizer",
+        "Cooperation at Brazil's Alcântara launch site",
+        "In-house satellite packaging and operation services"
+      ],
+      "tech_stack_or_innovation": "Hybrid rocket engine IP, in-house test infrastructure (Goheung), step-by-step validated flight system.",
+      "target_customer": "Korean and Asian government and defense satellite projects, global small satellite operators, university and research institute payloads.",
+      "business_model": "Launch service unit pricing + multi-year government/defense contracts."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global small launch leader. Innospace differentiates with hybrid propulsion and prioritizes the Asian market."
+        },
+        {
+          "comparison": "South Korean peer. Innospace leads with first test launch and KOSDAQ capital advantage."
+        },
+        {
+          "name": "SpaceX Rideshare",
+          "comparison": "Overwhelming price advantage. Innospace differentiates with launch schedule autonomy and an Asian launch site."
+        }
+      ],
+      "key_differentiator": "Hybrid propulsion IP + first South Korean private test launch + Alcântara launch site.",
+      "moat": "Government and defense partnerships, proprietary propellant IP, KOSDAQ-listed capital.",
+      "competitive_position_summary": "A frontrunner in South Korea's private launch vehicle category, entering the Asian small satellite market."
+    },
+    "trending_reason": {
+      "summary": "Following the first test launch success in 2023 and KOSDAQ listing in 2024, pursuing commercial launches in 2025–2026. A key private partner in South Korea's space industrialization policy.",
+      "catalysts": [
+        "2023: 'HANBIT-TLV' first successful test launch by a South Korean private company.",
+        "2024: KOSDAQ listing.",
+        "2025–2026: Commercial launch schedule announced.",
+        "Brazil's Alcântara launch site infrastructure becoming operational."
+      ],
+      "growth_metrics": "Cumulative launch contracts in the millions of USD, multiple government and defense MOUs, Alcântara infrastructure operational."
+    },
+    "funding": {
+      "total_raised": "KRW 100B+ (including IPO).",
+      "latest_round": {
+        "amount": "KOSDAQ IPO.",
+        "lead_investor": "Korea Exchange.",
+        "notable_investors": [
+          "NH Investment & Securities.",
+          "Korea Investment Partners."
+        ]
+      },
+      "valuation_estimate": "Public — market cap varies.",
+      "funding_history": [
+        {
+          "lead_investor": "Korea Investment Partners."
+        },
+        null,
+        {
+          "lead_investor": "Korea Exchange (KONEX/KOSDAQ)."
+        },
+        {
+          "amount": "KOSDAQ IPO.",
+          "lead_investor": "Korea Exchange."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global small satellite launch market: $30B+ by 2030. Korea/Asia SOM: $3B.",
+      "market_trend": "Surge in small satellites, government and defense demand for domestic launch vehicles, diversification into hybrid and small launchers.",
+      "growth_potential": "Full commercial launch operations, expansion into satellite operations and payload services, launch cooperation in Southeast Asia and the Middle East.",
+      "risks": [
+        "Launch failure risk.",
+        "Price pressure from SpaceX rideshare.",
+        "Changes in government budget and policy."
+      ],
+      "risk_mitigation": "Stepwise test launch validation, securing long-term government and defense contracts, diversifying payload and operation services."
+    },
+    "related_links": [
+      {
+        "title": "Innospace official website."
+      },
+      {
+        "title": "Reuters: Launch coverage."
+      },
+      {
+        "title": "Space News: Analysis."
+      }
+    ],
+    "editor_pick_comment": "A South Korean private rocket is actually being launched — a company built by Hanwha and KARI engineers. One of the few cards South Korea has in the space market."
+  },
+  "olive-union-2026": {
+    "tagline": "Hearing aids that look like earphones — a South Korean startup rewriting the design of hearing devices",
+    "category": [
+      "Digital Health",
+      "Wearable Devices",
+      "Hearing Assistance"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Designers from Apple and Microsoft, entrepreneurs with bases in South Korea, Japan, and the US",
+        "notable_achievement": "Redefined hearing aids from 'medical devices' to 'consumer devices', establishing a category leader position in the Japanese market"
+      }
+    ],
+    "team_highlights": "Designers from Apple and Microsoft + hearing medical experts, marketing and distribution teams in Korea, Japan, and the US",
+    "product": {
+      "summary": "Self-fitting hearing aids in earphone form factor 'Olive Smart Ear' and 'Olive Max'. AI algorithm automatically measures and custom-tunes the user's hearing profile, with the appearance and UX of regular earphones, significantly lowering the barrier to hearing assistance.",
+      "problem_statement": "Traditional hearing aids are classified as medical devices, expensive, and associated with an elderly image, so less than 20% of people with hearing loss use them. Design, accessibility, and price all need to be remade in a consumer-friendly way.",
+      "solution": "OTC (over-the-counter) hearing aid category earphone-type device and self-fitting mobile app. AI hearing measurement and customized EQ provide medical-grade performance at consumer prices.",
+      "key_features": [
+        "Olive Smart Ear / Pro: Self-fitting hearing aid",
+        "Olive Max: Multi-function hearing device",
+        "AI hearing measurement app",
+        "Ambient sound recognition and speech separation algorithm",
+        "Distribution in Japan and US OTC channels"
+      ],
+      "tech_stack_or_innovation": "AI hearing measurement and customized EQ, earphone form-factor hearing processing DSP, mobile self-fitting app",
+      "target_customer": "People with mild to moderate hearing loss, the OTC hearing aid market in Japan and the US, senior care facilities",
+      "business_model": "Device unit price + partial mobile subscription/services"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Traditional hearing aid giants. Olive Union differentiates through design, price, and self-fitting."
+        },
+        {
+          "comparison": "US OTC hearing aid strong player. Olive Union differentiates with depth in the Japanese and Asian markets."
+        },
+        {
+          "name": "Apple AirPods Pro hearing assistance mode",
+          "comparison": "Hearing assistance in mainstream earphones. Olive Union has an advantage in medical-grade performance and depth of self-fitting."
+        }
+      ],
+      "key_differentiator": "Earphone form factor + AI self-fitting + penetration of Japan and US OTC channels",
+      "moat": "Depth in Japanese market and distribution partners, self-fitting algorithm IP, OTC regulatory certifications",
+      "competitive_position_summary": "A Korean challenger in the global OTC hearing aid category, category leader in the Japanese market"
+    },
+    "trending_reason": {
+      "summary": "Became the category leader in the Japanese OTC hearing aid market in 2024-2025, revenue surge after the US OTC regulation implementation, accelerating global expansion with Series C round",
+      "catalysts": [
+        "2022 US OTC hearing aid regulation implementation — explosive market growth",
+        "Series C round, securing capital for global expansion",
+        "Became category leader in Japanese market",
+        "Olive Max new product launch"
+      ],
+      "media_mentions": [
+        null,
+        {
+          "source": "Chosun Ilbo",
+          "title": "Olive Union becomes #1 in Japanese hearing aid market"
+        }
+      ],
+      "growth_metrics": "500,000+ cumulative users in Japan, US, and South Korea, #1 market share in Japanese OTC hearing aid market"
+    },
+    "funding": {
+      "latest_round": {
+        "notable_investors": [
+          null,
+          null,
+          "KDB"
+        ]
+      },
+      "valuation_estimate": "$200M+ (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global hearing assistance market $20B+ by 2030, OTC hearing aid SOM $5B",
+      "market_trend": "OTC hearing aid deregulation, growing senior population, consumerization of hearing health",
+      "growth_potential": "Penetration of US and European OTC markets, expansion of senior care channels, addition of health tracking features",
+      "risks": [
+        "Strengthened hearing assistance modes from Apple and Samsung",
+        "Intensified global competition such as Eargo",
+        "Distribution and return cost burden"
+      ],
+      "risk_mitigation": "Maintain depth in Japanese market, emphasize medical-grade performance differentiation, strengthen self-fitting IP"
+    },
+    "related_links": [
+      {
+        "title": "Olive Union Official Website"
+      },
+      {
+        "title": "Forbes Japan: Japan Market Analysis"
+      },
+      {
+        "title": "Olive Max Product"
+      }
+    ],
+    "editor_pick_comment": "A Korean company that turned hearing aids into 'earphones you can buy at the pharmacy'. A case of redefining a global category with a single design — the fact that it captured #1 in Japan is most impressive."
+  }
+}
