@@ -141,6 +141,30 @@
         "source_name": "SpaceNews",
         "found": "2026-11-01"
       }
+    ],
+    "procore-2026": [
+      {
+        "date": "2026-10-21",
+        "kind": "product",
+        "title_ko": "음성 기반 AI 모바일 앱 '프로코어 AI Go' 출시",
+        "title_en": "Launched Procore AI Go, a voice-first AI mobile app",
+        "detail_ko": "프로코어가 건설 현장용 음성 기반 AI 모바일 앱 '프로코어 AI Go'를 출시했습니다. 이 앱은 현장 작업자가 음성으로 즉시 답변을 얻을 수 있도록 지원합니다.",
+        "detail_en": "Procore launched Procore AI Go, a voice-first AI mobile app built for the jobsite, giving construction crews instant answers without needing to type.",
+        "source_url": "https://www.procore.com/press",
+        "source_name": "Procore Pressroom",
+        "found": "2026-11-02"
+      },
+      {
+        "date": "2026-09-09",
+        "kind": "acquired",
+        "title_ko": "드론디플로이 8.45억 달러에 인수 완료",
+        "title_en": "Acquired DroneDeploy for $845M",
+        "detail_ko": "프로코어 테크놀로지스가 드론데플로이(DroneDeploy)를 약 8억 4500만 달러 현금에 인수 완료했습니다. 인수금융의 일부는 전환사채 발행을 통해 조달되었습니다.",
+        "detail_en": "Procore Technologies completed the acquisition of DroneDeploy for approximately $845 million in cash, partly financed by a convertible senior notes offering.",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1611052/000119312526386428/d59216d8k.htm",
+        "source_name": "U.S. Securities and Exchange Commission (SEC 8-K)",
+        "found": "2026-11-02"
+      }
     ]
   },
   "checked": {
@@ -151,6 +175,8 @@
     "pachama-2026": "2026-10-31",
     "chainlink-labs-2026": "2026-10-31",
     "ginkgo-bioworks-2026": "2026-11-01",
-    "isar-aerospace-2026": "2026-11-01"
+    "isar-aerospace-2026": "2026-11-01",
+    "photomath-2026": "2026-11-02",
+    "procore-2026": "2026-11-02"
   }
 }
