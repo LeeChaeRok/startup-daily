@@ -143,14 +143,25 @@ ${PROFILE_SHAPE}`
 /* ---------- LLM steps ---------- */
 
 async function discover(llm, sector, avoid, searched) {
-  // the model plans its own queries (several regions/languages) instead of one fixed search
-  const r = await llm.chat({ system: RULES, user: discoveryPrompt(sector, avoid), web: 'tool', maxResults: 8, maxSearches: 8, maxTokens: 24000 })
-  r.citations.forEach((c) => searched.add(stripUrl(c.url)))
-  const parsed = await parseOrRepair(llm, r.text)
-  const list = Array.isArray(parsed) ? parsed : parsed.candidates
-  if (!Array.isArray(list)) throw new Error('Discovery returned no candidate list')
-  console.log(`Discovery ${sector.key} (${r.model}): ${list.length} candidates, ${r.citations.length} citations`)
-  return list.map((c) => ({ ...c, _sector: sector.key }))
+  let lastError
+  // a cut-off or broken answer is tried once more on the next model (as in research)
+  for (const useModels of [undefined, llm.models.slice(1)]) {
+    if (useModels && !useModels.length) break
+    try {
+      // the model plans its own queries (several regions/languages) instead of one fixed search
+      const r = await llm.chat({ system: RULES, user: discoveryPrompt(sector, avoid), web: 'tool', maxResults: 8, maxSearches: 8, maxTokens: 32000, useModels })
+      r.citations.forEach((c) => searched.add(stripUrl(c.url)))
+      const parsed = await parseOrRepair(llm, r.text)
+      const list = Array.isArray(parsed) ? parsed : parsed.candidates
+      if (!Array.isArray(list)) throw new Error('Discovery returned no candidate list')
+      console.log(`Discovery ${sector.key} (${r.model}): ${list.length} candidates, ${r.citations.length} citations`)
+      return list.map((c) => ({ ...c, _sector: sector.key }))
+    } catch (err) {
+      lastError = err
+      console.log(`  discovery ${sector.key} ${useModels ? 'retry' : 'attempt'} failed: ${err.message}`)
+    }
+  }
+  throw lastError
 }
 
 async function research(llm, candidate, searched) {
