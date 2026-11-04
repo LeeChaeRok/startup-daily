@@ -200,6 +200,32 @@
         "source_name": "TechCrunch",
         "found": "2026-11-03"
       }
+    ],
+    "codeium-2026": [
+      {
+        "date": "2026-06-02",
+        "kind": "product",
+        "title_ko": "데빈 데스크톱 출시",
+        "title_en": "Devin Desktop launched",
+        "detail_ko": "Cognition AI가 Windsurf IDE의 차세대 버전으로 Devin Desktop을 출시했습니다.",
+        "detail_en": "Cognition AI launched Devin Desktop as the next generation of the Windsurf IDE.",
+        "source_url": "https://intelligenttools.co/blog/what-happened-to-codeium",
+        "source_name": "Intelligent Tools",
+        "found": "2026-11-04"
+      }
+    ],
+    "iontra-2026": [
+      {
+        "date": "2026-10-20",
+        "kind": "product",
+        "title_ko": "하이파워와 충전 제어 기술 상용화 MOU",
+        "title_en": "Highpower Moves Early on Software-Defined Charge Control With Iontra Commercialization MOU",
+        "detail_ko": "Iontra는 하이파워(Highpower)와 소프트웨어 기반 충전 제어 기술의 상용화를 위한 양해각서(MOU)를 체결했다. 이 MOU는 하이파워 제품에 Iontra의 충전 제어 기술을 라이선싱하는 방안을 포함한다.",
+        "detail_en": "Iontra Inc announced a commercial memorandum of understanding (MOU) with Shenzhen Highpower Technology Co., Ltd to evaluate Iontra's charge-control technology for Highpower's products, with a path to licensing and commercial deployment.",
+        "source_url": "https://www.einpresswire.com/article/950153636/highpower-moves-early-on-software-defined-charge-control-with-iontra-commercialization-mou",
+        "source_name": "EINPresswire.com",
+        "found": "2026-11-04"
+      }
     ]
   },
   "checked": {
@@ -214,6 +240,8 @@
     "photomath-2026": "2026-11-02",
     "procore-2026": "2026-11-02",
     "beehiiv-2026": "2026-11-03",
-    "bionaut-labs-2026": "2026-11-03"
+    "bionaut-labs-2026": "2026-11-03",
+    "codeium-2026": "2026-11-04",
+    "iontra-2026": "2026-11-04"
   }
 }
