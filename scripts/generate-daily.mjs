@@ -19,7 +19,7 @@
  *      ISSUE_DATE          YYYY-MM-DD (default: today in KST)
  *      POOL_SECTORS        comma-separated sector keys to generate (default: all nine)
  *      MAX_COST_USD        stop researching once the run has spent this much (default 3)
- *      YC_PICKS            Y Combinator leads mixed in a day (default 2, 0 turns them off)
+ *      YC_PICKS            Y Combinator leads mixed in a day (default 5, 0 turns them off)
  *      RESEARCH_PARALLEL   research calls at once (default 6; lower it if OpenRouter rate-limits)
  *      FOLLOWUPS           0 turns off the follow-up step (default on)
  *      TRANSLATE           0 turns off the English translation step (default on)
@@ -59,7 +59,7 @@ const RESEARCH = 4 // researched per sector
 const DISCOVER_PARALLEL = 3
 const RESEARCH_PARALLEL = Number(process.env.RESEARCH_PARALLEL || 6)
 const MAX_COST = Number(process.env.MAX_COST_USD || 3)
-const YC_PICKS = Number(process.env.YC_PICKS ?? 2) // Y Combinator leads a day (scripts/lib/yc.mjs)
+const YC_PICKS = Number(process.env.YC_PICKS ?? 5) // Y Combinator leads a day (scripts/lib/yc.mjs)
 
 const args = process.argv.slice(2)
 const flag = (name) => {
@@ -266,8 +266,9 @@ async function main() {
       }
     })
 
-    // one or two YC companies (scripts/lib/yc.mjs) go first in their sector's leads, so the
-    // research cap can't push them out; the same selection rules still apply to them
+    // up to five YC companies (scripts/lib/yc.mjs), each in another sector, go first in their
+    // sector's leads, so the research cap can't push them out; the same selection rules apply.
+    // They take a research slot the web discovery would have used, so the cost stays the same.
     if (YC_PICKS > 0) {
       try {
         const yc = pickYc(await fetchYcCompanies({ log: console.log }), {

@@ -1,10 +1,10 @@
 /**
- * Y Combinator as a second lead source: one or two companies a day from the newest batches,
+ * Y Combinator as a second lead source: up to five companies a day (one per sector) from the newest batches,
  * next to the model's own web discovery. Data comes from yc-oss (https://github.com/yc-oss/api),
  * an unofficial daily mirror of ycombinator.com/companies — when it is down the run just goes
  * on without YC leads.
  *
- * Kept small on purpose: YC alone would tilt the pool towards US B2B AI. Only tiny, active,
+ * Capped at one per sector: YC alone would tilt the pool towards US B2B AI. Only tiny, active,
  * non-"top" companies from the two newest full batches, so they are early and not famous.
  * The pick is seeded by the issue date: a rerun of the same day asks for the same companies.
  */
