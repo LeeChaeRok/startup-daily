@@ -19,6 +19,7 @@ function showLoadError() {
   )}</p><button type="button" class="btn btn--primary">${L('다시 시도', 'Try again')}</button>`
   box.querySelector('button').addEventListener('click', () => window.location.reload())
   root.querySelector('.boot__body')?.replaceChildren(box)
+  window.sdSplashDone?.()
 }
 
 loadData().then(
@@ -28,6 +29,10 @@ loadData().then(
         <App />
       </StrictMode>,
     )
+    // the launch splash (index.html) leaves once the first screen has painted
+    // (the timer covers a page started in the background, where frames don't run)
+    requestAnimationFrame(() => requestAnimationFrame(() => window.sdSplashDone?.()))
+    setTimeout(() => window.sdSplashDone?.(), 150)
     watchForUpdates()
     track('app_open', { standalone: window.matchMedia('(display-mode: standalone)').matches })
   },

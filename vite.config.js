@@ -134,7 +134,7 @@ function serviceWorker() {
         // day files: only the newest three, the rest are cached when opened
         .filter((f) => !f.startsWith('data/days/') || recentDays.includes(f))
         .map((f) => `/${f}`)
-      const precache = ['/', '/manifest.json', '/icons/icon-192.png', ...files]
+      const precache = ['/', '/manifest.json', '/icons/icon-192.png', '/splash/mark.png', ...files]
       const version = crypto.createHash('sha1').update(files.join('|')).digest('hex').slice(0, 10)
       const source = fs
         .readFileSync(path.resolve(import.meta.dirname, 'src/sw.js'), 'utf8')
