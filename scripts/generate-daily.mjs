@@ -19,6 +19,7 @@
  *      ISSUE_DATE          YYYY-MM-DD (default: today in KST)
  *      POOL_SECTORS        comma-separated sector keys to generate (default: all nine)
  *      MAX_COST_USD        stop researching once the run has spent this much (default 3)
+ *      YC_PICKS            Y Combinator leads mixed in a day (default 2, 0 turns them off)
  *      RESEARCH_PARALLEL   research calls at once (default 6; lower it if OpenRouter rate-limits)
  *      FOLLOWUPS           0 turns off the follow-up step (default on)
  *      TRANSLATE           0 turns off the English translation step (default on)
@@ -39,6 +40,7 @@ import { updateLensFiles } from './lib/korea-lens.mjs'
 import { readStore, runFollowups } from './lib/followups.mjs'
 import { translateRecords, translateUpdates } from './lib/translate.mjs'
 import { readAll, readEn, writeAll, writeEn } from './lib/store.mjs'
+import { fetchYcCompanies, pickYc } from './lib/yc.mjs'
 import { SECTORS, SECTOR_KEYS, sectorFor } from '../src/lib/sectors.js'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
@@ -57,6 +59,7 @@ const RESEARCH = 4 // researched per sector
 const DISCOVER_PARALLEL = 3
 const RESEARCH_PARALLEL = Number(process.env.RESEARCH_PARALLEL || 6)
 const MAX_COST = Number(process.env.MAX_COST_USD || 3)
+const YC_PICKS = Number(process.env.YC_PICKS ?? 2) // Y Combinator leads a day (scripts/lib/yc.mjs)
 
 const args = process.argv.slice(2)
 const flag = (name) => {
@@ -262,6 +265,25 @@ async function main() {
         return []
       }
     })
+
+    // one or two YC companies (scripts/lib/yc.mjs) go first in their sector's leads, so the
+    // research cap can't push them out; the same selection rules still apply to them
+    if (YC_PICKS > 0) {
+      try {
+        const yc = pickYc(await fetchYcCompanies({ log: console.log }), {
+          date,
+          want: YC_PICKS,
+          sectors: poolSectors,
+          existingNames: existing.flatMap((s) => [s.name_en, s.name_ko]),
+        })
+        for (const lead of yc) {
+          leadsBySector[sectors.findIndex((x) => x.key === lead._sector)].unshift(lead)
+          console.log(`YC lead: ${lead.name_en} (${lead._sector})`)
+        }
+      } catch (err) {
+        console.log(`YC leads skipped: ${err.message}`)
+      }
+    }
 
     // selection rules per sector, against everything published and everything picked so far today
     const picked = []
