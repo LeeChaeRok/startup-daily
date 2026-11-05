@@ -966,6 +966,18 @@ a { color: inherit; text-decoration: none; }
 .taste__hint { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; margin-top: 16px; font-size: 13px; color: var(--sd-ink-3); }
 .taste__lang { margin: 0; font-size: 13px; }
 .taste__save { grid-column: 1 / -1; }
+.taste__narrow { display: inline-flex; align-items: center; min-height: 44px; margin-top: 6px; font-size: 14px; font-weight: 600; }
+.taste__note { font-size: 13px; color: var(--sd-ink-2); margin-top: 2px; }
+.taste__hidden { margin-top: 24px; padding-top: 8px; border-top: 1px solid var(--sd-line); }
+.taste__hidden-head { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 48px; text-align: left; color: var(--sd-ink); }
+.taste__hidden-head .taste__label { margin: 0; }
+.taste__hidden-head svg { margin-left: auto; transition: transform var(--sd-dur-1) var(--sd-ease-out); }
+.taste__hidden-head svg.is-flipped { transform: rotate(180deg); }
+.taste__hidden .taste__sub { margin-bottom: 14px; }
+.taste__sector--mute.is-muted { background: var(--sd-surface-2); color: var(--sd-ink); border-color: var(--sd-ink-3); border-style: dashed; }
+.taste__sector--mute.is-muted .taste__count { color: var(--sd-ink-2); }
+.taste__sector--mute.is-locked { cursor: not-allowed; }
+.taste__nudge--after { margin: 10px 0 0; }
 .sheet--taste .sheet__foot { padding-bottom: 16px; }
 
 /* ---------- Mobile issue (S1, S2): title → progress → hero → rows ---------- */
@@ -1027,6 +1039,14 @@ a.hero .hero__ai { display: inline-block; margin-right: 6px; padding: 0 4px; bor
 
 /* issue rows: '왜 지금' line, amount in the meta line, read rows folded to one line */
 .rows--issue { border-top: 0; margin-top: 8px; }
+.row--folded { border-bottom: 1px solid var(--sd-line); }
+.row-folded { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 48px; padding: 4px 0; text-align: left; font-size: 14px; color: var(--sd-ink-2); }
+.row-folded__text { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row-folded__show { display: inline-flex; align-items: center; gap: 2px; font-weight: 600; color: var(--sd-ink); }
+.unhide-line { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 4px 0 0; font-size: 14px; }
+.unhide-line .text-btn { min-height: 44px; }
+.issue-progress__folded { color: var(--sd-ink-3); }
+.short-card { margin-top: 12px; }
 .row--issue .row__link { grid-template-columns: 40px minmax(0, 1fr); padding-block: 14px; }
 .row--issue .row__body { gap: 2px; }
 .row--issue .row__name { line-height: 22px; font-size: 17px; }
@@ -1145,3 +1165,10 @@ a.hero .hero__ai { display: inline-block; margin-right: 6px; padding: 0 4px; bor
 .sheet--first .sheet__body { flex: 1; }
 .sheet--first .sheet__handle { display: none; }
 .sheet--first .sheet__panel { padding-top: env(safe-area-inset-top); }
+
+/* hidden sectors (_workspace/15) */
+.section-head__side { display: flex; flex-direction: column; align-items: flex-end; gap: 0; }
+.mute-btn { min-height: 40px; font-size: 13px; color: var(--sd-ink-3); }
+.hidden-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; margin: 0 0 16px; padding: 4px 12px; background: var(--sd-surface-2); font-size: 14px; color: var(--sd-ink-2); }
+.hidden-band .mute-btn { color: var(--sd-ink); font-weight: 600; }
+.chip--muted { opacity: .72; border-style: dashed; }

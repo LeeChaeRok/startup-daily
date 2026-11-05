@@ -2,7 +2,7 @@ import Icon from '../components/Icon.jsx'
 import AlertSetting from '../components/AlertSetting.jsx'
 import LangSwitch from '../components/LangSwitch.jsx'
 import { SECTORS } from '../lib/data.js'
-import { useFontSize, useInterests, useReadLog, useSaved, useTheme } from '../lib/hooks.js'
+import { useFontSize, useInterests, useMuted, useReadLog, useSaved, useTheme } from '../lib/hooks.js'
 import { ROLES, useOrder, useRole } from '../lib/personal.js'
 import { openTaste } from '../lib/taste.js'
 import { L } from '../lib/i18n.js'
@@ -41,6 +41,7 @@ export default function Settings() {
   const [role] = useRole()
   const [order, setOrder] = useOrder()
   const { interests } = useInterests()
+  const { muted } = useMuted()
   const { readLog, clearRead } = useReadLog()
   const { saved } = useSaved()
   const readCount = Object.keys(readLog).length
@@ -60,6 +61,7 @@ export default function Settings() {
           <div className="setting__body">
             <p>
               {roleLabel || L('역할 없음', 'No role')} · {sectorLabels.length ? sectorLabels.join(', ') : L('관심 분야 없음', 'No sectors')}
+              {muted.length > 0 && L(` · 숨김 ${muted.length}`, ` · ${muted.length} hidden`)}
             </p>
             <div className="setting__actions">
               <button type="button" className="btn btn--secondary" onClick={() => openTaste('edit')}>

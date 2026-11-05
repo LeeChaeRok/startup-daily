@@ -1,6 +1,6 @@
 import { useCallback, useState, useSyncExternalStore } from 'react'
 import { load, save } from './storage.js'
-import { canonicalSector } from './sectors.js'
+import { SECTOR_KEYS, canonicalSector } from './sectors.js'
 
 /* ---------- Hash router ----------
    Static hosting on Vercel without rewrites, so routes live in the hash:
@@ -151,13 +151,71 @@ const interestStore = createStore('sd_interests', [], Array.isArray, (list) => [
 export function useInterests() {
   const interests = useStore(interestStore)
   const toggle = useCallback((key) => {
-    interestStore.set((prev) => (prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]))
+    const on = !interestStore.get().includes(key)
+    interestStore.set((prev) => (on ? [...prev, key] : prev.filter((k) => k !== key)))
+    if (on) mutedStore.set((prev) => prev.filter((k) => k !== key)) // a sector is followed or hidden, not both
   }, [])
-  const set = useCallback((list) => interestStore.set(list), [])
+  const set = useCallback((list) => setSectorPrefs({ interests: list, muted: mutedStore.get() }), [])
   return { interests, isInterest: (key) => interests.includes(key), toggle, set }
 }
 
 export const getInterests = () => interestStore.get()
+
+/* Hidden sectors (_workspace/15): out of "내 5곳" and today's find, folded in the shared five,
+   left out of Explore by default. A sector is followed, normal or hidden — following wins.
+   While anything is hidden at least one sector stays normal, because today's find comes from
+   the normal ones (and the find can't be turned off). */
+const mutedStore = createStore('sd_muted', [], Array.isArray, (list) => [
+  ...new Set(list.map(canonicalSector).filter((k) => SECTOR_KEYS.includes(k))),
+])
+
+{
+  // a saved list edited by hand or older than the rules
+  const fixed = normalizeMuted(interestStore.get(), mutedStore.get())
+  if (fixed.length !== mutedStore.get().length) mutedStore.set(fixed)
+}
+
+/** The muted list after the rules: no followed sector, and one sector left normal. */
+export function normalizeMuted(interests, muted) {
+  const out = [...new Set(muted)].filter((k) => SECTOR_KEYS.includes(k) && !interests.includes(k))
+  while (out.length && interests.filter((k) => SECTOR_KEYS.includes(k)).length + out.length >= SECTOR_KEYS.length) out.pop()
+  return out
+}
+
+/** Can `key` be hidden without leaving no normal sector? */
+export const canMute = (key, interests, muted) =>
+  muted.includes(key) || normalizeMuted(interests.filter((k) => k !== key), [...muted, key]).includes(key)
+
+export function setSectorPrefs({ interests, muted }) {
+  const list = [...new Set(interests.map(canonicalSector))]
+  interestStore.set(list)
+  mutedStore.set(normalizeMuted(list, muted))
+}
+
+export function useMuted() {
+  const muted = useStore(mutedStore)
+  const interests = useStore(interestStore)
+  const mute = useCallback((key) => {
+    const next = normalizeMuted(
+      interestStore.get().filter((k) => k !== key),
+      [...mutedStore.get(), key],
+    )
+    if (!next.includes(key)) return false
+    interestStore.set((prev) => prev.filter((k) => k !== key))
+    mutedStore.set(next)
+    return true
+  }, [])
+  const unmute = useCallback((key) => mutedStore.set((prev) => prev.filter((k) => k !== key)), [])
+  return {
+    muted,
+    isMuted: (key) => muted.includes(key),
+    canMute: (key) => canMute(key, interests, muted),
+    mute,
+    unmute,
+  }
+}
+
+export const getMuted = () => mutedStore.get()
 
 /* Reading text size: 'sm' | 'md' | 'lg', applied as data-font on <html>. */
 const FONT_SIZES = ['sm', 'md', 'lg']

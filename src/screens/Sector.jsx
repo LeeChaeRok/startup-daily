@@ -3,6 +3,7 @@ import Logo from '../components/Logo.jsx'
 import StartupRow from '../components/StartupRow.jsx'
 import { Footer } from '../components/Chrome.jsx'
 import { EmptyState } from '../components/bits.jsx'
+import { HiddenSectorBand } from '../components/MuteSector.jsx'
 import { SECTORS, companiesOfSector } from '../lib/data.js'
 import { monthDay, numClass } from '../lib/format.js'
 import { L } from '../lib/i18n.js'
@@ -110,6 +111,7 @@ export default function Sector({ sector }) {
           {L('곳', ` ${plural(list.length, 'company', 'companies')}`)} · <span className="mono">{span}</span>
         </p>
       </header>
+      <HiddenSectorBand sector={meta} />
       <div className="segmented" role="group" aria-label={L('보기', 'View')}>
         {[
           ['list', L('목록', 'List')],

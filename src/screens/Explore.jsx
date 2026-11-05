@@ -7,7 +7,7 @@ import { CorrectionBadge, EmptyState, SaveButton } from '../components/bits.jsx'
 import { IssueRowItem } from './Issue.jsx'
 import { startups, LENS_FILTER, LENS_VERDICTS, REGIONS, SECTORS, STAGE_GROUPS, search, stats, weeks } from '../lib/data.js'
 import { MIN_SECTOR } from './Sector.jsx'
-import { buildQuery, navigate, useInterests, useReadLog } from '../lib/hooks.js'
+import { buildQuery, navigate, useInterests, useMuted, useReadLog } from '../lib/hooks.js'
 import { monthDay, numClass, weekLabel } from '../lib/format.js'
 import { isEn, L } from '../lib/i18n.js'
 
@@ -59,6 +59,7 @@ function readState(params) {
     korea: list(params.get('korea')),
     unread: params.get('unread') === '1',
     sort: params.get('sort') || 'date',
+    showMuted: params.get('muted') === 'show',
   }
 }
 
@@ -80,6 +81,7 @@ function useExploreState(params) {
         korea: next.korea,
         unread: next.unread ? '1' : null,
         sort: next.sort === 'date' ? null : next.sort,
+        muted: next.showMuted ? 'show' : null,
       })}`,
       { replace },
     )
@@ -211,16 +213,18 @@ function ResultsTable({ rows, sort, update }) {
 
 /** "분야별로 모아 보기": one chip per sector with enough companies to be worth a page. */
 function SectorShelf() {
+  const { muted } = useMuted()
   const counts = new Map()
   for (const s of startups) counts.set(s._sector.key, (counts.get(s._sector.key) || 0) + 1)
-  const shelf = SECTORS.filter((s) => (counts.get(s.key) || 0) >= MIN_SECTOR)
+  // hidden sectors go last, quieter
+  const shelf = SECTORS.filter((s) => (counts.get(s.key) || 0) >= MIN_SECTOR).sort((a, b) => muted.includes(a.key) - muted.includes(b.key))
   if (!shelf.length) return null
   return (
     <nav className="shelf" aria-label={L('분야별로 모아 보기', 'Browse by sector')}>
       <span className="shelf__label">{L('분야별로 모아 보기', 'Browse by sector')}</span>
       <div className="shelf__chips">
         {shelf.map((s) => (
-          <a key={s.key} className="chip" href={`#/t/${s.key}`}>
+          <a key={s.key} className={`chip ${muted.includes(s.key) ? 'chip--muted' : ''}`} href={`#/t/${s.key}`}>
             {s.label} <span className="num muted">{counts.get(s.key)}</span>
           </a>
         ))}
@@ -291,7 +295,18 @@ export default function Explore({ params, desktop }) {
   const { interests } = useInterests()
   const interestOn = interests.length > 0 && interests.length === state.sector.length && interests.every((k) => state.sector.includes(k))
   const base = useMemo(() => search(state.q), [state.q])
-  const filtered = sortBy(applyFilters(base, state), state.sort)
+  const { muted } = useMuted()
+  // hidden sectors (_workspace/15 §2-4): left out by default; a sector picked in the filter
+  // shows anyway, and a search keeps them at the bottom with a tag
+  const isHidden = (st) => muted.includes(st._sector.key) && !state.sector.includes(st._sector.key)
+  const hideMuted = muted.length > 0 && !state.showMuted && !state.q
+  let filtered = sortBy(applyFilters(base, state), state.sort)
+  if (hideMuted) filtered = filtered.filter(({ startup }) => !isHidden(startup))
+  else if (state.q && muted.length)
+    filtered = [
+      ...filtered.filter(({ startup }) => !isHidden(startup)),
+      ...filtered.filter(({ startup }) => isHidden(startup)).map((r) => ({ ...r, reason: [r.reason, L('숨긴 분야', 'Hidden sector')].filter(Boolean).join(' · ') })),
+    ]
   const rows = state.unread ? filtered.filter(({ startup }) => !isRead(startup.id)) : filtered
   const activeCount = state.sector.length + state.stage.length + state.region.length + state.korea.length
 
@@ -364,6 +379,17 @@ export default function Explore({ params, desktop }) {
                   onClick={() => update({ sector: interestOn ? [] : interests })}
                 >
                   {L('내 관심 분야', 'My sectors')}
+                </button>
+              )}
+              {muted.length > 0 && !state.q && (
+                <button
+                  type="button"
+                  className={`chip ${hideMuted ? 'chip--on' : ''}`}
+                  aria-pressed={hideMuted}
+                  onClick={() => update({ showMuted: hideMuted }, true)}
+                >
+                  {L(`숨긴 분야 ${muted.length}개 제외`, `${muted.length} hidden ${plural(muted.length, 'sector')} left out`)}
+                  {hideMuted && <Icon name="close" size={14} />}
                 </button>
               )}
               <button

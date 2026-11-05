@@ -1,5 +1,5 @@
 // "내 5곳" selection rule (src/lib/pick.js). No network. Run: npm run test:pick
-import { followedPools, moreInMySectors, pickMine } from '../src/lib/pick.js'
+import { followedPools, moreInMySectors, myKey, pickMine } from '../src/lib/pick.js'
 
 let fails = 0
 const eq = (name, a, b) => { const ok = JSON.stringify(a) === JSON.stringify(b); if (!ok) fails++; console.log(ok ? 'ok  ' : 'FAIL', name, ok ? '' : `got ${JSON.stringify(a)} want ${JSON.stringify(b)}`) }
@@ -40,6 +40,31 @@ eq('every sector followed → five interest picks, no discovery', [every.interes
 
 eq('always five', pickMine({ days: [today], interests: ['consumer'] }).interest.length + 1, 5)
 eq('more in my sectors', moreInMySectors({ today, interests: ['health'], shown: ['f-health', 'h3'] }), 1)
+
+/* ---------- hidden sectors (_workspace/15) ---------- */
+const sectorOf = new Map([...today, ...yesterday].map((s) => [s.id, s.sector]))
+const sectorsIn = (r) => [...r.interest, r.discovery].filter(Boolean).map((s) => sectorOf.get(s.id))
+
+const noAi = pickMine({ days: [today], interests: ['health'], muted: ['ai'] })
+eq('hidden sector never in the share or as filler', sectorsIn(noAi).includes('ai'), false)
+// f-ai and f-cli tie, f-ai comes first in the file; with ai hidden the find moves on
+eq('find skips a hidden sector', ids(pickMine({ days: [today], interests: ['health', 'fintech'], muted: ['ai'] })).discovery, 'f-cli')
+
+const narrowed = ['ai', 'infra', 'health', 'robotics', 'mobility', 'enterprise', 'consumer'] // fintech followed, climate left open
+eq('narrowed: the find comes from the one open sector', ids(pickMine({ days: [today], interests: ['fintech'], muted: narrowed })).discovery, 'f-cli')
+const climateYesterday = [R('y-c', 'climate', false, 2)]
+eq('narrowed, open sector empty today → yesterday', ids(pickMine({ days: [today.filter((s) => s.sector !== 'climate'), climateYesterday], interests: ['fintech'], muted: narrowed })).discovery, 'y-c')
+
+const allButHealth = ['ai', 'infra', 'climate', 'robotics', 'mobility', 'fintech', 'enterprise', 'consumer']
+const onlyHealth = pickMine({ days: [today], interests: [], muted: allButHealth })
+eq('only hidden, no interests: no find, all from the rest', [onlyHealth.discovery, [...new Set(sectorsIn(onlyHealth))]], [null, ['health']])
+eq('fewer than five rather than a hidden one', onlyHealth.interest.length, 3)
+
+eq('following wins over hiding', ids(pickMine({ days: [today], interests: ['health'], muted: ['health'] })).interest[0], 'f-health')
+eq('deterministic in hidden order', ids(pickMine({ days: [today], interests: ['health'], muted: ['ai', 'climate'] })), ids(pickMine({ days: [today], interests: ['health'], muted: ['climate', 'ai'] })))
+eq('key unchanged without hidden sectors', [myKey(['ai', 'health'], []), myKey(['health'], ['ai'])], [followedPools(['ai', 'health']).join(','), 'health|-ai'])
+eq('hidden + read', ids(pickMine({ days: [today], interests: ['health'], muted: ['ai'], isRead: (id) => id === 'f-health' })).interest[0], 'h3')
+eq('more in my sectors leaves hidden out', moreInMySectors({ today, interests: [], muted: allButHealth, shown: ['f-health'] }), 2)
 
 console.log(fails ? `\n${fails} failed` : '\nall passed')
 process.exit(fails ? 1 : 0)

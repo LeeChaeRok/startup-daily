@@ -3,8 +3,9 @@ import Icon from './Icon.jsx'
 import Sheet from './Sheet.jsx'
 import { LangLink } from './LangSwitch.jsx'
 import { SECTORS, poolLive, startups } from '../lib/data.js'
-import { useInterests } from '../lib/hooks.js'
-import { ROLES, useRole, useTastePrompt } from '../lib/personal.js'
+import { normalizeMuted, setSectorPrefs, useInterests, useMuted } from '../lib/hooks.js'
+import { ROLES, usePersonal, useRole, useTastePrompt } from '../lib/personal.js'
+import { track } from '../lib/analytics.js'
 import { closeTaste, maybeAskFirstRun, useTasteSheet } from '../lib/taste.js'
 import { syncPushPrefs } from '../lib/push.js'
 import { load, save } from '../lib/storage.js'
@@ -15,6 +16,8 @@ import { L } from '../lib/i18n.js'
  * order of each issue, the "○○라면" line and, with the sector pool, "내 5곳". On the web
  * the issue comes first (IssueMobile opens it once, lib/taste.js); in the app it opens
  * full screen on first run (_workspace/14 §3). Alerts are asked for elsewhere, in context.
+ * The edit mode also holds the hidden sectors (_workspace/15 §4-2); the first-run questions
+ * never ask what to hide.
  */
 export default function Onboarding() {
   const { open, mode, id } = useTasteSheet()
@@ -35,10 +38,15 @@ function TasteSheet({ open, mode }) {
   const ask = mode === 'ask' || first
   const [role, setRole] = useRole()
   const { interests, set: setInterests } = useInterests()
+  const { muted } = useMuted()
+  const personal = usePersonal()
   const [, setPrompt] = useTastePrompt()
   const [step, setStep] = useState(0)
   const [draftRole, setDraftRole] = useState(role)
   const [picked, setPicked] = useState(interests)
+  const [hidden, setHidden] = useState(muted)
+  const [hiddenOpen, setHiddenOpen] = useState(muted.length > 0)
+  const [narrowed, setNarrowed] = useState(false)
   const timer = useRef(null)
   useEffect(() => () => clearTimeout(timer.current), [])
   // the chip or button that moved the step is gone: put focus on the new step's title
@@ -57,9 +65,16 @@ function TasteSheet({ open, mode }) {
 
   const saveSectors = () => {
     const changed = picked.length !== interests.length || picked.some((k) => !interests.includes(k))
-    if (!changed) return
-    setInterests(picked)
-    syncPushPrefs({ sectors: picked, onlyInterests: load('sd_push_only_interests', false) })
+    if (ask) {
+      if (changed) setInterests(picked)
+    } else {
+      const next = normalizeMuted(picked, hidden)
+      setSectorPrefs({ interests: picked, muted: next })
+      const source = narrowed ? 'narrow' : 'sheet'
+      for (const k of next) if (!muted.includes(k)) track('sector_mute', { sector: k, source, muted_n: next.length })
+      for (const k of muted) if (!next.includes(k) && !picked.includes(k)) track('sector_unmute', { sector: k, source: 'sheet' })
+    }
+    if (changed) syncPushPrefs({ sectors: picked, onlyInterests: load('sd_push_only_interests', false) })
   }
   const done = () => {
     if (!ask) setRole(draftRole)
@@ -82,7 +97,27 @@ function TasteSheet({ open, mode }) {
     clearTimeout(timer.current)
     timer.current = setTimeout(() => setStep(1), 200)
   }
-  const togglePick = (key) => setPicked((prev) => (prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]))
+  const togglePick = (key) => {
+    setPicked((prev) => (prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]))
+    setHidden((prev) => prev.filter((k) => k !== key)) // followed or hidden, not both
+  }
+  // hidden sectors: only ones not followed; at least one has to stay open for today's find
+  const open_ = SECTORS.filter((x) => !picked.includes(x.key) && !hidden.includes(x.key))
+  const lastOpen = hidden.length > 0 && open_.length === 1 ? open_[0].key : null
+  const toggleHidden = (key) => {
+    if (key === lastOpen) return
+    setNarrowed(false)
+    setHidden((prev) => (prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]))
+  }
+  // "고른 분야로 좁히기": hide everything else but the one sector the reader reads most
+  const affinity = (k) => personal.score({ _sector: { key: k } }) - (personal.interests.includes(k) ? 10 : personal.muted.includes(k) ? -10 : 0)
+  const narrow = () => {
+    const rest = SECTORS.map((x) => x.key).filter((k) => !picked.includes(k))
+    const keep = [...rest].sort((a, b) => affinity(b) - affinity(a) || rest.indexOf(a) - rest.indexOf(b))[0]
+    setHidden(rest.filter((k) => k !== keep))
+    setHiddenOpen(true)
+    setNarrowed(true)
+  }
 
   const roleChips = (
     <div className="taste__chips" role="radiogroup" aria-label={L('하는 일', 'What you do')}>
@@ -163,6 +198,66 @@ function TasteSheet({ open, mode }) {
             : L('3개쯤 고르면 순서가 잘 맞아요. 오늘의 묶음은 모두에게 같아요.', "About 3 works best. Today's picks are the same for everyone.")}
         </p>
         {sectorChips}
+        {picked.length > 0 && picked.length < SECTORS.length - 1 && (
+          <button type="button" className="text-btn taste__narrow" onClick={narrow}>
+            {L('↳ 고른 분야로 좁히기', '↳ Narrow to my sectors')}
+          </button>
+        )}
+        {narrowed && lastOpen && (
+          <p className="taste__note">
+            {L(
+              `나머지는 숨기고, ${SECTORS.find((x) => x.key === lastOpen).label} 하나만 발견용으로 남겨요.`,
+              `We'll hide the rest and keep ${SECTORS.find((x) => x.key === lastOpen).label} open for today's find.`,
+            )}
+          </p>
+        )}
+        <div className="taste__hidden">
+          <button type="button" className="taste__hidden-head" aria-expanded={hiddenOpen} onClick={() => setHiddenOpen(!hiddenOpen)}>
+            <span className="taste__label">{L('숨길 분야 (선택)', 'Sectors to hide (optional)')}</span>
+            {hidden.length > 0 && <span className="taste__count">{L(`${hidden.length}개`, `${hidden.length}`)}</span>}
+            <Icon name="chevronDown" size={16} className={hiddenOpen ? 'is-flipped' : ''} />
+          </button>
+          {hiddenOpen && (
+            <>
+              <p className="taste__sub">
+                {poolLive
+                  ? L(
+                      '숨긴 분야는 내 5곳과 오늘의 발견에서 빠지고, 탐색에서도 기본으로 가려요.',
+                      "Hidden sectors stay out of your five and today's find, and out of Explore by default.",
+                    )
+                  : L(
+                      '숨긴 분야는 오늘의 5곳에서 접어 두고, 탐색에서도 기본으로 가려요.',
+                      "We fold hidden sectors in today's five and leave them out of Explore by default.",
+                    )}
+              </p>
+              <div className="taste__chips" role="group" aria-label={L('숨길 분야', 'Sectors to hide')}>
+                {chips
+                  .filter((x) => !picked.includes(x.key))
+                  .map((x) => {
+                    const on = hidden.includes(x.key)
+                    const locked = x.key === lastOpen
+                    return (
+                      <button
+                        key={x.key}
+                        type="button"
+                        aria-pressed={on}
+                        aria-disabled={locked || undefined}
+                        className={`taste__sector taste__sector--mute ${on ? 'is-muted' : ''} ${locked ? 'is-locked' : ''}`}
+                        onClick={() => toggleHidden(x.key)}
+                      >
+                        {on && <Icon name="eyeOff" size={16} />}
+                        {x.label}
+                        {on && <span className="taste__count">{L('숨김', 'hidden')}</span>}
+                        {locked && picked.length > 0 && <span className="taste__count">{L('발견용', 'for finds')}</span>}
+                      </button>
+                    )
+                  })}
+              </div>
+              {lastOpen && <p className="taste__nudge taste__nudge--after">{L('하나는 열어 둬요. 오늘의 발견이 여기서 와요.', "Keep one open. Today's find comes from there.")}</p>}
+              {picked.length > 0 && <p className="taste__nudge taste__nudge--after">{L('관심으로 고른 분야는 여기 안 보여요.', "Sectors you follow aren't listed here.")}</p>}
+            </>
+          )}
+        </div>
       </Sheet>
     )
   }

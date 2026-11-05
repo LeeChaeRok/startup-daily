@@ -8,7 +8,11 @@
                          turns (round robin, in SECTOR_KEYS order). Short → the previous two
                          days' unread ones, then today's shared five.
      discovery (1):      the shared five's strongest company outside the followed sectors
-                         (when they cover every sector: the pool's strongest left over).   */
+                         (when they cover every sector: the pool's strongest left over).
+
+   Hidden sectors (_workspace/15) never appear: not in the share, not as the find, not as
+   filler — fewer than five is shown rather than a hidden one. A reader who only hides
+   sectors gets five from the rest, in turns, with no find (nothing is "outside" for them). */
 import { SECTOR_KEYS, canonicalSector, sectorFor } from './sectors.js'
 
 export const MY_SIZE = 5
@@ -29,6 +33,28 @@ export function followedPools(interests = []) {
   return SECTOR_KEYS.filter((k) => set.has(k))
 }
 
+/** Hidden sectors as pool keys, in a stable order; a followed sector is never hidden. */
+export function mutedPools(muted = [], interests = []) {
+  const set = new Set(muted.map(canonicalSector))
+  const followed = followedPools(interests)
+  return SECTOR_KEYS.filter((k) => set.has(k) && !followed.includes(k))
+}
+
+/** The pools "내 5곳" draws from, and whether one of the five is a find from outside them. */
+export function myPools(interests = [], muted = []) {
+  const hidden = mutedPools(muted, interests)
+  const followed = followedPools(interests)
+  if (followed.length) return { pools: followed, hidden, find: true }
+  if (hidden.length) return { pools: SECTOR_KEYS.filter((k) => !hidden.includes(k)), hidden, find: false }
+  return { pools: [], hidden, find: false }
+}
+
+/** The key "내 5곳" is stored under: unchanged for readers who hide nothing. */
+export function myKey(interests = [], muted = []) {
+  const hidden = mutedPools(muted, interests)
+  return followedPools(interests).join(',') + (hidden.length ? `|-${hidden.join(',')}` : '')
+}
+
 function roundRobin(pools, bySector, want, taken) {
   const out = []
   const queues = pools.map((k) => (bySector.get(k) || []).filter((s) => !taken.has(s.id)))
@@ -47,13 +73,14 @@ function roundRobin(pools, bySector, want, taken) {
 /**
  * days: [today's pool, the day before, the one before that], each an array of records
  * (featured ones carry featured !== false). Returns { interest: [...], discovery } or null
- * when the reader follows no sector (then the shared five is their issue).
+ * when the reader neither follows nor hides a sector (then the shared five is their issue).
  */
-export function pickMine({ days, interests, isRead = () => false }) {
-  const pools = followedPools(interests)
+export function pickMine({ days, interests = [], muted = [], isRead = () => false }) {
+  const { pools, hidden, find } = myPools(interests, muted)
   if (!pools.length || !days?.[0]?.length) return null
   const [today] = days
-  const shared = today.filter((s) => s.featured !== false)
+  const allowed = (s) => !hidden.includes(keyOf(s))
+  const shared = today.filter((s) => s.featured !== false && allowed(s))
   const taken = new Set()
 
   const group = (list) => {
@@ -68,19 +95,27 @@ export function pickMine({ days, interests, isRead = () => false }) {
   }
 
   // discovery first, so the interest share can't take the only outside company
-  const outside = strongest(shared.filter((s) => !pools.includes(keyOf(s))))
-  const discovery = outside[0] || strongest(today.filter((s) => !pools.includes(keyOf(s))))[0] || null
-  if (discovery) taken.add(discovery.id)
+  let discovery = null
+  if (find) {
+    const outside = (s) => !pools.includes(keyOf(s)) && allowed(s)
+    discovery =
+      strongest(shared.filter(outside))[0] ||
+      strongest(today.filter(outside))[0] ||
+      days.slice(1).filter(Boolean).map((d) => strongest(d.filter((s) => outside(s) && !isRead(s.id)))[0]).find(Boolean) ||
+      null
+    if (discovery) taken.add(discovery.id)
+  }
 
+  const share = find ? INTEREST_SHARE : MY_SIZE
   const interest = []
   for (const day of days.filter(Boolean)) {
-    if (interest.length >= INTEREST_SHARE) break
-    interest.push(...roundRobin(pools, group(day), INTEREST_SHARE - interest.length, taken))
+    if (interest.length >= share) break
+    interest.push(...roundRobin(pools, group(day), share - interest.length, taken))
   }
-  // still short: today's shared five, unread first
+  // still short: today's shared five (hidden sectors left out), unread first
   const filler = [...shared.filter((s) => !isRead(s.id)), ...shared.filter((s) => isRead(s.id))]
   for (const s of filler) {
-    if (interest.length >= INTEREST_SHARE + (discovery ? 0 : 1)) break
+    if (interest.length >= MY_SIZE - (discovery ? 1 : 0)) break
     if (!taken.has(s.id)) {
       interest.push(s)
       taken.add(s.id)
@@ -89,9 +124,9 @@ export function pickMine({ days, interests, isRead = () => false }) {
   return { interest, discovery }
 }
 
-/** How many unread companies in the followed sectors today's pool still has beyond `shown`. */
-export function moreInMySectors({ today, interests, shown = [], isRead = () => false }) {
-  const pools = followedPools(interests)
+/** How many unread companies in the reader's pools today's pool still has beyond `shown`. */
+export function moreInMySectors({ today, interests, muted = [], shown = [], isRead = () => false }) {
+  const { pools } = myPools(interests, muted)
   const ids = new Set(shown)
   return (today || []).filter((s) => pools.includes(keyOf(s)) && !ids.has(s.id) && !isRead(s.id)).length
 }

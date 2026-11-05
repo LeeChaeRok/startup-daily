@@ -7,7 +7,7 @@
    saved_startups, so clearing the read log (설정) or a sector remap in sectors.js
    is reflected at once. */
 import { useCallback, useMemo } from 'react'
-import { createStore, localDate, onReadCleared, useInterests, useReadLog, useSaved, useStore } from './hooks.js'
+import { createStore, localDate, onReadCleared, useInterests, useMuted, useReadLog, useSaved, useStore } from './hooks.js'
 import { cleanAmount, dates, startups } from './data.js'
 import { splitAmount } from './amount.js'
 import { enDash, parseDate, ym } from './format.js'
@@ -76,7 +76,7 @@ export function recordOpen(id) {
 }
 
 /* ---------- Scores (IA §1-6) ----------
-   score(s) = 10 × [sector followed] + min(5, affinity[sector])
+   score(s) = 10 × [sector followed] − 10 × [sector hidden] + min(5, affinity[sector])
    affinity  = Σ over companies in that sector of
                1.0 × decay(read)   (0.3 for the latest issue: everyone gets those)
              + 0.5 × decay(opened) (not when the open turned into a read)
@@ -107,12 +107,14 @@ function affinityOf({ readLog, opens, saved }, exclude = null) {
   return bySector
 }
 
-const scorer = (interests, affinity) => (s) => (interests.includes(s._sector.key) ? 10 : 0) + Math.min(5, affinity.get(s._sector.key) || 0)
+const scorer = (interests, muted, affinity) => (s) =>
+  (interests.includes(s._sector.key) ? 10 : muted.includes(s._sector.key) ? -10 : 0) + Math.min(5, affinity.get(s._sector.key) || 0)
 
 /** Everything the ordering needs, as one memoized object. */
 export function usePersonal() {
   const { readLog } = useReadLog()
   const { interests } = useInterests()
+  const { muted } = useMuted()
   const { saved } = useSaved()
   const opens = useStore(opensStore)
   const [order] = useOrder()
@@ -121,9 +123,9 @@ export function usePersonal() {
     const signals = { readLog, opens, saved }
     const affinity = affinityOf(signals)
     const behaviour = [...affinity.values()].some((v) => v > 0)
-    const scoreFor = (exclude) => scorer(interests, affinityOf(signals, exclude))
-    return { score: scorer(interests, affinity), scoreFor, interests, order, role, behaviour, readLog }
-  }, [readLog, opens, saved, interests, order, role])
+    const scoreFor = (exclude) => scorer(interests, muted, affinityOf(signals, exclude))
+    return { score: scorer(interests, muted, affinity), scoreFor, interests, muted, order, role, behaviour, readLog }
+  }, [readLog, opens, saved, interests, muted, order, role])
 }
 
 /** Stable sort by score: ties keep the published order. */

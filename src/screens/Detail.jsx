@@ -10,6 +10,7 @@ import { startups, byId, canAnalyze, cleanAmount, issueNo, LENS_VERDICTS, parseA
 import { splitAmount } from '../lib/amount.js'
 import { CompareTable } from './Sector.jsx'
 import { UpdateBanner } from '../components/FollowUp.jsx'
+import { MuteSectorButton } from '../components/MuteSector.jsx'
 import { navigate, prefersReducedMotion, useFlag, useFontSize } from '../lib/hooks.js'
 import { dotDate, enDash, langOf, monthDay, numClass, pad2, ym } from '../lib/format.js'
 import { isColdStart } from '../lib/nav.js'
@@ -928,9 +929,12 @@ function SameSector({ startup: s }) {
         <h2 id="same-title" className="section-head__title">
           {L('같은 분야의 다른 회사', 'More in this sector')}
         </h2>
-        <a className="section-head__more" href={`#/t/${s._sector.key}`}>
-          {L(`${s._sector.label} 모아 보기`, `All ${s._sector.label}`)}
-        </a>
+        <span className="section-head__side">
+          <a className="section-head__more" href={`#/t/${s._sector.key}`}>
+            {L(`${s._sector.label} 모아 보기`, `All ${s._sector.label}`)}
+          </a>
+          {s._sector.key !== 'other' && <MuteSectorButton sector={s._sector} />}
+        </span>
       </div>
       <ul className="rows">
         {list.map((x) => (

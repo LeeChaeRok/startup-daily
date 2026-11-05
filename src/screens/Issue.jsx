@@ -8,7 +8,7 @@ import ForRoleLine from '../components/ForRoleLine.jsx'
 import { AiNote, CorrectionBadge, MarkAllRead, Meta, ProgressRing } from '../components/bits.jsx'
 import { Footer } from '../components/Chrome.jsx'
 import { byDate, dates, followUps, formatUSD, issueNo, sectorMix, stats } from '../lib/data.js'
-import { buildQuery, localDate, useFlag, useInterests, useReadLog } from '../lib/hooks.js'
+import { buildQuery, localDate, useFlag, useInterests, useMuted, useReadLog } from '../lib/hooks.js'
 import { daysSince, dotDate, longDate, monthDay, pad2, readMinutes, shortDate } from '../lib/format.js'
 import { canonicalUrl, shareOrCopy } from '../lib/share.js'
 import { currentEntry } from '../lib/nav.js'
@@ -369,11 +369,12 @@ function NumbersStrip({ list }) {
 
 /** Where the issue's hero points: the first unread company in the reader's order.
     `mine`: the reader's own five ("내 5곳"), already in their order. */
-function useHeroPick(date, mine = null) {
+function useHeroPick(date, mine = null, skip = null) {
   const { isRead } = useReadLog()
   const published = useIssueOrder(byDate(date))
   const order = mine ? { list: mine, personal: true, differs: false } : published
-  const idx = order.list.findIndex((s) => !isRead(s.id))
+  // folded rows (hidden sectors) never become the hero
+  const idx = order.list.findIndex((s) => !isRead(s.id) && !skip?.has(s.id))
   return { ...order, hero: idx >= 0 ? order.list[idx] : null, rank: idx + 1 }
 }
 
@@ -440,7 +441,7 @@ function IssueTitle({ date }) {
 }
 
 /** "아직 모르는, 지금 뜨는 스타트업 5곳 · 2/5" + one cell per company, in published order. */
-function IssueProgress({ date, list = byDate(date) }) {
+function IssueProgress({ date, list = byDate(date), folded = 0 }) {
   const { isRead } = useReadLog()
   const done = list.filter((s) => isRead(s.id)).length
   const all = list.length > 0 && done === list.length
@@ -464,6 +465,7 @@ function IssueProgress({ date, list = byDate(date) }) {
             {done}/{n}
           </span>
           {all && <Icon name="check" size={16} className="issue-progress__check" />}
+          {folded > 0 && <span className="issue-progress__folded">{L(` · ${folded}곳 접힘`, ` · ${folded} folded`)}</span>}
         </span>
       </p>
       <span className="issue-progress__bar" aria-hidden="true">
@@ -709,18 +711,57 @@ function MyDoneCard({ date, more }) {
   )
 }
 
+/** The shared five's companies from hidden sectors, folded into one line (_workspace/15 §2-3). */
+function FoldedRow({ list, onExpand }) {
+  const sectors = [...new Set(list.map((s) => s._sector.label))].join(' · ')
+  return (
+    <li className="row row--folded">
+      <button type="button" className="row-folded" onClick={onExpand} aria-label={L(`숨긴 분야 ${list.length}곳 펼치기`, `Show ${list.length} from hidden sectors`)}>
+        <Icon name="eyeOff" size={16} />
+        <span className="row-folded__text">
+          {L(`숨긴 분야 ${list.length}곳`, `${list.length} from hidden sectors`)} · {sectors}
+        </span>
+        <span className="row-folded__show">
+          {L('보기', 'Show')} <Icon name="chevronDown" size={16} />
+        </span>
+      </button>
+    </li>
+  )
+}
+
+/** "내 5곳" came out short: hidden sectors, or a thin day in the reader's sectors. */
+function ShortCard({ n, hidden }) {
+  return (
+    <button type="button" className="taste-card short-card" onClick={() => openTaste('edit')}>
+      {hidden
+        ? L(`숨긴 분야가 많아 오늘은 ${n}곳이에요 · 분야 설정`, `Fewer today (${n}) because of hidden sectors · Sectors`)
+        : L(`오늘 내 분야는 ${n}곳이에요 · 분야 설정`, `${n} in your sectors today · Sectors`)}
+      <Icon name="chevronRight" size={16} />
+    </button>
+  )
+}
+
 /* ---------- Screens ---------- */
 
 export function IssueMobile({ date }) {
   const { isRead, readLog } = useReadLog()
   const { interests } = useInterests()
+  const { muted, unmute } = useMuted()
   const [role] = useRole()
   const [prompt, setPrompt] = useTastePrompt()
   const my = useMyIssue(date)
   const [tab, setTab] = useHomeTab()
   const mine = my.available && tab === 'mine'
-  const { list, hero, personal, differs } = useHeroPick(date, mine ? my.list : null)
-  const issue = mine ? my.list : byDate(date)
+  // the shared five keeps all five; hidden sectors fold into one line, unless that would
+  // leave fewer than three open (then they only move down, see personal.js)
+  const [expanded, setExpanded] = useState(() => new Set())
+  const shared = byDate(date)
+  const hiddenHere = mine ? [] : shared.filter((s) => muted.includes(s._sector.key))
+  const foldable = hiddenHere.length > 0 && shared.length - hiddenHere.length >= 3
+  const folded = foldable ? hiddenHere.filter((s) => !expanded.has(s.id)) : []
+  const foldedIds = new Set(folded.map((s) => s.id))
+  const { list, hero, personal, differs } = useHeroPick(date, mine ? my.list : null, foldedIds)
+  const issue = (mine ? my.list : shared).filter((s) => !foldedIds.has(s.id))
   const latest = date === dates[0]
   const done = issue.filter((s) => isRead(s.id)).length
   const finished = issue.length > 0 && done === issue.length
@@ -734,8 +775,24 @@ export function IssueMobile({ date }) {
     wasFinished.current = { key, finished }
   }, [finished, date, mine])
   useEffect(() => {
-    if (my.repicked) toast(L('관심 분야를 바꿔 오늘의 5곳을 다시 골랐어요', 'Your sectors changed, so we picked your five again'))
+    if (my.repicked) toast(L('분야 설정을 바꿔 오늘의 5곳을 다시 골랐어요', 'Your sectors changed, so we picked your five again'))
   }, [my.repicked, toast])
+  useEffect(() => {
+    if (!mine || !my.short) return
+    const key = `sd_my_short_${date}`
+    try {
+      if (sessionStorage.getItem(key)) return
+      sessionStorage.setItem(key, '1')
+    } catch {
+      // private mode: count it again, harmless
+    }
+    track('my_short', { n: my.list.length, discovery: Boolean(my.discoveryId), date })
+  }, [mine, my.short, my.list.length, my.discoveryId, date])
+  const expand = () => {
+    setExpanded(new Set(hiddenHere.map((s) => s.id)))
+    track('folded_expand', { sector: [...new Set(folded.map((s) => s._sector.key))].join(','), date })
+  }
+  const shownHidden = hiddenHere.filter((s) => !foldedIds.has(s.id))
   const heroRef = useRef(null)
   const ask = useRef(null)
   ask.current = () => maybeAskTaste({ prompt, setPrompt, role, interests })
@@ -759,13 +816,13 @@ export function IssueMobile({ date }) {
   }, [latest, date])
 
   const picks = usePastPicks(date)
-  const rows = hero ? list.filter((s) => s !== hero) : list
+  const rows = (hero ? list.filter((s) => s !== hero) : list).filter((s) => !foldedIds.has(s.id))
   return (
     <div className="page page--issue">
       <IssueTitle date={date} />
       {my.available && <HomeTabs tab={tab} setTab={setTab} />}
       {latest && daysSince(date) >= 2 && <StaleCard date={date} />}
-      <IssueProgress date={date} list={issue} />
+      <IssueProgress date={date} list={issue} folded={folded.length} />
       {!mine && (differs || !personal) && <OrderHead personal={personal} />}
       {hero ? (
         <Hero startup={hero} resume={done > 0} heroRef={heroRef} discovery={mine && hero.id === my.discoveryId} />
@@ -777,9 +834,43 @@ export function IssueMobile({ date }) {
         aria-label={mine ? L('내 5곳', 'My five') : L(`제${issueNo(date)}호 스타트업 목록`, `Startups in issue #${issueNo(date)}`)}
       >
         {rows.map((s) => (
-          <StartupRow key={s.id} startup={s} issue reason={mine && s.id === my.discoveryId ? L('오늘의 발견 · 관심 밖에서 하나', "Today's find · one from outside your sectors") : null} />
+          <StartupRow
+            key={s.id}
+            startup={s}
+            issue
+            reason={
+              mine && s.id === my.discoveryId
+                ? L('오늘의 발견 · 관심 밖에서 하나', "Today's find · one from outside your sectors")
+                : muted.includes(s._sector.key)
+                  ? L('숨긴 분야', 'Hidden sector')
+                  : null
+            }
+          />
         ))}
+        {folded.length > 0 && <FoldedRow list={folded} onExpand={expand} />}
       </ul>
+      {foldable && shownHidden.length > 0 && (
+        <p className="unhide-line">
+          {[...new Set(shownHidden.map((s) => s._sector.key))].map((k) => {
+            const label = shownHidden.find((s) => s._sector.key === k)._sector.label
+            return (
+              <button
+                key={k}
+                type="button"
+                className="text-btn"
+                onClick={() => {
+                  unmute(k)
+                  track('sector_unmute', { sector: k, source: 'folded_row' })
+                  toast(L(`${label} 분야를 다시 보여요`, `${label} is shown again`))
+                }}
+              >
+                {L(`${label} 다시 보기`, `Show ${label} again`)}
+              </button>
+            )
+          })}
+        </p>
+      )}
+      {mine && my.short && <ShortCard n={my.list.length} hidden={muted.length > 0} />}
       {done > 0 && <MarkAllRead list={issue} />}
       {latest && <TasteCard />}
       {latest && <LastWeekCard />}
