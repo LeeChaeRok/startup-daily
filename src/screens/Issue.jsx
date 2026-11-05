@@ -449,7 +449,7 @@ function IssueTitle({ date }) {
 }
 
 /** "아직 모르는, 지금 뜨는 스타트업 5곳 · 2/5" + one cell per company, in published order. */
-function IssueProgress({ date, list = byDate(date), folded = 0 }) {
+function IssueProgress({ date, list = byDate(date), folded = 0, mine = false, discovery = false }) {
   const { isRead } = useReadLog()
   const done = list.filter((s) => isRead(s.id)).length
   const all = list.length > 0 && done === list.length
@@ -458,7 +458,27 @@ function IssueProgress({ date, list = byDate(date), folded = 0 }) {
     <div className="issue-progress">
       <p className="issue-progress__text">
         <span className="issue-progress__count">
-          {L(
+          {mine ? (
+            discovery ? (
+              L(
+                <>
+                  고른 분야에서 <span className="num">{n - 1}</span>곳, 관심 밖에서 <span className="num">1</span>곳
+                </>,
+                <>
+                  <span className="num">{n - 1}</span> from your sectors, <span className="num">1</span> from outside
+                </>,
+              )
+            ) : (
+              L(
+                <>
+                  고른 분야에서 <span className="num">{n}</span>곳
+                </>,
+                <>
+                  <span className="num">{n}</span> from your sectors
+                </>,
+              )
+            )
+          ) : L(
             <>
               아직 모르는, 지금 뜨는 스타트업 <span className="num">{n}</span>곳
             </>,
@@ -539,9 +559,9 @@ function OrderHead({ personal }) {
 
 /* The first unread company, three things: what it is, what it does, why it matters.
    Stage, amount, English name and the "○○라면" line wait on the company page. */
-function Hero({ startup: s, resume, heroRef, discovery }) {
+function Hero({ startup: s, resume, discovery, from }) {
   return (
-    <a className="hero" href={`#/s/${s.id}`} ref={heroRef}>
+    <a className="hero" href={`#/s/${s.id}${from ? `?from=${from}` : ''}`}>
       <span className="hero__kicker">
         {resume && <strong>{L('이어 읽기', 'Keep reading')} · </strong>}
         {discovery && <strong>{L('오늘의 발견', "Today's find")} · </strong>}
@@ -822,24 +842,14 @@ export function IssueMobile({ date }) {
     track('folded_expand', { sector: [...new Set(folded.map((s) => s._sector.key))].join(','), date })
   }
   const shownHidden = hiddenHere.filter((s) => !foldedIds.has(s.id))
-  const heroRef = useRef(null)
   const ask = useRef(null)
   ask.current = () => maybeAskTaste({ prompt, setPrompt, role, interests })
 
-  // the taste sheet asks once on its own: coming back here after reading a company,
-  // or once the hero has scrolled away
+  // the taste sheet asks once on its own, and only after a first read: coming back here
+  // from a company page. Scrolling the list never interrupts (the list's TasteCard stays).
   useEffect(() => {
     if (!latest) return
     if (currentEntry()?.depth > 0 && Object.keys(readLog).length > 0) ask.current()
-    const onScroll = () => {
-      const r = heroRef.current?.getBoundingClientRect()
-      if (r && r.bottom < 0) {
-        window.removeEventListener('scroll', onScroll)
-        ask.current()
-      }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
     // once per visit to the screen, not on every read-log change
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latest, date])
@@ -851,10 +861,10 @@ export function IssueMobile({ date }) {
       <IssueTitle date={date} />
       {my.available && <HomeTabs tab={tab} setTab={setTab} />}
       {latest && daysSince(date) >= 2 && <StaleCard date={date} />}
-      <IssueProgress date={date} list={issue} folded={folded.length} />
+      <IssueProgress date={date} list={issue} folded={folded.length} mine={mine} discovery={mine && Boolean(my.discoveryId)} />
       {!my.available && (differs || !personal) && <OrderHead personal={personal} />}
       {hero ? (
-        <Hero startup={hero} resume={done > 0} heroRef={heroRef} discovery={mine && hero.id === my.discoveryId} />
+        <Hero startup={hero} resume={done > 0} discovery={mine && hero.id === my.discoveryId} from={mine ? 'mine' : undefined} />
       ) : (
         finished && (mine ? <MyDoneCard date={date} more={my.more} list={issue} /> : <DoneCard date={date} picks={picks} />)
       )}
@@ -867,6 +877,7 @@ export function IssueMobile({ date }) {
             key={s.id}
             startup={s}
             issue
+            from={mine ? 'mine' : undefined}
             reason={
               mine && s.id === my.discoveryId
                 ? L('오늘의 발견 · 관심 밖에서 하나', "Today's find · one from outside your sectors")

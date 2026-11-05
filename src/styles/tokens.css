@@ -39,10 +39,11 @@
   --sd-mono-7-bg: #1A1915; --sd-mono-7-fg: #F3EFE6;
 
   /* sector hues: one per pool, so an issue's mix shows at a glance (dots, progress cells).
-     Graphic marks only, never body text; each clears 3:1 on --sd-bg and --sd-surface. */
+     Graphic marks only, never body text; each clears 3:1 on --sd-bg and --sd-surface.
+     None is ink: a black cell would read as "you are here" in the progress bar. */
   --sd-sector-health: #1F7A6C; --sd-sector-robotics: #4A5BA8; --sd-sector-mobility: #2F6E9E;
   --sd-sector-climate: #4C7A2A; --sd-sector-fintech: #946500; --sd-sector-infra: #9A4A26;
-  --sd-sector-enterprise: #6B5340; --sd-sector-consumer: #8C3F78; --sd-sector-ai: #1A1915;
+  --sd-sector-enterprise: #6B5340; --sd-sector-consumer: #8C3F78; --sd-sector-ai: #6A4FA0;
 
   --sd-shadow-1: 0 1px 0 var(--sd-line);
   --sd-shadow-2: 0 2px 8px rgb(26 25 21 / 0.08), 0 0 0 1px var(--sd-line);
@@ -140,7 +141,7 @@
 
   --sd-sector-health: #6CC5B4; --sd-sector-robotics: #9DA9E8; --sd-sector-mobility: #7FB4DD;
   --sd-sector-climate: #9CC77A; --sd-sector-fintech: #E0B65A; --sd-sector-infra: #E39A73;
-  --sd-sector-enterprise: #C9A88F; --sd-sector-consumer: #DB97C8; --sd-sector-ai: #ECE7DC;
+  --sd-sector-enterprise: #C9A88F; --sd-sector-consumer: #DB97C8; --sd-sector-ai: #B9A3E3;
 
   --sd-shadow-2: 0 0 0 1px var(--sd-line);
   --sd-shadow-3: 0 16px 40px rgb(0 0 0 / 0.5), 0 0 0 1px var(--sd-line);

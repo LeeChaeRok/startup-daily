@@ -2,8 +2,9 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from 'react'
 import Icon from '../components/Icon.jsx'
 import Sheet from '../components/Sheet.jsx'
 import { useToast } from '../components/toast-context.js'
-import { byDate, byId, issueNo } from '../lib/data.js'
-import { prefersReducedMotion, useFlag, useReadLog, useSaved } from '../lib/hooks.js'
+import { byDate, byId, dates, issueNo } from '../lib/data.js'
+import { prefersReducedMotion, useFlag, useMuted, useReadLog, useSaved } from '../lib/hooks.js'
+import { useMyIssue } from '../lib/my-issue.js'
 import { monthDay } from '../lib/format.js'
 import { canNativeShare, canonicalUrl, shareOrCopy } from '../lib/share.js'
 import { L } from '../lib/i18n.js'
@@ -173,16 +174,27 @@ export function useKoreaLens(id, hasStatic, canRequest) {
 
 const NONE = []
 
-/** Ordered list this detail page belongs to: its issue (in the reader's order, as on
-    the issue screen), or the saved list. */
-export function useContextList(startup, from) {
+/** Ordered list this detail page belongs to, in the order the reader saw it: "내 5곳"
+    (from=mine), the saved list, or the issue — published order (hidden sectors last)
+    on a day with "내 5곳" (phone layout only: the desktop list has no tabs), the reader's
+    order otherwise, as on the issue screen. */
+export function useContextList(startup, from, desktop = false) {
   const { saved } = useSaved()
+  const { muted } = useMuted()
+  // "내 5곳" exists for the latest issue only, and can hold a company from an earlier day
+  const mineDay = from === 'mine' ? dates[0] : startup?.date
+  const my = useMyIssue(mineDay)
   const issue = useIssueOrder(startup ? byDate(startup.date) : NONE).list
   return useMemo(() => {
     if (!startup) return []
     if (from === 'saved') return saved.map(byId).filter(Boolean)
+    if (from === 'mine' && my.available) return my.list
+    if (my.available && !desktop) {
+      const l = byDate(startup.date)
+      return [...l.filter((s) => !muted.includes(s._sector.key)), ...l.filter((s) => muted.includes(s._sector.key))]
+    }
     return issue
-  }, [startup, from, saved, issue])
+  }, [startup, from, desktop, saved, issue, my.available, my.list, muted])
 }
 
 /** Public link for a company: /s/:id is a small static page with that company's link

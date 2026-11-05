@@ -1007,7 +1007,7 @@ a { color: inherit; text-decoration: none; }
 .issue-progress__read { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; font-size: 14px; color: var(--sd-ink-3); font-variant-numeric: tabular-nums; }
 .issue-progress__check { color: var(--sd-positive); }
 .issue-progress__bar { display: flex; gap: 4px; margin-top: 8px; }
-.issue-progress__bar > span { flex: 1; height: 4px; background: color-mix(in srgb, var(--sector, var(--sd-ink)) 26%, var(--sd-line)); transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.issue-progress__bar > span { flex: 1; height: 4px; background: color-mix(in srgb, var(--sector, var(--sd-ink)) 42%, var(--sd-line)); transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
 .issue-progress__bar > .is-read { background: var(--sector, var(--sd-ink)); }
 
 .order-head { position: relative; margin: 4px 0; }
@@ -1038,7 +1038,7 @@ a.hero > .hero__tagline {
   margin-top: 14px; font-size: 18px; font-weight: 600; line-height: 26px; letter-spacing: -0.012em;
 }
 a.hero > .hero__comment {
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
   margin-top: 8px; font-size: 15px; font-weight: 400; line-height: 23px; color: var(--sd-ink-2);
 }
 /* AI disclosure for the comment: a small boxed tag, not a run-in label */
@@ -1066,8 +1066,8 @@ a.hero .hero__ai { display: inline-block; margin-right: 6px; padding: 0 4px; bor
 .row--issue .row__body { gap: 2px; }
 .row--issue .row__name { line-height: 22px; font-size: 17px; }
 .row--issue .row__meta { color: var(--sd-ink-3); }
-.row__check { flex: none; color: var(--sd-ink-3); }
-.row--issue .row__tagline { -webkit-line-clamp: 1; line-height: 21px; }
+.row__check { display: inline-block; margin-left: 6px; vertical-align: -2px; color: var(--sd-ink-3); } /* svg is block by default: keep the ✓ on the name's line */
+.row--issue .row__tagline { -webkit-line-clamp: 2; line-height: 21px; } /* the tagline is all a row says about the company: two lines, not one */
 .row--issue .row__meta { margin-top: 0; line-height: 18px; }
 .row--issue.is-read .row__link { grid-template-columns: 32px minmax(0, 1fr); align-items: center; padding-block: 10px; }
 .row--issue.is-read .row__rank { padding-top: 0; color: var(--sd-ink-3); }

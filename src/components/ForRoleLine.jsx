@@ -8,7 +8,9 @@ import { L } from '../lib/i18n.js'
  */
 export default function ForRoleLine({ startup, variant = 'hero' }) {
   const [role] = useRole()
-  const line = forRole(startup, role)
+  // on the company page the round, lead and team size sit right above in 숫자로 보면:
+  // the investor and job lines would only repeat them
+  const line = variant === 'detail' && (role === 'investor' || role === 'job') ? null : forRole(startup, role)
   if (!line) return null
   return (
     <p className={`forrole forrole--${variant}`}>

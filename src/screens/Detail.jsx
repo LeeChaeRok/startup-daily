@@ -64,6 +64,10 @@ const NEW_TAB = L('(새 창)', '(opens in a new tab)')
 const UNDISCLOSED = L('미공개', 'Undisclosed')
 const BACK_SAVED = L('저장함으로', 'Back to saved')
 const BACK_ISSUE = L('이 호로 돌아가기', 'Back to this issue')
+const BACK_MINE = L('내 5곳으로', 'Back to your five')
+// where the end of the list leads back to, by the list the reader came from
+const backHref = (from, s) => (from === 'saved' ? '#/saved' : from === 'mine' ? '#/' : `#/d/${s.date}`)
+const backLabel = (from) => (from === 'saved' ? BACK_SAVED : from === 'mine' ? BACK_MINE : BACK_ISSUE)
 const roundsLabel = (n) => L(`라운드 ${n}회`, `${n} ${n === 1 ? 'round' : 'rounds'}`)
 
 function Section({ id, n, title, children }) {
@@ -241,11 +245,10 @@ function EntryBanner({ startup: s }) {
         <strong>Startup Daily</strong> · {L('지금 뜨는 회사를 하루 한 묶음으로 소개해요.', 'Startups on the rise, one batch a day.')}
       </p>
       <p>
-        {L(
-          `이 글은 제${issueNo(s.date)}호(${monthDay(s.date)})에 실렸어요.`,
-          `This profile ran in Issue #${issueNo(s.date)} (${monthDay(s.date)}).`,
-        )}{' '}
-        <a href={`#/d/${s.date}`}>{L('이 호 전체 보기', 'See the full issue')}</a>
+        {s.featured === false
+          ? L(`${monthDay(s.date)} 분야별로 고른 회사예요.`, `Picked by sector on ${monthDay(s.date)}.`)
+          : L(`이 글은 제${issueNo(s.date)}호(${monthDay(s.date)})에 실렸어요.`, `This profile ran in Issue #${issueNo(s.date)} (${monthDay(s.date)}).`)}{' '}
+        <a href={`#/d/${s.date}`}>{s.featured === false ? L('그날 호 보기', "See that day's issue") : L('이 호 전체 보기', 'See the full issue')}</a>
       </p>
     </aside>
   )
@@ -301,7 +304,9 @@ function Hero({ startup: s, list, share, from, desktop, wide, timeRef }) {
             ·{' '}
             {from === 'saved'
               ? L(`저장함 ${list.length}곳 중 ${pos + 1}번째`, `${pos + 1} of ${list.length} saved`)
-              : L(`${list.length}곳 중 ${pos + 1}번째`, `${pos + 1} of ${list.length}`)}
+              : from === 'mine'
+                ? L(`내 5곳 중 ${pos + 1}번째`, `${pos + 1} of your ${list.length}`)
+                : L(`${list.length}곳 중 ${pos + 1}번째`, `${pos + 1} of ${list.length}`)}
           </>
         )}
       </p>
@@ -914,9 +919,11 @@ function NextCard({ startup: s, list, from }) {
   if (!next) {
     return (
       <div className="next next--end">
-        <p className="next__kicker">{from === 'saved' ? L('저장함 끝', 'End of saved') : L(`제${issueNo(s.date)}호 끝`, `End of Issue #${issueNo(s.date)}`)}</p>
-        <a className="link-cta" href={from === 'saved' ? '#/saved' : `#/d/${s.date}`}>
-          {from === 'saved' ? BACK_SAVED : BACK_ISSUE} <Icon name="arrowRight" size={16} />
+        <p className="next__kicker">
+          {from === 'saved' ? L('저장함 끝', 'End of saved') : from === 'mine' ? L('내 5곳 끝', 'End of your five') : L(`제${issueNo(s.date)}호 끝`, `End of Issue #${issueNo(s.date)}`)}
+        </p>
+        <a className="link-cta" href={backHref(from, s)}>
+          {backLabel(from)} <Icon name="arrowRight" size={16} />
         </a>
       </div>
     )
@@ -994,7 +1001,7 @@ export function KeyFacts({ startup: s }) {
 
 export default function Detail({ id, from, desktop, wide }) {
   const s = byId(id)
-  const list = useContextList(s, from)
+  const list = useContextList(s, from, desktop)
   const summaryRef = useRef(null)
   const share = useShare(s || { id, name_ko: '', tagline: '', date: '' })
   const hasLens = Boolean(s && canAnalyze(s))
@@ -1149,8 +1156,8 @@ export default function Detail({ id, from, desktop, wide }) {
               <Icon name="arrowRight" size={18} />
             </a>
           ) : (
-            <a className="actionbar__next" href={from === 'saved' ? '#/saved' : `#/d/${s.date}`}>
-              <span className="actionbar__nextname">{from === 'saved' ? BACK_SAVED : BACK_ISSUE}</span>
+            <a className="actionbar__next" href={backHref(from, s)}>
+              <span className="actionbar__nextname">{backLabel(from)}</span>
               <Icon name="arrowRight" size={18} />
             </a>
           )}

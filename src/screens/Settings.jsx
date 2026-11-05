@@ -92,6 +92,11 @@ export default function Settings() {
                 '내 관심 순: 관심 분야와 읽고 저장한 기록으로 순서를 정해요. 이 기기에만 저장돼요.',
                 'Your order uses your sectors and what you read and save. It stays on this device.',
               )}
+              {poolLive &&
+                L(
+                  ' 내 5곳이 있는 날 휴대폰 홈의 모두의 5곳은 늘 발행 순이에요.',
+                  " On days with your five, everyone's five on the phone home stays as published.",
+                )}
             </p>
           </div>
         </div>
