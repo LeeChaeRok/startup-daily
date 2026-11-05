@@ -18,6 +18,7 @@ import { useHomeTab, useMyIssue } from '../lib/my-issue.js'
 import { track } from '../lib/analytics.js'
 import { load } from '../lib/storage.js'
 import { useToast } from '../components/toast-context.js'
+import { sectorHue } from '../lib/sectors.js'
 import { L } from '../lib/i18n.js'
 
 const plural = (n, one, many = `${one}s`) => (n === 1 ? one : many)
@@ -369,10 +370,17 @@ function NumbersStrip({ list }) {
 
 /** Where the issue's hero points: the first unread company in the reader's order.
     `mine`: the reader's own five ("내 5곳"), already in their order. */
-function useHeroPick(date, mine = null, skip = null) {
+function useHeroPick(date, mine = null, skip = null, editorial = false) {
   const { isRead } = useReadLog()
+  const { muted } = useMuted()
   const published = useIssueOrder(byDate(date))
-  const order = mine ? { list: mine, personal: true, differs: false } : published
+  // next to "내 5곳" the shared five keeps the published order (hidden sectors still last):
+  // personalizing is the tab's job, not a second ordering control
+  const asPublished = () => {
+    const l = byDate(date)
+    return { list: [...l.filter((s) => !muted.includes(s._sector.key)), ...l.filter((s) => muted.includes(s._sector.key))], personal: false, differs: false }
+  }
+  const order = mine ? { list: mine, personal: true, differs: false } : editorial ? asPublished() : published
   // folded rows (hidden sectors) never become the hero
   const idx = order.list.findIndex((s) => !isRead(s.id) && !skip?.has(s.id))
   return { ...order, hero: idx >= 0 ? order.list[idx] : null, rank: idx + 1 }
@@ -470,7 +478,7 @@ function IssueProgress({ date, list = byDate(date), folded = 0 }) {
       </p>
       <span className="issue-progress__bar" aria-hidden="true">
         {list.map((s) => (
-          <span key={s.id} className={isRead(s.id) ? 'is-read' : ''} />
+          <span key={s.id} className={isRead(s.id) ? 'is-read' : ''} style={sectorHue(s._sector.key)} />
         ))}
       </span>
     </div>
@@ -579,6 +587,25 @@ function MiniRow({ startup: s }) {
 }
 
 /** State C: the whole issue read. Takes the hero's place. */
+/** The close of a day: what the five added up to (the progress bar above already shows it in color). */
+function DaySum({ list }) {
+  if (list.length < 2) return null
+  const mix = sectorMix(list)
+  const countries = new Set(list.map((s) => s.headquarters?.country_ko).filter(Boolean)).size
+  const known = list.filter((s) => s._raisedUSD != null)
+  const sum = known.reduce((n, s) => n + s._raisedUSD, 0)
+  return (
+    <div className="day-sum">
+      <p className="day-sum__line">
+        <strong>{L(`오늘 읽은 ${list.length}곳`, `Today's ${list.length}`)}</strong> ·{' '}
+        {mix.map(([label, n]) => (n > 1 ? `${label} ${n}` : label)).join(', ')}
+        {countries > 1 && L(` · ${countries}개국`, ` · ${countries} countries`)}
+        {known.length > 0 && L(` · 누적 투자 합 ≈${formatUSD(sum)}`, ` · ≈${formatUSD(sum)} raised in all`)}
+      </p>
+    </div>
+  )
+}
+
 function DoneCard({ date, picks }) {
   const latest = date === dates[0]
   const share = useIssueShare(date)
@@ -597,6 +624,7 @@ function DoneCard({ date, picks }) {
         <Icon name="check" size={20} className="state-card__check" />
         {L(`제${issueNo(date)}호를 다 읽었어요`, `You've read all of issue #${issueNo(date)}`)}
       </h2>
+      <DaySum list={byDate(date)} />
       {latest && daysSince(date) < 2 && <p className="state-card__text">{L('다음 호는 내일 나와요', 'The next issue is out tomorrow')}</p>}
       {shown.length > 0 ? (
         <>
@@ -688,7 +716,7 @@ function HomeTabs({ tab, setTab }) {
 }
 
 /** "내 5곳" read to the end: what is left in the reader's sectors today. */
-function MyDoneCard({ date, more }) {
+function MyDoneCard({ date, more, list }) {
   const { interests } = useInterests()
   const share = useIssueShare(date)
   return (
@@ -697,6 +725,7 @@ function MyDoneCard({ date, more }) {
         <Icon name="check" size={20} className="state-card__check" />
         {L('내 5곳을 다 읽었어요', "You've read your five")}
       </h2>
+      <DaySum list={list} />
       {more > 0 ? (
         <a className="state-card__link" href={`#/explore${buildQuery({ sector: interests })}`}>
           {L(`오늘 내 분야에 ${more}곳 더 있어요`, `${more} more in your sectors today`)} <Icon name="chevronRight" size={16} />
@@ -760,7 +789,7 @@ export function IssueMobile({ date }) {
   const foldable = hiddenHere.length > 0 && shared.length - hiddenHere.length >= 3
   const folded = foldable ? hiddenHere.filter((s) => !expanded.has(s.id)) : []
   const foldedIds = new Set(folded.map((s) => s.id))
-  const { list, hero, personal, differs } = useHeroPick(date, mine ? my.list : null, foldedIds)
+  const { list, hero, personal, differs } = useHeroPick(date, mine ? my.list : null, foldedIds, my.available)
   const issue = (mine ? my.list : shared).filter((s) => !foldedIds.has(s.id))
   const latest = date === dates[0]
   const done = issue.filter((s) => isRead(s.id)).length
@@ -823,11 +852,11 @@ export function IssueMobile({ date }) {
       {my.available && <HomeTabs tab={tab} setTab={setTab} />}
       {latest && daysSince(date) >= 2 && <StaleCard date={date} />}
       <IssueProgress date={date} list={issue} folded={folded.length} />
-      {!mine && (differs || !personal) && <OrderHead personal={personal} />}
+      {!my.available && (differs || !personal) && <OrderHead personal={personal} />}
       {hero ? (
         <Hero startup={hero} resume={done > 0} heroRef={heroRef} discovery={mine && hero.id === my.discoveryId} />
       ) : (
-        finished && (mine ? <MyDoneCard date={date} more={my.more} /> : <DoneCard date={date} picks={picks} />)
+        finished && (mine ? <MyDoneCard date={date} more={my.more} list={issue} /> : <DoneCard date={date} picks={picks} />)
       )}
       <ul
         className="rows rows--issue"

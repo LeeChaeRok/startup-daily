@@ -9,12 +9,11 @@ import { canNativeShare, canonicalUrl, shareOrCopy } from '../lib/share.js'
 import { L } from '../lib/i18n.js'
 import { useIssueOrder } from '../lib/personal.js'
 
+// "왜 지금" leads the summary above, so the first section is its evidence
 const BASE_SECTIONS = [
-  { id: 'why', label: L('왜 지금', 'Why now') },
-  { id: 'product', label: L('제품', 'Product') },
-  { id: 'competition', label: L('경쟁', 'Competition') },
-  { id: 'team', label: L('팀', 'Team') },
-  { id: 'funding', label: L('투자', 'Funding') },
+  { id: 'why', label: L('뜨는 근거', 'Signals') },
+  { id: 'product', label: L('제품·경쟁', 'Product') },
+  { id: 'funding', label: L('팀·투자', 'Team & funding') },
   { id: 'market', label: L('시장', 'Market') },
 ]
 const KOREA_SECTION = { id: 'korea', label: L('한국', 'Korea') }

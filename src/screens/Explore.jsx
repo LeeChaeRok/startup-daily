@@ -309,6 +309,52 @@ export default function Explore({ params, desktop }) {
     ]
   const rows = state.unread ? filtered.filter(({ startup }) => !isRead(startup.id)) : filtered
   const activeCount = state.sector.length + state.stage.length + state.region.length + state.korea.length
+  // on a phone only 필터 and the count sit above the results; these move into the sheet
+  const quick = (
+    <>
+      {interests.length > 0 && (
+        <button
+          type="button"
+          className={`chip ${interestOn ? 'chip--on' : ''}`}
+          aria-pressed={interestOn}
+          onClick={() => update({ sector: interestOn ? [] : interests })}
+        >
+          {L('내 관심 분야', 'My sectors')}
+        </button>
+      )}
+      {muted.length > 0 && !state.q && (
+        <button
+          type="button"
+          className={`chip ${hideMuted ? 'chip--on' : ''}`}
+          aria-pressed={hideMuted}
+          onClick={() => update({ showMuted: hideMuted }, true)}
+        >
+          {L(`숨긴 분야 ${muted.length}개 제외`, `${muted.length} hidden ${plural(muted.length, 'sector')} left out`)}
+          {hideMuted && <Icon name="close" size={14} />}
+        </button>
+      )}
+      <button
+        type="button"
+        className={`chip ${state.unread ? 'chip--on' : ''}`}
+        aria-pressed={state.unread}
+        onClick={() => update({ unread: !state.unread })}
+      >
+        {L('안 읽은 곳만', 'Unread only')}
+      </button>
+      <label className="select">
+        <span className="sr-only">{L('정렬', 'Sort')}</span>
+        <select value={state.sort} onChange={(e) => update({ sort: e.target.value })}>
+          {SORTS.map((s) => (
+            <option key={s.key} value={s.key}>
+              {s.label}
+            </option>
+          ))}
+        </select>
+        <Icon name="chevronDown" size={16} />
+      </label>
+    </>
+  )
+  const filterCount = activeCount + (state.unread ? 1 : 0) + (state.sort !== 'date' ? 1 : 0)
 
   return (
     <div className={`page page--explore ${desktop ? 'page--explore-desktop' : ''}`}>
@@ -368,56 +414,18 @@ export default function Explore({ params, desktop }) {
             <div className="explore__bar">
               {!desktop && (
                 <button type="button" className="chip" onClick={() => setSheet(true)}>
-                  <Icon name="filter" size={16} /> {L('필터', 'Filters')}{activeCount > 0 && <span className="num"> {activeCount}</span>}
+                  <Icon name="filter" size={16} /> {L('필터', 'Filters')}{filterCount > 0 && <span className="num"> {filterCount}</span>}
                 </button>
               )}
-              {interests.length > 0 && (
-                <button
-                  type="button"
-                  className={`chip ${interestOn ? 'chip--on' : ''}`}
-                  aria-pressed={interestOn}
-                  onClick={() => update({ sector: interestOn ? [] : interests })}
-                >
-                  {L('내 관심 분야', 'My sectors')}
-                </button>
-              )}
-              {muted.length > 0 && !state.q && (
-                <button
-                  type="button"
-                  className={`chip ${hideMuted ? 'chip--on' : ''}`}
-                  aria-pressed={hideMuted}
-                  onClick={() => update({ showMuted: hideMuted }, true)}
-                >
-                  {L(`숨긴 분야 ${muted.length}개 제외`, `${muted.length} hidden ${plural(muted.length, 'sector')} left out`)}
-                  {hideMuted && <Icon name="close" size={14} />}
-                </button>
-              )}
-              <button
-                type="button"
-                className={`chip ${state.unread ? 'chip--on' : ''}`}
-                aria-pressed={state.unread}
-                onClick={() => update({ unread: !state.unread })}
-              >
-                {L('안 읽은 곳만', 'Unread only')}
-              </button>
-              <label className="select">
-                <span className="sr-only">{L('정렬', 'Sort')}</span>
-                <select value={state.sort} onChange={(e) => update({ sort: e.target.value })}>
-                  {SORTS.map((s) => (
-                    <option key={s.key} value={s.key}>
-                      {s.label}
-                    </option>
-                  ))}
-                </select>
-                <Icon name="chevronDown" size={16} />
-              </label>
+              {desktop && quick}
               <p className="explore__count" aria-live="polite">
                 {L(
                   <>
-                    결과 <span className="num">{rows.length}</span>곳
+                    결과 <span className="num">{rows.length}</span>곳{!desktop && hideMuted && ` · 숨긴 분야 ${muted.length}개 제외`}
                   </>,
                   <>
                     <span className="num">{rows.length}</span> {plural(rows.length, 'result')}
+                    {!desktop && hideMuted && ` · ${muted.length} hidden left out`}
                   </>,
                 )}
               </p>
@@ -473,7 +481,7 @@ export default function Explore({ params, desktop }) {
           title={L('필터', 'Filters')}
           footer={
             <>
-              <button type="button" className="btn btn--secondary" onClick={() => update({ sector: [], stage: [], region: [], korea: [] }, true)}>
+              <button type="button" className="btn btn--secondary" onClick={() => update({ sector: [], stage: [], region: [], korea: [], unread: false, sort: 'date' }, true)}>
                 {L('초기화', 'Reset')}
               </button>
               <button type="button" className="btn btn--primary" onClick={() => setSheet(false)}>
@@ -491,6 +499,7 @@ export default function Explore({ params, desktop }) {
             </>
           }
         >
+          <div className="explore__quick">{quick}</div>
           <FilterGroups state={state} update={(p) => update(p, true)} base={base} idPrefix="sheet" />
         </Sheet>
       )}

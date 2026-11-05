@@ -122,7 +122,8 @@ function prepare(raw, corrections, lensIndex, updates) {
         category,
         founders,
         _raised: raised,
-        _raisedShort: shortAmount(raisedKo, { krw: !isEn }),
+        // lists compare amounts side by side, so they're always in USD; the full text (원 included) stays in _raised
+        _raisedShort: shortAmount(raisedKo, { krw: false }),
         _raisedUSD: Number.isFinite(s.funding?.total_raised_usd) ? s.funding.total_raised_usd : parseAmountUSD(raisedKo),
         _domain: getDomain(s.website),
         _sector: sectorOfRecord(s),

@@ -1,7 +1,7 @@
 import Icon from '../components/Icon.jsx'
 import AlertSetting from '../components/AlertSetting.jsx'
 import LangSwitch from '../components/LangSwitch.jsx'
-import { SECTORS } from '../lib/data.js'
+import { SECTORS, poolLive } from '../lib/data.js'
 import { useFontSize, useInterests, useMuted, useReadLog, useSaved, useTheme } from '../lib/hooks.js'
 import { ROLES, useOrder, useRole } from '../lib/personal.js'
 import { openTaste } from '../lib/taste.js'
@@ -69,10 +69,15 @@ export default function Settings() {
               </button>
             </div>
             <p className="setting__hint">
-              {L(
-                '오늘의 묶음은 모두에게 같아요. 순서와 회사마다 붙는 "○○라면" 한 줄만 달라져요.',
-                'Everyone gets the same picks. Only the order and the one line for your role change.',
-              )}
+              {poolLive
+                ? L(
+                    '모두의 5곳은 모두에게 같아요. 내 5곳은 고른 분야에서 4곳, 관심 밖에서 1곳을 골라요.',
+                    "Everyone's five is the same for all. Your five takes four from your sectors and one from outside them.",
+                  )
+                : L(
+                    '오늘의 묶음은 모두에게 같아요. 순서와 회사마다 붙는 "○○라면" 한 줄만 달라져요.',
+                    'Everyone gets the same picks. Only the order and the one line for your role change.',
+                  )}
             </p>
           </div>
         </div>

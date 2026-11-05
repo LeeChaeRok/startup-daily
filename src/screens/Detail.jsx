@@ -11,6 +11,7 @@ import { splitAmount } from '../lib/amount.js'
 import { CompareTable } from './Sector.jsx'
 import { UpdateBanner } from '../components/FollowUp.jsx'
 import { MuteSectorButton } from '../components/MuteSector.jsx'
+import { sectorHue } from '../lib/sectors.js'
 import { navigate, prefersReducedMotion, useFlag, useFontSize } from '../lib/hooks.js'
 import { dotDate, enDash, langOf, monthDay, numClass, pad2, ym } from '../lib/format.js'
 import { isColdStart } from '../lib/nav.js'
@@ -65,32 +66,25 @@ const BACK_SAVED = L('저장함으로', 'Back to saved')
 const BACK_ISSUE = L('이 호로 돌아가기', 'Back to this issue')
 const roundsLabel = (n) => L(`라운드 ${n}회`, `${n} ${n === 1 ? 'round' : 'rounds'}`)
 
-function Section({ id, n, title, children, onReport }) {
-  const ref = useRef(null)
-  const time = useRef(null)
-  // "약 N분" from the rendered text; written straight into the label, no re-render needed
-  useEffect(() => {
-    const n = ref.current?.textContent.replace(/\s+/g, '').length || 0
-    const el = time.current
-    const min = Math.max(1, Math.round(n / CHARS_PER_MIN))
-    if (el) el.textContent = L(`약 ${min}분`, `${min} min read`)
-  }, [id])
+function Section({ id, n, title, children }) {
   return (
-    <section id={id} className="section" aria-labelledby={`${id}-title`} ref={ref}>
+    <section id={id} className="section" aria-labelledby={`${id}-title`}>
       <h2 id={`${id}-title`} className="section__title">
         <span className="section__no mono">{pad2(n)}</span>
         {title}
-        <span className="section__time" ref={time} />
       </h2>
       {children}
-      {onReport && (
-        <button type="button" className="text-btn section__report" onClick={() => onReport(id)}>
-          {L('이 섹션에 틀린 내용이 있나요?', 'Something wrong in this section?')}
-        </button>
-      )}
     </section>
   )
 }
+
+/** A second topic inside a section (경쟁 under 제품, 투자 under 팀). */
+const Part = ({ title, children }) => (
+  <div className="section__part">
+    <h3 className="section__parttitle">{title}</h3>
+    {children}
+  </div>
+)
 
 const REPORT_REASONS = [
   ['number', L('숫자가 틀렸어요', 'A number is wrong')],
@@ -100,8 +94,9 @@ const REPORT_REASONS = [
 ]
 
 /** "틀린 내용 알리기": a reason, an optional line, sent to /api/report. */
-function ReportSheet({ startup: s, section, onClose }) {
+function ReportSheet({ startup: s, open, sections, onClose }) {
   const toast = useToast()
+  const [section, setSection] = useState('')
   const [reason, setReason] = useState('number')
   const [detail, setDetail] = useState('')
   const [sending, setSending] = useState(false)
@@ -112,7 +107,7 @@ function ReportSheet({ startup: s, section, onClose }) {
       const res = await fetch('/api/report', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ id: s.id, section, reason, detail }),
+        body: JSON.stringify({ id: s.id, section: section || null, reason, detail }),
       })
       if (!res.ok) throw new Error(String(res.status))
       toast(L('알려 주셔서 고마워요. 확인 후 정정 기록에 반영할게요.', 'Thanks. We’ll check it and log a correction if needed.'))
@@ -124,11 +119,22 @@ function ReportSheet({ startup: s, section, onClose }) {
     }
   }
   return (
-    <Sheet open={Boolean(section)} onClose={onClose} title={L('틀린 내용 알리기', 'Report an error')}>
+    <Sheet open={open} onClose={onClose} title={L('틀린 내용 알리기', 'Report an error')}>
       <form className="report" onSubmit={submit}>
         <p className="sheet__hint">
           {L('확인되면 정정 기록에 남기고 이 페이지 맨 위에 표시해요.', 'If we confirm it, we log the correction and show it at the top of this page.')}
         </p>
+        <label className="report__label" htmlFor="report-section">
+          {L('어디에서요?', 'Where?')}
+        </label>
+        <select id="report-section" className="field report__section" value={section} onChange={(e) => setSection(e.target.value)}>
+          <option value="">{L('잘 모르겠어요 · 전체', 'Not sure · Whole page')}</option>
+          {sections.map((x) => (
+            <option key={x.id} value={x.id}>
+              {x.label}
+            </option>
+          ))}
+        </select>
         <fieldset className="report__reasons">
           <legend className="sr-only">{L('무엇이 틀렸나요?', 'What’s wrong?')}</legend>
           {REPORT_REASONS.map(([key, label]) => (
@@ -245,7 +251,7 @@ function EntryBanner({ startup: s }) {
   )
 }
 
-function Hero({ startup: s, list, share, from, desktop, wide }) {
+function Hero({ startup: s, list, share, from, desktop, wide, timeRef }) {
   const pos = list.indexOf(s)
   return (
     <header className="hero">
@@ -271,7 +277,7 @@ function Hero({ startup: s, list, share, from, desktop, wide }) {
       <p className="hero__meta">
         <Meta
           items={[
-            <span className="sector" key="s">{s._sector.label}</span>,
+            <span className="sector" key="s" style={sectorHue(s._sector.key)}>{s._sector.label}</span>,
             s._correction ? (
               <span key="c" className="hero__status">
                 {s._correction.status} <span className="hero__was">{L(`(발행 당시 ${s._stage})`, `(at publication: ${s._stage})`)}</span>
@@ -288,6 +294,7 @@ function Hero({ startup: s, list, share, from, desktop, wide }) {
         <a href={`#/d/${s.date}`}>
           {L(`제${issueNo(s.date)}호`, `Issue #${issueNo(s.date)}`)} · {monthDay(s.date)}
         </a>
+        <span ref={timeRef} />
         {pos >= 0 && (
           <>
             {' '}
@@ -398,10 +405,18 @@ function Summary({ startup: s, summaryRef }) {
   )
 }
 
-function FundingTimeline({ funding: f }) {
+const stageKey = (r) => (r?.stage || '').toLowerCase().replace(/[^a-z0-9가-힣+]/g, '')
+
+/** funding_history plus latest_round when the history leaves it out (the generator often does), newest first. */
+function fundingRounds(f) {
   const rounds = [...(f?.funding_history || [])]
-  if (!rounds.length && f?.latest_round) rounds.push(f.latest_round)
-  rounds.sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+  const lr = f?.latest_round
+  if (lr?.stage && !rounds.some((r) => stageKey(r) === stageKey(lr))) rounds.push(lr)
+  return rounds.sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+}
+
+function FundingTimeline({ funding: f }) {
+  const rounds = fundingRounds(f)
   const max = Math.max(...rounds.map((r) => parseAmountUSD(cleanAmount(r.amount)) || 0), 1)
   return (
     <ol className="timeline">
@@ -992,8 +1007,15 @@ export default function Detail({ id, from, desktop, wide }) {
     recordOpen(id)
     track('detail_open', { id, featured: byId(id)?.featured !== false })
   }, [id])
-  const [reportSection, setReportSection] = useState(null)
+  const [reporting, setReporting] = useState(false)
   const articleRef = useRef(null)
+  // "전체 약 N분" from the rendered sections; written straight into the hero line, no re-render needed
+  const timeRef = useRef(null)
+  useEffect(() => {
+    const n = [...(articleRef.current?.querySelectorAll('.section') || [])].reduce((t, el) => t + el.textContent.replace(/\s+/g, '').length, 0)
+    const min = Math.max(1, Math.round(n / CHARS_PER_MIN))
+    if (timeRef.current) timeRef.current.textContent = n ? L(` · 전체 약 ${min}분`, ` · ${min} min read`) : ''
+  }, [id])
 
   // ←/→ between companies on desktop (ignored while typing)
   useEffect(() => {
@@ -1021,13 +1043,13 @@ export default function Detail({ id, from, desktop, wide }) {
       <EntryBanner startup={s} />
       <CorrectionBanner startup={s} />
       <UpdateBanner startup={s} />
-      <Hero startup={s} list={list} share={share} from={from} desktop={desktop} wide={wide} />
+      <Hero startup={s} list={list} share={share} from={from} desktop={desktop} wide={wide} timeRef={timeRef} />
       <Summary startup={s} summaryRef={summaryRef} />
       <ForRoleLine startup={s} variant="detail" />
 
       {!wide && <SectionNav active={active} sections={sections} />}
 
-      <Section id="why" n={1} title={L('왜 지금', 'Why now')} onReport={setReportSection}>
+      <Section id="why" n={1} title={L('뜨는 근거', 'Signals')}>
         <Field label={L('촉매', 'Catalysts')}>
           <Bullets items={tr.catalysts} ordered />
         </Field>
@@ -1036,7 +1058,7 @@ export default function Detail({ id, from, desktop, wide }) {
         </Field>
       </Section>
 
-      <Section id="product" n={2} title={L('제품', 'Product')} onReport={setReportSection}>
+      <Section id="product" n={2} title={L('제품·경쟁', 'Product & competition')}>
         <Field label={L('문제', 'Problem')}>{p.problem_statement && <p>{p.problem_statement}</p>}</Field>
         <Field label={L('해법', 'Solution')}>{p.solution && <p>{p.solution}</p>}</Field>
         <Field label={L('핵심 기능', 'Key features')}>{p.key_features?.length ? <Bullets items={p.key_features} /> : null}</Field>
@@ -1045,39 +1067,37 @@ export default function Detail({ id, from, desktop, wide }) {
           <Field label={L('고객', 'Customers')}>{p.target_customer && <p>{p.target_customer}</p>}</Field>
           <Field label={L('수익 모델', 'Business model')}>{p.business_model && <p>{p.business_model}</p>}</Field>
         </div>
+        <Part title={L('경쟁', 'Competition')}>
+          <Competition startup={s} />
+        </Part>
       </Section>
 
-      <Section id="competition" n={3} title={L('경쟁', 'Competition')} onReport={setReportSection}>
-        <Competition startup={s} />
-      </Section>
-
-      <Section id="team" n={4} title={L('팀', 'Team')} onReport={setReportSection}>
+      <Section id="funding" n={3} title={L('팀·투자', 'Team & funding')}>
         <Founders startup={s} />
+        <Part title={L('투자', 'Funding')}>
+          <p className="funding-sum">
+            <Meta
+              items={[
+                <span key="t">
+                  {L('누적', 'Total')} <strong className={s._raised ? numClass(s._raised) : ''}>{amountMain(s._raised) || UNDISCLOSED}</strong>
+                </span>,
+                fundingRounds(s.funding).length > 1 ? roundsLabel(fundingRounds(s.funding).length) : null,
+              ]}
+            />
+          </p>
+          <AmountNote text={s._raised} note={s.funding?.total_raised_note} />
+          <FundingTimeline funding={s.funding} />
+          {s.funding?.latest_round?.notable_investors?.length > 0 && (
+            <Field label={L('참여 투자자', 'Investors')}>
+              <p lang={langOf(s.funding.latest_round.notable_investors.join(''))} className="investors">
+                {s.funding.latest_round.notable_investors.join(', ')}
+              </p>
+            </Field>
+          )}
+        </Part>
       </Section>
 
-      <Section id="funding" n={5} title={L('투자', 'Funding')} onReport={setReportSection}>
-        <p className="funding-sum">
-          <Meta
-            items={[
-              <span key="t">
-                {L('누적', 'Total')} <strong className={s._raised ? numClass(s._raised) : ''}>{amountMain(s._raised) || UNDISCLOSED}</strong>
-              </span>,
-              s.funding?.funding_history?.length ? roundsLabel(s.funding.funding_history.length) : null,
-            ]}
-          />
-        </p>
-        <AmountNote text={s._raised} note={s.funding?.total_raised_note} />
-        <FundingTimeline funding={s.funding} />
-        {s.funding?.latest_round?.notable_investors?.length > 0 && (
-          <Field label={L('참여 투자자', 'Investors')}>
-            <p lang={langOf(s.funding.latest_round.notable_investors.join(''))} className="investors">
-              {s.funding.latest_round.notable_investors.join(', ')}
-            </p>
-          </Field>
-        )}
-      </Section>
-
-      <Section id="market" n={6} title={L('시장', 'Market')} onReport={setReportSection}>
+      <Section id="market" n={4} title={L('시장', 'Market')}>
         <Field label={L('시장 규모', 'Market size')} tag={<Tag tone="warn">{L('AI 추정', 'AI estimate')}</Tag>}>
           {mo.tam_sam_som && <p>{mo.tam_sam_som}</p>}
         </Field>
@@ -1099,13 +1119,16 @@ export default function Detail({ id, from, desktop, wide }) {
       </Section>
 
       {hasLens && (
-        <Section id="korea" n={7} title={L('한국에서는', 'In Korea')} onReport={setReportSection}>
+        <Section id="korea" n={5} title={L('한국에서는', 'In Korea')}>
           <KoreaSection startup={s} state={lensState} />
         </Section>
       )}
 
-      <Section id="sources" n={hasLens ? 8 : 7} title={L('출처와 신뢰', 'Sources & trust')} onReport={setReportSection}>
+      <Section id="sources" n={hasLens ? 6 : 5} title={L('출처와 신뢰', 'Sources & trust')}>
         <Sources startup={s} />
+        <button type="button" className="text-btn section__report" onClick={() => setReporting(true)}>
+          {L('이 글에 틀린 내용이 있나요?', 'Something wrong on this page?')}
+        </button>
       </Section>
 
       <NextCard startup={s} list={list} from={from} />
@@ -1134,7 +1157,7 @@ export default function Detail({ id, from, desktop, wide }) {
         </div>
       )}
       {share.sheet}
-      <ReportSheet startup={s} section={reportSection} onClose={() => setReportSection(null)} />
+      <ReportSheet startup={s} open={reporting} sections={sections} onClose={() => setReporting(false)} />
     </article>
   )
 }

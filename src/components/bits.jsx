@@ -3,9 +3,14 @@ import { useReadLog, useSaved } from '../lib/hooks.js'
 import { useToast } from './toast-context.js'
 import { navigate } from '../lib/hooks.js'
 import { L } from '../lib/i18n.js'
+import { sectorHue } from '../lib/sectors.js'
 
 export function SectorLabel({ sector }) {
-  return <span className="sector">{sector.label}</span>
+  return (
+    <span className="sector" style={sectorHue(sector.key)}>
+      {sector.label}
+    </span>
+  )
 }
 
 export function StageBadge({ startup }) {

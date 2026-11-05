@@ -5,6 +5,7 @@ import { LENS_VERDICTS } from '../lib/data.js'
 import { useInterests, useReadLog } from '../lib/hooks.js'
 import { monthDay, numClass, pad2 } from '../lib/format.js'
 import { L } from '../lib/i18n.js'
+import { sectorHue } from '../lib/sectors.js'
 
 /**
  * One startup in a list. The whole row is a single link; the optional save
@@ -56,7 +57,7 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
             <span className="row__meta">
               <Meta
                 items={[
-                  <span className={`sector ${isInterest(s._sector.key) ? 'is-interest' : ''}`} key="s">
+                  <span className={`sector ${isInterest(s._sector.key) ? 'is-interest' : ''}`} key="s" style={sectorHue(s._sector.key)}>
                     {s._sector.label}
                     {isInterest(s._sector.key) && <span className="sr-only">{L(' (관심 분야)', ' (a sector you follow)')}</span>}
                   </span>,

@@ -47,6 +47,8 @@ function TasteSheet({ open, mode }) {
   const [hidden, setHidden] = useState(muted)
   const [hiddenOpen, setHiddenOpen] = useState(muted.length > 0)
   const [narrowed, setNarrowed] = useState(false)
+  // edit mode shows one half at a time: sectors (the one people come back to change) or role
+  const [pane, setPane] = useState('sectors')
   const timer = useRef(null)
   useEffect(() => () => clearTimeout(timer.current), [])
   // the chip or button that moved the step is gone: put focus on the new step's title
@@ -163,7 +165,7 @@ function TasteSheet({ open, mode }) {
               {poolLive ? (
                 <span className="taste__count">{L('하루 약 3곳', '~3 a day')}</span>
               ) : (
-                <span className={n ? 'mono taste__count' : 'taste__count'}>{n || L('준비 중', 'soon')}</span>
+                <span className="taste__count">{n ? L(`누적 ${n}곳`, `${n} so far`) : L('준비 중', 'soon')}</span>
               )}
             </button>
           )
@@ -186,78 +188,94 @@ function TasteSheet({ open, mode }) {
           </button>
         }
       >
-        <h3 className="taste__label">{L('어떤 일을 하세요?', 'What do you do?')}</h3>
-        <p className="taste__sub">
-          {L('고르면 회사마다 내 입장에서 볼 한 줄을 붙여요', "We'll add one line per company from your side of the table.")}
-        </p>
-        {roleChips}
-        <h3 className="taste__label taste__label--gap">{L('관심 분야', 'Sectors')}</h3>
-        <p className="taste__sub">
-          {poolLive
-            ? L('고른 분야로 매일 5곳을 골라 드려요. 하나는 관심 밖에서 골라요.', 'We pick five a day from these sectors, and one from outside them.')
-            : L('3개쯤 고르면 순서가 잘 맞아요. 오늘의 묶음은 모두에게 같아요.', "About 3 works best. Today's picks are the same for everyone.")}
-        </p>
-        {sectorChips}
-        {picked.length > 0 && picked.length < SECTORS.length - 1 && (
-          <button type="button" className="text-btn taste__narrow" onClick={narrow}>
-            {L('↳ 고른 분야로 좁히기', '↳ Narrow to my sectors')}
-          </button>
-        )}
-        {narrowed && lastOpen && (
-          <p className="taste__note">
-            {L(
-              `나머지는 숨기고, ${SECTORS.find((x) => x.key === lastOpen).label} 하나만 발견용으로 남겨요.`,
-              `We'll hide the rest and keep ${SECTORS.find((x) => x.key === lastOpen).label} open for today's find.`,
-            )}
-          </p>
-        )}
-        <div className="taste__hidden">
-          <button type="button" className="taste__hidden-head" aria-expanded={hiddenOpen} onClick={() => setHiddenOpen(!hiddenOpen)}>
-            <span className="taste__label">{L('숨길 분야 (선택)', 'Sectors to hide (optional)')}</span>
-            {hidden.length > 0 && <span className="taste__count">{L(`${hidden.length}개`, `${hidden.length}`)}</span>}
-            <Icon name="chevronDown" size={16} className={hiddenOpen ? 'is-flipped' : ''} />
-          </button>
-          {hiddenOpen && (
-            <>
-              <p className="taste__sub">
-                {poolLive
-                  ? L(
-                      '숨긴 분야는 내 5곳과 오늘의 발견에서 빠지고, 탐색에서도 기본으로 가려요.',
-                      "Hidden sectors stay out of your five and today's find, and out of Explore by default.",
-                    )
-                  : L(
-                      '숨긴 분야는 오늘의 5곳에서 접어 두고, 탐색에서도 기본으로 가려요.',
-                      "We fold hidden sectors in today's five and leave them out of Explore by default.",
-                    )}
-              </p>
-              <div className="taste__chips" role="group" aria-label={L('숨길 분야', 'Sectors to hide')}>
-                {chips
-                  .filter((x) => !picked.includes(x.key))
-                  .map((x) => {
-                    const on = hidden.includes(x.key)
-                    const locked = x.key === lastOpen
-                    return (
-                      <button
-                        key={x.key}
-                        type="button"
-                        aria-pressed={on}
-                        aria-disabled={locked || undefined}
-                        className={`taste__sector taste__sector--mute ${on ? 'is-muted' : ''} ${locked ? 'is-locked' : ''}`}
-                        onClick={() => toggleHidden(x.key)}
-                      >
-                        {on && <Icon name="eyeOff" size={16} />}
-                        {x.label}
-                        {on && <span className="taste__count">{L('숨김', 'hidden')}</span>}
-                        {locked && picked.length > 0 && <span className="taste__count">{L('발견용', 'for finds')}</span>}
-                      </button>
-                    )
-                  })}
-              </div>
-              {lastOpen && <p className="taste__nudge taste__nudge--after">{L('하나는 열어 둬요. 오늘의 발견이 여기서 와요.', "Keep one open. Today's find comes from there.")}</p>}
-              {picked.length > 0 && <p className="taste__nudge taste__nudge--after">{L('관심으로 고른 분야는 여기 안 보여요.', "Sectors you follow aren't listed here.")}</p>}
-            </>
-          )}
+        <div className="segmented taste__panes" role="group" aria-label={L('설정할 것', 'What to change')}>
+          {[
+            ['sectors', picked.length ? L(`관심 분야 · ${picked.length}`, `Sectors · ${picked.length}`) : L('관심 분야', 'Sectors')],
+            ['role', L('역할', 'Role')],
+          ].map(([k, label]) => (
+            <button key={k} type="button" className="segmented__tab" aria-pressed={pane === k} onClick={() => setPane(k)}>
+              {label}
+            </button>
+          ))}
         </div>
+        {pane === 'role' ? (
+          <>
+            <h3 className="taste__label">{L('어떤 일을 하세요?', 'What do you do?')}</h3>
+            <p className="taste__sub">
+              {L('고르면 회사마다 내 입장에서 볼 한 줄을 붙여요', "We'll add one line per company from your side of the table.")}
+            </p>
+            {roleChips}
+          </>
+        ) : (
+          <>
+            <p className="taste__sub">
+              {poolLive
+                ? L('고른 분야로 매일 5곳을 골라 드려요. 하나는 관심 밖에서 골라요.', 'We pick five a day from these sectors, and one from outside them.')
+                : L('3개쯤 고르면 순서가 잘 맞아요. 오늘의 묶음은 모두에게 같아요.', "About 3 works best. Today's picks are the same for everyone.")}
+            </p>
+            {sectorChips}
+            {picked.length > 0 && picked.length < SECTORS.length - 1 && (
+              <button type="button" className="text-btn taste__narrow" onClick={narrow}>
+                {L('↳ 고른 분야로 좁히기', '↳ Narrow to my sectors')}
+              </button>
+            )}
+            {narrowed && lastOpen && (
+              <p className="taste__note">
+                {L(
+                  `나머지는 숨기고, ${SECTORS.find((x) => x.key === lastOpen).label} 하나만 발견용으로 남겨요.`,
+                  `We'll hide the rest and keep ${SECTORS.find((x) => x.key === lastOpen).label} open for today's find.`,
+                )}
+              </p>
+            )}
+            <div className="taste__hidden">
+              <button type="button" className="taste__hidden-head" aria-expanded={hiddenOpen} onClick={() => setHiddenOpen(!hiddenOpen)}>
+                <span className="taste__label">{L('숨길 분야 (선택)', 'Sectors to hide (optional)')}</span>
+                {hidden.length > 0 && <span className="taste__count">{L(`${hidden.length}개`, `${hidden.length}`)}</span>}
+                <Icon name="chevronDown" size={16} className={hiddenOpen ? 'is-flipped' : ''} />
+              </button>
+              {hiddenOpen && (
+                <>
+                  <p className="taste__sub">
+                    {poolLive
+                      ? L(
+                          '숨긴 분야는 내 5곳과 오늘의 발견에서 빠지고, 탐색에서도 기본으로 가려요.',
+                          "Hidden sectors stay out of your five and today's find, and out of Explore by default.",
+                        )
+                      : L(
+                          '숨긴 분야는 오늘의 5곳에서 접어 두고, 탐색에서도 기본으로 가려요.',
+                          "We fold hidden sectors in today's five and leave them out of Explore by default.",
+                        )}
+                  </p>
+                  <div className="taste__chips" role="group" aria-label={L('숨길 분야', 'Sectors to hide')}>
+                    {chips
+                      .filter((x) => !picked.includes(x.key))
+                      .map((x) => {
+                        const on = hidden.includes(x.key)
+                        const locked = x.key === lastOpen
+                        return (
+                          <button
+                            key={x.key}
+                            type="button"
+                            aria-pressed={on}
+                            aria-disabled={locked || undefined}
+                            className={`taste__sector taste__sector--mute ${on ? 'is-muted' : ''} ${locked ? 'is-locked' : ''}`}
+                            onClick={() => toggleHidden(x.key)}
+                          >
+                            {on && <Icon name="eyeOff" size={16} />}
+                            {x.label}
+                            {on && <span className="taste__count">{L('숨김', 'hidden')}</span>}
+                            {locked && picked.length > 0 && <span className="taste__count">{L('발견용', 'for finds')}</span>}
+                          </button>
+                        )
+                      })}
+                  </div>
+                  {lastOpen && <p className="taste__nudge taste__nudge--after">{L('하나는 열어 둬요. 오늘의 발견이 여기서 와요.', "Keep one open. Today's find comes from there.")}</p>}
+                  {picked.length > 0 && <p className="taste__nudge taste__nudge--after">{L('관심으로 고른 분야는 여기 안 보여요.', "Sectors you follow aren't listed here.")}</p>}
+                </>
+              )}
+            </div>
+          </>
+        )}
       </Sheet>
     )
   }

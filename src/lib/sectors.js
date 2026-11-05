@@ -18,6 +18,9 @@ export const SECTORS = [
 export const OTHER_SECTOR = { key: 'other', label: '기타', en: 'Other' }
 export const SECTOR_KEYS = SECTORS.map((s) => s.key)
 
+/** Inline style giving an element its sector's hue as --sector (tokens.css --sd-sector-*); unknown keys fall back. */
+export const sectorHue = (key) => ({ '--sector': `var(--sd-sector-${key})` })
+
 /* Keys that were merged into a pool: stored interests and old links keep working. */
 const RENAMED = { devtools: 'infra' }
 export const canonicalSector = (key) => RENAMED[key] || key

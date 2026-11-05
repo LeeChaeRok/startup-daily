@@ -11,7 +11,7 @@ import { companyById } from './_lib/data.mjs'
 const REPO = 'LeeChaeRok/startup-daily'
 const SITE = 'https://startup-daily.vercel.app'
 const REASONS = { number: '숫자가 틀렸어요', status: '회사 상태가 바뀌었어요 (인수·폐업 등)', link: '링크가 안 열려요', other: '기타' }
-const SECTIONS = { why: '왜 지금', product: '제품', competition: '경쟁', team: '팀', funding: '투자', market: '시장', korea: '한국에서는', sources: '출처와 신뢰' }
+const SECTIONS = { why: '뜨는 근거', product: '제품·경쟁', competition: '경쟁', team: '팀', funding: '팀·투자', market: '시장', korea: '한국에서는', sources: '출처와 신뢰' }
 const PER_VISITOR = { limit: 5, windowMs: 10 * 60 * 1000 }
 const hits = new Map()
 
