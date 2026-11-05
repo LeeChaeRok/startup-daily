@@ -226,6 +226,41 @@
         "source_name": "EINPresswire.com",
         "found": "2026-11-04"
       }
+    ],
+    "iqm-quantum-2026": [
+      {
+        "date": "2026-10-29",
+        "kind": "product",
+        "title_ko": "54큐비트 프로세서 전체 얽힘 구현",
+        "title_en": "Full-chip entanglement on 54-qubit processor",
+        "detail_ko": "자동 상태 준비와 개선된 캘리브레이션 프로토콜로 54큐비트 프로세서 전체에서 양자 얽힘을 달성했으며, 클라우드 사용자도 동일한 시스템 성능을 쓸 수 있게 됐다.",
+        "detail_en": "IQM demonstrated entanglement across a complete 54-qubit processor using an automated state-preparation routine and enhanced calibration protocol, and gave cloud users access to the same system performance.",
+        "source_url": "https://investors.iqm.tech/news-events/newsroom",
+        "source_name": "IQM Quantum Computers (Business Wire)",
+        "found": "2026-11-05"
+      },
+      {
+        "date": "2026-07-02",
+        "kind": "ipo",
+        "title_ko": "나스닥 상장, 티커 IQMX",
+        "title_en": "Nasdaq listing under ticker IQMX",
+        "detail_ko": "Real Asset Acquisition Corp.와의 SPAC 합병을 완료하고 7월 2일 나스닥에서 ADS(IQMX)와 워런트(IQMX WS) 거래를 시작했다. 합병과 PIPE로 약 1억 9,870만 유로의 순수익을 확보했다.",
+        "detail_en": "IQM completed its business combination with Real Asset Acquisition Corp., and trading in its ADSs (IQMX) and warrants (IQMX WS) commenced on Nasdaq on July 2, 2026. IQM received net proceeds of approximately EUR 198.7 million from the combination and PIPE.",
+        "source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320409/0/en/IQM-Quantum-Computers-and-Real-Asset-Acquisition-Corp-complete-the-combination-trading-in-IQM-s-ADSs-and-IQM-Warrants-on-Nasdaq-Stock-Market-LLC-commences-on-July-2-2026.html",
+        "source_name": "GlobeNewswire",
+        "found": "2026-11-05"
+      },
+      {
+        "date": "2026-06-02",
+        "kind": "funding",
+        "title_ko": "PIPE 투자 1억 4,600만 달러로 증액",
+        "title_en": "PIPE upsized to over USD 146 million",
+        "detail_ko": "핀란드 대형 연기금인 Ilmarinen이 신규 투자자로 참여하면서 SPAC 합병 관련 PIPE 총액이 1억 4,600만 달러 이상으로 늘었다. 합병 전 기업가치는 약 18억 달러로 평가됐다.",
+        "detail_en": "Ilmarinen, one of Finland's largest pension insurance companies, joined as a new investor, bringing total PIPE commitments to over USD 146 million. The transaction valued IQM at a pre-money equity valuation of approximately USD 1.8 billion.",
+        "source_url": "https://iqm.tech/press-releases/iqm-a-global-leader-in-quantum-computing-and-real-asset-acquisition-corp-announce-upsized-usd-146-million-pipe-with-new-commitment-from-ilmarinen/",
+        "source_name": "IQM Quantum Computers",
+        "found": "2026-11-05"
+      }
     ]
   },
   "checked": {
@@ -242,6 +277,8 @@
     "beehiiv-2026": "2026-11-03",
     "bionaut-labs-2026": "2026-11-03",
     "codeium-2026": "2026-11-04",
-    "iontra-2026": "2026-11-04"
+    "iontra-2026": "2026-11-04",
+    "iqm-quantum-2026": "2026-11-05",
+    "chronosphere-2026": "2026-11-05"
   }
 }

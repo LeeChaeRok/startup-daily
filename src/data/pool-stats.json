@@ -1,6 +1,109 @@
 {
   "days": [
     {
+      "date": "2026-11-05",
+      "cost_usd": 1.0262,
+      "budget_stops": 0,
+      "pool": 27,
+      "featured": [
+        "gardens-interactive-2026",
+        "coherence-neuro-2026",
+        "photonpay-2026",
+        "duvo-2026",
+        "eurobotics-2026"
+      ],
+      "sectors": {
+        "health": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 27,
+          "adopted": 3
+        },
+        "robotics": {
+          "leads": 7,
+          "rejected": {
+            "country": 1,
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 39,
+          "adopted": 3
+        },
+        "mobility": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 32,
+          "adopted": 3
+        },
+        "climate": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 27,
+          "adopted": 3
+        },
+        "fintech": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 32,
+          "adopted": 3
+        },
+        "infra": {
+          "leads": 7,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 42,
+          "adopted": 3
+        },
+        "enterprise": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 27,
+          "adopted": 3
+        },
+        "consumer": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 30,
+          "adopted": 3
+        },
+        "ai": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 2
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 39,
+          "adopted": 3
+        }
+      }
+    },
+    {
       "date": "2026-11-04",
       "cost_usd": 0.9323,
       "budget_stops": 0,
