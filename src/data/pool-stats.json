@@ -1,6 +1,111 @@
 {
   "days": [
     {
+      "date": "2026-11-06",
+      "cost_usd": 0.9755,
+      "budget_stops": 0,
+      "pool": 27,
+      "featured": [
+        "gravis-robotics-2026",
+        "rivio-2026",
+        "ghost-2026",
+        "gallium-defense-2026",
+        "mesa-school-of-business-2026"
+      ],
+      "sectors": {
+        "health": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 50,
+          "adopted": 3
+        },
+        "robotics": {
+          "leads": 6,
+          "rejected": {
+            "country": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 36,
+          "adopted": 3
+        },
+        "mobility": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 38,
+          "adopted": 3
+        },
+        "climate": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 28,
+          "adopted": 3
+        },
+        "fintech": {
+          "leads": 7,
+          "rejected": {
+            "country": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 38,
+          "adopted": 3
+        },
+        "infra": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 27,
+          "adopted": 3
+        },
+        "enterprise": {
+          "leads": 7,
+          "rejected": {
+            "duplicate": 1,
+            "country": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 45,
+          "adopted": 3
+        },
+        "consumer": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 23,
+          "adopted": 3
+        },
+        "ai": {
+          "leads": 7,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 33,
+          "adopted": 3
+        }
+      }
+    },
+    {
       "date": "2026-11-05",
       "cost_usd": 1.0262,
       "budget_stops": 0,

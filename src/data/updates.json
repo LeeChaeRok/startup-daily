@@ -261,6 +261,19 @@
         "source_name": "IQM Quantum Computers",
         "found": "2026-11-05"
       }
+    ],
+    "meshy-2026": [
+      {
+        "date": "2026-07-21",
+        "kind": "funding",
+        "title_ko": "시리즈 B 약 4억 달러 유치",
+        "title_en": "Raises Nearly $400M in Series B",
+        "detail_ko": "AI 3D 생성 기업 메시가 시리즈 B 라운드에서 약 4억 달러(약 6,370억 원)를 유치했으며, 기업 가치는 15억 달러(약 2조 3,890억 원)로 평가받았다. 이는 AI 3D 분야 사상 최대 규모의 투자 유치다.",
+        "detail_en": "Meshy raised nearly $400 million in a Series B round at a $1.5 billion valuation, the largest round to date in AI 3D generation.",
+        "source_url": "https://www.prnewswire.com/news-releases/meshy-raises-nearly-400-million-at-a-1-5-billion-valuation-the-largest-round-to-date-in-ai-3d-302828384.html",
+        "source_name": "PR Newswire",
+        "found": "2026-11-06"
+      }
     ]
   },
   "checked": {
@@ -279,6 +292,8 @@
     "codeium-2026": "2026-11-04",
     "iontra-2026": "2026-11-04",
     "iqm-quantum-2026": "2026-11-05",
-    "chronosphere-2026": "2026-11-05"
+    "chronosphere-2026": "2026-11-05",
+    "inari-agriculture-2026": "2026-11-06",
+    "meshy-2026": "2026-11-06"
   }
 }
