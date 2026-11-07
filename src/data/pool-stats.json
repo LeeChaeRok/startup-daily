@@ -1,6 +1,110 @@
 {
   "days": [
     {
+      "date": "2026-11-07",
+      "cost_usd": 0.9109,
+      "budget_stops": 0,
+      "pool": 27,
+      "featured": [
+        "hypersonica-2026",
+        "harmonic-security-2026",
+        "mallow-2026",
+        "atom-inc-2026",
+        "green-voltis-2026"
+      ],
+      "sectors": {
+        "health": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 28,
+          "adopted": 3
+        },
+        "robotics": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 33,
+          "adopted": 3
+        },
+        "mobility": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 41,
+          "adopted": 3
+        },
+        "climate": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 22,
+          "adopted": 3
+        },
+        "fintech": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 27,
+          "adopted": 3
+        },
+        "infra": {
+          "leads": 7,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 26,
+          "adopted": 3
+        },
+        "enterprise": {
+          "leads": 7,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 71,
+          "adopted": 3
+        },
+        "consumer": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 26,
+          "adopted": 3
+        },
+        "ai": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 24,
+          "adopted": 3
+        }
+      }
+    },
+    {
       "date": "2026-11-06",
       "cost_usd": 0.9755,
       "budget_stops": 0,

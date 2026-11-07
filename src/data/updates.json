@@ -274,6 +274,54 @@
         "source_name": "PR Newswire",
         "found": "2026-11-06"
       }
+    ],
+    "pika-2026": [
+      {
+        "date": "2026-09-17",
+        "kind": "product",
+        "title_ko": "새로운 Pika 플랫폼 출시",
+        "title_en": "New Pika platform launch",
+        "detail_ko": "2026년 9월, Pika는 이미지 스튜디오, 캐릭터 스튜디오, 오디오 도구를 추가한 새로운 플랫폼으로 재런칭했습니다.",
+        "detail_en": "In September 2026, Pika relaunched with Image Studio, Character Studio, and audio tools.",
+        "source_url": "https://faun.dev/company/pika/",
+        "source_name": "Faun.dev",
+        "found": "2026-11-07"
+      },
+      {
+        "date": "2026-08-14",
+        "kind": "product",
+        "title_ko": "Pika 오디오 모델 4종 출시",
+        "title_en": "Pika launches 4 audio models",
+        "detail_ko": "Pika가 4개의 프론티어 오디오 기반 모델(사운드트랙, SFX, 음성, 음악)을 출시했습니다.",
+        "detail_en": "Pika launched 4 frontier audio foundation models: Soundtrack, SFX, Speech, Music.",
+        "source_url": "https://linkedin.com/company/pika-labs",
+        "source_name": "LinkedIn",
+        "found": "2026-11-07"
+      }
+    ],
+    "buildots-2026": [
+      {
+        "date": "2026-09-14",
+        "kind": "funding",
+        "title_ko": "1.3억 달러 투자 유치",
+        "title_en": "Raises $130 million",
+        "detail_ko": "빌도츠가 O.G. Venture Partners 주도로 1억3천만 달러를 투자 유치하여 누적 투자액 2억9700만 달러를 달성했습니다. 라이트스피드, 인텔 캐피탈 등이 참여했습니다.",
+        "detail_en": "Buildots raised $130 million in a round led by O.G. Venture Partners, with participation from Lightspeed, Intel Capital, and others, bringing total funding to $297 million.",
+        "source_url": "https://buildots.com/blog/funding-round-130m-control-tower-ai-buildout/",
+        "source_name": "Buildots Blog",
+        "found": "2026-11-07"
+      },
+      {
+        "date": "2026-07-15",
+        "kind": "product",
+        "title_ko": "Buildots Field 출시",
+        "title_en": "Launches Buildots Field",
+        "detail_ko": "2026년 7월 15일, 빌도츠는 이전에 인수한 Genda의 역량을 통합한 Buildots Field를 상용화했습니다. 이 제품은 건설 현장의 인력, 안전, 물류 데이터를 진척 데이터와 결합합니다.",
+        "detail_en": "On July 15, 2026, Buildots commercialized Buildots Field, integrating capabilities from its earlier acquisition of Genda, combining workforce, safety, and logistics data with progress tracking.",
+        "source_url": "https://www.prnewswire.com/news-releases/buildots-commercializes-genda-under-the-buildots-field-brand-on-track-to-bring-field-operations-into-its-construction-intelligence-platform-302826272.html",
+        "source_name": "PRNewswire",
+        "found": "2026-11-07"
+      }
     ]
   },
   "checked": {
@@ -294,6 +342,8 @@
     "iqm-quantum-2026": "2026-11-05",
     "chronosphere-2026": "2026-11-05",
     "inari-agriculture-2026": "2026-11-06",
-    "meshy-2026": "2026-11-06"
+    "meshy-2026": "2026-11-06",
+    "pika-2026": "2026-11-07",
+    "buildots-2026": "2026-11-07"
   }
 }

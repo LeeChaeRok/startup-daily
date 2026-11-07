@@ -1,0 +1,2794 @@
+{
+  "hypersonica-2026": {
+    "tagline": "Developing Europe's sovereign hypersonic strike system",
+    "category": [
+      "Defense",
+      "Hypersonic Missiles"
+    ],
+    "headquarters": {
+      "country_ko": "Germany"
+    },
+    "founders": [
+      {
+        "background": "Bachelor's in Physics from Oxford University, then a Rhodes Scholar earning a PhD in Hypersonic Systems",
+        "notable_achievement": "Led development of a European sovereign hypersonic missile in cooperation with the German and UK governments"
+      },
+      {
+        "background": "PhD in Hypersonic Engineering from Oxford University, aerospace engineer",
+        "notable_achievement": "Achieved Mach 6+ in the HS-1 test flight"
+      }
+    ],
+    "product": {
+      "summary": "Developing a hypersonic deep-strike missile system. In February 2026, the HS-1 test vehicle flew at Mach 6 with a range of over 300 km.",
+      "problem_statement": "Europe lacks long-range precision strike capabilities to counter the Russian threat and is overly dependent on the US.",
+      "solution": "Developing a hypersonic missile that is fully designed, produced, and controlled in Europe, free from ITAR (International Traffic in Arms Regulations) restrictions.",
+      "key_features": [
+        "Hypersonic flight and maneuverability above Mach 5",
+        "Modular architecture for easy subsystem replacement",
+        "Development cost reduced by over 80% compared to traditional approaches"
+      ],
+      "tech_stack_or_innovation": "Rapid, iterative startup-style development instead of traditional defense methods; from concept to test flight in nine months",
+      "target_customer": "European defense ministries (UK, Germany initially)",
+      "business_model": "Signs development contracts with defense ministries to build and test prototypes, then wins production orders"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A US startup received a $200M production order from the US Navy in September 2026; European customers face ITAR restrictions."
+        },
+        {
+          "comparison": "They have subsonic cruise missiles like Taurus and Storm Shadow; advantage in existing procurement relationships and trust, but not hypersonic."
+        }
+      ],
+      "key_differentiator": "European sovereignty (ITAR-free), 80% cost reduction in development, rapid testing cycles",
+      "moat": "Strategic investment from the German Federal Agency for Disruptive Innovation (SPRIND), UK-German government collaboration, patents and know-how in hypersonics",
+      "competitive_position_summary": "The only private startup in Europe in the hypersonic space, occupying a niche between MBDA and Castelion with proprietary technology and government backing."
+    },
+    "trending_reason": {
+      "summary": "On November 2, 2026, it raised a €100M (approximately $132M) Series B co-led by Lightspeed and General Catalyst; in February 2026, the HS-1 hypersonic test flight succeeded.",
+      "catalysts": [
+        "Growing political and social demand for European defense autonomy",
+        "Proven industry-leading cost efficiency in hypersonic technology demonstration",
+        "European momentum to reduce dependence on the US"
+      ],
+      "growth_metrics": "Valuation approximately €700M (FT, November 2026)"
+    },
+    "funding": {
+      "total_raised_note": "Total: seed €2.5M + Series A €23.3M + Series B €100M = approx. $132.6M (assuming €1 = $1.05). Per TFN.",
+      "valuation_estimate": "€700M (est.)",
+      "funding_history": [
+        {
+          "note": "Participants include TUM Venture Labs, General Catalyst, etc."
+        },
+        {
+          "note": "SPRIND (German Federal Agency for Disruptive Innovation) participated."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "European hypersonic missile market estimated at tens of billions of euros by 2030.",
+      "market_trend": "Hypersonic competition intensifying among US, China, and Russia; European defense strengthening policies accelerating rapidly.",
+      "growth_potential": "Targeting operational capability by 2029, potential to become Europe's first private hypersonic missile supplier.",
+      "risks": [
+        "Technical challenges (thermal management, guidance and control)",
+        "Competition for procurement contracts with Castelion and MBDA",
+        "Government budget fluctuations"
+      ],
+      "risk_mitigation": "Modular design reduces risk through iterative testing; ITAR-free premium encourages priority procurement by European governments."
+    },
+    "related_links": [
+      {
+        "title": "Hypersonica Official Site"
+      },
+      {
+        "title": "Sacra Analysis Report"
+      },
+      {
+        "title": "TFN Investment Article"
+      }
+    ],
+    "editor_pick_comment": "A case where Europe's imperative to secure hypersonic strike capabilities meets the remarkable development speed of a private startup."
+  },
+  "harmonic-security-2026": {
+    "tagline": "Workforce security platform that controls AI usage in real time",
+    "category": [
+      "AI Security",
+      "Enterprise Security",
+      "Data Protection"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "role": "CEO and Co-founder",
+        "background": "Previously co-founded threat intelligence company Digital Shadows, sold to ReliaQuest in 2022 for $160M",
+        "notable_achievement": "Serial entrepreneur in security, RSA Innovation Sandbox finalist"
+      },
+      {
+        "role": "CTO and Co-founder",
+        "background": "Co-founder of Digital Shadows, led data and machine learning teams",
+        "notable_achievement": "Technical leadership in AI security"
+      }
+    ],
+    "team_highlights": "90+ employees, distributed across the US and UK, primarily engineering and customer success",
+    "product": {
+      "summary": "An agent-based security platform that detects, classifies, and controls all employee AI usage. Covers browsers, desktop apps, IDEs, CLI, and MCP-based agents.",
+      "problem_statement": "As enterprises adopt generative AI, sensitive data leaks, compliance violations, and shadow AI usage have surged, but existing DLP and SASE tools fail to understand prompt context, leading to excessive false positives or inability to control.",
+      "solution": "Leverages small language models (sLM) to analyze the meaning of each AI interaction in milliseconds, blocking or alerting on data exposure risks in real time, and providing use-case-specific insights.",
+      "key_features": [
+        "Automatic classification and context awareness of all AI tasks",
+        "Real-time inline controls (block/alert/log/coach)",
+        "Full support for browsers, desktops, and agents",
+        "Ecosystem integrations including Cisco Cloud Control, Claude Compliance API, etc.",
+        "HR/finance/executive protection and anonymized reporting"
+      ],
+      "tech_stack_or_innovation": "Uses proprietary small language models (sLM) to analyze prompt meaning, achieving higher accuracy than traditional pattern-matching DLP",
+      "target_customer": "Security teams and CISOs at large and mid-sized enterprises",
+      "business_model": "SaaS subscription (per-endpoint pricing or annual license)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Prompt Security (acquired)",
+          "comparison": "Provided similar AI usage monitoring but was recently acquired by a major security vendor"
+        },
+        {
+          "name": "Aim Security (acquired)",
+          "comparison": "Offered enterprise AI security solutions but was also sold along with Prompt Security"
+        },
+        {
+          "comparison": "Relies on network-layer inspection with limited context understanding of AI tasks; Harmonic controls at the application and agent layer"
+        },
+        {
+          "comparison": "Only works within the Microsoft ecosystem and uses keyword-based DLP; Harmonic is vendor-neutral and context-based"
+        }
+      ],
+      "key_differentiator": "Semantic classification via small language models (sLM), full coverage of browsers/desktops/agents, and user privacy design that security teams don't need to reject",
+      "moat": "Proprietary sLM training data, real-time inference engine, patented MCP gateway technology, and security industry network from the Digital Shadows team",
+      "competitive_position_summary": "One of the fastest-growing independent startups in AI security, with over 100 enterprise customers, ahead of competitors in coverage and accuracy"
+    },
+    "trending_reason": {
+      "summary": "In October 2026, raised a $50M Series B led by Crosspoint Capital. Explosive enterprise demand due to surging AI usage, and as competitors Prompt Security and Aim Security were acquired, strengthened position as an independent startup",
+      "catalysts": [
+        "Rising need for security controls due to spread of generative AI in the workplace",
+        "CISOs are demanding both AI risk management and return on investment",
+        "Market gap created by competitor acquisitions, Harmonic emerges as independent player",
+        "First-mover in new market for MCP protocol-based agent security"
+      ],
+      "growth_metrics": "Used by 100+ enterprises, expanded to 90+ employees, team grew 3x year-over-year",
+      "media_mentions": [
+        null,
+        {
+          "title": "Harmonic Security raises $50M Series B to expand US and UK teams"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Total: Seed ($7M), Series A ($17.5M), Series B ($50M)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Led by Crosspoint Capital, with existing investors participating. Announced October 14, 2026."
+      },
+      "funding_history": [
+        {
+          "note": "Led by Ten Eleven Ventures"
+        },
+        {
+          "note": "Led by Next47, with Ten Eleven Ventures participating"
+        },
+        {
+          "note": "Led by Crosspoint Capital, with existing investors participating"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Of the global AI security market (est. ~$15B in 2026), workforce AI control segment: SAM ~$3B, SOM ~$200M (est. based on 100 customers)",
+      "market_trend": "As all companies accelerate AI adoption, 'AI governance' has become a top CISO priority, and existing security tools do not adequately protect AI workloads",
+      "growth_potential": "Customer base could expand 5x+ within two years; pioneering the new agent security market",
+      "risks": [
+        "Possibility of large security vendors (Zscaler, Palo Alto Networks) launching similar features",
+        "Fast pace of AI model evolution creates burden of sLM updates",
+        "Need for product changes due to regulatory changes"
+      ],
+      "risk_mitigation": "Maintains multi-cloud and multi-vendor compatibility as an independent platform, builds trust through user privacy design, and attracts talent after competitor acquisitions"
+    },
+    "related_links": [
+      {
+        "title": "Harmonic Security Official Site"
+      },
+      {
+        "title": "About Page"
+      },
+      {
+        "title": "Alastair Paterson's Series B Announcement on LinkedIn"
+      }
+    ],
+    "editor_pick_comment": "While competitors were being acquired one after another, it maintained independence and raised $50M, emerging as a 'dark horse' in the AI security market."
+  },
+  "mallow-2026": {
+    "tagline": "AI audio game speaker for children aged 4-10",
+    "category": [
+      "Children's education",
+      "Audio games",
+      "AI voice"
+    ],
+    "headquarters": {
+      "country_ko": "France"
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed"
+    },
+    "editor_pick_comment": "An AI audio speaker founded by a former digital minister, setting a new standard in the children's education market with an €11M seed."
+  },
+  "atom-inc-2026": {
+    "tagline": "Aims to improve Japan's GDP by 1% with domestically produced humanoids",
+    "category": [
+      "Humanoid Robot",
+      "Physical AI"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "PhD in Robotics and Autonomous Driving from Carnegie Mellon University, co-founder and former CTO/CHRO of autonomous driving startup Turing",
+        "notable_achievement": "Selected for MIT Technology Review 'Innovators Under 35 Japan', published over 40 academic papers"
+      }
+    ],
+    "team_highlights": "Composed of experts in AI, robotics, hardware, design, and business; built a vertically integrated development team from the early stages of founding",
+    "product": {
+      "summary": "Develops a two-armed, bipedal humanoid AI robot and its brain—a physical AI-based model—as an integrated system",
+      "problem_statement": "Japan's rapidly declining labor force, especially the reliance on humans for dangerous and repetitive tasks in manufacturing and logistics sites",
+      "solution": "Humanoid robots with human-like form replace and support on-site tasks (transport, replenishment, kitting, etc.)",
+      "key_features": [
+        "Optimized for human work environments with two-armed, bipedal locomotion",
+        "Physical AI-based environment recognition, judgment, and action generation",
+        "Continuous improvement through real-world field data collection and learning",
+        "Simultaneous optimization of hardware and AI model via vertically integrated development"
+      ],
+      "tech_stack_or_innovation": "End-to-end physical AI model, self-designed actuators (in collaboration with NSK), real-machine data collection at 'ATOM Physical AI Foundry'",
+      "target_customer": "Manufacturers, logistics and transportation companies",
+      "business_model": "Sales of humanoid robot hardware and AI-based operation services"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "US: Mass production capability and AI prowess, but ATOM differentiates with Japan-specific field specialization and precision parts supply chain"
+        },
+        {
+          "comparison": "US startup: Ahead in funding and commercialization speed, but not specialized for the Japanese market"
+        },
+        {
+          "comparison": "Logistics-focused, bipedal but low upper body utilization"
+        },
+        {
+          "comparison": "China: Fast development speed and government support, but ATOM has strengths in Japan's reliability and precision parts network"
+        }
+      ],
+      "key_differentiator": "Supply chain collaborating with Japanese domestic parts (NSK etc.), vertically integrated development specialized for manufacturing/logistics sites, national vision of 'improving Japan's GDP by 1%'",
+      "moat": "Partnerships with domestic actuator and precision machinery companies, physical AI data collection infrastructure, government (NEDO GENIAC) support",
+      "competitive_position_summary": "Leading the humanoid robot market in Japan; competes internationally with Tesla, Figure, etc., but has advantages in local specialization and parts cooperation"
+    },
+    "trending_reason": {
+      "summary": "Raised ¥3B seed investment just 10 months after founding, gaining attention alongside Japanese government and major companies' humanoid development policies",
+      "catalysts": [
+        "¥3B seed investment in May 2026 (led by ANRI, Beyond Next Ventures, JAFCO)",
+        "¥1.5B loan agreement with Mizuho Bank in August 2026 and strategic partnership with NSK",
+        "Selected for the Ministry of Economy, Trade and Industry/NEDO 'GENIAC' robot foundation model R&D project",
+        "Announced plan to raise up to ¥10B additional funding in 2027"
+      ],
+      "growth_metrics": "10 months since founding, seed stage, no concrete shipment results"
+    },
+    "funding": {
+      "total_raised": "¥4.5B",
+      "total_raised_note": "Seed ¥3B + Mizuho Bank loan ¥1.5B (as of August 2026, approx. $30M assuming ¥150/USD)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "¥3B",
+        "note": "Seed round, in yen (approx. $19M)"
+      },
+      "funding_history": [
+        {
+          "amount": "¥3B"
+        },
+        {
+          "amount": "¥1.5B",
+          "note": "Mizuho Bank loan"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global humanoid robot market projected at approx. $15B~$38B by 2030 (Goldman Sachs etc.), Japan's manufacturing/logistics automation market is several trillion yen",
+      "market_trend": "Worsening labor shortage, accelerating convergence of AI and robotics technology, expansion of humanoid development policies by governments worldwide",
+      "growth_potential": "Rapid growth expected due to high demand in Japan's manufacturing/logistics sites, government support, and synergy with domestic parts industry",
+      "risks": [
+        "Technical challenges (stability of two-armed bipedal walking, AI inference speed)",
+        "Intensifying global competition (Tesla, Figure, Chinese companies)",
+        "Mass production costs and supply chain acquisition",
+        "Delay in customer adoption speed"
+      ],
+      "risk_mitigation": "Stabilizing supply chain through cooperation with domestic parts companies like NSK, R&D funding support via NEDO/government projects, phased deployment plan"
+    },
+    "related_links": [
+      {
+        "title": "Official website"
+      },
+      {
+        "title": "Founder interview (TBS Bloomberg 1on1 Tech)"
+      }
+    ],
+    "editor_pick_comment": "Raised ¥3B seed just 10 months after founding, potential to be a game-changer for Japanese humanoids."
+  },
+  "green-voltis-2026": {
+    "tagline": "AI-powered European battery storage optimization and power trading platform",
+    "category": [
+      "Energy storage",
+      "AI trading",
+      "Power market"
+    ],
+    "headquarters": {
+      "country_ko": "Sweden"
+    },
+    "founders": [
+      {
+        "role": "Founder",
+        "background": "Former Huawei VP, 16 years of experience",
+        "notable_achievement": "Former President of Huawei Cloud China region"
+      },
+      {
+        "role": "CEO & Co-founder",
+        "background": "No information"
+      }
+    ],
+    "team_highlights": "Engineering team from Huawei, Ericsson, T-Mobile, and Rolls-Royce",
+    "product": {
+      "summary": "AI-based RTM (route-to-market) optimization platform providing one-stop service from grid connection to power trading for battery storage.",
+      "problem_statement": "The European battery storage market faces challenges in profitability due to grid connection delays, 15-minute price volatility, and complex market licensing.",
+      "solution": "Through its proprietary Aether AI trading agent and Chronos EMS, it integrates real-time price prediction, automated trading, and battery life protection.",
+      "key_features": [
+        "Multi-market simultaneous optimization (Revenue and Capacity Stacking)",
+        "Grid connection hot commissioning and pre-qualification for ancillary services",
+        "Aether AI time-series-based price prediction and automated bidding",
+        "Chronos EMS on-site control (supports grid forming)",
+        "Bankable revenue structure (revenue sharing, tolling, minimum revenue guarantee)"
+      ],
+      "tech_stack_or_innovation": "AI-native architecture, time-series-based model, holds own BRP/BSP licenses",
+      "target_customer": "Owners of independent battery storage and storage linked to renewable energy, infrastructure funds",
+      "business_model": "Revenue sharing, tolling agreements, minimum revenue guarantee, etc., a structure suitable for project financing"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Traditional EMS-based, lacks AI trading, weak European market licenses"
+        },
+        {
+          "comparison": "U.S.-centric, insufficient European market entry, no AI agent differentiation"
+        },
+        {
+          "comparison": "VPP platform, not AI-native design but integrated, does not own licenses"
+        }
+      ],
+      "key_differentiator": "AI-native from the start, holds own BRP/BSP licenses, capable of multi-market simultaneous optimization",
+      "moat": "One of only two entities holding a BRP license in Sweden, AI trading performance exceeds Clean Horizon index, investor backed by CATL",
+      "competitive_position_summary": "Leading AI-based battery trading platform in Europe, access to 10 country markets, pioneering Power-to-Compute for new markets"
+    },
+    "trending_reason": {
+      "summary": "Raised €13.5M Series A in November 2026 from Lochpine Capital (backed by CATL) as sole investor, access to 10 country markets, and expansion into Power-to-Compute business",
+      "catalysts": [
+        "Increased volatility in European power market drives demand for AI optimization",
+        "Grid connection bottlenecks for data centers cause surge in Power-to-Compute demand",
+        "Synergy from CATL connecting battery manufacturer and investor"
+      ],
+      "growth_metrics": "1.2 GWh contracted and operational, access to 10 country markets, 120 MW Power-to-Compute pipeline",
+      "media_mentions": [
+        {
+          "source": "Green Voltis official blog"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Based on 1 USD ≈ 1.07 EUR, approx. $14.45M",
+      "valuation_estimate": "$80M (est.)",
+      "latest_round": {
+        "note": "Sole investment from Lochpine Capital",
+        "notable_investors": [
+          "Lochpine Capital (backed by CATL)"
+        ]
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "The European battery storage market is expected to grow to tens of GW by 2030 (BloombergNEF, etc.), and the AI optimization services market is estimated to be 10-15% of that.",
+      "market_trend": "Increasing 15-minute price volatility in European power market, worsening grid connection bottlenecks, and growing share of renewable energy",
+      "growth_potential": "AI-based optimization can improve storage profitability by 20-30%, and expansion into the data center market provides additional growth drivers",
+      "risks": [
+        "Changes in power market regulations (e.g., license requirement changes)",
+        "Potential trading losses due to AI prediction errors",
+        "Intensifying competition with large energy companies and existing VPP players"
+      ],
+      "risk_mitigation": "Minimizes regulatory risk by holding own licenses, proven performance against Clean Horizon index, strategic partnerships including CATL"
+    },
+    "related_links": [
+      {
+        "title": "Green Voltis official website"
+      },
+      {
+        "title": "Introduction to Aether AI trading agent"
+      }
+    ],
+    "editor_pick_comment": "It is noteworthy that a founder from Huawei is targeting the European battery AI trading market with CATL funding and expanding to data centers via Power-to-Compute."
+  },
+  "portrai-2026": {
+    "tagline": "A techbio that discovers drug targets using spatial transcriptomics data and AI",
+    "category": [
+      "Spatial Biology",
+      "AI Drug Discovery",
+      "Precision Medicine"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "Graduated from Seoul National University College of Medicine (Ophthalmology specialist), Master's in Clinical Medical Science, MBA. Served as an ophthalmologist at the Armed Forces Seoul District Hospital, then gained startup experience at blockchain media KEEP!T and others.",
+        "notable_achievement": "Led series B of KRW 14.5B and the Celltrion joint research agreement since co-founding in 2021."
+      },
+      {
+        "role": "CTO",
+        "background": "Professor at the Department of Nuclear Medicine, Seoul National University Hospital. Has been conducting research on the fusion of imaging and genomics from the early days of medical AI.",
+        "notable_achievement": "Oversees AI algorithms that convert spatial transcriptomics data into target intelligence."
+      },
+      {
+        "role": "CSO",
+        "background": "Nuclear medicine specialist, professor at Seoul National University Graduate School of Convergence Science and Technology. Researches antibody and nanomaterial-based theranostics.",
+        "notable_achievement": "Leads basic science research for next-generation radiopharmaceuticals (RPT)."
+      },
+      {
+        "role": "CMO",
+        "background": "Former professor at the Department of Thoracic and Cardiovascular Surgery, Seoul National University Hospital.",
+        "notable_achievement": "Responsible for IND entry decisions in oncology programs."
+      }
+    ],
+    "team_highlights": "Four co-founders from Seoul National University College of Medicine form CEO, CTO, CSO, CMO. 26 members as per website (thevc counted 22 as of September 2026). Operates a headquarters in Seongdong-gu, Seoul and an office in Cambridge, MA.",
+    "product": {
+      "summary": "A drug discovery platform that combines spatial transcriptomics data with AI to support novel target identification, drug delivery and distribution prediction, and mechanism of action analysis. Creates a 'cancer treatment map' that reads both cell location and gene expression in patient tissue.",
+      "problem_statement": "Conventional bulk analysis shows gene expression levels but loses cell location and surrounding microenvironment (tumor microenvironment, TME) context. This often leads good candidates to fail in clinical trials.",
+      "solution": "Builds a spatial transcriptomics database (PortraiATLAS) that preserves cell location information from patient tissue samples, and layers multimodal AI (VGL Suite) and virtual tissue pharmacology (Microscopic-PK/PD) on top to quantitatively predict and validate target-drug-tissue relationships.",
+      "key_features": [
+        "PortraiATLAS: Proprietary spatial transcriptomics DB of 3,000+ tissue samples, 100M+ spatial-resolution cells, 20+ cancer and normal tissue types.",
+        "PortraiTARGET: Discovery and evaluation of novel targets for ADC, RPT, bispecific antibodies, TCE, and protein degraders.",
+        "PortraiMIX: Analyzes drug and cell locations in tissue without fluorescent labeling or gene tagging.",
+        "PortraiMOA: Mechanism of action analysis based on gene expression and cell state changes before and after drug treatment.",
+        "VGL Suite: Vision-gene-language multimodal AI that generates virtual spatial omics (Virtual ST) from H&E stained images and clinical metadata.",
+        "Portrai Insilicolab: SaaS web platform providing large-scale spatial omics visualization (Explorer) and AI-assisted analysis (PortrAIgent)."
+      ],
+      "tech_stack_or_innovation": "A self-reinforcing flywheel structure where data, prediction, and validation engines cycle. Has in-house automation capabilities from sequencing raw materials to tissue image data generation and AI analysis. Encompasses hardware and software via MOU with XCENA and CXL-based large-scale bio data infrastructure, and the adoption of Infortrend storage.",
+      "target_customer": "Global pharmaceutical companies and biotechs (Celltrion, Amgen, etc.). Developers of next-generation anticancer drugs such as ADCs, radiopharmaceuticals (RPT), and bispecific antibodies, and research institutions with demand for target discovery, biomarkers, and companion diagnostics.",
+      "business_model": "Three axes: 1) Joint research and milestone contracts with global pharmaceutical companies (Celltrion up to $87.75M / approx. KRW 125.9B); 2) Revenue from platform analysis services and SaaS (Insilicolab); 3) In-house pipeline development (HCC, adenocarcinoma, solid tumors, antibodies, peptides) for biotech upside."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global standard for spatial transcriptomics equipment and reagents (Visium/Xenium/Atera). Portrai competes at the data, AI analysis, and pharma collaboration layer, not the equipment layer."
+        },
+        {
+          "comparison": "High-multiplex spatial profiling equipment-focused (CosMx/GeoMx) vs. Portrai's patient tissue DB + AI platform focus."
+        },
+        {
+          "comparison": "Spatial biology data integration and atlas platform (US). Portrai differentiates with proprietary patient tissue DB and specialization in ADC/RPT modalities."
+        },
+        {
+          "comparison": "AI spatial biomarker analysis specialist (cumulative $60M+, Gilead ADC collaboration). Compared to capital and US network, Portrai has strengths in data scale and Asian pharma partnerships."
+        },
+        {
+          "comparison": "10x Genomics and a spatial atlas of up to 100K patient samples (announced March 2026). Public and collaborative data-focused vs. Portrai's proprietary data-based closed pipeline."
+        }
+      ],
+      "key_differentiator": "The only Korean company with both a proprietary patient tissue-based spatial transcriptomics DB (3,000+ samples, 100M+ cells) claiming world's largest scale and an ADC/RPT-specific validation engine.",
+      "moat": "As patient tissue samples and spatial data accumulate, AI prediction accuracy increases (self-reinforcing flywheel). Actual pharma joint research deal (Celltrion) and large-scale DB infrastructure create barriers for latecomers.",
+      "competitive_position_summary": "Competes indirectly via 'data + AI + partnerships' instead of equipment. Virtually the only spatial transcriptomics-based techbio for drug discovery in South Korea, carving a niche among global data and AI platform companies."
+    },
+    "trending_reason": {
+      "summary": "Based on raising KRW 14.5B in Series B in December 2025 and the Celltrion joint research agreement of up to $87.75M (approx. KRW 125.9B), it was selected for the 'Super Gap Startup Project' in the bio sector by the Korea Institute of Toxicology (KIT) in 2026, drawing attention as a leading AI drug discovery startup in South Korea.",
+      "catalysts": [
+        "Official introduction content posted on Seoul Biohub in October 2026 (2026-10-14)",
+        "Selected as one of 19 companies in the bio sector of KIT's 'Super Gap Startup Project' in April 2026",
+        "Raised KRW 14.5B in Series B in December 2025",
+        "Celltrion joint research agreement of up to $87.75M (approx. KRW 125.9B) with exclusive rights to up to 10 targets in October 2025",
+        "Won first place in Amgen-KHIDI Golden Ticket and participated in Celltrion-Seoul Biohub Open Innovation"
+      ],
+      "growth_metrics": "3,000+ patient tissue samples, 100M+ spatial-resolution cells, 20+ cancer and normal tissue types (as of 2026). Celltrion joint research agreement up to KRW 125.9B. Team of 22~26 people.",
+      "media_mentions": [
+        {
+          "source": "BioSpectator",
+          "title": "Portrai, Series B KRW 14.5B..'Spatial Transcriptomics' Drug Development"
+        },
+        null,
+        {
+          "source": "Asia Economy"
+        },
+        null,
+        {
+          "source": "DailyMed (Daum)",
+          "title": "KIT, Confirms 19 Bio Companies for 'Super Gap Startup'"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "approx. KRW 20.3B",
+      "total_raised_note": "Sum of seed KRW 800M (2021) + Series A KRW 5B (2023) + Series B KRW 14.5B (2025). CB Insights (approx. $10.54M) and PitchBook (approx. $14.5M) report different figures. USD conversion is author's calculation (est.).",
+      "valuation_estimate": "approx. KRW 40B (approx. $27M, est.)",
+      "latest_round": {
+        "amount": "KRW 14.5B",
+        "note": "WOWTALE and others denote approx. $9.8M (based on exchange rate as of 2025-12-02). No single lead investor was specified in the official announcement; seven institutions including STIC Ventures participated. Edaily reported a pre-money valuation of KRW 25.3B based on BNH Investment tranche in September 2025 (est.), final valuation undisclosed."
+      },
+      "funding_history": [
+        {
+          "amount": "KRW 800M",
+          "note": "Sehan Venture Investment KRW 500M + individual investors KRW 300M (per Edaily report). KED Global (2021.10) reported KRW 800M (approx. $670K). Lead investor not specified."
+        },
+        {
+          "amount": "KRW 5B",
+          "note": "DSC Investment, Kakao Ventures, Schmidt participated. Pre-money valuation of approx. KRW 14B (Edaily report, est.)."
+        },
+        {
+          "amount": "KRW 14.5B",
+          "note": "STIC Ventures, BNH Investment, Kakao Ventures, Energying Partners, Bon Angels, Pearl Abyss Capital, CKD Venture Capital jointly participated. Final valuation undisclosed."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Exact market size varies by source, so official figures are limited (est.). The global spatial biology and spatial transcriptomics market, estimated at several billion dollars in the mid-2020s, is a nascent market expected to grow 15-20% annually. Portrai's SAM is judged to be spending by global pharma on anticancer target discovery and biomarker development; SOM is at the level of domestic and Asian pharma and early global partnerships.",
+      "growth_potential": "The Celltrion deal validated the 'privatization of patient tissue spatial data' model. Additional partnerships via the Super Gap Project (up to KRW 600M) and open innovation programs are likely, and commercialization of the DB (SaaS) and in-house pipelines can diversify growth axes.",
+      "risks": [
+        "Intensifying competition from well-capitalized global equipment and data companies such as 10x Genomics, Bruker, Illumina, and AI atlas startups",
+        "Risk of failure and high cash burn upon entering clinical trials with in-house drug pipelines",
+        "Regulatory and ethical constraints related to patient tissue and medical data acquisition",
+        "Uncertainty around milestone achievement timing and commercialization success of joint research deals"
+      ],
+      "risk_mitigation": "Secures non-dilutive funding from platform analysis services and national R&D (Super Gap up to KRW 600M), and diversifies development risk via milestone-based joint research. Expanding partnership portfolio through global pharma open innovation programs such as Amgen Golden Ticket and Celltrion-Seoul Biohub.",
+      "market_trend": "Spatial biology is emerging as a standard workflow in drug discovery. Launches of large-scale spatial atlases and platforms, including 10x Genomics Atera (April 2026), Illumina StrataMap (June 2026), and Bioptimus STELA (March 2026), are intensifying competition, while the development of precision cancer drugs such as ADCs and RPTs is driving demand for spatial data."
+    },
+    "related_links": [
+      {
+        "title": "Portrai Official Site"
+      },
+      {
+        "title": "Portrai About (Leadership)"
+      },
+      {
+        "title": "Portrai Platform (Korean)"
+      },
+      {
+        "title": "Portrai Newsroom (Announcements)"
+      },
+      {
+        "title": "Celltrion-Portrai Joint Research Agreement (Asia Economy)"
+      },
+      null,
+      {
+        "title": "Hit News: \"A KRW 126B deal without a candidate material\"…The competitiveness of techbio 'Portrai'"
+      }
+    ],
+    "editor_pick_comment": "Portrai, which secured a KRW 125.9B deal with Celltrion by using AI to read the 'pathways' in patient tissue, shows that the next battle in AI drug discovery is not about models but about data monopoly."
+  },
+  "immunitoai-2026": {
+    "tagline": "A tech-bio startup designing antibody therapeutics from scratch using AI",
+    "category": [
+      "AI-based drug discovery",
+      "Antibody therapeutics"
+    ],
+    "headquarters": {
+      "country_ko": "India"
+    },
+    "founders": [
+      {
+        "background": "PhD in Biology from NCBS-TIFR, 10+ years of experience in antibody and immune analysis",
+        "notable_achievement": "Founded after facing difficulties in developing bee protein antibodies during PhD research"
+      },
+      {
+        "background": "Master's in Computer Science from Delhi University, former GreyOrange R&D, 10+ years of AI/ML experience",
+        "notable_achievement": "Developed first prototype in 3 weeks, later evolved into the AbInitio platform"
+      }
+    ],
+    "team_highlights": "Dr. Abhishek Mathur (former executive at Amgen, Regeneron) joined as CSO",
+    "product": {
+      "summary": "AbInitio™, a platform that designs antibodies using generative AI for desired targets and epitopes without relying on biological libraries",
+      "problem_statement": "Traditional antibody discovery relies on animal or human-derived libraries, takes 4–5 years, and makes it difficult to find antibodies binding to specific epitopes",
+      "solution": "Learns protein 3D structure data via graph neural networks to generate precisely matched antibody sequences for targets and validates experimentally in its own wet lab",
+      "key_features": [
+        "Epitope-specific design: Designing antibodies that bind to specific sites on target proteins",
+        "Drug-like properties: Considering efficacy, safety, and manufacturability at the design stage",
+        "Format flexibility: Supports various antibody formats including single-domain and multispecific",
+        "No retraining required: Once trained, the platform generates antibodies for new targets without additional training"
+      ],
+      "tech_stack_or_innovation": "Uses a proprietary mathematical transformation that converts PDB 3D structures into two graphs (atom-atom interactions) to learn binding geometries",
+      "target_customer": "Pharmaceutical companies (antibody candidate licensing and co-development), biotechs",
+      "business_model": "Licenses its own developed antibody candidates to pharma companies or provides custom antibody discovery services for customer-specified targets. Long-term plans to develop and sell its own therapeutics."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global leader in AI-based antibody design, partially utilizes immune libraries"
+        },
+        {
+          "comparison": "Designs protein therapeutics broadly with generative AI, includes modalities beyond antibodies"
+        },
+        {
+          "comparison": "AI antibody design startup with similar tech stack"
+        }
+      ],
+      "key_differentiator": "Designs antibodies purely with generative AI from scratch, without any dependence on biological sources (animal/human), and offers one-stop experimental validation in its own wet lab",
+      "moat": "Proprietary graph neural network technology specialized for epitope-specific design, over 3 years of data accumulation, and the CSO's network of major pharma companies",
+      "competitive_position_summary": "The only AI antibody design startup in India, started later than global competitors but quickly built its platform with limited capital and successfully raised a Series A"
+    },
+    "trending_reason": {
+      "summary": "Attracted attention with a $6.13M (approx. KRW 5.2B) Series A funding success in November 2025 and an in-depth feature on YourStory in October 2026. Gaining interest alongside the rapid growth of the AI drug discovery market.",
+      "catalysts": [
+        "Expansion of generative AI applications in drug development",
+        "Antibody therapeutics market projected to grow 11% CAGR",
+        "Indian biotech ecosystem's push for global expansion"
+      ],
+      "growth_metrics": "23 employees, currently pre-revenue but holds preclinical-stage candidates"
+    },
+    "funding": {
+      "total_raised_note": "₹66.98 crore (approx. $8M) per YourStory. Inc42 reported $7.93M.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Approx. $6.13M (Inc42: $6.1M). YourStory reported ₹52.14 crore."
+      },
+      "funding_history": [
+        {
+          "note": "Per YourStory, total previous seed and bridge funding was ₹14.84 crore (approx. $1.8M). Inc42 reported $1.8M. / (est.)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global antibody therapeutics market is projected at approx. $250B in 2025 and over $400B in 2030. The AI-based antibody discovery market is a rapidly growing segment within it.",
+      "market_trend": "Growing demand to drastically reduce drug development cost and time through the convergence of AI and biology. Major pharma companies are also strengthening collaborations with AI startups.",
+      "growth_potential": "Currently at preclinical stage, but the platform technology is applicable to various indications (oncology, autoimmune, blood, neurology), offering high scalability. Rapid growth potential upon signing licensing deals.",
+      "risks": [
+        "Possibility of preclinical and clinical failure",
+        "Lack of capital compared to global competitors",
+        "Uncertainty in regulatory approval process",
+        "Data dependency: Need to improve actual binding success rate of designed antibodies"
+      ],
+      "risk_mitigation": "Minimize failure cost through in-house wet lab validation, concurrently advance platform after fundraising, and establish regulatory strategy through CSO's experience."
+    },
+    "related_links": [
+      {
+        "title": "ImmunitoAI Official Website"
+      },
+      {
+        "title": "Inc42 – Series A Funding Report"
+      },
+      {
+        "title": "YourStory – In-depth Feature"
+      },
+      {
+        "title": "PitchBook Profile"
+      },
+      {
+        "title": "pi Ventures Portfolio"
+      }
+    ],
+    "editor_pick_comment": "Impressive that it designs antibodies using AI alone without animal or human antibody libraries, and the strategy of enhancing practicality through its own validation lab stands out."
+  },
+  "emm-2026": {
+    "tagline": "Smart menstrual cup that measures menstrual flow volume",
+    "category": [
+      "Menstrual Health",
+      "Wearable",
+      "Female Health Tech"
+    ],
+    "headquarters": {
+      "city": "London",
+      "country": "United Kingdom",
+      "country_ko": "United Kingdom"
+    },
+    "founders": [
+      {
+        "role": "CEO & Founder",
+        "background": "Experienced firsthand the lack of women's health tracking and founded Emm, spending 5 years on product development",
+        "notable_achievement": "Won the 2024 Innovate UK Women in Innovation Award"
+      }
+    ],
+    "team_highlights": "Composed of engineers, designers, and clinical experts; team size is undisclosed",
+    "product": {
+      "summary": "A smart menstrual cup with an ultra-thin sensor embedded in a medical-grade silicone cup that automatically measures menstrual flow and cycle patterns, providing personalized insights via an app.",
+      "problem_statement": "Existing menstrual products cannot objectively measure flow, and menstrual health data relies on self-reporting, making early disease detection difficult.",
+      "solution": "The sensor-embedded menstrual cup measures flow, cycle, and regularity in real time inside the body, and the app establishes a baseline to detect changes.",
+      "key_features": [
+        "Medical-grade silicone cuff: 16 mL sensing capacity (about 3 regular tampons' worth)",
+        "Embedded sensors: capacitive biosensor (flow rate), accelerometer (movement), temperature sensor (inside-body detection)",
+        "Charging case: stores and charges the cup, data transfer only when connected to the case (privacy)",
+        "Dedicated app: tracks daily flow, total blood loss, cycle length, and regularity, and provides personalized insights",
+        "Fit-Check Kit: a non-smart version to test size and comfort before opening the smart cup"
+      ],
+      "tech_stack_or_innovation": "The sensor detects changes in electrical capacitance of menstrual blood to measure flow and rate in real time; the world's first integration of biosignal measurement technology into a menstrual cup.",
+      "target_customer": "People who menstruate and want to objectively understand their menstrual health data and share it with healthcare providers",
+      "business_model": "Sales of smart cup + charging case hardware (initial pre-order limited to the UK), potential future monetization of app-based data analysis services"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "DivaCup / Mooncup and other regular menstrual cups",
+          "comparison": "No sensors, just collection; cannot measure flow"
+        },
+        {
+          "name": "Ava bracelet",
+          "comparison": "Wearable for menstrual cycle prediction (temperature, heart rate) but does not measure menstrual flow"
+        }
+      ],
+      "key_differentiator": "The only product that objectively and continuously measures menstrual flow, rate, and regularity, replacing existing self-reported tracking.",
+      "moat": "Technical complexity of hardware, sensor, and app integration; 5 years of development with thousands of design iterations; clinical partnerships and preparation for FDA regulatory entry",
+      "competitive_position_summary": "First mover in the new category of 'smart menstrual cup'; no competing products yet in the market"
+    },
+    "trending_reason": {
+      "summary": "Raised $9M seed investment in November 2025, with an early 2026 launch planned, drawing attention as a new wearable device in the femtech space.",
+      "catalysts": [
+        "$9M Seed round led by Lunar Ventures (Nov 2025)",
+        "Targeting UK consumer launch in 2026",
+        "Pursuing FDA approval and ISO 13485 certification"
+      ],
+      "growth_metrics": "Pre-order waitlist count is undisclosed; first revenue expected after the 2026 launch",
+      "media_mentions": [
+        {
+          "source": "Emm official blog"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Includes $9M seed round in November 2025; previous government grant (Innovate UK) amount undisclosed",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Funding $9M (approx. £6.8M); oversubscribed",
+        "notable_investors": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Harpreet Rai (former Oura CEO)"
+        ]
+      },
+      "funding_history": [
+        {
+          "note": "November 2025; led by Lunar Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Intersection of the global menstrual cup market (approx. $1B) and women's health data market; expansion into smart wearable menstrual products",
+      "market_trend": "Accelerating femtech investment; menstrual health is being recognized as a key medical area, increasing demand for objective measurement",
+      "growth_potential": "Potential for menstrual flow data to be used in diagnosis and research; high growth potential with global expansion",
+      "risks": [
+        "Cultural and personal resistance to menstrual cups",
+        "Potential delays in medical device regulatory approvals (CE, FDA)",
+        "Complexity of hardware manufacturing and quality control",
+        "Consumer expectations vs. battery and sensor lifespan"
+      ],
+      "risk_mitigation": "Offers Fit-Check Kit for adaptability testing; builds credibility through FDA and ISO certification preparation; runs consumer education marketing"
+    },
+    "related_links": [
+      {
+        "title": "Emm official website"
+      },
+      null,
+      {
+        "title": "Innovate UK profile (Jenny Button)"
+      }
+    ],
+    "editor_pick_comment": "The world's first smart cup that measures menstrual flow, impressively tackling the long-standing challenge of objectifying women's health data through hardware."
+  },
+  "peppermint-robotics-2026": {
+    "tagline": "Autonomous robots for industrial cleaning and material handling",
+    "category": [
+      "Robotics",
+      "Cleaning",
+      "Industrial automation"
+    ],
+    "headquarters": {
+      "country_ko": "India"
+    },
+    "founders": [
+      {
+        "background": "From IIT Bombay SINE. Previously co-founded Carkhana, an automotive accessories marketplace (acquired in 2013), developed the Topwheelz telematics platform, and ran Refreshed Car Care",
+        "notable_achievement": "Founded Peppermint Robotics in 2019 and captured over 65% market share in the Indian cleaning robot market"
+      },
+      {
+        "role": "Co-founder",
+        "background": "Not available"
+      },
+      {
+        "role": "Co-founder",
+        "background": "Not available"
+      }
+    ],
+    "team_highlights": "Donny Mitchell (U.S. President), Harshal Deshpande (CTO), Kiran Rao (India President), among others",
+    "product": {
+      "summary": "Designs, manufactures, and deploys autonomous floor-cleaning robots and specialized material-handling robots for industrial and commercial facilities.",
+      "problem_statement": "Difficulty in sourcing cleaning staff, repetitive and physically demanding work, and the need to maintain high hygiene standards in hospitals, factories, and other facilities.",
+      "solution": "Autonomous robots powered by Peppermint OS clean floors along pre-defined routes, with remote monitoring via a cloud dashboard.",
+      "key_features": [
+        "Real-time mapping and obstacle avoidance using computer vision and LiDAR",
+        "Ultrasonic sensors detect glass and transparent surfaces",
+        "Equipped with proprietary Peppermint OS",
+        "Passed EU GMP cleanroom qualification testing (SD20 CR model)",
+        "IEC safety certification and CE mark obtained"
+      ],
+      "tech_stack_or_innovation": "In-house Peppermint OS, computer vision, 3D LiDAR, ultrasonic sensors, cloud-based remote management",
+      "target_customer": "Facility management (FM) companies, hospitals, airports, factories, hotels, universities, and retail outlets",
+      "business_model": "Robot sales (approx. INR 20 lakh in India; $35,000–$40,000 in the U.S.) + annual maintenance contracts + parts and upgrades sales"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "China-based, offering similar indoor cleaning robots. Peppermint has an edge with cleanroom certification and in the Indian market."
+        },
+        {
+          "comparison": "Singapore-based, mainly commercial light-duty robots. Peppermint has a stronger lineup in heavy-duty industrial robots."
+        }
+      ],
+      "key_differentiator": "First to commercialize an EU GMP cleanroom cleaning robot, fully integrated in-house hardware and software, over 65% share of the Indian market",
+      "moat": "Fully in-house developed hardware and software, long-term product lifecycle support, and a base of over 100 enterprise customers",
+      "competitive_position_summary": "The No. 1 floor-cleaning robot company in India, an integrated robotics platform expanding into North America and Europe"
+    },
+    "trending_reason": {
+      "summary": "In November 2026, announced raising a INR 100 crore pre-Series B investment and plans to build a North American assembly line",
+      "catalysts": [
+        "Global labor shortages in cleaning and tightening hygiene standards",
+        "U.S. market accounts for over 50% of revenue",
+        "First-mover in the cleanroom robot niche"
+      ],
+      "growth_metrics": "Revenue grew from INR 6.26 crore in FY24 to INR 21 crore in FY26, about 6x growth in two years; present in 9 countries, with the U.S. as the largest market",
+      "media_mentions": [
+        {
+          "source": "Peppermint Robotics official blog"
+        },
+        null,
+        null,
+        null,
+        {
+          "source": "Osegi (Korean)",
+          "title": "Peppermint Robotics Secures INR 100 Crore Investment"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Per Economic Times, includes the INR 34 crore Series A. Approximately $17.7 million (assuming INR 85/USD).",
+      "valuation_estimate": "$80M (est.)",
+      "latest_round": {
+        "note": "Approximately $10.5 million. Includes new share issuance and secondary share transactions. Asiana Fund also participated."
+      },
+      "funding_history": [
+        {
+          "note": "Led by pi Ventures and Crane Venture Partners, with participation from Asiana Fund."
+        },
+        {
+          "note": "Approx. $4 million. Date and lead investor undisclosed.",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global commercial cleaning robot market estimated at approx. $12B in 2026. SAM: several billion dollars across industrial cleaning robots in North America, Europe, and Asia. SOM: early tens of billions of KRW, considering a 65% share in India and North American assembly expansion.",
+      "market_trend": "Demand for cleaning automation is rising due to labor shortages and stricter hygiene regulations, expanding into high-value segments such as cleanrooms and hospitals.",
+      "growth_potential": "Growth is expected to accelerate with the establishment of a North American production base and the launch of new products (outdoor cleaning robots) by FY28.",
+      "risks": [
+        "Low-price competition from Chinese rivals such as Gausium",
+        "Regulatory and distribution network build-out burden when entering North America",
+        "High upfront cost of robot hardware"
+      ],
+      "risk_mitigation": "Cost control through in-house manufacturing, differentiation via cleanroom certification, and reduced tariff/logistics risk via a local U.S. assembly line"
+    },
+    "related_links": [
+      {
+        "title": "Official website"
+      },
+      {
+        "title": "Official blog - investment announcement"
+      },
+      {
+        "title": "Economic Times article"
+      },
+      {
+        "title": "Hindu BusinessLine article"
+      },
+      {
+        "title": "Osegi Korean article"
+      }
+    ],
+    "editor_pick_comment": "Peppermint Robotics, which holds over 65% of the Indian cleaning robot market, is moving to expand its North American production base with a pre-Series B round."
+  },
+  "odin-robotics-2026": {
+    "tagline": "AI robot arm that retrofits existing factory lines",
+    "category": [
+      "Industrial Robots",
+      "Manufacturing Automation",
+      "AI Robots"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Dropped out of ETH Zurich electrical engineering to co-found Odin. Founded GirlsCanCode at age 13, grew it into a government-supported program, and gained robotics experience at Unit8 and others.",
+        "notable_achievement": "Founded and grew GirlsCanCode, won 5 consecutive hackathons, national science silver medal"
+      },
+      {
+        "background": "Researched Space Systems at ETH Zurich, developed rocket and satellite propulsion valves. Turned down NASA JPL offer to co-found Odin.",
+        "notable_achievement": "Built supersonic rockets and satellite propulsion valves; co-founded in YC F26"
+      }
+    ],
+    "team_highlights": "Two-person founding team. CEO is founder of GirlsCanCode; CTO from ETH Zurich space systems. Launched in October 2026 as part of YC F26 batch; headquarters in San Francisco per YC profile.",
+    "product": {
+      "summary": "AI-powered robotic arm that retrofits onto existing factory lines. Automates repetitive tasks like CNC machine tending, conveyor packing, kitting, and palletizing.",
+      "problem_statement": "Traditional factory automation requires rebuilding lines around robots; when products change or parts vary, fixed programs break down, ultimately requiring human intervention.",
+      "solution": "Handles precision-critical motions with program control and high-variability tasks with learned skills. Provides robot, gripper, sensors, and integration as a single set that attaches to existing equipment.",
+      "key_features": [
+        "Minimal retrofitting of existing factory lines",
+        "CNC machine tending automation",
+        "Conveyor picking and packing",
+        "Palletizing",
+        "Hybrid of program control and learned skills"
+      ],
+      "tech_stack_or_innovation": "Combines deterministic code, trained models, and LLMs. Repetitive routines are handled via deterministic control, variable tasks via learned skills.",
+      "target_customer": "Small to medium manufacturers. Factories with repetitive tasks such as CNC machining, food packaging, kitting, and palletizing.",
+      "business_model": "First agrees on pilot scope, pricing, and safety standards; only charges if satisfied. Then offers monthly rental or purchase options."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Offers robot subscription (RaaS) for SMB automation. Odin emphasizes learning-based flexibility and retrofitting existing lines."
+        },
+        {
+          "comparison": "Focuses on AI-powered welding robots. Odin targets machine tending, packing, and palletizing instead."
+        },
+        {
+          "comparison": "Aims for modular microfactories and adaptive manufacturing platforms. Odin's positioning is not rebuilding factories."
+        },
+        {
+          "comparison": "Uses AI vision and demonstration-based robot control to handle variable tasks. Odin offers a turnkey solution bundling robot and integration."
+        },
+        {
+          "comparison": "Company that set collaborative robot standards. Odin is closer to equipment-integrated automation than standalone robots."
+        }
+      ],
+      "key_differentiator": "Instead of factories adapting to robots, the robot adapts to the factory. Hybrid structure dividing precision motions into program control and variable tasks into learned skills.",
+      "moat": "Claims that each deployment builds a library of reusable skills and machine integrations, accelerating future factory setups. Yet to be proven.",
+      "competitive_position_summary": "Two-person team, seed stage, no public customers. Caught between traditional robot companies and AI robot startups, pilot-focused execution is the deciding factor."
+    },
+    "trending_reason": {
+      "summary": "Announced joining YC F26 batch in October 2026; product launch and YC Launch page went live between October 31 and November 1.",
+      "catalysts": [
+        "September 2026 YC seed investment",
+        "October 2026 joins YC F26 batch",
+        "October 31–November 1, 2026 official launch",
+        "Coverage as a startup by Robotics Weekly"
+      ],
+      "growth_metrics": "Number of customers, revenue, and installations not disclosed. Public demos include CNC machine tending and conveyor packing."
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Based on Dealroom. Likely on YC standard seed terms."
+      },
+      "funding_history": [
+        {
+          "note": "Based on Dealroom"
+        }
+      ],
+      "total_raised_note": "Per Dealroom, the $125K seed from YC in September 2026 is the only confirmed funding. No additional grants or loans have been identified."
+    },
+    "market_outlook": {
+      "tam_sam_som": "Exact figures undisclosed. Encompasses overlapping areas of global industrial and collaborative robot market and AI picking/packing automation; Odin narrows scope to CNC tending, packing, and palletizing for SMBs.",
+      "market_trend": "Manufacturing labor shortages and advances in AI vision and learning-based robots have spotlighted 'flexible automation without retooling lines'.",
+      "growth_potential": "Early stage makes growth curve hard to assess. No public performance metrics or references; pilot success is critical.",
+      "risks": [
+        "No public customers or performance data",
+        "Competition from traditional robot companies and AI robot startups",
+        "Integration with manufacturing sites and hardware cost burden",
+        "Long sales cycles and high proof-of-concept demands from manufacturers"
+      ],
+      "risk_mitigation": "Reduces initial adoption barriers with a pilot model that charges only upon satisfaction and monthly rental options; minimizes installation time by minimizing retrofitting."
+    },
+    "related_links": [
+      {
+        "title": "Odin Robotics official site"
+      },
+      null,
+      {
+        "title": "Samriddhi Singh YC profile"
+      },
+      {
+        "title": "Alper Sametoglu YC profile"
+      },
+      null,
+      {
+        "title": "Samriddhi Singh's LinkedIn post about joining YC"
+      },
+      {
+        "title": "Alper Sametoglu's LinkedIn post about the public launch"
+      }
+    ],
+    "editor_pick_comment": "Only the YC badge and demo video are public so far, but the positioning of 'no factory rebuilding' is clearly a valid hypothesis for SMBs."
+  },
+  "tumbleweed-2026": {
+    "tagline": "Austrian space tech making space experiments as easy as shipping a parcel",
+    "category": [
+      "Space infrastructure",
+      "Microgravity research",
+      "Space tech"
+    ],
+    "headquarters": {
+      "country_ko": "Austria"
+    },
+    "founders": [
+      {
+        "background": "Aerospace engineer. Head of Partnerships and Strategy.",
+        "notable_achievement": "Led the launch of Oasis Alpha, Austria's first commercial satellite, in July 2026, and raised Austria's largest space tech seed round (€6.9M) in November of the same year."
+      },
+      {
+        "background": "Responsible for operations, business development, and scaling.",
+        "notable_achievement": "Secured 4 paying customers (all first-time space entrants) for the first mission, contributing to a ~40% customer conversion rate."
+      },
+      {
+        "background": "Space engineer who worked at Thales Alenia Space, Rocket Lab, and TNO. Oversees hardware and mission design.",
+        "notable_achievement": "Designed and developed the Oasis Alpha platform in 9 months (5x faster than industry standard)."
+      }
+    ],
+    "team_highlights": "An engineering and operations team of 21 people, including 3 co-founders (25 at the time of the seed announcement). Members come from ESA, Thales Alenia Space, Rocket Lab, and leading engineering universities. More than a third of the team directly invested approx. €300K (total) in this seed round.",
+    "product": {
+      "summary": "A microgravity-as-a-service platform combining the Pod, a standard container for experiment hardware, with Oasis, a free-flying orbital platform. Researchers without aerospace expertise can run orbital experiments in 2–3 months for approx. €15,000–30,000.",
+      "problem_statement": "Experiments in space require years of preparation, millions of euros, dedicated aerospace staff, and complex certification processes. Pharma and biotech companies need expertise from payload preparation to launch approval, safety demonstration, and orbital operations, so experiments often never go beyond scientific curiosity.",
+      "solution": "The Pod is a lab box offering power, data connectivity, fault isolation, and optional temperature/pressure control. Thanks to the pre-certified environment, customers put standard lab equipment inside, test it at their own facility, and hand it over to Tumbleweed like shipping a parcel. In orbit, they control it remotely via a Linux-based computer, like AWS.",
+      "key_features": [
+        "Pre-certified modular Pod",
+        "Power, data communication, fault isolation, temperature/pressure control options",
+        "Linux-based remote experiment control (cloud-style operations)",
+        "Free-flying orbital platform Oasis",
+        "Lead time ~2–3 months, total customer experiment cost ~€30,000",
+        "Re-entry sample return planned on Oasis Beta in 2028"
+      ],
+      "tech_stack_or_innovation": "Inspired by standardization of maritime shipping containers, the approach pre-certifies the Pod's standard environment instead of certifying each payload individually. Oasis Alpha was developed in 9 months, 5x faster than the industry standard.",
+      "target_customer": "Researchers and research institutions in pharma, biotech, semiconductors, and advanced materials. Current customers are mainly universities and hospitals; plans call for expansion into national research institutes, CROs (contract research organizations), and industrial research labs. All 4 first-mission customers were first-time space entrants.",
+      "business_model": "Paid service per mission. The €15,000 base product includes Pod, development support, launch, and operations support (total customer experiment cost approx. €30,000). Customers control experiments remotely and receive data. Conversion rate ~40%, two-thirds inbound, and the first mission sold out with prepaid contracts one year before launch."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "US in-space manufacturing and re-entry recovery specialist. Uses its own capsule to produce pharmaceutical materials and return samples to Earth. Tumbleweed focuses not on manufacturing but on a standard experiment platform for researchers."
+        },
+        {
+          "comparison": "UK startup. Uses ForgeStar reusable satellite to pursue in-space manufacturing and sample return. Their re-entry roadmaps overlap, but Tumbleweed leads with low-cost, short-duration missions based on SpaceX rideshare."
+        },
+        {
+          "comparison": "US-listed company operating ISS-based commercial experiment services. Strengths are proven operational track record and NASA relationships. Tumbleweed differentiates on a free-flying standard platform and pre-certified container approach."
+        }
+      ],
+      "key_differentiator": "Standardization that enables experiments without space experts. Customers test equipment in their own lab, place it in the Pod as-is, and Tumbleweed handles certification, launch, and operations end-to-end. With experiment costs lowered to approx. €15,000–30,000 and lead times to 2–3 months, it targets first-time space entrants.",
+      "moat": "Container standardization, pre-certification, fault-isolation engineering expertise, 40% customer conversion, and a revenue model based on prepaid contracts. Vertical integration through re-entry (Oasis Beta) reduces dependence on external suppliers. However, at an early stage, capturing the standard is the key question.",
+      "competitive_position_summary": "Europe's most aggressive startup commercializing microgravity as a service. Austria's first commercial satellite launch and a record seed round have caught the attention of European space tech, but a scale gap remains versus well-capitalized rivals like Varda and Space Forge."
+    },
+    "trending_reason": {
+      "summary": "Four months after launching Austria's first commercial satellite (Oasis Alpha) on SpaceX Transporter-17 in July 2026, Tumbleweed raised Austria's largest-ever space tech seed round (€6.9M) on November 3. With a roadmap of three missions in 2027 and re-entry in 2028, it has emerged as a dark horse in European space tech.",
+      "catalysts": [
+        "2026-07-07: Oasis Alpha launch (SpaceX Transporter-17, Austria's first commercial satellite)",
+        "2026-11-03: €6.9M seed round — Austria's largest space tech seed to date",
+        "2027: plans for 3 missions and 10+ customers; 2028: Oasis Beta re-entry sample return announced"
+      ],
+      "growth_metrics": "All 4 first-mission customers were first-time space entrants; sold out with prepaid payment one year before launch. Customer conversion ~40%, two-thirds inbound. Total experiment cost ~€30,000, lead time 3–4 months. Team grew from 21 to 25 people."
+    },
+    "funding": {
+      "total_raised_note": "Based on the disclosed seed round. Early (pre-seed-level) investment involving Prototype Capital and others is undisclosed, so actual cumulative funding could be larger. At a self-calculated EUR/USD rate of about 1.116, this is roughly $7.7M, aligning with the related interview podcast title ($7.7M or Nothing).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Austria's largest space tech seed. Law firm Schoenherr represented lead investor Pact VC. A large number of team members (more than 1/3) added approx. €300K in investment."
+      },
+      "funding_history": [
+        {
+          "note": "Led by Pact VC, with participation from Vanagon Ventures, Prototype Capital, EWOR, and international investors and angels. More than a third of team members added approx. €300K in investment."
+        },
+        {
+          "stage": "Pre-seed (est.)",
+          "amount": "Undisclosed",
+          "note": "Only confirmed that Prototype Capital participated as an early investor; size and timing undisclosed."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The overall space economy is estimated at hundreds of billions of dollars, but the microgravity R&D services Tumbleweed targets is an early-stage market arising from experiment budgets of pharma, biotech, semiconductor, and advanced-materials research institutions and first-time space entry demand. SAM is estimated at hundreds of millions of dollars (est.).",
+      "market_trend": "Rideshare launches like SpaceX Transporter are lowering costs, and commercial space station transitions such as Axiom and Starlab are becoming visible, making routine orbital experiments a key industry topic. Demand for bio and materials R&D validation, such as protein crystallization and semiconductor epitaxy, is growing.",
+      "growth_potential": "With 3 missions and 10+ customers confirmed for 2027, and Oasis Beta adding re-entry sample return in 2028, the customer base is expected to expand from universities and hospitals to national research institutes, CROs, and industrial research labs.",
+      "risks": [
+        "Launch or orbital mission failure would be a fatal blow to early credibility",
+        "2028 re-entry carries technical and regulatory risks (possible approval delays)",
+        "With €6.9M seed funding, a follow-on round is needed to run 2027 missions and Oasis Beta development in parallel",
+        "Scale gap with well-capitalized competitors like Varda",
+        "Burden of running simultaneous missions with an organization of 21–25 people"
+      ],
+      "risk_mitigation": "Payload safety is standardized through pre-certification and fault isolation, and the first mission operated with prepaid contracts to secure cash flow. Re-entry is being developed stepwise with simulations and verification tests, while an engineering team from ESA and Rocket Lab controls mission risk."
+    },
+    "related_links": [
+      {
+        "title": "Tumbleweed official website"
+      },
+      null,
+      null,
+      null,
+      {
+        "title": "Austria in Space profile: Tumbleweed"
+      },
+      {
+        "title": "Podcast: $7.7M or Nothing (Julian Rothenbuchner)"
+      }
+    ],
+    "editor_pick_comment": "The problem definition — turning space experiments into something like sending a parcel, not a special technology — is clear, and with a 40% conversion rate, the market has started to respond."
+  },
+  "yuma-energy-2026": {
+    "tagline": "Operates a battery swapping network for electric two-wheelers",
+    "category": [
+      "Battery Swapping",
+      "EV Charging Infrastructure"
+    ],
+    "headquarters": {
+      "country_ko": "India"
+    },
+    "founders": [
+      {
+        "background": "Over 20 years of experience in the automotive industry, driving innovation and growth across various product areas",
+        "notable_achievement": "Led Yuma Energy to achieve 60 million battery swaps"
+      }
+    ],
+    "product": {
+      "summary": "Yuma Energy operates a battery swapping network (BaaS) for electric two-wheelers and three-wheelers. Based on its self-designed and manufactured battery packs and charging units, it provides swaps in under 2 minutes at over 400 stations.",
+      "problem_statement": "Indian delivery riders spend 20-30 minutes charging EVs, reducing uptime, and high upfront battery costs create a barrier to adoption.",
+      "solution": "Through a subscription or pay-per-use battery swapping service, enables riders to swap for a fully charged battery in under 2 minutes with no upfront cost.",
+      "key_features": [
+        "Battery swap in under 2 minutes",
+        "Self-designed and manufactured battery packs and charging units",
+        "400+ swap stations, 100,000 batteries in operation",
+        "Integrated with Yulu and 5+ other fleets, and 10+ vehicle platforms"
+      ],
+      "tech_stack_or_innovation": "Hardware-software integrated stack including battery management system (BMS) and network operations software, vertically integrated capabilities to design and manufacture battery packs and charging units",
+      "target_customer": "Delivery riders, fleet operators (logistics, e-rickshaws), EV OEMs (adopting battery standard)",
+      "business_model": "Pay-per-use/subscription-based battery swapping fees (BaaS), supply of battery packs to OEMs"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A competitor with stations in over 400 cities in India, raised $13M in debt in July 2026. Yuma differentiates via network density and in-house battery manufacturing."
+        },
+        {
+          "comparison": "Operates in about 20 Indian cities and partners with various two-wheeler OEMs. Pursuing broader geographic expansion compared to Yuma."
+        },
+        {
+          "comparison": "Taiwan-based global battery swapping leader. Pushing into the Indian market, but Yuma has strengths in local manufacturing and Magna's support."
+        }
+      ],
+      "key_differentiator": "Vertically integrated structure that designs and manufactures battery packs and charging units in-house, and a network offering a single standardized battery format across multiple OEMs",
+      "moat": "In-house battery design and manufacturing capabilities, Magna's global supply chain and capital support, initial demand secured through the Yulu fleet",
+      "competitive_position_summary": "In the Indian battery swapping market, Yuma is expanding its share by diversifying customers beyond Yulu, and focusing on improving profitability through a network density strategy."
+    },
+    "trending_reason": {
+      "summary": "On August 31, 2026, secured a $35M Series A investment from global auto parts company Magna International. Achieved cumulative 60 million swaps, targeting EBITDA breakeven by FY27.",
+      "catalysts": [
+        "Rapid growth of India's gig economy driving demand for electric two-wheelers",
+        "Additional investment from Magna and enhanced global credibility",
+        "Diversification of fleet customers beyond Yulu reduces dependency"
+      ],
+      "growth_metrics": "60M+ battery swaps, 100,000 batteries, 400+ stations, operations in 18 cities, FY26 revenue approx. ₹1B (est.)"
+    },
+    "funding": {
+      "total_raised_note": "Includes Magna's $52M investment at the time of JV formation in 2022 (per TechCrunch)",
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        {
+          "note": "Magna's initial investment when forming the joint venture (JV) with Yulu"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "India's electric two-wheeler market is projected to grow at over 30% CAGR through 2030. TAM for swap-capable vehicles is millions of units; Yuma's current SAM is approx. 2 million delivery riders across 18 cities (est.).",
+      "market_trend": "India's government EV subsidy policies and expansion of the delivery economy are driving BaaS demand. Swapping has an edge over fast charging in terms of uptime.",
+      "growth_potential": "Currently only 10-15% of gig worker vehicles are electric, leaving large conversion headroom. Yuma is improving profitability with a target of EBITDA breakeven in FY27.",
+      "risks": [
+        "High capital intensity to build battery swapping infrastructure",
+        "Dependence on Yulu fleet (reduced to 15-20% but still a key customer)",
+        "Possibility of OEMs launching their own battery swapping networks"
+      ],
+      "risk_mitigation": "Diversification of fleet customers beyond Yulu (target 40-50% by 2028), improving unit economics via network density strategy, and attracting OEM partnerships through in-house battery manufacturing"
+    },
+    "related_links": [
+      {
+        "title": "Yuma Energy Official Website"
+      }
+    ],
+    "editor_pick_comment": "A leading Indian BaaS startup that achieved 60 million battery swaps in the electric two-wheeler battery swapping market, attracting additional investment from global auto parts company Magna."
+  },
+  "mana-battery-2026": {
+    "tagline": "A startup reducing China dependence with anode-free sodium-ion batteries",
+    "category": [
+      "Battery",
+      "Energy Storage",
+      "Materials"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "background": "PhD, formerly at Tesla and SiILion. Spin-off through CU Boulder's startup support program.",
+        "notable_achievement": "Served as battery technology leader at Tesla, developed anode materials at SiILion"
+      },
+      {
+        "background": "PhD, developed core technology at CU Boulder lab. From Professor Chunmei Ban's research team.",
+        "notable_achievement": "Co-inventor of patents for anode-free sodium-ion battery cells and electrolytes"
+      }
+    ],
+    "team_highlights": "Executives: Heather A.S. Platt (former Director of Materials Engineering at Solid Power), Sam Jaffe (VP of Business Development, formerly at Addionics etc.), Frederik Morgenstern (VP of Cell Engineering, formerly at BMW). Advisors: Chunmei Ban (Professor at CU Boulder, co-founder), Albert Wenger (Union Square Ventures), Doug Campbell (former CEO of Solid Power).",
+    "product": {
+      "summary": "Develops and sells sodium (Na)-based anode-free battery cells and electrolytes. Compatible with existing lithium-ion processes, reducing raw material costs by 40%.",
+      "problem_statement": "Lithium-ion batteries relying on scarce minerals like lithium and cobalt face price volatility, high dependence on Chinese supply chains, and safety issues such as fire risk.",
+      "solution": "Uses only earth-abundant sodium, iron, and aluminum. Completely removes anode active material to maintain energy density while drastically reducing costs. Its proprietary electrolyte prevents thermal runaway and operates across a wide temperature range of -40°C to 60°C.",
+      "key_features": [
+        "Anode-free cell architecture: sodium metal forms during initial charge without anode active material",
+        "BOM (raw material cost) 40% lower than LFP (lithium iron phosphate)",
+        "Safe with no thermal runaway (self-extinguishing electrolyte)",
+        "Drop-in compatible with existing lithium-ion production lines with minimal changes",
+        "Uses only domestically mineable raw materials in the US (sodium, iron, aluminum)"
+      ],
+      "tech_stack_or_innovation": "Custom liquid electrolyte molecular design for sodium-ion batteries. Anode-free structure eliminates hard carbon anode, increasing energy density and reducing cost. Patent-pending electrolyte composition.",
+      "target_customer": "Defense, aerospace, rail, data center backup, industrial UPS, grid storage, and low-cost EV manufacturers",
+      "business_model": "Sells battery cells and electrolytes as finished products, or via licensing and supply agreements through partnerships with manufacturers. Currently co-developing with Saft (a TotalEnergies subsidiary)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "US-based, Prussian blue-based sodium-ion battery. Uses hard carbon, not anode-free, mainly focused on data center backup market."
+        },
+        {
+          "name": "Faradion (owned by Reliance)",
+          "comparison": "UK-based sodium-ion pioneer, uses hard carbon anode. Has a license agreement with China's CATL. Mana emphasizes cost advantage from anode-free design."
+        },
+        {
+          "name": "CATL (China)",
+          "comparison": "World's largest lithium-ion battery maker, announced mass production of sodium-ion batteries in 2023. Mana differentiates by reducing China dependence and building US supply chain."
+        }
+      ],
+      "key_differentiator": "Anode-free structure and self-extinguishing electrolyte drastically lower raw material costs and ensure safety. All key materials can be sourced domestically (US).",
+      "moat": "Core patents (anode-free sodium-ion cells and electrolytes), joint development agreement with TotalEnergies group (Saft), key personnel from Tesla and Solid Power, CU Boulder research network.",
+      "competitive_position_summary": "The sodium-ion battery market is still early stage. Mana aligns with the US energy independence trend by emphasizing 'de-China' and cost reduction. Collaboration with Saft positions it favorably to accelerate commercialization."
+    },
+    "trending_reason": {
+      "summary": "Raised a $10.15M Seed round led by Voyager Ventures and Union Square Ventures in October 2026. Signed a joint development agreement with TotalEnergies subsidiary Saft in August 2026. Attracting attention as a US next-generation battery startup responding to China's dominance in the battery supply chain.",
+      "catalysts": [
+        "US government's IRA (Inflation Reduction Act) policy to foster domestic battery supply chain",
+        "Increasing demand for alternative batteries due to lithium and cobalt price volatility",
+        "Emerging need for high-safety batteries in data center and defense sectors",
+        "Entering industrial validation stage through joint development with Saft (TotalEnergies)"
+      ],
+      "growth_metrics": "Shipped 5Ah anode-free prototype cells, supplying multi-kg level electrolyte samples. Cumulative total raised $14.1M (including grants)."
+    },
+    "funding": {
+      "total_raised_note": "Seed round of $10.15M including approx. $1.85M in grants and non-dilutive funding (Source: Battery Notes)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Per WSJ report; PitchBook records $10.2M"
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Convertible notes and grants (per WSJ Pro). Early funding through CU Boulder Venture Partners.",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global battery market (approx. $120B in 2026). SAM: Sodium-ion battery market (approx. $2B est. in 2026, forecast $10B by 2030). SOM: US defense, stationary storage, UPS market (focus).",
+      "market_trend": "Movements to foster domestic battery industry to reduce dependence on Chinese supply chain. Sodium-ion batteries emerge as promising LFP alternatives due to low cost and safety.",
+      "growth_potential": "Likely to benefit from IRA grants, aligned with US government energy security policy, expecting rapid growth. Target mass production of 10Ah-class cells by 2028.",
+      "risks": [
+        "Technology scale-up risk (difficulty in mass production of anode-free structure)",
+        "Mass production speed of Chinese competitors (e.g., CATL) in sodium-ion batteries",
+        "Potential loss of cost competitiveness of sodium-ion if lithium prices fall",
+        "Delays in customer certification and supply contract signing"
+      ],
+      "risk_mitigation": "Secures manufacturing capability through joint development with Saft (TotalEnergies). US-based supply chain meets IRA requirements. Proprietary electrolyte patents differentiate from competitors. Military/defense contracts prioritize performance and safety over price, offsetting risk."
+    },
+    "related_links": [
+      {
+        "title": "Mana Battery Official Website"
+      },
+      {
+        "title": "CU Boulder Venture Partners – Mana Battery Introduction"
+      },
+      null,
+      null,
+      {
+        "title": "PitchBook – Mana Battery Profile"
+      }
+    ],
+    "editor_pick_comment": "The attempt to fundamentally reduce dependence on the Chinese battery supply chain with anode-free sodium-ion batteries; the joint development with Saft will be a watershed for commercialization."
+  },
+  "east-africa-foods-2026": {
+    "tagline": "An agricultural distribution infrastructure connecting smallholder farmers in East Africa with urban retailers",
+    "headquarters": {
+      "country_ko": "Tanzania"
+    },
+    "employee_count": "201-500 (est.)",
+    "founders": [
+      {
+        "background": "A Tanzanian native raised in a household where his mother ran a food business. Witnessing firsthand the market access challenges faced by smallholder farmers, he founded the company in 2013.",
+        "notable_achievement": "Grew the company into Tanzania's leading agricultural distribution platform and successfully raised a Series B round in 2026."
+      },
+      {
+        "background": "Joined the company early on, overseeing financial strategy and fundraising.",
+        "notable_achievement": "Contributed to attracting major impact investors such as PIDG, Oikocredit, and FMO."
+      }
+    ],
+    "product": {
+      "summary": "An end-to-end agri-food supply chain platform that purchases agricultural produce directly from smallholder farmers, then grades, stores, processes, and distributes to urban retailers, hotels, and restaurants.",
+      "problem_statement": "In East Africa, up to 40% of food produced is lost before reaching consumers. This stems not from farming issues but from a lack of post-harvest storage, transport, and processing infrastructure.",
+      "solution": "Built an integrated logistics network with its own collection centers, refrigerated trucks, ripening and milling facilities, and a digital ordering system, cutting out middlemen and reducing loss rates by one-third.",
+      "key_features": [
+        "Instant mobile money payments to farmers and guaranteed price transparency",
+        "Processing and packaging under proprietary brands (Onja, Golden Banana, etc.)",
+        "A data-driven logistics system handling over 4,000 deliveries per day",
+        "Supplementary climate-smart agriculture training programs"
+      ],
+      "tech_stack_or_innovation": "A self-developed digital platform connecting farms, branches, and retailers, operating a cloud-based inventory and delivery management system.",
+      "target_customer": "Smallholder farmers (suppliers) and B2B buyers including urban retailers, supermarkets, hotels, and restaurants.",
+      "business_model": "Margins on produce trading and fees for processing and distribution services. Revenue from sales of proprietary branded products."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Kenya-based similar farm-to-retail platforms, but East Africa Foods owns deeper physical infrastructure (collection, storage, processing), resulting in higher operational efficiency."
+        }
+      ],
+      "key_differentiator": "A vertically integrated model that owns and operates the entire process from collection to final delivery. Directly connecting farms and retailers without middlemen reduces costs and strengthens quality control.",
+      "moat": "Physical infrastructure including collection centers, cold-chain logistics, and processing facilities, plus network effects from registered farmers and retailers. Local regulations and land-use rights create entry barriers.",
+      "competitive_position_summary": "Leading integrated agricultural distributor in the Tanzanian market, expanding across East Africa through entry into Kenya."
+    },
+    "trending_reason": {
+      "summary": "In October 2026, the company raised a $40M Series B round ($26M equity plus debt), garnering attention. Led by development finance institutions (PIDG, FMO) and impact investor Oikocredit, it focuses on building a climate-resilient agri-food supply chain.",
+      "catalysts": [
+        "Increased investment in African food security by the World Bank and various governments",
+        "Tanzania's agricultural modernization policy",
+        "Growing interest in carbon emission reduction through reduced food loss"
+      ],
+      "growth_metrics": "28,000+ registered smallholder farmers, 10,000+ urban retail outlets, 4,000+ daily deliveries, one-third reduction in food loss within the network. Targeting 100,000 farms."
+    },
+    "funding": {
+      "total_raised_note": "Total raised includes Series B equity of $26M plus debt from the Schmidt Family Foundation.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Equity portion. Total round size $40M including debt."
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "Agriculture accounts for approximately 30% of Tanzania's GDP; the entire East African agricultural market is estimated at tens of billions of dollars. EAF is currently expanding to serve 100,000 farms.",
+      "market_trend": "Urbanization and a growing middle class in Africa are driving surging demand for formalized food supply chains. International development funding for climate-resilient infrastructure is increasing.",
+      "growth_potential": "Starting with entry into neighboring countries like Kenya, the company can expand across sub-Saharan Africa. The B2B platform built on proprietary logistics infrastructure has high scalability.",
+      "risks": [
+        "Low digital literacy among smallholder farmers and reliance on cash transactions",
+        "Crop instability due to climate change",
+        "Capital requirements from large-scale infrastructure investment"
+      ],
+      "risk_mitigation": "Driving digital adoption through real-time pricing and mobile money payments. Improving productivity and resilience via climate-smart agriculture training. Securing long-term capital using international development finance."
+    },
+    "related_links": [
+      {
+        "title": "East Africa Foods Official Website"
+      },
+      {
+        "title": "elea Foundation Portfolio Introduction"
+      },
+      {
+        "title": "EKTA Partners Deal Introduction"
+      }
+    ],
+    "editor_pick_comment": "A vertically integrated model tackling both farmer income and food loss simultaneously in infrastructure-poor East Africa."
+  },
+  "enza-group-2026": {
+    "tagline": "Startup supplying payment infrastructure to African banks and fintechs",
+    "category": [
+      "Payment infrastructure",
+      "B2B fintech"
+    ],
+    "headquarters": {
+      "country_ko": "United Arab Emirates"
+    },
+    "founders": [
+      {
+        "role": "Group CEO · Co-founder",
+        "background": "25 years in the payments industry. As Deputy Chief Executive of MSCC, grew the digital payments business that became the foundation of the EMP Group, and served as Group Processing Managing Director at Network International.",
+        "notable_achievement": "The EMP Group provided payment services to more than 190 banks across Africa and was sold to Network International for $350M in 2016."
+      },
+      {
+        "role": "Group COO · Co-founder",
+        "background": "18 years in the Middle East and African payments industry. Served as COO and CCO of ACET Processing, Regional CEO of the EMP Group, and Managing Director for South Africa and PAOPS at Network International. Holds an MBA from the University of Cape Town.",
+        "notable_achievement": "Played a leading role in the 2016 sale of the EMP Group to Network International ($350M)."
+      }
+    ],
+    "team_highlights": "The board includes Andrew Key (former executive at Barclays, Mastercard and Elavon, with London Stock Exchange IPO experience) as Executive Director, and Mark Richards as Chairman. Headcount is 65 (according to PitchBook). Headquartered in Abu Dhabi (UAE), with offices in Egypt, South Africa, Ghana and Nigeria. Some outlets, including FWDStart, refer to it as 'Egypt's Enza'. The company's official materials give 2023 as the founding year, while PitchBook and Business Tech Africa list 2022.",
+    "product": {
+      "summary": "A B2B2B payment infrastructure that lets banks and fintechs build card issuance, digital wallet and merchant acceptance services without connecting to each payment network separately. It integrates international card networks such as Visa and Mastercard, local card brands such as Verve, AfriGo and Meeza, and real-time payment systems such as NIBSS, InstaPay and PayShap into a single integration.",
+      "problem_statement": "Each time an African bank launches a new payment product, it must connect and maintain separate links to international card networks, domestic payment systems and mobile money. Legacy infrastructure lengthens time to market and raises costs.",
+      "solution": "A single integration (API) provides access to all payment networks, along with local payment infrastructure that meets each country's central bank regulatory requirements.",
+      "key_features": [
+        "Connections to international card networks (Visa and Mastercard)",
+        "Connections to local card brands (such as Verve in Nigeria, AfriGo in South Africa and Meeza in Egypt)",
+        "Real-time account-to-account payment integrations (NIBSS in Nigeria, PayShap in South Africa and InstaPay in Egypt)",
+        "Support for card issuance, digital wallets and merchant payment acceptance",
+        "Regulatory compliance through market-specific licenses (such as the PSP Enhanced license in Ghana)"
+      ],
+      "tech_stack_or_innovation": "Positions itself on a modern architecture as an alternative to fragmented legacy stacks at individual banks, promising lower operating costs and faster launches. Specific technology stack details are not available from public sources.",
+      "target_customer": "Banks and fintechs in 12 African countries. The direct customers are financial institutions, not merchants or consumers.",
+      "business_model": "Transaction-volume-based fees processed through the platform. According to the company, monthly transaction volume under contract is growing 35–40% per month."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A leading Nigeria-based payment switching and infrastructure company. Its business scope, including bank-to-merchant connections and card switching, overlaps most directly with Enza."
+        },
+        {
+          "comparison": "One of Africa's largest payment startups. It is strong in merchant payment acceptance but is expanding into infrastructure and banking, creating a competitive overlap."
+        },
+        {
+          "comparison": "The former employer of the founders and the largest payment processing company in the Middle East and Africa. It is a legacy infrastructure provider on which existing banks rely, and Enza is positioning itself as a replacement for it."
+        }
+      ],
+      "key_differentiator": "Rather than selling directly to merchants as Paystack, Flutterwave and Moniepoint do, it embeds in banks' and fintechs' internal technology stacks under a B2B2B model. By connecting multiple payment networks through one integration, it reduces banks' time to market and costs.",
+      "moat": "High switching barriers from banks' infrastructure transition costs and regulatory oversight, the barrier of obtaining central bank licenses in each country, and the founding team's existing bank network (more than 190 banks from the EMP era) act as entry barriers.",
+      "competitive_position_summary": "Still at an early stage (currently 12 countries), but focused on technology that banks want to buy, it targets the space Interswitch and Flutterwave have not directly pursued. According to the company, monthly transaction volume under contract is growing 35–40% per month."
+    },
+    "trending_reason": {
+      "summary": "On November 3, 2026, the company announced a Seed+ round of US$6M. 4DX Ventures led the round, with UK development finance institution BII joining as a new investor, and existing investors Quona Capital and Algebra Ventures also participated in the follow-on.",
+      "catalysts": [
+        "2026-11-03: Announced $6M Seed+ round — led by 4DX Ventures, with BII joining as a new investor",
+        "2026-09: Obtained the PSP Enhanced license from the Bank of Ghana and began commercial operations in Ghana",
+        "Banks' demand for infrastructure modernization as real-time payment systems (NIBSS, InstaPay and PayShap) spread across Africa",
+        "A Series A of $20M (early 2027) is listed as 'Upcoming' on the PitchBook profile, signaling a follow-on round"
+      ],
+      "growth_metrics": "Secured banks and fintechs as customers in 12 countries. Monthly transaction volume under contract is growing 35–40% per month (according to the company). Headcount is 65 (according to PitchBook).",
+      "media_mentions": [
+        {
+          "source": "enza official press release"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "The disclosed amount is the $6M Seed+ round in 2026 (led by 4DX Ventures). The amount of the 2025 Seed round (co-led by Quona Capital and Algebra Ventures) is undisclosed, so total capital raised is higher than this figure.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "stage": "Seed+ (Seed extension)",
+        "note": "Led by 4DX Ventures. BII joined as a new investor, and Quona Capital and Algebra Ventures participated in the follow-on. Valuations for individual rounds have not been disclosed."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Co-led by Quona Capital and Algebra Ventures. Specific amount not disclosed."
+        },
+        {
+          "note": "Led by 4DX Ventures, with BII joining as a new investor and existing investors following on."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Total payment infrastructure spending by African banks and fintechs. SAM: Demand for payment network integration and license-based infrastructure in the 12 countries Enza operates in. SOM: Building an early revenue base by growing monthly transaction volume under contract at 35–40% per month. Specific TAM and SAM figures are not available from public sources (est.).",
+      "market_trend": "As central banks across Africa develop real-time payment systems (NIBSS, InstaPay and PayShap) and local card brands, banks are shifting toward buying technology rather than building it in-house.",
+      "growth_potential": "New market entries are planned, beginning with the commercial launch in Ghana, and PitchBook lists an upcoming $20M Series A. There is substantial room to expand beyond 12 countries into additional markets where licenses are obtained.",
+      "risks": [
+        "Intensifying competition from Interswitch, Flutterwave and global payment infrastructure providers",
+        "Delays in or tightening of central bank license approvals in individual markets",
+        "Given the transaction-based revenue model, revenue may be limited while transaction volumes are still small",
+        "Prolonged bank decisions on infrastructure transition and high switching costs under existing legacy contracts"
+      ],
+      "risk_mitigation": "Manages regulatory risk by obtaining licenses sequentially by country (as in Ghana), and reduces dependence on any single market by operating across 12 countries. The founding team's network with more than 190 banks from the EMP era could shorten the first customer acquisition cycle."
+    },
+    "related_links": [
+      {
+        "title": "Enza official website"
+      },
+      {
+        "title": "Seed+ round press release"
+      },
+      null,
+      {
+        "title": "Business Tech Africa article"
+      },
+      {
+        "title": "PitchBook profile"
+      }
+    ],
+    "editor_pick_comment": "The positioning of targeting banks themselves as customers through B2B2B, rather than competing for merchants, combined with the founding team's $350M exit track record, earned investor confidence in this round."
+  },
+  "jpyc-2026": {
+    "tagline": "Japan's first registered issuer of yen-pegged stablecoins",
+    "category": [
+      "Stablecoin",
+      "Payment infrastructure"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "employee_count": "Undisclosed",
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "Information not confirmed",
+        "notable_achievement": "Founded JPYC and led the issuance of Japan's first registered stablecoin."
+      }
+    ],
+    "product": {
+      "summary": "Issues and manages JPYC, a fiat-backed stablecoin pegged to the Japanese yen, and provides issuance and exchange services through its own platform, JPYC EX.",
+      "problem_statement": "The absence of a legally regulated yen stablecoin in Japan, and the need for blockchain-based instant settlement in business and daily payments.",
+      "solution": "As an electronic payment instrument registered under Japan's Payment Services Act, JPYC maintains a fixed value of 1 JPYC = 1 yen, is issued on multiple chains, and provides reliable digital yen to corporate and individual users.",
+      "key_features": [
+        "1:1 yen pegging",
+        "Japanese government-registered electronic payment instrument",
+        "Supports Kaia, Ethereum, Polygon, and Avalanche chains",
+        "Offline payment proof-of-concepts, including logistics and convenience stores",
+        "B2B salary and expense payment solution"
+      ],
+      "tech_stack_or_innovation": "Blockchain-based; operates issuance and exchange platform JPYC EX; system compliant with the Payment Services Act.",
+      "target_customer": "Logistics companies, retail stores, Web3 projects, and individual users",
+      "business_model": "Issuance and exchange fees, fees for corporate solutions, and consulting"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Trust bank-based, launched in June 2026; started later than JPYC but is supported by a major financial group."
+        },
+        {
+          "name": "MUFG, SMBC, and Mizuho joint-venture stablecoin",
+          "comparison": "Being jointly developed by the three megabanks, with scale and credibility as strengths, but not yet launched."
+        }
+      ],
+      "key_differentiator": "Japan's first registered stablecoin regulatory premium, exclusive partnership with logistics giant AZ-COM Maruwa Holdings, and actual payment proof-of-concept at Lawson convenience stores.",
+      "moat": "Credibility through regulatory compliance, real-world business use cases, and alignment with the government's 'on-chain finance' policy.",
+      "competitive_position_summary": "Holds the most advanced regulatory approvals and real-world use cases in Japan's stablecoin market, but competition is expected to intensify as bank-affiliated competitors launch."
+    },
+    "trending_reason": {
+      "summary": "Raised approx. ¥6B through a Series B extension, partnered with logistics giant AZ-COM Maruwa Holdings to use JPYC for transport partner payments, succeeded in a Lawson convenience store payment trial, and received government policy support.",
+      "catalysts": [
+        "Secured a large-scale logistics use case through a capital alliance with AZ-COM Maruwa Holdings",
+        "Successfully demonstrated stablecoin payments integrated with Lawson convenience store POS registers",
+        "Japan's government included on-chain finance in the 'Basic Policy on Economic and Fiscal Management 2026'"
+      ],
+      "growth_metrics": "Total issuance was approx. ¥2.8B as of August 2026; in September, JPYC EX cumulative issuance surpassed ¥10B; listed on Upbit."
+    },
+    "funding": {
+      "total_raised": "approx. ¥6B",
+      "total_raised_note": "Cumulative Series B amount as of August 2026; earlier Seed and Series A rounds not confirmed. Approximately $38M in USD.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "approx. ¥1B",
+        "note": "Single investment from AZ-COM Maruwa Holdings"
+      },
+      "funding_history": [
+        {
+          "amount": "approx. ¥400M",
+          "note": "Lead investment by Metaplanet Ventures"
+        },
+        {
+          "amount": "approx. ¥1B",
+          "note": "Investment from AZ-COM Maruwa Holdings"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Japan's digital payment market is in the tens of trillions of yen, and the stablecoin market is growing rapidly as the regulatory framework takes shape.",
+      "market_trend": "The Japanese government's 'on-chain finance' policy is accelerating stablecoin adoption in corporate and retail payments, and major banks are also entering the market one after another.",
+      "growth_potential": "Can expand rapidly through use cases connected to the real economy, such as logistics and retail payments, international remittances, and salary payments.",
+      "risks": [
+        "Intensifying market competition with competing stablecoins from major banks and trust banks",
+        "Blockchain technology risk and the possibility of hacking",
+        "Impact on the business model from regulatory changes"
+      ],
+      "risk_mitigation": "Close cooperation with regulatory authorities, brand and partnership building as a first mover, and diversification through support for multiple blockchains."
+    },
+    "related_links": [
+      {
+        "title": "Official company website"
+      },
+      {
+        "title": "Series B extension press release"
+      },
+      {
+        "title": "The Block article"
+      }
+    ],
+    "editor_pick_comment": "As core infrastructure of the Japanese government's on-chain finance initiative, it is the most advanced yen stablecoin, having achieved payment proof-of-concepts with a major logistics company and convenience stores."
+  },
+  "ignition-benefits-2026": {
+    "tagline": "AI-powered benefits brokerage for small and midsize businesses",
+    "category": [
+      null,
+      "Insurance"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Former USMC officer, Harvard MBA, Dartmouth BA. Previously co-founded meal-kit startup Plated, which was sold to Albertsons in 2017 for $300M.",
+        "notable_achievement": "Co-founded Plated and exited via a $300M acquisition"
+      }
+    ],
+    "team_highlights": "Team of 13 as of August 2026. Key producer James Taylor is a 27-year veteran.",
+    "product": {
+      "summary": "An AI-native insurance broker that uses AI to analyze employee benefits premiums for SMBs (20–200 employees) and select the best plan across the entire market.",
+      "problem_statement": "Traditional insurance brokers lack data transparency, use intimidating deadlines during renewal season, and don't disclose clients' risk scores. SMB CFOs can't see how premiums are set and overpay by hundreds of thousands of dollars every year.",
+      "solution": "Ignition shows customers the same risk data insurers use, automatically runs a full market audit, and uses AI to answer questions in real time and automate processes. Licensed experts help with final comparisons and negotiations.",
+      "key_features": [
+        "Real-time employee risk profile dashboard (exactly what insurers see)",
+        "Full market audit (competitive bidding from 4+ carriers)",
+        "AI-powered Q&A and process automation (Ignition Intelligence)",
+        "Integrates with existing HR systems (Rippling, etc.)—no additional stack required",
+        "Starts 120 days before renewal, eliminating deadline pressure"
+      ],
+      "tech_stack_or_innovation": "Ignition Intelligence, its AI analytics engine, analyzes the same inputs insurers use (claims, demographics) to produce risk scores and rate trends. It shortens the traditional 8–12 week process to six weeks.",
+      "target_customer": "US small and midsize businesses with 20–200 employees, primarily startups and tech companies",
+      "business_model": "Broker commission (fees from insurers; no separate cost to customers)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Integrated payroll and benefits platform, but does not act as a broker. Ignition offers deeper market comparison and AI analysis as a broker."
+        },
+        {
+          "comparison": "HR/IT integrated platform with benefits management features, but Ignition negotiates better rates as an AI-based broker."
+        },
+        {
+          "name": "Traditional brokers (Mercer, Aon, etc.)",
+          "comparison": "Focus on large enterprises, lack data transparency, and don't start 120 days early. Ignition specializes in SMBs and uses AI for efficiency."
+        }
+      ],
+      "key_differentiator": "Analyzes and shows customers' risk data the same way insurers do, automatically runs a full market audit every year, and starts 120 days before renewal without deadline pressure.",
+      "moat": "Data network effects (more customer data improves the AI model), hybrid service combining a 27-year veteran expert with AI, and the Plated founder's network and credibility.",
+      "competitive_position_summary": "Creating a new category: AI-native brokerage for SMBs. More transparent than traditional brokers and more specialized than HR platforms."
+    },
+    "trending_reason": {
+      "summary": "Debuted in Y Combinator's F26 batch in 2026 and quickly proved hundreds of thousands of dollars in savings through customer case studies (Nostra AI, Light Labs). The founder's prior Plated exit also draws attention.",
+      "catalysts": [
+        "Participated in Y Combinator's Fall 2026 batch (debuted 15 days ago)",
+        "Nostra AI case: $25,000+ saved in six weeks with better coverage",
+        "Light Labs case: turned a planned 21% increase into an 8% decrease, returning $113,115 to P&L",
+        "Blog post 'The Brokerage I Needed Didn't Exist' published (September 14, 2026)"
+      ],
+      "growth_metrics": "Undisclosed"
+    },
+    "funding": {
+      "total_raised_note": "According to PitchBook. Includes Y Combinator accelerator and an early-stage investment from Chapter One.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Undisclosed",
+        "note": "Recorded on PitchBook as an Early Stage VC round in August 2026; amount undisclosed. Estimated to be led by Chapter One."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Y Combinator F26 batch, standard terms"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The US employee benefits market for SMBs (20–200 employees) is estimated at roughly $60B. SAM is 200,000 tech-based startups and tech companies; SOM is an initial target of 5,000 companies (est.).",
+      "market_trend": "SMB benefits costs are surging (7% average increase in 2025). Demand is rising for transparent, AI-driven brokerage. Competition is intensifying as HR platforms like Rippling and Gusto expand their benefits features.",
+      "growth_potential": "Can accelerate customer acquisition right after the YC batch. The Plated founder's track record and network help build market trust. However, traditional broker lobbying and the enterprise-centric market create entry barriers.",
+      "risks": [
+        "Traditional insurers refuse to work with AI-based brokers or change commission structures",
+        "Competing HR platforms (Gusto, Rippling) add similar AI features",
+        "SMB benefits decision-makers still prefer traditional brokers"
+      ],
+      "risk_mitigation": "Credibility is built through a 27-year licensed expert. AI is used only as a decision-support tool, with humans making final choices, minimizing regulatory risk."
+    },
+    "related_links": [
+      {
+        "title": "Ignition Benefits official website"
+      },
+      {
+        "title": "Y Combinator company profile"
+      },
+      {
+        "title": "PitchBook profile"
+      },
+      {
+        "title": "Scalerrs marketing case study"
+      }
+    ],
+    "editor_pick_comment": "A bold attempt to disrupt the classic employee benefits market with AI; the founder's prior success adds credibility."
+  },
+  "konst-2026": {
+    "tagline": "Taiwan-based AI compute operator spanning data centers to token governance",
+    "category": [
+      "AI Infrastructure",
+      "GPU Cloud",
+      "AI Governance"
+    ],
+    "headquarters": {
+      "country_ko": "Taiwan"
+    },
+    "employee_count": "51-200 (est.)",
+    "founders": [
+      {
+        "role": "Co-founder & CEO",
+        "background": "Graduate research in cryptography, Web3 software development, and crypto payment business before pivoting to AI compute infrastructure (TechLife interview).",
+        "notable_achievement": "Led $30M Series B round in October 2026 led by ADATA, expanded to 9 countries, delivered approx. 4,000 GPUs cumulatively."
+      },
+      {
+        "role": "Co-founder & CSO, CEO of Horizon AI",
+        "background": "Joined the core team during the mining farm days, built GPU supply chain relationships, and designed KONST's three-brand structure.",
+        "notable_achievement": "Led ATP Token governance product strategy. Revealed overseas expansion strategy in an EDGE interview on 2026-10-15."
+      }
+    ],
+    "team_highlights": "CEO Ming-Chih Tsai has a career spanning graduate cryptography research, Web3 payments, and AI infrastructure. Co-founder & CSO Darren Su leads Horizon AI and oversees the governance layer. The core team, leveraging GPU mining farm operational experience, maintains supply relationships with tier-one server manufacturers. After converting test facilities for AI use in mid-2023, they founded KONST in 2024.",
+    "product": {
+      "summary": "KONST is an AI compute operator that provides data center buildout (Konstra AI), per-second billing GPU cloud (Glows.ai), and token-based governance platform (Horizon AI ATP Token) as a unified group. Under the 'Token Factory' strategy, users can rent compute without facility investment and manage model usage, costs, and audit logs with a single key.",
+      "problem_statement": "As agentic AI spreads, enterprise workloads shift from one-off projects to continuous, variable daily usage, but fixed capacity provisioning cannot keep up. Different departments use different models, and cost, permission, and audit log management are scattered, often causing enterprise-wide AI adoption to stall.",
+      "solution": "① Konstra AI: Build data centers end-to-end from site selection to power, cooling, and GPU cluster tuning ② Glows.ai: Granularly partition clusters and offer per-second billing ③ Horizon AI ATP Token: Integrate access permissions, budgets, and audit logs with 'One key, Every model'.",
+      "key_features": [
+        "Per-second billing self-service GPU cloud (Glows.ai)",
+        "ATP Token: Connect multiple model providers with a single project key",
+        "4-layer permission and budget management: Organization → Workspace → Project → Key",
+        "Full request audit logs with single invoice and custom contracts",
+        "Multi-generation GPU operations: B300, B200, H100, H200, L40S, etc.",
+        "High power density data center design and 8 deployment track record"
+      ],
+      "tech_stack_or_innovation": "Unique 'Token Factory' strategy — defining compute as production equipment and tokens as output. Combines Taiwan's hardware and supply chain strengths with data center construction and GPU operations, automating usage-based billing and governance via Glows.ai and ATP Token.",
+      "target_customer": "Large enterprises and institutions, and investors holding energy and land assets. Overseas, multinational industrial groups use it for in-house document-based enterprise GPT builds; the cloud is mainly used by AI developers and early-stage startups; governance is used by enterprise procurement and general affairs managers.",
+      "business_model": "Revenue from data center buildout (E.P.C.), monthly GPU/server leasing, per-second usage billing for Glows.ai, and commission from ATP Token single contract/invoice. Expects recurring revenue share to grow with overseas expansion (est.)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Major US GPU cloud. Strong in large-scale compute but lacks local data center buildout in Asia and enterprise governance features."
+        },
+        {
+          "comparison": "Focuses on developer GPU cloud and server sales. Lacks enterprise governance and audit features like ATP Token."
+        },
+        {
+          "comparison": "European AI infrastructure company. Strong in large clusters but weak in Asian local partnerships and token-based governance."
+        },
+        {
+          "comparison": "Open model + GPU cloud platform. Specialized in developer ecosystem, making it hard to meet enterprise-wide adoption demands."
+        }
+      ],
+      "key_differentiator": "One-stop three-layer offering: data center construction → GPU cloud → token governance. Leverages Taiwan's hardware ecosystem to shift the value chain from 'Manufacturing' to 'Compute Service Provision'.",
+      "moat": "Core moat: GPU supply chain relationships accumulated since mining days, 8 data center buildout/operation know-how, and ATP Token's 4-layer permission and audit capabilities.",
+      "competitive_position_summary": "Targets the gap between global GPU clouds' lack of Asian coverage and hyperscalers' high costs. Secured strategic investors from key supply chain companies like ADATA and Pegatron, aiming for business integration."
+    },
+    "trending_reason": {
+      "summary": "The key catalyst was the announcement of a $30M Series B led by ADATA Technology on October 8, 2026. In August, signed a lease agreement for the Jakarta SMX01 data center (JV valued at $300M), marking entry into Southeast Asia. Amid growing demand for agentic AI, it is highlighted as a representative case of making 'compute operations' an industry.",
+      "catalysts": [
+        "2026-10-08: ADATA-led $30M Series B announced",
+        "2026-08-10: Indonesia LG Sinar Mas SMX01 data center lease signed",
+        "Expanded to 9 countries, targeting 10 AIDCs by 2027 (TechLife interview)",
+        "2026-10-15: Three-brand and overseas strategy revealed in EDGE interview"
+      ],
+      "growth_metrics": "Delivered cumulative 3,856 GPUs, 8 data centers (6 operational, 2 under construction), 10+ enterprise customers, operational presence in 9 countries (company announcement)."
+    },
+    "funding": {
+      "total_raised_note": "Only publicly disclosed round is the $30M Series B in October 2026. Seed and Series A amounts since founding in 2024 are undisclosed; actual cumulative funding may be larger.",
+      "valuation_estimate": "$120M–$180M (est.)",
+      "latest_round": {
+        "note": "Led by ADATA Technology (TPEx: 3260), with participation from M Mobility, Pegatron Venture Capital, and multiple strategic investors in energy, semiconductor, and thermal management (names undisclosed). Announced in Taiwan on October 8."
+      },
+      "funding_history": [
+        {
+          "note": "Purpose: Expand AI data centers in Asia and accelerate Token Factory strategy."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global AI infrastructure market (data centers, GPU cloud) approx. $100B+ (est.). SAM: Asian enterprise AI compute operations market approx. $20B–$30B (est.). SOM: Based on early customers in Taiwan, Japan, and Southeast Asia, approx. $1B–$3B (est.).",
+      "market_trend": "Agentic AI spread is shifting compute demand to always-on. Enterprises are moving toward services combining flexible leasing and governance rather than purchasing GPUs themselves.",
+      "growth_potential": "A model that restructures Taiwan's hardware supply chain into 'compute manufacturing,' accelerating Asian expansion with a target of 10 AIDCs by 2027. No public revenue yet; quantitative growth rate undisclosed (est.).",
+      "risks": [
+        "NVIDIA GPU procurement lead times and price volatility",
+        "Price competition with global majors like AWS, Azure, CoreWeave",
+        "Regulatory constraints on power and land in Asian countries and potential data center oversupply",
+        "Market trust issues due to team's crypto mining background"
+      ],
+      "risk_mitigation": "Secures sourcing flexibility through multi-generation GPU operations (B300, B200, H100, H200, L40S); diversifies risk across multiple regions including Indonesia and the US; builds credibility with 10+ references, including ISO 27001 certified companies."
+    },
+    "related_links": [
+      {
+        "title": "KONST Official Website"
+      },
+      {
+        "title": "KONST Official Group Introduction: Konstra AI, Glows.ai, Horizon AI"
+      },
+      {
+        "title": "TechLife: KONST CEO Ming-Chih Tsai Boba Tech Summit Speech"
+      },
+      {
+        "title": "KONST Official LinkedIn - Series B Announcement"
+      }
+    ],
+    "editor_pick_comment": "A Taiwan startup that evolved from mining farms to 'AI compute manufacturing' — ADATA responded with $30M."
+  },
+  "inkbox-2026": {
+    "tagline": "Identity and communication layer for AI agents",
+    "category": [
+      "AI Agents",
+      "Developer Tools",
+      "Communication API"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "PhD in Computer Science from MIT, previously co-founded AI virtual heart clinic Empallo"
+      },
+      {
+        "background": "Master's in Computer Science from Northeastern University, ML engineering and computer network research"
+      },
+      {
+        "background": "Built ML pipelines at Harvard Medical School, co-authored 6+ peer-reviewed papers"
+      }
+    ],
+    "team_highlights": "Three-person founding team: CEO with PhD in CS from MIT, CAIO from Harvard Medical School",
+    "product": {
+      "summary": "Identity layer that provides AI agents with email, phone, iMessage, internet addresses, and agent-to-agent communication channels",
+      "problem_statement": "When AI agents handle email verification, 2FA, external contacts, etc., they must connect multiple services like Gmail, Twilio, ngrok separately, which do not share identity and context",
+      "solution": "With a single API, each agent gets a unique email, phone number, iMessage, and internet address, integrating conversation context across all channels so agents communicate like humans",
+      "key_features": [
+        "Unique email inbox (custom domain support)",
+        "Phone calling/receiving and iMessage",
+        "Persistent internet address (HTTPS tunnel) to receive webhooks",
+        "Direct agent-to-agent communication channel (Agent2Agent)",
+        "Encrypted credential storage (including TOTP/2FA)",
+        "Slack integration (coming October 2026)",
+        "Voice call forwarding (coming October 2026)"
+      ],
+      "tech_stack_or_innovation": "Implemented Agent2Agent protocol via brokering, making agent-to-agent communication network transparent",
+      "target_customer": "Developers and companies building AI agents, especially teams building engineering, growth, operations, and assistant agents",
+      "business_model": "API/SaaS subscription (Developer/Startup plan, usage-based pricing)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "DIY combination (Gmail + Twilio + ngrok + password manager)",
+          "comparison": "Requires connecting each service separately with no identity and context integration. Inkbox provides all channels in a single service"
+        }
+      ],
+      "key_differentiator": "Provides email, phone, iMessage, and agent-to-agent communication via a single API, integrating per-user conversation context across channels",
+      "moat": "Implementation of Agent2Agent standard and plugin ecosystem for various agent frameworks (Hermes, OpenClaw, Claude Code, Codex), early market leadership",
+      "competitive_position_summary": "Still early stage, but achieved $300K ARR at YC Demo Day, establishing itself as the first startup in the agent identity market"
+    },
+    "trending_reason": {
+      "summary": "Gained attention by reaching $300K ARR at YC Summer 2026 batch Demo Day, and is now rapidly rolling out key features like Slack integration and voice call forwarding",
+      "catalysts": [
+        "Achieved $300K ARR from zero at YC Demo Day",
+        "Explosive growth in AI agent market driving demand for agent-specific identity",
+        "Slack and voice call forwarding features launching in October 2026 expand use cases"
+      ],
+      "growth_metrics": "ARR $300,000 (as of YC Demo Day, September 2026)"
+    },
+    "funding": {
+      "total_raised_note": "Confirmed as YC batch seed investment. LinkedIn lists Peak XV (Sequoia Capital India & SEA) as a backer, but size of additional rounds unconfirmed",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Standard seed investment from YC Summer 2026 batch",
+        "notable_investors": [
+          "Peak XV (est.)"
+        ]
+      },
+      "funding_history": [
+        {
+          "note": "YC Summer 2026 batch"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Unknown (TAM grows as number of agents increases, no specific figures available)",
+      "market_trend": "As AI agent adoption accelerates, the need for agents to communicate via human channels like email and phone grows. Agent-specific identity infrastructure is a new market",
+      "growth_potential": "As the number of agents increases, demand for a unified identity layer could surge. Rapid ARR growth demonstrated at YC Demo Day",
+      "risks": [
+        "Risk that large platforms like Google, Apple, Twilio integrate similar features into their own services",
+        "DIY approach (combination of free services) remains competitive",
+        "The agent market itself is still early, with market formation uncertainty"
+      ],
+      "risk_mitigation": "Pioneering agent-to-agent communication standard (Agent2Agent) and building integration plugin ecosystem with various agent frameworks to create lock-in effect"
+    },
+    "related_links": [
+      {
+        "title": "Inkbox official website"
+      },
+      null,
+      {
+        "title": "ABAB News article"
+      },
+      {
+        "title": "Yespress article"
+      },
+      {
+        "title": "Inkbox blog"
+      }
+    ],
+    "editor_pick_comment": "Infrastructure that lets AI agents send and receive emails and calls like humans—stood out at YC Demo Day with $300K ARR."
+  },
+  "algorix-corporation-2026": {
+    "tagline": "An AI data infrastructure and database engine startup that unifies scattered enterprise data into a single layer.",
+    "category": [
+      "AI data infrastructure",
+      "AI database",
+      "AI agent infrastructure"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "CEO with experience tackling data integration issues in enterprise AI transformation projects.",
+        "notable_achievement": "The CEO featured on the official website and in Korean media coverage."
+      }
+    ],
+    "team_highlights": "Chief Scientist Suho Noh has experience in LLM agents, machine learning, databases, and backend development. Series A reports (Zowtale, InforCapital), however, say the company was founded in 2022 by KAIST School of Computing Professor Minsoo Kim, while July 2026 pre-seed reports name CEO Donghan Kwon and Chief Scientist Suho Noh as founders — there are discrepancies between reports on the founders and founding year.",
+    "product": {
+      "summary": "Akasic Platform is a single logical data layer that integrates text, tables, images, and relational data scattered across enterprise ERP, groupware, document management systems, and databases, letting AI read, write, and compute directly within workflows. Core products include AkasicDB, an AI-native DB that unifies graph, vector, and relational databases in a single engine, and hybrid RAG (Omni RAG).",
+      "problem_statement": "Operational data is scattered across ERP, document management, databases, etc., so every AI deployment requires connecting system structures one by one, making it hard for agentic AI to work reliably. The more model competitiveness is standardized, the more productivity depends on how data is structured and connected.",
+      "solution": "A multimodal data integration layer that turns distributed data into a data layer AI can read and write, not just search. AkasicDB handles vector (semantic), graph (relational), and relational (structured) searches in a single SQL/GQL query, and Omni RAG combines the three searches in one query to reduce hallucinations.",
+      "key_features": [
+        "AkasicDB: integrates graph + vector + relational DB in a single engine",
+        "Hybrid RAG (Omni RAG): runs vector, graph, and relational searches simultaneously in one query",
+        "Up to 142x faster processing than existing graph DBs in LDBC SNB benchmarks",
+        "More than 4x queries per second at the same accuracy compared to Milvus vector DB",
+        "On-premises deployment supports closed-network and data-restricted environments such as defense and finance",
+        "Unstructured data ETL pipelines, MLOps, and own GPU farm"
+      ],
+      "tech_stack_or_innovation": "Developed jointly with Professor Minsoo Kim's team at KAIST and GraphAI; demo paper presented at ACM SIGMOD 2026. Optimizes complex queries into a single execution plan, making processing up to 20x faster than conventional approaches and improving answer accuracy by up to 78% over existing RAG.",
+      "target_customer": "Large enterprises and public institutions with sensitive data security requirements in defense, manufacturing, finance, and telecommunications. Pilots/validations are under way with the Agency for Defense Development, Hanwha Ocean, Hyundai Motor, Hankook Tire, KB Securities, Kiwoom Securities, LG Uplus, and KT. Cloud deployment is planned through an AWS software partnership.",
+      "business_model": "Sells AI data infrastructure software (on-premises/cloud) to enterprises and public institutions, and also provides digital transformation, cloud migration, and AI R&D services."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A global standard focused on a single vector DB function. AkasicDB differentiates by integrating vector with graph and relational to support multimodal queries."
+        },
+        {
+          "comparison": "A graph DB specialist. AkasicDB combines graph with vector and relational in one engine to process complex RAG queries as a single operation."
+        },
+        {
+          "name": "Databricks (Databricks Catalog, etc.)",
+          "comparison": "An integrated data domain centered on data lake/lakehouse. Algorix is closer to an integrated relational/graph/vector DB engine and an agent execution layer."
+        },
+        {
+          "name": "Korean AI data labeling and preprocessing companies",
+          "comparison": "They focus on processing training data. Algorix operates at a different layer: a DB/data layer that AI reads from and computes on directly for enterprise operational data."
+        }
+      ],
+      "key_differentiator": "It unifies graph, vector, and relational DBs in one engine and provides hybrid RAG that executes all three searches in a single query. On-premises deployment specialized for closed networks (defense, finance) and SIGMOD-validated results are strengths.",
+      "moat": "Integrated engine technology validated through joint KAIST research and an ACM SIGMOD 2026 presentation, South Korean defense/finance references, and on-premises capability for closed networks.",
+      "competitive_position_summary": "An early-stage Korean AI infrastructure player betting on data plumbing rather than models; clear same-tier competitors are still rare in Korea."
+    },
+    "trending_reason": {
+      "summary": "After a Kakao Ventures pre-seed in July 2026, it raised an $11.5M Series A led by K2 Investment Partners in August, bringing total funding to $14M and drawing attention amid the surge of investment in data infrastructure for the agentic AI era.",
+      "catalysts": [
+        "2026-08-14: Series A round of $11.5M (approx. KRW 17B), bringing total funding to $14M",
+        "2026-07-14: Seed investment from Kakao Ventures (amount undisclosed)",
+        "2026-06-02: AkasicDB/Omni RAG demo presented at ACM SIGMOD 2026",
+        "Pilots with closed-network customers in defense/finance and AWS partnership in progress"
+      ],
+      "media_mentions": [
+        null,
+        {
+          "source": "Asia Economy",
+          "title": "'Data engine developer' Algorix attracts pre-seed investment from Kakao Ventures"
+        },
+        {
+          "source": "Korea Economic Daily (English, fnnews)"
+        },
+        {
+          "source": "Seoul Economic Daily (English)"
+        }
+      ],
+      "growth_metrics": "Total funding of $14M (approx. KRW 20.6B) raised; Series A of $11.5M and KRW 17B (2026-08); 8 paying pilot customers: Agency for Defense Development, Hanwha Ocean, Hyundai Motor, Hankook Tire, KB Securities, Kiwoom Securities, LG Uplus, and KT. (Amounts and customer count as reported.)"
+    },
+    "funding": {
+      "total_raised_note": "Total funding per reports such as Wowtale is $14M (approx. KRW 20.6B). This combines the $11.5M Series A (approx. KRW 17B) with the September 2024 Pre-Series A and the July 2026 Kakao Ventures pre-seed (undisclosed).",
+      "valuation_estimate": "$35M (est.)",
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "September 2024 Pre-Series A, with Quad Ventures, Kiwoom Investment, and We Ventures participating (per Series A reports). Amount undisclosed.",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "July 2026 Kakao Ventures pre-seed. Kakao Ventures and reports said the amount is undisclosed."
+        },
+        {
+          "note": "KRW 17B. Led by K2 Investment Partners, with A Ventures and GU Equity Partners as new investors, and Quad, Kiwoom, and We as follow-ons."
+        }
+      ],
+      "latest_round": {
+        "note": "KRW 1.7B ($11.5M). Led by K2 Investment Partners, with new investors A Ventures and GU Equity Partners, and existing investors Quad Ventures, Kiwoom Investment, and We Ventures participating in a follow-on round. (2026-08)"
+      }
+    },
+    "market_outlook": {
+      "market_trend": "As the era of AI agents opens, the view that 'model competitiveness is becoming standardized and the data layer is the battleground' is spreading, with domestic and global investment concentrating on the middleware layer for data connection and structuring. Investment in Korean AI infrastructure also grew significantly in 2026.",
+      "growth_potential": "On-premises demand from closed-network customers in defense/finance and APAC/North America expansion plans are growth drivers. Through the AWS partnership, it plans to secure its own cloud deployment channel.",
+      "risks": [
+        "Discrepancy between the product pivot narrative — from 'data cleaning/labeling' to 'integrated DB engine' — and press coverage.",
+        "Inconsistent reports on founders and founding date (CEO Donghan Kwon vs. the claim that KAIST Professor Minsoo Kim founded it).",
+        "Competition with major global vector/graph DB vendors (Milvus, Neo4j, etc.) and the challenge of validating early revenue scale.",
+        "Heavy reliance on R&D and global expansion relative to current financial resources."
+      ],
+      "risk_mitigation": "A strategy to emphasize technical validation with SIGMOD publication and benchmark figures, convert pilots into production contracts based on defense/finance references, and defend the niche with on-premises specialization."
+    },
+    "related_links": [
+      {
+        "title": "Algorix official website"
+      },
+      {
+        "title": "Wowtale — Series A report"
+      },
+      {
+        "title": "Asia Economy — Kakao Ventures pre-seed"
+      },
+      {
+        "title": "Seoul Economic Daily (English) — pre-seed"
+      }
+    ],
+    "editor_pick_comment": "Under the conviction that the data layer—not the model—is the battleground, Algorix integrates graph, vector, and relational DBs into a single engine and aims for global expansion, using defense and finance closed-network customers as a bridgehead."
+  },
+  "kaminashi-2026": {
+    "tagline": "B2B SaaS that connects on-site data to operations and management",
+    "category": [
+      "Field Operations SaaS",
+      "Worker Digital Tools",
+      "AI-based Operational Insights"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "Representative Director, President, CEO",
+        "background": "Born 1984. Graduated from Keio University, Faculty of Economics. Worked in sales at Recruit Staffing. Experience at family business World Enterprise establishing an LCC reservation center and an in-flight meal factory. Founded the company in December 2016.",
+        "notable_achievement": "Aimed for paperless field operations; introduced to over 17,000 sites since founding."
+      }
+    ],
+    "team_highlights": "COO Yusuke Kawachi worked at Intelligence (now Persol Career) and then served as PM at Kayak, joining in 2020.",
+    "product": {
+      "summary": "‘Field Operations Hub’ that digitizes inspections, reports, training, equipment maintenance, and production records for non-desk workers (factories, warehouses, stores) on one platform, connecting data with AI to support management decision-making.",
+      "problem_statement": "In manufacturing and logistics sites, inspection records, equipment status, and worker info are still scattered in paper and Excel, making data utilization difficult, causing time gaps between field and management, and delaying improvement activities.",
+      "solution": "Provides no-code app series (Reports, Equipment Maintenance, Employees, Training, Production Records) that can be easily entered via tablet/smartphone, connects collected data via common ID, and enables AI analysis and linkage with management KPIs.",
+      "key_features": [
+        "‘Kaminashi Report’ that turns paper forms into apps with no-code",
+        "‘Kaminashi Equipment Maintenance’ managing equipment failure history and maintenance plans as digital charts",
+        "‘Kaminashi Employees’ communication app covering foreign and spot workers",
+        "‘Kaminashi Training’ managing field training and development in one service",
+        "‘Kaminashi Production Records’ (launching November 2026) aggregating and visualizing production performance in real time",
+        "New business 'Project Lux' combining field data with legacy system data"
+      ],
+      "tech_stack_or_innovation": "Advances in generative AI enable analysis of unstructured data (photos, voice, video). Provides an AI agent building environment that automatically links field data to management KPIs.",
+      "target_customer": "Mid-sized to large enterprises with field workers in manufacturing, logistics, hotels, retail (introduced at 17,000 sites)",
+      "business_model": "SaaS subscription fee (per product or bundle contract). About 70% of new orders are multi-product bundle contracts."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Samsara (US)",
+          "comparison": "Global leader covering field operations starting from vehicle/equipment data. Market cap approx. $20B, ARR $1.9B. Kaminashi differentiates with Japan-specific product lineup and field-oriented CS."
+        }
+      ],
+      "key_differentiator": "CS-centered approach deeply penetrating Japan's unique paper/fax culture. 10 years of accumulated field data and 3,300 customer visits/year provide deep field understanding.",
+      "moat": "Products optimized for Japanese manufacturing/logistics sites and data linkage across 6 products. 70% of contracts are bundles, creating high switching costs.",
+      "competitive_position_summary": "Holds the widest product lineup and adoption record in Japan's field operations SaaS. Leads the shift from paperless to data hub in Japan rather than competing globally."
+    },
+    "trending_reason": {
+      "summary": "On October 21, 2026, raised approx. ¥2.21B (approx. $15M) in Series C, announcing the 'Field Operations Hub' vision. Launched new product 'Production Records' and AI business 'Project Lux' simultaneously to accelerate strategic use of field data.",
+      "catalysts": [
+        "Advances in generative AI increase potential to utilize unstructured field data",
+        "Labor shortage in Japan drives surge in demand for digital and AI adoption",
+        "Growing demand from existing customers for AI usage (70% multi-product bundle contracts)"
+      ],
+      "growth_metrics": "About half of MRR comes from multi-product companies. About 70% of new orders are bundle contracts. Cumulative equity funding approx. ¥6.1B."
+    },
+    "funding": {
+      "total_raised": "Approx. ¥6.1B",
+      "total_raised_note": "Equity basis. Including debt, over ¥7.6B.",
+      "valuation_estimate": "Undisclosed (est. ¥15B~¥20B)",
+      "latest_round": {
+        "amount": "Approx. ¥2.21B",
+        "note": "Approx. $15M (at ¥147/USD)",
+        "lead_investor": "Incubate Fund (IF Growth Fund 1)"
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed"
+        },
+        {
+          "amount": "Undisclosed"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Announced March 2023. Along with 'Marugoto Genba DX Vision'."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Japan's manufacturing, logistics, and retail field operations SaaS market estimated at several hundred billion yen. Compared to global leader Samsara's ARR of $1.9B, Japan's penetration rate is low.",
+      "market_trend": "Japan's severe labor shortage and generative AI maturity are causing explosive growth in field digital transformation demand. Demand for tools for non-desk workers is especially high.",
+      "growth_potential": "Can expand from current 17,000 sites to hundreds of thousands. Significant ARPU growth potential through AI value-added services (Project Lux).",
+      "risks": [
+        "Potential entry of similar services by large competitors (e.g., Toshiba, NEC)",
+        "Difficulty in standardizing field data integration and burden of individual customization",
+        "Need to prove actual effectiveness of AI-based services"
+      ],
+      "risk_mitigation": "Secures flexibility via no-code/common ID. Creates lock-in through field-focused CS. Plans to first build success cases via Project Lux, then ensure reproducibility."
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "Series C Press Release (Japanese)"
+      },
+      {
+        "title": "Company Information"
+      },
+      {
+        "title": "Incubate Fund Investment Announcement"
+      }
+    ],
+    "editor_pick_comment": "After 10 years of wrestling with paper and diving into the field, they now have Japan's largest field data lake that AI can read."
+  },
+  "ssenstone-2026": {
+    "tagline": "Specialist in OT endpoint authentication and access control",
+    "category": [
+      "OT security",
+      "Industrial control system security",
+      "Authentication security"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Former ROTC officer and Samsung employee. Worked at MarkAny (document security) for about 10 years as head of the security solutions business division. After founding the company, he oversees everything from technology development to field sales.",
+        "notable_achievement": "Developed the core technology for One-Time Authentication Code (OTAC) unidirectional dynamic authentication, holds over 40 patents, received the Minister of Science and ICT Commendation in July 2026."
+      }
+    ],
+    "team_highlights": "Includes key executives such as CSO Karl Taekyun Chung and Head of Domestic & International Sales Taek Kyun Na, totaling approximately 21 employees (as of September 2026). Established subsidiary swIDch in London.",
+    "product": {
+      "summary": "OTAC Trusted Access Gateway (TAG) is an OT authentication gateway deployed in front of industrial control system (ICS) endpoints such as PLC, SCADA, HMI, RTU, and DCS. It verifies user identity with a one-time unidirectional dynamic authentication code (OTAC) just before the user controls the actual equipment and blocks unauthorized access.",
+      "problem_statement": "In OT environments, continuous equipment operation and safety are top priorities, making it difficult to frequently apply security patches or change accounts. Default passwords, shared accounts, and long-term remote access permissions are often left unattended, making endpoints like PLCs/HMIs direct attack targets. A breach can lead to production stoppages, equipment damage, and safety accidents. Existing IT security solutions are difficult to apply due to OT environments' unidirectional communication, network segmentation, and air-gapped structures.",
+      "solution": "OTAC TAG is deployed in an inline structure in front of endpoints without requiring equipment replacement, firmware changes, or OEM support. Users generate a changing OTAC from a smartphone app or smart card and enter it; the gateway allows access only after verification. It fundamentally eliminates the risk of fixed password theft and works in closed networks.",
+      "key_features": [
+        "Unidirectional dynamic authentication (OTAC): generates a one-time authentication code per session, cannot be reused or stolen",
+        "Optimized for network segmentation and air-gap environments: no continuous network connection required",
+        "Applies without modifying existing equipment: no need to replace or reconfigure PLC/HMI/RTU/DCS/SCADA",
+        "1:1 inline deployment and gateway redundancy support",
+        "Compliant with IEC 62443 FR1 (Identification and Authentication Control), NIS2, CRA, NERC CIP",
+        "Obtained US UL certification, KC/CE certifications, international CC certification, and NET (New Excellent Technology) certification"
+      ],
+      "tech_stack_or_innovation": "The world's first implementation of Unidirectional Dynamic Authentication technology. It was previously considered impossible to simultaneously perform dynamic code generation and user identification without a network connection, but SSenStone solved this with its own algorithm. Protected by over 40 patents (domestic and international).",
+      "target_customer": "Security managers and operational technology teams at companies operating OT environments, including national infrastructure (water resources, energy), global manufacturers (battery, automotive), smart factories, petrochemical, and power sectors.",
+      "business_model": "Sales of OTAC TAG hardware gateways (MGW-OT1000D/MGW-OT2000D) plus licenses and maintenance contracts. When expanding into an OT security hub in the future, it can transition to subscription-based software and cloud service models."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A CPS platform encompassing OT/IoT/IoMT asset management, threat detection, and network protection. Adopted by 20% of Fortune 100 companies, well ahead in scale and market share. However, unlike SSenStone, it is agent- and network-connection-based and not specialized in endpoint authentication itself."
+        },
+        {
+          "comparison": "Global leader in passive sensor-based OT/IoT visibility and real-time threat detection. Acquired by Mitsubishi Electric in January 2026. SSenStone focuses on authentication and access control, is lighter than Nozomi, and easier to apply on-site."
+        },
+        {
+          "comparison": "Specializes in OT threat intelligence and incident response, tracking 119 ransomware groups. Heavy service and high cost. SSenStone's approach is fundamentally different as a preemptive blocking authentication gateway."
+        }
+      ],
+      "key_differentiator": "Specialized in user authentication at the 'last contact point' just before equipment control. While competitors focus on network traffic monitoring and threat detection, SSenStone focuses on physically and authenticatively controlling 'who is accessing the PLC.' The only solution that works in unidirectional closed networks without modifying any existing equipment.",
+      "moat": "Over 40 core patents for unidirectional dynamic authentication (OTAC), certifications for global standards (IEC 62443, NIS2, CRA), proven references with K-water and global battery manufacturers, strategic investment-based partnership with Hyundai Motor Group, and multiple certifications (UL, CC, KC, CE).",
+      "competitive_position_summary": "The global OT security market is led by Claroty, Nozomi, and Dragos, but they are mainly in network monitoring and threat detection. SSenStone has carved a narrow but essential niche in 'endpoint authentication and access control' and is the only company in the domestic market with references from K-water, Hyundai Motor, and global battery manufacturers. To expand overseas, collaboration with global PLC manufacturers and regulatory compliance certifications will be key."
+    },
+    "trending_reason": {
+      "summary": "On October 28, 2026, selected for the Korean government's 'Scale-up TIPS' program, securing KRW 3B in R&D funding and announcing the expansion of its existing OT authentication gateway into an 'OT security hub.' Major events such as Hyundai Motor Group's strategic investment in June 2026 and US UL certification in September 2026 have drawn attention in OT security.",
+      "catalysts": [
+        "2026-10-28: Selected for Scale-up TIPS (KRW 3B government R&D support, developing OT security hub until August 2029)",
+        "2026-06-02: Strategic investment from Hyundai Motor Group (third-party allotment paid-in capital increase)",
+        "2026-09: OTAC TAG obtains US UL certification (MGW-OT1000D/MGW-OT2000D)",
+        "2026-07: Obtained KC and CE certifications, CEO received Minister of Science and ICT Commendation",
+        "2026-08: Participated in ISEC 2026, demonstrated TAG with partner company 2CSG"
+      ],
+      "growth_metrics": "As of September 2026, 21 employees. Cumulative funding of $26.2M (est.) per CB Insights. Completed K-water performance-sharing project and supply to a global battery manufacturer's 24/7 production process. Conducting PoCs with global PLC manufacturers including LS Electric.",
+      "media_mentions": [
+        {
+          "source": "SSenStone official blog",
+          "title": "SSenStone accelerates OT security hub advancement after final selection for Ministry of SMEs and Startups' 'Scale-up TIPS'"
+        },
+        null,
+        {
+          "source": "VentureSquare"
+        },
+        {
+          "source": "SSenStone official blog",
+          "title": "SSenStone secures strategic investment from Hyundai Motor Group"
+        },
+        {
+          "source": "Electronic Times",
+          "title": "SSenStone attracts strategic investment from Hyundai Motor Group… expands OT security collaboration"
+        },
+        {
+          "source": "Digital Daily",
+          "title": "SSenStone attracts Hyundai Motor Group investment… 'OT endpoint security' technology draws attention"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Per CB Insights. Mandos.io reports approx. $8.38M on an equity basis; the discrepancy is estimated due to inclusion/exclusion of government R&D grants and loans, and undisclosed amounts from early seed rounds.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Undisclosed",
+        "note": "Third-party allotment paid-in capital increase through Hyundai Motor Group affiliates. Amount undisclosed."
+      },
+      "funding_history": [
+        {
+          "amount": "Approx. KRW 6B",
+          "note": "Approx. $4.5M per CyberMerge. Led by KDB Industrial Bank, with co-investment from ES Investor and Daedeok Asset Management."
+        },
+        {
+          "amount": "Approx. KRW 5B",
+          "note": "Approx. $3.8M. Led by KDB Industrial Bank."
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Led by Idea Bridge Partners."
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Led by STIC Investments, with co-investment from Geon Investment."
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Led by KTB Network (Korea Technology Guarantee Fund)."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global OT security market approx. $30B in 2026 (per Fortinet, Gartner estimates). SAM: OT endpoint authentication and access control market approx. $3B–$5B (est.). SOM: SSenStone's domestic OT authentication security market share approx. 30–40% (est.), but global market share less than 1%.",
+      "market_trend": "External connectivity in OT environments is surging due to the expansion of smart factories, Software-Defined Factories (SDF), and remote maintenance, driving explosive demand for OT security. AI-based attack automation is increasing threats directly targeting endpoints like PLCs/HMIs. Global regulations such as IEC 62443, NIS2, and CRA are mandating 'identification and access control,' making authentication-centric security a necessity.",
+      "growth_potential": "With domestic references from K-water, Hyundai Motor, and battery manufacturers, expansion to global manufacturers and energy companies is possible. Expanding the product scope to an OT security hub by 2029 could enable a shift from single gateway sales to a platform revenue model. The UL, CE, and CC certifications provide a foundation for entering European and North American markets.",
+      "risks": [
+        "Pressure from global major OT security companies like Claroty and Nozomi launching similar features and price competition",
+        "Long sales cycles in the OT market and multiple decision-makers causing sales delays",
+        "Revenue structure centered on government R&D; needs to generate sustainable own revenue after commercialization",
+        "Small organization (~20 people) may lack manpower and channel capabilities for global expansion"
+      ],
+      "risk_mitigation": "Secured manufacturing references and distribution channels through Hyundai Motor Group's strategic investment. Possibility of OEM embedded entry via PoCs with PLC manufacturers like LS Electric. Stable R&D funding through Scale-up TIPS until 2029. Established a European market base through London subsidiary (swIDch)."
+    },
+    "related_links": [
+      {
+        "title": "SSenStone official website"
+      },
+      {
+        "title": "SSenStone official blog (Korean)"
+      },
+      {
+        "title": "SSenStone global site (English)"
+      },
+      null,
+      {
+        "title": "SSenStone - thevc"
+      }
+    ],
+    "editor_pick_comment": "The approach of physically verifying 'who is operating the PLC' without touching the equipment itself is the clearest differentiator from existing OT monitoring vendors."
+  },
+  "artmaster-2026": {
+    "tagline": "Developing Artie, an AI piano personal tutor app",
+    "category": [
+      "Music education",
+      "AI tutor",
+      "Mobile app"
+    ],
+    "headquarters": {
+      "country_ko": "Czech Republic"
+    },
+    "founders": [
+      {
+        "role": "Co-founder",
+        "background": "Musician and guitarist. Co-founded a music school in Prague in 2018.",
+        "notable_achievement": "Acquired 500,000 users via the Artie app"
+      },
+      {
+        "role": "Co-founder",
+        "background": "Musician and guitarist. Co-owner of music and PR agency RedHead Music; founded the Bandzone platform.",
+        "notable_achievement": "Founded Bandzone, a Czech music community platform"
+      }
+    ],
+    "team_highlights": "Small team of 8. Warner Music Group CEO Robert Kyncl, Beat Saber co-founder Jaroslav Beck, and others are involved as early investors and mentors.",
+    "product": {
+      "summary": "Artie is an AI-powered piano learning app that listens to the user's playing in real time, provides feedback, and helps with personalized practice.",
+      "problem_statement": "Existing online music lessons lack personalized feedback, making it hard for beginners to learn proper posture and rhythm.",
+      "solution": "The AI analyzes performances via microphone or MIDI and provides immediate voice feedback and Wait Mode, creating an experience as if a real teacher is beside you.",
+      "key_features": [
+        "Real-time performance analysis and voice feedback (microphone/MIDI)",
+        "Wait Mode: a practice mode that waits for the user's pace",
+        "Adaptive learning: adjusts difficulty and practice songs based on user level and preferences",
+        "Can add almost any song via MIDI files",
+        "Personalized practice sessions: automatically creates and adjusts lessons based on taste and goals (AI still improving)"
+      ],
+      "tech_stack_or_innovation": "AI models trained on proprietary data, real-time audio processing and music recognition technology, adaptive learning algorithms",
+      "target_customer": "Beginners and intermediate learners who want to learn piano but find private lesson costs and time burdensome, especially adults in their 20s and 30s",
+      "business_model": "Monthly/annual subscription model (annual $89.99 promotional, $149.99 regular, family plan $229.99/year, 7-day free trial)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Developed by JoyTunes, large user base, $169.90/year. More expensive than Artie, and MIDI is optional. Voice feedback is note-by-note scoring."
+        },
+        {
+          "comparison": "1,500+ song library, videos of real pianists' hands. $119.88/year. Focuses more on video learning than AI feedback."
+        },
+        {
+          "comparison": "Gamified learning, supports multiple instruments. $119.99/year. Strong music-game feel."
+        },
+        {
+          "comparison": "AI scoring + 1:1 messaging with real instructors. $149.99/year. More expensive than Artie, premium positioning with human instructors."
+        },
+        {
+          "comparison": "Based on standard textbooks, sight-singing test (SASR). $129.99/year. Aimed at those who prefer traditional learning."
+        },
+        {
+          "comparison": "MIDI only, no mic-based ear training. $149.99/year. High hardware dependency."
+        }
+      ],
+      "key_differentiator": "Delivers an experience close to private lessons with real-time voice feedback via mic/MIDI and Wait Mode, plus an AI adaptive learning system that keeps improving.",
+      "moat": "AI model based on proprietary performance data collected in-house, strong investor network (Robert Kyncl, Beat Saber co-founder), rapid user and revenue growth (38% monthly subscriber growth).",
+      "competitive_position_summary": "Competes with Simply Piano, Flowkey, and others in AI music education, but stands out with real-time feedback and adaptive learning. Strengthening its market position with 500K users and high monthly growth."
+    },
+    "trending_reason": {
+      "summary": "The $2.4M seed round in October 2026 and surpassing 500K users within a year have drawn attention. Former Warner Music Group CEO Robert Kyncl joining as an early investor is also generating buzz.",
+      "catalysts": [
+        "2026-10-21: $2.4M Seed round closes (Factorial Capital, Reflex Capital, Moises and others participated)",
+        "Artie hits 500K users and 100M social media views one year after launch",
+        "38% MoM subscriber growth, 39% MoM MRR growth",
+        "Roadmap to expand from piano to other instruments such as guitar"
+      ],
+      "growth_metrics": "500,000+ users, 100M+ social media views, 38% monthly subscriber growth since launch, 39% monthly MRR growth (absolute figures undisclosed). Approx. $1M annual revenue (est., mostly from annual subscriptions)."
+    },
+    "funding": {
+      "total_raised_note": "Includes only the $2.4M seed round in October 2026. The €800k pre-seed in March 2025 is separate (not converted to USD).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "notable_investors": [
+          null,
+          null,
+          null,
+          "Nir Zicherman (co-founder of Anchor)",
+          "Grant Davis (founder of Wand)",
+          "Eliška Vorel (Gemini PM at Google DeepMind)",
+          "Robert Kyncl (existing investor)",
+          "Jaroslav Beck (Beat Saber co-founder, existing investor)"
+        ]
+      },
+      "funding_history": [
+        {
+          "note": "Closed in March 2025; investors include Robert Kyncl and Jaroslav Beck."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global music education market (approx. $20B in 2025), digital music learning app market (approx. $3B). Artie's SOM is several million dollars, mainly targeting English-speaking adult beginners.",
+      "market_trend": "Increasing demand for AI-based personalized learning, continued growth of online music education after COVID-19, and a trend toward generative AI-powered content creation.",
+      "growth_potential": "High. Expansion to other instruments beyond piano, such as guitar; market growth via Android launch; and differentiation through more advanced AI models.",
+      "risks": [
+        "Direct competition with larger rivals like Simply Piano and Flowkey",
+        "Early-stage brand awareness is low, and marketing costs may rise",
+        "Limitations in AI feedback accuracy and user experience (difficulty evaluating complex pieces or advanced techniques)",
+        "High churn risk in subscription model"
+      ],
+      "risk_mitigation": "Improves accuracy with AI trained on proprietary data, uses the well-known investor network for marketing, lowers initial entry barriers with family plan and free trial, and diversifies through gradual instrument expansion."
+    },
+    "editor_pick_comment": "Artie, an AI piano tutor, has solved the lack of feedback in traditional online lessons and reached 500K users, but success will depend on differentiating from global players like Simply Piano and continuously advancing its AI."
+  },
+  "bookr-kids-2026": {
+    "tagline": "AI-powered reading platform that builds children's literacy and critical thinking skills",
+    "category": [
+      "Edtech",
+      "Literacy Learning",
+      "Language Learning"
+    ],
+    "headquarters": {
+      "country_ko": "Hungary"
+    },
+    "founders": [
+      {
+        "background": "Background in publishing, new media, and advertising",
+        "notable_achievement": "Recognized the lack of quality children's digital literature in 2015 and founded BOOKR Kids"
+      },
+      {
+        "background": "Background in publishing and new media technology",
+        "notable_achievement": "Led platform development with technical leadership"
+      }
+    ],
+    "product": {
+      "summary": "An edtech platform where children develop literacy and social-emotional skills through interactive e-books. Also offers an AI dashboard for teachers.",
+      "problem_statement": "Lack of high-quality content to foster children's reading habits and deep thinking skills in a digital environment",
+      "solution": "E-books with animation, native narration, text highlighting, and educational games, plus AI diagnostic and personalized learning tools for teachers",
+      "key_features": [
+        "Interactive e-books with animation and voice narration",
+        "Reading support with text highlighting",
+        "Language element practice through educational games",
+        "Teacher dashboard: AI-based diagnostics, curriculum mapping, learning analytics, content recommendations"
+      ],
+      "tech_stack_or_innovation": "Generative AI focused on teacher environment; children's content based on human creation. Privacy by design and compliant with EU AI Act.",
+      "target_customer": "Primary and secondary schools (B2B), parents (B2C), publishers (B2B digitalization services)",
+      "business_model": "School subscription model, publisher digital transformation fees"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Focuses on children's English learning as an AI tutor, direct consumer download model. BOOKR differentiates with school-centric distribution."
+        }
+      ],
+      "key_differentiator": "Combination of human-created stories and AI teacher tools, curriculum-based learning, research showing 20% improvement in reading comprehension",
+      "moat": "Network of 3,000+ schools, presence in 30 countries, 600,000+ paid students, evidence-based learning outcomes",
+      "competitive_position_summary": "A school-focused literacy platform, niche leader with distribution channels distinct from consumer-centric AI tutors"
+    },
+    "trending_reason": {
+      "summary": "Raised a €6.1M Series A in August 2026. Notable for its counterintuitive approach emphasizing the importance of literacy in the AI era.",
+      "catalysts": [
+        "€6.1M Series A investment (led by TCEE Fund IV, 3TS Capital Partners)",
+        "Secured €662,000 in non-repayable EU grants"
+      ],
+      "growth_metrics": "600,000+ paid students, 3,000+ schools in 30 countries, approx. $2.7M revenue in 2025, EBITDA positive",
+      "media_mentions": [
+        {
+          "source": "BOOKR Kids Official Blog"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "The Series A deal includes primary investment, secondary share purchase, and conversion of existing financial instruments. Separately, €662,000 in non-repayable EU grants.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Primary investment + secondary + conversion"
+      },
+      "funding_history": [
+        {
+          "note": "Primary investment + secondary + conversion"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global edtech market (approx. $400B est. 2026); SAM: Children's literacy and language learning market; SOM: Digital literacy platform for schools (multi-million dollar scale)",
+      "market_trend": "Increasing AI edtech investment, growing emphasis on reading comprehension, accelerating digital transformation in schools",
+      "growth_potential": "Scalable from 600K paid students, new market entry through 30-country presence, upselling opportunities for AI tools",
+      "risks": [
+        "Competition from consumer AI tutor platforms (e.g., Buddy.ai)",
+        "Dependence on school budgets",
+        "Difficulty in scaling due to regional curriculum differences"
+      ],
+      "risk_mitigation": "Strong learning outcome data (20% reading comprehension improvement), based on 3,000+ school network, experience mapping various national curricula"
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "Series A Announcement Official Blog"
+      },
+      {
+        "title": "Forbes.hu article (Hungarian)"
+      }
+    ],
+    "editor_pick_comment": "The counterintuitive approach of combining human-created stories with AI teacher tools, emphasizing the importance of literacy in the AI era, is impressive."
+  },
+  "nous-2026": {
+    "tagline": "An AI agent that takes care of household management for you",
+    "category": [
+      "AI Agent",
+      "Household Management",
+      "Fintech"
+    ],
+    "headquarters": {
+      "country_ko": "United Kingdom"
+    },
+    "founders": [
+      {
+        "background": "Venture capitalist from Index Ventures; founded onefinestay in 2009, acquired by Accor Hotels in 2016 for approx. $200M. Served as a lecturer at Harvard Business School and a board member of Amnesty International.",
+        "notable_achievement": "Founded onefinestay and achieved a successful exit"
+      },
+      {
+        "background": "As Sainsbury's Digital & Technical Director, grew online revenue from £700M to £1.3B; involved in Ocado's early scaling; background at Bain and Smedvig.",
+        "notable_achievement": "Massively scaled Sainsbury's online business"
+      },
+      {
+        "background": "After BNEF and McKinsey, held a senior role at onefinestay; later co-founded Trouva, an online homeware marketplace.",
+        "notable_achievement": "Co-founded Trouva"
+      }
+    ],
+    "team_highlights": "Prominent founders including Tom Blomfield (Monzo, GoCardless), Brent Hoberman (lastminute.com), Doug Monro (Adzuna), and Marc Warner (Faculty.ai) participated as angel investors.",
+    "product": {
+      "summary": "An AI agent that manages household bills, subscriptions, insurance, calendars, and everyday tasks on your behalf, reducing costs.",
+      "problem_statement": "Households face a heavy time and mental burden managing electricity, gas, internet, insurance, and other bills, plus subscriptions and schedules; it's difficult to find and switch to the best rates independently.",
+      "solution": "The AI continuously monitors the market on the user's behalf, automatically switches to cheaper plans, cancels subscriptions, reviews bills, and checks contract terms. Also provides calendar and local tradesperson booking features.",
+      "key_features": [
+        "Automatic plan switching (energy, internet, mobile, car insurance)",
+        "Subscription cancellation and tracking",
+        "Family calendar management and deadline reminders",
+        "Finding and booking local tradespeople",
+        "Insurance brokerage services regulated by the FCA",
+        "Cash rewards and unlimited management with premium subscription (£6.99/month)"
+      ],
+      "tech_stack_or_innovation": "Hybrid approach combining large language models (LLMs) with rule-based logic. Sensitive tasks such as financial decisions are handled through a deterministic interface. Holds an FCA-regulated insurance brokerage license.",
+      "target_customer": "Primarily UK households, especially homemakers and working mothers who feel burdened by managing household finances and schedules.",
+      "business_model": "Freemium model with a premium subscription (£6.99/month). Monetizes referral fees from providers for free users, but does not sell data or run ads. Premium users receive a share of the fees as cashback. B-Corp certification emphasizes transparency."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Rocket Money (US)",
+          "comparison": "A similar bill and subscription management app, but focused on recommendations and alerts with limited autonomous execution. Nous's AI directly decides and acts."
+        },
+        {
+          "name": "Chip (UK)",
+          "comparison": "A savings and investment app that also offers bill switching, but it doesn't handle the full scope of household life admin."
+        },
+        {
+          "name": "Yolt (UK, now discontinued)",
+          "comparison": "Was a budgeting app but has shut down. Nous differentiates as a continuously acting agent."
+        }
+      ],
+      "key_differentiator": "Beyond simple recommendations, the AI actually makes and executes financial decisions with user consent (e.g., plan switching, subscription cancellation). An FCA-regulated insurance brokerage license builds trust. The business model stays loyal to households, without data or ad revenue.",
+      "moat": "Regulatory compliance experience, trust and data from 250,000 households, hybrid LLM-plus-deterministic technology, and an integration network with UK providers.",
+      "competitive_position_summary": "An unrivaled position in the UK household management AI agent space. As a regulation-compliant, autonomously acting agent, there are few substitutes. 25% monthly growth and high user loyalty provide a strong advantage over competitors."
+    },
+    "trending_reason": {
+      "summary": "On October 26, 2026, raised a $17M Series B led by Heartcore Capital, surpassed 250,000 households, with 25% monthly growth.",
+      "catalysts": [
+        "$17M Series B investment (Heartcore Capital, Mosaic Ventures, and others)",
+        "250,000 households using the service, adding one new household per minute",
+        "Managing more than $900M in annual household spending"
+      ],
+      "growth_metrics": "25% monthly growth, 250,000 households, average savings of £734 per household."
+    },
+    "funding": {
+      "total_raised_note": "Seed $10M ($9M in February 2022, increasing to $10M through additional angel rounds by mid-2023) and Series B $17M combined.",
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        {
+          "note": "Led by Mosaic Ventures in February 2022. Additional investment brought the total to $10M by mid-2023."
+        }
+      ],
+      "latest_round": {
+        "note": "Announced October 26, 2026; reported by Sifted. Multiple angel investors re-participated."
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: The global household management market (broadly defined). SAM: UK households open to online bill switching and AI use among roughly 28 million households. SOM: From 250,000 households today to a target of 1 million households in 2027 (est.).",
+      "market_trend": "The trend of generative AI agents handling everyday tasks is spreading. Acceptance of AI-based automation in consumer finance and lifestyle apps is increasing.",
+      "growth_potential": "Proven average annual savings of £734 per UK household and 25% monthly growth. Plans to expand into insurance and financial services and enter overseas markets point to strong potential for further market growth.",
+      "risks": [
+        "Financial regulatory risk (must comply with FCA regulations; mistakes could damage trust)",
+        "Possibility that big tech or incumbent insurers/energy companies launch similar services",
+        "Data security and privacy issues",
+        "Difficulty acquiring and maintaining user trust"
+      ],
+      "risk_mitigation": "Obtaining an FCA insurance brokerage license and regulatory compliance experience, strengthening transparency through B-Corp certification, minimizing the potential for errors with hybrid technology, and an opt-in model based on user consent."
+    },
+    "related_links": [
+      null,
+      {
+        "title": "The Cap Table article"
+      },
+      {
+        "title": "Exa Podcast interview"
+      }
+    ],
+    "editor_pick_comment": "An AI agent that manages household finances for you, surpassing 250,000 households and proving a trust-based business model."
+  },
+  "nums-ai-2026": {
+    "tagline": "Foundation model for structured data",
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Assistant Professor at Seoul National University, Department of Computer Engineering (2026~), Assistant Professor at KAIST, School of Electrical and Electronic Engineering (2023~2026), Postdoctoral Researcher at Carnegie Mellon University (2022~2023). Ph.D. in Computer Engineering from Seoul National University (2022).",
+        "notable_achievement": "Awarded Google PhD Fellowship in Machine Learning (2019); Appointed as KAIST Assistant Professor at age 29; Over 10 years of research in AI for graphs, time series, and structured data."
+      },
+      {
+        "background": "Currently enrolled in a master's program at Seoul National University. Published 3 first-authored papers at top-tier AI conferences such as ICML and KDD within 18 months of starting the master's.",
+        "notable_achievement": "Published 3 first-authored papers at ICML and KDD during master's course."
+      },
+      {
+        "background": "After completing a master's from Seoul National University, worked as a machine learning engineer at DeepSource, gaining experience in AI model research and development and service operations.",
+        "notable_achievement": "Experience with the entire AI system lifecycle from ML modeling to service operations at DeepSource."
+      }
+    ],
+    "team_highlights": "Core founding team of 5 (researchers from Seoul National University and KAIST). Closely collaborating with the Data AI Lab (10+ graduate students) led by Professor Jaemin Yoo at Seoul National University's Department of Computer Engineering.",
+    "product": {
+      "summary": "Causilo is a Tabular Foundation Model (TFM) that takes structured data organized in rows and columns (sales records, transaction histories, customer information) and performs predictions necessary for business decision-making through a single inference.",
+      "problem_statement": "Most of the structured data owned by companies is in the form of spreadsheets or database tables. Previously, companies had to develop and maintain separate AI models for each task—such as demand forecasting, anomaly detection, and credit scoring—over several months. While LLMs have revolutionized text and images, the core of business operations—'tables of numbers'—remained a blind spot for foundation models.",
+      "solution": "Causilo is a single foundation model pretrained specifically for structured data. Without fine-tuning, it performs predictions on new datasets immediately, given only context (labeled examples). Companies can cover demand forecasting, customer churn prediction, anomaly detection, credit scoring, etc., with one model, without having to operate multiple task-specific models.",
+      "key_features": [
+        "Zero-shot prediction: Instant inference with only context examples, no separate training or tuning.",
+        "Ranked 1st in overall, classification, and regression categories on the TabArena global benchmark (single model, September 2026).",
+        "Inference speed of 1.4 seconds per fold, fastest among foundation models.",
+        "Code and pretrained weights released (non-commercial license); commercial use requires a separate license.",
+        "Multiple deployment options: API, cloud (AWS SageMaker), on-premises container, open weights, etc."
+      ],
+      "tech_stack_or_innovation": "Based on the Data-Axis Transformer architecture. Effectively learns the structural characteristics of tabular data through a row/column cross-attention mechanism. Utilizes hundreds of millions of synthetic datasets for pretraining. Performs prediction in a single inference (in-context learning), eliminating the need for task-specific fine-tuning.",
+      "target_customer": "Companies in manufacturing, finance, retail, healthcare, insurance, and defense that need predictions based on structured data. Also offers on-premises solutions for companies that have difficulty exporting data. Currently collaborating with InBody among domestic companies.",
+      "business_model": "B2B SaaS: Cloud API call-based billing; On-premises container license; Commercial model usage rights (weight license). Base model code and weights are released for free; commercial use requires a separate license."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Large model with 1.6B parameters. 2nd place on TabArena single model. Non-commercial license. Slow inference speed at 173.6 seconds per fold. 10-class limit. Hyperscaler R&D capital."
+        },
+        {
+          "comparison": "Prior Labs was acquired by SAP in July 2026. Top ranks on TabArena overall leaderboard. Non-commercial license (high-performance variant is API-only). 4.3 seconds per fold. Prior Labs is not an independent company."
+        },
+        {
+          "comparison": "Apache-2.0 license (most open). 1.5 seconds per fold, second fastest after Causilo. Specialized in small-scale data (10,000-row limit). Amazon ecosystem."
+        },
+        {
+          "comparison": "Model from a Korean large corporation's research lab. Lightweight with 20.8M parameters. Competes in classification category on TabArena, following Causilo. Non-commercial license."
+        },
+        {
+          "comparison": "Overall 1st place on TabArena (including system entries). OpenMDW-1.1 license. 7.6 seconds per fold. Highlighted alongside Causilo at NVIDIA's GTC keynote."
+        }
+      ],
+      "key_differentiator": "Triple crown in overall, classification, and regression on TabArena (single model). Fastest inference among foundation models (1.4 seconds per fold). NVIDIA CEO Jensen Huang directly mentioned it as a major global model in his GTC Berlin 2026 keynote.",
+      "moat": "Depth of research from a founding team that has focused on structured data AI for over 10 years. Technical prowess proven by TabArena 1st place. Trust in the researcher/developer community through open-sourcing code and weights. Potential collaboration with the Korean market (Samsung, LG, Hyundai Motor, InBody, etc.).",
+      "competitive_position_summary": "Causilo is technically in the lead (single model TabArena 1st) in the global tabular data foundation model competition, notably differentiated by inference speed and efficiency. However, it is inferior in capital and distribution compared to hyperscalers like Google, Amazon, NVIDIA, and SAP. Currently, it is seeking global expansion based on its technological advantage, using the Korean market as a foothold."
+    },
+    "trending_reason": {
+      "summary": "On November 4, 2026, the company closed a pre-seed second round of KRW 2B (totaling KRW 6B) from Mirae Asset Venture Investment and Korea Investment Partners, and was also selected for TIPS (a private-investment-led tech startup program). At the same time, its own foundation model for structured data, 'Causilo', which was released in September 2026, achieved 1st place on the global TabArena benchmark and appeared in the keynote of Jensen Huang, CEO of NVIDIA, at GTC Berlin 2026, drawing global attention.",
+      "catalysts": [
+        "Pre-seed second closing (KRW 2.0B) and TIPS selection (additional research funding of KRW 800M), announced 2026-11-04",
+        "Causilo ranks 1st in overall, classification, and regression categories on TabArena (single model, September 2026).",
+        "Jensen Huang, in his GTC Berlin 2026 keynote (October 21, 2026), introduced Causilo as a major global model alongside NVIDIA Kumo-Tabular and Prior Labs TabPFN-3.5.",
+        "Big tech companies like Google TabFM, Amazon Mitra-v2, and SAP TabPFN-3.5 have entered the structured data foundation model competition in earnest, leading to a surge in interest in the category itself."
+      ],
+      "growth_metrics": "Undisclosed. As a pre-seed stage company, sales figures are not disclosed. The technical ranking on TabArena (1st place, single model) and inference speed (1.4 seconds per fold, fastest among foundation models) are the key performance indicators."
+    },
+    "funding": {
+      "total_raised_note": "KRW 6B equity pre-seed across two closings (first closing KRW 4B, second closing KRW 2B). Additional R&D funding of KRW 800M (approx. $600K) through the TIPS program. Multiple sources are consistent with a cumulative $4.5M–$4.6M (KRW 6B).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "KRW 2B. Mirae Asset Venture Investment and Korea Investment Partners each invested KRW 1B. TIPS R&D funding of KRW 800M (approx. $600K) separate."
+      },
+      "funding_history": [
+        {
+          "note": "KRW 4B. Led by Stonebridge Ventures, with participation from SBVA, KT Investment, and Base Ventures."
+        },
+        {
+          "note": "KRW 800M. R&D funding from the Ministry of SMEs and Startups' TIPS R&D general track. Operating company: Base Ventures. Non-dilutive funding."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The structured data AI market is a key sub-area of the global AI market. According to Allied Market Research, the global data science platform market is expected to grow from approximately $140B in 2025 to over $700B by 2032. Since structured data accounts for over 80% of enterprise data, the TAM is estimated to be hundreds of billions of dollars. The SAM is the enterprise predictive analytics solutions market (approx. $50B, est.). The SOM is the B2B predictive SaaS market in Korea and the Asia-Pacific region (hundreds of millions of dollars, est.).",
+      "market_trend": "From 2024 to 2026, structured data foundation models such as TabPFN, TabFM, Mitra, and Causilo have emerged in succession, forming a 'table-native AI' paradigm. The existing market centered on GBDT (XGBoost, CatBoost) is shifting to ICL-based foundation models. Competitive landscape with big techs like Google, Amazon, NVIDIA, SAP, and LG all entering. The boundary between open-source and commercial licenses is a major issue.",
+      "growth_potential": "Since the majority of enterprise data is structured, the potential customer base is very wide. Causilo is well-positioned for developer adoption due to its fast inference speed (1.4 seconds per fold) and open-source strategy. NVIDIA keynote exposure has secured global recognition. However, as a pre-seed stage company, product-market fit (PMF) validation is still early.",
+      "risks": [
+        "Competition with big techs such as Google, Amazon, NVIDIA, and SAP, which have overwhelming capital and distribution networks.",
+        "Continuous performance improvements of competing models such as TabPFN-3.5 (TabArena overall ranking pushed back by system entries like Kumo Tabular).",
+        "Pre-seed stage, so lack of validation in revenue and customer acquisition.",
+        "Uncertainty in the price competitiveness and adoption rate of the commercial license model."
+      ],
+      "risk_mitigation": "Objective technological advantage as the 1st place single model on TabArena. Competitive strength in enterprise workloads requiring real-time predictions due to the fastest inference speed. Open-source strategy builds community base. Plans to expand globally with the Korean manufacturing, finance, and healthcare markets (e.g., InBody) as a bridgehead. Targets regulated industries where data export is difficult through on-premises deployment options."
+    },
+    "related_links": [
+      {
+        "title": "Nums AI Official Website"
+      }
+    ],
+    "editor_pick_comment": "With Google, Amazon, and NVIDIA jumping into the structured data AI battlefield, a 9-month-old Korean startup has taken 1st place in a global benchmark and appeared in a Jensen Huang keynote—the next big thing after semiconductors is 'the table'."
+  },
+  "evergrove-2026": {
+    "tagline": "AI voice agent automating workers' compensation post-treatment coordination",
+    "category": [
+      "AI Agent",
+      "Voice AI",
+      "Insurance"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Former AI PM Lead at Newfront. Microsoft Azure ML and VS Code engineer. Graduate of University of Waterloo.",
+        "notable_achievement": "Built AI agent system at Newfront, which was cited in the $1.3B acquisition announcement."
+      },
+      {
+        "background": "Former AI engineer at Newfront. Participated in building early agent-based automation systems at WTW (Willis Towers Watson).",
+        "notable_achievement": "Built insurance policy negotiation agent system with co-founder, achieving 15-20% cost savings."
+      }
+    ],
+    "team_highlights": "Consists of two co-founders: Sid Unnithan and Jacob Chia. Both are from Newfront (acquired for $1.3B), with deep experience in AI agents for insurance.",
+    "product": {
+      "summary": "A platform of 19 specialized voice AI agents automating communication among stakeholders from workers' compensation incident intake to post-treatment coordination and claims.",
+      "problem_statement": "Workers' compensation involves complex administrative tasks due to varying state regulations, and relies on manual phone calls, leading to long cycle times and high costs. It takes days from intake to initial assessment.",
+      "solution": "Evergrove provides 19 voice AI agents specialized in workers' compensation, automating inbound/outbound calls, system data entry/retrieval, holds/reconnects/transfers, etc. Humans stop when stuck; agents persist and complete.",
+      "key_features": [
+        "19 specialized voice AI agents (intake, clinical, status, claims, information)",
+        "500K+ calls processed (more than annual target)",
+        "Integration with claims management systems, CRM, etc.",
+        "Audit trail for all calls and HIPAA compliance (BAA provided)",
+        "10x cycle time reduction through parallel call processing",
+        "60%+ reduction in operational costs, 40% improvement in workflow completion rate"
+      ],
+      "tech_stack_or_innovation": "Domain-specific composable AI agents, IVR navigation, intelligent multi-retry backoff, parallel agent instances, stateful telephony system, human control with definable intervention rules.",
+      "target_customer": "MCOs (Managed Care Organizations), TPAs (Third-Party Administrators), specialty networks, ancillary service providers, investigation companies, and all stakeholders in the workers' compensation ecosystem.",
+      "business_model": "SaaS-based subscription (exact pricing undisclosed, demo required)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Voice AI call center for health systems, Evergrove is specialized in workers' compensation"
+        },
+        {
+          "comparison": "Medical triage/orchestration agents, more focused on acute care"
+        },
+        {
+          "comparison": "Focus on medical revenue cycle calls, Evergrove covers the entire workers' compensation spectrum"
+        },
+        {
+          "comparison": "Pre-authorization and provider outreach, automates intake-evaluation workflow"
+        }
+      ],
+      "key_differentiator": "First dedicated platform with 19 end-to-end voice AI agents exclusively for workers' compensation, covering state regulations, HIPAA, and claims complexity.",
+      "moat": "Domain-specific data and workflow knowledge, adaptation to state regulations, model optimization through 500K+ call experience, depth of integration with existing claims systems.",
+      "competitive_position_summary": "In the early stages of voice AI penetrating healthcare administration, Evergrove has staked out a narrow but deep niche in workers' compensation and is rapidly gaining traction. It offers the most comprehensive automation of workers' compensation workflows compared to competitors."
+    },
+    "trending_reason": {
+      "summary": "Notable for YC S26 batch, recent seed investment, and milestone of 350K~500K+ calls processed.",
+      "catalysts": [
+        "Selected for Y Combinator Summer 2026 batch",
+        "Seed investment in August 2026 (led by Team Ignite Ventures)",
+        "350K+ calls processed (August 2026 Founderland article)",
+        "On track to achieve 500K+ annual calls (YC Launch post)"
+      ],
+      "growth_metrics": "500K+ calls processed since founding, 60%+ reduction in operational costs, 40%+ improvement in workflow completion rate, 10x cycle time reduction (self-reported)."
+    },
+    "funding": {
+      "total_raised_note": "Estimate: Includes Y Combinator standard terms ($500K). Based on CBInsights and RecentFunding.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Undisclosed",
+        "note": "Estimated as part of $500K including YC standard deal. Led by Team Ignite Ventures."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Based on CBInsights records"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Led by Team Ignite Ventures. Estimated to include YC standard deal."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: US workers' compensation administrative market ($500B+), SAM: MCO/TPA phone-centric coordination ($10B+), SOM: 1-2M calls/multi-million ARR within 1-2 years (estimated).",
+      "market_trend": "The workers' compensation industry shows increasing interest in AI-based administrative processing (Workers Compensation Research Institute report). Maturation of voice AI technology (e.g., GPT-4o) expands possibilities for call automation.",
+      "growth_potential": "Product-market fit demonstrated by 500K+ calls processed, potential for exponential growth when expanding large MCO contracts. Ability to adapt to state regulations is key to scaling.",
+      "risks": [
+        "Sales cycles for winning large customers may be long",
+        "Must adapt to claims data and state regulation changes (regulatory risk)",
+        "Healthcare security and compliance requirements (HIPAA, etc.)",
+        "Potential entry of large competitors and AI giants"
+      ],
+      "risk_mitigation": "Leverages YC network and industry connections, vendor-neutral integration, built-in HIPAA compliance, and the founding team's industry experience (Newfront) to address risks."
+    },
+    "editor_pick_comment": "YC S26 debut team, demonstrating voice AI B2B potential with 500K+ calls processed in the narrow but deep niche of workers' compensation."
+  }
+}
