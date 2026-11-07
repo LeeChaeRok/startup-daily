@@ -1,0 +1,2569 @@
+{
+  "traversal-2026": {
+    "tagline": "Resolving production incidents with an AI SRE agent.",
+    "category": [
+      "AI Agent"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "employee_count": "51-200 (est.)",
+    "founders": [
+      {
+        "background": "Professor at Columbia University, PhD in Computer Science from MIT",
+        "notable_achievement": "Professor at Columbia Business School and Department of Computer Science"
+      },
+      {
+        "background": "Professor at Cornell Tech, PhD in Computer Science from UC Berkeley",
+        "notable_achievement": "President's Gold Medal at IIT Bombay, ranked 10th nationally in IIT-JEE"
+      },
+      {
+        "background": "PhD in Computer Science from MIT",
+        "notable_achievement": "Research on gene regulatory networks"
+      },
+      {
+        "background": "Bachelor's in Computer Science and Finance from the University of Pennsylvania, former Citadel Securities",
+        "notable_achievement": "Experience as a high-frequency quant trader"
+      }
+    ],
+    "team_highlights": "The four founders are researchers from top-tier universities such as MIT, UC Berkeley, Columbia, and Cornell, or engineers from Citadel, with expertise in causal machine learning and reinforcement learning.",
+    "product": {
+      "summary": "Traversal is a platform that automates the incident investigation process for Site Reliability Engineers (SREs) through AI agents (Workers). Its proprietary Production World Model and Causal Search Engine simultaneously test multiple hypotheses to identify root causes and suggest fixes.",
+      "problem_statement": "In modern microservice environments, when an incident occurs, SRE engineers manually track numerous alerts to find the cause, which takes a long time and is prone to human error.",
+      "solution": "Traversal connects logs, metrics, traces, code change history, and runbooks to create a continuously updated map of the production environment. AI agents automatically investigate incidents and present root causes and evidence in Slack and other channels.",
+      "key_features": [
+        "Traversal Workers: Automatically start investigation upon event occurrence.",
+        "Causal Search Engine: Parallel testing of thousands of hypotheses.",
+        "Alert Intelligence: Pre-filter noisy alerts.",
+        "Production Support: Engineers can ask production questions in natural language.",
+        "Code Resilience: Predict production impact before code changes.",
+        "Traversal MCP: Provide production information to coding agents."
+      ],
+      "tech_stack_or_innovation": "Core technology is causal machine learning (causal ML) and reinforcement learning, with the Production World Model modeling causal relationships across large-scale microservices and a hypothesis verification engine.",
+      "target_customer": "Large engineering organizations (SRE teams). Customers: Nubank, Harvey, PepsiCo, DigitalOcean, Fortune 100 companies.",
+      "business_model": "SaaS subscription-based (exact pricing model is undisclosed)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Datadog operates within its own platform, but Traversal independently connects to multiple observability tools (Datadog, Splunk, CloudWatch, etc.), supporting a wider range of data sources."
+        },
+        {
+          "comparison": "An incident management tool that has recently added AI investigation features, but lacks the depth of Traversal's causal search engine."
+        },
+        {
+          "name": "General coding agents (e.g., Cursor, Copilot)",
+          "comparison": "Can access production systems and read logs, but not as accurate as Traversal's specialized production model and causal analysis."
+        }
+      ],
+      "key_differentiator": "The Causal Search Engine identifies actual causal relationships rather than simple pattern matching, filtering out spurious correlations and presenting accurate root causes.",
+      "moat": "Accumulated Production World Model data and causal ML algorithms, multi-platform integration experience. Secured capital through large investments from major VCs.",
+      "competitive_position_summary": "Traversal is positioned as an independent AI layer on top of observability tools, offering deeper causal analysis without being dependent on platform vendors like Datadog."
+    },
+    "trending_reason": {
+      "summary": "On November 3, 2026, Traversal became a unicorn with a $120M Series B co-led by Kleiner Perkins, Redpoint Ventures, and Khosla Ventures. Strong growth metrics: ARR grew 9x, usage increased 100x.",
+      "catalysts": [
+        "Increased microservice complexity driving demand for automated incident diagnosis.",
+        "Maturing AI agent technology and expanding enterprise adoption.",
+        "Differentiated technology resulting from founders' combined academic and industry experience."
+      ],
+      "growth_metrics": "Annual Recurring Revenue (ARR) grew 9x, monthly investigations increased 100x from 5,163 to 73,000, monthly active users grew 20x (as of 2026, based on company public data)."
+    },
+    "funding": {
+      "total_raised_note": "Total includes $120M Series B, previous Seed/Series A of $48M, and strategic investment from Amex Ventures (amount undisclosed). Source: BusinessWire.",
+      "funding_history": [
+        {
+          "note": "Seed and Series A rounds disclosed from stealth mode."
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Strategic investment from Amex Ventures."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global AIOps market expected to grow to over $50B by 2027 (est.). SAM: AI-based SRE segment is in the billions of dollars (est.).",
+      "market_trend": "Companies are accelerating AI agent adoption for production system stability, with particularly high demand for SRE automation.",
+      "growth_potential": "Expanding customer base including Fortune 100; potential to expand TAM by extending product lines to code resilience.",
+      "risks": [
+        "Intensified competition from large observability platforms like Datadog and Splunk strengthening their AI capabilities.",
+        "Potential adoption delays due to data security and privacy concerns within enterprises."
+      ],
+      "risk_mitigation": "Avoid vendor lock-in with multi-platform support; address security concerns with read-only connections and on-prem cloud options."
+    },
+    "related_links": [
+      {
+        "title": "Traversal Official Website"
+      },
+      {
+        "title": "Traversal Series B Announcement Blog"
+      }
+    ],
+    "editor_pick_comment": "Founded by causal AI researchers, Traversal applies causal reasoning to diagnose production incidents, delivering more accurate root causes than existing observability tools, and has ascended to unicorn status through its differentiated technology."
+  },
+  "fragment-2026": {
+    "tagline": "AI agent that autonomously handles procurement exceptions for manufacturing and energy companies",
+    "category": [
+      null,
+      "Procurement Automation",
+      "AI Agent"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "At Zoom, experience scaling products for manufacturing, healthcare, and education frontline workers; previously founded two supply chain startups",
+        "notable_achievement": "Grew up in a manufacturing household, giving deep understanding of supply chain optimization"
+      },
+      {
+        "background": "Led generative AI research and product engineering teams at Instabase; later co-founded Mindy",
+        "notable_achievement": "Deep understanding of what regulated industries need to trust and adopt AI"
+      }
+    ],
+    "team_highlights": "According to the 8VC blog, in addition to the co-founders, they have secured top-tier technical and commercial talent.",
+    "product": {
+      "summary": "An AI agent platform that autonomously investigates and resolves purchase and payment exceptions on top of existing ERP and procurement systems.",
+      "problem_statement": "In the direct procurement process for manufacturing and energy companies, exceptions such as PO changes, delivery delays, and invoice discrepancies require personnel to manually track and reconcile across multiple systems, creating significant operational burden.",
+      "solution": "Fragment's Autonomous Context Engine connects enterprise data, policies, supplier relationships, and operational context to identify exceptions, determine appropriate actions, and resolve them automatically without human intervention.",
+      "key_features": [
+        "3-Way Match dispute resolution: automatically matches PO, goods receipt, and invoice, identifies root cause, and generates GL-safe items.",
+        "Change Order management: compares PO modifications against contracts and budgets, and requests supplier approval.",
+        "RFQ management: generates RFQ from requirements, sends to qualified suppliers, normalizes responses, and provides recommendations.",
+        "PR to PO: validates requisitions against policy, budget, and history, then automatically generates appropriate PO."
+      ],
+      "tech_stack_or_innovation": "Autonomous Context Engine that maps data from multiple enterprise systems in a graph format and learns business rules and conventions, enabling the agent to reason and execute like a human.",
+      "target_customer": "The world's largest physical goods manufacturing, distribution, and energy companies (Fortune 1000 scale).",
+      "business_model": "SaaS subscription-based (pricing undisclosed)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Existing procurement platforms with strong installed base and distribution channels; Fragment differentiates by working on top of systems without replacement."
+        },
+        {
+          "comparison": "Similar position to SAP Ariba; Fragment specializes in resolving direct procurement exceptions."
+        },
+        {
+          "comparison": "Procurement orchestration tool that controls the purchasing request entry point; Fragment focuses on investigating and executing purchase and payment exceptions."
+        },
+        {
+          "name": "Internal automation teams or system integrators",
+          "comparison": "Large enterprises address exceptions through their own engineers or service providers; Fragment competes with knowledge retention and consistent processing capability."
+        }
+      ],
+      "key_differentiator": "Works on top of existing ERP and procurement tools without system replacement; the context engine learns enterprise-specific rules and tacit knowledge for autonomous execution.",
+      "moat": "Domain knowledge specialized in direct procurement, reliability proven with Fortune 1000 customers (Graybar, CNX, Flex), and the operational context data accumulated by the engine.",
+      "competitive_position_summary": "Specialized in cross-system exception automation that existing procurement platforms do not offer; has secured early customers and is building a differentiated market position."
+    },
+    "trending_reason": {
+      "summary": "At a time when tariff volatility and supply chain disruptions are increasing the difficulty of direct procurement, Fragment launched its AI agent that autonomously handles purchase and payment exceptions without replacing existing systems, with a notable $56M launch.",
+      "catalysts": [
+        "On October 28, 2026, raised $56M (Seed + Series A) and officially launched.",
+        "Secured real references from Fortune 1000 companies including Graybar, CNX, and Flex.",
+        "Participation from prominent angel investors, including former Sequoia chairman Roelof Botha."
+      ],
+      "growth_metrics": "Dozens of Fortune 1000 customers using; in the Flex case, production deployment within 4 weeks and redeployment of 100 out of 134 FTEs."
+    },
+    "funding": {
+      "total_raised_note": "Combined Seed (co-led by General Catalyst and A*) and Series A (led by 8VC).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Combined Seed and Series A amount; individual round sizes undisclosed."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Co-led by General Catalyst and A*; individual amounts undisclosed."
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Led by 8VC; included in combined $56M with Seed."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global procurement software market is estimated at approx. $8B in 2025; direct procurement exception handling automation is a high-value segment within it.",
+      "market_trend": "Due to tariff volatility and increasing supply chain uncertainty, demand for AI solutions that can resolve procurement exceptions in real time is surging among large enterprises.",
+      "growth_potential": "The approach that works without replacing existing systems lowers adoption barriers for large enterprises and can expand to other workflows after validation in direct procurement.",
+      "risks": [
+        "If existing procurement platforms (SAP Ariba, Coupa) enhance their own AI capabilities, competition may intensify.",
+        "Long sales cycles due to large enterprise security and regulatory requirements.",
+        "Risk of becoming a service organization if customization per customer increases."
+      ],
+      "risk_mitigation": "Overlay approach without system replacement minimizes risk; rapid ROI demonstrated with production deployment within 4 weeks in early customer cases; focus on a specific domain (direct procurement) ensures scalability."
+    },
+    "related_links": [
+      {
+        "title": "Fragment Official Website"
+      },
+      {
+        "title": "Fragment Introduction Page"
+      },
+      {
+        "title": "Fragment Series A Official Announcement"
+      }
+    ],
+    "editor_pick_comment": "It is impressive that a stealth startup that raised $56M autonomously handles large enterprise procurement exceptions 'without system replacement', and the execution capability demonstrated by production deployment within 4 weeks in the Flex case also stands out."
+  },
+  "bionsight-bionsite-2026": {
+    "tagline": "AI and chemoproteomics drug discovery platform for fast target and off-target identification",
+    "category": [
+      "AI Drug Discovery",
+      "Chemoproteomics",
+      "Target Discovery Platform"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "Co-CEO",
+        "background": "Professor at Kangwon National University College of Pharmacy (associate professor at founding). Background in pharmacy and pharmacology, researcher in chemoproteomics-based drug target discovery.",
+        "notable_achievement": "Co-founder who led selection for Takeda Open Innovation (2022) and Samsung Bioepis Seoul Biohub program (2026)."
+      },
+      {
+        "role": "Co-CEO",
+        "background": "PhD in Physics from University of Wisconsin. Worked as a machine learning engineer at the American Institute of Physics and Silicon Valley companies.",
+        "notable_achievement": "Designed the Javelin platform and AI analysis pipeline. Secured validation capabilities at global pharma standards through joint research with Takeda (as reported in interview)."
+      },
+      {
+        "role": "Co-founder",
+        "background": "Professor at Kangwon National University, Department of Statistics. Background in statistics and machine learning.",
+        "notable_achievement": "Contributed to statistics and data modeling-based design as a founding member."
+      }
+    ],
+    "team_highlights": "11-13 member team (based on 2026 job postings and blog). Corporate address is 1 Kangwon University-gil, Chuncheon, Gangwon, but recent Job Korea and LinkedIn listings show Seongsu-dong, Seongdong-gu, Seoul (FORHU) — relocation unconfirmed (est.). Two Co-CEOs with founding members from Kangwon University faculty (pharmacy and statistics).",
+    "product": {
+      "summary": "Chemoproteomics combining mass spectrometry (DIA-MS) and AI to analyze drug binding across the whole proteome, enabling target discovery/validation and off-target (side effect) profiling. Products: target discovery platform Javelin, DIA analysis solution SynapSpec, biomedical DB Glance, and structure-based deep learning model Skeleton.",
+      "problem_statement": "Target discovery and validation is the most uncertain stage in drug development. Existing lab-based validation is slow, and public data-driven AI models only make predictions without experimental validation. Off-target binding—drugs unintentionally binding to other proteins—causes toxicity and side effects, but there was no standard method to verify this at the whole-proteome level early in development.",
+      "solution": "AI trains on experimental drug-protein binding data generated from in-house designed chemoproteomics experiments. Preprocessing with 'massive trypsinization' achieves coverage of over 5,000 proteins, and provides dose-response and binding site-level information within 4–6 weeks, simultaneously delivering on-target confirmation, off-target list, and safety assessment.",
+      "key_features": [
+        "Javelin: AI-powered chemoproteomics target discovery platform — provides dose-response curves and peptide/domain-level binding resolution.",
+        "SynapSpec: Deep learning-optimized DIA mass spectrometry data analysis solution.",
+        "Glance: Biomedical database for target discovery and drug repurposing.",
+        "Skeleton: Model that uses 3D structure-based deep learning to optimize molecular structures.",
+        "Target profiling service: On-target confirmation + off-target and toxicity assessment report for submitted compounds."
+      ],
+      "tech_stack_or_innovation": "DIA-MS mass spectrometry + 'massive trypsinization' pre-processing (simpler than limited proteolysis) + AI-based quantification (spectral deconvolution). The company claims higher resolution and sensitivity compared to existing methods like CETSA/TPP, DARTS, SPROX, and LiP-MS, emphasizing that it closes the 'prediction↔measurement' loop with experimental data.",
+      "target_customer": "Pharma and biotech companies that have confirmed efficacy but lack target/off-target information (target profiling service), global big pharma targeting undruggable targets that are difficult to develop with existing methods, and partners for joint research and technology transfer.",
+      "business_model": "Short-term: Generate cash flow through target profiling services. Mid-term: Joint research with big pharma and milestone payments (joint research with Takeda on cancer drugs). Long-term: Technology transfer and licensing of own pipeline (autoimmune BIMM-1, metabolic disease BIMM-6) with upfront+milestone+royalty structure."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "PharmCADD",
+          "comparison": "Operates 'Pamulator', an AI and molecular dynamics drug development platform (per THE VC comparable company benchmark). Simulation-based, differing from Bionsight's experimental binding data focus."
+        },
+        {
+          "name": "Cyperrom",
+          "comparison": "Genome analysis-based drug suitability prediction (per THE VC). Differs as it uses gene expression data rather than experimental protein binding."
+        },
+        {
+          "name": "HiTS",
+          "comparison": "Provides AI-driven drug development solutions (THE VC). General in scope, while Bionsight specializes in experimental chemoproteomics profiling."
+        },
+        {
+          "name": "Global chemoproteomics+AI companies (VantAI, etc.)",
+          "comparison": "Competition from US/European companies combining chemoproteomics with generative AI for target discovery. They have more capital and personnel, but early in entering Asia (per public info)."
+        }
+      ],
+      "key_differentiator": "AI trained and validated on experimental binding data from in-house designed experiments, not public data. Claims to achieve coverage of over 5,000 proteins within 4–6 weeks via massive trypsinization, 10 times faster target discovery than existing methods.",
+      "moat": "Proprietary data assets accumulated through chemoproteomics experimental pipeline, mass spectrometry and AI analysis pipeline, and target profiling services. Selection for Takeda and Samsung Bioepis open innovation programs serves as a proxy for technical validation.",
+      "competitive_position_summary": "Close to being a first mover in domestic AI drug development based on chemoproteomics, currently in early stage with both platform services and own pipeline. However, with only 11-13 employees, it is smaller in capital and organization compared to global competitors; service revenue and technology transfer performance will be future verification points."
+    },
+    "trending_reason": {
+      "catalysts": [
+        "2026-10-27: Reports of KRW 15B Series B funding, with DSC Investment and S&S Investment among the participants. Korea Economic Daily said the round size could expand through additional funding.",
+        "2026-07: Final selection for the Seoul BioHub and Samsung Bioepis open innovation program, alongside Fraser Therapeutics (two companies in total).",
+        "2024: Selected for Ministry of SMEs and Startups Scale-up TIPS program.",
+        "2022–2023: Final selection for Takeda Cockpit Funding Open Innovation (¥5M support) and joint research on cancer drugs based on Javelin."
+      ],
+      "growth_metrics": "Cumulative investment approx. KRW 20.5B (Series A KRW 5.5B + Series B KRW 15B, per media). Revenue and pipeline clinical stage are undisclosed (est.). 11-13 employees. Own pipeline includes early-stage autoimmune (BIMM-1) and metabolic disease (BIMM-6), preparing IND filing for immune disease.",
+      "media_mentions": [
+        {
+          "source": "Korea Economic Daily Market Insight",
+          "title": "AI drug developer Bionsight raises KRW 15B in Series B round"
+        },
+        {
+          "source": "Nate News (reprint from Korea Economic Daily)",
+          "title": "AI drug developer Bionsight raises KRW 15B in Series B round"
+        },
+        {
+          "source": "Funding Insight (Demo Day blog)",
+          "title": "Bionsight's KRW 15B Series B Analysis: AI Chemoproteomics Shortens Drug Development for Chuncheon Biotech"
+        },
+        {
+          "source": "Chosun Biz (English)"
+        }
+      ],
+      "summary": "On 2026-10-27, Korea Economic Daily reported that AI drug discovery company Bionsight (BionSite) raised KRW 15B in its Series B round. Investor interest centered on its AI and chemoproteomics-based target discovery technology. The report also noted that the round could grow further, following Bionsight's selection for the Seoul BioHub open innovation program run by Samsung Bioepis in July 2026."
+    },
+    "funding": {
+      "total_raised": "Approx. KRW 20.5B",
+      "total_raised_note": "Series A KRW 5.5B (2023) + Series B KRW 15B (2026) total (based on media reports). Excludes government support from TIPS and Scale-up TIPS. USD conversion assumes approx. KRW 1,350/USD (est.).",
+      "valuation_estimate": "Approx. KRW 80B (est.)",
+      "latest_round": {
+        "amount": "Approx. KRW 15B",
+        "lead_investor": "DSC Investment",
+        "notable_investors": [
+          "S&S Investment"
+        ],
+        "note": "Korea Economic Daily (2026-10-27) reported the round at KRW 15B or more and noted the possibility of expansion. Additional institutional participants beyond DSC and S&S are possible (The VC listed one investor besides DSC). Approx. $11.1M at USD conversion (est., assuming KRW 1,350/USD)."
+      },
+      "funding_history": [
+        {
+          "amount": "KRW 5.5B",
+          "note": "Participation by SV Investment, DSC Investment, Schmidt, etc. (per InvestNews). USD approx. $4.1M (assuming KRW 1,350/USD, est.).",
+          "lead_investor": "SV Investment"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global AI drug discovery market is growing to tens of billions of dollars (est.). Target discovery and off-target profiling outsourcing (SAM) is expanding due to increasing open innovation by big pharma. Bionsight's SOM is initially small, starting with service revenue from domestic and Asian pharma companies (est.).",
+      "market_trend": "Hitnews (Oct 2026) reported that domestic bio investment is shifting from clinical-stage drugs to AI, medical devices, and platform companies, citing Bionsight's over-KRW-10B investment alongside Tliore and Hurotics. Chemoproteomics is a technology field that global big pharma is paying attention to through open innovation.",
+      "growth_potential": "Demand for off-target profiling and early safety assessment, targeting undruggable targets, positive cycle of model optimization through data assets accumulated from services. Business model capable of revenue surge upon technology transfer with upfront+ milestone+ royalty structure.",
+      "risks": [
+        "Possible operating deficit as platform service revenue is still pre-revenue.",
+        "Burden of executing multinational and large-scale contracts with only 11-13 employees.",
+        "Intensifying competition with global chemoproteomics and AI companies, notably in the US.",
+        "Dependence on follow-up funding and technology transfer performance after Series B.",
+        "Own pipeline (BIMM-1 etc.) is still pre-clinical."
+      ],
+      "risk_mitigation": "Generating cash flow through short-term target profiling services, securing validation and joint research opportunities via Takeda and Samsung Bioepis open innovation, and diversifying funding risk through government R&D support like Scale-up TIPS."
+    },
+    "related_links": [
+      {
+        "title": "Official website"
+      },
+      {
+        "title": "Korea Economic Daily Market Insight - Series B coverage (2026-10-27)"
+      },
+      {
+        "title": "Chosun Biz (English) - Samsung Bioepis Open Innovation Selection (2026-07-22)"
+      },
+      {
+        "title": "Seoul City press release - Seoul Biohub·Samsung Bioepis program"
+      },
+      {
+        "title": "THE VC company profile"
+      },
+      {
+        "title": "InvestNews - Series A KRW 5.5B coverage"
+      },
+      {
+        "title": "Dailypharm Interview - Background on Takeda selection"
+      }
+    ],
+    "editor_pick_comment": "Chemoproteomics that trains AI on proprietary experimental data, not public data — the Series B of an 11-person team that Takeda and Samsung Bioepis recognized first."
+  },
+  "muse-2026": {
+    "tagline": "Expanding in Japan and the U.S. with 'Armo,' a multipurpose robot for retail stores",
+    "category": [
+      "Retail Robots",
+      "Physical AI",
+      "Store Automation"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "employee_count": "11-50 (est.)",
+    "founders": [
+      {
+        "background": "Graduated from Hitotsubashi University's Commerce Faculty, then worked at Ernst & Young ShinNihon (EY) and Goldman Sachs. At ZMP, built the logistics robot 'CarriRo' business from scratch over 7 years, mass-producing and deploying it at more than 300 companies. Founded MUSE in April 2022.",
+        "notable_achievement": "Japan's robot commercialization expert who mass-produced and supplied ZMP's CarriRo logistics robot to over 300 companies"
+      },
+      {
+        "background": "Electrical design engineer with a master's degree in superconducting thin film research. At ZMP for over 15 years, responsible for product planning, system design, mass production, and support; participated in CarriRo autonomous system design and autonomous vehicle hardware implementation.",
+        "notable_achievement": "Experience in CarriRo autonomous driving system design and autonomous vehicle HW implementation"
+      }
+    ],
+    "team_highlights": "Both co-founders have experience in robot mass production and commercialization from the Japanese robotics company ZMP. Established U.S. subsidiary MUSE US Inc. and are building local sales, distribution, and maintenance organizations.",
+    "product": {
+      "summary": "Develops and supplies 'Armo,' an autonomous robot that handles product transport (shelf restocking, online orders), out-of-stock and display checks, promotions, and customer guidance in retail stores such as supermarkets, home centers, and drugstores — all with a single unit. Shelf data collected by the robot is analyzed on the cloud platform 'Eureka Platform.'",
+      "problem_statement": "Retail in Japan and the U.S. faces labor shortages, rising labor costs, and heavy physical strain from transporting goods. Existing store robots are single-function, leading to low utilization rates and unclear return on investment (ROI).",
+      "solution": "Armo switches tasks according to time of day and store conditions, operating all day long to maximize utilization of a single robot. Employees can move away from repetitive tasks and focus on high-value activities like customer service and store planning.",
+      "key_features": [
+        "Autonomous transport within stores for shelf restocking and online grocery order items",
+        "Automatic inspection of shelf out-of-stocks and display conditions using cameras/sensors",
+        "Automatic task switching based on time of day and store demand (transport → inspection → promotion → guidance)",
+        "Collects and analyzes shelf and store data via Eureka Platform",
+        "In-store promotional activities and customer guidance functions"
+      ],
+      "tech_stack_or_innovation": "Equips the robot with autonomous driving, perception, and decision-making technologies from the Physical AI perspective. The cloud 'Eureka Platform' collects store data and provides operational improvement insights. Hardware mass production system is being built with external manufacturing partners.",
+      "target_customer": "Retail chains in Japan and the U.S. including supermarkets, home centers, and drugstores. Commercially deployed in Japan at major retailers such as Belc. In the U.S., initial deployment at Foodcellar Market (New York) and expanding discussions with multiple large retailers (per MUSE announcement).",
+      "business_model": "Sale and leasing of Armo robots and Eureka Platform-based store data analysis services (est.). Specific pricing and contract terms are undisclosed."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Simbe Robotics (U.S.)",
+          "comparison": "Supplies shelf-scanning robot 'Tally' to large retailers. Specializes in single scanning task, while Armo handles transport, promotion, and guidance as a multitask robot."
+        },
+        {
+          "name": "Badger Technologies (U.S.)",
+          "comparison": "Deploys floor cleaning and shelf inspection robots in U.S. retail stores. Same category, but Armo is a compact multipurpose robot with strength in product transport."
+        },
+        {
+          "name": "ZMP (Japan)",
+          "comparison": "Japanese robotics company where co-founders previously worked. Targets retail and logistics markets with logistics robot CarriRo, creating some overlap in Japan."
+        },
+        {
+          "name": "Mujin (Japan)",
+          "comparison": "Industrial robot (picking/logistics) startup focused on factories and warehouses. MUSE concentrates on in-store operations, not warehouses."
+        }
+      ],
+      "key_differentiator": "A 'multitask architecture' where a single robot switches between multiple tasks by time of day, and the integrated provision of store operation data (Eureka Platform) beyond just robot hardware.",
+      "moat": "Founders' experience at ZMP in mass-producing and deploying robots to over 300 companies, providing hardware mass production design and real-world operational know-how. Operational data accumulated from large Japanese retailers, partnerships with retail infrastructure companies like Toshiba Tec, and store data accumulated on the data platform act as barriers to entry.",
+      "competitive_position_summary": "Likely a leader (est.) in Japan's in-store multitask robot segment. In the U.S., first commercial deployment began in August 2026, with competition against Simbe and Badger just starting. Leveraging the Groceryshop 2025 pitch competition win to expand contact with large retailers."
+    },
+    "trending_reason": {
+      "summary": "On November 5, 2026, raised a total of ¥1.75B (approx. $11M) from 15 institutions including new lead investor ALPHA, Rakuten Capital, and New Commerce Ventures. Following the announcement of the first U.S. commercial deployment at New York's Foodcellar Market in August, secured funding to build Armo's mass production system and expand in the U.S.",
+      "catalysts": [
+        "2026-11-05: Total ¥1.75B funding — ALPHA (new lead), Rakuten Capital, THE GOGIN CAPITAL, New Commerce Ventures, and 15 other institutions participated",
+        "2026-08-25: Announced first U.S. commercial deployment (Foodcellar Market, Queens, New York)",
+        "2025: Won 1st place at Groceryshop 2025 Shark Reef Startup Pitch Competition",
+        "Structural labor shortages in Japan and U.S. retail and the 'Physical AI' trend",
+        "Nikkei: Targeting 50% overseas revenue share within 3 years"
+      ],
+      "growth_metrics": "First commercial operation began in June 2024 at two Belc stores in Japan (then raised ¥570M). First U.S. deployment in August 2026 in New York. Cumulative funding approx. ¥2.32B (est.) by November 2026. MUSE announced it is discussing additional deployments with multiple large U.S. retailers.",
+      "media_mentions": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "title": "MUSE raises ¥1.75B to mass-produce store robot Armo — a single unit that changes tasks by time of day"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "approx. ¥2.32B",
+      "total_raised_note": "¥1.75B in 2026-11 round (equity + debt, approx. US$11M per MUSE announcement, exchange rate approx. 159 yen/USD) + ¥570M in 2024-06 (incl. debt, THE BRIDGE report as cited by Robrief). Detailed equity/debt breakdown for 2024 round is undisclosed.",
+      "valuation_estimate": "$30M (est.)",
+      "latest_round": {
+        "stage": "Series B (est.)",
+        "amount": "¥1.75B",
+        "note": "Per Nikkei: equity approx. ¥650M + debt approx. ¥1.1B. Per MUSE announcement: approx. US$11M. Convertible preferred shares issued (MarketScreener). No series name in official announcement; assuming 10-20% new equity share for ¥650M, post-money valuation estimated at approx. $20M–$40M."
+      },
+      "funding_history": [
+        {
+          "stage": "Series A (est.)",
+          "amount": "¥570M",
+          "note": "Total including debt. Series name not disclosed. Per THE BRIDGE report (cited by Robrief), at the time of Belc's first commercial operation in June 2024.",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "stage": "Series B (est.)",
+          "amount": "¥1.75B",
+          "note": "Equity approx. ¥650M + debt approx. ¥1.1B (Nikkei). Approx. US$11M per MUSE announcement."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global retail store operations and logistics automation market (estimated tens of billions of dollars). SAM: In-store transport and inspection automation for supermarkets, home centers, drugstores (estimated billions of dollars). SOM: A few stores of major Japanese chains and a small number of U.S. stores (est.).",
+      "market_trend": "Japan faces structural retail labor shortages due to aging and population decline; the U.S. sees increasing store automation adoption due to rising labor costs and physical strain. The 'Physical AI' trend, where AI extends to the physical world, is driving robot investment.",
+      "growth_potential": "Nikkei interview: targeting 50% overseas revenue share within 3 years. As mass production reduces unit costs, this could lead to additional deployments per store at major Japanese chains and contracts with large U.S. retailers (est.).",
+      "risks": [
+        "Robot hardware cost and deployment difficulty due to varying store environments",
+        "Price and performance competition with incumbents like Simbe and Badger in the U.S.",
+        "High debt portion in recent round (est. ¥1.1B) may create financial burden",
+        "Retailers' capital expenditure (CAPEX) sensitivity to economic cycles",
+        "Prolonged contract cycles with large chains could sustain cash burn"
+      ],
+      "risk_mitigation": "Emphasizes economics by increasing per-store ROI through multitask design; leverages retail infrastructure companies like Toshiba Tec as investors and sales channels. Mass production with external manufacturing partners to lower costs, and establishes U.S. subsidiary for local responsiveness."
+    },
+    "related_links": [
+      {
+        "title": "MUSE Official Website — Company Introduction"
+      },
+      {
+        "title": "MUSE Official Press Release — November 2026 Funding (English)"
+      },
+      {
+        "title": "MUSE Official Press Release — First U.S. Deployment (English)"
+      },
+      {
+        "title": "Nikkei — MUSE Raises ¥1.75B for Retail Robots, Boosts Overseas Expansion"
+      },
+      null,
+      {
+        "title": "Robrief — MUSE raises ¥1.75B to mass-produce store robot Armo"
+      }
+    ],
+    "editor_pick_comment": "Founder who supplied robots to 300 companies at ZMP builds 'Armo' again; armed with ¥1.75B and Rakuten Capital, knocks on the doors of major U.S. retailers."
+  },
+  "namespace-labs-2026": {
+    "tagline": "Development infrastructure platform for AI coding agents",
+    "category": [
+      "Cloud Infrastructure",
+      "Developer Tools"
+    ],
+    "headquarters": {
+      "country_ko": "Switzerland"
+    },
+    "founders": [
+      {
+        "background": "Spent 9 years at Google as a senior engineer, building Google's internal development platform 'Boq'.",
+        "notable_achievement": "Designed the internal platform that became the development foundation for Google Search, YouTube, and Workspace."
+      }
+    ],
+    "product": {
+      "summary": "Custom build and test infrastructure for both AI coding agents and human developers. Supports macOS, Windows, and Linux environments, running on its own globally distributed data centers.",
+      "problem_statement": "Traditional clouds (AWS, GCP) are optimized for production workloads, so they fail to meet the burst characteristics and low-latency requirements of coding, building, and testing. In particular, most infrastructure providers do not support macOS environments.",
+      "solution": "Custom infrastructure that vertically integrates dedicated server racks, a hypervisor, a scheduler, and a caching system. Provides GitHub Actions Runner, Devbox (ephemeral development environments), Bazel remote execution, and more.",
+      "key_features": [
+        "macOS instances (Apple M4 Pro / M5 Max, full Xcode versions, iOS Simulator)",
+        "Windows/Linux instances (AMD EPYC, AmpereOne, up to 64 vCPUs)",
+        "High-speed CI runners for GitHub Actions",
+        "Remote build cache for Bazel, Turborepo, and Docker",
+        "Isolated, reproducible, and secure environments for agent workloads"
+      ],
+      "tech_stack_or_innovation": "Self-designed server racks, custom hypervisor, and data-locality-aware scheduling. The only cloud development infrastructure with native Apple Silicon support.",
+      "target_customer": "Enterprises adopting AI coding agents, large engineering organizations, and iOS/macOS app developers. Notable customers: SpaceXAI, Ramp, ElevenLabs, Sierra, Framer, Vanta, fal.ai, LiveKit, Verkada, Zed",
+      "business_model": "Usage-based pricing (compute time, storage, network). Offers enterprise subscription plans."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "The most widely used CI/CD, but with limited macOS support and not optimized for agent workloads."
+        },
+        {
+          "comparison": "In a cooperative relationship, to the extent of building Hosted Agents on top of Namespace, but has no infrastructure of its own."
+        },
+        {
+          "comparison": "macOS-only hosting, but doesn't manage the entire OS and build tool stack like Namespace."
+        },
+        {
+          "comparison": "Specialized in build caching, but doesn't cover agent environments or test execution."
+        }
+      ],
+      "key_differentiator": "The only development-specific infrastructure vertically integrated from hardware to software. Provides Apple Silicon, Windows, and Linux on the same platform, meeting the surging concurrency and isolation demands of AI agents.",
+      "moat": "Performance and cost optimization from own data centers and custom hardware. Unique architecture design from a founder who was a senior engineer at Google. Product-market fit proven by 1,000+ customers and 8x revenue growth.",
+      "competitive_position_summary": "Establishing itself as the infrastructure layer for the age of agentic software engineering. It is capturing the code-execution-specific market overlooked by large cloud providers, and its investment and customer acquisition speed is surpassing competitors."
+    },
+    "trending_reason": {
+      "summary": "As AI coding agents explode code productivity, demand emerges that existing development infrastructure cannot handle. Namespace is targeting this gap, jumping from Series A to Series B in seven months and posting 8x revenue growth.",
+      "catalysts": [
+        "The surge in agent activity on platforms like GitHub is causing infrastructure bottlenecks.",
+        "The need to adopt AI agents in the Apple ecosystem (iOS, macOS)",
+        "As the volume of code generated by agents surpasses that of humans, demand grows for isolated, reproducible, low-latency execution environments."
+      ],
+      "growth_metrics": "Total revenue grew 8x over the past 12 months. Acquired more than 1,000 enterprise customers."
+    },
+    "funding": {
+      "total_raised_note": "Total funding: Seed + Series A of $23M (led by NEA, March 2026) plus Series B of $42M.",
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        {
+          "note": "Combined amount from seed round and Series A. Lead: NEA. Participants: Susa Ventures, burst.vc."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global CI/CD market is approximately $2.5B (2026 estimate); expanding into agent infrastructure puts the TAM in the several-billion-dollar range.",
+      "market_trend": "AI coding agent adoption is faster than previous forecasts. GitHub has even experienced outages due to the surge in activity from coding agents. This is a transition period in which development infrastructure is being redesigned for agent workloads.",
+      "growth_potential": "Infrastructure cost per agent could be higher than per human developer. Namespace's 8x revenue growth proves the market's growth potential.",
+      "risks": [
+        "Competitive pressure increases if hyperscalers like AWS and GCP launch similar dedicated infrastructure.",
+        "Risk that agent technology advances slower than expected, causing demand to stagnate.",
+        "Capital-intensive business model from operating own data centers."
+      ],
+      "risk_mitigation": "Maintains technical differentiation from hyperscalers (native Apple Silicon, vertical integration). Has already built an ecosystem through 1,000 customers and partnerships (Buildkite, Warp). Plans to expand data centers with Series B funding."
+    },
+    "related_links": [
+      {
+        "title": "Namespace Official Website"
+      },
+      {
+        "title": "Series B Announcement Blog"
+      },
+      {
+        "title": "Series A Announcement Blog"
+      },
+      {
+        "title": "Scale Venture Partners Investment Blog"
+      },
+      {
+        "title": "Tech.eu Coverage"
+      }
+    ],
+    "editor_pick_comment": "By taking Google's internal development platform external, Namespace directly targets the infrastructure demand explosion created by AI coding agents."
+  },
+  "scarlet-2026": {
+    "tagline": "A regulatory review platform revolutionizing AI medical device certification",
+    "category": [
+      "Medical device regulatory certification",
+      "AI software certification"
+    ],
+    "headquarters": {
+      "country_ko": "United Kingdom"
+    },
+    "founders": [
+      {
+        "background": "Previously at Babylon Health, with experience in AI medical device development and regulation",
+        "notable_achievement": "Led AI diagnostic technology at Babylon Health before co-founding"
+      },
+      {
+        "background": "Machine learning engineer from Babylon Health",
+        "notable_achievement": "Experience designing medical AI system architectures"
+      }
+    ],
+    "team_highlights": "Team of 104 (per PitchBook), composed of regulatory and AI experts",
+    "product": {
+      "summary": "Scarlet is an AI medical device certification body officially designated by EU, UK, and US regulators, using an AI-native platform to help companies obtain product certification safely and efficiently.",
+      "problem_statement": "AI medical devices develop quickly, but traditional certification bodies (BSI, TÜV SÜD, etc.) take 12–18 months for reviews, and even minor updates require 6–8 months, delaying innovation.",
+      "solution": "Scarlet reduces wait times by over a year and cuts update cycles to a few weeks through automated document processing and AI agent-driven review pipelines. All review processes are traceable and transparently recorded.",
+      "key_features": [
+        "Automatic upload and feedback for technical documents in various formats",
+        "Real-time completeness checks against regulatory requirements",
+        "Transparent disclosure of review results and rationale to regulators",
+        "Subscription-based service including continuous monitoring and annual audits"
+      ],
+      "tech_stack_or_innovation": "AI-based document analysis and automated regulatory compliance mapping, with collaboration workflows between human reviewers and AI agents",
+      "target_customer": "Medical AI companies launching AI medical devices (especially SaMD) in the EU, UK, and US markets",
+      "business_model": "Subscription-based: includes product certification, continuous monitoring, annual audits, and support for product changes"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Traditional notified bodies that can certify various medical devices but are not AI-specific, resulting in slow review times"
+        },
+        {
+          "comparison": "Regulatory consulting firms that assist with document preparation rather than conducting certification reviews, lacking official certification authority"
+        }
+      ],
+      "key_differentiator": "Scarlet is an AI-only certification body directly authorized by regulators, bridging the gap between slow traditional bodies and consultants without authority.",
+      "moat": "EU MDR Notified Body (NB 3022), UK MHRA Approved Body (AB 8536), US FDA Recognized Third Party Review Organization — holding multinational regulatory authority simultaneously",
+      "competitive_position_summary": "Scarlet combines the credibility of traditional certification bodies with startup speed, occupying a unique position and rapidly gaining market share in AI medical device certification."
+    },
+    "trending_reason": {
+      "summary": "Despite explosive growth in the AI medical device market, certification bottlenecks have intensified, leading to surging investment and corporate demand for Scarlet, the only AI-exclusive certification body with official regulatory designation.",
+      "catalysts": [
+        "Raised $50M in Series B led by Headline in October 2026",
+        "Secured certification authority simultaneously in three major markets: EU, UK, and US",
+        "Acquired customers including Flok Health, DeepHealth, and Flo Health"
+      ],
+      "growth_metrics": "Cumulative number of certification reviews and specific customer figures are undisclosed, but Series B plans for US and APAC expansion have been announced",
+      "media_mentions": [
+        null,
+        null,
+        null,
+        {
+          "source": "Wowtale",
+          "title": "AI medical device certification body Scarlet raises $50M Series B"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Approx. $75M",
+      "total_raised_note": "Seed £6M (approx. $7.2M), Series A $17.5M, Series B $50M total. Per Wowtale article, 'approximately $75M.'",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Led by Headline, with Notion Capital new participation, and follow-on from Atomico, Creandum, Kindred Capital, Entrepreneurs First"
+      },
+      "funding_history": [
+        {
+          "note": "Led by Creandum"
+        },
+        {
+          "note": "Led by Atomico"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global medical device regulatory certification market (multi-billion USD, estimated 8–12% annual growth)",
+      "market_trend": "Increasing number of AI medical device regulatory approvals and lack of AI assessment capacity at regulators driving demand for specialized certification bodies",
+      "growth_potential": "Market expansion through US and Asia-Pacific entry; potential to extend services beyond existing medical devices to AI-based digital health overall",
+      "risks": [
+        "Need for additional designation if regulations change (e.g., harmonization of EU AI Act and MDR)",
+        "Possibility of existing large certification bodies launching AI-specific services",
+        "Risk that hiring speed cannot keep up with demand"
+      ],
+      "risk_mitigation": "Maintain collaborative relationships with regulators, scale review throughput via AI automation, continuous hiring and global team building"
+    },
+    "related_links": [
+      {
+        "title": "Scarlet Official Website"
+      },
+      {
+        "title": "PitchBook Profile"
+      }
+    ],
+    "editor_pick_comment": "Founded by Babylon Health alumni, Scarlet is the only AI-native certification body officially designated by regulators—a key differentiator."
+  },
+  "siccanova-therapeutics-2026": {
+    "tagline": "A biotech venture developing a treatment for dry mouth (xerostomia)",
+    "category": [
+      "Pharmaceuticals & Biotech",
+      "Xerostomia Treatment"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "CEO (Representative Director)",
+        "background": "Head of Neuroscience Research Laboratory, Astellas Pharma",
+        "notable_achievement": "Led neuroscience research at Astellas Pharma for over 20 years; holds a Ph.D."
+      },
+      {
+        "role": "COO (Chief Operating Officer)",
+        "background": "Executive Officer, Director of Tsukuba Research Center, Astellas Pharma",
+        "notable_achievement": "Served as visiting professor at Nagoya University Graduate School of Medicine; holds a Ph.D. in pharmacy"
+      }
+    ],
+    "team_highlights": "Both the CEO and COO have extensive drug development experience from Astellas Pharma. External board members include venture capitalists from THVP and JIC VGI, providing solid corporate governance and investment networks.",
+    "product": {
+      "summary": "XF8302 is an M3 receptor positive allosteric modulator (PAM), an oral small-molecule drug candidate for treating xerostomia (especially related to Sjögren's syndrome).",
+      "problem_statement": "Existing muscarinic receptor agonists (pilocarpine, cevimeline) stimulate saliva secretion but cause side effects like sweating and gastrointestinal disorders, making it difficult for patients to continue treatment.",
+      "solution": "XF8302 uses a PAM mechanism that enhances acetylcholine's activation of M3 receptors, reducing side effects while effectively inducing saliva secretion.",
+      "key_features": [
+        "M3 receptor positive allosteric modulator (different mechanism from existing agonists)",
+        "Small molecule compound, offering high convenience in production and administration",
+        "Completed Phase 1 trials in Japan and Europe, safety confirmed",
+        "Potential to expand to various dry mouth conditions beyond Sjögren's syndrome"
+      ],
+      "tech_stack_or_innovation": "Positive Allosteric Modulation (PAM): finely modulates receptor activity according to physiological signals. Unlike conventional direct agonists, reduces risk of overactivation.",
+      "target_customer": "Patients with Sjögren's syndrome (over 90% female) and chronic dry mouth patients. Initial focus on Sjögren's syndrome patients for Phase 2 trials in 2027.",
+      "business_model": "In-house R&D followed by technology licensing or co-development with pharmaceutical companies. Long-term possibility of independent commercialization."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Salagen (pilocarpine)",
+          "comparison": "Muscarinic agonist. Effective but systemic side effects (sweating, tachycardia) make long-term use challenging."
+        },
+        {
+          "name": "Evoxac (cevimeline)",
+          "comparison": "Muscarinic agonist. Taken three times daily; gastrointestinal side effects. XF8302 aims for better tolerability and convenience."
+        }
+      ],
+      "key_differentiator": "Low side-effect profile due to PAM mechanism. Significantly improves the balance of efficacy and tolerability compared to existing drugs.",
+      "moat": "Proprietary PAM compound library and patents; drug development know-how from the Astellas team; potential for orphan drug designation.",
+      "competitive_position_summary": "Expected to be the only PAM-mechanism treatment in the Sjögren's syndrome dry mouth market, with a differentiated value proposition compared to existing agonists."
+    },
+    "trending_reason": {
+      "summary": "Secured a total of ¥1.4B in Series A funding in September and October 2026, preparing to enter patient trials in 2027. Multiple major VCs participated, demonstrating interest.",
+      "catalysts": [
+        "Series A closed at a total of ¥1.4B (¥12.5B in September, plus an additional ¥1.5B in October)",
+        "Announced plans to enter Phase 2 trials for Sjögren's syndrome in 2027",
+        "High credibility from founding team of ex-Astellas Pharma experts",
+        "New approach to treating dry mouth highlighted"
+      ],
+      "growth_metrics": "No revenue yet. Phase 1 completed, preparing for Phase 2. Team size growing (COO hired in 2026).",
+      "media_mentions": [
+        {
+          "source": "SiccaNova Therapeutics (official press release)",
+          "title": "Secured total funding of ¥1.25B in Series A"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "source": "SiccaNova Therapeutics (official press release)",
+          "title": "Secured total funding of ¥1.4B in Series A"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "approx. ¥1.4B",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "approx. ¥1.4B",
+        "note": "First closing in September at ¥12.5B; an additional ¥1.5B in October completed the total Series A amount."
+      },
+      "funding_history": [
+        {
+          "stage": "Series A (first close)",
+          "amount": "approx. ¥1.25B",
+          "note": "Initial Series A close. Six investors including THVP, JIC VGI participated."
+        },
+        {
+          "stage": "Series A (additional close)",
+          "amount": "approx. ¥150M",
+          "note": "New investment from DBJ Capital, additional investment from MPower. Total Series A completed at ¥1.4B."
+        }
+      ],
+      "total_raised_note": "Final Series A closing amount. September: ¥12.5B, plus an additional ¥1.5B in October. Approx. $10M in USD conversion (1 USD = ¥140 est.). Seed round undisclosed."
+    },
+    "market_outlook": {
+      "market_trend": "Rising interest in women's health and intractable diseases; increasing prevalence of dry mouth due to aging. Potential for the first new mechanism treatment in over 20 years.",
+      "growth_potential": "Existing market is small, but a new mechanism could expand it. Growth potential with improved awareness of female-centric diseases.",
+      "risks": [
+        "Unexpected side effects or lack of efficacy in clinical trials",
+        "Risk of failing to demonstrate significant improvement over existing agonists",
+        "Patient recruitment difficulty (especially for rare diseases)",
+        "Need for additional funding after this round"
+      ],
+      "risk_mitigation": "Safety confirmed in Phase 1. Clear differentiation from existing drugs. Leverage network and know-how of Astellas-experienced management. Potential incentives from orphan drug designation.",
+      "tam_sam_som": "TAM: Global dry mouth treatment market. SAM: 20M–30M patients with dry mouth caused by Sjögren's syndrome (100K+ in Japan). SOM: Potential to address a significant portion of Sjögren's syndrome patients if clinical trials succeed. (est.)"
+    },
+    "related_links": [
+      {
+        "title": "Company official website"
+      },
+      {
+        "title": "XF8302 treatment overview (company page)"
+      }
+    ],
+    "editor_pick_comment": "Defining dry mouth—an overlooked condition—as a new medical challenge of xerosis, and challenging to offer side-effect-free alternatives to existing treatments. The Series A round with participation from major Japanese VCs attests to the company's technological capability and market potential."
+  },
+  "movin-2026": {
+    "tagline": "LiDAR + On-Device AI Markerless Motion Capture, Expanding into Robot Training Data",
+    "category": [
+      "Motion Capture",
+      "Physical AI Robot Data"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "MS from KAIST Graduate School of Culture Technology (GSCT, 2022), PhD candidate (2022–). Service planning and operations at NAVER Z (ZEPETO, 2019), organized JunctionX Seoul (2019–2021). Author of papers: Pacific Graphics 2023 (MOVIN), SIGGRAPH Asia 2024 (ELMO).",
+        "notable_achievement": "Forbes Asia 30 Under 30 (AI category), Representative of NVIDIA SOMA Launch Partner"
+      }
+    ],
+    "team_highlights": "Four co-founders from the KAIST Graduate School of Culture Technology LAVA (Computer Graphics) lab, including former Meta, NAVER Z, and SOSLAB employees. Based in Naver 1784 building. Team size: 1–10 people (per LinkedIn and fundable).",
+    "product": {
+      "summary": "A markerless motion capture solution that combines a single LiDAR sensor with an RGB camera and uses on-device AI to capture real-time 3D motion data without suits or markers. Originally developed for content creation (film, games, virtual creators), now expanding into robot teleoperation and training data collection (MOVIN TRACIN R1) and multi-person tracking for live stages (TRACIN Stage).",
+      "problem_statement": "Traditional motion capture requires special suits, markers, and multi-camera studio setups, costing hundreds of millions of won with long installation times. Accuracy drops with vigorous movements or outdoors. Collecting 3D data for robot training also depends on expensive equipment and complex pipelines.",
+      "solution": "Fuses 3D LiDAR point clouds and 2D camera vision via on-device AI to acquire real-time 3D motion data with a single portable device. Data directly connects to NVIDIA SOMA's 77-joint standard skeleton, Isaac Sim, Isaac Lab, MuJoCo, and ROS pipelines, usable for robot imitation learning and full-body teleoperation.",
+      "key_features": [
+        "Real-time markerless motion capture with a single LiDAR + camera (60 FPS streaming)",
+        "On-device AI (NVIDIA Jetson module) — no GPU server or cloud costs needed",
+        "No suits, markers, or studios; setup in minutes; works indoors and outdoors",
+        "TRACIN R1: Synchronized recording of motion skeleton + LiDAR point cloud + RGB video (30 FPS), generates robot training datasets",
+        "TRACIN Stage: Large-space, multi-person simultaneous tracking; integrates with Disguise and Notch (live performance tech)",
+        "Integrated with NVIDIA SOMA (77-joint standard human model); exclusive early access in Korea",
+        "Approx. 90% accuracy vs. optical systems at 1/10 the cost (founder claims)"
+      ],
+      "tech_stack_or_innovation": "World's first team to commercialize markerless motion capture based on a single LiDAR sensor, combining LiDAR point cloud + vision fusion with on-device inference. Holds patents in South Korea, the U.S., and Europe. Published papers at SIGGRAPH Asia 2024 (ELMO) and Pacific Graphics 2023 (MOVIN).",
+      "target_customer": "Game, film, VFX, and virtual creator studios (content production); robot developers and research institutions (Boston Dynamics, RAI Institute); live performance tech (Disguise, Notch); future sports and rehabilitation sectors.",
+      "business_model": "Hardware (TRACIN) and software (MOVIN Studio) sales and subscriptions; contracts for robot training data collection pipelines; plans to sell 3D motion data and build a motion foundation model in the future."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Uses smartphone multi-camera for markerless capture processed in the cloud. Video-based, so it depends on outdoor/low-light conditions and GPU servers; lacks structured 3D data output for robotics."
+        },
+        {
+          "comparison": "Hybrid of IMU suit (Smartsuit) and video-based Rokoko Vision. Suit wearing burden and limitations in finger and contact tracking; MOVIN has an advantage in real-time markerless full-body capture."
+        },
+        {
+          "comparison": "Single video → 3D animation cloud conversion. Low cost but inferior in precision, real-time performance, and outdoor environments."
+        },
+        {
+          "comparison": "Specializes in collecting teleoperation data for robot training (wearable cameras, force/torque). MOVIN differentiates with LiDAR-based markerless full-body data."
+        },
+        {
+          "comparison": "Turnkey markerless multi-view camera system. Requires multi-camera installation and calibration."
+        }
+      ],
+      "key_differentiator": "The only approach that fuses LiDAR + vision with on-device AI to capture real-time 3D data without suits, markers, multi-cameras, or cloud, and provides structured data for robot training with synchronized skeleton, point cloud, and RGB video.",
+      "moat": "Proprietary LiDAR-AI model and patents in South Korea, U.S., and Europe; technology rooted in KAIST research; NVIDIA SOMA Launch Partner (exclusive early access in Korea); on-device inference pipeline.",
+      "competitive_position_summary": "In the content motion capture market, MOVIN validated revenue with 200+ units sold to 20+ countries within a year of launch, and now is pivoting to physical AI data collection as an early-stage leader. Differentiated from video-based competitors in outdoor, multi-person, and robot pipeline capabilities."
+    },
+    "trending_reason": {
+      "summary": "On November 3, 2026, MOVIN raised a KRW 10B Series A led by IMM Investment, formalizing its strategy as a 'Physical AI data infrastructure' focused on robot teleoperation and training data collection (R1, NVIDIA SOMA integration).",
+      "catalysts": [
+        "Surge in demand for physical AI and humanoid training data",
+        "Selected as NVIDIA SOMA Launch Partner (March 18, 2026; exclusive early access in Korea)",
+        "Secured robot customers including Boston Dynamics and RAI Institute",
+        "Unveiled TRACIN Stage for multi-person use at NAB Show 2026 (April)",
+        "Raised KRW 10B Series A (November 3, 2026)"
+      ],
+      "growth_metrics": "Within one year of launch, global revenue of approx. KRW 1B (~$750K), 200+ units sold to 20+ countries, overseas revenue share 70% (North America 50%, Japan 25%). Cumulative disclosed investment over KRW 14B.",
+      "media_mentions": [
+        {
+          "source": "The Asia Business Daily"
+        },
+        {
+          "source": "Korea Economic Daily Market Insight",
+          "title": "MOVIN raises KRW 10B Series A... targeting motion data infrastructure market"
+        },
+        {
+          "source": "Electronic Times",
+          "title": "MOVIN raises KRW 10B Series A... targeting physical AI motion data market"
+        },
+        null,
+        null,
+        {
+          "title": "MOVIN raises KRW 10B Series A... targeting robot training data with LiDAR motion capture"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Approx. KRW 14B",
+      "valuation_estimate": "Approx. KRW 50B (est.)",
+      "latest_round": {
+        "amount": "KRW 10B",
+        "note": "Approx. $7.5M–$7.6M (media conversions). Led by IMM Investment, with new investors IBK Industrial Bank and Voyager Ventures; follow-on from Atinum Investment, NAVER D2SF, and Schmidt. Used for an approx. 100-pyeong R&D center and global model data collection infrastructure."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "NAVER D2SF investment (amount undisclosed). Secured along with Naver 1784 office space."
+        },
+        {
+          "amount": "KRW 4B",
+          "note": "Approx. $3.0M (media conversions). Lead investor not disclosed."
+        }
+      ],
+      "total_raised_note": "Series A KRW 10B (November 2026) + Pre-A KRW 4B (2025) combined. The Naver D2SF seed (December 2023) amount is undisclosed and therefore not included. The AI Insider reported cumulative funding of $10M+. $10.4M is our own conversion at approx. KRW 1,340/USD (est.)."
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global AI motion capture market is growing to hundreds of millions of dollars annually, with a new market forming for realistic motion and teleoperation data collection for humanoids and physical AI (specific figures unconfirmed).",
+      "market_trend": "The humanoid and physical AI boom is driving surging demand for 'real-world movement data.' As standard human models and simulation pipelines like NVIDIA SOMA, Isaac, and MuJoCo mature, markerless motion capture is shifting from cloud to edge (on-device).",
+      "growth_potential": "Based on content revenue (~KRW 1B per year), MOVIN is expanding into robot training data, live performances, and sports/rehabilitation analysis. With Series A funding, it aims to build multi-person, large-space, ultra-light devices and world model data infrastructure, targeting a 'motion data platform' leap.",
+      "risks": [
+        "Intensifying price and performance competition with video-based markerless rivals (Move.ai, Rokoko, etc.)",
+        "Possibility that large customers like Boston Dynamics internalize the data pipeline",
+        "Strategic structure with high dependence on the NVIDIA ecosystem (SOMA, Isaac)",
+        "Limited size of the motion capture hardware market itself",
+        "Valuation burden relative to revenue scale (~KRW 1B)"
+      ],
+      "risk_mitigation": "On-device AI and patent-based technology moat; strengthened position within ecosystem by adopting NVIDIA standards (SOMA, Isaac); parallel content/live revenue and robotics business; expanded R&D center to boost data collection capabilities and customer lock-in."
+    },
+    "related_links": [
+      {
+        "title": "MOVIN official website"
+      },
+      {
+        "title": "TRACIN for Robotics (product page)"
+      },
+      {
+        "title": "About MOVIN (company introduction)"
+      }
+    ],
+    "editor_pick_comment": "MOVIN cut motion capture costs to one-tenth using LiDAR and on-device AI rather than video, and now, with Boston Dynamics and the RAI Institute on board, it is positioning itself as the motion data infrastructure for physical AI."
+  },
+  "strive-robotics-2026": {
+    "tagline": "Physical AI manufacturing automation that leverages existing factories as is",
+    "category": [
+      "Robotics",
+      "Industrial Automation",
+      "Smart Factory"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "PhD from MIT. Research experience at Robotics and AI (RAI) Lab. Co-founder of Impact Biosystems.",
+        "notable_achievement": "Earned SB, MS, and PhD from MIT. Former NCAA water polo player."
+      },
+      {
+        "background": "PhD in Robotics from MIT.",
+        "notable_achievement": "Engineer from Boston Dynamics with experience in developing commercial robotic products."
+      },
+      {
+        "background": "MBA from MIT. Engineer background.",
+        "notable_achievement": "Over 10 years of startup founding and business building experience. Developed customer discovery (CD) and go-to-market (GTM) strategies."
+      }
+    ],
+    "team_highlights": "Three MIT alumni co-founders. Despite being in its first year, secured its first manufacturing customer (Sjogren Industries) and signed an RaaS (Robot-as-a-Service) contract, deploying robots for overnight CNC machine tending.",
+    "product": {
+      "summary": "A physical AI agent platform for high-mix manufacturing environments. It directly manipulates existing process and equipment interfaces (buttons, touchscreens, keyboards), flexibly executing entire production workflows and performing physical verification.",
+      "problem_statement": "Existing manufacturing automation is optimized for fixed, single tasks, making it difficult to deploy in high-mix environments where parts, equipment, and production schedules change frequently. It requires building new equipment or relying on system integrators, resulting in excessive cost and time.",
+      "solution": "The robot uses existing factory operation methods unchanged, learning and executing new workflows solely through worker demonstrations (Apprentice Mode). After production execution, it physically verifies results (Verification Layer) and feeds data back to factory software.",
+      "key_features": [
+        "Apprentice Mode: Learns new workflows through on-site worker demonstrations; no reprogramming required",
+        "Legacy HMI compatibility: Directly manipulates human-used interfaces such as buttons, touchscreens, and keyboards",
+        "Interchangeable end effectors: Provides a catalog of robot-specific special tools to bypass dexterity issues",
+        "Production verification and feedback: Confirms completion of every physical process step and sends verification data to ERP/MES"
+      ],
+      "tech_stack_or_innovation": "Hybrid AI architecture combining learned models and classical control. Centaur-type hardware with a dual-arm manipulator mounted on a quadruped. Maximizes on-site adaptability through 'Apprentice Mode' where factory workers teach the robot.",
+      "target_customer": "SME and mid-sized manufacturers with high-mix tasks such as CNC machining, assembly, and kit kitting. Initial customer is Sjogren Industries (US).",
+      "business_model": "RaaS (Robot-as-a-Service) monthly subscription model. Designed to enable robot adoption without large upfront investment."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Traditional system integrators",
+          "comparison": "System integrators build equipment on a project basis and require re-contracting for changes, whereas Strive allows on-site workers to reconfigure the robot, significantly reducing maintenance cost and time."
+        },
+        {
+          "name": "Fixed automation robot vendors (FANUC, KUKA, etc.)",
+          "comparison": "Traditional industrial robots excel at single high-speed, precision tasks, but re-integrating with external controllers is difficult. Strive directly manipulates machine interfaces, enabling flexible response without equipment replacement."
+        },
+        {
+          "name": "Software-centric automation companies like Bright Machines",
+          "comparison": "While Bright Machines focuses on redefining its own assembly lines, Strive takes an 'adhesive' approach, leveraging the customer's existing equipment as-is."
+        }
+      ],
+      "key_differentiator": "The only solution that can manipulate existing factory equipment interfaces without any changes. A no-code adaptive learning system enabled by 'Apprentice Mode'.",
+      "moat": "Hardware-software combined technology capable of universally controlling the HMIs of various legacy industrial equipment. Workflow data and learned models accumulated through real on-site deployments.",
+      "competitive_position_summary": "With a strong value proposition of requiring no equipment changes, it is targeting the high-mix SME manufacturing market that traditional automation has abandoned. The key differentiator is lowering the barrier to entry with a RaaS model, eliminating the burden of equipment investment."
+    },
+    "trending_reason": {
+      "summary": "On November 5, 2026, announced a $3 million Pre-Seed investment led by Hi Ventures, proving to the industry that physical AI agents can be deployed in actual production without changing existing factory infrastructure.",
+      "catalysts": [
+        "On November 5, 2026, announced $3M Pre-Seed investment with participation from Hi Ventures, Grid Capital, Tenon Ventures, and Thin Capital",
+        "Revealed via RuntimeWire the first RaaS contract with Sjogren Industries and deployment for overnight CNC machine tending",
+        "Disclosure of a strong founding team from MIT and Boston Dynamics, and a Centaur-type robot hardware design"
+      ],
+      "growth_metrics": "A pre-seed startup with 6 employees, yet completed a real customer deployment (real workflow verification) in its first year, proving its potential as a Verified Execution Layer. Revenue is still undisclosed."
+    },
+    "funding": {
+      "total_raised_note": "EINPresswire press release stated $3M+, while PitchBook lists $3M. Both sources refer to the same single Pre-Seed round.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Led by Hi Ventures, with participation from Grid Capital, Tenon Ventures, and Thin Capital (Thin Line Capital). PitchBook classifies this round as 'Seed', but the company officially calls it 'Pre-Seed'."
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global industrial robotics and automation market (approx. $20B+). SAM: Adaptive automation platforms for high-mix manufacturing environments (CNC tending, fixture loading, kit assembly, etc.). SOM: Securing Sjogren Industries and similar SME precision machining manufacturers through initial RaaS contracts.",
+      "market_trend": "Industry demand for flexible automation solutions that maintain existing equipment while increasing productivity is exploding due to manufacturing reshoring and worsening skilled labor shortages. Physical AI is rapidly emerging as a key technology to accelerate digital transformation in existing manufacturing sites.",
+      "growth_potential": "The RaaS model lowers the initial adoption barrier for customers, enabling rapid market expansion. As further rounds progress, there is significant room to expand the product portfolio into various workflows with high skilled labor replacement demand (welding, inspection, material handling).",
+      "risks": [
+        "Need to verify hardware reliability and durability (to handle 24/7 continuous operation environments)",
+        "Possibility that large industrial robot vendors (ABB, FANUC, etc.) launch AI agents with similar capabilities",
+        "It may take time to gain market trust until successful references are secured"
+      ],
+      "risk_mitigation": "The proprietary approach of using existing factory HMIs as-is creates a technical barrier that competitors find difficult to replicate. RaaS contracts minimize customer risk, facilitating early sales, and create a virtuous cycle of continuous product improvement through data accumulation."
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "PitchBook Profile"
+      },
+      {
+        "title": "LinkedIn Official Page"
+      }
+    ],
+    "editor_pick_comment": "The 'adhesive' physical AI strategy, where robots adapt to the field with just a few worker demonstrations without changing any existing factory infrastructure, has the potential to transform the high-mix manufacturing market that automation has previously failed to reach."
+  },
+  "humble-robotics-2026": {
+    "tagline": "A startup developing electric autonomous freight trucks without a cab",
+    "category": [
+      "Autonomous driving",
+      "Electric trucks",
+      "Freight logistics"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "employee_count": "Undisclosed",
+    "founders": [
+      {
+        "background": "From Apple's autonomous driving project, Uber's autonomous driving team, and truck startup Waabi",
+        "notable_achievement": "Played key roles in Apple's autonomous vehicle project and Uber's autonomous driving division"
+      }
+    ],
+    "team_highlights": "Composed of engineering and logistics experts from Tesla, Rivian, Google, and Cruise. Includes Vehicle Development Head Ray Shan, Hardware Head Siddharth Narang, and Commercialization Head Bob Chappuis.",
+    "product": {
+      "summary": "The 'Humble Hauler', a fully electric, autonomous Class 8 truck without a cab, targeting short-haul freight transport (ports, rail terminals, warehouses) under 250 miles.",
+      "problem_statement": "Autonomous truck technology focused on long-haul routes fails to address the high driver dependency and labor shortage in short-haul, repetitive segments (drayage, shuttles).",
+      "solution": "Integrates the vehicle and autonomous driving system from the start (unified autonomy) to build a cab-less electric truck, enabling seamless dock-to-dock cargo movement.",
+      "key_features": [
+        "Flatbed electric platform without a cab",
+        "Vision-first autonomy – 360° cameras, LiDAR, imaging radar",
+        "Up to 200 miles range, top speed 55 mph",
+        "Approximately 20% lighter than a standard tractor + trailer",
+        "Modular platform adapts to various short-haul freight tasks"
+      ],
+      "tech_stack_or_innovation": "Self-developed vision-based AI model combined with safety constraints and rules-based autonomous driving software, predictive safety and redundant fail-safe systems",
+      "target_customer": "Freight carriers and logistics companies operating port terminals, rail ramps, warehouses, and manufacturing plants",
+      "business_model": "Sell or lease the Humble Hauler to third-party operators, or provide in-house full-service freight transport (including 24/7 remote support and charging)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Advancing long-haul unmanned freight transport in Texas, modifying existing diesel trucks"
+        },
+        {
+          "comparison": "Plans to deploy cab-less autonomous trucks for IKEA cargo, prioritizing long-haul routes over short-haul"
+        },
+        {
+          "comparison": "Co-founded by alumni, but Waabi focuses on simulation-based autonomy, using third-party vehicles for hardware"
+        }
+      ],
+      "key_differentiator": "A cab-less truck with electric powertrain and autonomous system integrated from scratch, not a retrofit, specialized for short-haul, dock-to-dock movement",
+      "moat": "Cost and efficiency advantages from integrated design, team's Silicon Valley experience in autonomous driving and EVs, modular platform optimized for specific logistics environments",
+      "competitive_position_summary": "Amid intense competition in long-haul autonomous trucks, Humble is an early-stage company seeking to capture the less-noticed short-haul/drayage market. Commercial validation is key."
+    },
+    "trending_reason": {
+      "summary": "On November 5, 2026, raised $51 million in Series A led by Obvious Ventures. Accumulated $75 million in total funding within less than a year of founding.",
+      "catalysts": [
+        "Short-haul freight (under 250 miles) accounts for 87% of US truck tonnage, a massive market",
+        "Worsening driver shortage, increasing demand for autonomous logistics solutions",
+        "Regulatory easing (obtained California autonomous testing permit)"
+      ],
+      "growth_metrics": "Customer pilot operations expected to begin in Q1 2027, with commercial operations targeted for Q3 2027. No commercial revenue yet."
+    },
+    "funding": {
+      "total_raised_note": "Seed $24M + Series A $51M total",
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        {
+          "note": "Announced upon exiting stealth mode, investors: Eclipse, Energy Impact Partners, etc."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The US short-haul freight (under 250 miles) market accounts for 87% of total truck tonnage, valued in tens of billions of dollars. Humble focuses on specific segments like drayage, factory-warehouse shuttles, and rail terminal transfers.",
+      "market_trend": "Growing interest in autonomous logistics, expansion of electric truck adoption, increasing labor cost burden for logistics companies",
+      "growth_potential": "If commercialized successfully, potential for rapid adoption due to cost reduction and efficiency gains in short-haul logistics. Pilot results in 2027 will be a critical milestone.",
+      "risks": [
+        "Regulatory approval delays (especially for unmanned operations in California)",
+        "Lack of technical validation – need to prove safety and economics in real logistics environments",
+        "Intensifying competition from existing autonomous truck companies (Aurora, Kodiak)",
+        "Insufficient infrastructure (charging stations) and insurance frameworks"
+      ],
+      "risk_mitigation": "Plans for phased operations starting in controlled environments (ports, rail yards), redundant safety systems, remote monitoring"
+    },
+    "related_links": [
+      {
+        "title": "Humble Robotics official site"
+      },
+      {
+        "title": "Obvious Ventures investment blog"
+      },
+      {
+        "title": "Ironspring Ventures investment blog"
+      },
+      {
+        "title": "The Trucker article"
+      }
+    ],
+    "editor_pick_comment": "The challenge of realizing autonomous short-haul freight transport with an electric truck that completely eliminates the driver's seat is still in the testing phase, but its integrated design is a strong differentiator."
+  },
+  "galaxeye-space-solutions-private-limited-2026": {
+    "tagline": "Ultra-high-resolution satellite imagery fusing radar and optics in real-time",
+    "category": [
+      "Space Technology",
+      "Earth Observation",
+      "Defense Industry"
+    ],
+    "headquarters": {
+      "country_ko": "India"
+    },
+    "founders": [
+      {
+        "background": "IIT Madras graduate, space technology engineer",
+        "notable_achievement": "Founded GalaxEye and led commercialization of OptoSAR technology"
+      },
+      {
+        "background": "IIT Madras graduate, satellite systems expert",
+        "notable_achievement": "Developed OptoSAR sensor fusion architecture"
+      },
+      {
+        "background": "IIT Madras graduate, business development experience",
+        "notable_achievement": "Built initial customer and channel partner network"
+      },
+      {
+        "background": "IIT Madras graduate, satellite hardware engineer",
+        "notable_achievement": "Led development and successful launch of Drishti satellite"
+      },
+      {
+        "background": "IIT Madras graduate, product management professional",
+        "notable_achievement": "Established OptoSAR-based data product roadmap"
+      }
+    ],
+    "team_highlights": "Approximately 150 employees, close collaboration with IIT Madras faculty and research teams, experienced in satellite manufacturing and operations",
+    "product": {
+      "summary": "GalaxEye operates satellites equipped with both Synthetic Aperture Radar (SAR) and Electro-Optical (EO) sensors using its proprietary OptoSAR technology. The technology delivers high-resolution imagery below 0.5m even through clouds and at night, and has been commercially deployed for the first time in India.",
+      "problem_statement": "Existing optical satellites cannot capture images through clouds or at night, while SAR satellites are difficult to interpret, limiting real-time decision-making.",
+      "solution": "The two sensors are fused in real-time on a single satellite, providing consistent high-resolution imagery in all weather conditions and generating data that users can immediately utilize without additional processing.",
+      "key_features": [
+        "OptoSAR: Real-time synchronization and fusion of SAR and EO sensors",
+        "Ultra-high-resolution imagery below 0.5m",
+        "Day/night and all-weather imaging capability",
+        "Operating India’s largest private satellite 'Mission Drishti'",
+        "Supports real-time change detection and object classification"
+      ],
+      "tech_stack_or_innovation": "OptoSAR architecture (US patent granted), sensor synchronization board, onboard data fusion algorithm, satellite bus technology (acquired through StarOps acquisition)",
+      "target_customer": "Government and defense agencies, infrastructure monitoring (pipelines, power grids), disaster response (floods, wildfires), agriculture (crop monitoring), maritime surveillance",
+      "business_model": "Satellite imagery and data sales, analytics intelligence services (in partnership), future licensing of OptoSAR technology"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Finland-based SAR satellite startup, provides high-resolution SAR but no optical fusion"
+        },
+        {
+          "comparison": "US SAR satellite, 0.5m resolution, no optical fusion, primarily defense customers"
+        },
+        {
+          "comparison": "US optical satellite, 0.3m resolution, limited by clouds and night, primarily commercial/government"
+        },
+        {
+          "comparison": "Small satellite constellation optical, low resolution (3-5m), suitable for large-scale monitoring"
+        }
+      ],
+      "key_differentiator": "Real-time fusion of SAR and EO on a single satellite providing all-weather, day/night high-resolution imagery without need for separate data processing",
+      "moat": "OptoSAR patent (US), satellite manufacturing and operations experience (Drishti success), accumulated image datasets, Indian government RDI support and strategic partnerships",
+      "competitive_position_summary": "Operates India’s first commercial optical-radar fusion satellite, delivering differentiated value in defense and commercial markets. Building global competitiveness with a 30-satellite constellation plan."
+    },
+    "trending_reason": {
+      "catalysts": [
+        "September 24, 2026: ₹63.84 Cr RDI support confirmed from TDB (PIB official announcement)",
+        "September 8, 2026: US patent grant announced (Reuters report)",
+        "September 8, 2026: $10M bridge round and 30-satellite constellation plan announced (HinduBusinessLine)",
+        "Drishti satellite commenced commercial operations after launch; capacity pre-sold through April 2027"
+      ],
+      "growth_metrics": "Drishti satellite capacity fully sold through April 2027, 25 global channel partners, 150 employees, target of 20 satellites produced annually",
+      "summary": "In September 2026, the company received INR 6.384B (approx. $7.7M) in RDI funding from India's Technology Development Board (TDB) and is pursuing a project to advance its OptoSAR technology to TRL-9. It is also drawing attention after a series of positive developments, including a US patent grant, the commercial operation of its Drishti satellite, and the announcement of a planned 30-satellite constellation."
+    },
+    "funding": {
+      "total_raised_note": "₹63.84 Cr TDB RDI support is separate (approx. $7.6M, convertible debentures with conditions). $21M includes the $10M bridge round and Seed/Series A. According to Inc42, an additional ₹44.2 Cr (approx. $4.8M) extended Series A is ongoing.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Approx. $4.8M (est.), all existing investors participated, Series B1 convertible preferred shares issued / Cr"
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Initial seed round, IIT Madras and angel investors"
+        },
+        {
+          "note": "Raised alongside announcement of 30-satellite constellation plan, led by existing investors"
+        },
+        {
+          "note": "Approx. $4.8M (est.), all existing investors participated / Cr"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Undisclosed",
+      "market_trend": "The Earth observation market is growing at over 10% annually driven by demand from defense, infrastructure, and climate monitoring. Demand for all-weather high-resolution imagery is surging.",
+      "growth_potential": "Upon completing the 30-satellite constellation, annual production capacity of 20 satellites is planned. Aligned with India’s government policy supporting private space, could expand defense and commercial contracts domestically and abroad. As of 2026, already generating revenue with the single Drishti satellite.",
+      "risks": [
+        "Risk of delays in satellite manufacturing and launch schedules",
+        "Intensifying market competition with global players like ICEYE and Capella",
+        "High dependence on government and defense customers, vulnerable to budget fluctuations",
+        "Potential delays in TRL advancement due to technical complexity"
+      ],
+      "risk_mitigation": "Differentiation from competitors via US patent and proprietary technology; funding risk mitigated by strategic Indian government support (RDI); supply chain control through in-house satellite manufacturing; diversification into commercial customers (infrastructure, agriculture)"
+    },
+    "related_links": [
+      {
+        "title": "GalaxEye Official Website - About"
+      },
+      {
+        "title": "PIB Press Release: TDB RDI Support"
+      },
+      {
+        "title": "Reuters: US Patent Grant"
+      },
+      {
+        "title": "The Hindu BusinessLine: 30-Satellite Constellation Plan and Bridge Round"
+      }
+    ],
+    "editor_pick_comment": "A single satellite that sees through clouds and night... India’s GalaxEye has commercially deployed the world’s first OptoSAR technology, changing the paradigm of space observation."
+  },
+  "greypoint-industries-2026": {
+    "tagline": "Autonomous drone swarms that hunt enemy drone operators",
+    "category": [
+      "Defense",
+      "Counter-drone",
+      "UAVs"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "team_highlights": "Both co-founders are Canadian Army infantry veterans, bringing real battlefield experience to product design.",
+    "product": {
+      "summary": "LEGION is an autonomous drone swarm system that detects and geolocates the radio signals of enemy drone operators.",
+      "problem_statement": "In the Ukraine war, drone-related casualties reach 70%, but existing countermeasures focus on intercepting drones, making it difficult to locate the root cause—operator positions.",
+      "solution": "The drone swarm passively intercepts enemy communication and control signals and triangulates them, providing real-time coordinates of hidden operators, jammers, and command posts.",
+      "key_features": [
+        "Wide-area signal detection via autonomous drone swarms",
+        "Precise measurement of signal source bearing and distance, and coordinate calculation",
+        "Can integrate with existing C2 systems",
+        "Portable and rapid-deployment design"
+      ],
+      "tech_stack_or_innovation": "Passive RF sensors + precision triangulation algorithm; reverses positions using only enemy-emitted signals, preserving stealth.",
+      "target_customer": "Defense ministries and armies of NATO and Western allies",
+      "business_model": "Hardware sales based on defense contracts (airframe + sensor package) and maintenance/update services."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Existing players focus on drone detection and countermeasure hardware; Greypoint specializes in operator location identification."
+        },
+        {
+          "comparison": "They provide integrated solutions for urban and infrastructure defense; Greypoint offers a lightweight product for field tactical use."
+        },
+        {
+          "comparison": "They are AI-based large-scale defense systems; Greypoint is a startup focused on a narrow niche—operator hunting."
+        }
+      ],
+      "key_differentiator": "Hunts operators instead of intercepting drones to remove the root cause; founders' real combat experience enables portability and ease of operation.",
+      "moat": "First contract and demonstration with the Canadian military; potential for mass production through low-cost, compact manufacturing; credibility from YC and Pioneer Fund investments.",
+      "competitive_position_summary": "A low-cost, expendable 'drone hunter' compared to expensive, large systems, immediately usable at the individual soldier level."
+    },
+    "trending_reason": {
+      "summary": "Gaining attention through Y Combinator S26 Demo Day and its first Canadian government contract (Aug–Sep 2026).",
+      "catalysts": [
+        "Joining the YC Summer 2026 batch and Demo Day",
+        "First contract with the Canadian Department of National Defence and successful demonstration",
+        "Public exposure via YC Launch post"
+      ],
+      "growth_metrics": "8 employees, raised a $500K seed round, and signed a first government contract (specific amount undisclosed)."
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Undisclosed",
+        "note": "Led by Pioneer Fund, exact amount undisclosed. CB Insights records it as part of the total $500K."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Estimated at YC standard $125K"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Seed round led by Pioneer Fund"
+        }
+      ],
+      "total_raised_note": "Per CB Insights; includes convertible note (July 2026) and Seed round (September 2026). Pioneer Fund Seed investment added on top of the standard $125K YC investment"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global counter-drone market expected to grow from approximately $5B in 2025 to $12B in 2030 (est.). Military/government accounts for 60%.",
+      "market_trend": "Drone threats highlighted by wars in Ukraine and the Middle East have driven a surge in demand for rapid response capabilities. Preference for startup innovation is also increasing.",
+      "growth_potential": "U.S. military and NATO budgets are steadily increasing; the low-cost, expendable approach has high potential for broad adoption.",
+      "risks": [
+        "Prolonged defense procurement cycles risk burning through funding.",
+        "Intensifying competition with incumbents like Anduril.",
+        "Weapons regulations and export control risks.",
+        "Small team (8 people) has unproven capacity to execute large contracts."
+      ],
+      "risk_mitigation": "Can attract follow-on investment from YC and Pioneer Fund; credibility from Canadian military demonstration; supply chain stability through North American manufacturing."
+    },
+    "editor_pick_comment": "A contrarian twist—hunt the operator instead of intercepting the drone—a practical counter-drone solution forged by field experience."
+  },
+  "optivolt-2026": {
+    "tagline": "A startup that embeds power electronics inside solar panels to reduce energy loss even in shaded conditions",
+    "category": [
+      "Solar",
+      "Power Electronics",
+      "Clean Tech"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "background": "A Thiel Fellow who spent 9 years focusing on redesigning solar panels from the ground up",
+        "notable_achievement": "Thiel Fellowship recipient"
+      },
+      {
+        "background": "Registered as co-founder per Crunchbase"
+      },
+      {
+        "background": "Registered as co-founder per Crunchbase"
+      }
+    ],
+    "team_highlights": "Co-founder and CEO Rohit Kalyanpur is a Thiel Fellow. The investor list includes solar industry veterans such as Paul Nahi (former CEO and founder of Enphase), Tom Werner (former CEO of SunPower), and Richard Kauffman (former New York State energy czar).",
+    "product": {
+      "summary": "Develops a power electronics device called Power Balancer that integrates inside the solar panel (junction box). It redistributes energy in real time between groups of cells, reducing output loss from shade, soiling, and aging.",
+      "problem_statement": "In conventional solar panels, if some cells are shaded or soiled, the entire string's output is limited. Existing bypass diodes only protect the panel but don't recover energy loss, and adding separate optimizers or microinverters increases cost and hardware.",
+      "solution": "The Power Balancer replaces bypass diodes and redistributes power between cell groups inside the panel. Rapid shutdown and monitoring functions are also integrated into the panel, reducing or eliminating the need for separate devices.",
+      "key_features": [
+        "Cell-string-level power optimization (inside the panel, not at module output)",
+        "99.4% conversion efficiency (under standard conditions, per company)",
+        "Panel-integrated rapid shutdown and monitoring",
+        "Compatible with universal batteries and inverters",
+        "30-year warranty",
+        "Energy savings monitoring via dedicated app"
+      ],
+      "tech_stack_or_innovation": "Integrates aerospace-grade power electronics into the panel's internal junction box. Holds 19 registered patents and 27 patents pending. Claims to have recorded up to 6x output compared to conventional optimizers in certain shade scenarios based on internal tests.",
+      "target_customer": "Individuals seeking residential solar installations, commercial and industrial power plants, and businesses needing AI data center power supply.",
+      "business_model": "Collaborates with panel manufacturers and installation partners to supply smart solar modules with built-in Power Balancer. Residential launch prioritized in California via a waitlist; commercial sales through the Optivolt Solar Fields program."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Sells power optimizers that optimize at the module output level. Optivolt differentiates by optimizing at the panel's internal cell-group level, reducing the need for separate optimizers."
+        },
+        {
+          "comparison": "Manages panel-level output with microinverters. This company was formerly led by Paul Nahi, an Optivolt investor. The new approach of in-panel optimization is seen as potentially replacing traditional microinverter architectures."
+        },
+        {
+          "comparison": "Provides module-level power optimization and monitoring solutions. Optivolt differentiates with more granular optimization at the cell-string level."
+        },
+        {
+          "comparison": "Previously developed cell-string optimization chips but failed to gain market traction. Optivolt is making a new attempt with similar technology integrated into the panel."
+        }
+      ],
+      "key_differentiator": "Integrates power optimization inside the panel's junction box rather than in an external module device. Cell-group-level optimization minimizes output loss under shade and soiling conditions, and reduces separate hardware costs.",
+      "moat": "19 registered patents and 27 patents pending, UL certifications (junction box, panel-integrated electronics, rapid shutdown, module safety), cumulative shipments of over 20,000 panels.",
+      "competitive_position_summary": "At the Series A stage, secured investment from current and former solar industry CEOs, earning technology credibility. An early-stage company challenging the established architectures of SolarEdge and Enphase in the niche of panel-integrated power electronics."
+    },
+    "trending_reason": {
+      "summary": "Attracted attention by announcing a $32M Series A (approx. KRW 45B) on October 21, 2026. The surge in AI data center power demand and declining solar LCOE are converging, fueling demand for 'smarter solar' at this timing.",
+      "catalysts": [
+        "$32M Series A announced October 21, 2026 (led by VXI Capital)",
+        "Rising AI data center power demand highlights the need for higher-efficiency solar",
+        "Investment from solar industry veterans including Enphase founder and former CEO Paul Nahi, former SunPower CEO Tom Werner",
+        "Cumulative shipments exceed 20,000 units and UL certification completed"
+      ],
+      "growth_metrics": "Cumulative funding of $42M, cumulative shipments of over 20,000 units, 19 registered patents and 27 pending (as reported by the company)."
+    },
+    "funding": {
+      "total_raised_note": "Total $42M according to Techstars and IESNA reports. CB Insights lists $40.62M, a slight discrepancy. Includes $32M Series A.",
+      "valuation_estimate": "Undisclosed (estimated around $100M at the time of the $32M Series A)",
+      "funding_history": [
+        {
+          "note": "Announced October 21, 2026, led by VXI Capital"
+        },
+        {
+          "stage": "Early stage (Seed, etc.)",
+          "note": "Per Techstars blog, cumulative funding before Series A estimated at approx. $10M. Details of individual rounds are undisclosed.",
+          "lead_investor": "Undisclosed"
+        }
+      ],
+      "latest_round": {
+        "note": "Announced October 21, 2026. Led by VXI Capital, with participation from RA Capital, Valo Ventures, and Atlas Innovate. Individual investors also joined, including Paul Nahi, founding CEO of Enphase, Tom Werner, former CEO of SunPower, and Richard Kauffman."
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global solar inverter and power optimization market is estimated at tens of billions of dollars annually. Optivolt targets a new segment within that: panel-integrated power electronics. AI data center power demand is an emerging growth driver.",
+      "market_trend": "With falling solar module prices, LCOE has become competitive with fossil fuels, and AI data center power demand is driving need for high-efficiency solar. At the same time, there is increasing pressure to reduce peripheral devices like separate optimizers and microinverters to cut installation costs.",
+      "growth_potential": "Starting with residential launch in California, plans to expand into commercial, utility-scale, and data center markets. The strategy of supplying smart modules through partnerships with US solar panel manufacturers aligns well with the Inflation Reduction Act (IRA) environment that boosts demand for US-made products.",
+      "risks": [
+        "Cell-string-level optimization is an area where Maxim Integrated previously attempted but failed to achieve market adoption.",
+        "Large installers may already be locked into the SolarEdge and Enphase ecosystems.",
+        "Panel-integrated electronics are difficult to maintain after installation, requiring long-term reliability proof.",
+        "Early Series A stage; mass production and scale have not yet been validated."
+      ],
+      "risk_mitigation": "Has demonstrated technology reliability through shipments of over 20,000 units, UL certifications, and 19 patents. Leveraging networks of veteran industry investors to build partnerships with major installers and manufacturers."
+    },
+    "related_links": [
+      {
+        "title": "Optivolt Official Website"
+      },
+      {
+        "title": "Optivolt LinkedIn (Series A announcement)"
+      },
+      {
+        "title": "Crunchbase Profile"
+      },
+      {
+        "title": "CB Insights Financials"
+      }
+    ],
+    "editor_pick_comment": "With the founder and former CEO of Enphase participating as an investor, the solar industry is watching whether this 'panel-integrated power electronics' approach will transform the existing optimizer market architecture."
+  },
+  "linkener-2026": {
+    "tagline": "Optimizing electricity costs for Spanish companies with an AI-based energy management platform",
+    "category": [
+      "Energy Management"
+    ],
+    "headquarters": {
+      "country_ko": "Spain"
+    },
+    "team_highlights": "CEO José Ignacio Ruiz, formerly of investor GoHub Ventures, joined in 2025 and turned the company profitable.",
+    "product": {
+      "summary": "Provides an AI-powered intelligent energy management system (SIGE) that combines smart metering, software, and AI to optimize energy consumption and reduce costs for businesses.",
+      "problem_statement": "Approximately 60% of Spanish companies' electricity bills contain errors or overcharges, but most companies lack the ability to detect or optimize them.",
+      "solution": "Through its self-developed remote metering hardware and AI software platform, it offers one-stop real-time consumption monitoring, automatic bill verification, identification of savings opportunities, and solar & battery installation.",
+      "key_features": [
+        "Link·IA AI Agent (natural language-based energy advisor)",
+        "Real-time remote consumption measurement (Telemedida)",
+        "Automatic bill verification and anomaly detection",
+        "Consumption and cost forecasting",
+        "Optimal contracted power recommendation",
+        "Solar and battery installation and maintenance engineering"
+      ],
+      "tech_stack_or_innovation": "Proprietary AI models and algorithms for data analysis and automation specialized in Spanish electricity market regulations",
+      "target_customer": "From SMEs to large enterprises (e.g., Acciona, Veolia), 2,000+ customers",
+      "business_model": "SaaS subscription fee + engineering installation and maintenance service fees"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Dutch startup, specialized in industrial AI energy management, Seed €6M"
+        },
+        {
+          "comparison": "Finnish startup, battery storage and renewable energy optimization, Series A €11M"
+        },
+        {
+          "comparison": "Raised $20M from Index Ventures, European energy cost optimization solution"
+        }
+      ],
+      "key_differentiator": "14 years in the Spanish market managing 2,000 customers and 10,000 supply points, accumulated local data and experience, integrated software and engineering",
+      "moat": "AI model optimized for Spanish electricity regulations, in-house engineering team of 30+, 400+ solar and battery installations",
+      "competitive_position_summary": "Leading player in integrated energy management in Spain with the most customers and installations, strengthening market dominance through AI capabilities"
+    },
+    "trending_reason": {
+      "summary": "In October 2026, raised €7.5M led by Klima Energy Transition Fund (Alantra) and announced plans to enhance its AI-based energy management platform",
+      "catalysts": [
+        "Increased volatility in European energy prices",
+        "Strengthened ESG regulations and carbon neutrality targets",
+        "Accelerated commercialization of AI-based energy optimization technology"
+      ],
+      "growth_metrics": "2,000+ customers, 10,000 supply points, manages 1.7 TWh of energy annually, customers save €15M per year (self-reported)"
+    },
+    "funding": {
+      "total_raised_note": "Includes €2M seed investment from GoHub Ventures in 2019. The 2026 €7.5M round was led by Klima.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "stage": "Series B (est.)"
+      },
+      "funding_history": [
+        {
+          "stage": "Seed (est.)",
+          "note": "Sole investment from GoHub Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The European commercial energy management software market is estimated at approx. €8B in 2025, with Spain accounting for about 10%.",
+      "market_trend": "Rising energy costs and stricter carbon regulations in Europe are driving surging demand for AI-based energy optimization solutions.",
+      "growth_potential": "Given that 60% of Spanish corporate electricity bills contain errors, there is significant replacement demand, along with potential expansion to other European countries.",
+      "risks": [
+        "Large-scale acquisition integration risk",
+        "Data quality maintenance and security issues",
+        "Market demand changes due to energy price volatility"
+      ],
+      "risk_mitigation": "Securing data reliability through 14 years of operational experience and proprietary AI models, with a strategy of gradual expansion and integration with existing infrastructure."
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "Company Introduction Page"
+      },
+      {
+        "title": "Link·IA AI Agent Introduction"
+      },
+      {
+        "title": "Alantra Press Release"
+      },
+      {
+        "title": "Tech Funding News Article"
+      }
+    ],
+    "editor_pick_comment": "It's impressive how the company leverages AI to target the fact that 60% of Spanish SMEs' electricity bills contain errors, with a localized optimization strategy."
+  },
+  "ailit-2026": {
+    "tagline": "Electrifying US freight rail with swappable batteries",
+    "category": [
+      "Rail electrification",
+      "Battery energy storage",
+      "Energy services"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Swedish, with venture investment and startup experience"
+      },
+      {
+        "background": "Expert in battery systems and software engineering"
+      },
+      {
+        "background": "Former partner at J12 Venture Capital, strategic advisor"
+      }
+    ],
+    "team_highlights": "Team members are engineering and software specialists who have worked at DB Cargo, Northvolt, Siemens, Koenigsegg, Candela, and others.",
+    "product": {
+      "summary": "A solution that electrifies freight rail by attaching Superwagon, a swappable battery wagon, to existing diesel-electric locomotives.",
+      "problem_statement": "US freight rail has relied on diesel for over 100 years, and overhead catenary electrification would require massive capital of $1-2 trillion, making it impractical.",
+      "solution": "An Energy-as-a-Service model that adds battery wagons (Superwagon) without replacing existing locomotives and swaps battery packs at charging stations.",
+      "key_features": [
+        "Swappable battery packs (claimed to deliver over 4,000 horsepower depending on source)",
+        "Directly connectable to existing diesel-electric locomotives",
+        "Energy management and battery management software",
+        "Battery pack swapping infrastructure and grid coordination system"
+      ],
+      "tech_stack_or_innovation": "Large-capacity swappable battery platform, energy management software, and fleet orchestration technology",
+      "target_customer": "North American freight rail operators (Class I and short-line railroads)",
+      "business_model": "Energy-as-a-Service — monthly subscription for battery wagon rental and charging services, or energy sales"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Developing and operating their own battery-electric locomotives, but replacing the locomotive itself carries a large CAPEX burden."
+        },
+        {
+          "comparison": "Offers freight cars with self-propulsion capability, eliminating the need for locomotives, but differs in operational flexibility."
+        },
+        {
+          "comparison": "Focuses on in-motion charging infrastructure, a different approach from battery swapping."
+        }
+      ],
+      "key_differentiator": "Low initial investment by adding battery wagons instead of replacing diesel locomotives, and uptime through swappable batteries.",
+      "moat": "Still early stage, no clear moat identified yet. Software and battery management technology could become core IP.",
+      "competitive_position_summary": "A late start compared to competitors, but differentiated by joining YC and a capital-efficient model. Summer 2027 will be the first validation point."
+    },
+    "trending_reason": {
+      "summary": "In October 2026, the company announced participation in Y Combinator's Fall 2026 batch and unveiled Superwagon, as the Swedish-born startup targets the US rail market.",
+      "catalysts": [
+        "Joined Y Combinator F26 batch (October 2026)",
+        "First public unveiling of Superwagon (November 2026)",
+        "Announced first deployment target for summer 2027"
+      ],
+      "growth_metrics": "Currently building a prototype, 9 employees (est.), no revenue yet."
+    },
+    "funding": {
+      "total_raised_note": "Combination of seed round (SEK 10M, approx. $1M) and Y Combinator investment ($500K). Some sources list the early VC round amount as undisclosed.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Investment upon joining Y Combinator's Fall 2026 batch"
+      },
+      "funding_history": [
+        {
+          "amount": "Approx. $1M",
+          "note": "Co-investment by SNÖ Ventures and Norrsken VC / SEK 10M"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: US freight rail market approx. $80B (est.). SAM: Major freight routes that can be electrified. SOM: Expansion expected after initial pilots.",
+      "market_trend": "Strengthening decarbonization regulations in the US, diesel price volatility, and expanded clean energy infrastructure investment under the Biden administration",
+      "growth_potential": "Rail electrification is a huge untapped market; although still early stage, the YC network and capital-efficient model could enable rapid validation.",
+      "risks": [
+        "Technology validation risk (physical prototype not yet complete)",
+        "Cost of building battery swapping infrastructure",
+        "Conservative decision-making by incumbent railroad operators",
+        "Lack of scale and credibility compared to competitors such as Union Pacific"
+      ],
+      "risk_mitigation": "Leveraging YC's follow-on investment and network, the team's experience from the rail industry, and an Energy-as-a-Service model to reduce upfront burden for operators"
+    },
+    "editor_pick_comment": "A Swedish-born startup is taking on US rail electrification with YC. Still at the prototype stage, but could the swappable battery model using existing locomotives become a game-changer for freight rail decarbonization?"
+  },
+  "finpilot-2026": {
+    "tagline": "AI operating system for institutional investors",
+    "category": [
+      "Artificial Intelligence",
+      "Financial Software"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "background": "Indian-born. Holds a master's in aerospace engineering, interned at Boeing, and later served as machine learning stock selection and AI lead at Euclidean Technologies.",
+        "notable_achievement": "Led AI at Euclidean Technologies"
+      },
+      {
+        "role": "Co-founder, Executive Chairman",
+        "background": "Co-founder of Euclidean Technologies. His father, Tom Alberg, was a co-founder of Madrona.",
+        "notable_achievement": "Early investor and startup mentor at Madrona"
+      }
+    ],
+    "team_highlights": "14 employees, mostly in Seattle, 1 in Boise. Company size has tripled since 2025.",
+    "product": {
+      "summary": "Finpilot is an AI-native operating system for institutional capital allocators, including pension funds, university endowments, foundations, and hospital investment teams. It consolidates all investment data and documents in one place, and AI agents handle repetitive tasks such as report analysis, data entry, and drafting analytical reports.",
+      "problem_statement": "Institutional investors used to receive reports as PDFs and Excel files from numerous fund managers, and had to manually read them, extract numbers, and enter them into systems. Data was scattered across legacy systems, making integration difficult and prone to errors.",
+      "solution": "Finpilot is composed of three layers: (1) a single record of all assets and documents, (2) an understanding engine that links the meaning and source of each number, and (3) AI agents that automatically update, analyze, and alert when reports arrive. Users can ask questions via a conversational interface and create customized dashboards.",
+      "key_features": [
+        "Unified data layer: integrates data from multiple sources such as portfolio management systems and document repositories into a single record",
+        "AI agents: automate repetitive tasks such as reviewing quarterly fund updates, preparing meeting briefings, and tracking numbers",
+        "Traceability: every number is linked to its source document, ensuring auditability",
+        "Custom dashboards: when users describe the metrics they want, the system generates dashboards based on real-time data",
+        "Organizational learning: workflows set up by one team member are saved in the system and available to the entire team"
+      ],
+      "tech_stack_or_innovation": "Uses its own finance-specific LLM for high-frequency document reading tasks, while Anthropic, OpenAI, and Google models are used for other tasks. Does not train models on customer data and maintains per-customer data isolation.",
+      "target_customer": "Institutional capital allocators, including pension funds, university endowments, foundations, hospital investment teams, and family offices",
+      "business_model": "SaaS subscription (exact pricing undisclosed)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "General-purpose AI tools cannot guarantee numerical accuracy, so full verification is required before submission to CIOs. Finpilot links every number to its source for verification."
+        },
+        {
+          "name": "Legacy CRM/research management systems",
+          "comparison": "Replaces systems that have not changed in over 15 years. Finpilot offers far greater automation through AI agents."
+        },
+        {
+          "comparison": "A Toronto-based competitor with a similar institutional investment data platform. Finpilot is regarded as ahead in AI agent capabilities."
+        }
+      ],
+      "key_differentiator": "Builds trust by providing source document tracing links for every number; finance-specific AI model for institutional capital; 100% retention rate with zero customer churn",
+      "moat": "Institutional customer data and workflows are embedded in the system, raising switching costs; 10x growth references; finance-domain specialization of the AI model",
+      "competitive_position_summary": "An early leader in the institutional capital operating system space. With 28 customers (including Seattle Children's Hospital, Texas Children's Hospital, and the Wyoming pension fund) and 10x revenue growth, it holds a first-mover advantage over competitors."
+    },
+    "trending_reason": {
+      "summary": "On November 4, 2026, announced a $10M Series A. Led by Lobby Capital, with Madrona participating. Notable for significant customer base and revenue growth compared to the previous seed round ($4M).",
+      "catalysts": [
+        "Maturation of AI agent technology enables automation of financial document processing",
+        "Increasing digital transformation pressure on institutional investors",
+        "10x revenue growth and acquisition of high-quality customers (Seattle Children's Hospital, etc.)"
+      ],
+      "growth_metrics": "Revenue grew 10x since early 2026, 0% customer churn, 28 institutional customers"
+    },
+    "funding": {
+      "total_raised_note": "According to GeekWire, has raised approximately $14.5M since founding in 2023 (seed $4M + Series A $10M; the remaining $500K is of unknown origin but may include other grants)",
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        {
+          "note": "Amount not listed on PitchBook; GeekWire confirmed $4M"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: The global institutional capital management market (pension funds, endowments, foundations, etc.) is worth tens of billions of dollars; SAM: Software and data services spending is in the billions annually; SOM: Currently 28 customers, at a level of several million dollars annually",
+      "market_trend": "Institutional investors are accelerating digital transformation under yield pressure and stricter regulation. Demand for AI-powered work automation is surging.",
+      "growth_potential": "Finpilot has proven 10x revenue growth and zero churn, accelerating market penetration. Still, only a tiny fraction of institutional investors worldwide use it, leaving significant room for expansion.",
+      "risks": [
+        "Large tech companies (Google, Microsoft) could enter with finance-specific AI",
+        "Data security and regulatory risks (sensitive financial data of institutional clients)",
+        "Customer concentration: possible heavy reliance on a few large customers among the 28"
+      ],
+      "risk_mitigation": "Strengthens security with data isolation and no-training policies; differentiates accuracy with proprietary finance-specific models versus general-purpose AI; diversifies customers across various institution types"
+    },
+    "related_links": [
+      {
+        "title": "Finpilot official website"
+      },
+      {
+        "title": "GeekWire article"
+      },
+      {
+        "title": "Madrona blog"
+      },
+      {
+        "title": "PitchBook profile"
+      }
+    ],
+    "editor_pick_comment": "The time investors used to waste reading PDFs is now handled by AI — a Series A startup that grew 10x."
+  },
+  "vouch-2026": {
+    "tagline": "AI wealth management for every Indian",
+    "category": [
+      "Wealth Management",
+      "Fintech"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Worked at Jane Street and Robinhood. As Robinhood's youngest PM, built the Advisor Network from 0 to 1. Graduated from University of Pennsylvania in Computer Science.",
+        "notable_achievement": "Led the Advisor Network product line as Robinhood's youngest PM"
+      }
+    ],
+    "team_highlights": "Y Combinator F26 batch, small team of one founder",
+    "product": {
+      "summary": "A platform that connects users' existing mutual fund portfolios, where AI analyzes overlaps, concentration, costs, and performance, and suggests goal-based investment plans and tax-efficient switches. Human experts are involved in key decisions.",
+      "problem_statement": "In India, personalized financial advice has only been available to the wealthy, while middle-class households struggle to get systematic investment management.",
+      "solution": "Diagnoses portfolios with AI, proposes goal-based allocation, and executes actual trades with user approval. Fees are paid by the fund houses, so it's free for users.",
+      "key_features": [
+        "Analysis of fund overlaps, sector concentration, costs, and performance",
+        "Goal-based asset allocation and SIP design (e.g., children's education, housing)",
+        "Timing suggestions for fund switches considering exit load and capital gains tax",
+        "Custom adjustments reflecting user's personal views (e.g., bullish on infrastructure sector)",
+        "All changes executed only after user approval"
+      ],
+      "tech_stack_or_innovation": "AI-based portfolio analysis engine; plans to use India's Account Aggregator framework",
+      "target_customer": "Indian middle-class households investing in mutual funds (a market where less than 10% of the population invests)",
+      "business_model": "As an AMFI-registered mutual fund distributor, collects fees from fund houses (no direct cost to users)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "AI-native wealth management, raised $3.1M pre-seed in June 2026, similar approach"
+        },
+        {
+          "comparison": "Raised $7.1M, Indian household financial management platform"
+        },
+        {
+          "comparison": "Late-stage startup, raised $52.6M, AI-based investment advisory"
+        }
+      ],
+      "key_differentiator": "Connects and analyzes users' entire existing portfolio, builds trust through a hybrid model combining AI and human experts. Offers tax-efficient switching suggestions.",
+      "moat": "Integration with user financial data, regulatory license (AMFI registration completed), YC network and founder experience",
+      "competitive_position_summary": "Not yet launched, but gaining attention due to YC backing and the founder's experience at Robinhood and Jane Street. As competition in AI wealth management heats up in India's rapidly growing mutual fund market, regulatory approvals and early traction will be key to success."
+    },
+    "trending_reason": {
+      "summary": "Raised a $500K pre-seed from Y Combinator in October 2026. An AI-native wealth manager emerging amid the rapid growth of India's mutual fund market, with SIP monthly inflows of $4.35B and AUM of $1.16T.",
+      "catalysts": [
+        "Y Combinator F26 batch Demo Day",
+        "Rapid growth of India's mutual fund market (SIP monthly $4.35B)",
+        "Rising investment in AI-based fintech startups in India"
+      ],
+      "growth_metrics": "Pre-launch (scheduled for November 2026, pending regulatory approval)"
+    },
+    "funding": {
+      "total_raised_note": "Y Combinator pre-seed investment, October 2026",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Pre-seed from Y Combinator, no official announcement from the company. Reported by Dealroom and RecodeX."
+      },
+      "funding_history": [
+        {
+          "note": "Y Combinator, listed as Seed on PitchBook"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: India mutual fund AUM $1.16T (2026), SAM: Digital wealth management market for individual investors, SOM: Targeting early middle-class household users",
+      "market_trend": "India's mutual fund industry sees SIP monthly inflows of $4.35B, with AUM growing 2.4x in five years. Government financial inclusion policies and expanding digital infrastructure are driving investor base growth.",
+      "growth_potential": "Currently less than 10% of India's population participates in investments, indicating large potential market. AI-based low-cost advisory could catalyze middle-class entry.",
+      "risks": [
+        "Delays in regulatory license approvals (SEBI etc.) causing uncertainty in app launch timeline",
+        "Difficulty in changing investment habits biased toward traditional assets (real estate, gold)",
+        "Dependence on Account Aggregator (AA) ecosystem for data connectivity",
+        "Competition from existing banks, brokers, and large platforms (Groww, Zerodha)"
+      ],
+      "risk_mitigation": "AMFI registration completed, building trust through AI+human hybrid, leveraging YC network and founder experience"
+    },
+    "related_links": [
+      {
+        "title": "Vouch Official Website"
+      },
+      {
+        "title": "Vouch Privacy Policy"
+      },
+      {
+        "title": "Y Combinator Company Page"
+      }
+    ],
+    "editor_pick_comment": "The vision of AI wealth management for India's middle class is compelling, but regulatory approvals and building user trust will be critical to success."
+  },
+  "bold-2026": {
+    "tagline": "Digital financial platform for Colombian SMEs",
+    "category": [
+      "Fintech",
+      "Small business finance",
+      "Digital lending"
+    ],
+    "headquarters": {
+      "country_ko": "Colombia"
+    },
+    "founders": [
+      {
+        "background": "Economist, Universidad de los Andes. Co-founded PagosOnline, which grew into PayU Latam.",
+        "notable_achievement": "Founded and led growth of PayU Latam"
+      },
+      {
+        "background": "Economist, MBA (Universidad de los Andes). Over 15 years experience in sales and product development."
+      },
+      {
+        "background": "Systems engineering, Universidad del Quindío. PayU Engineering Director, Transport Systems CTO.",
+        "notable_achievement": "Technical leadership at PayU Latam"
+      },
+      {
+        "background": "Brand and customer experience specialist."
+      }
+    ],
+    "team_highlights": "The founding team consists of Latin American fintech veterans who founded and operated PayU Latam.",
+    "product": {
+      "summary": "All-in-one digital financial platform for micro, small, and medium enterprises (MSMEs). Offers payment processing, digital accounts, loans, and financial management software.",
+      "problem_statement": "Colombian small businesses find it difficult to obtain loans from traditional banks and lack affordable payment infrastructure.",
+      "solution": "Starting with a credit card terminal (dataphone), it uses sales data to assess creditworthiness and offers easy loans and account services.",
+      "key_features": [
+        "Affordable mobile card reader",
+        "Fee-free digital account (10% annual interest)",
+        "Credit assessment and loans based on sales data",
+        "CDT (time deposits, up to 12.5% annual interest)",
+        "Bre-B transfers, ACH, card issuance"
+      ],
+      "tech_stack_or_innovation": "Transaction data-based credit scoring: freelancers without traditional credit history can be evaluated based solely on sales performance.",
+      "target_customer": "MSMEs in Colombia and Peru; recently expanded to individual customers.",
+      "business_model": "Revenue from payment processing fees, loan interest, and account service fees."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Strong in e-commerce payments; Bold specializes in offline small businesses."
+        },
+        {
+          "comparison": "Primarily targets individual users; Bold is business-focused."
+        }
+      ],
+      "key_differentiator": "Sales data-based credit assessment enables loans to small businesses without physical stores or credit history.",
+      "moat": "Holds financial regulatory licenses, network of over 700,000 merchants, annual transaction volume of 20 trillion pesos.",
+      "competitive_position_summary": "Leading fintech for Colombian MSMEs; expanding into the individual market and Peru."
+    },
+    "trending_reason": {
+      "summary": "In October 2026, secured a $11.3M loan from BBVA Spark and accelerated growth with the launch of digital accounts for individuals.",
+      "catalysts": [
+        "Expanded lending capacity via BBVA Spark loan",
+        "Launched free accounts for individual customers (10% annual interest)",
+        "Entry into Peru (acquisition of VendeMás)"
+      ],
+      "growth_metrics": "Over 700,000 merchants, annual transaction volume of approximately 20 trillion pesos, loan portfolio of 300 billion pesos."
+    },
+    "funding": {
+      "total_raised_note": "Approximately $40M in equity (led by General Atlantic, October 2025) and $11.3M in loans (BBVA Spark, October 2026).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Structured loan from BBVA Spark, equivalent to 37,450 million Colombian pesos."
+      },
+      "funding_history": [
+        {
+          "note": "Led by General Atlantic. Exact series name uncertain, but scale suggests Series B."
+        },
+        {
+          "note": "Structured loan from BBVA Spark."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Colombian MSME loan market TAM estimated at approx. 100 trillion pesos, including payment processing.",
+      "market_trend": "Latin American fintech growth accelerating, especially digital transformation of small businesses and increasing demand for non-bank loans.",
+      "growth_potential": "Potential for expansion into individual customers and further entry into Peru and northern regions; MSME loan penetration remains low.",
+      "risks": [
+        "Rising delinquency rates during economic downturn",
+        "Intensified competition from large banks and tech companies",
+        "Regulatory change risk"
+      ],
+      "risk_mitigation": "Sales data-based credit model ensures stability; financial licenses help navigate regulations; diversified revenue streams."
+    },
+    "related_links": [
+      {
+        "title": "Official website"
+      },
+      {
+        "title": "PPU Legal (advisory firm)"
+      }
+    ],
+    "editor_pick_comment": "The model of providing credit to MSMEs based solely on sales data has proven effective, and now it is expanding into individual finance."
+  },
+  "avante-2026": {
+    "tagline": "AI platform that analyzes and optimizes corporate benefits costs",
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Former CPTO at Olive AI, Founding Product Lead at KenSci. Experience building AI products for healthcare data.",
+        "notable_achievement": "College swimmer, Ironman participant"
+      },
+      {
+        "background": "Physician and clinical informaticist. Leadership at Olive AI and KenSci. M.D. from University of Washington and Master's in Epidemiology.",
+        "notable_achievement": "Holds patents in health informatics"
+      },
+      {
+        "background": "Founded Amperity (customer data platform, $1B valuation), founded Appature (acquired by IMS Health). Runs Amp It Up Ventures.",
+        "notable_achievement": "Built Amperity into a unicorn"
+      }
+    ],
+    "team_highlights": "44 employees. Core team from Olive AI and KenSci with deep expertise in healthcare AI and data analytics.",
+    "product": {
+      "summary": "AI platform for corporate benefits administrators and employees. Three products (Carly, Ava Workbench, Ava Agents) integrate, analyze, and automate benefits data.",
+      "problem_statement": "Benefits are one of the largest corporate expenses, but data is scattered across vendors and documents, making analysis take weeks and putting companies at a disadvantage in negotiations. Employees struggle to understand benefits, leading to repeated HR inquiries.",
+      "solution": "Avante consolidates all benefits documents and data into a single platform, with AI analyzing to provide real-time insights. 24/7 multilingual responses to employee questions; teams can evaluate vendors and analyze costs in minutes.",
+      "key_features": [
+        "Carly: Benefits assistant for employees. Answers questions in 80+ languages via Slack, Teams, portal, etc. Supports new hires, life events, open enrollment.",
+        "Ava Workbench: Analytics tool for benefits teams. Vendor performance evaluation, cost trend analysis, leadership report generation. Reduces time compared to traditional reports.",
+        "Ava Agents (beta): Automates repetitive tasks. Regularly generates employee trend reports and vendor reviews for team review."
+      ],
+      "tech_stack_or_innovation": "Proprietary Benefit Ontology structures benefits data. AI agents perform background tasks over long periods (days to weeks). Natural language processing in 80+ languages.",
+      "target_customer": "Self-insured mid-to-large enterprises with 1,000+ employees. Partners with benefits brokers and consultants (Gallagher, OneDigital, etc.).",
+      "business_model": "SaaS subscription. Estimated per-employee or per-enterprise pricing."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Enterprise HR suite but lacks benefits-specific AI. Avante is dedicated to benefits analytics."
+        },
+        {
+          "comparison": "Strong in payroll and HR outsourcing. Avante supports benefits decision-making for self-insured enterprises."
+        },
+        {
+          "comparison": "Specialized in global workforce management and payroll. Avante focuses on benefits data integration and analysis."
+        },
+        {
+          "comparison": "Integrated HR and IT platform. Avante differentiates with benefits-focused AI agents."
+        }
+      ],
+      "key_differentiator": "AI compares vendor contracts against actual claims data, continuously monitors the entire benefits program, and pre-identifies issues. Models all data via 'Benefits Ontology'.",
+      "moat": "Benefits Ontology that systematizes benefits data. Partnerships with major brokers like Gallagher and OneDigital. 100% customer retention rate. Co-founders with former healthcare AI expertise.",
+      "competitive_position_summary": "Still early-stage, but already has 70 customers, including Fortune 500 companies. Reaches 385K employees and their families in 18 months. Beta launch of its AI agent gives it a feature edge over competitors."
+    },
+    "trending_reason": {
+      "summary": "On October 27, 2026, announced $30M Series A and beta launch of Ava Agents. Amid projected 9.2% increase in U.S. employer health insurance premiums in 2027, AI benefits cost management solution gains attention.",
+      "catalysts": [
+        "U.S. employer health insurance premiums projected to rise 9.2% in 2027",
+        "Rise of agentic AI trend",
+        "Distribution channels secured through partnerships with major brokers (Gallagher, OneDigital, etc.)"
+      ],
+      "growth_metrics": "Grew from 0 to 70 customers in 18 months (5x year over year), reaching 385K target employees and family members, with a 100% renewal rate. Bookings grew 5x."
+    },
+    "funding": {
+      "total_raised_note": "Seed $10M + Series A $30M",
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        {
+          "note": "Seed round (month undisclosed)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "market_trend": "U.S. employer health insurance premiums expected to rise 9.2% in 2027. Demand for AI-powered cost management solutions surging. HR tech market growing at over 10% CAGR.",
+      "growth_potential": "Global expansion (multinational companies), AI agent advancement, expanded partnerships for mid-market. Current customer count growing 5x.",
+      "risks": [
+        "Intensified competition if existing HR platforms like Workday and Rippling add AI features",
+        "Complexity of data integration with various benefits vendors",
+        "Accuracy and reliability issues of AI agents"
+      ],
+      "risk_mitigation": "Exclusive partnerships with major brokers create distribution channel barriers. Proven 100% retention rate. Credibility of co-founders with healthcare expertise. Focused specialization in benefits domain.",
+      "tam_sam_som": "TAM: Approx. 180M U.S. workers, plus global. SAM: Mid-sized companies that self-insure. SOM: Currently reaching 385K people."
+    },
+    "related_links": [
+      {
+        "title": "Avante Official Website"
+      },
+      {
+        "title": "Avante AI Information Page"
+      },
+      {
+        "title": "Series A Official Announcement"
+      },
+      {
+        "title": "Company Overview (Leadership)"
+      }
+    ],
+    "editor_pick_comment": "It's interesting to see AI agents introduced into the traditional HR domain of benefits cost analysis, streamlining one of the largest corporate expense categories."
+  },
+  "infisical-2026": {
+    "tagline": "Open-source secret management and security infrastructure for developers",
+    "category": [
+      "Security",
+      "Developer Tools",
+      "Secret Management"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Graduated with honors from Cornell University (Operations Research and Information Engineering), worked as an engineer at bunq and Figma",
+        "notable_achievement": "Co-founded Infisical and raised Series B"
+      },
+      {
+        "role": "Co-founder",
+        "background": "Cornell University alum, prior startup experience"
+      },
+      {
+        "role": "Co-founder",
+        "background": "Cornell University alum, prior startup experience"
+      }
+    ],
+    "team_highlights": "All three co-founders are Cornell University alumni, building a security product prioritizing developer experience based on their experience at Figma, bunq, etc.",
+    "product": {
+      "summary": "Unified open-source security infrastructure platform for secrets, certificates, keys, privileged access, and AI agents",
+      "problem_statement": "Developers bypass security due to the inconvenience of managing .env files and the complexity of legacy security tools (e.g., HashiCorp Vault)",
+      "solution": "Infisical provides a dashboard, environment management, approval policies, secret rotation, dynamic secrets, certificate management, KMS, Agent Vault, etc., integrating them into a single easy-to-use platform for developers",
+      "key_features": [
+        "Dashboard with per-environment folders and secret references",
+        "Approval policies and secret sync to 50+ targets",
+        "Automatic rotation of database and SaaS keys",
+        "Dynamic secrets for 30+ targets",
+        "Certificate management (acts as PKI engine)",
+        "KMS (transit and KMIP, HSM support)",
+        "Agent Vault: provides fake API keys so AI agents can access systems without real credentials"
+      ],
+      "tech_stack_or_innovation": "MIT-licensed open-source, self-hosted on PostgreSQL and Redis, Agent Vault adopts an innovative proxy approach for AI agent security",
+      "target_customer": "Organizations of all sizes from startups to Fortune 50 companies (1,300+ customers, including LG, First American Financial, OpenRouter, Wise, and U.S. government)",
+      "business_model": "Freemium + paid plans (Team/Enterprise), cloud and self-hosted options"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Vault requires specialized personnel and uses proprietary storage and HCL policy language, while Infisical is much simpler to operate based on PostgreSQL/Redis and is developer-friendly"
+        },
+        {
+          "comparison": "CyberArk requires enterprise-specific stacks and has limitations in SaaS rotation, while Infisical is open-source, more flexible, and offers diverse integrations"
+        },
+        {
+          "comparison": "Doppler is SaaS-only with limited dynamic secrets, while Infisical supports open-source and self-hosting and has a broader feature set"
+        },
+        {
+          "name": "OpenBao (Vault fork)",
+          "comparison": "OpenBao maintains architecture similar to Vault, but Infisical offers a more modern UI and differentiated features like Agent Vault"
+        }
+      ],
+      "key_differentiator": "Developer experience first, open-source transparency, dedicated AI agent security (Agent Vault) features, and providing secrets, certificates, and access management all in a single platform",
+      "moat": "30,000 GitHub stars, 1,300+ customers (including U.S. government), MIT-licensed community, cash-flow positive financial stability, and network of prominent investors like Elad Gil",
+      "competitive_position_summary": "A modern open-source alternative aiming to replace legacy secret management tools (Vault, CyberArk), especially leading in the AI agent security space"
+    },
+    "trending_reason": {
+      "summary": "On October 27, 2026, announced raising $40M Series B led by Elad Gil at a $600M valuation. As AI agent proliferation drives surging demand for agent credential security, Infisical's Agent Vault solution is gaining attention.",
+      "catalysts": [
+        "Rise of security issues from 'non-deterministic behavior' due to increased AI agent usage",
+        "Market demand for open-source alternatives to HashiCorp Vault",
+        "Additional investment from Elad Gil and participation from Y Combinator and Gradient Ventures"
+      ],
+      "growth_metrics": "1,300+ organizations using, 30,000+ GitHub stars, cash-flow positive, 43 employees (maintained profitability even before Series B)"
+    },
+    "funding": {
+      "total_raised_note": "Seed round amount undisclosed; cumulative $58.93M per BankInfoSecurity article (Series A $16M + Series B $40M + seed)",
+      "funding_history": [
+        {
+          "note": "Led by Elad Gil, with participation from Y Combinator and Gradient Ventures"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Exact amount and date not disclosed, but included in cumulative total of $58.93M"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global secret management market estimated at approx. $2B in 2026 (est.), AI agent security is a nascent field but growing rapidly",
+      "market_trend": "As enterprise adoption of AI agents accelerates, agent credential security emerges as a major issue, with a trend of migrating from legacy Vault solutions to modern open-source alternatives",
+      "growth_potential": "Among 1,300+ customers include Fortune 50 companies and U.S. government clients; with cash-flow positive and large investment, can expand R&D and sales",
+      "risks": [
+        "Strong enterprise market share of HashiCorp Vault",
+        "Intensifying competition from open-source rivals (OpenBao, etc.)",
+        "Uncertainty in demand forecasting due to early stage of AI agent security market"
+      ],
+      "risk_mitigation": "Strengthened position through open-source community and 30,000 GitHub stars, first-mover advantage of Agent Vault, stable operations due to cash-flow positive"
+    },
+    "related_links": [
+      {
+        "title": "Infisical Official Site"
+      },
+      {
+        "title": "HashiCorp Vault Alternative Comparison (Infisical Blog)"
+      },
+      {
+        "title": "Infisical Pricing Page"
+      },
+      {
+        "title": "Infisical About Page"
+      }
+    ],
+    "editor_pick_comment": "An open-source platform solving AI agent security vulnerabilities; it's clear why it's gaining attention with Elad Gil's investment."
+  },
+  "gecipe-inc-2026": {
+    "tagline": "Immersive English conversation learning through e-sports",
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "funding": {
+      "total_raised": "approx. ¥1.1B",
+      "total_raised_note": "Includes Series B of ¥660M, plus other Seed and Series A rounds (est.). Source: Podcast 'AI+Crypto FM'.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "¥660M",
+        "note": "Total Series B round. Includes issuance of new shares and loans.",
+        "lead_investor": "Japan Venture Capital (existing shareholder additional investment)"
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "Japan's e-learning market is over ¥400B in 2025, including the English education market. (est.)",
+      "market_trend": "Growing demand for game-based immersive learning; differentiation with human coaches instead of AI tutors.",
+      "growth_potential": "Expansion into school channels, possibility of overseas expansion (Japanese version?).",
+      "risks": [
+        "Dependence on game platforms (Fortnite, Minecraft): policy changes pose risks",
+        "Intensifying competition with AI-based English learning services",
+        "Declining target population due to low birth rate in Japan"
+      ],
+      "risk_mitigation": "Secures B2B stability through direct contracts with schools; differentiates with proprietary curriculum and human coaches."
+    },
+    "related_links": [
+      {
+        "title": "Gecipe Corporate Site"
+      },
+      {
+        "title": "eSpi! Service Site"
+      },
+      {
+        "title": "NVCC Portfolio Page"
+      },
+      {
+        "title": "XTech Ventures Investment News"
+      }
+    ],
+    "editor_pick_comment": "Innovation turning gaming time into English study; product quality proven by 96% renewal rate."
+  },
+  "quippy-2026": {
+    "tagline": "An app that builds social skills by practicing with AI for 10 minutes a day",
+    "category": [
+      "Social Skills Training",
+      "AI Education"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "background": "Experience on Duolingo Product team, University of Michigan CS + Business major",
+        "notable_achievement": "Selected for YC Fall 2026 batch, solo founder"
+      }
+    ],
+    "team_highlights": "1-10 person team centered on solo founder. Participant in YC Fall 2026 batch. No co-founders.",
+    "product": {
+      "summary": "A mobile app that lets you rehearse before real conversations through role-play with AI, and repeatedly train weaknesses with feedback and personalized drills.",
+      "problem_statement": "People with social skills deficiencies or anxiety lack a systematic, affordable practice tool beyond expensive coaching or therapy. Generic chatbots mimic conversation but don't create a learning curriculum.",
+      "solution": "Combines Duolingo-style short repetitive drills and AI role-play to provide a 'social skills gym' that corrects conversation patterns within 10 minutes a day.",
+      "key_features": [
+        "8 types of social interactions: dating, work, friends, family, boundary setting, etc.",
+        "Voice/text role-play with an AI partner",
+        "Post-session conversation replay and selective feedback",
+        "Weakness-based personalized drill generation",
+        "Adaptive curriculum that changes based on user goals and patterns (12-week roadmap)",
+        "Free play + Quippy Plus monthly/yearly subscription"
+      ],
+      "tech_stack_or_innovation": "Adaptive AI curriculum that learns from user response patterns to adjust next scenarios and drills. Supports both voice and text interfaces.",
+      "target_customer": "General users in their 20s-40s who lack confidence in specific conversations (dating, work relationships, new relationships). People who want systematic social skills training but find coaching costs burdensome.",
+      "business_model": "Freemium. Basic scenarios free, Quippy Plus offers unlimited practice with auto-renewing monthly/yearly subscription."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "General-purpose AI chatbots",
+          "comparison": "Can provide immediate conversation responses, but do not offer personalized curriculum or weakness-based repetitive drills."
+        },
+        {
+          "name": "AI character role-play apps",
+          "comparison": "Allow freeform role-play but are not structured training for social skills improvement."
+        },
+        {
+          "name": "Human coaching/therapy",
+          "comparison": "High personalization but disadvantaged in cost and accessibility. Quippy is a low-cost alternative for anytime repeat practice."
+        }
+      ],
+      "key_differentiator": "The AI not only answers but also turns user failure points into drills and revisits them in the next session, creating an adaptive learning loop.",
+      "moat": "Still early, so no strong moat yet. But user-specific curriculum data and habit-formation know-how from a Duolingo-alum designer are potential assets.",
+      "competitive_position_summary": "Small scale in the consumer AI app market, but first-mover position targeting the gap between 'therapy/coaching' and 'generic chatbots'."
+    },
+    "trending_reason": {
+      "summary": "With its entry into the YC Fall 2026 batch, product and media exposure increased, and it is gaining early traction with a 4.8 rating (71 reviews) on the App Store.",
+      "catalysts": [
+        "Participation in Y Combinator Fall 2026 batch",
+        "App Store launch and 4.8 rating (71 reviews)",
+        "v1.0.4 update 5 days ago improved onboarding and loading speed",
+        "Podcast interview exposure for solo founder from Duolingo"
+      ],
+      "growth_metrics": "App Store rating 4.8/5.0, 71 reviews, 1-10 employees. Revenue and MAU undisclosed."
+    },
+    "funding": {
+      "total_raised_note": "Listed as 'last funding round raised $500K' on LinkedIn profile. Estimated as standard investment from YC F26 batch participation; no official press release.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Investor and exact date cannot be officially confirmed (estimated). Assumed to be a standard YC F26 batch deal.",
+        "lead_investor": "Y Combinator (est.)",
+        "notable_investors": [
+          "Y Combinator (est.)"
+        ]
+      },
+      "funding_history": [
+        {
+          "note": "Previous round amount per LinkedIn. Date and investor undisclosed (est.).",
+          "lead_investor": "Y Combinator (est.)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global AI education/self-improvement app market / SAM: English-language social skills training and career communication app market / SOM: Early YC network-based subscriber pool. Official figures undisclosed.",
+      "market_trend": "1:1 speaking practice services using generative AI are spreading in education/self-improvement apps. Quippy is an early example of a consumer AI app focused on 'practice habits'.",
+      "growth_potential": "With an early App Store rating of 4.8 showing word-of-mouth signals, and investment/media exposure increasing from YC F26 batch. However, long-term retention is a key variable.",
+      "risks": [
+        "High dependency on solo founder",
+        "Must prove differentiation from generic AI chatbots through paid conversion rate",
+        "Potential misuse by socially anxious users trying to replace clinical therapy",
+        "High churn rate for consumer apps"
+      ],
+      "risk_mitigation": "Lowers entry barriers with free tier and short ~10-minute sessions, states 'not a therapy replacement' in app description. Secures initial distribution and networking support through YC program."
+    },
+    "related_links": [
+      {
+        "title": "Quippy Official Website"
+      },
+      {
+        "title": "Quippy Mission Page"
+      },
+      {
+        "title": "Y Combinator Company Profile"
+      },
+      null,
+      null,
+      {
+        "title": "Quippy - Crunchbase Profile"
+      },
+      {
+        "title": "Fondo Interview"
+      },
+      {
+        "title": "START Podcast Transcript"
+      }
+    ],
+    "editor_pick_comment": "Quippy is a company selling 'practice habits' rather than 'therapy' or 'chatbot', but whether that leads to actual paid conversion is the challenge after YC."
+  },
+  "phonic-2026": {
+    "tagline": "Developer of 'Phonic-1', a voice AI model that speaks like a human.",
+    "category": [
+      "AI voice model",
+      "Voice agent"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "background": "Generative AI and machine learning researcher with a bachelor's and master's in computer science from MIT. 2,700+ citations. Joined as MosaicML's 8th employee; MosaicML was acquired by Databricks (official site reports $1bn, TechCrunch reported $1.3bn). Co-founded Phonic with Nikhil Murthy in 2024.",
+        "notable_achievement": "Experienced the Databricks acquisition as an early member of MosaicML"
+      },
+      {
+        "background": "Earned a bachelor's and master's in computer science from MIT in 2.5 years. Worked at NVIDIA and Intel, and led the foundation model team at Genesis Therapeutics, where he trained protein structure prediction models.",
+        "notable_achievement": "Led the foundation model team at Genesis Therapeutics"
+      }
+    ],
+    "team_highlights": "Approximately 23 people (Well Run tally, October 2026). An engineering-centric organization where two MIT-educated founders oversee everything from model training to infrastructure.",
+    "product": {
+      "summary": "Develops 'Phonic-1', an end-to-end speech-to-speech model that takes audio directly as input and responds with speech, without converting speech to text. It enables phone-based voice agents to converse naturally like humans and to execute tool calls, such as database lookups, even while the speaker is talking.",
+      "problem_statement": "Existing voice agents use a cascaded architecture that chains STT (speech recognition)—LLM (text reasoning)—TTS (speech synthesis). This process loses vocal information such as conversational tone, hesitations, and accurate pronunciation of names, while increasing response latency and cost. Earlier speech-to-speech demo models failed to achieve both intelligence and naturalness, making them difficult to deploy in production.",
+      "solution": "A single speech-to-speech model processes and generates audio directly. Response speed is 600ms, similar to a human, and it switches languages across 50+ languages while preserving the speaker's voice. It places a frontier text model as a 'supervisor agent' to reinforce reasoning and tool-call accuracy.",
+      "key_features": [
+        "600ms response time",
+        "Tool calling while the speaker is talking (unique to Phonic-1)",
+        "Supports 50+ languages, can switch languages mid-conversation",
+        "No. 1 on Artificial Analysis Speech-to-Speech Index with 87.1 points",
+        "83.2 points on Sierra τ³-Voice multilingual full-duplex (GPT-Live-1 79.9, Gemini 3.8 Live 68.5)",
+        "Single per-minute rate, no LLM pass-through or token costs"
+      ],
+      "tech_stack_or_innovation": "A single end-to-end model with every layer redesigned—from data collection, pretraining, reinforcement learning, kernel, to infrastructure. Full-duplex conversation and interruption handling are implemented at the model level, and it takes a hybrid structure that uses a frontier model as a supervisor for tasks requiring reasoning.",
+      "target_customer": "Enterprises looking to automate phone operations in customer support, healthcare, recruiting, and logistics. Public customers include Ashby (recruiting), Maven AGI, Rho (fintech), and a Fortune 50 IT infrastructure company. Ashby uses Phonic for AI interviews in 25 countries.",
+      "business_model": "Billed per minute of call. Starter $0.07/min, Pro $0.065/min (minimum $200/month), Enterprise quoted separately. Emphasizes that no additional infrastructure assembly is needed beyond the model API, keeping integration costs low."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Native speech-to-speech model. Phonic-1 beat GPT-Live-1 by 0.2 points on the Artificial Analysis Speech Index with 87.1, and also led 83.2 to 79.9 on the Sierra τ³-Voice multilingual full-duplex."
+        },
+        {
+          "comparison": "Recorded 68.5 points on the same τ³-Voice multilingual full-duplex, 14.7 points behind Phonic-1."
+        },
+        {
+          "comparison": "A native voice model offered by a big tech company, competing directly at the voice model layer."
+        },
+        {
+          "comparison": "A cascaded voice agent stack that assembles STT, LLM, and TTS. Phonic said on its official blog that customers are increasingly switching from these stacks to Phonic."
+        }
+      ],
+      "key_differentiator": "The key differentiator is owning a single speech-to-speech model rather than a cascaded assembly, and implementing 'tool calling while the speaker is talking'—an essential production feature—at the model level. The cost structure is also simple with a single per-minute rate.",
+      "moat": "Two years of accumulated voice data collection and training pipelines, plus its own model operation infrastructure. It has a flywheel where data from real production calls—such as call centers and AI interviews—feeds into model improvements.",
+      "competitive_position_summary": "In the early opening of the market as OpenAI, Google, and Amazon launch native voice models one after another, Phonic aims for the No. 1 independent position in the 'voice agent model layer'—armed with benchmark leadership, public customer references, and a $27.5M Series A."
+    },
+    "trending_reason": {
+      "catalysts": [
+        "2026-10-29: Phonic-1 launch and $27.5M Series A announcement",
+        "2026-10-29: No. 1 on Artificial Analysis Speech-to-Speech Index (87.1 points)",
+        "2026-10-29: Scored 83.2 on Sierra τ³-Voice multilingual full-duplex, surpassing GPT-Live-1 (79.9) and Gemini 3.8 Live (68.5)"
+      ],
+      "growth_metrics": "Processes calls across 6 continents and supports 50+ languages. Ashby uses Phonic for AI interviews in 25 countries. The official blog says customers are increasingly switching from cascaded stacks such as ElevenLabs and Bland. Approximately 23 employees (October 2026).",
+      "summary": "On October 29, 2026, Phonic announced its Phonic-1 model and a $27.5M Series A led by First Round. It ranked first on the Artificial Analysis Speech-to-Speech Index with a score of 87.1, drawing attention as an independent voice model that outperformed Big Tech. Publication dates for foreign press coverage, including Slator, are estimates based on the announcement date."
+    },
+    "funding": {
+      "total_raised_note": "Total disclosed funding per Phonic's official blog (2026-10-29). It is the sum of a $4M seed and a $27.5M Series A; Well Run tallies the same.",
+      "valuation_estimate": "$100M (est.)",
+      "latest_round": {
+        "note": "Led by First Round, with Lux Capital, Felicis, and Definition participating (per Phonic's blog). AgentLocker adds Essence VC as a participant. Valuation is undisclosed; $100M is an estimate assuming a typical Series A band. Angel investors include Arash Ferdowsi (Dropbox), Naval Ravikant (AngelList), Guillermo Rauch (Vercel), Gokul Rajaram, and others."
+      },
+      "funding_history": [
+        {
+          "note": "Led by Lux Capital. Angels: Erik Bernhardsson (Modal), Clement Delangue (Hugging Face), Amjad Masad (Replit), Qasar Younis (Applied Intuition), and others. Reported by TechCrunch on 2025-04-03; the round closing date was not disclosed."
+        },
+        {
+          "note": "Led by First Round. With participation from Lux Capital, Felicis, Definition, and Essence VC."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Figures unavailable because the company has not disclosed official market size. Targets demand for voice automation in global enterprise customer support, healthcare scheduling, recruiting interviews, and logistics phone operations.",
+      "market_trend": "The voice agent market is in its early stages of shifting from a cascaded STT·LLM·TTS architecture to a single speech-to-speech model. As OpenAI (GPT-Live-1), Google (Gemini 3.8 Live), and Amazon (Nova Sonic) launch native voice models, market standards are being set quickly.",
+      "growth_potential": "Independent voice models that combine production-ready latency and intelligence are still rare, putting early entrants in a position to preempt benchmark and customer-reference standards. The shift toward automating call centers and medical and recruiting voice work is a long-term growth driver.",
+      "risks": [
+        "OpenAI, Google, and Amazon are improving native voice models with massive capital, so benchmark leadership can be overturned at any time.",
+        "The voice agent market itself is at an early stage, so acquiring enterprise customers may take time.",
+        "In blind evaluations against humans, humans still win 60% of the time, leaving significant room to improve naturalness."
+      ],
+      "risk_mitigation": "Owns its training stack and a data-driven improvement loop based on production call data, and lowers purchase barriers with a single per-minute rate. Public references such as Ashby and Maven AGI can be leveraged to win new enterprise customers."
+    },
+    "related_links": [
+      {
+        "title": "Phonic official website"
+      },
+      {
+        "title": "Phonic-1 launch and Series A official blog"
+      },
+      {
+        "title": "About"
+      },
+      null,
+      null,
+      {
+        "title": "Well Run company profile"
+      }
+    ],
+    "editor_pick_comment": "Between cascaded voice stacks and big tech native models, Phonic took the No. 1 benchmark spot and closed a Series A with a single 'production-ready model.'"
+  },
+  "liner-2026": {
+    "tagline": "Source-based AI search & research platform",
+    "category": [
+      "AI Search",
+      "AI Agent",
+      "Productivity Tool"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO · Co-founder",
+        "background": "Majored in Computer Science at Yonsei University. In 2012, as a sophomore, he founded 'Aureum Planet'. In 2014, with KRW 40M, he moved to Silicon Valley, stayed at Airbnb, and developed Liner. Graduate of SW Maestro 4th cohort (2013). After launching the full service in 2015, pivoted to AI search.",
+        "notable_achievement": "Forbes '30 Under 30 Asia' (2018), Forbes '33 AI Founders to Watch in 2025' (2025), awarded the 2025 Republic of Korea Industrial Service Medal"
+      },
+      {
+        "role": "COO · Co-founder",
+        "background": "Majored in French Language & Literature at Yonsei University. Together with CEO Jinu Kim, founded the 'Insiders' startup club and co-founded Liner in 2015. Led early product development and global strategy."
+      }
+    ],
+    "team_highlights": "Approximately 60% of the total workforce are developers. SW Maestro alumni make up 10% of the development team. Team works across San Francisco and Seoul.",
+    "product": {
+      "summary": "Liner is a source-based AI search and research platform. It started as a web highlighter in 2015 and pivoted to AI search in 2023. When users ask questions, it searches the web and academic data to provide answers with sentence-level citations. It offers dedicated agents like 'Liner Scholar' for academic research, 'Liner Write' for business document writing, and 'Liner Finance' for investment research.",
+      "problem_statement": "Researchers and knowledge workers spend a lot of time finding reliable sources amid vast amounts of information. General-purpose AI chatbots like ChatGPT suffer from hallucinations and unverified information.",
+      "solution": "Liner uses 10 years of accumulated user highlighting data as a search ranking signal to prioritize the most trusted sources. Each sentence shows citation links and key excerpts, allowing users to immediately verify the factual accuracy of the answer. It uses a self-developed search-optimized lightweight language model (SLM) and a component-based search LLM to improve accuracy.",
+      "key_features": [
+        "Sentence-level source citations (link + quote + preview)",
+        "Scholar Mode: search based on a database of over 500 million academic articles",
+        "Deep Research: generates in-depth reports in an average of under 2 minutes",
+        "Fact-check: verifies the source of each sentence in the answer",
+        "Supports 4 languages (Korean, English, Chinese, Japanese)",
+        "Browser extension (highlights, notes)"
+      ],
+      "tech_stack_or_innovation": "Self-developed search/ranking algorithm and search-optimized SLM. 10 years of highlighting data from 14 million users used as search quality signals. Scores 93.5–95.3 on the OpenAI SimpleQA benchmark (top tier compared to competitors). Component-based architecture enables response times around 2 minutes (average 7x faster than ChatGPT, 4x faster than Perplexity).",
+      "target_customer": "College students, graduate students, researchers (primary); knowledge workers, enterprise users (secondary). Over 60% of paid subscribers belong to US universities/research institutions.",
+      "business_model": "B2C premium subscription (monthly/yearly plans) + B2B enterprise license (AX – AI Transformation). Sells enterprise search and enterprise intelligence products to corporate clients."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Most direct competitor. Ahead in brand recognition and UX in the AI search/citation market, but Liner differentiates with Scholar Mode and highlighter workflow. SimpleQA accuracy is slightly higher for Liner."
+        },
+        {
+          "comparison": "Similar price range and positioning. Liner has strengths in academic data and highlighting data; You.com leads in feature variety."
+        },
+        {
+          "comparison": "Offers basic search to free users. Liner has advantages in source transparency and access to academic materials."
+        },
+        {
+          "comparison": "Built into Google Search, free. Liner specializes in deep research and source verification."
+        }
+      ],
+      "key_differentiator": "Unique method of using 10 years of global user highlighting data as search ranking signals. This prioritizes 'information people deemed valuable', with over 500 million academic articles separately indexed. Top SimpleQA scores and deep research response time within 2 minutes.",
+      "moat": "1) 10 years of highlighting behavior data from 14 million users (non-reproducible learning asset), 2) 500M+ academic database, 3) Patents and know-how in search-optimized SLM and ranking algorithms, 4) Optimization experience for Korean+English+Chinese+Japanese search engines.",
+      "competitive_position_summary": "Second-tier player after Perplexity in the AI search market. Ranked #30 in SimilarWeb AI category globally (July 2026). The only Korean startup selected 4 consecutive times in a16z's 'Top 100 Generative AI Consumer Apps' web category. Secured loyal users in the academic/research niche and expanding into the B2B AX market."
+    },
+    "trending_reason": {
+      "summary": "The biggest catalyst is the KRW 50B Series C investment announced on August 25, 2026. LB Investment led the round, with existing investors Atinum Investment, CJ Investment, etc. participating, and new investors KDB Industrial Bank, Helios PE, KB Securities, Daishin Securities, and Stic Ventures joined. Cumulative investment reaches approximately KRW 94B.",
+      "catalysts": [
+        "2026-08-25: Announced KRW 50B Series C investment",
+        "2026-08-31: Revealed accuracy surpassing ChatGPT on OpenAI SimpleQA (Liner official blog)",
+        "2026: Signed search engine supply contract with Saudi national AI platform HUMAIN",
+        "2026: Entered a16z 'Top 100 Consumer AI Apps' for 4th consecutive time (only Korean startup)",
+        "2025: CEO selected for Forbes '33 AI Founders to Watch'"
+      ],
+      "media_mentions": [
+        {
+          "source": "Liner official press release",
+          "title": "Liner attracts KRW 50B Series C investment... Strengthening global AI position"
+        },
+        {
+          "source": "Yonhap News",
+          "title": "[AI Pick] Liner attracts KRW 50B investment... Expanding AI agent and AX business"
+        },
+        {
+          "source": "Chosun Biz",
+          "title": "Liner attracts KRW 50B Series C investment... Cumulative KRW 94B"
+        },
+        {
+          "source": "Maeil Business Newspaper (Pulse)"
+        },
+        {
+          "source": "ZDNet Korea",
+          "title": "Liner secures KRW 50B funding... Investment in R&D, infrastructure, talent"
+        },
+        {
+          "source": "Venture Square"
+        },
+        null,
+        {
+          "source": "Liner official blog",
+          "title": "'Accuracy surpassing ChatGPT' Liner tops AI search reliability"
+        },
+        {
+          "source": "Liner Newsroom"
+        },
+        {
+          "source": "Edaily",
+          "title": "Liner attracts KRW 50B Series C investment... Cumulative investment KRW 94B"
+        },
+        {
+          "source": "Digital Daily",
+          "title": "Liner attracts KRW 50B Series C investment... 'Strengthening AI search and agent capabilities'"
+        }
+      ],
+      "growth_metrics": "Over 14M users across approx. 220 countries and regions. Ranked 30th in SimilarWeb's global AI traffic (July 2026). Entered the web category of a16z's Top 100 Gen AI Consumer Apps for the fourth consecutive time. Over 60% of paying subscribers are in the U.S. Holds 500M+ academic data records. Valuation at Series C approx. KRW 300B (est.)."
+    },
+    "funding": {
+      "total_raised": "Approximately KRW 94B",
+      "total_raised_note": "Cumulative investment based on press release. Converted to USD approx. $68M (at 1,382 won/$). GlobalNewswire reported approx. $64.3M.",
+      "valuation_estimate": "Around KRW 300B (approx. $217M, est.)",
+      "latest_round": {
+        "amount": "KRW 50B",
+        "note": "Converted to USD approx. $36M. Announced August 25, 2026."
+      },
+      "funding_history": [
+        {
+          "amount": "Approximately KRW 800M",
+          "note": "Converted to USD approx. $0.64M (per GlobalNewswire).",
+          "lead_investor": "Undisclosed (angel investment)"
+        },
+        {
+          "amount": "Approximately KRW 4.2B",
+          "note": "Converted to USD approx. $3.2M. KB Investment, SL Investment, Capstone Partners participated."
+        },
+        {
+          "amount": "KRW 27B",
+          "note": "Converted to USD approx. $19.5M. Approximately 1 year 10 months after the previous round."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global AI search market $100B+ (2028 forecast, est.). SAM: AI-based research/productivity tools market approx. $15B. SOM: Based on B2C AI search subscriptions and B2B AX contracts, current annual revenue estimated at $10-30M.",
+      "market_trend": "The battleground in generative AI is shifting from LLM development to 'trustworthy AI search'. The AI search market pioneered by Perplexity is growing rapidly. Big tech like Google and OpenAI are also investing heavily in AI search. Enterprise AI transformation (AX) demand is exploding.",
+      "growth_potential": "Growth drivers: global user expansion in B2C (especially non-English markets) and entry into B2B AX market. The Saudi HUMAIN contract can serve as a reference for Middle East and public sector. With a target for KOSDAQ listing in 2027, the company is expected to focus on additional fundraising through IPO and achieving milestones.",
+      "risks": [
+        "Gap with competitors like Perplexity, Google, OpenAI with overwhelming funding and traffic",
+        "If AI search is absorbed as a basic feature by big tech, independent players' position weakens",
+        "B2B AX business is still in early stage, needs validation of revenue model",
+        "Legal and ethical risks of AI search, such as hallucinations and copyright issues"
+      ],
+      "risk_mitigation": "1) Differentiation through search quality moat based on 10 years of highlighting data, 2) Niche defense via academic/research specialization, 3) Revenue diversification through B2B references like Saudi national project, 4) Strengthening trust competitiveness by prioritizing source transparency."
+    },
+    "related_links": [
+      {
+        "title": "Liner official website"
+      },
+      {
+        "title": "Liner Series C press release (Korean)"
+      },
+      {
+        "title": "Liner Series C GlobalNewswire press release (English)"
+      },
+      {
+        "title": "Liner: From Highlighter to Search Giant (Story)"
+      },
+      {
+        "title": "Liner Deep Research feature comparison (vs ChatGPT vs Perplexity)"
+      },
+      {
+        "title": "Liner CEO interview: 'Innovating knowledge work with AI search and agents'"
+      },
+      {
+        "title": "Chosun Biz article: Liner attracts KRW 50B Series C investment"
+      },
+      {
+        "title": "Venture Square: From 14M Users to Saudi AX"
+      }
+    ],
+    "editor_pick_comment": "From a Yonsei student's highlighter app in 2012 to a global AI search platform raising KRW 50B in 14 years, the unique moat of 'user highlighting data' shines as a representative K-AI case."
+  }
+}

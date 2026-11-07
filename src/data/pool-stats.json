@@ -1,6 +1,113 @@
 {
   "days": [
     {
+      "date": "2026-11-08",
+      "cost_usd": 0.9006,
+      "budget_stops": 0,
+      "pool": 24,
+      "featured": [
+        "traversal-2026",
+        "fragment-2026",
+        "bionsight-bionsite-2026",
+        "muse-2026",
+        "namespace-labs-2026"
+      ],
+      "sectors": {
+        "health": {
+          "leads": 6,
+          "rejected": {
+            "country": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 38,
+          "adopted": 3
+        },
+        "robotics": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 40,
+          "adopted": 3
+        },
+        "mobility": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 37,
+          "adopted": 3
+        },
+        "climate": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 32,
+          "adopted": 3
+        },
+        "fintech": {
+          "leads": 7,
+          "rejected": {
+            "country": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 22,
+          "adopted": 3
+        },
+        "infra": {
+          "leads": 6,
+          "rejected": {
+            "country": 1,
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 11,
+          "adopted": 1
+        },
+        "enterprise": {
+          "leads": 7,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 69,
+          "adopted": 3
+        },
+        "consumer": {
+          "leads": 7,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 18,
+          "adopted": 2
+        },
+        "ai": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 2
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 60,
+          "adopted": 3
+        }
+      }
+    },
+    {
       "date": "2026-11-07",
       "cost_usd": 0.9109,
       "budget_stops": 0,

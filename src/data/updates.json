@@ -322,6 +322,19 @@
         "source_name": "PRNewswire",
         "found": "2026-11-07"
       }
+    ],
+    "legislate-2026": [
+      {
+        "date": "2026-10-13",
+        "kind": "shutdown",
+        "title_ko": "레지슬레이트 계약 빌더 서비스 종료",
+        "title_en": "Legislate Contracts Builder Service Ended",
+        "detail_ko": "2026년 10월 13일 기준, Legislate의 셀프서브 계약 빌더가 종료되었으며, 가격 페이지가 TextMine으로 리다이렉트된다. 레지슬레이트 사이트는 무료 법률 가이드로 전환되었다.",
+        "detail_en": "As of October 13, 2026, Legislate's self-serve contract builder has been discontinued; its pricing page redirects to TextMine. The Legislate site now offers free legal guides.",
+        "source_url": "https://startupperks.co/programs/legislate-legislate-contracts",
+        "source_name": "StartupPerks",
+        "found": "2026-11-08"
+      }
     ]
   },
   "checked": {
@@ -344,6 +357,8 @@
     "inari-agriculture-2026": "2026-11-06",
     "meshy-2026": "2026-11-06",
     "pika-2026": "2026-11-07",
-    "buildots-2026": "2026-11-07"
+    "buildots-2026": "2026-11-07",
+    "form-energy-2026": "2026-11-08",
+    "legislate-2026": "2026-11-08"
   }
 }
