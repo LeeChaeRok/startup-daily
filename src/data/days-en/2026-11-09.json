@@ -1,0 +1,2360 @@
+{
+  "vridion-2026": {
+    "tagline": "Redefining regional aviation with a 9-seat electric aircraft",
+    "category": [
+      "Electric aircraft",
+      "Regional aviation",
+      "Eco-friendly aviation"
+    ],
+    "headquarters": {
+      "country_ko": "Germany"
+    },
+    "founders": [
+      {
+        "background": "Master's in Aerospace Engineering (TU Delft), previously project manager for the E-Fan X hybrid-electric propulsion system at Airbus",
+        "notable_achievement": "Designed the first electric aircraft in 2007, experience with Airbus E-Fan X"
+      }
+    ],
+    "team_highlights": "75+ employees from 25 countries, with over 400 years of combined aerospace experience",
+    "product": {
+      "summary": "VÆRIDION is developing the 'Microliner', a 100% electric aircraft capable of carrying 9 passengers + 2 pilots. It targets a maximum range of 400 km, cruising speed of 190 KEAS/235 KTAS, maximum cargo capacity of 10 m³, and charging time under 40 minutes.",
+      "problem_statement": "Existing turboprop aircraft have high fuel and maintenance costs, making short-haul route operations increasingly difficult. In Europe, about 120 regional routes had been discontinued by 2026.",
+      "solution": "The Microliner targets an operating cost of less than €0.40/seat-km, offering both economic and environmental benefits over conventional aircraft. Designed along the EASA CS-23 certification path, it enables faster market entry.",
+      "key_features": [
+        "9 passengers + 2 pilots",
+        "Range: 400 km (IFR), 550 km (VFR, 4 passengers)",
+        "Maximum cargo capacity: 10 m³",
+        "Charging time: under 40 minutes",
+        "Zero CO₂, zero NOx, no contrails, reduced noise"
+      ],
+      "tech_stack_or_innovation": "Glider-inspired wing design, patented integrated modular battery, multi-engine single-propeller propulsion system",
+      "target_customer": "Regional airlines, charter operators, lessors, cargo carriers",
+      "business_model": "Aircraft sales (130 pre-orders, €730M+) and maintenance services"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Heart Aerospace is developing the ES-30 (30-seat), while VÆRIDION focuses on a 9-seat small aircraft"
+        },
+        {
+          "comparison": "Eviation Alice is a 9-seat electric aircraft, but development has been delayed; VÆRIDION has completed pre-certification agreements with EASA"
+        },
+        {
+          "comparison": "Beta focuses on cargo and eVTOL, while VÆRIDION specializes in conventional takeoff and landing regional aviation"
+        }
+      ],
+      "key_differentiator": "EASA CS-23 certification path, glider-based wing design maximizing energy efficiency, proven economics for short-haul routes",
+      "moat": "Patented integrated modular battery, pre-certification agreement with EASA, 130 pre-orders, technical expertise of founders from Airbus",
+      "competitive_position_summary": "One of the startups closest to EASA certification in the 9-seat electric aircraft segment"
+    },
+    "trending_reason": {
+      "summary": "On November 5, 2026, it attracted attention by simultaneously securing €30M in Series A2 funding co-led by SHIFT Invest and Invest-NL, and a €94.5M grant from the European Union Innovation Fund.",
+      "catalysts": [
+        "Total funding of €124M+ (Series A2 €30M + EU grant €94.5M)",
+        "130 pre-orders (€730M+) with ASL Group as launch customer",
+        "Opened production and testing facilities at Oberpfaffenhofen Airport",
+        "First flight test planned for 2027"
+      ],
+      "growth_metrics": "130 pre-orders, €730M+ contract value, 75+ employees"
+    },
+    "funding": {
+      "total_raised": "Approx. €60M",
+      "total_raised_note": "€30M Series A2 + approx. €30M previous funding (World Fund, Project A, Vsquared Ventures, etc.). EU Innovation Fund €94.5M grant is separate from equity. Total €60M+ equity + €94.5M grant = €154.5M+ / equity basis, excluding grant",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Co-led by SHIFT Invest and Invest-NL",
+        "notable_investors": [
+          null,
+          null,
+          null,
+          "Alexander Rittweger (founder of PAYBACK)"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Existing investors include World Fund, Project A, Vsquared Ventures",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Initial funding after founding in 2021",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Replacement market of 21,000+ small turboprop aircraft (average age 23 years) plus new regional route demand",
+      "market_trend": "Decline of European regional airline routes, stricter carbon emission regulations, maturation of electric aircraft technology, increasing demand for eco-friendly transportation",
+      "growth_potential": "Aiming for series production by 2030, potential to create new markets by reducing short-haul route operating costs",
+      "risks": [
+        "Risk of certification delays",
+        "Battery technology limitations (energy density, charging infrastructure)",
+        "Speed of competitors' technology development",
+        "Sustainability of financing"
+      ],
+      "risk_mitigation": "Completed pre-certification agreement with EASA, secured EU Innovation Fund and private investment, maximizes energy efficiency through glider-based design"
+    },
+    "related_links": [
+      {
+        "title": "VÆRIDION official press release (2026-11-05)"
+      },
+      {
+        "title": "SHIFT Invest press release"
+      },
+      {
+        "title": "Invest-NL press release"
+      },
+      {
+        "title": "World Fund portfolio page"
+      }
+    ],
+    "editor_pick_comment": "A German electric aviation startup eyeing Lilium's vacant spot, it secured 130 pre-orders while reducing private investment risk with EU grants."
+  },
+  "hertha-metals-2026": {
+    "tagline": "A startup that simplifies and decarbonizes steel production into a single process",
+    "category": [
+      "Steel Manufacturing",
+      "High-Purity Iron"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "PhD in Mechanical Engineering and Materials Science from MIT, former CEO of hydrogen startup Alchemr",
+        "notable_achievement": "Forbes 30 Under 30, MIT Energy Initiative Fellow, Breakthrough Energy Innovator Fellow, World Economic Forum Technology Pioneer, featured in Bill Gates' Netflix series 'What's Next?'"
+      }
+    ],
+    "team_highlights": "Founder from MIT, team with experience in steel industry and hydrogen sector",
+    "product": {
+      "summary": "The Flex-HERS process converts iron ore directly into high-purity iron and steel in a single reactor, reducing costs by 25% and carbon emissions by 50–98% compared to traditional methods",
+      "problem_statement": "The U.S. relies almost entirely on imports (94% from China) for the high-purity iron needed to manufacture rare-earth permanent magnets (NdFeB), leading to supply chain instability. Additionally, traditional ironmaking processes are heavily coal-dependent and account for 7% of global CO₂ emissions.",
+      "solution": "With its proprietary Flex-HERS process, it uses a single continuous reactor that employs natural gas or hydrogen as a reducing agent to produce high-purity iron and steel directly from iron ore. The outputs are high-purity iron (99.95% purity) for magnets and standard steel.",
+      "key_features": [
+        "Single process (traditional methods involve multiple stages like blast furnace → converter)",
+        "Can process all grades of iron ore and waste oxides",
+        "50% reduction in carbon emissions when using natural gas, 98% when using hydrogen",
+        "25% reduction in production costs compared to conventional methods"
+      ],
+      "tech_stack_or_innovation": "Flex-HERS (Flexible fuel Hydrogen Electric Reduction Smelting) – combines electric arc furnace technology with natural gas/hydrogen reduction in a single reactor design",
+      "target_customer": "U.S. rare-earth magnet manufacturers, companies in the magnet supply chain for defense, aerospace, electric vehicles, wind power, data centers, and robotics, and the Department of Defense (DFARS regulations)",
+      "business_model": "Sale of high-purity iron and steel products (B2B). Long-term goal is to build a mill with a capacity of 500,000 tons per year."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Boston Metal produces steel via molten oxide electrolysis (MOE), which does not require hydrogen. Hertha can switch from natural gas to hydrogen and has already achieved 99.95% purity. Boston Metal has not yet started commercial-scale operations."
+        },
+        {
+          "name": "H2 Green Steel (Sweden)",
+          "comparison": "H2 Green Steel produces green steel using hydrogen-based DRI, focused on Europe. Hertha focuses on domestic self-sufficiency in the U.S. and high-purity iron for rare-earth magnets."
+        }
+      ],
+      "key_differentiator": "Can use both natural gas and hydrogen in a single process, low-cost high-purity iron production, already achieved 99.95% purity and currently undergoing qualification certification, equity investment from the U.S. government and support from the Department of Defense",
+      "moat": "Patented Flex-HERS process, strategic investment from the U.S. government, alignment with rare-earth magnet localization regulations (DFARS), scale-up experience (Pi100 pilot 360 tons/yr → Chalyx 10,000 tons/yr)",
+      "competitive_position_summary": "As the only U.S. producer of high-purity iron for rare-earth magnets, it has secured supply chain exclusivity and possesses a differentiated technology that lowers both cost and carbon emissions."
+    },
+    "trending_reason": {
+      "summary": "In September 2026, it raised a $133.65 million Series A (including $65 million from the U.S. government) and simultaneously broke ground on the Chalyx commercial plant. Its strategic importance has surged in line with U.S. rare-earth magnet localization efforts.",
+      "catalysts": [
+        "2026-09-29: $133.65M Series A announced (reported by WSJ, Business Wire)",
+        "2026-10-12: Chalyx plant groundbreaking (MINING.COM)",
+        "Increasing demand for magnet localization under U.S. Department of Defense DFARS regulations",
+        "Founder Laureen Meroueh featured on the cover of MIT Technology Review's September 2026 issue"
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Series A $133.65M + Seed $20M (based on Khosla Ventures partner statement, prior to July 2026)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Includes a $65 million equity investment from the U.S. government through the IBAS program"
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Initial funding, estimated at $20M (based on Khosla partner interview)",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "market_trend": "Restructuring of U.S. rare-earth permanent magnet production and supply chains, strengthening of DFARS self-enforcement regulations, growing demand for clean steel, and policies to reduce reliance on China",
+      "growth_potential": "Chalyx commercial operations expected by end of 2027, with high-purity iron production starting in early 2028, targeting 500,000 tons per year by 2030. Although initial market share is small compared to the U.S. steel market (80 million tons annually), its strategic importance is significant.",
+      "risks": [
+        "Lack of commercial-scale production experience (Chalyx's 10,000 tons/year is the first commercial plant)",
+        "Potential for scale-up costs and schedule delays",
+        "Full decarbonization depends on hydrogen becoming cheaper",
+        "Price competition from Chinese alternatives"
+      ],
+      "risk_mitigation": "Strategic investment from the U.S. government and Department of Defense secures initial funding, domestic supply chain regulations (DFARS) guarantee demand, and 99.95% purity already achieved with customer certification in progress"
+    },
+    "related_links": [
+      {
+        "title": "Hertha Metals Official Website"
+      },
+      {
+        "title": "Pillsbury Law Advisory Disclosure"
+      },
+      {
+        "title": "MINING.COM Article (2026-10-12)"
+      }
+    ],
+    "editor_pick_comment": "A steel startup that the DoD invested $65 million in equity, completing the final puzzle of rare-earth magnet localization."
+  },
+  "brava-security-2026": {
+    "tagline": "Exposing blind spots in SOC detection with virtual evidence",
+    "category": [
+      "Cybersecurity",
+      "AI Security Operations",
+      "Threat Detection Validation"
+    ],
+    "headquarters": {
+      "country_ko": "Israel"
+    },
+    "founders": [
+      {
+        "role": "CEO and Co-founder",
+        "background": "A graduate of the Israel Defense Forces' elite Talpiot intelligence unit. Spent 10 years in threat research at Unit 8200, then served as Product Management Lead for Microsoft Defender."
+      },
+      {
+        "role": "CTO and Co-founder",
+        "background": "Led high-speed engineering organizations (VP R&D) for 14 years. Directed a joint DARPA-Israel AI research program and has experience building autonomous AI systems and enterprise AI security."
+      }
+    ],
+    "team_highlights": "Co-founders from Israel's elite Talpiot and Unit 8200 intelligence units. Approximately 20 employees, with R&D in Tel Aviv and commercial organization in the US.",
+    "product": {
+      "summary": "Brava models attacker behavior to generate precise telemetry (virtual evidence) that a real attack would leave in a specific environment. Using this 'Ground Truth,' it is an AI-driven security operations platform that proactively verifies whether existing SIEM detection rules work, checks data pipeline integrity, and automates fixes.",
+      "problem_statement": "Security teams cannot be sure their current defenses will detect a specific attack. Due to missing logs, pipeline outages, or malfunctioning detection rules, they are forced to rely on 'hope.' There is no way to know about attacks that even AI agents cannot detect.",
+      "solution": "A multi-agent AI system models attacker behavior and generates environment-specific telemetry. It streams this virtual evidence into the SIEM to prove whether detection rules fail silently, log sources are down, or schemas have changed. All findings cite actual raw events.",
+      "key_features": [
+        "Detection Engineering: Tests each detection rule against the corresponding attack and automatically rewrites it in the SIEM query language, then verifies operation.",
+        "AI Investigation Agent 'Aquarium': Allows unified investigation of SIEM, EDR, and cloud audit logs using natural language questions, generating citable reports.",
+        "Data Pipeline Optimization: Sends only necessary events to the SIEM and moves unnecessary logs to low-cost storage, reducing SIEM costs by 65-85%."
+      ],
+      "tech_stack_or_innovation": "A multi-agent AI system that synthesizes accurate digital evidence (telemetry) through attacker behavior modeling without executing attacks. Integrates with over 70 sources and destinations.",
+      "target_customer": "Fortune 100 companies and large enterprises (retail, energy, hospitality, finance, government). SOC teams with existing SIEM deployments.",
+      "business_model": "B2B SaaS. Operates as a layer on top of existing security stacks; no additional hardware replacement required."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Centered on BAS (Breach and Attack Simulation) that executes predefined attack scenarios. Brava generates virtual telemetry to continuously validate the fundamental functionality of data pipelines and detection rules."
+        },
+        {
+          "comparison": "Provides AI-based investigation and SOAR capabilities but leans toward 'post-incident analysis.' Brava is a 'pre-validation' layer that proves the detection system itself before an attack occurs."
+        }
+      ],
+      "key_differentiator": "The only platform that generates environment-specific, accurate evidence (Ground Truth) without running actual attacks, mathematically proving the detection capability and data integrity of existing security stacks.",
+      "moat": "Attacker behavior modeling and environment-specific telemetry synthesis technology; 10-15 minute onboarding; early market fit demonstrated with Fortune 100 customers.",
+      "competitive_position_summary": "Creates a new category addressing the core SOC problem (distrust in the detection system). Positioned as a 'validation layer' that protects existing investments without SIEM replacement, maximizing security effectiveness."
+    },
+    "trending_reason": {
+      "summary": "Officially exited stealth mode in early November 2026 with a $15M seed funding round. Led by F2 Venture Capital and Pitango VC, with angel investments from senior executives at Anthropic, Microsoft, and Check Point, establishing industry credibility.",
+      "catalysts": [
+        "2026-11-04: Exit from stealth mode and announcement of $15M seed funding (covered by Axios, SecurityWeek, Calcalist, Geektime)",
+        "Founders from Talpiot/Unit 8200 and participation from global big-tech investors",
+        "Secured PoCs and references in retail, energy, and hospitality sectors among Fortune 100 companies"
+      ],
+      "growth_metrics": "Processes 2.4 trillion events daily in customer environments. Reduces SIEM costs by 65-85%. Provides initial visibility within 10-15 minutes of onboarding."
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Co-led by F2 Venture Capital and Pitango VC. Angel investors include executives from Anthropic, Microsoft, and Check Point. The company has signaled potential for a Series A within 12 months.",
+        "notable_investors": [
+          null,
+          null,
+          "Anthropic executive",
+          "Microsoft executive",
+          "Check Point executive"
+        ]
+      },
+      "funding_history": [
+        {
+          "note": "Total amount raised during stealth period. Disclosed on 2026-11-04 alongside the news."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global information security market (approx. $200B in 2025). SAM: SOC/SIEM optimization and validation market (approx. $5B). SOM: Targeting Fortune 100 accounts and direct enterprise market penetration.",
+      "market_trend": "As AI agent adoption in SOCs accelerates, ensuring the reliability of 'detection data (Ground Truth)' that underpins AI decisions has become a key challenge. Brava presents this framework to the market.",
+      "growth_potential": "Lightweight architecture that can be adopted without SIEM replacement; large anchor customer references; plan to raise Series A within 12 months. Aligns precisely with demand for advanced SOC capabilities in domestic and Asia-Pacific markets.",
+      "risks": [
+        "Competition from major SIEM vendors (Palo Alto, Splunk) developing similar native features",
+        "Integration complexity in legacy environments",
+        "Limited sales and marketing resources as an early-stage startup for global enterprise reach"
+      ],
+      "risk_mitigation": "Layers on existing stacks; 10-15 minute onboarding minimizes PoC burden. Enterprise market entry strategy leverages founder and investor networks from big tech."
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "Brava Official Launch Announcement"
+      },
+      {
+        "title": "F2 VC Investment Rationale"
+      },
+      {
+        "title": "SecurityWeek Coverage"
+      },
+      {
+        "title": "Axios Pro Coverage"
+      },
+      {
+        "title": "Calcalist Coverage"
+      },
+      {
+        "title": "Geektime Coverage"
+      }
+    ],
+    "editor_pick_comment": "Instead of looking for vulnerabilities or breaches, it asks a more fundamental question: 'Is the security equipment itself functioning correctly?' This twist is compelling."
+  },
+  "enact-intelligence-2026": {
+    "tagline": "A nervous system platform that gives robots muscle force sensing",
+    "category": [
+      "Robot sensing",
+      "Industrial automation"
+    ],
+    "headquarters": {
+      "country_ko": "Switzerland"
+    },
+    "founders": [
+      {
+        "background": "Former NEO humanoid software lead at 1X Technologies, ex-Physical Intelligence. Master's research at ETH Zurich Robotics Lab (Prof. Marco Hutter) and Caltech AMBER Lab.",
+        "notable_achievement": "Lead of 1X NEO humanoid control system"
+      }
+    ],
+    "team_highlights": "Team of 12, includes engineers from DeepMind, Amazon Robotics, and defense company Helsing.",
+    "product": {
+      "summary": "A robot nervous system using proprioception, detecting force directly inside the motor. Without separate tactile sensors, it measures force and contact via the actuator, enabling precise object manipulation.",
+      "problem_statement": "Existing robots rely heavily on camera-based vision, which lacks reliability in precision assembly of various materials (e.g., glass, metal) or variable tasks. Separate tactile sensors are expensive and lack durability, unsuitable for factory environments.",
+      "solution": "Builds an 'artificial nervous system' that collects force data via back EMF inside the robot's actuator (motor). Enables force and contact detection without separate sensors, and provides a foundation model and hardware reusable across various robot form factors (arms, humanoids, etc.).",
+      "key_features": [
+        "Actuator-based force and contact sensing (no separate sensors needed)",
+        "Full-body kinesthetic sensing",
+        "Hardware-independent AI foundation model (general-purpose robot control)",
+        "In-house actuator and control chip design"
+      ],
+      "tech_stack_or_innovation": "Force sensing technology via back EMF measurement embedded in robot actuators, mimicking how human muscles sense tension.",
+      "target_customer": "Large European manufacturers, infrastructure, logistics, and food processing companies (those needing automation for manual-heavy, variable tasks)",
+      "business_model": "Vertically integrated Apple-style model supplying robot hardware (actuator + platform) and AI software (foundation model). Structured data collection via deployments to advance the model."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Vision-centric approach; Enact differentiates with force sensing as core"
+        },
+        {
+          "comparison": "General-purpose robot platforms lack Enact's force-based foundation model"
+        },
+        {
+          "comparison": "Focuses on manipulation tasks; Enact delivers hardware-level sensing innovation"
+        }
+      ],
+      "key_differentiator": "The only approach using proprioception (force sensing inside actuators) as the primary input for AI models, not vision. No separate tactile sensors needed, offering durability and cost advantages.",
+      "moat": "Proprietary data collection pipeline combining in-house actuator hardware and force sensing data. Third-party hardware cannot obtain similar data.",
+      "competitive_position_summary": "Leading startup in robot sensing. Still early stage, but its strong investors and the founder's experience from 1X lend technical credibility."
+    },
+    "trending_reason": {
+      "summary": "Founded by ex-1X and Physical Intelligence alumni, Enact proposes a novel back-EMF-based approach to solve robot tactile challenges, attracting investment from AI luminaries Yann LeCun and Mistral CEO Arthur Mensch. Records Switzerland's largest-ever pre-seed round ($30M).",
+      "catalysts": [
+        "Angel investment from prominent AI researchers Yann LeCun, Arthur Mensch, and Thomas Wolf (Hugging Face)",
+        "Record largest pre-seed round in Switzerland ($30M)",
+        "Competitive founding team from 1X NEO humanoid and Physical Intelligence"
+      ]
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Largest pre-seed/seed round in Switzerland. Media calls it pre-seed, PitchBook classifies as Seed."
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "Target market is the manual variable-task automation segment (estimated 40-50%) of the global industrial robot market (approx. $60B in 2026).",
+      "market_trend": "Surge in investment in humanoid robots and AI-based general manipulation technologies (e.g., ARIA's £52M robot dexterity project). Vision is commoditized, but tactile and force sensing remains lacking.",
+      "growth_potential": "Growing demand for force sensing with recent launches like 1X's haptic hand and Physical Intelligence's robot model advances. Enact could grow quickly if its hardware-software integration yields a data collection advantage. Plans to expand team 5x by end of 2027.",
+      "risks": [
+        "Hardware mass production and durability yet unverified (12-person team, very early stage)",
+        "Difficulty maintaining differentiation against similar technologies from incumbents (Google, Amazon Robotics, etc.)",
+        "Smaller pool of robot hardware talent in Europe compared to the US"
+      ],
+      "risk_mitigation": "Controls supply chain through in-house actuator design, pursuing early pilot contracts with large European companies, leveraging Zurich's robotics ecosystem (e.g., Gravis Robotics)."
+    },
+    "editor_pick_comment": "A robot nervous system born in Switzerland: unlike conventional vision-dependent robots, this approach where motors sense force themselves has the potential to shift the tactile paradigm of robotics."
+  },
+  "regcell-2026": {
+    "tagline": "Innovating autoimmune treatment through epigenetic Treg reprogramming",
+    "category": [
+      "Immunotherapy",
+      "Cell therapy",
+      "Autoimmune diseases"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "role": "Scientific founder, co-founder",
+        "background": "Professor, Immunology Frontier Research Center, Osaka University",
+        "notable_achievement": "2025 Nobel Prize in Physiology or Medicine (discovery of regulatory T cells)"
+      }
+    ],
+    "team_highlights": "CEO Michael V. McCullar (Ph.D., MBA) previously served as COO of Tolero Pharmaceuticals and SVP of Astex Pharmaceuticals. Scientific founder Professor Shimon Sakaguchi is a 2025 Nobel laureate.",
+    "product": {
+      "summary": "A platform that converts pathogenic T cells into stable, functional regulatory T cells (S/F-iTreg) through epigenetic reprogramming, restoring fundamental immune tolerance in autoimmune diseases.",
+      "problem_statement": "Existing autoimmune treatments broadly suppress the immune system, leading to increased infection risk, cardiotoxicity, and other side effects, and often fail to achieve long-term remission.",
+      "solution": "Patient's own disease-causing T cells are reprogrammed ex vivo to become antigen-specific regulatory T cells (Tregs), selectively suppressing only the autoimmune response while preserving normal immune function.",
+      "key_features": [
+        "Restoration of antigen-specific immune tolerance",
+        "Epigenetic reprogramming via FOXP3 expression induction",
+        "Generation of stable and functional S/F-iTreg",
+        "Expected reduction in side effects compared to conventional immunosuppressants"
+      ],
+      "tech_stack_or_innovation": "FOXP3 induction and epigenetic stabilization technology based on the Treg discovery by Nobel laureate Shimon Sakaguchi.",
+      "target_customer": "Patients with various autoimmune diseases including systemic lupus erythematosus, rheumatoid arthritis, and multiple sclerosis. Initial clinical target is autoimmune hepatitis.",
+      "business_model": "A drug development company that aims to license or enter co-development agreements with large pharmaceutical companies based on clinical results (est.)."
+    },
+    "competitive_landscape": {
+      "key_differentiator": "Direct reprogramming of patient-derived pathogenic T cells preserves the native TCR repertoire, enabling simultaneous targeting of multiple autoantigens. Safety advantage from an epigenetic approach rather than gene editing.",
+      "moat": "Core technology patents based on Prof. Sakaguchi's Nobel Prize-winning discovery and technology leadership driven by large-scale non-dilutive funding from AMED.",
+      "competitive_position_summary": "RegCell pursues a unique epigenetic reprogramming strategy among Treg cell therapy approaches. If early clinical proof of concept is successful, it is expected to secure a strong position in the next-generation autoimmune disease treatment market."
+    },
+    "trending_reason": {
+      "summary": "Based on the 2025 Nobel Prize-winning technology, the company raised a $66M Series A funding round and additional AMED grants in September 2026, accelerating the development of cell therapies for autoimmune diseases.",
+      "catalysts": [
+        "2025 Nobel Prize in Physiology or Medicine (Prof. Sakaguchi)",
+        "$66M investment in September 2026 (Series A $44M + AMED grant $22M)",
+        "First IND submission planned"
+      ],
+      "growth_metrics": "Still pre-clinical, no revenue. Growth indicated indirectly by investment scale.",
+      "media_mentions": [
+        {
+          "source": "RegCell press release"
+        },
+        null,
+        {
+          "source": "OUVC blog"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Series A ($44M, 2026) + 2 AMED grants ($37.3M in 2024, $22M in 2026). USD amounts based on press releases.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Series A equity $44M + AMED non-dilutive grant $22M"
+      },
+      "funding_history": [
+        {
+          "note": "First AMED grant (for autoimmune hepatitis clinical development, non-dilutive)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Specific figures not confirmed. The autoimmune treatment market is estimated to be tens of billions USD annually.",
+      "market_trend": "Growing attempts to extend cell therapy (CAR-T, Treg) to autoimmune diseases; active clinical trials in 2025-2026.",
+      "growth_potential": "If efficacy is proven clinically, it could replace existing immunosuppressants, with potential premium pricing for rare, intractable diseases.",
+      "risks": [
+        "Pre-clinical stage; efficacy and safety not yet proven",
+        "Manufacturing cost and scale-up challenges for personalized cell therapy",
+        "Need to maintain advantage over various competing Treg technologies"
+      ],
+      "risk_mitigation": "Epigenetic approach may pose fewer safety concerns than gene editing; government support via AMED and academic collaborations diversify technical risk."
+    },
+    "related_links": [
+      {
+        "title": "Official website"
+      },
+      {
+        "title": "Funding press release"
+      },
+      {
+        "title": "Japan.co.jp in-depth report"
+      }
+    ],
+    "editor_pick_comment": "RegCell, which has platformized a Nobel Prize technology, has attracted over KRW 100B in investment and is approaching clinical entry."
+  },
+  "clinics-on-cloud-2026": {
+    "tagline": "AI health ATM delivers preventive screenings in 10 minutes",
+    "category": [
+      "Digital Health",
+      "Preventive Medicine",
+      "Telemedicine"
+    ],
+    "headquarters": {
+      "country_ko": "India"
+    },
+    "founders": [
+      {
+        "role": "Founder & CEO",
+        "background": "Experience with Indian government public health projects; engineer by background",
+        "notable_achievement": "Grew with 8 years of self-funding; supplied health ATMs to Indian military, police, and government agencies"
+      },
+      {
+        "role": "Co-founder"
+      }
+    ],
+    "product": {
+      "summary": "AI-based health ATM (health kiosk) and mobile/fixed micro-clinic solutions that measure 65+ clinical parameters in 10 minutes",
+      "problem_statement": "In developing countries, rural areas, military bases, and corporate sites, rapid preventive screening and doctor consultation without visiting hospitals or labs is difficult",
+      "solution": "Integrates medical devices, AI analysis, and telemedicine into compact kiosks, box clinics, and mobile units, enabling 10-minute checkups and prescriptions anywhere",
+      "key_features": [
+        "Measures 65+ clinical parameters (ECG, heart sounds, vital signs, etc.)",
+        "Real-time AI-based risk indicators and health scores",
+        "Voice guidance and multilingual support for non-experts and first-time users",
+        "Provides patient context to doctors within 15 seconds; AI-assisted consultation",
+        "Works offline; sends results via WhatsApp and email"
+      ],
+      "tech_stack_or_innovation": "Proprietary AI analysis engine, integration of connected medical devices, offline support",
+      "target_customer": "Hospitals, government/public agencies, corporate employers (workplace health screenings), military and police, CSR/NGOs, pharmacies, apartment complexes, insurers",
+      "business_model": "Kiosk/unit sales or lease + maintenance & consumables + teleconsultation fees"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Pharmeasy (health ATM-like service)",
+          "comparison": "Deploys kiosks based on pharmacy and diagnostic networks in India, but Clinics On Cloud is more comprehensive in integrating AI analysis and telemedicine"
+        },
+        {
+          "name": "Qure.ai (AI imaging diagnostics)",
+          "comparison": "Specializes in imaging AI; Clinics On Cloud focuses on integrated preventive screenings including various biosignals and medical history"
+        },
+        {
+          "name": "Thyrocare (screening packages)",
+          "comparison": "Traditional lab-based; Clinics On Cloud focuses on distributed, instant screenings"
+        }
+      ],
+      "key_differentiator": "65+ parameters, 10 minutes, direct doctor connection, offline capability, proven in military, government, corporate sites (3,500+ installations, 12M+ screenings)",
+      "moat": "8 years of extensive field experience built on self-funding (Indian Ministry of Defence, BSF, etc.), presence in 8 countries, global expansion infrastructure",
+      "competitive_position_summary": "Unique position as an alternative to physical clinics in low-cost, high-speed preventive screenings; differentiated by combining AI and telemedicine"
+    },
+    "trending_reason": {
+      "summary": "In November 2026, raised $12.5M Series A led by Dubai-based Model42 (Enlightened Minds Investments); investor interest centers on the vision of building a global micro-clinic economic infrastructure",
+      "catalysts": [
+        "Surge in preventive and distributed medicine demand post-COVID-19",
+        "Indian government's digital health mission support",
+        "Announced global expansion to UAE, Africa, Southeast Asia, and the US"
+      ],
+      "growth_metrics": "3,500+ devices installed, 12M+ health screenings performed, expanded to 8 countries (as of October 2026)"
+    },
+    "funding": {
+      "total_raised_note": "Only the Series A $12.5M is confirmed; since it was bootstrapped for 8 years, it's estimated there were no previous rounds",
+      "valuation_estimate": "$71.4M (per Dealroom)",
+      "latest_round": {
+        "note": "Multiple sources like Entrackr and Entrepreneur India report $12.5M; some sources say $14.3M (likely due to exchange rate differences)",
+        "lead_investor": "Model42 (co-founded by Enlightened Minds Investments, Timur Kudratov, Dr. Aida Sheikhaliyeva, Dr. Raees Tonse)"
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global preventive health screening market (est. approx. $200B+ in 2026); SAM: Distributed screening solutions in India, Middle East, Africa, Southeast Asia ($10B+); SOM: $500M target within 5 years from current 8-country, 3,500+ base",
+      "market_trend": "Increasing government and corporate investment in telemedicine, AI diagnostics, and distributed healthcare infrastructure; India's Ayushman Bharat digital mission; health tourism and public health strengthening in UAE and Africa",
+      "growth_potential": "After 8 years of self-funded growth, Series A accelerates global expansion; the AI+telemedicine+kiosk model can scale at 1/10th the cost of traditional clinics",
+      "risks": [
+        "Regulatory approval risks (medical devices, telemedicine) in India and abroad",
+        "Pushback from existing diagnostic labs and hospitals; intensifying competition",
+        "Equipment maintenance and accuracy management in offline environments"
+      ],
+      "risk_mitigation": "Collaborates with certified device manufacturers (not in-house manufacturing), ensures offline operation, secures stable demand through long-term contracts with governments, military, and corporations"
+    },
+    "related_links": [
+      {
+        "title": "Clinics On Cloud Official Website"
+      },
+      {
+        "title": "8th Anniversary Blog Post (October 7, 2026)"
+      }
+    ],
+    "editor_pick_comment": "The 'health ATM' proven in Indian defense and government sites has attracted its first external investment after 8 years of self-funded growth, marking a watershed moment for leapfrogging into global micro-clinic infrastructure."
+  },
+  "gutgutgoose-2026": {
+    "tagline": "A microbiome startup creating personalized probiotics",
+    "category": [
+      "Microbiome",
+      "Digital Health",
+      "Personalized Nutrition"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "From Griffith University. Participated in Y Combinator S26.",
+        "notable_achievement": "Entered university at age 14, Queensland's youngest math olympiad champion"
+      },
+      {
+        "background": "From University of Southern Queensland. Participated in Y Combinator S26.",
+        "notable_achievement": "Co-built the model, oversees operations"
+      }
+    ],
+    "team_highlights": "Beyond the two co-founders, additional staff are not disclosed.",
+    "product": {
+      "summary": "Sequences customers' gut microbiomes and analyzes them with AI to manufacture and deliver personalized probiotics via subscription.",
+      "problem_statement": "Conventional probiotics use one-size-fits-all formulas, resulting in gut colonization rates below 5%, making it hard to see effects.",
+      "solution": "Uses shotgun metagenomic sequencing to analyze over 300 bacterial species in the gut, predicts colonizing strains with MICOM and AGORA2 metabolic models, prepares custom capsules, and re-validates after 90 days.",
+      "key_features": [
+        "At-home collection kit for sample acquisition",
+        "Shotgun metagenomic sequencing (20M reads)",
+        "Utilizes over 7,000 metabolic reconstructions based on MICOM and AGORA2",
+        "90-day retest to confirm colonization rate and adjust formula",
+        "180-day money-back guarantee"
+      ],
+      "tech_stack_or_innovation": "Hybrid machine learning and metabolic model based on MetaPhlan, MICOM, AGORA2.",
+      "target_customer": "Consumers disappointed with existing probiotics due to IBS, bloating, indigestion, weight management, GLP-1 side effects, etc.",
+      "business_model": "Monthly subscription model. Starter (USD $93/mo, 4 strains) / Complete (USD $183/mo, 12 strains). Prepaid discounts of $200/month available (ending September 1, 2026)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Flore (formerly Sun Genomics)",
+          "comparison": "Shotgun metagenomic-based personalized probiotics. $658.50 for 6 months, $297 for 3 months. Over 18,000 customers. No RCT published."
+        },
+        {
+          "comparison": "Bacterial RNA sequencing-based personalized supplements. $837–$1,447 annually. No RCT published."
+        },
+        {
+          "comparison": "Low-cost 16S sequencing, recommends off-the-shelf blends instead of custom manufacturing."
+        },
+        {
+          "comparison": "Standard probiotic SKU matching after gut test."
+        }
+      ],
+      "key_differentiator": "Provides a 'validation loop' by retesting after 90 days to check actual colonization and adjust the formula.",
+      "moat": "Claims prediction accuracy of 78–85% (self-reported, peer-reviewed data) vs. <5% for existing products. Long-term potential for early disease diagnosis through accumulation of gut intervention datasets.",
+      "competitive_position_summary": "No RCT data yet, so scientific validation is lacking, but personalized colonization validation is unique. Aims for more granular personalization than competitors."
+    },
+    "trending_reason": {
+      "summary": "Gaining attention due to rapid customer growth, an 800-person waitlist, and potential for further investment after YC S26 Demo Day.",
+      "catalysts": [
+        "Joined Y Combinator Summer 2026 batch",
+        "Acquired over 100 customers within days of product launch in July 2026",
+        "Waitlist of 800–2,700 by mid-September, daily double-digit growth rate"
+      ],
+      "growth_metrics": "As of September 2026: 100+ paying customers, waitlist of 2,700 (est.), daily double-digit growth rate."
+    },
+    "funding": {
+      "total_raised_note": "YC S26 standard terms: $125,000 (7% equity) + $375,000 (grant SAFE).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "YC S26 standard terms"
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "LuminaX HealthTech Accelerator (Australia)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global probiotics market estimated at approx. $70B in 2026; the personalized segment is early-stage but growing rapidly.",
+      "market_trend": "Growing demand for personalized health solutions based on individual genomes and microbiomes. Rising interest in gut health management due to the spread of GLP-1 drugs.",
+      "growth_potential": "As the loop based on validated colonization data accumulates, product accuracy and customer loyalty improve, with potential to expand into B2B data licensing.",
+      "risks": [
+        "Lack of RCT and independent validation could spark scientific credibility concerns",
+        "No clinical trial registration targeting patient groups",
+        "Higher price than competitors like Flore and Viome ($183–$400/month)",
+        "Production capacity and computing power bottlenecks"
+      ],
+      "risk_mitigation": "180-day money-back guarantee, objective effect verification via 90-day retest, and plans to build long-term clinical evidence by securing large cohort data."
+    },
+    "related_links": [
+      null,
+      null,
+      {
+        "title": "GutGutGoose Official Site"
+      },
+      {
+        "title": "UniSQ Press Release"
+      }
+    ],
+    "editor_pick_comment": "The personalized probiotic loop validating colonization via 90-day retest is novel, but the absence of an RCT is a hurdle for market expansion."
+  },
+  "rodeo-robotics-2026": {
+    "tagline": "Vehicle fleet maintenance automation robot",
+    "category": [
+      "Robot",
+      "Automation",
+      "Fleet maintenance"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Stanford CS, Google PM, Applied Intuition PM (4 years)"
+      },
+      {
+        "background": "Applied Intuition Technical Lead and Software Engineer (neural network simulation)"
+      }
+    ],
+    "team_highlights": "YC F26 batch, both founders from Applied Intuition with autonomous driving and robotics engineering experience",
+    "product": {
+      "summary": "In centralized vehicle fleets, robot technicians automatically perform routine inspections and simple maintenance (oil, tires, battery, electronics, etc.). Complex tasks are escalated to human technicians.",
+      "problem_statement": "Technician shortage causes delays in fleet vehicle maintenance and reduced availability",
+      "solution": "Robots handle repetitive inspection and maintenance, while humans focus on exception handling and advanced diagnostics",
+      "key_features": [
+        "Automation of maintenance procedures (inspect-diagnose-service-verify)",
+        "Bidirectional integration with existing fleet management software (FMS)",
+        "Robot manipulator performs oil, coolant, tire pressure/wear, battery voltage, fault code scanning, etc.",
+        "Remote supervision and approval system for human technicians"
+      ],
+      "tech_stack_or_innovation": "Robot arm + machine vision + AI diagnostic engine + remote operation and learning system (using human demonstration data)",
+      "target_customer": "Fleet operators running central maintenance facilities: rental car, delivery, trucking, public transit, municipal, waste management, field service, etc.",
+      "business_model": "Equipment sales or service subscription (currently undisclosed, estimated)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "AI-based vehicle inspection system (undercarriage, tires, etc.) but does not perform physical maintenance tasks"
+        },
+        {
+          "comparison": "Automatic alignment and tire condition inspection, no physical work"
+        },
+        {
+          "comparison": "Dedicated tire replacement robot system, ~$250K. Rodeo covers a range of maintenance tasks."
+        },
+        {
+          "comparison": "RoboTaxi-specific automated charging/cleaning/maintenance station, 30-minute cycle, $10M investment. Rodeo targets general fleets."
+        }
+      ],
+      "key_differentiator": "First to perform actual physical maintenance (oil, tires, battery, etc.) with a single robot system, not just inspection; human-robot collaboration structure.",
+      "moat": "Team's autonomous driving/robotics experience from Applied Intuition, data-driven learning system, integration experience with fleet management software.",
+      "competitive_position_summary": "Early stage but differentiated by wide maintenance scope and existing FMS integration. Competition is still limited in physical work automation, offering first-mover opportunity."
+    },
+    "trending_reason": {
+      "summary": "Attention from YC F26 Demo Day and recent launch coverage (October 2026). Increasing automation demand in trucking/logistics markets where technician shortage is worsening.",
+      "catalysts": [
+        "Shortage of certified maintenance technicians in the U.S. (tens of thousands unfilled)",
+        "Growth of parcel/quick commerce fleets increasing maintenance volume",
+        "Spotlight from startup media such as YC and Founderland"
+      ],
+      "growth_metrics": "Official customer and revenue data undisclosed (estimated)"
+    },
+    "funding": {
+      "total_raised_note": "YC Fall 2026 seed investment (per Dealroom.co)",
+      "valuation_estimate": "$500k–750k (estimated)",
+      "latest_round": {
+        "note": "Standard YC seed terms"
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "Company claims TAM $600B (US vehicle maintenance market). Actual target SAM is narrower, the central fleet maintenance market (estimated).",
+      "market_trend": "Maintenance labor shortage, high growth in logistics/delivery, and increasing autonomous robotaxti fleets expand demand for automated maintenance.",
+      "growth_potential": "Vehicle maintenance automation is in early stages. Once proven, quick adoption is possible through OPEX savings and improved availability for large fleets.",
+      "risks": [
+        "Need to prove robot system reliability and safety",
+        "Customer acquisition and price competitiveness (currently free or pricing undecided)",
+        "Resistance from existing mechanics and unions",
+        "Chase from well-capitalized competitors like UVeye, RoboTire"
+      ],
+      "risk_mitigation": "Human-supervised collaboration model, seamless integration with existing FMS, gradual automation adoption strategy."
+    },
+    "related_links": [
+      {
+        "title": "Official website"
+      },
+      {
+        "title": "LinkedIn company page"
+      },
+      null,
+      null,
+      {
+        "title": "Dealroom.co profile"
+      }
+    ],
+    "editor_pick_comment": "A robot startup aiming to automate physical maintenance; in a niche with little competition, the YC team's domain experience is a strength."
+  },
+  "aformic-2026": {
+    "tagline": "Autonomous mobile robot solution for manufacturing logistics automation",
+    "category": [
+      "Industrial Robots",
+      "Logistics Automation"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Career in industrial automation and robotics. Joined AFORMIC in early 2026 and became CEO.",
+        "notable_achievement": "Led the company's seed investment round"
+      },
+      {
+        "role": "CEO of AIUT and Chairman of AFORMIC Board",
+        "background": "CEO and majority shareholder of AIUT with over 30 years of experience in industrial automation. Founded AFORMIC as a spin-off from AIUT.",
+        "notable_achievement": "Built AFORMIC's parent company AIUT and led the spin-off of AFORMIC"
+      }
+    ],
+    "product": {
+      "summary": "AFORMIC provides autonomous mobile robots (AMRs) and a control software platform to automate material transport and line feeding within manufacturing plants and logistics centers.",
+      "problem_statement": "Manufacturing sites still rely on inefficient logistics processes where people drive forklifts or move materials on manual carts, facing labor shortages and productivity stagnation.",
+      "solution": "AFORMIC fully automates in-factory logistics through SLAM-based autonomous robots (F-series) and a cloud-based vehicle control platform (QURSOR). Robots avoid dynamic obstacles, integrate with existing systems like ERP/MES/WMS, and enable JIT material supply.",
+      "key_features": [
+        "SLAM-based autonomous navigation and dynamic obstacle avoidance",
+        "Real-time vehicle control and route optimization via QURSOR platform",
+        "Kanban/JIT logistics logic support",
+        "Automatic task generation through ERP/MES/WMS integration",
+        "Multi-robot collaboration and traffic coordination",
+        "360-degree safety monitoring based on safety laser scanners"
+      ],
+      "tech_stack_or_innovation": "SLAM navigation, dynamic obstacle avoidance, QURSOR control platform, ERP/MES/WMS integration",
+      "target_customer": "Global manufacturing companies in automotive, aerospace & defense, energy, heavy industry, and consumer goods sectors",
+      "business_model": "Revenue is based on robot hardware sales and subscription fees for the QURSOR software. The company has already secured orders exceeding $34M."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Locus specializes mainly in e-commerce warehouse logistics, while AFORMIC focuses on heavy industry manufacturing sites."
+        },
+        {
+          "comparison": "Focused on warehouse logistics, AFORMIC has strengths in manufacturing line supply."
+        },
+        {
+          "comparison": "China-based, expanding globally, but AFORMIC differentiates by targeting US manufacturers."
+        },
+        {
+          "comparison": "MiR offers general-purpose AMRs, AFORMIC has strengths in heavy payloads and defense sectors."
+        }
+      ],
+      "key_differentiator": "High proportion of defense/heavy industry customers (defense 20%) and references from large manufacturers (Toyota, Hyundai Mobis, etc.), deep process integration through proprietary QURSOR platform.",
+      "moat": "Hundreds of robots already in operation with over 186,000 miles driven annually. Validated in industries with high entry barriers such as defense.",
+      "competitive_position_summary": "Established a strong position in heavy industry and defense manufacturing logistics automation, with references from global top-tier manufacturers."
+    },
+    "trending_reason": {
+      "summary": "On November 4, 2026, raised a $6.95M seed investment led by Veteran Ventures Capital. Gaining attention driven by increasing demand for autonomous logistics in defense and heavy industry.",
+      "catalysts": [
+        "Growing defense automation demand (US policy to strengthen defense industrial base)",
+        "Rising need for automation due to worsening manufacturing labor shortages",
+        "Maturation of AI-based autonomous driving technology"
+      ],
+      "media_mentions": [
+        null,
+        null,
+        {
+          "source": "Global Economic",
+          "title": "AFORMIC, which lined up Toyota and Hyundai Mobis, leaps globally with KRW 9.5B investment"
+        }
+      ],
+      "growth_metrics": "Secured orders exceeding $34M, adopted by more than 10 global manufacturers, robots driving over 186,000 miles per year"
+    },
+    "funding": {
+      "total_raised_note": "Single seed round amount. No additional funding details.",
+      "valuation_estimate": "Undisclosed"
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global logistics automation robot market (approx. $30B est.). SAM: North American manufacturing logistics automation market (approx. $8B est.). SOM: Defense and heavy industry (approx. $1B est.).",
+      "market_trend": "Surge in demand for autonomous logistics robots driven by manufacturing labor shortages, AI/robot technology advances, and increased defense automation investment.",
+      "risks": [
+        "Intensifying competition from large companies (Amazon Robotics, Geek+)",
+        "Policy change risk due to high defense dependency",
+        "Technical limitations: reliability in very complex environments"
+      ],
+      "risk_mitigation": "Securing customers in diverse industries beyond defense (automotive, energy), engineering support from AIUT, and continuous R&D investment",
+      "growth_potential": "Based on the current $34M in orders, annual revenue is expected to double (est. $10M in 2025 → $20M in 2026). Expanding defense customers is expected to secure a stable revenue base."
+    },
+    "related_links": [
+      {
+        "title": "AFORMIC Official Website"
+      },
+      {
+        "title": "News on AIUT Spin-off"
+      },
+      {
+        "title": "PRNewswire Press Release"
+      }
+    ],
+    "editor_pick_comment": "A robotics logistics startup with automotive and defense references; impressive that it has completed real-world validation from the seed stage."
+  },
+  "orbital-lasers-2026": {
+    "tagline": "Space laser LiDAR and space debris removal startup",
+    "category": [
+      "Space Technology",
+      "Defense Industry"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "role": "Chief Executive Officer (CEO)",
+        "background": "Joined SKY Perfect JSAT in 2005, worked for 14 years as a satellite operations expert. In 2019, started a laser space debris project within the company's internal startup program. In 2020, established a space laser research team at RIKEN and was appointed team leader. Founded Orbital Lasers in January 2024.",
+        "notable_achievement": "Secured world-class high-power, compact, high-efficiency space laser technology through joint research with RIKEN"
+      }
+    ],
+    "team_highlights": "CFO Yoshiyuki Muramatsu (formerly of Itochu, involved in METI startup policy), multiple PhD-level researchers",
+    "product": {
+      "summary": "Orbital Lasers is a startup that develops high-power lasers that operate stably in space environments, and builds satellite-mounted LiDAR and space debris removal systems.",
+      "problem_statement": "Existing space LiDAR systems are large and heavy, so they are mainly mounted on large scientific satellites, and terrain surveys are predominantly conducted using aircraft, which is costly and has limited access to difficult areas. Additionally, effective removal technologies are needed for the growing space debris problem.",
+      "solution": "By mounting its self-developed high-power, compact, high-efficiency laser on small satellites, it enables precise 3D surveying in low Earth orbit, and using the same laser technology, it non-destructively controls and removes space debris.",
+      "key_features": [
+        "High-power compact laser (based on joint research with RIKEN)",
+        "Single-photon-level high-sensitivity light reception technology",
+        "Area-based LiDAR for high-precision 3D point cloud acquisition",
+        "Integration of laser transmission, reception, and satellite bus technology"
+      ],
+      "tech_stack_or_innovation": "Solid-state laser, satellite system integration, high-sensitivity photodetection technology",
+      "target_customer": "Space agencies such as JAXA, Japan's Ministry of Defense, and government and corporate entities in topographic information, infrastructure management, and disaster prevention.",
+      "business_model": "Satellite LiDAR data services, space debris removal services, and R&D contracts."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A Japanese space debris removal startup that uses a magnetic capture method, differing from the laser approach."
+        },
+        {
+          "comparison": "A Swiss space debris removal startup that captures with a robotic arm, differentiating from the laser method."
+        }
+      ],
+      "key_differentiator": "Self-developed world-class high-power, compact, high-efficiency space laser, with technical support from RIKEN researchers.",
+      "moat": "The only company in Japan developing high-power lasers, which are difficult to operate stably in space, to a practical stage.",
+      "competitive_position_summary": "Leader in commercial laser LiDAR satellite segment, with technological competitiveness in space debris removal."
+    },
+    "trending_reason": {
+      "summary": "The signing of a LiDAR payload development contract with JAXA in October 2026 is a major catalyst. Combined with a laser measurement research contract from Japan's Ministry of Defense (November 2025) and a Series A investment raise (March 2026), the commercialization of space laser technology is becoming tangible.",
+      "media_mentions": [
+        {
+          "source": "Orbital Lasers official press release"
+        }
+      ],
+      "catalysts": [
+        "Development contract for the LiDAR Altimeter Payload for JAXA's HTV-X (October 30, 2026)",
+        "Raised ¥3.02B (approx. $20M) in Series A funding (March 19, 2026)",
+        "Signed a contract with the Ministry of Defense for research on technologies to monitor and defend domestic satellites in orbit (Measurement) (November 2025)"
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Total equity capital including Seed round (900M JPY). Separately, a defense ministry research contract of 2.054B JPY was signed (November 2025, not included in equity capital as it is a research contract).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Approx. $20M (1 USD ≈ 150 JPY)"
+      },
+      "funding_history": [
+        {
+          "note": "Approx. $6M (1 USD ≈ 150 JPY)",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The satellite-based terrain surveying market is still early stage, centered on government and defense demand. The space debris removal market is expected to take off in the 2030s. TAM approx. tens of trillions of won.",
+      "market_trend": "Expansion of the private space market, increase in defense space investment, rising demand for digital twin and national infrastructure management.",
+      "growth_potential": "Based on collaboration with JAXA and the Ministry of Defense, building its own LiDAR satellite constellation could generate continuous data revenue. Entering the space debris removal market with laser technology would provide a competitive advantage.",
+      "risks": [
+        "Technical difficulty of space lasers and prolonged demonstration period.",
+        "Dependence on key domestic clients (JAXA, Ministry of Defense).",
+        "Speed of commercialization compared to global competition (overseas satellite LiDAR and debris removal companies)."
+      ],
+      "risk_mitigation": "Long-term collaboration with Japanese government agencies, leveraging networks with research institutes such as RIKEN, and seeking technology transfer and commercial market expansion."
+    },
+    "related_links": [
+      {
+        "title": "Orbital Lasers official site (English)"
+      },
+      {
+        "title": "Orbital Lasers story"
+      },
+      {
+        "title": "Report on payload development contract with JAXA"
+      },
+      {
+        "title": "Angel Bridge investment blog"
+      },
+      {
+        "title": "JIC Venture Growth Investments report"
+      }
+    ],
+    "editor_pick_comment": "A Japanese startup that spun off from SKY Perfect JSAT, based on RIKEN technology, it has signed consecutive contracts with JAXA and the Ministry of Defense, accelerating the commercialization of space lasers."
+  },
+  "beyond-vision-2026": {
+    "tagline": "Hybrid VTOL drone startup for defense and infrastructure",
+    "category": [
+      "Drone",
+      "Defense"
+    ],
+    "headquarters": {
+      "country_ko": "Portugal"
+    },
+    "employee_count": "150 employees",
+    "founders": [
+      {
+        "background": "Electrical engineering and computer science expert",
+        "notable_achievement": "Registered as an official NATO supplier, led company founding"
+      },
+      {
+        "background": "Electrical engineering and computer science expert",
+        "notable_achievement": "Co-founded company and serves as board chairman"
+      }
+    ],
+    "team_highlights": "150 skilled personnel, NATO supplier registration, multiple international defense contracts",
+    "product": {
+      "summary": "Provides hybrid VTOL drones and AI command platform beXStream",
+      "problem_statement": "Existing drones struggle to simultaneously satisfy vertical takeoff/landing and long flight time, and need autonomy and swarm control to meet complex mission demands in military and industrial settings.",
+      "solution": "Hybrid drone combining VTOL and fixed-wing advantages, AI autonomous flight and swarm control, cloud-based remote command platform beXStream",
+      "key_features": [
+        "Hybrid design enabling vertical takeoff/landing (VTOL) and forward flight",
+        "AI-based autonomous flight and swarm control",
+        "beXStream cloud platform for mission planning, monitoring, and execution from a single interface",
+        "Production capacity of up to 800 units per month"
+      ],
+      "tech_stack_or_innovation": "AI algorithms, swarm coordination, beXStream cloud platform, NATO standard compliance",
+      "target_customer": "Defense/military (army, navy), critical infrastructure management (energy, bridges), emergency rescue/firefighting, logistics",
+      "business_model": "Drone hardware sales, beXStream software subscription, defense and facility management service contracts"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "US autonomous flight drone targeting defense and enterprise markets; Beyond Vision differentiates as a European NATO supplier with institutional strength and hybrid VTOL"
+        },
+        {
+          "comparison": "German hybrid drone company focused on delivery and industrial; Beyond Vision leads in defense contracts and NATO supplier registration"
+        }
+      ],
+      "key_differentiator": "Hybrid VTOL combining vertical takeoff/landing and long flight time, proprietary cloud command platform beXStream, high credibility as an official NATO supplier",
+      "moat": "NATO supplier registration, multiple defense contracts (US, Canada, France, etc.), years of R&D and patents, 150 skilled personnel and expanding production facilities",
+      "competitive_position_summary": "One of the fastest-growing dual-use drone startups in Europe, expanding into US, Canada, and Brazil markets, emerging as a global player"
+    },
+    "trending_reason": {
+      "summary": "Raised €28M (approx. $31.5M) Series A in October 2026, expanding production to 800 units per month and accelerating entry into North American and Brazilian defense markets",
+      "catalysts": [
+        "Surge in defense drone demand after the Ukraine war, growing need for NATO countries to strengthen their own unmanned aerial capabilities",
+        "US emergency rescue drone contract (300 units, $15M) and partnerships in Canada and France",
+        "NATO supplier status ensuring credibility in the military market"
+      ],
+      "growth_metrics": "150 employees, exceeded 2025 projected revenue, monthly drone production target of 500~800 units, US contract for 300 units/$15M, plans to establish US factory within 2 years (€50M investment)",
+      "media_mentions": [
+        {
+          "source": "Beyond Vision (official announcement)"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Based on Series A of €28M in 2026. Includes 2019 EU grant of $771K and 2024 ActiveCap round (amount undisclosed).",
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        null,
+        {
+          "amount": "Undisclosed",
+          "note": "ActiveCap investment, amount undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global drone market approx. $40B in 2026 (est.), defense and security segment accounting for over 40%. Beyond Vision targets niche in defense and infrastructure monitoring across Europe, North America, and South America.",
+      "market_trend": "Explosive growth in military drone demand spurred by Ukraine war, NATO countries moving to strengthen domestic unmanned capabilities, advancement of AI autonomous flight and swarm technology",
+      "growth_potential": "Expected sustained high growth driven by European defense reinforcement policies, export expansion to US, Canada, Brazil, and local production plans (US factory)",
+      "risks": [
+        "Intensifying competition from global peers like Skydio and Wingcopter",
+        "Export regulations and country-specific certification/regulatory risks",
+        "Supply chain dependency and raw material price volatility"
+      ],
+      "risk_mitigation": "NATO supplier registration facilitates regulatory and certification clearance; diversified supply chain risks through partnerships in multiple countries and local production plans"
+    },
+    "related_links": [
+      {
+        "title": "Beyond Vision official website"
+      },
+      {
+        "title": "AeroTime article"
+      }
+    ],
+    "editor_pick_comment": "A direct beneficiary of defense drone demand triggered by the Ukraine war, using NATO certification as a lever to knock on the US market beyond Europe."
+  },
+  "amogy-2026": {
+    "tagline": "A modular power generation startup producing electricity via ammonia decomposition catalysts.",
+    "category": [
+      "Energy",
+      "Hydrogen",
+      "Shipping & Shipbuilding"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "background": "PhD in Materials Science and Engineering from MIT (PhD '15). After a career in the semiconductor industry, founded the company in 2020.",
+        "notable_achievement": "World's first demonstration of ammonia decomposition catalyst technology on actual drones, tractors, trucks, and tugboats."
+      },
+      {
+        "background": "SM '13 and PhD '16 in Mechanical Engineering from MIT. Specializes in energy systems.",
+        "notable_achievement": "Developed the core ammonia cracking technology."
+      },
+      {
+        "background": "PhD in Mechanical Engineering from MIT (PhD '17)."
+      },
+      {
+        "background": "PhD in Mechanical Engineering from MIT (PhD '18). Research on catalysts for ammonia fuel.",
+        "notable_achievement": "Developed a high-activity ammonia decomposition catalyst."
+      }
+    ],
+    "team_highlights": "Co-founded by 4 MIT PhDs. Approximately 180 employees (est.) as of 2026. Headquarters in Brooklyn, with offices in Houston, Seoul, Oslo, and Singapore.",
+    "product": {
+      "summary": "A modular carbon-free power generation system that decomposes ammonia (NH₃) into hydrogen (H₂) and nitrogen (N₂) using a dedicated catalyst reformer, then supplies the hydrogen to a fuel cell or hydrogen engine to produce electricity.",
+      "problem_statement": "Hard-to-abate sectors like shipping, heavy industry, and power generation find battery or direct hydrogen use impractical. Ammonia, as a hydrogen carrier, offers high energy density and existing infrastructure, but its combustion leads to NOx emissions and efficiency loss.",
+      "solution": "Produces electricity by catalytically decomposing ammonia without combustion, then utilizing the hydrogen. Compatible with existing hydrogen fuel cells and engines, and scalable by connecting modules in parallel.",
+      "key_features": [
+        "Patented ammonia decomposition catalyst — up to 70% higher efficiency than industry standard.",
+        "Modular design — scalable from a few kW to tens of MW like building blocks.",
+        "Zero carbon emissions at the point of use (lifecycle emissions are separate).",
+        "Utilizes existing ammonia storage and transportation infrastructure.",
+        "Compatible with both fuel cells and hydrogen engines."
+      ],
+      "tech_stack_or_innovation": "Compact ammonia reformer based on a high-activity non-precious metal catalyst. Claims lower operating temperature and higher conversion rate compared to competitors.",
+      "target_customer": "Shipping companies (auxiliary and main power for vessels), shipbuilders (engine and fuel cell packages), power generators (distributed power, data centers), heavy industry.",
+      "business_model": "Sales of ammonia-to-power modules (reformer + fuel cell/engine) and supply of ammonia decomposition catalysts. Also undertakes project-based EPC cooperation via JV Amun Energy."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Swiss, founded in 2023. Ammonia thermochemical decomposition device. 11 employees, early stage. Smaller scale and less demonstration history compared to Amogy."
+        },
+        {
+          "comparison": "Danish, methanol reforming fuel cell. Uses methanol, not ammonia. Similar market focus on shipping and stationary power but different fuel."
+        },
+        {
+          "comparison": "Spanish, ammonia/methanol reforming membrane reactor. Targets ships, ports, and industrial use. Funding approx. $49M, smaller scale than Amogy."
+        },
+        {
+          "comparison": "American, ammonia production and cracking modules. Focused on production; Amogy covers a broader scope including power generation systems."
+        }
+      ],
+      "key_differentiator": "Based on high-efficiency catalysts developed by the MIT team, Amogy has completed a demonstration sequence from drones to tractors to trucks to tugboats (world's first ammonia-powered vessel). Secured exclusive production agreements and JVs with major Korean shipbuilders and construction firms like Samsung Heavy Industries, GS E&C, and HD Hyundai.",
+      "moat": "① Patented catalyst technology ② Exclusive production agreement in Korea with Samsung Heavy Industries ③ JV (Amun Energy) with GS E&C for real-world projects ④ Strong support from policy banks like Korea Eximbank and KDB ⑤ Fundraising capability of over $300M+.",
+      "competitive_position_summary": "Most funded in the ammonia-to-power space, leading in demonstration scale (1MW tugboat → 40MW power plant) and partnership network. However, business viability depends on ammonia price declines and timing of green ammonia mass production."
+    },
+    "trending_reason": {
+      "summary": "In October 2026, the Export-Import Bank of Korea (KEXIM) stepped in as lead investor for Series C, directly investing $20M and leading a $200M round. In the same week, Singapore's A*STAR Low Carbon Testbed (LCT³) broke ground, and Amogy was selected as one of its first industrial users — a 'hat-trick' of positive news.",
+      "catalysts": [
+        "KEXIM's $20M direct investment and Series C lead (2026-10-26).",
+        "Singapore A*STAR LCT³ testbed groundbreaking — 1 ton/day hydrogen production ammonia cracking module expected to operate by 2027 (2026-10-23).",
+        "Selected as one of LCT³'s first three industrial users (Amogy, IHI, Metha8).",
+        "MOU signed with Lotte Fine Chemical — joint development of domestic ammonia-hydrogen and power generation projects (2026-09-09).",
+        "Pohang 1MW → 40MW ammonia power project taking shape (construction expected to begin in 2026)."
+      ],
+      "growth_metrics": "Cumulative funding approx. $330M (est.). Valuation $700M (est.) as of July 2025. Approx. 180 employees (est.). Pohang 1MW demo → 40MW expansion planned for 2028-29. Singapore 1 ton H₂/day cracking module expected to start in 2027."
+    },
+    "funding": {
+      "total_raised_note": "Indexed.vc reports $332M (8 rounds). CBInsights reports $322.29M. Company announced cumulative $315M as of Nov 2025, plus $20M from KEXIM in Oct 2026. Discrepancy (~$10-13M) likely due to round classification and inclusion of convertible notes/grants.",
+      "valuation_estimate": "$700M (est.)",
+      "latest_round": {
+        "note": "First tranche of a $200M target Series C. KEXIM as lead investor and direct investor. Announced Oct 26, 2026. Valuation undisclosed.",
+        "lead_investor": "Export-Import Bank of Korea (KEXIM)",
+        "notable_investors": [
+          "Export-Import Bank of Korea"
+        ]
+      },
+      "funding_history": [
+        {
+          "note": "Participants: Collaborative Fund, DCVC, AP Ventures, Samarthya Investment Advisors, Vertical Partners.",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "note": "Lead: AP Ventures. New investors: Amazon Climate Pledge Fund, DCVC. Post-money valuation $93M."
+        },
+        {
+          "note": "Bridge round. Participants: SK Innovation, Amazon, AP Ventures, Aramco Ventures, New Lab.",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "note": "Series B-1. Lead: SK Innovation. Participants: Temasek, Yanmar Ventures, Korea Zinc, Zeon Ventures, MOL PLUS, DCVC, AP Ventures, Aramco Ventures."
+        },
+        {
+          "note": "Series B-2. Total Series B $150M. Participants: Mitsubishi Heavy Industries, Mitsubishi Corporation, Synergy Marine, among others."
+        },
+        {
+          "note": "Lead: Aramco Ventures, SV Investment. Participants: Samsung Heavy Industries, BHP Ventures, Yanmar Ventures, Temasek, and 9 others. Cumulative surpassed $270M+."
+        },
+        {
+          "note": "Previous $56M round upsized to $80M. Lead: KDB Silicon Valley, Korea Development Bank. Participants: BonAngels, JB Investment, Pathway Capital. Valuation $700M (est.)."
+        },
+        {
+          "note": "Strategic investment from GS E&C. GS Futures, Xplor Investment joined. Cumulative $315M."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global ammonia fuel market projected at billions to tens of billions of dollars by 2030 (est.). IMO decarbonization regulations (net-zero by 2050) in shipping and ammonia power policies in Korea, Japan, and Singapore directly create demand. Amogy targets 40MW-class distributed power and marine auxiliary power (1-1.4MW) immediately.",
+      "market_trend": "① IMO IGC Code amendment in July 2026 officially allows ammonia bunkering ② Singapore, Korea, Japan accelerating construction of ammonia import terminals and power plants ③ Surging data center power demand boosts demand for carbon-free distributed power ④ Green ammonia production projects (Australia, Middle East, etc.) targeting 2027-30 operation.",
+      "growth_potential": "CEO predicts ammonia power will become cost-competitive with natural gas by early 2030s. Significant replacement requires ammonia prices below $500/ton; Amogy mitigates price risk via offtake agreements (1,500 tons with Lotte Fine Chemical).",
+      "risks": [
+        "If green ammonia prices fall slower than expected, economic viability versus natural gas may be delayed.",
+        "Regulatory and safety risks due to ammonia's toxicity and corrosiveness.",
+        "Unexpected technical challenges in mass production and 40MW-class demonstration.",
+        "Intensifying competition from alternative technologies like hydrogen, batteries, and methanol.",
+        "Potential failure to raise remaining funds for the $200M Series C target."
+      ],
+      "risk_mitigation": "Funding stability secured through lead roles by KEXIM and KDB. Ammonia supply chain secured via long-term agreements with Lotte Fine Chemical and GS E&C. Manufacturing capabilities complemented by exclusive production agreements with Samsung Heavy Industries and HD Hyundai. Technical risk distributed through phased scaling from 1MW to 40MW in Pohang."
+    },
+    "related_links": [
+      {
+        "title": "Amogy Official Website"
+      },
+      {
+        "title": "Amogy — Our Story (Timeline)"
+      },
+      {
+        "title": "Amogy — FAQ (Founder & Location Info)"
+      },
+      {
+        "title": "CBInsights — Amogy Profile"
+      },
+      {
+        "title": "Indexed.vc — Amogy Funding History"
+      },
+      null,
+      {
+        "title": "Singapore EDB — LCT³ Groundbreaking and First User Announcement"
+      }
+    ],
+    "editor_pick_comment": "The $200M Series C led by Korean policy banks shows that Amogy is driving the ammonia transition in 'K-shipbuilding and plant' industries."
+  },
+  "igii-2026": {
+    "tagline": "Scottish deep tech developing 3D carbon nanomaterial Gii",
+    "category": [
+      "Materials Science",
+      "Carbon Nanomaterials",
+      "Energy Storage"
+    ],
+    "headquarters": {
+      "city": "Stirling",
+      "country_ko": "UK"
+    },
+    "founders": [
+      {
+        "role": "Co-founder & Chief Scientific Officer (CSO)",
+        "background": "PhD in Materials Physics. Laid the early scientific foundation for Gii through research on graphene-related materials.",
+        "notable_achievement": "Developed the Gii material and filed over 35 patents. Invited speaker on the Physics World podcast."
+      }
+    ],
+    "team_highlights": "CEO Jean-Christophe Granier (global manufacturing and industrial machinery leadership experience), CSO Marco Caffio (materials scientist). The team includes 17 PhDs and speaks 22 languages. Planned expansion to 70 employees by end of 2026.",
+    "product": {
+      "summary": "Gii is a 3D porous pure carbon nanomaterial, manufactured at room temperature, designed to replace traditional materials such as platinum, gold, and graphite. It can be integrated into sensors, energy storage, heating elements, and more, and features an environmentally friendly process that requires only renewable electricity.",
+      "problem_statement": "Global manufacturers are exposed to supply chain risks for scarce minerals such as platinum, gold, and indium. Existing graphene suffers from quality variability in mass production and is difficult to integrate into customer products.",
+      "solution": "Gii is manufactured via a proprietary process that 'grows' at room temperature without mining or complex transfer processes. Its 3D porous structure offers high surface area and electrical conductivity. It is capable of mass production via a Reel-to-Reel process and can be directly integrated into customers' existing production lines.",
+      "key_features": [
+        "Room temperature growth process (Grown, not mined or printed)",
+        "3D porous pure carbon structure",
+        "Reel-to-Reel mass production",
+        "No toxic chemicals or cleanroom required",
+        "Multi-analyte high-sensitivity sensing capability"
+      ],
+      "tech_stack_or_innovation": "Proprietary Chemical Vapor Growth (CVG) process at room temperature. Gii has a 3D network structure, not 2D graphene sheets, offering much higher active area and ease of integration than conventional materials.",
+      "target_customer": "Global electronics, medical, and energy manufacturers (in vitro diagnostics, environmental monitoring, battery electrodes, industrial heating). Currently has master service agreements with Merck and Midea Group.",
+      "business_model": "B2B material supply and co-development. Offered as Gii powder, ink, and directly grown films. Revenue generated through customized R&D and licensing agreements with customers."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "US-based deep tech applying 3D graphene-like materials to batteries, composites, and sensors. Younger but with greater capital and faster market access. Gii differentiates with process simplicity and non-mining approach."
+        },
+        {
+          "comparison": "Spain-based, specializing in CVD graphene films and graphene oxide (GO). Gii claims superiority in higher active area and manufacturing scalability due to its 3D structure."
+        },
+        {
+          "comparison": "Australia/Sweden-based, producing graphene from natural graphite. Gii lowers supply chain risk by using a fully synthetic process for higher purity and consistency."
+        }
+      ],
+      "key_differentiator": "Gii uses a proprietary synthetic process that 'grows' at room temperature without mining, enabling high purity and mass production without a cleanroom. The biggest differentiator is direct integration into manufacturers' existing equipment.",
+      "moat": "Over 35 registered patents, 10 years of accumulated manufacturing engineering know-how, proprietary Gii material platform. Long-term strategic support from public institutions such as Scottish Enterprise.",
+      "competitive_position_summary": "Although the graphene market is still early stage, Gii has secured lead customers like Merck and Midea and has large-scale production facilities, outpacing competitors in commercialization speed."
+    },
+    "trending_reason": {
+      "summary": "In September 2026, led by the Scottish National Investment Bank, Gii announced a £22.7M (approx. KRW 39B) Series B+ government support package, marking a turning point as an industrial nanomaterial supplier. Simultaneously, it signed master service agreements with Merck and Midea Group, declaring its entry into the global manufacturing market.",
+      "catalysts": [
+        "Growing need to diversify rare earth and precious metal supply chains",
+        "Increasing demand for high-performance materials in EVs and diagnostic devices",
+        "Scotland's sovereign wealth fund strategic deep tech industry development policy"
+      ],
+      "growth_metrics": "Organization expanding from ~50 people at end of 2025 to 70 by end of 2026. Contracts with Merck and Midea mark a transition from B2B pilot phase to full commercialization."
+    },
+    "funding": {
+      "total_raised_note": "£11.7M Series B equity + £11M grant/support from Scottish Enterprise. SNIB invested £4M in this round, completing a total commitment of £12M.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Led by UK's Scottish National Investment Bank. Additional £11M is a Scottish Enterprise grant."
+      },
+      "funding_history": [
+        {
+          "stage": "Series A (est.)",
+          "amount": "Undisclosed",
+          "note": "SNIB has been in a relationship with iGii since a previous round, investing a total of £12M including this round.",
+          "lead_investor": "Scottish National Investment Bank (est.)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global graphene market projected at ~$2B by 2028 (IDTechEx). Gii's TAM is the broader advanced materials market worth tens of billions. SAM is the nanomaterials market for sensors and energy.",
+      "market_trend": "Supply chain risks for key minerals (gold, platinum, indium) and stricter environmental regulations are driving demand for synthetic alternatives. Accelerating adoption of high-performance materials in EV batteries, medical diagnostics, and heavy machinery.",
+      "growth_potential": "Gii's non-mining, non-cleanroom process offers significant advantages in cost and scalability. Securing global customers like Merck and Midea is a critical signal of market credibility.",
+      "risks": [
+        "Need to continue proving quality consistency in mass production",
+        "Need to achieve price competitiveness against existing graphene and competing materials (e.g., Lyten)",
+        "Potential for long customer product integration cycles",
+        "Dependence on government support"
+      ],
+      "risk_mitigation": "Completed 10 years of manufacturing know-how and Reel-to-Reel automated process. Long-term partnership with Scottish Enterprise for continued R&D. Multiple successful pilot project experiences."
+    },
+    "related_links": [
+      {
+        "title": "iGii Official Website"
+      },
+      {
+        "title": "iGii £22.7M Funding Press Release"
+      },
+      {
+        "title": "Scottish National Investment Bank Press Release"
+      }
+    ],
+    "editor_pick_comment": "Little known in Korea yet, but this is a true deep tech hyper-growth company that has signed contracts with Merck and Midea and is receiving sovereign wealth fund support to pass the final gateway of nanomaterial commercialization."
+  },
+  "takenos-2026": {
+    "tagline": "Latin America stablecoin financial platform",
+    "category": [
+      "Cross-border payment",
+      "Fintech",
+      "Stablecoin"
+    ],
+    "headquarters": {
+      "country_ko": "Argentina"
+    },
+    "founders": [
+      {
+        "background": "Previously Product Director at IOL invertironline"
+      },
+      {
+        "background": "Legal background (Ministerio Público Fiscal)"
+      },
+      {
+        "background": "Product Analyst at IOL invertironline"
+      },
+      {
+        "background": "Senior Project Manager at Amadeus"
+      }
+    ],
+    "team_highlights": "The four founders have backgrounds in product, law, analysis, and project management respectively, and are currently hiring in engineering, compliance, and go-to-market.",
+    "product": {
+      "summary": "Takenos is a comprehensive financial platform leveraging stablecoins (USDC, USDT), providing a vertically integrated infrastructure built in-house including consumer app, SME services, enterprise API, and institutional trading desk.",
+      "problem_statement": "Latin American countries suffer from high inflation, limited dollar access, and slow and expensive international remittances; freelancers, SMEs, and large corporates all need efficient cross-border solutions.",
+      "solution": "Provides stablecoin-based dollar accounts, international payments and remittances, TakeCard international card, enterprise payment API, and tailored products for individuals and enterprises all on one platform.",
+      "key_features": [
+        "Digital dollar account (deposits, transfers, currency exchange)",
+        "TakeCard (international debit card, issued by Rain), SpicyCard",
+        "TakeLink (simple payment link)",
+        "Integration with local payment methods such as PIX, QR payments, etc.",
+        "Enterprise payroll, expense, and treasury API",
+        "Institutional trading desk",
+        "Stablecoin-based payments (USDC, USDT)"
+      ],
+      "tech_stack_or_innovation": "Uses stablecoins issued by Circle and Tether as primary payment rails, and partners with Rain (card issuing). Complies with regulations in 6 countries where it holds its own licenses, with full vertical integration across all layers.",
+      "target_customer": "Freelancers, SMEs, large enterprises (LATAM Airlines, energy and mining companies), institutional investors",
+      "business_model": "Transaction fees (remittances, currency exchange, card usage) and enterprise API usage fees are estimated to be main revenue sources (est.)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "While DolarApp is a dollar app focused on Argentina, Takenos has secured regulatory licenses in more than 6 countries and offers enterprise payment APIs."
+        },
+        {
+          "comparison": "Bitso is primarily a crypto exchange, but Takenos specializes in stablecoin payments and covers use cases from freelancers to large enterprises."
+        }
+      ],
+      "key_differentiator": "Directly holds financial regulatory licenses in multiple countries and operates a full stack (consumer, SME, enterprise, institutional) based on stablecoins as a single platform.",
+      "moat": "Own licenses and transaction volume, partnerships with local banks, Visa, and Mastercard, and enterprise contract cases.",
+      "competitive_position_summary": "Takenos is the only vertically integrated player in Latin America aiming to build a 'stablecoin financial system', expanding beyond regional regulatory barriers."
+    },
+    "trending_reason": {
+      "summary": "On November 5, 2026, raised a $7M seed extension led by North Island Ventures and Road Capital Management, achieving total funding of $12M. Announced annual transaction volume of $5B and plans to expand from 6 countries to more than 15.",
+      "catalysts": [
+        "Increasing real demand for stablecoin payments (freelancers, enterprise payments)",
+        "Acquired Bolivia's first fintech license (ASFI)",
+        "Attracted large enterprise clients such as LATAM Airlines",
+        "Valuation increased 4-5x in the seed extension round"
+      ],
+      "growth_metrics": "Annual processed volume over $5B, millions of users, operating in 6 countries, targeting expansion to 15 countries by 2027. Over 70 enterprise clients, processing payments for 5,000 LATAM Airlines crew and maintenance staff.",
+      "media_mentions": [
+        {
+          "source": "Takenos official blog"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "source": "Rain (partner)"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "$5M seed round (led by Variant, Lattice) in October 2025 and $7M extension in November 2026 total",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Seed extension led by North Island Ventures and Road Capital Management, with participation from Variant, Lattice, and Reverie. Valuation increased 4-5x compared to the previous round (Forbes)."
+      },
+      "funding_history": [
+        {
+          "note": "Seed round co-led by Variant and Lattice"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The Latin American cross-border payment market is worth tens of billions of dollars annually, with unbanked, low-income freelancers and SMEs as key targets.",
+      "market_trend": "Increasing adoption of stablecoins, easing of fintech regulations in various countries, and the growth of remote work and the gig economy are driving surging demand for dollar payments.",
+      "growth_potential": "Expanding from 6 countries to more than 15, expecting first-mover advantages in the first-entered Central American and Andean countries.",
+      "risks": [
+        "Regulatory changes in each country and uncertainty over legal status of stablecoins",
+        "Risk of stablecoin depegging",
+        "Intensifying competition with large banks and existing fintechs"
+      ],
+      "risk_mitigation": "Securing own licenses, supporting both USDC and USDT for flexibility, and proactive investment in regulatory compliance."
+    },
+    "related_links": [
+      {
+        "title": "Takenos website"
+      },
+      {
+        "title": "Takenos round official blog"
+      },
+      {
+        "title": "Forbes Argentina report"
+      }
+    ],
+    "editor_pick_comment": "A stablecoin platform enhancing dollar accessibility in Latin America, notable for its differentiation through vertical integration."
+  },
+  "pay2o-2026": {
+    "tagline": "Monthly subscription payment innovation, starting from 0.95% fee",
+    "category": [
+      "Subscription Payments",
+      "Fintech"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "team_highlights": "Currently 1 full-time engineer, recruiting a tech lead. Operates as a small team.",
+    "product": {
+      "summary": "A fintech service offering direct bank account payments without credit cards for businesses that collect monthly subscriptions or membership fees.",
+      "problem_statement": "Small businesses in Japan (fitness clubs, cram schools, etc.) bear 3–4% card processing fees, face manual management tasks, and are exposed to security risks.",
+      "solution": "Pay2o enables direct bank account (A2A) payments via smartphone, with fees starting at 0.95%, passkey-based security, and automatic billing with retry functionality.",
+      "key_features": [
+        "Direct bank account payment via smartphone",
+        "0.95% fee (subject to conditions)",
+        "Zero security risk as no credit card numbers are stored",
+        "Passkey authentication prevents phishing",
+        "Automatic payment and retry on failure",
+        "External API integration available (October 2026 launch)",
+        "Supports approximately 270 financial institution accounts"
+      ],
+      "tech_stack_or_innovation": "Backend: Go (Echo) + Clean Architecture, Frontend: React/TypeScript (Vite), Infra: AWS (ECS). Core innovation is A2A (Account-to-Account) payments bypassing card issuers.",
+      "target_customer": "Fitness clubs, cram schools, tutoring centers, and all small-to-large businesses collecting monthly membership fees.",
+      "business_model": "Per-transaction fee from 0.95%, no initial or monthly fees."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Traditional credit card payment gateways with high fees and complex integration."
+        },
+        {
+          "comparison": "Japan's QR payment leader, but not optimized for recurring billing."
+        },
+        {
+          "comparison": "Has recurring billing capability but is credit card-based with similar fee structures."
+        }
+      ],
+      "key_differentiator": "By using A2A bank account payments without credit cards, dramatically lowers fees and fundamentally eliminates the risk of card information leaks.",
+      "moat": "Niche focus on membership/tuition payments, early partnerships (sports facilities, cram schools), passkey security, and founders with rich financial experience.",
+      "competitive_position_summary": "Provides a low-cost, secure alternative for small membership-based businesses burdened by credit card fees but lacking other options."
+    },
+    "trending_reason": {
+      "summary": "On November 5, 2026, raised JPY 170M (approx. USD 1.08M) seed investment from XTech Ventures, Mizuho Capital, and Plaid. On October 22, launched external APIs to lower integration barriers.",
+      "catalysts": [
+        "Seed investment raised (2026-11-05)",
+        "External API launch (2026-10-22)"
+      ],
+      "growth_metrics": "Early case: managing 500+ members (Nishinomiya AC). Exact revenue/user numbers undisclosed."
+    },
+    "funding": {
+      "total_raised": "JPY 170M",
+      "total_raised_note": "Seed round only; accelerator investment (June 2025, Plug and Play Japan) amount undisclosed.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "JPY 170M",
+        "note": "Equivalent to USD 1.08M per PitchBook"
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Participated in Plug and Play Japan Summer 2025 Batch"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Japan's monthly subscription/membership fee payment market is worth trillions of yen annually; Pay2o's primary target of small membership-based businesses is estimated in the hundreds of thousands.",
+      "market_trend": "Japan's government promotion of cashless payments and enhanced consumer protection drive demand for payment methods beyond credit cards.",
+      "growth_potential": "Cost competitiveness and security advantages attract businesses dissatisfied with card payments; API integrations with SaaS and large players enable ecosystem expansion.",
+      "risks": [
+        "Intensifying competition from large payment providers (GMO, PayPay, etc.)",
+        "Low consumer awareness of bank account payments and usage barriers",
+        "External dependencies such as partnership disruptions with banks"
+      ],
+      "risk_mitigation": "Focus on small businesses and open APIs to build an ecosystem; continuous marketing and sales to expand the base."
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "Seed Investment Press Release"
+      },
+      {
+        "title": "External API Launch Announcement"
+      },
+      {
+        "title": "Software Engineering Job Posting"
+      },
+      {
+        "title": "PitchBook Profile"
+      }
+    ],
+    "editor_pick_comment": "Japan fintech Pay2o is reshaping payment infrastructure for membership-based businesses that were locked into card payments, leveraging bank account-based transactions with a low 0.95% fee."
+  },
+  "hyperprobe-2026": {
+    "tagline": "Real-time production debugging AI on-call agent",
+    "category": [
+      "AI Developer Tools",
+      "Production Monitoring"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Worked at Applied Materials, led a 100-person engineering organization, founded Transporter.city (2017-2021), co-founded HyperTest",
+        "notable_achievement": "Selected for YC Summer 2026, former unicorn company engineering leader"
+      },
+      {
+        "background": "Principal architect at a SaaS company, co-founded HyperTest",
+        "notable_achievement": "Expertise in production SDKs and runtime instrumentation"
+      }
+    ],
+    "team_highlights": "YC Summer 2026 batch. 8-person San Francisco team. Former founders of HyperTest (production traffic-based testing tool).",
+    "product": {
+      "summary": "An AI on-call engineer that, triggered by alerts, deploys read-only probes via MCP into live production services, capturing precise variable states in real time (not found in logs) to automatically determine root cause (RCA) of incidents.",
+      "problem_statement": "AI generates code quickly, but debugging production bugs (especially silent failures) remains manual and slow. Developers must dig through logs or attempt reproduction to find incident causes, creating a major bottleneck in development productivity.",
+      "solution": "When an alert is triggered, the AI agent automatically analyzes logs/traces to pinpoint the problematic line and deploys read-only probes. It captures variable state during live traffic execution, confirming root cause without redeployment.",
+      "key_features": [
+        "No redeployment/restart needed: collects operational data directly without service impact",
+        "Read-only non-blocking probes: under 1% production overhead, no thread blocking",
+        "MCP-based integration: works with all MCP-compatible AI coding agents like Cursor, Claude Code, Codex, Windsurf",
+        "Silent failure diagnosis: captures logic bugs, race conditions, and incorrect state data that don't raise exceptions",
+        "Enterprise security: self-hosted/private VPC, pre-emptive PII blocking, immutable audit trail"
+      ],
+      "tech_stack_or_innovation": "Node/Python uses in-process hooking, Java uses JVMTI/JDI bytecode instrumentation. Async boundary/thread blocking issues resolved via multi-probe and traceId-based collection.",
+      "target_customer": "Engineering teams actively adopting AI coding agents. Early adopters include CheQ Digital, Housing.com.",
+      "business_model": "B2B SaaS (subscription based on self-hosted/private cloud deployment)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Focuses on unhandled exceptions, cannot diagnose silent failures, no AI agent integration"
+        },
+        {
+          "comparison": "Specialized in error tracking and monitoring, lacks AI-based auto-debugging and real-time variable capture"
+        },
+        {
+          "comparison": "Managed APM, cannot provide AI agent-level automatic diagnosis of silent failures"
+        }
+      ],
+      "key_differentiator": "Delivers RCA based on actual live variable values from running systems, not guesswork. Implements a workflow where an AI agent replaces a human on-call engineer.",
+      "moat": "Non-blocking bytecode instrumentation based on JVMTI/JDI, variable capture across async boundaries, and integration workflow with AI agents via MCP.",
+      "competitive_position_summary": "Targets the blue ocean of silent failures missed by existing APM/error logging tools, aiming to become the essential debugging layer for the AI coding agent ecosystem through the MCP standard."
+    },
+    "trending_reason": {
+      "summary": "Received significant attention on Hacker News upon participating in YC S26 Demo Day. Emerging as a representative example of AI coding agents expanding from 'creating' code to 'fixing' code.",
+      "catalysts": [
+        "Selected for YC Summer 2026 batch and Demo Day presentation",
+        "Posted on YC Launches page and Hacker News Launch HN (49185389)",
+        "Covered by RuntimeWire, a DevTools-focused media outlet",
+        "Secured customer references including CheQ Digital, Housing.com"
+      ],
+      "growth_metrics": "Undisclosed",
+      "media_mentions": [
+        null,
+        null,
+        {
+          "source": "HyperProbe Official Blog"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Y Combinator standard seed Convertible Note, confirmed by CBInsights.",
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        {
+          "note": "YC Summer 2026 standard deal"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Tens of billions of dollars in AI software development lifecycle (SDLC) market. SAM: Engineering organizations using AI coding agents. SOM: PoC secured via YC/early startup ecosystem.",
+      "market_trend": "From 2025-2026, explosive growth of AI coding agents boosted code productivity, but increased production errors made 'on-call burden' a new bottleneck. The 'AI First Debugging' paradigm is emerging: if AI generates code, AI should debug it.",
+      "growth_potential": "As the volume of code generated by AI coding agents increases, debugging demand grows exponentially. With the spread of MCP standard, potential to become the default debugging layer for all AI coding agents.",
+      "risks": [
+        "Existing APM/monitoring companies (Datadog, New Relic, Sentry) integrating AI debugging features",
+        "Enterprise security teams' resistance to runtime instrumentation tools",
+        "Unclear trust and liability regarding AI agent's automatic diagnosis"
+      ],
+      "risk_mitigation": "Addresses security concerns via read-only architecture and full audit trail. Mitigates ecosystem risk via MCP-based open ecosystem."
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "YC Company Profile"
+      },
+      null,
+      {
+        "title": "Official Documentation Site"
+      },
+      {
+        "title": "CBInsights Company Info"
+      }
+    ],
+    "editor_pick_comment": "The era when AI only wrote code is over. Now, an AI collects data beyond production logs and debugs based on evidence—the true 'AI on-call engineer' has arrived."
+  },
+  "dualbird-2026": {
+    "tagline": "FPGA-based cloud data acceleration engine",
+    "category": [
+      "Data Infrastructure",
+      "AI Infrastructure",
+      "Semiconductor Acceleration"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "role": "Co-founder & CEO (passed away in April 2026)",
+        "background": "Former Amazon AWS chip design engineer, former Intel",
+        "notable_achievement": "Co-founded and led DualBird"
+      },
+      {
+        "background": "Experience at AWS and semiconductor industry, hardware-software integration expert",
+        "notable_achievement": "Designed FPGA-based data acceleration technology"
+      },
+      {
+        "background": "Semiconductor industry veteran",
+        "notable_achievement": "Developed dedicated data processor architecture"
+      },
+      {
+        "background": "Experience at AWS and semiconductor industry",
+        "notable_achievement": "Implemented cloud-native engine"
+      }
+    ],
+    "team_highlights": "The four co-founders all come from AWS and the semiconductor industry, forming a rare team that understands both hardware and software. Despite the death of CEO Amir Gilad in April 2026, the company continues to operate.",
+    "product": {
+      "summary": "FPGA-based cloud-native data acceleration plugin for Apache Spark and Iceberg environments",
+      "problem_statement": "Data processing tasks still rely on general-purpose CPUs, causing performance bottlenecks and high costs. The growing demand for AI data infrastructure requires a new engine architecture.",
+      "solution": "Provides an accelerator leveraging FPGA instances (F2) in the cloud as a lightweight plugin. Can be deployed on existing stacks without code changes.",
+      "key_features": [
+        "Acceleration plugin for Spark (compatible with Apache Spark, Amazon EMR, Amazon EKS)",
+        "Ready-to-use onboarding (only needs changing EC2 instance type to F2)",
+        "10–100x performance improvement and 50–90% cost reduction",
+        "No migration required, no code changes needed"
+      ],
+      "tech_stack_or_innovation": "Delivers FPGA (Field-Programmable Gate Array) as a cloud resource, deploying hardware performance like software. Just as GPUs play a role in AI, FPGAs perform that role in data processing.",
+      "target_customer": "Enterprise companies operating large-scale data pipelines, organizations building AI data infrastructure",
+      "business_model": "SaaS-based plugin subscription or usage-based billing (exact model undisclosed)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Databricks (Photon engine)",
+          "comparison": "Software-based acceleration, difficult to achieve hardware-level performance improvement."
+        },
+        {
+          "comparison": "A cloud data warehouse, while DualBird accelerates existing stacks without replacing them."
+        },
+        {
+          "comparison": "An AWS-native service, but does not offer FPGA-based accelerators."
+        },
+        {
+          "name": "Intel/Altera (FPGA acceleration)",
+          "comparison": "General-purpose FPGA solutions vs. DualBird's plugin specialized for Spark/Iceberg."
+        }
+      ],
+      "key_differentiator": "Leases FPGAs in the cloud, enabling immediate acceleration without complex hardware deployment or code changes.",
+      "moat": "Unique technology converging FPGA and big data software; team with simultaneous hardware-software expertise; patents and IP",
+      "competitive_position_summary": "Still early stage, but rapidly expanding market share with differentiated technology, a strong team, and support from prominent investors."
+    },
+    "trending_reason": {
+      "summary": "Raised a total of $25M in Seed and Series A in November 2025, attracting attention with participation from Lightspeed Venture Partners. Riding the surge in AI data infrastructure demand, emerging as a next-generation data processing engine.",
+      "catalysts": [
+        "Explosive growth in AI data infrastructure demand",
+        "FPGA technology maturity and cloud-native deployment feasibility",
+        "Perfect compatibility with existing Spark/Iceberg ecosystems"
+      ],
+      "growth_metrics": "Undisclosed (performance improvements confirmed in early deployments with design partners)"
+    },
+    "funding": {
+      "valuation_estimate": "$80M (est.)",
+      "total_raised_note": "Seed $8M + Series A $17M, totaling $25M (per Newswire, 2025-11-05). Some sources report the Series A as $17M."
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global data processing market (tens of billions of USD). SAM: Cloud data acceleration market (billions of USD). SOM: Initial entry targeting Spark/Iceberg users.",
+      "market_trend": "AI/ML workload growth drives soaring demand for data processing speed and efficiency. FPGA-based acceleration can deliver 10–100x performance over traditional CPUs.",
+      "growth_potential": "Rapid growth possible with enterprise customer acquisition. Leadership stability after CEO's death is a key factor.",
+      "risks": [
+        "Management vacuum and team morale decline after CEO's death",
+        "FPGA availability and cloud instance costs",
+        "Response from large competitors (Databricks, Snowflake)",
+        "Long enterprise sales cycles and need for technical understanding"
+      ],
+      "risk_mitigation": "CTO Gilad Tal maintains technical leadership; strong investor backing from Lightspeed and others; sufficient funding secured for stable operations"
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "Lightspeed Venture Partners Investment Page"
+      },
+      {
+        "title": "Blog: $25M Investment Announcement"
+      }
+    ],
+    "editor_pick_comment": "Despite the sudden death of its CEO, this startup has the potential to reshape the AI infrastructure market with its unparalleled FPGA-based data acceleration technology."
+  },
+  "tsuga-2026": {
+    "tagline": "AI-based BYOC Observability Platform",
+    "category": [
+      "Observability",
+      "Cloud Infrastructure"
+    ],
+    "headquarters": {
+      "country_ko": "France"
+    },
+    "founders": [
+      {
+        "background": "Co-founded Madumbo, served as Product Lead after Datadog acquisition",
+        "notable_achievement": "Sold Madumbo to Datadog"
+      },
+      {
+        "background": "Co-founded Madumbo, Core Engineer at Datadog",
+        "notable_achievement": "Sold Madumbo to Datadog"
+      }
+    ],
+    "team_highlights": "Forward-deployed engineering team collaborates with key clients to optimize pipelines and provide configuration support",
+    "product": {
+      "summary": "Tsuga is an AI-native observability platform that operates within the enterprise's own cloud environment, integrating logs, metrics, traces, and APM.",
+      "problem_statement": "Traditional SaaS observability tools incur high costs for large-scale data processing and fail to meet data sovereignty and regulatory requirements.",
+      "solution": "Deployed on the customer's cloud infrastructure via BYOC (Bring Your Own Cloud), it provides all features without data leakage, including AI-powered automated root cause analysis and an SRE agent.",
+      "key_features": [
+        "Deployment in customer cloud (BYOC)",
+        "Integrated log management, metrics, traces, APM",
+        "AI-based SRE agent (MCP server, CLI)",
+        "OpenTelemetry support",
+        "Forward-deployed engineering support"
+      ],
+      "tech_stack_or_innovation": "Deployed via Infrastructure-as-Code (IaC) on AWS, Azure, GCP. Control plane is AWS-based (migratable if needed). Data storage and compute use customer's cloud account.",
+      "target_customer": "Large enterprises, regulated industries (finance, healthcare), AI companies",
+      "business_model": "Flat rate per GB of data collected; average contract size is six figures (millions of dollars)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Market leader but SaaS model with high costs; recently acquired QuickWit and is preparing BYOC"
+        },
+        {
+          "comparison": "Open-source based, partial BYOC possible but limited support"
+        },
+        {
+          "comparison": "Strengths in legacy systems, lacks data sovereignty approach"
+        },
+        {
+          "comparison": "Similar features as SaaS, no BYOC support"
+        }
+      ],
+      "key_differentiator": "Full data sovereignty via BYOC; AI agent operates only within customer data; no platform management burden",
+      "moat": "Deep integration with customer cloud, forward-deployed engineering team, AI-native design, founding team from Datadog",
+      "competitive_position_summary": "The only AI-native BYOC observability platform optimized for enterprise customers prioritizing data sovereignty"
+    },
+    "trending_reason": {
+      "summary": "Raised $35M Series A in June 2026. Achieved millions in ARR within 6 months of launch, secured key customers.",
+      "catalysts": [
+        "Series A led by Singular, with participation from General Catalyst, DST Global, etc.",
+        "Acquired customers including Le Monde, Camunda, Black Forest Labs, Hippocratic AI"
+      ],
+      "growth_metrics": "Signed millions in ARR contracts within 6 months of launch; average contract size six figures"
+    },
+    "funding": {
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "USD per official blog. Some media reported as €30M"
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "According to Gartner, the global observability market is growing to approximately $8B in 2026. AI and multi-cloud environments are key growth drivers.",
+      "market_trend": "Increasing AI adoption leads to surge in telemetry data; stronger data sovereignty and regulatory compliance demands; BYOC model gaining attention",
+      "growth_potential": "Tsuga is growing rapidly, especially in the regulated European market and among AI companies. Achieving millions in ARR within 6 months suggests strong PMF.",
+      "risks": [
+        "Entry of large competitors like Datadog into BYOC",
+        "Dependence on cloud providers (AWS, Azure, GCP)",
+        "AI agent security and reliability risks"
+      ],
+      "risk_mitigation": "Differentiates via multi-cloud support and open standards (OpenTelemetry), data sovereignty design. Leverages industry experience of Datadog-founded team."
+    },
+    "related_links": [
+      {
+        "title": "Tsuga Official Website"
+      },
+      {
+        "title": "Tsuga Series A Announcement Blog"
+      },
+      {
+        "title": "Tsuga Seed Announcement Blog"
+      },
+      {
+        "title": "EU-Startups Article"
+      },
+      {
+        "title": "Tech Funding News Article"
+      }
+    ],
+    "editor_pick_comment": "An emerging observability startup offering the perfect alternative for companies that want to run AI platforms while maintaining data sovereignty."
+  },
+  "cleavr-2026": {
+    "tagline": "AI-led collection automation platform that chases payments on your behalf",
+    "category": [
+      null,
+      "Collection Automation",
+      "AI Agent"
+    ],
+    "headquarters": {
+      "country_ko": "France"
+    },
+    "founders": [
+      {
+        "background": "Former analyst at Kima Ventures",
+        "notable_achievement": "Founded by an alumnus of Kima Ventures, which was an early investor"
+      },
+      {
+        "background": "Former mobile game studio Voodoo"
+      },
+      {
+        "background": "Work experience at PwC"
+      }
+    ],
+    "team_highlights": "3-person co-founding team; secured over 100 customers in 7 months since launch",
+    "product": {
+      "summary": "Cleavr is a collection automation platform where, immediately after invoicing, AI automatically identifies the contact person, chases via email and SMS, tracks payment promises, and escalates disputes. The finance team only intervenes in meaningful cases.",
+      "problem_statement": "In Europe, late payments account for about 25% of all business failures, posing a serious cash flow problem. Yet in most companies, accounts receivable management is manual, time-consuming, and scattered across multiple outdated tools.",
+      "solution": "Cleavr acts as an AI colleague for the finance team. Once an invoice is issued, the AI identifies the right contact, follows up via email and SMS, tracks payment promises, and escalates disputes. The team steps in only when necessary.",
+      "key_features": [
+        "Automatic contact identification and multi-channel follow-up (email, SMS, phone)",
+        "Payment promise tracking and automatic escalation",
+        "Integration with ERP and accounting software within 24 hours (SAP, Sage, Pennylane, etc.)",
+        "Connection to legal process partner lawyers",
+        "No setup fee or annual commitment"
+      ],
+      "tech_stack_or_innovation": "AI-based hyper-personalization: can be deployed within 24 hours, tailored to each organization, ERP, and internal process",
+      "target_customer": "European companies in logistics, transportation, manufacturing, construction, and tech (currently 100+ customers)",
+      "business_model": "Monthly subscription (no setup fee or annual commitment); deployment within 24 hours"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Competitors in the similar AR automation space. Cleavr differentiates by AI workflow and European legal/payment integration."
+        },
+        {
+          "comparison": "Similar collection automation solutions. Compared to Cleavr's AI agent approach."
+        }
+      ],
+      "key_differentiator": "Beyond existing automation tools, the concept of an 'AI colleague' that judges and acts independently. AI handles 80% of simple repetitive tasks, letting humans focus on high-value work.",
+      "moat": "Agent learning loop, deployment within 24 hours, integration with legal and payment infrastructure across Europe, monthly subscription model minimizing customer churn",
+      "competitive_position_summary": "Acquired over 100 customers in 6 European countries in 7 months, processing hundreds of billions of euros in invoices. Strengths include faster-than-average customer acquisition and high retention rate."
+    },
+    "trending_reason": {
+      "summary": "On October 6, 2026, announced an €8M seed investment. In 7 months since launch, entered 6 European countries and processes hundreds of billions of euros in invoices annually.",
+      "catalysts": [
+        "Existing collection work is repetitive, manual, and prone to human error and delays—solvable with AI agents",
+        "Severe late payment problem in Europe (cause of 25% of business failures)",
+        "AI and fintech investment boom in France and Europe"
+      ],
+      "growth_metrics": "Average DSO reduced by 37%, cash inflow increased by 40%, time spent on collections reduced by 80%",
+      "media_mentions": [
+        {
+          "source": "Cleavr official blog"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "€1M pre-seed + €8M seed. All funding rounds are disclosed.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Raised 6 months after pre-seed. Lead: Varsity."
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "European collection automation market. Specific TAM figures not confirmed.",
+      "market_trend": "Increasing business failures due to late payments in Europe, growing demand for AI-based B2B SaaS, rising need for ERP integration",
+      "growth_potential": "Expanding across Europe (launched in Spain, Germany, Belgium, Italy, UK). Growth rate of acquiring 100 customers in 7 months.",
+      "risks": [
+        "Intensifying competition from competitors like Upflow and LeanPay",
+        "Lack of independent customer case studies makes it difficult to objectively prove performance",
+        "Regulatory risks for AI agents (especially related to legal procedures)"
+      ],
+      "risk_mitigation": "Monthly subscription model lowers customer churn, risk dispersion through human intervention, legal partnerships established across Europe"
+    },
+    "related_links": [
+      {
+        "title": "Cleavr official blog (English)"
+      },
+      {
+        "title": "Cleavr About page"
+      },
+      {
+        "title": "Business Times article (French)"
+      },
+      {
+        "title": "Builders in fintech article"
+      },
+      {
+        "title": "Startuply article"
+      },
+      {
+        "title": "Varsity VC LinkedIn post"
+      }
+    ],
+    "editor_pick_comment": "The idea of handing over boring collection tasks to an AI colleague is simple, but the execution—demonstrated by rapid scalability and high customer retention in the European market—stands out."
+  },
+  "hadrian-2026": {
+    "tagline": "A security platform that continuously tests a company's external attack surface with AI agents",
+    "category": [
+      "Cybersecurity",
+      "Attack Surface Management",
+      "Penetration Testing Automation"
+    ],
+    "headquarters": {
+      "country_ko": "Netherlands"
+    },
+    "founders": [
+      {
+        "background": "Started hacking at age 12, and in his teens reported vulnerabilities to Dutch banks, Google, Microsoft, and Yahoo, earning spots on their hall of fame. Previously co-founded cryptocurrency exchange LiteBit and served as CTO, growing it to $750M in trading volume.",
+        "notable_achievement": "As CTO of LiteBit until 2019, operated a $750M platform"
+      },
+      {
+        "background": "Met Fischer in a hacking forum in 2009 and worked as a white-hat hacker. Has experience conducting security tests for major Dutch banks and global tech companies.",
+        "notable_achievement": "Performed ethical hacking since their teens"
+      },
+      {
+        "background": "Alumnus of London Business School (LBS) with Fischer, met while pursuing an MBA. Based on previous startup experience, handles business strategy.",
+        "notable_achievement": "LBS MBA graduate, co-founded Hadrian"
+      }
+    ],
+    "team_highlights": "Approx. 90 people, of which 10–15% come from ethical hacking backgrounds. Holds SOC 2 Type II and ISO 27001 certifications.",
+    "product": {
+      "summary": "Hadrian is an agentic AI offensive security platform consisting of two products: Atlas (continuous attack surface mapping) and Nova (agentic penetration testing). It continuously discovers all assets an enterprise exposes to the internet (subdomains, IPs, cloud hosts, certificates, etc.), and AI agents validate vulnerabilities like real hackers, presenting them in order of criticality.",
+      "problem_statement": "Companies deploy new code and cloud services daily, yet most rely on manual penetration testing once or twice a year. Attackers use AI to scan continuously, and companies are unaware of 30–40% of their internet-exposed assets on average. Traditional vulnerability scanners generate many false positives, making it hard for security teams to identify real threats.",
+      "solution": "Hadrian uses Atlas to map the external attack surface in real time, and Nova's AI agents perform login, business logic understanding, and attack chain linking at a human level, delivering only validated risks. Security teams receive evidence and prioritized results they can act on quickly.",
+      "key_features": [
+        "Atlas: Real-time mapping of an organization's external attack surface – automatically discovers subdomains, IPs, certificates, cloud hosts, etc., and continuously updates in response to changes",
+        "Nova: Agentic penetration testing – human-level business logic understanding, attack chain linking, outputs only validated risks",
+        "Atlas-Nova integration: Discovered assets and validation results are managed in a single platform",
+        "Zero-day response: Immediately start testing on already mapped assets",
+        "Priority-based risk report: Provides remediation steps for each validated risk, reduces Mean Time to Remediate (MTT) by up to 80%"
+      ],
+      "tech_stack_or_innovation": "Agentic AI mimics human hacker behavior, performs event-driven continuous testing. Each insight feeds back to improve future tests in a continuous learning structure.",
+      "target_customer": "CISOs and security operations teams (SOC) at mid-to-large enterprises. Currently used by 1,000+ organizations including Visma, McKesson, Crédit Agricole, Amadeus, and Francisco Partners.",
+      "business_model": "SaaS subscription-based. Pricing depends on company size and testing scope. Customers leverage existing penetration testing budgets for adoption."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "CrowdStrike is endpoint-focused, while Hadrian targets the entire internet-exposed asset landscape and is the only player with built-in agentic penetration testing."
+        },
+        {
+          "comparison": "Traditional vulnerability scanners have high false positive rates and rely on manual testing once or twice a year. Hadrian uses AI to validate and eliminate noise."
+        },
+        {
+          "comparison": "Rapid7 also provides exploit validation, but does not integrate continuous attack surface mapping and automated penetration testing into a single platform."
+        },
+        {
+          "comparison": "Cloud-based web vulnerability scanners offer similar attack surface discovery, but agent-based business logic penetration testing is limited."
+        }
+      ],
+      "key_differentiator": "The only vendor offering both continuous attack surface management (Atlas) and on-demand agentic penetration testing (Nova) in one platform. All results are unified in a single context, so security teams can switch to deeper testing without starting from scratch.",
+      "moat": "Agentic AI performs business logic understanding and attack chain linking at a real hacker level. Domain expertise from the founders (former hackers) is embedded in the AI model. Recognized as a leader by Frost & Sullivan and GigaOm, and listed in Gartner Market Guide. Already secured 1,000+ enterprise customers.",
+      "competitive_position_summary": "A frontrunner in AI-based offensive security. Simultaneously addresses false positive issues and the limitations of manual penetration testing, leading a market shift toward 'continuous testing'."
+    },
+    "trending_reason": {
+      "summary": "As AI-driven cyberattacks surge, companies realize that traditional annual or bi-annual penetration testing is insufficient for defense. Hadrian solves this with agentic AI, achieving significant funding and customer growth.",
+      "catalysts": [
+        "Rising market demand due to an increase in AI-based hacking attacks (Hadrian's own data shows companies are unaware of 30–40% of their internet-exposed assets)",
+        "$40M Series B funding in October 2026 (led by Forgepoint Capital International and SmartFin) – $65M total raised",
+        "1,000+ enterprise customers including Visma, McKesson, Crédit Agricole, Amadeus, Francisco Partners",
+        "Named leader by Frost & Sullivan and GigaOm, included in Gartner Market Guide, holds SOC 2 Type II and ISO 27001 certifications"
+      ],
+      "growth_metrics": "1,000+ customers, approx. 90 employees, 10x+ improvement in visibility, 80% faster remediation, 5x ROI vs. traditional manual penetration testing."
+    },
+    "funding": {
+      "total_raised_note": "Includes Series B $40M; previous seed/Series A undisclosed.",
+      "valuation_estimate": "$200M (est.)",
+      "latest_round": {
+        "note": "Co-led by Forgepoint Capital International and SmartFin. Existing investors HV Capital, Motive Partners, Picus Capital, Oetker Ventures also participated. Damien Henault (Forgepoint) joins the board."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Exact amount unknown. HV Capital, Motive Partners, etc., were early investors.",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Exact amount unknown. Known to have involved existing investors.",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global cybersecurity market is estimated at approx. $200B in 2026. Within that, the attack surface management and penetration testing automation market is approx. $10B (est.). Hadrian aims for 10–20% share through AI-based automated testing.",
+      "market_trend": "As AI-powered hacking attacks increase, companies are shifting from traditional annual or bi-annual penetration testing to continuous, automated security testing. Over 70% of CISOs struggle to identify exploitable real threats, fueling demand for solutions that provide validated results.",
+      "growth_potential": "Crossed 1,000 customers; using Series B funds to expand in the US and EMEA markets, and strengthen engineering and research teams. Targeting 200 employees and 3,000 customers by 2027 (est.).",
+      "risks": [
+        "Potential for large competitors (CrowdStrike, Tenable, Rapid7) to adopt AI capabilities or make acquisitions",
+        "Increased false positive rates from AI agents could erode trust",
+        "Tighter regulations (legal liability for data leaks during penetration testing)"
+      ],
+      "risk_mitigation": "Currently holds SOC 2 Type II and ISO 27001 certifications to meet strict security standards. AI agents test only within set scopes and do not allow record changes. Ongoing R&D minimizes false positive rates."
+    },
+    "related_links": [
+      {
+        "title": "Hadrian Official Site"
+      },
+      {
+        "title": "Hadrian Series B Announcement Blog"
+      },
+      {
+        "title": "Forgepoint Capital Investment Rationale"
+      },
+      {
+        "title": "CEO Rogier Fischer Interview (FinSMEs)"
+      },
+      {
+        "title": "Sifted Coverage"
+      },
+      {
+        "title": "SecurityWeek Coverage"
+      }
+    ],
+    "editor_pick_comment": "Can this AI penetration testing platform, built by founders who were teen hackers, offer a fresh alternative for CISOs looking to escape the false-positive hell of traditional scanners?"
+  },
+  "trynearby-2026": {
+    "tagline": "A subscription service that automates restaurant marketing with local creators.",
+    "category": [
+      "Local Marketing",
+      "Creator Economy",
+      "Restaurant SaaS"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Started as a YouTube creator at age 14, co-founded FaZe Clan, has 10M+ followers, and experienced Nasdaq listing ($1B valuation).",
+        "notable_achievement": "Co-founder of FaZe Clan, 10M+ followers, 15 years of creator economy experience."
+      },
+      {
+        "background": "Co-founded a social media clipping company, built infrastructure analyzing 10B+ views, UC Berkeley CS graduate, former senior engineer at WeightWatchers.",
+        "notable_achievement": "Built social media clipping infrastructure, tracked 10B+ views."
+      },
+      {
+        "background": "Co-founded the clipping company with Ahmad, early employee at Replit, former Goldman Sachs experience, Master's in Applied Economics from Johns Hopkins.",
+        "notable_achievement": "Grew consumer app ARR from $360K to $2M, early team at Replit."
+      }
+    ],
+    "team_highlights": "All founders have experience in the creator economy and social media infrastructure. YC S26 batch. Estimated team size of 11-50.",
+    "product": {
+      "summary": "For restaurants in Southern California, a subscription marketing service where local creators visit monthly and post review videos on TikTok/Instagram.",
+      "problem_statement": "Small restaurants need viral marketing on short-form platforms like TikTok, but agencies are expensive, and recruiting and negotiating with influencers is a burden. They lack the time and manpower to produce their own content.",
+      "solution": "For $399/month, an AI agent automates the entire process from matching creators to scheduling visits and publishing content. Restaurants only need to provide the food.",
+      "key_features": [
+        "AI-based creator matching and iMessage auto-management.",
+        "Monthly visits, filming, and posting by 5+ local creators.",
+        "Restaurant owner-dedicated AI assistant (provides performance reports, insights).",
+        "No minimum follower requirement; anyone can participate as a creator.",
+        "No-code onboarding, no contract, cancel anytime."
+      ],
+      "tech_stack_or_innovation": "AI agent automates all communication and scheduling between creators and restaurants via iMessage. Processes over 10,000 texts monthly.",
+      "target_customer": "Independent restaurants and small chains in Southern California (currently 120+ restaurants subscribed).",
+      "business_model": "B2B SaaS subscription: $399/month (per restaurant). Creators join for free."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A POS-centric all-in-one restaurant SaaS, but marketing automation features are indirect and lack a creator network."
+        },
+        {
+          "comparison": "An AI-based local marketing platform, but focuses on review/rating management rather than video content."
+        },
+        {
+          "name": "Local Influencer Agencies (Traditional agencies)",
+          "comparison": "Fixed cost of thousands of dollars per month, manual creator recruitment."
+        }
+      ],
+      "key_differentiator": "An AI agent automatically manages the entire creator relationship, and anyone in the local community can participate as a creator without minimum follower requirements—a 'local creator network'.",
+      "moat": "Two-sided network effects between creators and restaurants: more creators attract more restaurants, more restaurants offer creators more earning opportunities. Operational data accumulated by the AI agent is also a barrier.",
+      "competitive_position_summary": "Early stage, but with over 90% monthly retention and 37% MoM growth, it is early to capture the market. Backed by YC and angel investors for credibility."
+    },
+    "trending_reason": {
+      "summary": "Raised near-Series A seed investment right after the October 2026 YC S26 Demo Day. Demand for short-form marketing from local businesses has exploded due to TikTok’s local feed algorithm changes. Holds concrete traction of 120+ restaurants, 2,500 videos, and 35M views.",
+      "catalysts": [
+        "TikTok local feed update (2025~2026): location-based recent content gets prioritized.",
+        "Surge in media coverage and fundraising following YC Demo Day (Sept–Oct 2026)",
+        "Trend of automating creator management via AI agents.",
+        "Growing labor shortages and marketing budget pressures in the restaurant industry."
+      ],
+      "growth_metrics": "120+ paying restaurants (as of November 2026), 2,500 videos posted, 35M views (mostly within a few miles), 37% monthly growth, 90%+ monthly retention (since November 2025), and about 50% of new restaurants coming through referrals from existing members."
+    },
+    "funding": {
+      "total_raised": "Undisclosed",
+      "total_raised_note": "Confirmed seed investment (standard $500K) from YC S26 batch plus additional angel and VC investments. Exact amount not disclosed.",
+      "valuation_estimate": "$80M (est.)",
+      "latest_round": {
+        "amount": "Undisclosed",
+        "note": "Including Machine Spirit Capital, Smaiyl Makyshov, and others. Exact size not disclosed."
+      },
+      "funding_history": [
+        {
+          "note": "Y Combinator standard terms (approx. $500K). / Est."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Approximately 1M restaurants in the U.S. Restaurant digital marketing market size is approx. $35B (2026 est.). TAM: Global local business marketing $150B.",
+      "market_trend": "Short-form platforms like TikTok are emerging as primary restaurant discovery channels. Continuous content updates are essential due to local algorithm changes. Demand for marketing automation via AI agents is increasing.",
+      "growth_potential": "Demonstrates strong product-market fit with 37% MoM growth, 90%+ retention, and 50% referral rate. Estimated timing to reach annual ARR of $1M+. The market has high scalability.",
+      "risks": [
+        "Platform dependency: Performance may fluctuate with TikTok/Instagram algorithm changes.",
+        "Creator supply shortage: Difficulty securing sufficient creator pools in different regions.",
+        "Intensifying competition: Possibility of larger POS vendors (e.g., Toast) or marketing platforms launching similar features.",
+        "Review policy risk: Potential controversy over violating Google Maps' policy prohibiting incentivized reviews."
+      ],
+      "risk_mitigation": "Multi-platform strategy (can expand to YouTube Shorts besides TikTok and Instagram). Design creator compensation as ongoing incentives (cash rewards beyond free meals). Strengthen barriers for competitors through proprietary AI technology."
+    },
+    "related_links": [
+      {
+        "title": "TryNearby Official Website"
+      },
+      {
+        "title": "Y Combinator Company Page"
+      },
+      {
+        "title": "Machine Spirit Capital Investment Announcement"
+      },
+      {
+        "title": "LinkedIn Job Posting (2026-09-22)"
+      }
+    ],
+    "editor_pick_comment": "The AI agent automates creator relationships to solve a chronic bottleneck in restaurant marketing, and its 90% monthly retention demonstrates PMF."
+  },
+  "roma-2026": {
+    "tagline": "AI-powered to-do list that handles tasks automatically",
+    "category": [
+      "Productivity",
+      "AI Agent"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "background": "Co-founder of Roma (YC F26). Previously founded Loom (YC W12), acquired by Dropbox.",
+        "notable_achievement": "Founded Loom and acquisition by Dropbox (YC W12)"
+      },
+      {
+        "background": "Co-founder of Roma (YC F26). Previously founded Senic (YC S13), acquired by Gira.",
+        "notable_achievement": "Founded Senic and acquisition by Gira (YC S13)"
+      },
+      {
+        "background": "Co-founder of Roma (YC F26). Third co-founder."
+      }
+    ],
+    "team_highlights": "All three co-founders have prior experience founding and exiting YC-backed startups.",
+    "product": {
+      "summary": "Roma is a to-do list app that automatically executes tasks when users register them. Users simply describe the task, and the AI interprets it, conducts research, drafts emails, coordinates schedules, and more in the background, presenting the completed output.",
+      "problem_statement": "Traditional to-do lists only record 'what needs to be done' without helping with actual execution. AI assistants disperse tasks, leading to context loss and causing users to waste time tracking progress.",
+      "solution": "Roma retains the familiar to-do list format while offering a 'self-executing to-do list' where AI understands the task's intent and integrates with tools like Gmail, Calendar, Notion, etc., to execute it.",
+      "key_features": [
+        "When tasks are registered via natural language or voice, AI automatically organizes and begins execution.",
+        "In Operator mode, utilizes context from connected apps like email, calendar, and files.",
+        "Integrates with external AI agents such as Claude, Codex, and Cursor through MCP.",
+        "Summarizes task progress and notifies users at decision points."
+      ],
+      "tech_stack_or_innovation": "AI operates as an agent that plans, executes, and reports on tasks in multiple steps, rather than a simple reactive assistant. Supports MCP (Agent Communication Protocol) for interoperability with external agents.",
+      "target_customer": "Individual users and small teams, especially power users using multiple AI agents simultaneously, freelancers, and startup founders.",
+      "business_model": "B2C SaaS (subscription model, pricing not yet disclosed)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Traditional to-do list apps. No AI auto-execution feature."
+        },
+        {
+          "comparison": "Some AI-based smart features introduced, but lacks agent functions that automatically execute tasks like Roma."
+        },
+        {
+          "comparison": "AI-based automatic scheduling app. Focuses on schedule optimization rather than agent-based auto-execution."
+        },
+        {
+          "comparison": "Document-focused AI assistant. Roma is more specialized in to-do list auto-execution."
+        }
+      ],
+      "key_differentiator": "The to-do list itself becomes a platform for task execution. Users can control AI agents directly from the familiar list format without needing a separate chat interface.",
+      "moat": "Early experience from the Loom and Senic founding team and YC batch. Integration with the MCP-based agent ecosystem creates switching costs. Personalization increases as data and context accumulate.",
+      "competitive_position_summary": "First mover in securing core AI agent users. Strong positioning as an 'agent command center' compared to competitors."
+    },
+    "trending_reason": {
+      "summary": "Quickly gained attention in the AI agent community after its launch at YC Demo Day in October 2026. The clear value proposition of a 'self-executing to-do list' has become a trending topic, aligned with the rise of the MCP-based agent ecosystem.",
+      "catalysts": [
+        "YC F26 Demo Day (October 2026)",
+        "Rise of MCP as an inter-agent communication standard and Roma's early adoption",
+        "Credibility of the founding team from Loom"
+      ],
+      "growth_metrics": "Self-reported that some users log in daily and process dozens of tasks. Exact user count is undisclosed."
+    },
+    "funding": {
+      "total_raised_note": "Seed investment based on YC standard deal. $125k according to Dealroom.",
+      "valuation_estimate": "$500k–$750k (est.)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global productivity software market approx. $50B, AI agent market expected to grow 40% CAGR by 2030. Roma targets the personal AI agent 'control tower' segment.",
+      "market_trend": "With the explosive growth of AI agents, the need for a central hub to coordinate multiple agents is emerging. Competition in the ecosystem is intensifying as major companies like OpenAI and Anthropic launch their own agents.",
+      "growth_potential": "Early adoption is rapid thanks to the YC batch effect and quick launch. Securing agent compatibility via MCP will be key to future growth.",
+      "risks": [
+        "Possibility of native integration of similar features by big tech (Apple, Google, Microsoft)",
+        "AI safety and user trust issues (mistakes due to auto-execution)",
+        "Early stage, product-market fit uncertain"
+      ],
+      "risk_mitigation": "Agent-neutral platform strategy to prevent vendor lock-in. Build trust through reinforced user approval processes. Lightweight organization enables quick pivots."
+    },
+    "related_links": [
+      {
+        "title": "Roma Official Website"
+      },
+      {
+        "title": "YC Company Page"
+      },
+      {
+        "title": "Dealroom Profile"
+      },
+      {
+        "title": "Roma Changelog (2026-10-05)"
+      }
+    ],
+    "editor_pick_comment": "The Loom-originated team's attempt to redefine the to-do list for the AI agent era is generating strong early reactions."
+  },
+  "guava-2026": {
+    "tagline": "Enterprise voice AI agent platform controlled by code, not prompts",
+    "category": [
+      "Voice AI",
+      "AI Agent"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Former CRO of payments company Marqeta for over 10 years, leading growth from early-stage revenue to IPO",
+        "notable_achievement": "Experience taking Marqeta to IPO"
+      },
+      {
+        "background": "Engineer from NASA JPL, co-founder of Gridspace",
+        "notable_achievement": "Participated in Mars and Jupiter exploration missions, led Gridspace's voice AI research"
+      },
+      {
+        "background": "From OnLive, a cloud gaming pioneer, co-founder of Gridspace",
+        "notable_achievement": "Expertise in highly optimized streaming media and distributed computing from OnLive"
+      },
+      {
+        "background": "Over 15 years of sales and go-to-market experience targeting early-stage companies",
+        "notable_achievement": "Led two companies to acquisitions"
+      }
+    ],
+    "team_highlights": "A team combining two technical co-founders of Gridspace and a CEO formerly CRO at Marqeta. Gridspace is a voice AI research lab that has learned from over 10 billion minutes of real conversations in regulated industry call centers.",
+    "product": {
+      "summary": "An enterprise voice AI agent development platform based on a unified, self-built and operated stack encompassing all models from speech recognition to language model to speech synthesis.",
+      "problem_statement": "Existing voice AI agents combine models from multiple vendors and are controlled by prompts, making it difficult to control latency, failure modes, and release cycles, and to meet the requirements of regulated industries such as finance and healthcare.",
+      "solution": "It builds and operates its own stack combining speech recognition, language model, and speech synthesis, and provides an SDK that controls agents via business rules and code instead of prompts. Developers use Python, TypeScript, or Claude Code to integrate voice into their products.",
+      "key_features": [
+        "Single unified self-built and operated voice stack (ASR, LLM, TTS)",
+        "Code-based control (Python, TypeScript SDK)",
+        "Production voice agent can be built within 5 minutes",
+        "Enterprise customers handle their first real regulated call within 14 days",
+        "SOC 2 Type II, HITRUST, PCI DSS Level 1 certified",
+        "Public benchmark Guava Voice Index and voice model 'Daytona' released"
+      ],
+      "tech_stack_or_innovation": "Built on Gridspace's 10 years of voice AI research, its own models are constructed. Daytona ranks in the top 10 (often 1st or 2nd) on Coval's word error rate benchmark. A key feature is code-based control allowing non-specialists to manage agents.",
+      "target_customer": "Enterprises and BPO (business process outsourcing) companies, especially in regulated industries such as healthcare, insurance, finance, and government",
+      "business_model": "Usage-based pricing or enterprise subscription (est.), with a free version and dedicated sales for enterprise customers."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Uses a combination of external LLMs, in contrast to Guava's self-built unified stack. Guava shows superiority on the public benchmark GVI."
+        },
+        {
+          "comparison": "Participates in voice agent competition, trails Guava on GVI benchmark."
+        },
+        {
+          "comparison": "Voice AI agent platform targeting a similar market, differentiated by the presence of proprietary models."
+        },
+        {
+          "comparison": "Provides voice agent API, multi-vendor approach."
+        }
+      ],
+      "key_differentiator": "Single stack that builds and operates all models from ASR to TTS, code-based control (not prompts), regulated industry certifications, public benchmarks and transparent performance disclosure",
+      "moat": "Models trained on over 10 billion minutes of live conversations, Gridspace technology validated over 10 years in regulated industries, regulatory certifications like SOC 2, HITRUST, PCI DSS, full pipeline control via proprietary models.",
+      "competitive_position_summary": "As the voice AI agent market transitions from 'demo level' to 'actual regulated industry application', Guava is rapidly expanding in the early stage with its differentiators of proprietary models, code-based control, and regulatory certifications."
+    },
+    "trending_reason": {
+      "summary": "The announcement of a $12.5M seed round on November 3, 2026, and the September release of the Daytona voice model and Guava Voice Index have drawn attention.",
+      "catalysts": [
+        "2026-11-03: $12.5M seed round announced (led by Acrew Capital)",
+        "2026-09-23: Daytona voice model launch and own benchmark GVI released",
+        "2026-09: Daytona takes first place on GVI benchmark against Elon Musk's xAI Grok and ElevenLabs+GPT-5.4."
+      ],
+      "growth_metrics": "Within two months of Daytona launch, secured over 12 enterprise customers, processing tens of thousands of calls per day"
+    },
+    "funding": {
+      "total_raised_note": "The seed round announced in November 2026 is the only disclosed round; pre-seed investments are separate.",
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Participation from Commerce Ventures",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global voice AI agent market is estimated at tens of billions of dollars. SAM: Call center, BPO, customer service outsourcing market. SOM: Voice automation market in regulated industries.",
+      "market_trend": "As LLM-based voice agent technology matures, it is shifting from 'demo' to 'actual business application'. Companies are beginning to prioritize accuracy, regulatory compliance, and controllability.",
+      "growth_potential": "Differentiated by own model control and regulatory certifications. Potential for rapid growth, especially in high-value markets like BPO, healthcare, and finance.",
+      "risks": [
+        "Intensifying competition from large tech companies (GPT, Grok, etc.)",
+        "Technology standardization and price competition in voice AI market",
+        "Increased compliance costs due to regulatory changes",
+        "High R&D costs required for model development"
+      ],
+      "risk_mitigation": "Maintain technical differentiation through own models and code-based control, proactively secure regulatory certifications, build entry barriers through enterprise customer references."
+    },
+    "related_links": [
+      {
+        "title": "Guava official site"
+      },
+      {
+        "title": "Guava team introduction"
+      }
+    ],
+    "editor_pick_comment": "The team and the data that can persist in the 'inefficient' choice of all proprietary models, rather than combining models, are this company's real competitive edge."
+  }
+}

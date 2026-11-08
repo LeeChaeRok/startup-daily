@@ -335,6 +335,32 @@
         "source_name": "StartupPerks",
         "found": "2026-11-08"
       }
+    ],
+    "talkiatry-2026": [
+      {
+        "date": "2026-04-29",
+        "kind": "product",
+        "title_ko": "토키아트리 커넥트 출시",
+        "title_en": "Launches Talkiatry Connect",
+        "detail_ko": "토키아트리는 정신과 의뢰와 치료 협업을 간소화하는 플랫폼 '토키아트리 커넥트'를 출시했다.",
+        "detail_en": "Talkiatry launched Talkiatry Connect, a provider-facing referral and care collaboration platform that enables faster and more transparent psychiatric referrals.",
+        "source_url": "https://www.prnewswire.com/news-releases/talkiatry-and-new-york-cancer--blood-specialists-deliver-whole-person-care-to-oncology-patients-supported-by-talkiatry-connect-302756778.html",
+        "source_name": "PRNewswire",
+        "found": "2026-11-09"
+      }
+    ],
+    "zymergen-bio-2026": [
+      {
+        "date": "2026-08-12",
+        "kind": "acquired",
+        "title_ko": "Again에 인수됨",
+        "title_en": "Acquired by Again",
+        "detail_ko": "2026년 8월 12일, 덴마크 바이오제조 기업 Again이 Genomatica(제노마티카)를 인수했습니다. 인수 조건은 공개되지 않았습니다.",
+        "detail_en": "On August 12, 2026, Danish biomanufacturing company Again acquired Genomatica (Geno). Terms of the transaction were not disclosed.",
+        "source_url": "https://again.bio/genomatica-acquisition.pdf",
+        "source_name": "again.bio",
+        "found": "2026-11-09"
+      }
     ]
   },
   "checked": {
@@ -359,6 +385,8 @@
     "pika-2026": "2026-11-07",
     "buildots-2026": "2026-11-07",
     "form-energy-2026": "2026-11-08",
-    "legislate-2026": "2026-11-08"
+    "legislate-2026": "2026-11-08",
+    "talkiatry-2026": "2026-11-09",
+    "zymergen-bio-2026": "2026-11-09"
   }
 }
