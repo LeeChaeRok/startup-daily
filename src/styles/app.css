@@ -1205,7 +1205,7 @@ a.hero .hero__ai { display: inline-block; margin-right: 6px; padding: 0 4px; bor
 }
 .cfilters__row { display: flex; align-items: center; gap: 8px; }
 .cfilters__row + .cfilters__row { margin-top: 6px; }
-.cfilters__label { flex: none; width: 30px; font-size: 12px; font-weight: 700; color: var(--sd-ink-3); }
+.cfilters__label { flex: none; width: 52px; white-space: nowrap; font-size: 12px; font-weight: 700; color: var(--sd-ink-3); }
 .cfilters__chips {
   flex: 1; min-width: 0; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none;
   margin-right: calc(var(--sd-gutter) * -1); padding-right: var(--sd-gutter);
@@ -1312,4 +1312,51 @@ a.hero .hero__ai { display: inline-block; margin-right: 6px; padding: 0 4px; bor
     padding: 32px 0 32px 32px; border-left: 1px solid var(--sd-line);
   }
   .shell--contests > .shell__main > footer, .shell--contests .footer { grid-column: 1 / -1; }
+}
+
+/* ---- 공모전: 참가 대상, mobile filter bar ---- */
+.crow__who { white-space: nowrap; }
+.cdetail__who { display: block; font-weight: 700; }
+.cfilters__of { color: var(--sd-ink-3); font-weight: 500; }
+.cfilters__savedchip { gap: 5px; }
+.cfilters__bar-wrap { display: flex; align-items: center; gap: 12px; }
+.cfilters__bar-wrap .cfilters__bar { flex: 1; }
+.cfilters__chips--wrap { flex-wrap: wrap; overflow: visible; margin-right: 0; padding-right: 0; gap: 8px; }
+.cfilters__chips--wrap .cchip { height: 40px; }
+.cfilters__hint { font-size: 13px; color: var(--sd-ink-3); margin: 0 0 12px; line-height: 1.5; }
+
+/* phones: one row of buttons; each opens its options in a sheet */
+.cfilters--m { padding-top: 10px; padding-bottom: 0; border-bottom: 1px solid var(--sd-line); }
+.cfilters__pills {
+  display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none;
+  margin-right: calc(var(--sd-gutter) * -1); padding-right: var(--sd-gutter);
+}
+.cfilters__pills::-webkit-scrollbar { display: none; }
+.cpill {
+  flex: none; display: inline-flex; align-items: center; gap: 5px; height: 36px; padding: 0 10px 0 12px;
+  border: 1px solid var(--sd-line-ui); border-radius: var(--sd-radius-1); background: transparent;
+  color: var(--sd-ink-2); font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap;
+}
+.cpill svg { color: var(--sd-ink-3); }
+.cpill.is-set { background: var(--sd-ink); border-color: var(--sd-ink); color: var(--sd-on-ink); }
+.cpill.is-set svg { color: var(--sd-on-ink); }
+.cpill.is-set .cpill__k { opacity: 0.75; }
+.cpill__v { font-weight: 700; max-width: 9em; overflow: hidden; text-overflow: ellipsis; }
+.cfilters--m .cfilters__bar { min-height: 48px; margin-top: 4px; }
+.sheet--cfilter .sheet__body { padding-bottom: 20px; }
+
+@media (max-width: 1023px) {
+  .contests__head .issue-head__title { font-size: 28px; }
+  .contests__sub { font-size: 14px; margin-top: 4px; }
+  .crows__group { padding-top: 18px; }
+  /* title gets the full width; prize sits under it, then host · topic · who */
+  .crow__btn { grid-template-columns: 44px minmax(0, 1fr); row-gap: 4px; padding: 14px 8px 13px; }
+  .crow__dday { grid-row: 1 / span 3; }
+  .crow__body { display: contents; }
+  .crow__title { grid-column: 2; grid-row: 1; }
+  .crow__prize { grid-column: 2; grid-row: 2; flex-direction: row; align-items: baseline; gap: 6px; min-width: 0; padding-top: 0; text-align: left; }
+  .crow__amount { font-size: 15px; }
+  .crow__plabel { margin-top: 0; }
+  .crow__meta { grid-column: 2; grid-row: 3; gap: 2px 10px; }
+  .crow__host { max-width: 11em; }
 }

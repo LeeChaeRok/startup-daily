@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import Icon from '../components/Icon.jsx'
 import Sheet from '../components/Sheet.jsx'
 import { EmptyState } from '../components/bits.jsx'
@@ -7,11 +7,11 @@ import { currentEntry } from '../lib/nav.js'
 import { L } from '../lib/i18n.js'
 import { monthDay } from '../lib/format.js'
 import {
-  PRIZES, TOPICS, daysLeft, ddayLabel, deadlineGroup, isStartupTopic, prizeByKey, prizeCell, prizeValue,
-  today, topicColor, topicOf, useContests, useSavedContests, won,
+  PRIZES, TOPICS, WHOS, daysLeft, ddayLabel, deadlineGroup, isStartupTopic, prizeByKey, prizeCell, prizeValue,
+  today, topicColor, topicOf, useContests, useSavedContests, whoByKey, whoLabel, won,
 } from '../lib/contests.js'
 
-/* #/contests?topic=a,b&prize=3m&sort=prize&saved=1&c=<id>
+/* #/contests?who=univ&topic=a,b&prize=3m&sort=prize&saved=1&c=<id>
    Filters live in the URL (replace), like 탐색. Opening a contest pushes ?c= on phones,
    so the back gesture closes the sheet; on desktop it fills the right pane. */
 
@@ -28,6 +28,7 @@ function readParams(params) {
   const topics = (params.get('topic') || '').split(',').filter((t) => TOPICS.some((x) => x.key === t))
   return {
     topics,
+    who: whoByKey(params.get('who')).key,
     prize: prizeByKey(params.get('prize')).key,
     sort: SORTS.some((s) => s.key === params.get('sort')) ? params.get('sort') : 'deadline',
     savedOnly: params.get('saved') === '1',
@@ -45,6 +46,7 @@ export default function Contests({ params, desktop }) {
     const next = { ...f, ...patch }
     navigate(
       `/contests${buildQuery({
+        who: next.who === 'all' ? null : next.who,
         topic: next.topics,
         prize: next.prize === 'all' ? null : next.prize,
         sort: next.sort === 'deadline' ? null : next.sort,
@@ -57,12 +59,17 @@ export default function Contests({ params, desktop }) {
 
   // closed contests drop off by the reader's own date
   const open = useMemo(() => (doc ? doc.items.filter((c) => c.deadline >= now) : []), [doc, now])
-  const byTopic = (c) => !f.topics.length || f.topics.includes(c.topic)
-  const byPrize = prizeByKey(f.prize).test
-  const bySaved = (c) => !f.savedOnly || isSaved(c.id)
+  // one predicate per filter; each chip's count applies every filter but its own
+  const preds = {
+    who: whoByKey(f.who).test,
+    topic: (c) => !f.topics.length || f.topics.includes(c.topic),
+    prize: prizeByKey(f.prize).test,
+    saved: (c) => !f.savedOnly || isSaved(c.id),
+  }
+  const except = (dim) => open.filter((c) => Object.entries(preds).every(([k, p]) => k === dim || p(c)))
 
   const list = useMemo(() => {
-    const xs = open.filter((c) => byTopic(c) && byPrize(c) && bySaved(c))
+    const xs = open.filter((c) => Object.values(preds).every((p) => p(c)))
     const startupFirst = (c) => (f.topics.length || isStartupTopic(c.topic) ? 0 : 1)
     if (f.sort === 'prize') return xs.sort((a, b) => prizeValue(b) - prizeValue(a) || a.deadline.localeCompare(b.deadline))
     if (f.sort === 'new') return xs.sort((a, b) => b.posted.localeCompare(a.posted) || a.deadline.localeCompare(b.deadline))
@@ -101,7 +108,7 @@ export default function Contests({ params, desktop }) {
 
   const selected = open.find((c) => c.id === f.sel) || (desktop ? list[0] : null)
   const closingThisWeek = open.filter((c) => daysLeft(c.deadline, now) <= 6).length
-  const filtered = f.topics.length || f.prize !== 'all' || f.savedOnly
+  const filtered = f.topics.length || f.prize !== 'all' || f.who !== 'all' || f.savedOnly
   const savedCount = open.filter((c) => isSaved(c.id)).length
 
   const pick = (c) => go({ sel: c.id }, { push: !desktop })
@@ -125,21 +132,15 @@ export default function Contests({ params, desktop }) {
               </>,
             )}
           </p>
-          <p className="contests__src">
-            {L(
-              `${doc.sources.join('·')}에 올라온 공고를 모아, 같은 공모전은 하나로 합쳤습니다.`,
-              `Collected from ${doc.sources.length} Korean listing sites, one row per contest. Contest details are in Korean.`,
-            )}
-          </p>
         </header>
 
-        <Filters f={f} open={open} byTopic={byTopic} byPrize={byPrize} bySaved={bySaved} go={go} count={list.length} filtered={filtered} savedCount={savedCount} />
+        <Filters f={f} open={open} except={except} go={go} count={list.length} filtered={filtered} savedCount={savedCount} desktop={desktop} />
 
         {list.length === 0 ? (
           <p className="contests__empty">
             {f.savedOnly && !savedCount
               ? L('저장한 공모전이 없어요. 공모전을 열어 저장해 보세요.', 'Nothing saved yet. Open a contest to save it.')
-              : L('조건에 맞는 공모전이 없어요. 상금 조건을 낮추거나 주제를 더 골라 보세요.', 'No contests match. Lower the prize or add topics.')}
+              : L('조건에 맞는 공모전이 없어요. 조건을 하나씩 풀어 보세요.', 'No contests match. Try loosening a filter.')}
           </p>
         ) : (
           <ContestList list={list} sort={f.sort} selectedId={desktop ? selected?.id : null} onPick={pick} now={now} />
@@ -147,8 +148,8 @@ export default function Contests({ params, desktop }) {
 
         <p className="contests__trust">
           {L(
-            '상금과 주제는 공고문에서 자동으로 뽑았습니다. 금액·자격·마감은 접수 전에 원문에서 꼭 확인하세요.',
-            'Prizes and topics are extracted automatically. Check the amount, eligibility and deadline in the original notice before applying.',
+            `${doc.sources.join('·')}에 올라온 공고를 모아 같은 공모전은 하나로 합쳤습니다. 상금·주제·참가 대상은 공고문에서 자동으로 뽑았으니, 접수 전에 원문에서 꼭 확인하세요.`,
+            `Collected from ${doc.sources.length} Korean listing sites, one row per contest; details are in Korean. Prizes, topics and eligibility are extracted automatically, so check the original notice before applying.`,
           )}
         </p>
       </div>
@@ -188,82 +189,189 @@ export default function Contests({ params, desktop }) {
   )
 }
 
-/* ---------- Filters: topic (several) × prize (one), counts cross-applied ---------- */
+/* ---------- Filters: who (one) × topic (several) × prize (one), counts cross-applied.
+   Desktop shows every option as chip rows; phones get one row of buttons, each opening
+   its options in a bottom sheet, so the list starts near the top of the screen. ---------- */
 
-function Filters({ f, open, byTopic, byPrize, bySaved, go, count, filtered, savedCount }) {
-  const inPrize = open.filter((c) => byPrize(c) && bySaved(c))
-  const inTopic = open.filter((c) => byTopic(c) && bySaved(c))
+function useGroups({ f, except, go }) {
+  const inWho = except('who')
+  const inTopic = except('topic')
+  const inPrize = except('prize')
   const topicCount = {}
-  inPrize.forEach((c) => (topicCount[c.topic] = (topicCount[c.topic] || 0) + 1))
-  const present = new Set(open.map((c) => c.topic))
-
+  inTopic.forEach((c) => (topicCount[c.topic] = (topicCount[c.topic] || 0) + 1))
   const flipTopic = (key) => go({ topics: f.topics.includes(key) ? f.topics.filter((t) => t !== key) : [...f.topics, key], sel: null })
+  const topicName = f.topics.length ? (f.topics.length === 1 ? TOPICS.find((t) => t.key === f.topics[0])?.short : L(`${TOPICS.find((t) => t.key === f.topics[0])?.short} 외 ${f.topics.length - 1}`, `${f.topics.length} topics`)) : null
+
+  return [
+    {
+      key: 'who',
+      label: L('참가 대상', 'Who'),
+      value: f.who === 'all' ? null : whoByKey(f.who).label,
+      reset: () => go({ who: 'all', sel: null }),
+      options: WHOS.map((w) => ({
+        key: w.key,
+        label: w.label,
+        n: inWho.filter(w.test).length,
+        on: f.who === w.key,
+        pick: () => go({ who: f.who === w.key ? 'all' : w.key, sel: null }),
+      })),
+    },
+    {
+      key: 'topic',
+      label: L('주제', 'Topic'),
+      multi: true,
+      value: topicName,
+      reset: () => go({ topics: [], sel: null }),
+      options: [
+        { key: 'all', label: L('전체', 'All'), n: inTopic.length, on: !f.topics.length, pick: () => go({ topics: [], sel: null }) },
+        ...TOPICS.map((t) => ({
+          key: t.key,
+          label: t.short,
+          color: topicColor(t.key),
+          n: topicCount[t.key] || 0,
+          on: f.topics.includes(t.key),
+          pick: () => flipTopic(t.key),
+        })),
+      ],
+    },
+    {
+      key: 'prize',
+      label: L('상금', 'Prize'),
+      value: f.prize === 'all' ? null : prizeByKey(f.prize).label,
+      reset: () => go({ prize: 'all', sel: null }),
+      options: PRIZES.map((p) => ({
+        key: p.key,
+        label: p.label,
+        n: inPrize.filter(p.test).length,
+        on: f.prize === p.key,
+        pick: () => go({ prize: f.prize === p.key ? 'all' : p.key, sel: null }),
+      })),
+    },
+  ]
+}
+
+function Chips({ group, wrap }) {
+  return (
+    <div className={`cfilters__chips ${wrap ? 'cfilters__chips--wrap' : ''}`} role="group" aria-label={group.label}>
+      {group.options.map((o) => (
+        <button
+          key={o.key}
+          type="button"
+          className="chip cchip"
+          aria-pressed={o.on}
+          disabled={!o.n && !o.on}
+          onClick={o.pick}
+          style={o.color ? { '--c': o.color } : undefined}
+        >
+          {o.color && <span className="cchip__sw" aria-hidden="true" />}
+          {o.label} <span className="cchip__n mono">{o.n}</span>
+        </button>
+      ))}
+    </div>
+  )
+}
+
+function Filters({ f, open, except, go, count, filtered, savedCount, desktop }) {
+  const groups = useGroups({ f, except, go })
+  const [sheet, setSheet] = useState(null)
+  const active = groups.find((g) => g.key === sheet)
+  const clear = () => go({ who: 'all', topics: [], prize: 'all', savedOnly: false, sel: null })
+
+  const bar = (
+    <div className="cfilters__bar">
+      <span className="cfilters__count" aria-live="polite">
+        <strong className="num">{count}</strong>
+        {L('건', count === 1 ? ' contest' : ' contests')}
+        {count !== open.length && <span className="cfilters__of">{L(` / ${open.length}`, ` of ${open.length}`)}</span>}
+      </span>
+      {filtered && (
+        <button type="button" className="cfilters__reset" onClick={clear}>
+          {L('필터 해제', 'Clear')}
+        </button>
+      )}
+      <label className="sr-only" htmlFor="cf-sort">
+        {L('정렬', 'Sort')}
+      </label>
+      <select id="cf-sort" className="cfilters__sort" value={f.sort} onChange={(e) => go({ sort: e.target.value })}>
+        {SORTS.map((s) => (
+          <option key={s.key} value={s.key}>
+            {s.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  )
+
+  const saved = savedCount > 0 && (
+    <button type="button" className="chip cchip cfilters__savedchip" aria-pressed={f.savedOnly} onClick={() => go({ savedOnly: !f.savedOnly, sel: null })}>
+      <Icon name={f.savedOnly ? 'bookmarkFill' : 'bookmark'} size={14} />
+      {L(`저장 ${savedCount}`, `Saved ${savedCount}`)}
+    </button>
+  )
+
+  if (desktop) {
+    return (
+      <div className="cfilters">
+        {groups.map((g) => (
+          <div className="cfilters__row" key={g.key}>
+            <span className="cfilters__label">{g.label}</span>
+            <Chips group={g} />
+          </div>
+        ))}
+        <div className="cfilters__bar-wrap">
+          {saved}
+          {bar}
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div className="cfilters">
-      <div className="cfilters__row">
-        <span className="cfilters__label" id="cf-topic">
-          {L('주제', 'Topic')}
-        </span>
-        <div className="cfilters__chips" role="group" aria-labelledby="cf-topic">
-          <button type="button" className="chip cchip" aria-pressed={!f.topics.length} onClick={() => go({ topics: [], sel: null })}>
-            {L('전체', 'All')} <span className="cchip__n mono">{inPrize.length}</span>
+    <div className="cfilters cfilters--m">
+      <div className="cfilters__pills">
+        {groups.map((g) => (
+          <button key={g.key} type="button" className={`cpill ${g.value ? 'is-set' : ''}`} aria-haspopup="dialog" onClick={() => setSheet(g.key)}>
+            <span className="cpill__k">{g.label}</span>
+            {g.value && <span className="cpill__v">{g.value}</span>}
+            <Icon name="chevronDown" size={14} />
           </button>
-          {TOPICS.filter((t) => present.has(t.key)).map((t) => {
-            const n = topicCount[t.key] || 0
-            const on = f.topics.includes(t.key)
-            return (
-              <button key={t.key} type="button" className="chip cchip" aria-pressed={on} disabled={!n && !on} onClick={() => flipTopic(t.key)} style={{ '--c': topicColor(t.key) }}>
-                <span className="cchip__sw" aria-hidden="true" />
-                {t.short} <span className="cchip__n mono">{n}</span>
+        ))}
+        {saved}
+      </div>
+      {bar}
+      <Sheet
+        open={!!active}
+        onClose={() => setSheet(null)}
+        title={active?.label || ''}
+        className="sheet--cfilter"
+        footer={
+          active && (
+            <>
+              <button type="button" className="btn btn--secondary" onClick={active.reset} disabled={!active.value}>
+                {L('초기화', 'Reset')}
               </button>
-            )
-          })}
-        </div>
-      </div>
-      <div className="cfilters__row">
-        <span className="cfilters__label" id="cf-prize">
-          {L('상금', 'Prize')}
-        </span>
-        <div className="cfilters__chips" role="group" aria-labelledby="cf-prize">
-          {PRIZES.map((p) => {
-            const n = inTopic.filter(p.test).length
-            const on = f.prize === p.key
-            return (
-              <button key={p.key} type="button" className="chip cchip" aria-pressed={on} disabled={!n && !on} onClick={() => go({ prize: on ? 'all' : p.key, sel: null })}>
-                {p.label} <span className="cchip__n mono">{n}</span>
+              <button type="button" className="btn btn--primary" onClick={() => setSheet(null)}>
+                {L(
+                  <>
+                    <span className="num">{count}</span>건 보기
+                  </>,
+                  <>
+                    Show <span className="num">{count}</span>
+                  </>,
+                )}
               </button>
-            )
-          })}
-        </div>
-      </div>
-      <div className="cfilters__bar">
-        <span className="cfilters__count" aria-live="polite">
-          <strong className="num">{count}</strong>
-          {L('건', count === 1 ? ' contest' : ' contests')}
-        </span>
-        {savedCount > 0 && (
-          <label className="cfilters__saved">
-            <input type="checkbox" checked={f.savedOnly} onChange={(e) => go({ savedOnly: e.target.checked, sel: null })} />
-            {L(`저장한 것 ${savedCount}`, `Saved ${savedCount}`)}
-          </label>
+            </>
+          )
+        }
+      >
+        {active && (
+          <>
+            {active.multi && <p className="cfilters__hint">{L('여러 개를 고를 수 있어요.', 'Pick as many as you like.')}</p>}
+            {active.key === 'who' && <p className="cfilters__hint">{L('고른 대상이 참가할 수 있는 공모전이에요. 누구나 참가하는 공모전도 함께 나와요.', 'Contests this group can enter, including ones open to everyone.')}</p>}
+            <Chips group={active} wrap />
+          </>
         )}
-        {filtered && (
-          <button type="button" className="cfilters__reset" onClick={() => go({ topics: [], prize: 'all', savedOnly: false, sel: null })}>
-            {L('필터 해제', 'Clear')}
-          </button>
-        )}
-        <label className="sr-only" htmlFor="cf-sort">
-          {L('정렬', 'Sort')}
-        </label>
-        <select id="cf-sort" className="cfilters__sort" value={f.sort} onChange={(e) => go({ sort: e.target.value })}>
-          {SORTS.map((s) => (
-            <option key={s.key} value={s.key}>
-              {s.label}
-            </option>
-          ))}
-        </select>
-      </div>
+      </Sheet>
     </div>
   )
 }
@@ -320,6 +428,7 @@ function ContestRow({ c, selected, onPick, now }) {
               <span className="cchip__sw" aria-hidden="true" />
               {topicOf(c.topic).short}
             </span>
+            {c.who?.length > 0 && !c.who.includes('any') && <span className="crow__who">{whoLabel(c)}</span>}
             {fresh && <span className="crow__new">{L('새로', 'New')}</span>}
           </span>
         </span>
@@ -368,7 +477,10 @@ function ContestFacts({ c, now }) {
       <dl className="cdetail__facts">
         <div>
           <dt>{L('참가 대상', 'Who can enter')}</dt>
-          <dd>{c.target || L('공고에 없음', 'Not stated')}</dd>
+          <dd>
+            {c.who?.length > 0 && <strong className="cdetail__who">{whoLabel(c)}</strong>}
+            {c.target && !/^(기타|제한\s*없음|대상 제한 없음)$/.test(c.target) ? c.target : !c.who?.length && L('공고에 없음', 'Not stated')}
+          </dd>
         </div>
         <div>
           <dt>{L('올라온 곳', 'Listed on')}</dt>

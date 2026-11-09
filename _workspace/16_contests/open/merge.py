@@ -117,6 +117,7 @@ for x in rows:
     if k in merged:
         m=merged[k]
         m['sites'].append({'site':x['site'],'url':x['url'],'posted':x.get('posted')})
+        if r['target'] and r['target'] not in m['targets']: m['targets'].append(r['target'])
         m['posted']=min(m['posted'],r['posted'])
         for f in ('prize_top','prize_total','prize_band'):
             if m[f] is None and r[f] is not None: m[f]=r[f]
@@ -125,6 +126,7 @@ for x in rows:
         if len(r['prize_raw'])>len(m['prize_raw']): m['prize_raw']=r['prize_raw']
     else:
         r['sites']=[{'site':x['site'],'url':x['url'],'posted':x.get('posted')}]
+        r['targets']=[r['target']] if r['target'] else []
         r['topic']=topic(x); r['kind']=kind(x)
         merged[k]=r
 items=sorted(merged.values(),key=lambda r:(r['posted'],r['prize_top'] or r['prize_total'] or 0),reverse=True)

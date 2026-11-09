@@ -6,6 +6,7 @@ Only 공모전 rows are exported; rows already closed on <updated> are dropped
 (the app also hides rows that close later, by the viewer's date).
 """
 import hashlib
+import re
 import json
 import sys
 from pathlib import Path
@@ -14,6 +15,28 @@ src, out, updated = sys.argv[1], sys.argv[2], sys.argv[3]
 data = json.loads(Path(src).read_text())
 
 SITES = ["링커리어", "위비티", "씽굿", "콘테스트코리아", "캠퍼스픽", "올콘"]
+
+
+# 참가 대상 → groups the app filters on. "any" = open to everyone; [] = not stated.
+WHO = [
+    ("any", r"제한\s*없|누구나|전\s*국민|전\s*연령|연령\s*무관"),
+    ("kid", r"유치원|어린이|초등|아동"),
+    ("teen", r"청소년|중학|고등학|고교"),
+    ("univ", r"대학|학부|재학생|휴학생"),
+    ("adult", r"일반인|직장인|성인|만\s*1[89]\s*세\s*이상|창업|입사|시민|국민|주민|도민|구민|군민"),
+]
+
+
+def who(texts):
+    t = " ".join(texts)
+    keys = [k for k, rx in WHO if re.search(rx, t)]
+    return ["any"] if "any" in keys else keys
+
+
+def best_target(texts):
+    # the most specific wording: skip bare "기타"/"제한없음", prefer the longest that fits
+    good = [t for t in texts if t and not re.fullmatch(r"\s*(기타|제한\s*없음|대상 제한 없음)(,\s*기타)?\s*", t)]
+    return max(good, key=len)[:80] if good else (texts[0] if texts else "")
 
 
 def cid(it):
@@ -31,7 +54,8 @@ for it in data["items"]:
         "host": it.get("host") or "",
         "posted": it["posted"],
         "deadline": it["deadline"],
-        "target": it.get("target") or "",
+        "target": best_target(it.get("targets") or [it.get("target") or ""]),
+        "who": who(it.get("targets") or [it.get("target") or ""]),
         "topic": it["topic"],
         "prize_top": it.get("prize_top"),
         "prize_total": it.get("prize_total"),

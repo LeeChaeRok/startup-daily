@@ -63,6 +63,29 @@ export const topicOf = (key) => TOPIC[key] || TOPIC['기타']
 export const topicColor = (key) => (topicOf(key).hue ? `var(--sd-sector-${topicOf(key).hue})` : 'var(--sd-ink-3)')
 export const isStartupTopic = (key) => key === TOPICS[0].key || key === TOPICS[1].key
 
+/* ---------- Who can enter ---------- */
+
+// c.who: ['any'] = open to everyone, else some of kid/teen/univ/adult, [] = not stated.
+// A group filter keeps contests that group can enter, so open-to-all ones stay in.
+const WHO_LABEL = {
+  kid: L('어린이', 'Kids'),
+  teen: L('청소년', 'Teens'),
+  univ: L('대학생', 'Students'),
+  adult: L('일반인', 'Adults'),
+}
+export const WHOS = [
+  { key: 'all', label: L('전체', 'Anyone'), test: () => true },
+  { key: 'univ', label: L('대학(원)생', 'University'), test: (c) => c.who?.includes('any') || c.who?.includes('univ') },
+  { key: 'adult', label: L('일반인·직장인', 'Adults'), test: (c) => c.who?.includes('any') || c.who?.includes('adult') },
+  { key: 'teen', label: L('청소년', 'Teens'), test: (c) => c.who?.includes('any') || c.who?.includes('teen') },
+  { key: 'kid', label: L('어린이', 'Kids'), test: (c) => c.who?.includes('any') || c.who?.includes('kid') },
+  { key: 'open', label: L('제한 없는 것만', 'Open to all only'), test: (c) => c.who?.includes('any') },
+]
+export const whoByKey = (key) => WHOS.find((w) => w.key === key) || WHOS[0]
+/** Short audience label for a row: 누구나, or 대학생·일반인. */
+export const whoLabel = (c) =>
+  c.who?.includes('any') ? L('누구나', 'Anyone') : (c.who || []).map((k) => WHO_LABEL[k]).filter(Boolean).join('·')
+
 /* ---------- Prize ---------- */
 
 /** The number a contest is ranked by: 1st prize, else the total. */
