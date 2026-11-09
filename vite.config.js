@@ -19,7 +19,7 @@ import { groupByDate, readAll, readEn } from './scripts/lib/store.mjs'
      data/pool/…                the same over the whole sector pool, for ?preview=pool while the
                                 pool is not public yet (src/data/pool-config.json, _workspace/14 §1-5) */
 const DATA_DIR = path.resolve(import.meta.dirname, 'src/data')
-const DATA_FILES = ['corrections.json', 'korea-lens-index.json', 'korea-lens.json', 'meta.json', 'updates.json']
+const DATA_FILES = ['contests.json', 'corrections.json', 'korea-lens-index.json', 'korea-lens.json', 'meta.json', 'updates.json']
 const readData = (name, fallback) => {
   try {
     return JSON.parse(fs.readFileSync(path.join(DATA_DIR, name), 'utf8'))

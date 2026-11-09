@@ -38,6 +38,7 @@ function Wordmark() {
 const NAV = [
   { key: 'issue', href: '#/', label: L('최신 호', 'Latest'), icon: 'today' },
   { key: 'explore', href: '#/explore', label: L('탐색', 'Explore'), icon: 'explore' },
+  { key: 'contests', href: '#/contests', label: L('공모전', 'Contests'), icon: 'trophy' },
   { key: 'saved', href: '#/saved', label: L('저장', 'Saved'), icon: 'bookmark' },
 ]
 

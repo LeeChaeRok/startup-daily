@@ -14,6 +14,7 @@ import About from './screens/About.jsx'
 import Settings from './screens/Settings.jsx'
 import Weekly from './screens/Weekly.jsx'
 import Sector from './screens/Sector.jsx'
+import Contests from './screens/Contests.jsx'
 import { SECTORS, byDate, byId, canonicalSector, dates, issueNo, retryDay, useDayLevel, weeks } from './lib/data.js'
 import { navigate, useMediaQuery, useReadLog, useRoute } from './lib/hooks.js'
 import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
@@ -30,6 +31,7 @@ function resolve({ parts, params }) {
   if (head === 's' && byId(arg)) return { kind: 'detail', id: arg, from: params.get('from'), section: params.get('from') === 'saved' ? 'saved' : 'issue' }
   if (head === 'explore') return { kind: 'explore', section: 'explore' }
   if (head === 'saved') return { kind: 'saved', section: 'saved' }
+  if (head === 'contests') return { kind: 'contests', section: 'contests' }
   if (head === 'about') return { kind: 'about', section: 'about' }
   if (head === 'settings') return { kind: 'settings', section: 'about' }
   if (head === 'w' && weeks.some((w) => w.key === arg)) return { kind: 'weekly', week: arg, section: 'explore' }
@@ -42,6 +44,7 @@ function titleFor(r) {
   if (r.kind === 'detail') return `${byId(r.id).name_ko} — Startup Daily`
   if (r.kind === 'explore') return `${L('탐색', 'Explore')} — Startup Daily`
   if (r.kind === 'saved') return `${L('저장함', 'Saved')} — Startup Daily`
+  if (r.kind === 'contests') return `${L('공모전', 'Contests')} — Startup Daily`
   if (r.kind === 'about') return `${L('소개·선정 기준', 'About and how we pick')} — Startup Daily`
   if (r.kind === 'settings') return `${L('설정', 'Settings')} — Startup Daily`
   if (r.kind === 'weekly') return `${L(`${weekLabel(r.week)} 주간 정리`, weekLabel(r.week))} — Startup Daily`
@@ -260,6 +263,7 @@ export default function App() {
       )
   else if (route.kind === 'explore') content = <Explore params={loc.params} desktop={desktop} />
   else if (route.kind === 'saved') content = <Saved params={loc.params} />
+  else if (route.kind === 'contests') content = <Contests params={loc.params} desktop={desktop} />
   else if (route.kind === 'about') content = <About params={loc.params} />
   else if (route.kind === 'settings') content = <Settings />
   else if (route.kind === 'weekly') content = <Weekly week={route.week} />
