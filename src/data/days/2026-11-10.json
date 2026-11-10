@@ -1,0 +1,4616 @@
+[
+  {
+    "sector": "health",
+    "name_en": "Dren Bio",
+    "name_ko": "드렌 바이오",
+    "tagline": "희귀 혈액암 표적 항체 치료제 개발 임상 단계 바이오텍",
+    "category": [
+      "신약 개발",
+      "항체 치료제",
+      "희귀 혈액암"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "San Carlos",
+      "country": "USA",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series C",
+    "employee_count": "51-200",
+    "website": "https://www.drenbio.com",
+    "founders": [
+      {
+        "name_en": "Nenad Tomasevic",
+        "name_ko": "네나드 토마세비치",
+        "role": "CEO 및 창업자",
+        "background": "세르비아 출신, 베오그라드 대학교 박사, NIH 박사후 연구원, Allakos 연구 부사장 역임",
+        "notable_achievement": "Dren Bio 창업 및 3억5천만 달러 투자 유치, Sanofi에 플랫폼 기술 라이선스 계약 체결"
+      }
+    ],
+    "team_highlights": "",
+    "product": {
+      "summary": "Dibotatug (DR-01)은 CD94를 표적으로 하는 최초의 항체 치료제로, 병원성 세포독성 T세포를 선택적으로 제거해 면역계를 보존하면서 희귀 혈액암을 치료한다.",
+      "problem_statement": "세포독성 T세포 림프종(CTL) 및 대과립 림프구성 백혈병(LGLL)은 승인된 치료제가 없고 예후가 매우 나쁘다.",
+      "solution": "Dibotatug는 CD94에 결합해 병원성 세포를 선택적으로 고갈시키며, 임상 1/2상에서 300명 이상 환자 투약 결과 높은 반응률과 안전성을 입증했다.",
+      "key_features": [
+        "First-in-class CD94 표적 항체",
+        "선택적 병원성 세포 고갈로 면역계 보존",
+        "임상 1/2상에서 높은 완전관해율 및 안전성",
+        "CTL 및 LGLL 외 재생불량성 빈혈, 자가면역질환으로 적응증 확대 중"
+      ],
+      "tech_stack_or_innovation": "Targeted Myeloid Engager and Phagocytosis Platform: 골수세포에 선택적으로 발현하는 새로운 식세포 수용체를 표적하는 다중특이성 항체 기술. 이 플랫폼은 기존 T세포 관여제 및 ADC보다 안전한 치료 지수를 제공할 수 있음.",
+      "target_customer": "세포독성 T세포 림프종, 대과립 림프구성 백혈병 환자 및 재생불량성 빈혈, 자가면역질환 환자",
+      "business_model": "자체 연구개발 및 상업화, 또는 대형 제약사와의 파트너십을 통한 기술 이전 및 마일스톤 수익"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [],
+      "key_differentiator": "최초의 CD94 표적 항체로, 병원성 세포를 선택적으로 제거해 기존 면역항암제 대비 안전성 우위 확보. 식세포 수용체를 활용한 독특한 작용 기전.",
+      "moat": "독자적인 Targeted Myeloid Engager and Phagocytosis Platform 기술, Sanofi의 $600M 선불금 기술 인수로 검증됨. 대규모 투자 유치로 자금력 확보.",
+      "competitive_position_summary": "CTL 및 LGLL 분야 첫 승인을 목표로 하며, 현재 승인된 치료제가 없어 선점 효과 기대. 플랫폼 기술을 통해 다양한 적응증으로 확장 가능."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월, 3억5천만 달러의 대규모 투자 유치와 함께 dibotatug의 허가 준비 및 상업화 계획 발표. 임상 1/2상 긍정적 데이터로 승인 가능성 높아짐.",
+      "catalysts": [
+        "3억5천만 달러 규모 오버서브스크라이브 투자 유치 (2026년 10월)",
+        "임상 1/2상 주요 데이터 독립적 검토 발표 예정 (2026년 12월)",
+        "Sanofi의 플랫폼 기술 인수 (2025년) 통한 기술 검증"
+      ],
+      "growth_metrics": "임상 1/2상에서 300명 이상 환자 투약, 높은 완전관해율 및 반응률 (구체적 수치는 발표 예정)",
+      "media_mentions": [
+        {
+          "source": "Dren Bio (보도자료)",
+          "title": "Dren Bio Announces Closing of $350 Million Private Financing",
+          "url": "https://www.drenbio.com/assets/pdf/Dren%20Bio%20Series%20A%20Financing%20Press%20Release-29Oct2026.pdf",
+          "date": "2026-10-29",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "BioSpace",
+          "title": "Dren Bio lands $350M to push rare blood cancer therapy toward market",
+          "url": "https://www.biospace.com/drug-development/dren-bio-lands-350m-to-push-rare-blood-cancer-therapy-toward-market",
+          "date": "2026-10-29",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "citybiz",
+          "title": "Dren Bio Raises $350M to Advance Antibody Therapeutics",
+          "url": "https://www.citybiz.co/article/926989/dren-bio-raises-350m-to-advance-antibody-therapeutics/",
+          "date": "2026-10-29",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Axios",
+          "title": "Dren Bio's $350m haul, Aspen IPO, Eversana deal",
+          "url": "https://www.axios.com/pro/biotech-deals/2026/10/31/biotech-deals-week",
+          "date": "2026-10-31",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "BioCentury",
+          "title": "Juvia, Lightspeed lead Dren's $350M round as oncology program advances: Venture Report",
+          "url": "https://www.biocentury.com/article/661375/juvia-lightspeed-lead-dren-s-350m-round-as-oncology-program-advances-venture-report",
+          "date": "2026-10-29",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$475M",
+      "total_raised_note": "Series A $60M (2020), Series B $65M (2022), Series C $350M (2026). 일부 출처는 총 $500M 이상으로 추정.",
+      "total_raised_usd": 475000000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series C",
+        "amount": "$350M",
+        "note": "Oversubscribed round; 자금 용도: dibotatug 후기 임상, 규제 제출, 상업화 준비. 신규 투자자: Juvia Group, Lightspeed Venture Partners, Mirae Asset Capital Life Science, General Catalyst, Cormorant Asset Management, OrbiMed 등.",
+        "amount_usd": 350000000,
+        "date": "2026-10",
+        "lead_investor": "Juvia Group and Lightspeed Venture Partners",
+        "notable_investors": [
+          "Mirae Asset Capital Life Science",
+          "General Catalyst",
+          "Cormorant Asset Management",
+          "OrbiMed",
+          "8VC",
+          "SR One",
+          "Taiho Ventures",
+          "Mission BioCapital",
+          "HBM Healthcare Investments",
+          "BVF Partners",
+          "Aisling Capital",
+          "ArrowMark Partners"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$60M",
+          "amount_usd": 60000000,
+          "date": "2020-10",
+          "lead_investor": ""
+        },
+        {
+          "stage": "Series B",
+          "amount": "$65M",
+          "amount_usd": 65000000,
+          "date": "2022-06",
+          "lead_investor": ""
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "CTL 및 LGLL의 미국 내 환자 수는 연간 각각 약 1,000~2,000명으로 추정되어 틈새 시장이나, 재생불량성 빈혈 및 자가면역질환 확장 시 시장 규모가 크게 확대됨.",
+      "market_trend": "희귀 혈액암 분야 미충족 수요 높고, FDA 혁신 치료제 지정 및 신속 심사 가능성. 이중특이성 항체와 골수세포 관여제에 대한 업계 관심 증가.",
+      "growth_potential": "Dibotatug가 CTL, LGLL에서 최초 승인을 받으면 시장 선점 및 높은 가격 책정 가능. 플랫폼 기술을 통한 추가 파이프라인으로 지속 성장.",
+      "risks": [
+        "임상 및 규제 승인 불확실성",
+        "적은 환자 수로 인한 상업적 한계",
+        "경쟁 치료제의 부상 (CAR-T, 이중특이성 항체 등)"
+      ],
+      "risk_mitigation": "임상 1/2상에서 강력한 효능 및 안전성 데이터 확보, 대규모 투자로 자금 조달 안정성, Sanofi 파트너십을 통한 기술 검증 및 추가 수익원."
+    },
+    "related_links": [
+      {
+        "title": "Dren Bio 공식 웹사이트",
+        "url": "https://www.drenbio.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Dren Bio $350M 투자 유치 보도자료",
+        "url": "https://www.drenbio.com/assets/pdf/Dren%20Bio%20Series%20A%20Financing%20Press%20Release-29Oct2026.pdf",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "희귀 혈액암 환자에게 첫 치료제를 제공하려는 드렌 바이오, 3억5천만 달러 투자로 상용화 가시화.",
+    "attention": 5,
+    "id": "dren-bio-2026",
+    "date": "2026-11-10",
+    "logo_url": "",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": true
+  },
+  {
+    "sector": "enterprise",
+    "name_en": "AniBiz",
+    "name_ko": "애니비즈",
+    "tagline": "B2B 애니메이션 IP 라이선싱 마켓플레이스",
+    "category": [
+      "애니메이션 IP 라이선싱",
+      "B2B 플랫폼"
+    ],
+    "founded_year": 2024,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "USA",
+      "country_ko": "미국"
+    },
+    "company_stage": "Seed",
+    "employee_count": "11-50",
+    "website": "https://anibiz.com",
+    "founders": [
+      {
+        "name_en": "Kun Gao",
+        "name_ko": "쿤 가오",
+        "role": "President, Co-founder",
+        "background": "Crunchyroll 창업자. Crunchyroll을 Sony에 매각 후 Nakama 설립.",
+        "notable_achievement": "Crunchyroll 창업 및 성장 주도"
+      },
+      {
+        "name_en": "Brady McCollum",
+        "name_ko": "브레이디 매콜럼",
+        "role": "CEO, Co-founder",
+        "background": "Crunchyroll 경영진 출신. Nakama 공동 창업.",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Sae Whan Song",
+        "name_ko": "세환 송",
+        "role": "Head of BD, Co-founder",
+        "background": "Toei Animation, Crunchyroll, Viz Media 근무 경력.",
+        "notable_achievement": ""
+      }
+    ],
+    "team_highlights": "Crunchyroll 창업자 및 핵심 임원 3인 공동 창업. 일본 주요 애니메이션 스튜디오와의 네트워크 보유.",
+    "product": {
+      "summary": "애니메이션 IP 권리자(라이선서)와 라이선스 계약을 원하는 기업(라이선시)을 연결하는 B2B 마켓플레이스. 방대한 애니메이션 IP 메타데이터 데이터베이스를 기반으로 라이선스 발굴, 매칭, 제안 제출을 온라인에서 가능하게 함.",
+      "problem_statement": "애니메이션 라이선싱 업계는 관계 중심, 복잡한 제작위원회 구조, 분산된 권리 데이터로 인해 신규 진입자(특히 일본 외 기업)가 접근하기 어려움.",
+      "solution": "권리 현황·생산정보·시청률 등이 포함된 큐레이티드 데이터베이스를 제공하고, 권리자와 직접 연결되는 경로를 제공하며 플랫폼 내에서 초기 제안 제출을 가능하게 함.",
+      "key_features": [
+        "공식 IP 라이브러리 접근",
+        "라이선시 프로필 생성 및 검색",
+        "권리자에게 직접 제안 제출",
+        "AI 및 휴먼 큐레이션 기반 매칭",
+        "공식 시청률 데이터 제공"
+      ],
+      "tech_stack_or_innovation": "방대한 애니메이션 메타데이터(크레딧, 성우, 방영권, 평점 등)를 구조화하여 AI와 사람이 함께 큐레이션. 여러 OTT 플랫폼에 분산된 시청률을 취합한 공식 랭킹 제공.",
+      "target_customer": "라이선서: 일본 스튜디오, 제작위원회, 권리 관리 회사. 라이선시: 전 세계 소비재 브랜드, 제조사, 유통사, 게임 스튜디오, 엔터테인먼트 기업, 창작자, 스타트업.",
+      "business_model": "프리미엄 구독 (Pro: 월 $49, 무료 기본 티어 + 맞춤형 엔터프라이즈 티어)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "전통적인 대행사/에이전시",
+          "comparison": "관계 기반, 느리고 불투명. AniBiz는 온라인 자동화로 속도 및 접근성 개선."
+        },
+        {
+          "name": "국제 애니메이션 전시회",
+          "comparison": "오프라인 행사 중심. AniBiz는 연중 상시 운영되는 디지털 플랫폼."
+        }
+      ],
+      "key_differentiator": "공식 라이선스 플랫폼으로 30곳 이상의 라이선서가 참여, 크런치롤 창업팀의 업계 네트워크 및 신뢰도, 방대한 구조화된 메타데이터 보유.",
+      "moat": "일본 애니메이션 제작위원회와의 직접 관계, 누적된 IP 데이터베이스, 크런치롤 출신 창업팀의 브랜드와 업계 신뢰.",
+      "competitive_position_summary": "B2B 애니메이션 IP 라이선싱 시장의 사실상 최초의 전용 마켓플레이스. 경쟁사는 전통적 대행사나 전시회뿐이며, 이들을 대체하거나 보완하는 위치."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 27일, TBS 그룹, 토에이 애니메이션, TV 도쿄 홀딩스로부터 시드 투자 $600만 유치. 일본 주요 방송사/스튜디오의 전략적 참여가 주목받음.",
+      "catalysts": [
+        "Crunchyroll 창업팀의 재도전",
+        "일본 3대 IP 권리자의 전략적 투자",
+        "애니메이션 글로벌 시장 확대(체험/소비재 수요 증가)"
+      ],
+      "growth_metrics": "현재 30개 이상 라이선서 참여(런칭 4개월 만). 2026년 7월 2일 공식 런칭.",
+      "media_mentions": [
+        {
+          "source": "Anime News Network",
+          "title": "AniBiz Anime Licensing Platform Receives US$6 Million Investment From TBS, Toei Animation, TV Tokyo",
+          "url": "https://www.animenewsnetwork.com/news/2026-10-27/anibiz-anime-licensing-platform-receives-usd6-million-investment-from-tbs-toei-animation-tv-tokyo/.243261",
+          "date": "2026-10-27",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "PR TIMES",
+          "title": "TV TOKYO HOLDINGS, 글로벌 라이선스 사업 강화를 위해 미국 Nakama에 전략적 출자",
+          "url": "https://prtimes.jp/main/html/rd/p/000002399.000002734.html",
+          "date": "2026-10-28",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Nikkei",
+          "title": "TV TOKYO HD, 해외에서 애니메이션 굿즈 확대 판매 위해 미국 신흥 기업에 약 3억 엔 출자",
+          "url": "https://www.nikkei.com/article/DGXZQOUC262OA0W6A021C2000000/",
+          "date": "2026-10-28",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Nikkei Cross Trend",
+          "title": "데이터와 MD로 바꾸는 애니메이션 경제권 AniBiz가 그리는 '다음 크런치롤'",
+          "url": "https://xtrend.nikkei.com/atcl/contents/18/00934/00016/",
+          "date": "2026-09-17",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$6M",
+      "total_raised_note": null,
+      "total_raised_usd": 6000000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "$6M",
+        "note": "TBS그룹, 토에이애니메이션, TV도쿄홀딩스가 전략적 투자자로 참여. 각각의 출자 금액은 비공개.",
+        "amount_usd": 6000000,
+        "date": "2026-10",
+        "lead_investor": "TBS Group, Toei Animation, TV Tokyo Holdings",
+        "notable_investors": [
+          "TBS Group",
+          "Toei Animation",
+          "TV Tokyo Holdings"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$6M",
+          "note": "TBS Group, Toei Animation, TV Tokyo Holdings",
+          "amount_usd": 6000000,
+          "date": "2026-10",
+          "lead_investor": ""
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "",
+      "market_trend": "전 세계 애니메이션 IP 시장은 급성장 중. 글로벌 OTT 확산으로 시청 인구가 늘고, '보는 것'에서 '체험/소비'로 확장. 머천다이징, 게임, 이벤트 등에서 IP 수요 증가.",
+      "growth_potential": "기존 라이선싱 시장은 비효율적. AniBiz가 진입장벽 낮추며 잠재 라이선시(특히 신흥국) 발굴 가능. 30개 라이선서에서 빠르게 확장 중.",
+      "risks": [
+        "일본 제작위원회의 전통적 폐쇄성으로 플랫폼 수용 지연 가능성",
+        "신규 라이선시의 품질 관리 실패 시 권리자 신뢰 손상",
+        "대형 경쟁사(예: Amazon, Netflix)의 유사 플랫폼 진입 가능성"
+      ],
+      "risk_mitigation": "Crunchyroll 출신 창업팀의 업계 신뢰도, 기존 30개 라이선서 참여로 네트워크 효과 구축 중, 검증된 라이선시만 플랫폼에 온보딩 예정"
+    },
+    "related_links": [
+      {
+        "title": "AniBiz 공식 사이트",
+        "url": "https://anibiz.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "AniBiz 소개 페이지",
+        "url": "https://anibiz.com/about",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "LinkedIn 투자 발표",
+        "url": "https://www.linkedin.com/posts/anibiz_anime-licensing-platform-anibiz-gets-6-million-activity-7520894344191655936-PaaX",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Dealroom 뉴스 노트",
+        "url": "https://app.dealroom.co/news/note/anibiz-raises-6m-seed-from-three-of-japan-s-top-anime-licensors",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "크런치롤 창업팀이 다시 한번 애니메이션 생태계의 병목을 해소하려 한다.",
+    "attention": 5,
+    "id": "anibiz-2026",
+    "date": "2026-11-10",
+    "logo_url": "",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": true
+  },
+  {
+    "sector": "climate",
+    "name_en": "Reverion",
+    "name_ko": "레버리온",
+    "tagline": "가역형 SOFC로 80% 전기 효율, 탄소 네거티브 발전소",
+    "category": [
+      "신재생 에너지",
+      "고체산화물 연료전지",
+      "탄소 포집 및 저장"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "Eresing",
+      "country": "Germany",
+      "country_ko": "독일"
+    },
+    "company_stage": "Series B",
+    "employee_count": "101-250",
+    "website": "https://reverion.com",
+    "founders": [
+      {
+        "name_en": "Stephan Herrmann",
+        "name_ko": "스테판 헤르만",
+        "role": "CEO",
+        "background": "TUM(뮌헨공대) 에너지시스템 박사 과정에서 본 기술 발명, 10년 이상 고체산화물 연료전지 연구",
+        "notable_achievement": "핵심 공정 설계 특허, BioCORE 연구 프로그램 리드"
+      },
+      {
+        "name_en": "Felix Fischer",
+        "name_ko": "펠릭스 피셔",
+        "role": "COO",
+        "background": "TUM 연구팀 합류, 실험실 규모 개념 검증 주도",
+        "notable_achievement": "공동 창업자로 초기 기술 검증"
+      },
+      {
+        "name_en": "Maximilian Hauck",
+        "name_ko": "막시밀리안 하우크",
+        "role": "CTO",
+        "background": "연구개발 전문성, 공정 최적화 담당",
+        "notable_achievement": "고효율 운전 조건 구현"
+      },
+      {
+        "name_en": "Jeremias Weinrich",
+        "name_ko": "예레미아스 바인리히",
+        "role": "CPO",
+        "background": "조달 및 제조 전문가",
+        "notable_achievement": "생산 시설 확장 주도"
+      },
+      {
+        "name_en": "Luis Poblotzki",
+        "name_ko": "루이스 포블로츠키",
+        "role": "CDO (자동화 및 제어)",
+        "background": "자동화 및 소프트웨어 제어 담당",
+        "notable_achievement": "디지털 플랫폼 및 공정 자동화 구축"
+      }
+    ],
+    "team_highlights": "5명의 창업진 모두 TUM 출신 엔지니어로, 고체산화물 연료전지 분야에 깊은 전문성을 보유.",
+    "product": {
+      "summary": "Reverion은 가역형 고체산화물 연료전지(SOFC) 발전소를 설계·제조한다. 바이오가스·수소·천연가스를 연료로 전기를 생산하며, 세계 최고 수준인 74.2%의 전기 효율(측정 기준, 향후 80% 목표)을 달성한다. 발전 과정에서 순수 CO₂를 포집해 탄소 네거티브 운전이 가능하고, 반대 방향(전해조 모드)으로 동작시켜 잉여 전력을 수소·메탄으로 저장할 수 있다.",
+      "problem_statement": "태양광·풍력의 간헐성으로 전력망이 불안정해지고, AI 데이터센터의 전력 수요 급증으로 그리드 확장이 따라가지 못하면서 안정적이고 청정한 분산 전원이 절실히 필요하다.",
+      "solution": "고효율 SOFC 발전소를 제공해 현장에서 24시간 전력을 공급하고, CO₂를 포집해 환경 영향을 최소화한다. 역전해 기능으로 전력 잉여 시 저장 가스를 생산해 계통 유연성을 높인다.",
+      "key_features": [
+        "가역운전: 발전(SOFC)과 전해(SOEC) 모두 가능",
+        "세계 최고 전기효율 74.2% (현장 실증), 목표 80%",
+        "발전 과정에서 순수 CO₂ 포집, 탄소 네거티브 실현",
+        "배전망 부하 없이 현장 설치·운영, 데이터센터 전력난 해소"
+      ],
+      "tech_stack_or_innovation": "Doosan Fuel Cell이 공급하는 SOFC 스택(Ceres Power 기술 기반)을 활용하며, 폐가스 회수 및 열 통합을 최적화한 독자 공정 아키텍처와 제어 알고리즘이 핵심.",
+      "target_customer": "바이오가스 발전소, AI 데이터센터, 병원, 공장 등 분산 발전이 필요한 대규모 전력 소비처",
+      "business_model": "발전소 단위 판매(유지보수 포함) 및 전력판매계약(PPA) 모델 확장 중. 프로젝트 누적 파이프라인 20억 달러 이상."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Bloom Energy",
+          "comparison": "SOFC 기반 현장 발전 솔루션. 효율은 60%대로 낮고, 가역운전 및 CO₂ 포집 기능이 없음."
+        },
+        {
+          "name": "2G Energy",
+          "comparison": "바이오가스 엔진 발전기(37~43% 전기효율). 내연기관 방식으로 열병합 가능하나 효율과 탄소 포집에서 열위."
+        },
+        {
+          "name": "Caterpillar / Wärtsilä / GE Vernova",
+          "comparison": "기존 가스 터빈·엔진 발전기(약 40% 효율). 대용량이지만 탄소 포집 없고, 전력망 의존적."
+        }
+      ],
+      "key_differentiator": "가역운전(전기↔가스)과 순수 CO₂ 포집을 동시에 제공하는 유일한 SOFC 시스템; 전기효율 세계 최고.",
+      "moat": "특허받은 공정 설계와 다년간의 운전 데이터, Doosan 등 공급망 계약, 250MW 생산시설 확보.",
+      "competitive_position_summary": "현재 유일하게 가역·포집이 가능한 고효율 분산 발전 솔루션으로, AI 데이터센터 전력 위기의 직접적 대안으로 부상."
+    },
+    "trending_reason": {
+      "summary": "2026년 9월 1억 7,500만 달러(약 1억 5,400만 유로) 규모의 시리즈B 유치 및 Doosan Fuel Cell과의 1087억 원 상당 스택 공급 계약을 체결. AI 데이터센터의 전력난과 재생가스 수요 증가에 힘입어 주목받음.",
+      "catalysts": [
+        "AI 가속화로 데이터센터 전력 소비 폭증, 그리드 연결 지연",
+        "유럽의 탄소중립 정책 및 바이오가스 인센티브",
+        "Reverion 발전소가 민간·산업 현장에서 7기 운전 중, 실증 완료"
+      ],
+      "growth_metrics": "프로젝트 파이프라인 20억 달러 이상; 생산능력 250MW/년 목표; 2025년 100명에서 200명+ 고용; 독일 외 해외 프로젝트 진행 중.",
+      "media_mentions": [
+        {
+          "source": "Reverion Press Release",
+          "title": "Reverion Raises $175M Series B to Scale Production of its Dispatchable, Carbon-Negative Power Plants Tenfold",
+          "url": "https://reverion.com/en/reverion-raises-175m-series-b-to-scale-production-of-its-dispatchable-carbon-negative-power-plants-tenfold/",
+          "date": "2026-09-28",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "movetheneedle.news",
+          "title": "Reverion raises $175m to scale reversible biogas power plants",
+          "url": "https://www.movetheneedle.news/start-ups/reverion-raises--175m-to-scale-reversible-biogas-power-plants/",
+          "date": "2026-09-29",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "GÖRG",
+          "title": "GÖRG advises Reverion on US$175m Series B funding round",
+          "url": "https://www.goerg.de/en/insights/publications/30-09-2026/gorg-advises-reverion-on-us-175-million-series-b-funding-round",
+          "date": "2026-09-30",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "KfW Capital",
+          "title": "Scale-up Direct: KfW Capital invests in Reverion alongside UVC Partners",
+          "url": "https://www.kfw-capital.de/Newsroom/Additional-news/202610-Reverion.html",
+          "date": "2026-10-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Medium (Extantia Capital)",
+          "title": "Round-the-clock, carbon-negative power: why we invested again in Reverion",
+          "url": "https://medium.com/extantia-capital/round-the-clock-carbon-negative-power-why-we-invested-again-in-reverion-67a50d93d521",
+          "date": "2026-09-29",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "bizhankook",
+          "title": "Reverion Gains Traction Amid AI Power Crisis, Secures ‘Heart’ from Doosan",
+          "url": "https://en.bizhankook.com/articles/doosan-powers-ai-startup-rebellion.html",
+          "date": "2026-10-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Honda Xcelerator Ventures",
+          "title": "Reverion Closes $175 Million Series B to Scale Next-Generation Power Technology",
+          "url": "https://xcelerator.hondainnovations.com/reverion-closes-175-million-series-b-to-scale-next-generation-power-technology/",
+          "date": "2026-09-29",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "비공개",
+      "total_raised_note": "시리즈B 1억 7,500만 달러 외 초기 라운드 규모는 공개되지 않음",
+      "total_raised_usd": null,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$175M",
+        "note": "미화 1억 7,500만 달러 (약 1억 5,400만 유로)",
+        "amount_usd": 175000000,
+        "date": "2026-09",
+        "lead_investor": "Kembara (Mundi Ventures의 유럽 스케일업 펀드)",
+        "notable_investors": [
+          "Allianz",
+          "KfW Capital",
+          "Aurum Impact",
+          "Carbon Equity",
+          "Extantia",
+          "Energy Impact Partners",
+          "UVC Partners",
+          "EIC Fund",
+          "alfa8",
+          "Possible Ventures"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series B",
+          "amount": "$175M",
+          "note": "미화 1억 7,500만 달러 (약 1억 5,400만 유로)",
+          "amount_usd": 175000000,
+          "date": "2026-09",
+          "lead_investor": "Kembara"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "분산 발전 시장 2030년 1,500억 달러 이상(추정). 바이오가스 발전 약 200억 달러. 데이터센터 전력 시장은 연 15% 성장 중.",
+      "market_trend": "AI 데이터센터 건설 증가, 그리드 혼잡 및 탄소규제 강화로 현장 청정 발전 수요 폭발.",
+      "growth_potential": "Reverion의 생산 파이프라인만 20억 달러로, 초기 단계임에도 큰 수요 확인. 250MW 생산능력 목표.",
+      "risks": [
+        "고체산화물 스택의 장기 내구성 미검증",
+        "기존 가스 엔진 대비 높은 초기 비용",
+        "대량 생산 설비 투자 리스크",
+        "에너지 정책 변동 및 가스 가격 리스크"
+      ],
+      "risk_mitigation": "Doosan과의 장기 스택 공급 계약, EIC 펀드 등 정책적 지원, 현장 7기 운전을 통한 실증, 특허 보호."
+    },
+    "related_links": [
+      {
+        "title": "Reverion 공식 홈페이지",
+        "url": "https://reverion.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "시리즈B 보도자료",
+        "url": "https://reverion.com/en/reverion-raises-175m-series-b-to-scale-production-of-its-dispatchable-carbon-negative-power-plants-tenfold/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Movetheneedle 분석 기사",
+        "url": "https://www.movetheneedle.news/start-ups/reverion-raises--175m-to-scale-reversible-biogas-power-plants/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "GÖRG 법률 자문",
+        "url": "https://www.goerg.de/en/insights/publications/30-09-2026/gorg-advises-reverion-on-us-175-million-series-b-funding-round",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "가역형 SOFC로 전기와 가스를 자유롭게 변환하며, 데이터센터 전력난 해결사로 급부상 중이다.",
+    "attention": 5,
+    "id": "reverion-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/reverion-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": true
+  },
+  {
+    "sector": "consumer",
+    "name_en": "OPENREC",
+    "name_ko": "오픈렉",
+    "tagline": "팬 커뮤니티 슈퍼앱 'mellow-fan' 운영사",
+    "category": [
+      "팬 커뮤니티 플랫폼",
+      "라이브 스트리밍",
+      "이벤트 기획"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "Tokyo",
+      "country": "Japan",
+      "country_ko": "일본"
+    },
+    "company_stage": "Series B",
+    "employee_count": "61",
+    "website": "https://openrec.co.jp",
+    "founders": [
+      {
+        "name_en": "Yo Hyodo",
+        "name_ko": "효도 요",
+        "role": "대표이사 CEO",
+        "background": "Donuts 그룹 및 전 CyberZ 관계자로 추정",
+        "notable_achievement": ""
+      }
+    ],
+    "team_highlights": "",
+    "product": {
+      "summary": "mellow-fan은 라이브 스트리밍, 팬 커뮤니티, 오프라인 이벤트, 굿즈 판매를 하나의 플랫폼에서 제공하는 팬덤 인프라 서비스입니다.",
+      "problem_statement": "SNS와 스트리밍 확산으로 팬 접점이 늘었지만, 소속사가 온·오프라인 활동을 모두 관리하기 어렵고 팬의 열정을 효과적으로 수익화하지 못하는 문제.",
+      "solution": "커뮤니티·방송·이벤트·굿즈를 원스톱으로 통합하고, 팬 행동 데이터를 기반으로 한 마케팅과 콘텐츠 공동 개발을 지원하여 충성도와 LTV를 극대화.",
+      "key_features": [
+        "실시간 생방송 및 독점 동영상",
+        "Discord 기반 구독자 커뮤니티",
+        "소규모 팬미팅부터 도쿄돔급 대형 이벤트 기획·제작",
+        "자체 의류 브랜드 'with mellow' 등 굿즈 기획·판매",
+        "팬 데이터 분석을 통한 정밀 마케팅 및 IP 공동 개발"
+      ],
+      "tech_stack_or_innovation": "자체 팬 커뮤니티 플랫폼과 데이터 분석 엔진",
+      "target_customer": "연예기획사, 아티스트, 탤런트 및 스트리머",
+      "business_model": "구독료, 이벤트 티켓, 굿즈 판매, 브랜드 타이업 광고"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Patreon",
+          "comparison": "글로벌 창작자 구독 플랫폼이지만 오프라인 이벤트·굿즈 기능이 부족하고 일본 현지화 미흡."
+        },
+        {
+          "name": "pixivFANBOX",
+          "comparison": "일본 일러스트·만화 창작자 중심이며 라이브 스트리밍과 대규모 이벤트 기능이 없음."
+        },
+        {
+          "name": "OnlyFans",
+          "comparison": "성인 콘텐츠 중심 플랫폼으로 일본 아이돌·연예인 팬덤에 부적합."
+        }
+      ],
+      "key_differentiator": "온라인 스트리밍·커뮤니티와 오프라인 이벤트·굿즈를 하나의 플랫폼에서 유기적으로 연결하여 팬 경험을 통합한 점.",
+      "moat": "플랫폼에 축적된 팬 활동 데이터를 바탕으로 한 마케팅·콘텐츠 공동 개발 역량과 Donuts 그룹의 지원.",
+      "competitive_position_summary": "일본 내 아이돌·스트리머 대상 팬덤 인프라로 자리 잡으며, 매출 성장과 함께 온·오프라인 통합 서비스로 차별화."
+    },
+    "trending_reason": {
+      "summary": "2026년 11월 4일 14억 엔(약 930만 달러) 규모의 자금 조달 발표, mellow-fan 리브랜딩 이후 첫 번째 대규모 펀딩. 오는 11월 28~29일 도쿄돔에서 '스트리머 하이퍼 게임 대회 FINAL' 개최 예정.",
+      "catalysts": [
+        "누적 38억 엔 조달, 이번 라운드 14억 엔",
+        "2026년 7월 OPENREC.tv에서 mellow-fan으로 리브랜딩",
+        "전년 대비 매출 1.5배 성장",
+        "도쿄돔 개최 대규모 스트리머 게임 대회"
+      ],
+      "growth_metrics": "매출 전년비 1.5배, 구독·굿즈·이벤트·광고 전 부문 성장, 이벤트 굿즈 매출이 티켓 매출을 초과.",
+      "media_mentions": [
+        {
+          "source": "PR TIMES",
+          "title": "日常の応援から公開収録・限定イベントまで一気通貫…スーパーアプリ「mellow-fan」を展開するOPENREC、資金調達を実施。累計調達額38億円",
+          "url": "https://prtimes.jp/main/html/rd/p/000000116.000115510.html",
+          "date": "2026-11-04",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Osegi",
+          "title": "OPENREC raises 1.4 billion yen for mellow-fan",
+          "url": "https://osegi.com/en/openrec-mellow-fan-raises-1-4-billion-yen",
+          "date": "2026-11-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Dealroom",
+          "title": "Fan-community app maker OPENREC raises $8.84M late-stage round",
+          "url": "https://dealroom.co/news/169625-fan-community-app-maker-openrec-raises-8-84m-late-stage-round/",
+          "date": "2026-11-04",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "gamebiz",
+          "title": "OPENREC、資本金と準備金をそれぞれ3億円減らす減資…リニューアル後も損失計上",
+          "url": "https://gamebiz.jp/news/434626",
+          "date": "2026-10-27",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "商工中金",
+          "title": "ファンコミュニティプラットフォームを運営するスタートアップ 株式会社OPENRECを金融面からサポート",
+          "url": "https://www.shokochukin.co.jp/assets/pdf/nr_261104_01.pdf",
+          "date": "2026-11-04",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "38억 엔",
+      "total_raised_note": "누적 조달액(지분 및 대출 포함). 1 USD ≈ 150 엔 가정 시 약 2,533만 달러.",
+      "total_raised_usd": 25333333,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "14억 엔",
+        "note": "제3자 배정 증자 및 대출. 인수자: 이요벤처펀드 8호, 일본그로스캐피털, JP인베스트먼트 지역임팩트 1호; 대출: 상공중금, 일본정책금융공사.",
+        "amount_usd": 9333333,
+        "date": "2026-11",
+        "lead_investor": "Iyogin Capital",
+        "notable_investors": [
+          "Iyogin Capital",
+          "Nomura Sparx Investment",
+          "Yucho Asset Management",
+          "Shoko Chukin Bank",
+          "Japan Finance Corporation"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "비공개",
+          "note": "2022년 12월 설립 시 조달",
+          "date": "2022-12",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Series A",
+          "amount": "약 24억 엔",
+          "note": "제3자 배정 증자 및 대출. 2025년 1월 NTT Docomo Ventures, Coconala Skill Partners 추가 투자.",
+          "amount_usd": 16000000,
+          "date": "2024-05",
+          "lead_investor": "NTT Docomo Ventures (추정)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "일본 엔터테인먼트 시장 약 20조 엔 이상; 팬덤 플랫폼은 성장 중인 서브세그먼트.",
+      "market_trend": "디지털과 오프라인을 결합한 팬덤 경제 확대; 아이돌·버추얼 유튜버 등 크리에이터 시장 성장.",
+      "growth_potential": "일본 연예기획사와의 협력 확대 및 자체 IP 해외 진출 가능성.",
+      "risks": [
+        "4기 연속 순손실 및 약 5억 엔 자본잠식 상태",
+        "글로벌 플랫폼(Patreon 등)과의 경쟁",
+        "핵심 크리에이터 이탈 시 매출 타격"
+      ],
+      "risk_mitigation": "데이터 기반 마케팅 고도화; 오프라인 이벤트·굿즈로 수익 다각화; Donuts 그룹의 재무·사업 지원"
+    },
+    "related_links": [
+      {
+        "title": "OPENREC 기업 사이트",
+        "url": "https://openrec.co.jp",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "IYOGIN CAPITAL 투자 공지",
+        "url": "https://www.iyo-capital.co.jp/news/529/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "mellow-fan 서비스 소개 (OPENREC)",
+        "url": "https://openrec.co.jp/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "온·오프라인을 아우르는 팬덤 통합 플랫폼이라는 독특한 포지셔닝이 돋보이지만, 지속된 적자와 자본잠식은 해결해야 할 숙제다.",
+    "attention": 4,
+    "id": "openrec-2026",
+    "date": "2026-11-10",
+    "logo_url": "",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": true
+  },
+  {
+    "sector": "infra",
+    "name_en": "Salience Labs",
+    "name_ko": "샐리언스 랩스",
+    "tagline": "AI 데이터센터용 광회로 스위칭 반도체 스타트업",
+    "category": [
+      "반도체",
+      "데이터센터 인프라",
+      "광통신"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Oxford (Milton)",
+      "country": "United Kingdom",
+      "country_ko": "영국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "51-100",
+    "website": "https://www.saliencelabs.ai",
+    "founders": [
+      {
+        "name_en": "Vaysh Kewada",
+        "name_ko": "바이시 케와다",
+        "role": "CEO & Co-founder",
+        "background": "전 Cisco 엔지니어, 광통신/네트워킹 분야 다년 경력",
+        "notable_achievement": "옥스퍼드대, 뮌스터대 연구기반의 all-optical 스위치 칩 상용화 주도"
+      }
+    ],
+    "team_highlights": "약 60명(2026년 10월 기준), 옥스퍼드대·뮌스터대 출신 연구진 다수, 실리콘밸리 엔지니어링팀 운영",
+    "product": {
+      "summary": "AI 데이터센터 내 GPU 간 데이터 이동을 가속화하는 all-optical(전광) 집적 회로 스위치 모듈(OC-32M)과 실리콘 포토닉스 기반 스위치 칩셋을 개발·공급한다.",
+      "problem_statement": "AI 학습/추론 워크로드가 수백~수천 개 GPU 클러스터로 확장되면서 기존 전기(Electrical) 스위치는 광트랜시버 변환으로 인해 지연시간(Latency)이 길고 전력 소모가 크다. 데이터 이동 속도가 토큰당 성능(Tokens per second per user) 병목의 핵심 원인이다.",
+      "solution": "전기-광 신호 변환을 생략한 온칩 광회로 스위칭(OCS) 기술. 2칩 설계(스위치 칩 + 증폭 칩)로 광 손실을 보상, 10ns 수준의 초저지연·1W/port 미만 초저전력·200Gbit/s 고속 인터페이스를 구현.",
+      "key_features": [
+        "완전 집적 실리콘 포토닉스 기반 all-optical 스위치 (64포트 시연 완료, 128/256포트 개발 중)",
+        "전기 스위치 대비 포트당 비용 1/10, 전력 소비 1/8 이하",
+        "1U 랙 모듈 형태로 고밀도 구성 가능",
+        "토큰당 성능 최대 52% 향상 (초기 시뮬레이션 결과)"
+      ],
+      "tech_stack_or_innovation": "실리콘 포토닉스 + 독자적 광증폭 기술. 옥스퍼드대·뮌스터대 10년 이상 연구 기반.",
+      "target_customer": "대규모 AI 인프라를 구축/운영하는 하이퍼스케일러, 클라우드 제공업체, 대형 GPU 팜 운영사",
+      "business_model": "광스위치 모듈 및 칩셋 하드웨어 판매 (B2B)와 함께, 내부 제조 파트너(Tower Semiconductor)와 협력해 대량 생산"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Lumentum",
+          "comparison": "MEMS 기반 자유공간 광학 OCS 제공, 칩 집적도와 전력 효율에서 Salience 열세 아님"
+        },
+        {
+          "name": "Coherent",
+          "comparison": "광 트랜시버/스위치 사업, 포트당 비용·레이턴시에서 Salience 우위 주장"
+        },
+        {
+          "name": "Telescent, Omnitron",
+          "comparison": "광 접속 스위치 제공, 실리콘 포토닉스 집적도는 Salience가 앞섬"
+        }
+      ],
+      "key_differentiator": "유일한 '온칩(all-silicon photonic)' 광회로 스위치. 경쟁사는 MEMS 또는 벌크 광학 방식으로 집적도·양산성·신뢰성에서 차별화.",
+      "moat": "옥스퍼드대·뮌스터대 연구 독점 라이선스 + 2칩 광증폭 특허 + AMD·인텔 전략 투자 + Tower Semiconductor 파운드리 파트너십을 통한 선제적 양산 체계",
+      "competitive_position_summary": "AI 인프라 스케일업 네트워크 영역에서 초저지연·저전력 광스위치 필요성이 커지는 가운데, Salience는 유일한 '칩 레벨' OCS를 보유해 차세대 AI 팹에서 핵심 부품으로 부상할 가능성이 높다."
+    },
+    "trending_reason": {
+      "summary": "AI 추론 워크로드 확산으로 네트워크 지연이 병목으로 부각되면서, AMD·인텔을 비롯한 주요 투자자들이 1.25억 달러 규모 시리즈B에 참여, 'all-optical 스위치'가 AI 데이터센터의 차세대 연결 표준으로 주목받고 있음.",
+      "catalysts": [
+        "2026년 9월 ECOC 2026에서 64포트 all-optical 스위치 라이브 데모 성공 (업계 최초)",
+        "2026년 10월 1.25억 달러 시리즈B 폐쇄 (AMD·인텔 벤처스, Bullhound Capital 주도)",
+        "Keysight 검증 협약, Tower Semiconductor 파운드리 계약 체결로 양산 준비 완료",
+        "추론 중심 AI 시프트에 따라 '토큰당 성능' 향상 요구 급증, OCS가 해법으로 부상"
+      ],
+      "growth_metrics": "2026년 3월 32포트, 9월 64포트 데모 후 128/256포트 개발 진행 중, 직원 60명→확장 계획, 시뮬레이션상 토큰당 성능 최대 52% 개선",
+      "media_mentions": [
+        {
+          "source": "Fierce Network",
+          "title": "Salience Labs thinks optical switching can break AI’s latency bottleneck",
+          "url": "https://www.fierce-network.com/cloud/salience-labs-thinks-optical-switching-can-break-ais-latency-bottleneck",
+          "date": "2026-10-21",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "SDxCentral",
+          "title": "AMD, Intel back optical upstart pushing for denser photonics inside AI racks",
+          "url": "https://www.sdxcentral.com/news/amd-intel-back-optical-upstart-pushing-for-denser-photonics-inside-ai-racks/",
+          "date": "2026-10-14",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Electro Optics",
+          "title": "UK manufacturer of photonic chips for AI data centres raises £95m to scale US production",
+          "url": "https://www.electrooptics.com/article/uk-manufacturer-photonic-chips-ai-data-centres-raises-ps95m-scale-us-production",
+          "date": "2026-10-14",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Intel Capital",
+          "title": "Scaling AI Infrastructure: Why We Invested in Salience Labs",
+          "url": "https://www.intelcapital.com/scaling-ai-infrastructure-why-we-invested-in-salience-labs/",
+          "date": "2026-10-14",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "British Business Bank",
+          "title": "British Business Bank invests £10m in Salience Labs as part of $125m Series B funding round",
+          "url": "https://www.british-business-bank.co.uk/news-and-events/news/british-business-bank-invests-ps10m-salience-labs-part-125m-series-b-funding-round",
+          "date": "2026-10-14",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$180M",
+      "total_raised_note": "다수 언론 보도 기준 총 누적 조달 약 1억8000만 달러 (시리즈B 포함)",
+      "total_raised_usd": 180000000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$125M",
+        "amount_usd": 125000000,
+        "date": "2026-10",
+        "lead_investor": "Bullhound Capital",
+        "notable_investors": [
+          "AMD Ventures",
+          "Intel Capital",
+          "SBI Group",
+          "Hudson River Trading",
+          "British Business Bank"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series B",
+          "amount": "$125M",
+          "amount_usd": 125000000,
+          "date": "2026-10",
+          "lead_investor": "Bullhound Capital"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "AI 데이터센터 광스위치 시장은 2027년 초기 배치 시작, 2028~2030년 본격 확대 예상 (TAM은 2027년 추정 수십억 달러 수준)",
+      "market_trend": "AI 추론 워크로드 증가 → 네트워크 지연 병목 심화 → OCS 수요 급증; AMD·인텔을 비롯한 칩 제조사가 광연결 생태계에 적극 투자 (Ayar Labs, CScale 등)",
+      "growth_potential": "GPU 클러스터당 GPU 수가 수천 개로 늘어나면서 스케일업 네트워크에서 광스위치 채택이 거의 필수가 될 것. Salience는 현재 유일한 온칩 OCS 보유사로 선점 효과 기대",
+      "risks": [
+        "경쟁사(MEMS 기반 Lumentum/Coherent, 기타 광스위치 스타트업)의 기술 추격",
+        "대량 생산 시 수율·비용 이슈",
+        "여전히 미검증된 실제 데이터센터 대규모 구축 사례",
+        "AI 인프라 투자 경기 변동 가능성"
+      ],
+      "risk_mitigation": "AMD·인텔 등 전략적 투자자로부터 안정적 수요 및 기술 지원 확보; Tower Semiconductor 파운드리로 양산 리스크 분산; 64포트 라이브 데모로 기술 신뢰성 입증"
+    },
+    "related_links": [
+      {
+        "title": "공식 홈페이지",
+        "url": "https://www.saliencelabs.ai",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "보도자료: Series B funding ($125M)",
+        "url": "https://www.saliencelabs.ai/salience-labs-125-million-series-b-funding/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Latham & Watkins 법률 자문",
+        "url": "https://www.lw.com/en/news/2026/10/latham-advises-salience-labs-on-series-b",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "AMD·인텔이 함께 베팅한 영국 광스위치 스타트업, 64포트 수준의 온칩 OCS를 시연하며 AI 데이터센터 네트워크의 잠재적 게임체인저로 부상했다.",
+    "attention": 4,
+    "id": "salience-labs-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/salience-labs-2026.webp",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": true
+  },
+  {
+    "sector": "health",
+    "name_en": "Setara Biosciences",
+    "name_ko": "세타라 바이오사이언스",
+    "tagline": "유전학을 활용한 희귀질환 정밀 치료제 개발",
+    "category": [
+      "신약 개발",
+      "정밀 의학",
+      "희귀 질환"
+    ],
+    "founded_year": 2026,
+    "headquarters": {
+      "city": "San Diego",
+      "country": "USA",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50 (추정)",
+    "website": "https://www.setarabiosciences.com",
+    "founders": [
+      {
+        "name_en": "David Goldstein",
+        "name_ko": "데이비드 골드스타인",
+        "role": "공동창업자·회장 (Co-founder, President & Executive Chair)",
+        "background": "Actio Biosciences 창업자, 인간유전학 전문가, 컬럼비아 대학 유전체의학연구소 설립 디렉터",
+        "notable_achievement": "Actio가 Jazz Pharmaceuticals에 인수되도록 이끌었으며, 이후 세타라가 희귀질환 파이프라인을 이어받도록 함"
+      },
+      {
+        "name_en": "David Breckenridge",
+        "name_ko": "데이비드 브레켄리지",
+        "role": "공동창업자·CSO (Co-founder & Chief Scientific Officer)",
+        "background": "Actio Biosciences 공동창업자, 유전학 기반 신약 설계 전문가",
+        "notable_achievement": "TRPV4 억제제 프로그램의 과학적 리더십 제공"
+      }
+    ],
+    "team_highlights": "Actio 출신의 핵심 경영진이 그대로 합류했으며, CSO 데이비드 브레켄리지를 비롯한 R&D 조직을 유지 중이다.",
+    "product": {
+      "summary": "STAR-0871(구 ABS-0871)은 경구용 저분자 TRPV4 억제제로, 희귀질환 CMT2C와 과민성방광 치료제로 개발 중이다. 유전 변이로 인해 과활성화된 TRPV4 이온채널을 선택적으로 차단해 질병 근본 원인을 교정한다.",
+      "problem_statement": "샤르코-마리-투스병 2C형(CMT2C)은 TRPV4 유전자 변이로 인한 희귀 신경근육 질환으로, 현재까지 승인된 치료제가 없으며 미국 내 약 2,500명의 환자가 있다. 과민성방광은 수천만 명의 환자가 있지만 기존 치료제의 효과가 제한적이다.",
+      "solution": "STAR-0871은 TRPV4 이온채널을 선택적으로 억제해 CMT2C의 근본 원인을 교정하고, 동일 기전을 과민성방광까지 확장하는 'one-to-many' 접근법을 취한다.",
+      "key_features": [
+        "경구 투여 가능",
+        "TRPV4에 대한 높은 선택성",
+        "FDA 희귀소아·희귀의약품·패스트트랙 지정 (CMT2C)",
+        "CMT2C 환자 대상 임상 1b상 (THERON) 2027년 시작 예정",
+        "과민성방광 대상 임상 2a상 동시 진행 계획"
+      ],
+      "tech_stack_or_innovation": "멘델 유전체학과 약물 설계를 결합한 유전학 기반 정밀 의약품 개발 플랫폼. 저분자 화합물 라이브러리에서 TRPV4 억제제를 도출, 구조 최적화.",
+      "target_customer": "CMT2C 환자 및 과민성방광 환자",
+      "business_model": "자체 임상 개발 후 기술 이전 또는 공동 판매 (전형적인 바이오텍 모델)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Supportive care",
+          "comparison": "CMT2C에는 현재 승인된 치료제가 없으며, 환자는 지지요법에만 의존하는 상황"
+        },
+        {
+          "name": "Mirabegron 등 OAB 기존 약물",
+          "comparison": "기전이 다른 베타3 작용제 또는 항콜린제로, STAR-0871은 TRPV4 억제라는 새로운 경로를 제안"
+        }
+      ],
+      "key_differentiator": "희귀 유전병에서 개발을 시작해 대규모 적응증(과민성방광)으로 확장하는 'one-to-many' 전략",
+      "moat": "Actio에서 검증된 유전학 기반 신약 개발 역량과 TRPV4 분야 심층 지식, FDA의 각종 지정으로 인한 개발 가속화",
+      "competitive_position_summary": "CMT2C 분야에서는 유일한 임상 단계 치료제이며, OAB 분야에서는 차별화된 기전으로 후발주자이나 가능성이 큼"
+    },
+    "trending_reason": {
+      "summary": "9000만 달러(한화 약 1200억 원) 규모의 시리즈A 투자 유치와 함께 Jazz Pharmaceuticals가 인수한 Actio의 후속 파이프라인을 독립적으로 이끌 새 회사로 출범해 주목받음",
+      "catalysts": [
+        "Jazz의 Actio 인수(2026년 8월)로 Actio의 에피렙시 프로그램이 넘어가고, 잔여 파이프라인이 세타라로 분사",
+        "STAR-0871 임상 1a상(건강인 대상) 완료로 안전성 및 약동학 데이터 확보",
+        "TRPV4가 과민성방광 등 보다 큰 시장으로 확장 가능한 타깃으로 주목받는 추세"
+      ],
+      "growth_metrics": "임상 1a상 완료; 2027년 CMT2C 대상 1b상(THERON) 및 과민성방광 대상 2a상 개시 예정; FDA 희귀소아·희귀의약품·패스트트랙 지정 취득",
+      "media_mentions": [
+        {
+          "source": "Setara Biosciences (공식 보도자료)",
+          "title": "Setara Biosciences Announces $90M Series A Financing",
+          "url": "https://www.setarabiosciences.com/news/setara-biosciences-announces-90-million-series-a-financing-to-advance-precision-medicines-for-rare-genetic-diseases-and-related-expansion-indications/",
+          "date": "2026-10-30",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Axios",
+          "title": "Setara Biosciences raises $90M Series A",
+          "url": "https://www.axios.com/pro/biotech-deals/2026/10/30/setara-biosciences-raises-90m",
+          "date": "2026-10-30",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "BioXconomy",
+          "title": "From Actio’s Ashes, Setara Launches with $90M to Chase Rare Disease Genetics at Scale",
+          "url": "https://www.bioxconomy.com/investment/from-actio-s-ashes-setara-launches-with-90m-to-chase-rare-disease-genetics-at-scale",
+          "date": "2026-11-02",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Medifonews",
+          "title": "세타라, 9000만달러 조달…희귀질환 치료제 개발 추진",
+          "url": "https://www.medifonews.com/news/article.html?no=218192",
+          "date": "2026-11-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "글로벌이코노믹",
+          "title": "재즈가 남긴 희귀질환 자산, 1200억 원 품고 세타라로 독립하다",
+          "url": "https://www.g-enews.com/article/Bio-Pharma/2026/11/202611011627354504fda4f5ab74_1",
+          "date": "2026-11-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$90M",
+      "total_raised_note": "시리즈A 라운드 (2026년 10월); 참여한 기존 투자자는 Deerfield Management, Canaan, Droia Ventures, EcoR1, Euclidean Capital, Regeneron Ventures, 그리고 Jazz Pharmaceuticals (신규 주주)",
+      "total_raised_usd": 90000000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$90M",
+        "note": "엑티오 인수 후 남은 파이프라인을 기반으로 한 초도 자금; Jazz 파마슈티컬스가 신규 투자자로 참여",
+        "amount_usd": 90000000,
+        "date": "2026-10",
+        "lead_investor": "Deerfield Management (주관사 역할, 컨소시엄 방식)",
+        "notable_investors": [
+          "Canaan",
+          "Droia Ventures",
+          "EcoR1",
+          "Euclidean Capital",
+          "Regeneron Ventures",
+          "Jazz Pharmaceuticals"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$90M",
+          "note": "위와 동일",
+          "amount_usd": 90000000,
+          "date": "2026-10",
+          "lead_investor": "Deerfield Management (컨소시엄)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "CMT2C는 미국 내 환자 약 2,500명으로 시장 규모는 작으나, 고가의 희귀질환 치료제로서 연간 1인당 수백만 달러의 매출 가능성. 과민성방광 시장은 수십억 달러 규모로, 성공 시 수조 원 시장 진입",
+      "market_trend": "희귀질환 유전자 정보를 활용한 정밀 의약품 개발이 가속화되고 있으며, FDA의 패스트트랙 및 희귀의약품 지정으로 개발 리스크 완화가 가능",
+      "growth_potential": "TRPV4 억제제가 CMT2C에서 효능을 입증하면, 동일 기전으로 과민성방광뿐 아니라 만성 통증, 고혈압 등 다른 TRPV4 관련 질환으로 확장 가능",
+      "risks": [
+        "임상 1b/2a상에서 효능 입증 실패 가능성",
+        "과민성방광 시장의 기존 치료제와의 경쟁",
+        "환자 수가 적어 임상시험 환자 모집 난이도",
+        "TRPV4 억제의 장기적 부작용 가능성"
+      ],
+      "risk_mitigation": "FDA 희귀소아·패스트트랙 지정으로 임상 일정 단축 및 비용 절감; 건강인 1상에서 확인된 안전성 프로파일; 'one-to-many' 전략으로 단일 타깃의 리스크 분산"
+    },
+    "related_links": [
+      {
+        "title": "공식 웹사이트",
+        "url": "https://www.setarabiosciences.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "BioXconomy 분석 기사",
+        "url": "https://www.bioxconomy.com/investment/from-actio-s-ashes-setara-launches-with-90m-to-chase-rare-disease-genetics-at-scale",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "Jazz가 남긴 희귀질환 파이프라인을 9000만 달러 시리즈A로 독립시킨 세타라의 'one-to-many' 전략에 주목하라.",
+    "attention": 4,
+    "id": "setara-biosciences-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/setara-biosciences-2026.webp",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "health",
+    "name_en": "SRTD Biotech",
+    "name_ko": "SRTD 바이오텍",
+    "tagline": "질병 세포에서만 작동하는 차세대 mRNA 스위치",
+    "category": [
+      "mRNA 치료제",
+      "정밀 의약품"
+    ],
+    "founded_year": 2019,
+    "headquarters": {
+      "city": "Jülich",
+      "country": "Germany",
+      "country_ko": "독일"
+    },
+    "company_stage": "Seed",
+    "employee_count": "11-50",
+    "website": "https://srtd-biotech.com/",
+    "founders": [
+      {
+        "name_en": "Dr. Bernd Hoffmann",
+        "name_ko": "베른트 호프만",
+        "role": "Chief Scientific Officer",
+        "background": "연구소 그룹 리더, 100편 이상의 논문 및 다수 특허 보유",
+        "notable_achievement": "seRNA 기술 및 융합성 LNP 전달 플랫폼 발명"
+      }
+    ],
+    "team_highlights": "Matthias Alder (CEO): 30년 바이오텍 경력, Autolus, GAIN Therapeutics, Novartis 등 C레벨 역임, 100억 달러 이상의 거래 실행. Prof. Dr. Heinz Koeppl (CTO): TU Darmstadt 교수, 합성생물학·AI 전문가, 170편 이상 논문. Dr. Jens Hennecke (CBO): SOTIO, Micromet 임원 역임.",
+    "product": {
+      "summary": "질병 특이적 RNA 마커를 감지해 해당 세포에서만 치료 단백질을 발현하는 'seRNA' 플랫폼. 기존 mRNA 치료제의 전신 독성을 획기적으로 줄임.",
+      "problem_statement": "기존 mRNA 치료제는 건강한 세포에도 영향을 주어 심각한 부작용을 유발하고, 투여 용량에 제한이 있음.",
+      "solution": "seRNA는 세포 내 질병 RNA 마커가 있을 때만 IRES 블로커가 제거되어 치료 효과가 발현됨. 건강한 세포에서는 침묵 상태 유지.",
+      "key_features": [
+        "이중 선택성: fusogenic LNP로 표적 장기 전달 후, seRNA가 세포 내 마커 감지",
+        "모듈식 설계: 센서와 이펙터를 교체하여 다양한 적응증에 적용 가능",
+        "AI 기반 설계: RNA 마커 발굴 및 구조 최적화",
+        "fusogenic LNP: 간, 폐, 뇌 등 다양한 장기 전달 가능"
+      ],
+      "tech_stack_or_innovation": "seRNA(선택적 발현 RNA) + fusogenic LNP(융합성 지질나노입자) + 합성생물학/AI 플랫폼",
+      "target_customer": "간세포암, 폐암, 간섬유증, 자가면역질환 치료제를 개발하는 제약사 또는 환자",
+      "business_model": "파이프라인 자체 개발 후 IND 제출 및 라이선싱/파트너십 체결"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Moderna",
+          "comparison": "mRNA 분야 선도 기업이지만 seRNA와 같은 세포 수준 스위칭 기술은 부재"
+        },
+        {
+          "name": "BioNTech",
+          "comparison": "개인화 mRNA 암 백신 강점, 세포 특이적 발현 플랫폼은 초기 단계"
+        },
+        {
+          "name": "Replicate Bioscience",
+          "comparison": "자가 복제 RNA 기반 전신 치료, 세포 선택성은 SRTD만의 독자적 기술"
+        }
+      ],
+      "key_differentiator": "세포 내 RNA 마커 기반의 on-off 스위치로 건강한 세포 보호",
+      "moat": "seRNA 특허, fusogenic LNP 기술, AI 기반 마커 발굴 파이프라인",
+      "competitive_position_summary": "mRNA 치료제의 안전성 한계를 극복할 수 있는 유일한 플랫폼으로 초기 단계에서 강력한 기술적 우위 확보"
+    },
+    "trending_reason": {
+      "summary": "코로나19 mRNA 백신 성공 이후 mRNA 치료제의 차세대 진화에 대한 관심 고조. 세포 특이적 발현은 mRNA 분야의 핵심 난제로 평가받음.",
+      "catalysts": [
+        "2026년 11월 9일 3150만 유로 시드 투자 유치",
+        "Boehringer Ingelheim 등 빅파마의 전략적 투자 참여",
+        "mRNA 치료제 부작용 문제가 업계 화두로 부상"
+      ],
+      "growth_metrics": "",
+      "media_mentions": [
+        {
+          "source": "Handelsblatt",
+          "title": "Dieses deutsche Start-up will der nächste mRNA-Pionier werden",
+          "url": "https://www.handelsblatt.com/unternehmen/industrie/start-up-dieses-deutsche-start-up-will-der-naechste-mrna-pionier-werden/100267653.html",
+          "date": "2026-11-09",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Forschungszentrum Jülich",
+          "title": "Self-Destruct Sequence – The new seRNA targeting cancer",
+          "url": "https://www.fz-juelich.de/en/innovation/service/achievements/endeavours/2026/self-destruct-sequence",
+          "date": "2026-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Mérieux Partners",
+          "title": "Mérieux Innovation 2 invests in SRTD Biotech",
+          "url": "https://merieux-partners.com/news/merieux-innovation-2-invests-in-srtd-biotech-a-leading-biotechnology-company/",
+          "date": "2026-11-09",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "€31.5M",
+      "total_raised_note": null,
+      "total_raised_usd": 35500000,
+      "valuation_estimate": "$80M (추정)",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "€31.5M",
+        "note": "오버서브스크라이브드",
+        "amount_usd": 34020000,
+        "date": "2026-11",
+        "lead_investor": "Mérieux Equity Partners",
+        "notable_investors": [
+          "Boehringer Ingelheim Venture Fund",
+          "NRW.BANK",
+          "Lilly Ventures",
+          "HTGF",
+          "Anobis Asset"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "€31.5M",
+          "amount_usd": 34020000,
+          "date": "2026-11",
+          "lead_investor": "Mérieux Equity Partners"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "전체 mRNA 치료제 시장은 2030년까지 200억 달러(TAM)로 성장 전망. 정밀 siRNA/RNA 치료제가 차지하는 SAM 약 50억 달러. 세포 특이적 RNA 치료제 SOM 5~10억 달러 (추정).",
+      "market_trend": "mRNA 기술이 백신에서 만성 질환 치료제로 확장 중. 안전성과 지속성 문제 해결이 핵심 과제.",
+      "growth_potential": "seRNA 플랫폼은 간세포암, 폐암, 간섬유증, 자가면역 등 다수 적응증에 적용 가능해 시장 확장성 높음.",
+      "risks": [
+        "임상 데이터 부족: 아직 동물실험 수준",
+        "플랫폼의 인체 내 안전성과 효능 입증 필요",
+        "대규모 제조 능력 부족"
+      ],
+      "risk_mitigation": "빅파마 투자자(Boehringer Ingelheim, Lilly)의 임상·제조 지원 가능. AI 기반 설계로 개발 효율화."
+    },
+    "related_links": [
+      {
+        "title": "SRTD Biotech 공식 사이트",
+        "url": "https://srtd-biotech.com/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "기술 상세 페이지",
+        "url": "https://srtd-biotech.com/technology/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "파이프라인",
+        "url": "https://srtd-biotech.com/pipeline/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "팀 소개",
+        "url": "https://srtd-biotech.com/team/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "Boehringer Ingelheim과 Lilly가 함께 베팅한 독일 mRNA 스핀오프, 질병 세포에서만 켜지는 'RNA 스위치'가 실험실을 넘어 임상으로 갈 수 있을지 주목된다.",
+    "attention": 4,
+    "id": "srtd-biotech-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/srtd-biotech-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "robotics",
+    "name_en": "AIBIZ",
+    "name_ko": "에이아이비즈",
+    "tagline": "반도체 공정 이상탐지 AI 플랫폼 더치보이",
+    "category": [
+      "Industrial Automation",
+      "Semiconductor AI",
+      "Smart Factory"
+    ],
+    "founded_year": 2020,
+    "headquarters": {
+      "city": "Cheonan",
+      "country": "South Korea",
+      "country_ko": "한국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "42",
+    "website": "https://www.ai-biz.net",
+    "founders": [
+      {
+        "name_en": "Seungjae Ha",
+        "name_ko": "하승재",
+        "role": "CEO",
+        "background": "서울대 학사, 숭실대 MBA 및 IT공학 박사. 하림그룹에서 30여년간 스마트팩토리 및 제조혁신팀장 역임.",
+        "notable_achievement": "한국인공지능협회 부회장, IR52 장영실상 수상(2024)"
+      },
+      {
+        "name_en": "Hyunjin Choi",
+        "name_ko": "최현진",
+        "role": "CTO",
+        "background": "고려대 인공지능학과 박사, 고려대 전자공학 학사/석사. DB HiTek(Dongbu HiTek)에서 10년간 반도체 R&D 및 Device Modeling 경험.",
+        "notable_achievement": "AMD EPYC CPU 기반 GPU 없는 AI 추론 엔진 설계로 삼성 파운드리 공정에 적용"
+      }
+    ],
+    "team_highlights": "전체 인력의 80% 이상이 석·박사 출신 개발자. CIO 이종섭은 숭실대 교수 출신으로 25년 IT 컨설팅 경력 보유.",
+    "product": {
+      "summary": "DutchBoy(더치보이)는 반도체 제조공정의 시계열 센서 데이터를 실시간 분석해 이상을 조기 탐지하고 근본 원인까지 제공하는 AI 플랫폼.",
+      "problem_statement": "반도체 파운드리는 수백 개의 공정을 거친 후 최종 단계에서야 품질 검사가 이루어져 불량 조기 발견이 어렵고, 불량 발생 시 원인 추적에 오랜 시간이 소요됨. 장비 1대당 초당 300개 센서에서 100ms 간격으로 데이터가 쏟아져 기존 방식으로는 처리 불가.",
+      "solution": "DutchBoy는 장비 내 Edge 서버에서 실시간으로 센서 데이터를 수집·분석해 공정 이상을 즉시 감지하고, Graph Neural Network(GNN)과 시계열 이상탐지 모델로 불량 원인을 특정 장비·공정 단위로 추적.",
+      "key_features": [
+        "실시간 이상 탐지(Anomaly Detection): FDC 센서 데이터 기반 불량 조기 예측",
+        "이상 추적(Anomaly Tracking): 불량 유형 분류 및 영향 장비 정보 제공",
+        "근본 원인 분석(Root Cause Analysis): PCM, BIN, MAP, Vision 데이터 통합 분석",
+        "AI Agent 기반 자동 분석: Agent가 분석 도구를 선택·실행하고 결과를 종합해 엔지니어 의사결정 지원",
+        "Continual Learning: AI 모델의 지속적 학습 및 자동 업데이트"
+      ],
+      "tech_stack_or_innovation": "GPU 없이 AMD EPYC 서버 CPU만으로 추론 가능한 경량 AI 엔진. Docker 컨테이너 기반으로 장비 내 탑재. 시계열 이상탐지 + GNN 결합. Intel 대비 AMD EPYC에서 추론 속도 30% 향상.",
+      "target_customer": "삼성전자, SK하이닉스 등 반도체 파운드리. 이차전지, 광학카메라, 바이오 분야 제조기업으로 확장 중. OSAT(Outsourced Assembly and Test) 업체, LG Innotek 등.",
+      "business_model": "On-premise 라이선스 + 유지보수 계약 + 데이터 분석 서비스. 고객 맞춤형 솔루션 계약으로 장기 수익 창출."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "알티엠(RTM)",
+          "comparison": "2018년 설립, 반도체·디스플레이 공정 진단 AI 솔루션. 2022년 80억원 시리즈A 유치. LG전자·현대모비스 협업. AIBIZ와 가장 유사한 포지셔닝."
+        },
+        {
+          "name": "로아스(LOAS)",
+          "comparison": "AI 음향 탐지 기반 제조공정 진단. Pre-A 40억원. 음향(Acoustic) 신호에 특화되어 AIBIZ와 기술적 접근 방식 차별화."
+        },
+        {
+          "name": "에이아이네이션(AINATION)",
+          "comparison": "제조산업용 AI 운영 솔루션 '딥마에스트로'. 시리즈A 40억원 유치. AIBIZ보다 소프트웨어 운영 자동화에 초점."
+        }
+      ],
+      "key_differentiator": "GPU 없이 CPU만으로 실시간 추론 가능한 경량 AI 아키텍처. AMD EPYC 서버 CPU 기반으로 삼성전자·시안(Xian) 반도체 공장에 실제 적용 완료. 3~5% 수율 개선 효과를 고객사에 입증.",
+      "moat": "반도체 8인치 파운드리 시장에서 축적된 현장 데이터와 레퍼런스. Samsung 내부 장비에 Edge AI로 직접 탑재된 진입 장벽. 85% 이상의 공정진단 관련 특허 비율. AMD와의 공식 협업 및 케이스스터디.",
+      "competitive_position_summary": "한국 반도체 공정진단 AI 시장에서 삼성전자 레퍼런스를 보유한 유일한 스타트업. GPU-Free AI로 TCO(총소유비용) 경쟁력에서 우위. 8인치 파운드리에서 시작해 12인치 및 글로벌 파운드리로 확장 중."
+    },
+    "trending_reason": {
+      "summary": "2026년 11월 5일 시리즈A 투자 유치 공시와 함께, AMD와의 공식 케이스스터디 발표 및 'AI Manufacturing Agent' 전환 전략이 주목받음.",
+      "catalysts": [
+        "2026-11-05: 시리즈A 투자 유치(비공개 금액) — 공정진단 AI에서 '제조 전용 AI Agent'로 제품 진화 발표",
+        "2026-07-28: AMD EPYC CPU 기반 GPU-Free AI 추론 성공 사례 공개(Business Wire) — 삼성·시안 공장 적용, 수율 3~5% 개선",
+        "2024-08: IR52 장영실상 수상(DutchBoy) — 한국산업기술진흥협회 주관 최고 기술혁신상"
+      ],
+      "growth_metrics": "2025년 매출 18.2억원(전년 대비 74% 성장). 2026년 9월 기준 임직원 42명. 누적 특허 3건 등록·18건 출원. 삼성전자·SK하이닉스·LG Innotek 등 레퍼런스 확보.",
+      "media_mentions": [
+        {
+          "source": "AIBIZ 공식 뉴스룸",
+          "title": "AIBIZ Raises Series A Funding to Strengthen Its 'AI Manufacturing Agent'",
+          "url": "https://www.ai-biz.net/en/resources/news/79",
+          "date": "2026-11-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "AMD 공식 케이스스터디",
+          "title": "AIBIZ Boosts Semiconductor Yield with Lean AI Powered by AMD",
+          "url": "https://www.amd.com/en/resources/case-studies/aibiz-boosts-semiconductor-yield-with-leanai-powered-by-amd.html",
+          "date": "2026-07-28",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "The Asia Business Daily",
+          "title": "[Interview] \"AI is Essential in Manufacturing... Urgent Need for On-Site Application Technology\"",
+          "url": "https://view.asiae.co.kr/en/article/2025032617261842403",
+          "date": "2025-03-26",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Semiconductor Digest",
+          "title": "Korean AI Startup AiBiz Cuts Semiconductor Defects with GPU-Free AI",
+          "url": "https://www.semiconductor-digest.com/korean-ai-startup-aibiz-cuts-semiconductor-defects-with-gpu-free-ai",
+          "date": "2026-07-29",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "비공개",
+      "total_raised_note": "시리즈A 금액과 투자자가 공개되지 않음. THE VC 비교표에 70억원(약 $5.3M)으로 표기된 사례가 있으나 공식 확인 불가.",
+      "total_raised_usd": null,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "비공개",
+        "note": "공식 보도자료(2026-11-05) 기준 금액과 투자자 미공개.",
+        "date": "2026-11",
+        "lead_investor": "비공개",
+        "notable_investors": []
+      },
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "비공개",
+          "date": "2026-11",
+          "lead_investor": "비공개"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: 글로벌 반도체 제조 AI 시장 (2026년 약 $45억, 연평균 25% 성장). SAM: 반도체 공정 진단 AI (약 $12억). SOM: 한국 8인치·12인치 파운드리 + 글로벌 파운드리 (약 $3억 추정).",
+      "market_trend": "반도체 공급망 재편과 AI 칩 수요 폭증으로 파운드리 수율 개선이 최우선 과제로 부상. GPU 공급난으로 CPU 기반 AI 추론 수요 증가. 제조 현장에서 AI 에이전트 도입 가속화.",
+      "growth_potential": "삼성전자·SK하이닉스 레퍼런스를 기반으로 Intel, Micron 등 글로벌 파운드리로 확장 가능. 2차전지·바이오·광학 등 수직 확장 중. 2026년 글로벌 제조 AI 서밋 개최하며 해외 진출 본격화.",
+      "risks": [
+        "시리즈A 투자자와 금액이 비공개되어 재무 건전성 확인 어려움",
+        "삼성전자 단일 고객 의존도가 높을 가능성",
+        "알티엠·에이아이네이션 등 경쟁 스타트업과의 시장 경쟁 심화",
+        "반도체 업황 변동에 따른 설비 투자 축소 리스크"
+      ],
+      "risk_mitigation": "LG Innotek, SK하이닉스, OSAT 업체 등 고객 다각화 진행 중. GPU-Free AI로 고객 TCO 절감 → 경기 침체 시 채택 유인. AMD와의 공식 파트너십으로 글로벌 마케팅 채널 확보."
+    },
+    "related_links": [
+      {
+        "title": "AIBIZ 공식 웹사이트",
+        "url": "https://www.ai-biz.net",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "THE VC - 에이아이비즈 기업정보",
+        "url": "https://thevc.kr/aibiz",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "AMD 케이스스터디: AIBIZ Boosts Semiconductor Yield",
+        "url": "https://www.amd.com/en/resources/case-studies/aibiz-boosts-semiconductor-yield-with-leanai-powered-by-amd.html",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "JumpIT - 에이아이비즈 기업정보",
+        "url": "https://jumpit.saramin.co.kr/company/MTYyODcwMTg4OQ==?company_nm=%EC%97%90%EC%9D%B4%EC%95%84%EC%9D%B4%EB%B9%84%EC%A6%88",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "GPU 없이 CPU로 반도체 불량을 잡아내는 기술력, 삼성전자와 AMD가 증명했다.",
+    "attention": 2,
+    "id": "aibiz-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/aibiz-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "robotics",
+    "name_en": "Armatrix",
+    "name_ko": "아르매트릭스",
+    "tagline": "위험한 산업 공간을 탐사하는 뱀형 로봇 팔",
+    "category": [
+      "산업 로봇",
+      "검사 및 유지보수"
+    ],
+    "founded_year": 2024,
+    "headquarters": {
+      "city": "Bengaluru",
+      "country": "India",
+      "country_ko": "인도"
+    },
+    "company_stage": "Seed",
+    "employee_count": "11-50",
+    "website": "https://www.armatrix.in",
+    "founders": [
+      {
+        "name_en": "Vishrant Dave",
+        "name_ko": "비슈란트 데이브",
+        "role": "공동창업자",
+        "background": "IIT 칸푸르 졸업, MITACS 펠로우십으로 칼턴 대학교에서 Canadarm 연구 경험",
+        "notable_achievement": "IIT 칸푸르 캠퍼스에서 창업, ET Startup Awards 2026 Best on Campus 수상"
+      },
+      {
+        "name_en": "Ayush Ranjan",
+        "name_ko": "아유쉬 란잔",
+        "role": "공동창업자",
+        "background": "IIT 칸푸르 졸업, MITACS 펠로우십",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Prateesh Awasthi",
+        "name_ko": "프라티쉬 아와스티",
+        "role": "공동창업자",
+        "background": "IIT 칸푸르 졸업",
+        "notable_achievement": ""
+      }
+    ],
+    "team_highlights": "IIT 칸푸르 출신 세 명의 공동창업자로 구성",
+    "product": {
+      "summary": "초과다자유도 뱀형 로봇 팔로, 위험하고 협소한 산업 공간에서 검사, 용접, 도장 작업 수행",
+      "problem_statement": "석유·가스, 조선, 원자력 등 산업 현장에서 작업자가 위험하고 접근이 어려운 밀폐 공간에 들어가 검사 및 유지보수를 해야 하는 문제",
+      "solution": "3~5m 길이, 50~150mm 직경, 22자유도 이상의 뱀형 로봇 팔. 모터가 팔과 분리된 외부 구동 방식으로 가연성·고온 환경에서도 안전하게 작동",
+      "key_features": [
+        "24자유도 하이퍼리던던트 구조",
+        "AI 기반 실시간 경로 계획 및 장애물 회피",
+        "디지털 트윈 시뮬레이션을 통한 사전 배치 모델링",
+        "인터체인저블 엔드 이펙터(카메라, 센서, 용접기, 코팅 도구)"
+      ],
+      "tech_stack_or_innovation": "외부 구동(모터를 로봇 팔 밖에 배치), AI 추론 기반 실시간 모션 플래닝, 디지털 트윈",
+      "target_customer": "석유·가스, 조선, 항공, 원자력 산업의 정비·검사 부서",
+      "business_model": "석유·가스 대상 RaaS(Robot-as-a-Service) 모델, 조선업 대상 직접 판매"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "정보 없음",
+          "comparison": "검색 결과에서 경쟁사가 명시되지 않음"
+        }
+      ],
+      "key_differentiator": "모터를 분리한 외부 구동 방식으로 위험 환경 내구성 확보, 22자유도 이상의 하이퍼리던던트 구조",
+      "moat": "뱀형 로봇의 제어 알고리즘(경우의 수가 수백만 개에 달하는 역기구학 문제 해결), 하드웨어 설계 노하우",
+      "competitive_position_summary": "아직 초기 단계이지만, 위험 산업 환경 특화 로봇으로서 독자적인 기술력을 바탕으로 틈새 시장 공략"
+    },
+    "trending_reason": {
+      "summary": "2026년 11월, Crane Venture Partners 주도로 ₹67.28 crore 시드 라운드 유치 성공. 4.8배 밸류에이션 상승 및 ET Startup Awards 2026 Best on Campus 수상",
+      "catalysts": [
+        "산업 현장 작업자 안전 규제 강화",
+        "위험·협소 공간 자동화 수요 증가",
+        "인도 딥테크 생태계 성장"
+      ],
+      "growth_metrics": "FY26 기준 프리레비뉴(pre-revenue) 단계, 순손실 ₹3.05 crore (Entrackr)",
+      "media_mentions": [
+        {
+          "source": "Entrackr",
+          "title": "Exclusive: Armatrix kicks off Rs 67 Cr seed round at 4.8X valuation premium",
+          "url": "https://entrackr.com/exclusive/exclusive-armatrix-kicks-off-rs-67-cr-seed-round-at-48x-valuation-premium-12778409",
+          "date": "2026-11-03",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "StartupUnplugged",
+          "title": "Armatrix Builds Snake-Like Robots for Jobs Humans Shouldn’t Have to Enter",
+          "url": "https://startupunplugged.com/news/armatrix-builds-snake-like-robots-for-jobs-humans-shouldn-t-have-to-enter",
+          "date": "2026-10-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$10.2M",
+      "total_raised_note": "pre-seed $2.1M(pi Ventures 외) + seed ₹67.28 crore(약 $8.1M 추정). 엔트랙 기준. PitchBook은 seed를 $7.12M으로 기록",
+      "total_raised_usd": 10200000,
+      "valuation_estimate": "$43.4M (추정)",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "₹67.28 crore",
+        "note": "PitchBook은 $7.12M으로 보고. 추가 트랜치 가능",
+        "amount_usd": 8009524,
+        "date": "2026-11",
+        "lead_investor": "Crane Venture Partners",
+        "notable_investors": [
+          "pi Ventures",
+          "gradCapital",
+          "Boundless Ventures",
+          "Inuka Capital",
+          "NKSquared"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Pre-seed",
+          "amount": "$2.1M",
+          "note": "pi Ventures 주도, Inuka Capital, Boundless Ventures, Boost VC, Turbostart, gradCapital 참여",
+          "amount_usd": 2100000,
+          "date": "2026-02",
+          "lead_investor": "pi Ventures"
+        },
+        {
+          "stage": "Seed",
+          "amount": "₹67.28 crore",
+          "note": "Crane Venture Partners 주도, pi Ventures, gradCapital 등 참여. ₹360 crore valuation (4.8X)",
+          "amount_usd": 8009524,
+          "date": "2026-11",
+          "lead_investor": "Crane Venture Partners"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "정보 없음",
+      "market_trend": "산업 안전 규제 강화와 자동화 수요 증가로 로봇 검사 시장 성장 중",
+      "growth_potential": "석유·가스, 조선, 원자력 등 기존 진입 장벽이 높은 산업에서 파일럿 프로젝트 성공 시 빠른 확장 가능",
+      "risks": [
+        "기술 복잡성으로 인한 제품 신뢰성 확보 필요",
+        "산업 현장 인증 및 규제 통과 기간",
+        "대형 로봇 기업과의 경쟁 심화 가능성",
+        "초기 자금 조달 의존도"
+      ],
+      "risk_mitigation": "파일럿 프로젝트를 통한 실증, RaaS 모델로 고객 초기 비용 부담 완화, 인증 기관과 협력"
+    },
+    "related_links": [
+      {
+        "title": "PitchBook - Armatrix Profile",
+        "url": "https://pitchbook.com/profiles/company/720206-20",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "pi Ventures Portfolio - Armatrix",
+        "url": "https://www.piventures.in/portfolio/armatrix",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "maxon group 블로그 - Inside the Future of Industrial Robotics",
+        "url": "https://www.maxongroup.com/en-in/knowledge-and-support/blog/inside-the-future-of-industrial-robotics-305786",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "ET Startup Awards 2026 - Best on Campus",
+        "url": "https://epaper.infinitycompliance.in/startups/et-startup-awards-2026-best-on-campus-armatrix-slithers-to-success-with-snake-like-robotic-arms/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "IIT 칸푸르 출신 창업팀이 개발한 초과다자유도 뱀형 로봇으로, 위험 산업 환경의 접근 난제를 해결하려는 시도가 돋보인다.",
+    "attention": 2,
+    "id": "armatrix-2026",
+    "date": "2026-11-10",
+    "logo_url": "",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "robotics",
+    "name_en": "Contoro",
+    "name_ko": "콘토로",
+    "tagline": "AI 로봇팔로 물류 하역을 혁신하는 스타트업",
+    "category": [
+      "로봇 자동화",
+      "물류 테크"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "Austin",
+      "country": "USA",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "11-50",
+    "website": "https://contoro.com",
+    "founders": [
+      {
+        "name_en": "Youngmok Yun",
+        "name_ko": "윤영목",
+        "role": "CEO/Founder",
+        "background": "UT Austin 기계공학 박사, 하모닉스바이오닉스 CEO/CTO",
+        "notable_achievement": "재활로봇 FDA 승인 및 상용화"
+      }
+    ],
+    "team_highlights": "엔지니어의 90%가 UT Austin 출신(한경 기사), 직원 45명",
+    "product": {
+      "summary": "트럭과 해상 컨테이너에 적재된 비팔레타이즈드 박스형 화물을 자율적으로 하역하는 로봇 시스템",
+      "problem_statement": "비팔레타이즈드 박스의 하역은 노동집약적이고 안전 위험이 크며, 인력난이 심화되고 있음",
+      "solution": "AI와 원격조종을 결합한 휴먼-인-더-루프(HITL) 플랫폼으로 엣지 케이스까지 대응 가능한 로봇 하역 서비스",
+      "key_features": [
+        "듀오그라스프 그리퍼: 흡착과 집게를 결합한 이중 파지 방식으로 박스 상단이 막혀도 하역 가능",
+        "AdaptAI: 적재 상황 인식·충돌 회피 경로 최적화",
+        "InteleOp: 원격조종으로 AI 실패 상황 대체 및 데이터 수집",
+        "서비스형(as-a-service) 모델: 컨테이너당 150~300달러에 제공"
+      ],
+      "tech_stack_or_innovation": "특허받은 듀오그라스프 그리퍼, HITL을 통한 지속적 AI 학습",
+      "target_customer": "물류 창고, 항만, 유통 센터 (Amazon, Coupang 등)",
+      "business_model": "로봇 하역을 서비스로 제공 (컨테이너당 과금)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Covariant",
+          "comparison": "소프트웨어 중심으로 다양한 로봇에 적용 가능하나 특화 하드웨어 없음; Contoro는 하드웨어+소프트웨어 통합으로 하역에 특화"
+        },
+        {
+          "name": "Pickle Robot",
+          "comparison": "경쟁 하드웨어 솔루션이지만 시장 진입 단계; Contoro는 듀오그라스프 그리퍼로 차별화"
+        }
+      ],
+      "key_differentiator": "듀오그라스프 그리퍼로 높은 적재 밀도 대응, HITL로 신뢰성 확보, 서비스형 제공으로 초기 투자 부담 없음",
+      "moat": "특허받은 듀오그라스프 그리퍼, 실제 물류 현장 데이터를 통한 AI 학습 루, Amazon·Coupang 등 대형 고객 레퍼런스",
+      "competitive_position_summary": "고객 니즈에 특화된 하드웨어와 AI로 빠르게 시장에 침투 중"
+    },
+    "trending_reason": {
+      "summary": "Coupang·Amazon의 전략적 투자 유치, 2026년 11월 시리즈B 1100만 달러 클로징",
+      "catalysts": [
+        "Coupang·Amazon Industrial Innovation Fund의 투자 및 협업",
+        "미국 항만·창고의 노동력 부족",
+        "AI·원격조종 결합을 통한 신뢰성 확보 방안"
+      ],
+      "growth_metrics": "45명 직원, LA·롱비치·댈러스 등에서 운영 중, 일본 과자 포키·H마트 제품 등 하역 사례",
+      "media_mentions": [
+        {
+          "source": "한국경제",
+          "title": "50도 폭염에도 36㎏ 번쩍…오스틴서 美물류 뚫은 K로봇팔",
+          "url": "https://www.hankyung.com/article/2026091720541",
+          "date": "2026-09-18",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Coupang IR",
+          "title": "Coupang Announces $84M in investments for Global AI Tech Startups",
+          "url": "https://ir.aboutcoupang.com/news-events/news/news-details/2026/Coupang-Announces-84M-in-investments-for-Global-AI-Tech-Startups/default.aspx",
+          "date": "2026-04-14",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Krugman Insights",
+          "title": "Contoro Files a Form D for a $33.21m Equity Offering With $11.0m Already Sold to Three Investors and $22.21m Still Open for Its Trailer-Unloading Robots",
+          "url": "https://www.krugmaninsights.com/deals/ecm/contoro-files-a-form-d-for-a-33-21m-equity-offering-with-11-0m-already-sold-to-three-investors-and-22-21m-still-2026",
+          "date": "2026-11-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "FormDSignal",
+          "title": "Contoro Inc. raises $33.21M in Austin tech funding round — Form D",
+          "url": "https://www.formdsignal.com/filings/0001980558-26-000003",
+          "date": "2026-11-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "PitchBook",
+          "title": "Contoro Robotics 2026 Company Profile: Valuation, Funding & Investors",
+          "url": "https://pitchbook.com/profiles/company/510591-34",
+          "date": "2026-11-10",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$24.5M",
+      "total_raised_note": "(추정) 시드 $1.3M+$7.2M, 시리즈A 약 $5M(2025 Form D $13.5M 누적), 시리즈B $11M 부분 클로징",
+      "total_raised_usd": 24500000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$11M",
+        "note": "Form D 기준 추가 $22.21M 오픈, 투자자 3곳",
+        "amount_usd": 11000000,
+        "date": "2026-11",
+        "lead_investor": "비공개",
+        "notable_investors": [
+          "Amazon Industrial Innovation Fund",
+          "Coupang",
+          "Doosan Investment",
+          "IMM Investment",
+          "Khasm Labs"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$1.3M",
+          "amount_usd": 1300000,
+          "date": "2022-04",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Seed",
+          "amount": "$7.2M",
+          "amount_usd": 7200000,
+          "date": "2023-09",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Series A",
+          "amount": "비공개",
+          "note": "Amazon, Coupang 등 참여 (2025 Form D 총계 $13.5M)",
+          "date": "2025-03",
+          "lead_investor": "Amazon Industrial Innovation Fund"
+        },
+        {
+          "stage": "Series B",
+          "amount": "$11M",
+          "note": "Form D 2026-11-05 기준 $33.21M 오퍼링 중 $11M 클로즈",
+          "amount_usd": 11000000,
+          "date": "2026-11",
+          "lead_investor": "비공개"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "비공개",
+      "market_trend": "미국 물류 창고·항만 내 자동화 수요 확대, 노동력 부족 이슈",
+      "growth_potential": "높은 성장 잠재력",
+      "risks": [
+        "대형 물류사에 대한 고객 의존도",
+        "기술적 엣지 케이스 신뢰성",
+        "경쟁사 부상"
+      ],
+      "risk_mitigation": "HITL로 신뢰성 확보, 서비스형 모델로 고객 접근성 확대, 특허 기술로 차별화"
+    },
+    "related_links": [
+      {
+        "title": "Contoro 공식 웹사이트",
+        "url": "https://contoro.com",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "한국경제: 50도 폭염에도 36㎏ 번쩍…오스틴서 美물류 뚫은 K로봇팔",
+        "url": "https://www.hankyung.com/article/2026091720541",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Coupang IR: $84M in investments for Global AI Tech Startups",
+        "url": "https://ir.aboutcoupang.com/news-events/news/news-details/2026/Coupang-Announces-84M-in-investments-for-Global-AI-Tech-Startups/default.aspx",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "PitchBook: Contoro Robotics Company Profile",
+        "url": "https://pitchbook.com/profiles/company/510591-34",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Krugman Insights: Form D $33.21M",
+        "url": "https://www.krugmaninsights.com/deals/ecm/contoro-files-a-form-d-for-a-33-21m-equity-offering-with-11-0m-already-sold-to-three-investors-and-22-21m-still-2026",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "FormDSignal: Contoro Inc. raises $33.21M",
+        "url": "https://www.formdsignal.com/filings/0001980558-26-000003",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "구체적인 하역 문제에 특화된 하드웨어+AI 통합으로, Amazon·Coupang의 투자를 이끌어낸 K-로봇 스타트업.",
+    "attention": 2,
+    "id": "contoro-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/contoro-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 403,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "mobility",
+    "name_en": "Aventra Defense Systems",
+    "name_ko": "어벤트라 디펜스 시스템즈",
+    "tagline": "성층권에서 투하되는 저비용 정밀 타격 글라이더",
+    "category": [
+      "방산",
+      "자율 시스템",
+      "정밀 타격"
+    ],
+    "founded_year": 2025,
+    "headquarters": {
+      "city": "Herndon",
+      "country": "USA",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "26",
+    "website": "https://www.aventra.io/",
+    "founders": [
+      {
+        "name_en": "Michael Weigand",
+        "name_ko": "마이클 와이건드",
+        "role": "CEO, 공동창업자",
+        "background": "전 미 육군 장교, 다수 스타트업 창업 경험",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Brian Retherford",
+        "name_ko": "브라이언 레더포드",
+        "role": "공동창업자",
+        "background": "전 미 육군 장교",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Jessup Meng",
+        "name_ko": "제섭 멩",
+        "role": "공동창업자",
+        "background": "전 미 육군 장교",
+        "notable_achievement": ""
+      }
+    ],
+    "team_highlights": "",
+    "product": {
+      "summary": "Piranha(피라냐)는 고고도 기구(balloon)로 성층권(약 8만 피트)까지 올린 후 투하되는 무유도 폭탄을 AI 유도 정밀 타격체로 변환하는 모듈형 글라이더 키트다. 자체 개발 통신 중계 시스템을 통해 인간(Human-in-the-Loop)이 개입해 임무 변경이나 타격 취소도 가능하다.",
+      "problem_statement": "기존 장거리 정밀 타격 무기(스탠드오프 미사일 등)는 고가이며, 대공망을 돌파하기 어렵다. 저비용으로 대량의 정밀 타격 수단을 제공할 체계가 필요하다.",
+      "solution": "성층권 고도에서 기구로 투하, 중력과 활공으로 약 100마일(약 160km) 이상 비행하며, AI 유도로 3m 이내 정확도를 달성. 1회 발사 비용이 매우 낮아 '저렴한 대량(mass)' 전략을 구현한다.",
+      "key_features": [
+        "성층권 발사(80,000ft)로 장거리·고고도 진입, 대공망 회피",
+        "AI 기반 GPS 독립 정밀 유도(3m CEP)",
+        "모듈형 탑재체: ISR, 전자전, 화력 타격 임무 전환 가능",
+        "저비용: 기존 무기 대비 극히 낮은 발사 비용",
+        "빠른 현장 배치: 개념 구상부터 전방 배치까지 1년 미만"
+      ],
+      "tech_stack_or_innovation": "성층권 투하 글라이더 + AI 유도 + 자체 개발 통신 중계 시스템",
+      "target_customer": "미 국방부(육군, 특수전 사령부 등), NATO 및 동맹국 군",
+      "business_model": "제품 판매(생산 수익) 및 서비스 계약. 자체 공장(Factory Zero)에서 월 500기 생산 목표."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [],
+      "key_differentiator": "성층권 기구 투하 방식으로 초저비용·대량 타격 가능, 기존 JDAM 계열보다 훨씬 작고 저렴함",
+      "moat": "성층권 발사·유도·통신 독자 기술, 400회 이상 실전 평가 기반 신뢰성, 군납 계약 및 NATO 수출 실적",
+      "competitive_position_summary": "저비용 고고도 정밀 타격 분야에서 선두주자, 아직 동등한 경쟁사 없음."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 Konvoy 주도 Series A 1,750만 달러 유치, Booz Allen Hamilton의 벤처 캐피털도 참여. 미 육군 Arcane Thunder 26 훈련 등 실전 배치 성과 인정받아 빠르게 성장 중.",
+      "catalysts": [
+        "미 국방부의 저비용 대량 무기(Low-Cost Mass) 요구 증대",
+        "우크라이나 전쟁 등에서 대량 정밀 타격 수단 필요성 부각",
+        "성층권 플랫폼 발전(기구, 태양광 드론 등)으로 접근성 향상"
+      ],
+      "growth_metrics": "400회 이상 비행·납품 완료, 월 35기 생산, 2028년 월 500기 목표, 미군·NATO 수출 매출 분산",
+      "media_mentions": [
+        {
+          "source": "PRNewswire",
+          "title": "Aventra Raises $17.5M to Scale Production of Piranha",
+          "url": "https://www.prnewswire.com/news-releases/aventra-raises-17-5m-to-scale-production-of-piranha-delivering-affordable-mass-and-precision-to-us-and-allied-operators-302899968.html",
+          "date": "2026-10-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Tectonic Defense",
+          "title": "Exclusive: Guided Glide Bomb Startup Aventra Raises $17.5M",
+          "url": "https://www.tectonicdefense.com/exclusive-guided-glide-bomb-startup-aventra-raises-17-5m/",
+          "date": "2026-10-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Washington Technology",
+          "title": "Autonomy, space and logistics startups detail their newest capital raises",
+          "url": "https://www.washingtontechnology.com/companies/2026/10/autonomy-space-and-logistics-startups-detail-their-newest-capital-raises/416501/",
+          "date": "2026-10-07",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Washington Business Journal",
+          "title": "Herndon defense startup Aventra raises $17.5M",
+          "url": "https://www.bizjournals.com/washington/news/2026/10/07/aventra-defense-systems-konvoy-piranha.html",
+          "date": "2026-10-07",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "DevCuration",
+          "title": "Company Spotlight: Aventra Defense Systems",
+          "url": "https://devcuration.com/articles/company-spotlight-aventra-io",
+          "date": "2026-10-14",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Undiluted",
+          "title": "Western Alliance Bank provides facility in Aventra’s $17.5m Konvoy-led fundraise",
+          "url": "https://www.undiluted.com/news/western-alliance-bank-provides-facility-in-aventras-17-5m-konvoy-led-fundraise",
+          "date": "2026-10-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$21M",
+      "total_raised_note": "시드(3.5M) + Series A(17.5M) 합계",
+      "total_raised_usd": 21000000,
+      "valuation_estimate": "$80M (추정)",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$17.5M",
+        "amount_usd": 17500000,
+        "date": "2026-10",
+        "lead_investor": "Konvoy Ventures",
+        "notable_investors": [
+          "Lavrock Ventures",
+          "Booz Allen Ventures",
+          "Sands Capital",
+          "Langford Industries",
+          "Western Alliance Bank (facility)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$3.5M",
+          "amount_usd": 3500000,
+          "date": "2025-10",
+          "lead_investor": "Lavrock Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: 글로벌 유도 무기 시장 약 500억 달러, SAM: 저비용 정밀 타격 무기 시장 약 50억 달러(추정)",
+      "market_trend": "미 국방부의 '저렴한 대량(Low Cost Mass)' 전략과 함께 대량 정밀 타격 무기 수요 증가",
+      "growth_potential": "동맹국 수출 및 생산량 증대(월 500기)로 2028년 급격한 성장 예상",
+      "risks": [
+        "군수 계약 의존도 높음",
+        "대량 생산 리스크",
+        "고도 미사일 방어 체계 발전 시 위협 가능"
+      ],
+      "risk_mitigation": "NATO 등 다수 고객 확보, 자체 공장 건설 및 생산 확장 계획, 지속적 기술 업데이트"
+    },
+    "related_links": [
+      {
+        "title": "PitchBook - Aventra Defense Systems",
+        "url": "https://pitchbook.com/profiles/company/681061-87",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "성층권 투하 방식으로 정밀 타격 비용을 획기적으로 낮춰, 미 국방부의 '저렴한 대량' 전략에 정확히 부합하는 스타트업.",
+    "attention": 3,
+    "id": "aventra-defense-systems-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/aventra-defense-systems-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "mobility",
+    "name_en": "Cosmoserve Space",
+    "name_ko": "코스모서브 스페이스",
+    "tagline": "우주 쓰레기를 포획·제거하는 인도 우주 스타트업",
+    "category": [
+      "우주 쓰레기 제거",
+      "궤도 내 서비스"
+    ],
+    "founded_year": 2025,
+    "headquarters": {
+      "city": "Hyderabad",
+      "country": "India",
+      "country_ko": "인도"
+    },
+    "company_stage": "Seed",
+    "employee_count": "11-50",
+    "website": "https://cosmoserve.space/",
+    "founders": [
+      {
+        "name_en": "Chiranjeevi Phanindra B.",
+        "name_ko": "치란지비 파닌드라",
+        "role": "Founder & CEO",
+        "background": "ISRO에서 15년간 근무, Gaganyaan 유인 우주 프로그램, 재진입 시스템, 열 보호, 우주 쓰레기 보호 분야에서 Deputy Project Director 역임. 인도 대표로 Inter-Agency Space Debris Coordination Committee 참여.",
+        "notable_achievement": "ISRO 재직 중 인간 우주비행 및 우주 쓰레기 방호 기술 개발에 기여"
+      },
+      {
+        "name_en": "Pawan Kumar Chandana",
+        "name_ko": "파완 쿠마르 찬다나",
+        "role": "Founding Partner",
+        "background": "스타트업 공동 창업자 및 파트너",
+        "notable_achievement": ""
+      }
+    ],
+    "team_highlights": "초기 팀은 하이데라바드 T-Hub에서 근무",
+    "product": {
+      "summary": "자율 우주 쓰레기 제거 및 궤도 내 서비스를 위한 소프트 로봇 포획 시스템을 개발하고, 듀얼 우주선 아키텍처(Dual Spacecraft Architecture)를 사용해 고장난 위성을 제거하거나 수리한다.",
+      "problem_statement": "궤도상 운용 위성(약 10,000개) 및 폐기 위성(약 3,000개) 등 우주 쓰레기가 급증하여 현존 위성 및 미래 우주 임무에 충돌 위험을 초래한다. 기존 포획 방식은 협조적인 위성이나 특정 규격에 한정되어 비협조적(텀블링·미설계) 대상은 포착이 어렵다.",
+      "solution": "Venus flytrap에서 영감을 받은 4개의 소프트 로보틱 페탈(soft robotic petals)로 비협조적·비규격 대상을 안전하게 감싸 포획하고, 모선(Orbital Service Station)과 자율 서비스 차량(Autonomous Service Vehicle)으로 구성된 듀얼 우주선으로 다수의 위성을 한 번에 수리·제거한다.",
+      "key_features": [
+        "소프트 로보틱 페탈: 4개 독립 제어, 거의 무한 자유도, 10cm~2m 다양한 크기·형상 대응",
+        "듀얼 우주선 아키텍처: 큰 궤도 서비스 스테이션(연료·장비 적재)과 작은 자율 서비스 차량이 이동하며 포획·진단·수리·제거",
+        "비전 기반 자율 항법 시스템",
+        "1회 캠페인으로 최대 100기 위성 서비스 가능"
+      ],
+      "tech_stack_or_innovation": "소프트 로보틱스, 자율 항법, 궤도 랑데부 및 캡처 기술",
+      "target_customer": "위성 운용사(군집 위성 사업자), 정부 우주 기관(ISRO 등), 상업 통신·관측 위성 사업자",
+      "business_model": "위성 1기당 서비스 비용을 기존 약 1,000만 달러에서 100만 달러 미만으로 낮추는 것을 목표로, 다수 고객이 1회 캠페인 비용을 분담하는 모델. 상용 서비스는 2028년 중반 목표."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Astroscale",
+          "comparison": "자력 도킹 플레이트(협조적 위성 전용) 사용, CLS(End-of-Life Services) 상용화 단계. Cosmoserve는 비협조적 대상 및 연료·수리 통합 서비스 포커스."
+        },
+        {
+          "name": "ClearSpace",
+          "comparison": "유럽 스타트업, ESA와 협력하며 독자 포획 방식 보유하나 형상·크기·자유도에 제한. Cosmoserve는 소프트 로봇으로 더 넓은 범위 대상 포착 가능."
+        }
+      ],
+      "key_differentiator": "비협조적 텀블링 위성까지 포착 가능한 소프트 로보틱 페탈, 듀얼 우주선으로 경제성 확보 (100기/1회). 인도 최초 민간 우주 쓰레기 제거 시설 'Base 1' 보유.",
+      "moat": "ISRO 출신 창업자의 기술·네트워크, 특허 출원 중인 소프트 로보틱 포획 메커니즘, 조기 시장 진입 및 정부 지원",
+      "competitive_position_summary": "우주 쓰레기 제거 시장은 아직 초기이나 Astroscale, ClearSpace가 선점 중. Cosmoserve는 더 광범위한 대상 포착 능력과 경제성을 앞세워 후발주자로 차별화, 2028년 상용화 목표."
+    },
+    "trending_reason": {
+      "summary": "2026년 11월 6일 600만 달러 시드 투자 유치 및 인도 최초 민간 우주 쓰레기 제거 시설 'Base 1' 개소. 2026년 7월 첫 탑재체(EMBRACE) 시험 발사 실패 후 재도전 예정, 2027년 본격 실증 미션 계획.",
+      "catalysts": [
+        "인도 정부의 우주 쓰레기 제거 정책 및 민간 우주 산업 지원 강화 (연방 장관 Jitendra Singh 발언)",
+        "전 세계 위성 군집 확대에 따른 규제 압력 (국제 우주 쓰레기 조정 위원회 권고 등)",
+        "Rebright Partners(일본) 등 해외 투자자 관심"
+      ],
+      "growth_metrics": "2026년 7월 Skyroot Aerospace Vikram-1 로켓에 첫 탑재체 탑재, 75% 시스템 작동 확인, 페탈 전개 실패. 2027년 전 규모 우주 쓰레기 포획 실증 미션 계획. 구체적 매출·사용자 수 미공개.",
+      "media_mentions": [
+        {
+          "source": "YourStory",
+          "title": "Spacetech startup Cosmoserve raises $6M in seed round",
+          "url": "https://yourstory.com/2026/11/spacetech-startup-cosmoserve-raises-6-million-in-seed-round",
+          "date": "2026-11-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "indisight.com",
+          "title": "Building the Next Space Economy: Chiranjeevi Phanindra and Cosmoserve's Case for Orbital Maintenance",
+          "url": "https://www.indisight.com/articles/building-the-next-space-economy-chiranjeevi-phanindra-and-cosmoserves-case-for-orbital-maintenance",
+          "date": "2026-10-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Deccan Chronicle",
+          "title": "Cosmoserve Eyes Local Components to Power Spacecraft",
+          "url": "https://www.deccanchronicle.com/southern-states/telangana/cosmoserve-eyes-local-components-to-power-spacecraft-2002441",
+          "date": "2026-11-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Indian Startup News",
+          "title": "Former ISRO scientist's space debris startup Cosmoserve raises $6 million, opens Base 1 in Hyderabad",
+          "url": "https://indianstartupnews.com/funding/former-isro-scientists-space-debris-startup-cosmoserve-raises-6-million-opens-base-1-in-hyderabad-12788172",
+          "date": "2026-11-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "NDTV",
+          "title": "Hyderabad Gets India's First Private Space Debris Removal Facility",
+          "url": "https://www.ndtv.com/india-news/hyderabad-gets-indias-first-private-space-debris-removal-facility-12287783",
+          "date": "2026-11-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "The New Indian Express",
+          "title": "India emerging as global pioneer in space debris removal: Union Minister Jitendra Singh",
+          "url": "https://www.newindianexpress.com/india/2026/Nov/05/india-emerging-as-global-pioneer-in-space-debris-removal-union-minister-jitendra-singh",
+          "date": "2026-11-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Press Information Bureau (India)",
+          "title": "Press Release: Press Information Bureau",
+          "url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2333047&lang=1&reg=1",
+          "date": "2026-11-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$12M",
+      "total_raised_note": "2025년 9월 $3.17M 프리시드 + 2026년 11월 $6M 시드. 합계 약 $9.17M이나 일부 엔젤 투자 포함되어 총 $12M로 기재한 소스 있음(YourStory 기사). USD 환산 직접 확인 불가로 기사 금액 그대로 사용.",
+      "total_raised_usd": 12000000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "$6M",
+        "note": "엔젤 투자 포함 라운드. 리드: Rebright Partners(일본), 참여: Aranya Holdings, Naandi Ventures, 기존 투자자 AUM Ventures, Shakti VC.",
+        "amount_usd": 6000000,
+        "date": "2026-11",
+        "lead_investor": "Rebright Partners",
+        "notable_investors": [
+          "Rebright Partners",
+          "Aranya Holdings",
+          "Naandi Ventures",
+          "AUM Ventures",
+          "Shakti VC"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Pre-seed",
+          "amount": "$3.17M",
+          "note": "리드: Alan Rutledge(AVCF, US). 오버서브스크라이브드.",
+          "amount_usd": 3170000,
+          "date": "2025-09",
+          "lead_investor": "Alan Rutledge (AVCF)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 우주 쓰레기 제거 시장은 2030년까지 10억 달러 이상 규모로 성장 전망. SAM은 인도 및 아시아 태평양 위성 운용 시장, SOM은 초기 계약 4건(1건 유럽, 2건 인도, 1건 미국) 확보 중.",
+      "market_trend": "위성 군집 확대와 국제 규제 강화(종말 처리 의무화)로 우주 쓰레기 제거 서비스 수요 급증. 인도 정부가 민간 우주 산업을 적극 지원하며 관련 스타트업 생태계 확대.",
+      "growth_potential": "2027년 실증 미션 성공 후 상용화 시 빠른 매출 성장 가능. 위성 서비스 비용 1/10로 낮추겠다는 목표로 가격 경쟁력 확보 시 점유율 확대.",
+      "risks": [
+        "기술 실증 실패 (2026년 첫 탑재체 페탈 전개 실패 사례)",
+        "우주 발사체 일정 및 비용 지연",
+        "글로벌 경쟁사(Astroscale, ClearSpace)의 선점 효과",
+        "규제 및 보험 문제"
+      ],
+      "risk_mitigation": "2027년 전 규모 실증 미션으로 기술 검증 예정, 정부 지원과 해외 투자 유치로 자금 확보, 하이데라바드 Base 1 구축으로 자체 시험 인프라 보유."
+    },
+    "related_links": [
+      {
+        "title": "Cosmoserve Space 공식 웹사이트",
+        "url": "https://cosmoserve.space/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "YourStory: Cosmoserve raises $6M in seed round",
+        "url": "https://yourstory.com/2026/11/spacetech-startup-cosmoserve-raises-6-million-in-seed-round",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Indian Startup News: Former ISRO scientist's space debris startup raises $6M",
+        "url": "https://indianstartupnews.com/funding/former-isro-scientists-space-debris-startup-cosmoserve-raises-6-million-opens-base-1-in-hyderabad-12788172",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Indisight: Building the Next Space Economy",
+        "url": "https://www.indisight.com/articles/building-the-next-space-economy-chiranjeevi-phanindra-and-cosmoserves-case-for-orbital-maintenance",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Deccan Chronicle: Cosmoserve Eyes Local Components",
+        "url": "https://www.deccanchronicle.com/southern-states/telangana/cosmoserve-eyes-local-components-to-power-spacecraft-2002441",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "NDTV: Hyderabad Gets India's First Private Space Debris Removal Facility",
+        "url": "https://www.ndtv.com/india-news/hyderabad-gets-indias-first-private-space-debris-removal-facility-12287783",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "PIB: Press Release on Base 1 inauguration",
+        "url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2333047&lang=1&reg=1",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "ISRO 출신 창업자가 개발한 소프트 로봇 포획 기술은 비협조적 우주 쓰레기까지 잡을 수 있는데, 2026년 첫 비행에서 페탈 전개 실패 후 재도전 중인 게 관전 포인트.",
+    "attention": 3,
+    "id": "cosmoserve-space-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/cosmoserve-space-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "mobility",
+    "name_en": "Inflection Space Systems",
+    "name_ko": "인플렉션 스페이스 시스템즈",
+    "tagline": "연간 1만 기 위성 양산을 목표로 하는 우주 제조 스타트업",
+    "category": [
+      "우주 제조",
+      "위성 플랫폼"
+    ],
+    "founded_year": 2025,
+    "headquarters": {
+      "city": "Los Angeles",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Seed",
+    "employee_count": "2-10",
+    "website": "https://inflection-space.com/",
+    "founders": [
+      {
+        "name_en": "Alex Lisso",
+        "name_ko": "알렉스 리소",
+        "role": "CEO",
+        "background": "Millennium Space Systems, Rocket Lab, Planet Labs, Interlune 등에서 우주선 설계·제조·시험·운영 경험",
+        "notable_achievement": "기밀 정부 임무 수행 및 Varda와의 우주 내 제조 지원"
+      },
+      {
+        "name_en": "Matt Hanley",
+        "name_ko": "맷 핸리",
+        "role": "CTO",
+        "background": "콜로라도 대학교 기계공학 학사·석사, Loft Orbital에서 위성 통합·시험 자동화, Rocket Lab에서 Lunar Photon 개발 참여",
+        "notable_achievement": "Lunar Photon (달 궤도선) 개발 참여"
+      }
+    ],
+    "team_highlights": "창업자 외 Founding Engineer Jackson Smith (기존 기업 출신) 1명 합류, 총 2~10인 조직",
+    "product": {
+      "summary": "단일 표준화 위성 플랫폼 'Exponent'를 대량 생산하여 고객에게 저렴하고 빠르게 공급",
+      "problem_statement": "인류가 지금까지 만든 위성은 총 약 3만 기에 불과하지만, 차세대 궤도 데이터센터·글로벌 통신·국방 인프라 등에는 수십만~100만 기 이상의 위성이 필요",
+      "solution": "로봇 자동화와 AI 기반 공정을 도입한 공장(Amazon 물류센터 같은 환경)에서 표준 위성 플랫폼을 연간 1만 기 규모로 양산",
+      "key_features": [
+        "표준화 플랫폼 'Exponent' (페이로드 100kg, 전력 1.5kW, 수명 3년, 델타V 500m/s)",
+        "수직통합: 하드웨어·비행 소프트웨어·지상 운영 소프트웨어 자체 개발",
+        "AI 네이티브 공급망 관리 및 로봇 조립, 24시간 무인 가동 가능한 공장 설계",
+        "단일 플랫폼으로 다양한 임무(통신·지구관측·궤도 컴퓨팅 등) 지원"
+      ],
+      "tech_stack_or_innovation": "자동화된 조립라인, AI 기반 테스트 및 공급망 관리, 고체적 생산을 위한 부품 공용화",
+      "target_customer": "대규모 위성 군집이 필요한 상용 기업(통신, 지구관측, 궤도 데이터센터) 및 정부/국방 고객",
+      "business_model": "위성 플랫폼 단위 판매 (단가: 1기 $1.5M, 50기 이상 $900k, 100기 이상 $700k) 및 발사 서비스 연계"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Apex Space",
+          "comparison": "표준 위성 플랫폼 제공, Apex는 모듈형 접근을 취하나 Inflection은 더 높은 자동화와 수직통합으로 생산 비용을 낮춤"
+        },
+        {
+          "name": "Astranis",
+          "comparison": "정지궤도 소형 통신 위성에 집중, Inflection은 저궤도 대량 군집에 최적화"
+        }
+      ],
+      "key_differentiator": "연간 1만 기 양산 목표와 완전 자동화 공장으로 업계 대비 극단적인 생산 속도와 단가 경쟁력",
+      "moat": "창업팀의 실전 위성 제조 경험, YC 및 다수 VC의 초기 투자, 자체 비행 소프트웨어·지상 소프트웨어 수직통합, 2028년 첫 발사 계약 확보",
+      "competitive_position_summary": "위성 시장의 'Foxconn' 또는 'Tesla 공장'을 목표로 하는 유일한 초기 스타트업으로, 기존 업체들은 연간 수십 기 수준에 그침"
+    },
+    "trending_reason": {
+      "summary": "Y Combinator Fall 2026 배치에서 발표된 이후, 10월 13일 공식적으로 '2031년까지 연간 1만 기 위성 양산' 목표를 발표하며 주목받음. 우주 산업의 대규모 수요(Starlink 이후 차세대 군집, Golden Dome 등)와 맞물려 빠르게 부상.",
+      "catalysts": [
+        "Y Combinator 데모데이 (2026년 10월)",
+        "LinkedIn을 통한 양산 목표 발표 (2026-10-13)",
+        "Boost VC, Cape Fear Ventures 등 유수의 딥테크 VC 투자",
+        "FORGE 2026 행사 선정 (VC in DC, 2026-09-14)"
+      ],
+      "growth_metrics": "",
+      "media_mentions": [
+        {
+          "source": "Y Combinator",
+          "title": "Launch YC: Inflection Space Systems - Hyperscaling Spacecraft Manufacturing (>10,000/year)",
+          "url": "https://www.ycombinator.com/launches/Vdy-inflection-space-systems-hyperscaling-spacecraft-manufacturing-10-000-year",
+          "date": "2026-10-13",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "VC in DC (LinkedIn)",
+          "title": "Space is about to need spacecraft by the tens of thousands. Few can build that fast.",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505241491708235776",
+          "date": "2026-09-14",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "LinkedIn (Inflection Space Systems)",
+          "title": "Inflection Space Systems will manufacture 10,000 spacecraft per year by 2031.",
+          "url": "https://www.linkedin.com/posts/inflection-space_inflection-space-systems-will-manufacture-activity-7515789839774978048-67-i",
+          "date": "2026-10-13",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$125k",
+      "total_raised_note": "Dealroom 기준 YC 참여 시 $125k 시드 투자; 정확한 추가 프리시드 규모는 비공개",
+      "total_raised_usd": 125000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "$125k",
+        "note": "YC Fall 2026 배치, 표준 YC 시드 금액; 추가로 Boost VC, V1VC, Hyperstition Research, Cape Fear Ventures 참여 (별도 프리시드 라운드 규모 비공개)",
+        "amount_usd": 125000,
+        "date": "2026-09",
+        "lead_investor": "Y Combinator",
+        "notable_investors": [
+          "Boost VC",
+          "V1VC",
+          "Hyperstition Research",
+          "Cape Fear Ventures"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Pre-seed",
+          "amount": "비공개",
+          "note": "투자자 목록에 Boost VC, V1VC, Hyperstition Research, Cape Fear Ventures 포함",
+          "date": "2026-01",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Seed",
+          "amount": "$125k",
+          "note": "Y Combinator Fall 2026 배치",
+          "amount_usd": 125000,
+          "date": "2026-09",
+          "lead_investor": "Y Combinator"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "전세계 위성 제조 시장: 2025년 약 200억 달러, 2030년 400억 달러 이상 성장 전망; FCC에 등록된 위성 궤도 신청 건수 100만 기 이상",
+      "market_trend": "메가 군집(Starlink, Kuiper) 이후 궤도 데이터센터, 국방 Golden Dome, 글로벌 직접-디바이스 통신 등으로 위성 수요 폭발적 증가",
+      "growth_potential": "기존 위성 제조사는 연간 수십~수백 기 생산에 불과, 1만 기 양산 능력은 독보적 포지셔닝 가능",
+      "risks": [
+        "발사 실패 또는 일정 지연으로 첫 고객 신뢰 상실 위험",
+        "대량 생산 공정의 실제 구현 난이도 (우주 부품의 신뢰성·환경 시험 등)",
+        "기존 업체(Astranis, Apex 등)의 유사한 시도 가능성"
+      ],
+      "risk_mitigation": "첫 발사 Q1 2028로 계약 확보, 로봇 자동화로 인건비 및 오류 최소화, 설계 단계부터 생산 효율성 최적화"
+    },
+    "related_links": [
+      {
+        "title": "Inflection Space Systems 공식 웹사이트",
+        "url": "https://inflection-space.com/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "YC 프로필",
+        "url": "https://www.ycombinator.com/companies/inflection-space-systems",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Dealroom 프로필",
+        "url": "https://app.dealroom.co/companies/inflection_space_systems",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "표준 위성 플랫폼을 로봇 공장에서 찍어내겠다는 비전은 우주 산업의 제조 패러다임을 바꿀 수 있는 가장 대담한 시도다.",
+    "attention": 2,
+    "id": "inflection-space-systems-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/inflection-space-systems-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "climate",
+    "name_en": "Holyvolt",
+    "name_ko": "홀리볼트",
+    "tagline": "AI로 배터리 소재 발견을 가속화하는 스웨덴 스타트업",
+    "category": [
+      "에너지",
+      "AI"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "Stockholm",
+      "country": "Sweden",
+      "country_ko": "스웨덴"
+    },
+    "company_stage": "Series B",
+    "employee_count": "11-50",
+    "website": "https://holyvolt.com",
+    "founders": [
+      {
+        "name_en": "Mathias Ingvarsson",
+        "name_ko": "마티아스 잉바르손",
+        "role": "Founder & CEO",
+        "background": "Tempur-Pedic International의 유럽 사장을 역임하며 IPO 전후 글로벌 확장을 이끈 경험 보유",
+        "notable_achievement": "Tempur-Pedic의 NYSE 상장 및 국제 사업 확장 주도"
+      }
+    ],
+    "team_highlights": "CEO Mathias Ingvarsson (전 Tempur-Pedic Europe 사장), COO Steven Prast (전 Tesla 제조 리더십), CSO Dr. Dee Strand (25년 이상 배터리 R&D 경험)",
+    "product": {
+      "summary": "AI 모델과 자동화 실험실을 연결해 새로운 배터리 소재를 발견하는 플랫폼(Discovery Engine)을 운영하며, 첫 상업화 소재는 니켈·코발트가 없는 DRX(disordered rocksalt) 양극재",
+      "problem_statement": "서방은 중국이 지배하는 배터리 소재 공급망을 벗어나야 하지만, 전통적 R&D는 수년이 걸려 시급한 대응이 어려움",
+      "solution": "Wildcat Discovery Technologies와 합병으로 확보한 50만 셀 이상의 데이터를 바탕으로 AI가 후보 물질을 예측하고 자동화 실험실에서 검증하는 강화 학습 루프 구축",
+      "key_features": [
+        "AI-Driven Discovery Engine",
+        "고속 실험(High-Throughput) 플랫폼",
+        "500,000개 이상 셀 데이터",
+        "225개 이상 고객 프로젝트 경험",
+        "DRX 양극재 (니켈·코발트 프리, 고에너지 밀도)"
+      ],
+      "tech_stack_or_innovation": "고속 실험 플랫폼과 AI 모델을 연결한 폐쇄 루프 시스템으로, 실험 데이터가 AI 예측을 지속적으로 개선",
+      "target_customer": "방산업체(드론), 자동차 제조사, 데이터 센터 운영사",
+      "business_model": "라이선싱, 위탁 생산(Toll Manufacturing), 조인트 벤처. 자체 대규모 생산 공장은 건설하지 않음"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Sila Nanotechnologies",
+          "comparison": "Sila는 실리콘 음극재로 상용화에 근접, Holyvolt는 양극재(DRX)에 집중하며 AI 기반 발견 속도가 강점"
+        },
+        {
+          "name": "Tyfast",
+          "comparison": "Tyfast는 고속 충전 배터리 소재 전문, Holyvolt는 전체 소재 발견 플랫폼을 제공"
+        },
+        {
+          "name": "Silatronix",
+          "comparison": "Silatronix는 첨가제 위주, Holyvolt는 주력 소재(DRX)와 AI 플랫폼 동시에 보유"
+        }
+      ],
+      "key_differentiator": "18년간 축적된 고속 실험 데이터(Wildcat)와 AI를 결합한 강화 학습 시스템. 500,000개의 실제 배터리 셀 데이터를 보유한 유일한 기업",
+      "moat": "Wildcat Discovery Technologies의 데이터와 실험 인프라, 225개 프로젝트 경험. 새로운 소재 발견 사이클을 10배 이상 가속화",
+      "competitive_position_summary": "AI 소재 발견 스타트업 중 유일하게 대규모 물리적 실험 데이터를 보유하여 AI 예측의 신뢰성을 높이고, 경쟁사 대비 빠른 상용화 경로를 제시"
+    },
+    "trending_reason": {
+      "summary": "2026년 10월, Holyvolt가 4500만 달러 투자를 유치하며 서방의 배터리 소재 자립을 위한 핵심 기업으로 부상. 미 국방부의 중국산 배터리 금지법(2027년 10월 발효)을 앞두고 서방 내 배터리 소재 R&D에 대한 관심이 집중됨",
+      "catalysts": [
+        "미 국방수권법 Section 154 (2027년 10월 발효)",
+        "AI 기반 과학 연구(AI for Science) 투자 트렌드",
+        "EU 및 미국의 배터리 공급망 리쇼어링 정책"
+      ],
+      "growth_metrics": "2025년 매출 90만 SEK으로 급감했지만, R&D 투자 확대로 인력 3배 증가. 누적 50만 셀 테스트 데이터 확보. 2026년 대규모 투자 유치로 DRX 상용화 가속",
+      "media_mentions": [
+        {
+          "source": "Fortune",
+          "title": "Exclusive: ‘I’ve seen this movie before’: A Michigan-raised ex-Tesla exec raises $45 million to break China’s grip on batteries",
+          "url": "https://fortune.com/2026/10/15/holyvolt-funding-45-million-battery-startup-ai-sweden-michigan-prast-ingvarsson/",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "WebWire",
+          "title": "Holyvolt Raises $45M to Scale AI-Powered Discovery Engine as the West Races to Develop New Battery Materials",
+          "url": "https://www.webwire.com/ViewPressRel.asp?aId=362858",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Impact Loop",
+          "title": "Hemliga Holyvolt lockar fler investerare – har tagit in över 400 miljoner",
+          "url": "https://impactloop.se/artikel/hemliga-holyvolt-lockar-fler-investerare-har-tagit-in-over-400-miljoner",
+          "date": "2026-10-19",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Impact Loop VC",
+          "title": "Solo GP backs Swedish battery startup in €40m round",
+          "url": "https://impactloop.com/article/vcs-back-swedish-battery-startup-in-40m-round",
+          "date": "2026-10-19",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$69M",
+      "total_raised_note": "Series A 214M SEK (약 $24M) + Series B $45M. 환율 1 SEK = $0.1125 적용 (Impact Loop 기준). 앱포트에미션 152M SEK 제외.",
+      "total_raised_usd": 69000000,
+      "valuation_estimate": "$245M (추정)",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$45M",
+        "note": "Fortune 2026.10.15 기준. 추가 앱포트에미션 152M SEK.",
+        "amount_usd": 45000000,
+        "date": "2026-10",
+        "lead_investor": "Zone II",
+        "notable_investors": [
+          "Zone II",
+          "Course Corrected (CC.VC)",
+          "Fifth Wall (기존 투자자)"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "약 214M SEK",
+          "note": "Impact Loop 2026.10.19 기사 기준. Fifth Wall 등 참여.",
+          "date": "2024",
+          "lead_investor": ""
+        },
+        {
+          "stage": "Series B",
+          "amount": "$45M",
+          "note": "Fortune 2026.10.15 기준. 추가 앱포트에미션 152M SEK.",
+          "amount_usd": 45000000,
+          "date": "2026-10",
+          "lead_investor": "Zone II"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: 글로벌 배터리 소재 시장 약 500억 달러 (2026년 추정) / SAM: 서방 지역 니켈·코발트 프리 소재 시장 약 200억 달러 / SOM: 2027년 DRX 상용화 후 방산용 드론 시장 선점, 이후 자동차 및 데이터 센터로 확장",
+      "market_trend": "미국과 유럽의 중국 배터리 의존도 축소 정책, AI 기반 소재 발견에 대한 투자 증가, 배터리 소재의 재조명",
+      "growth_potential": "2027년 DRX 상용화로 초기 방산 시장 진입 후, 2028년 이후 전기차 OEM 및 데이터 센터로 확대 계획. 서방 내 자체 배터리 소재 수요 증가에 따라 고성장 예상",
+      "risks": [
+        "대규모 생산 공정으로의 스케일업 리스크",
+        "중국 경쟁사의 저가 공세",
+        "DRX의 실제 성능 및 내구성 검증 필요"
+      ],
+      "risk_mitigation": "라이선싱 및 조인트 벤처 모델로 제조 부담 감소. 18년간의 데이터로 AI 예측 정확도 향상. 다양한 고객사와의 협업 리스트 확보"
+    },
+    "related_links": [
+      {
+        "title": "Holyvolt 공식 웹사이트",
+        "url": "https://holyvolt.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Fortune 기사",
+        "url": "https://fortune.com/2026/10/15/holyvolt-funding-45-million-battery-startup-ai-sweden-michigan-prast-ingvarsson/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "AI와 실제 실험 데이터를 결합한 폐쇄 루프 시스템으로 배터리 소재 발견을 가속화하는 점이 인상적. 서방의 중국 배터리 의존도 해소를 위한 유망주.",
+    "attention": 4,
+    "id": "holyvolt-2026",
+    "date": "2026-11-10",
+    "logo_url": "",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "climate",
+    "name_en": "Green Growth",
+    "name_ko": "그린 그로스",
+    "tagline": "태양광 발전소에 배터리를 결합해 수익성을 높이는 '社外 재생에너지 부서'",
+    "category": [
+      "재생에너지",
+      "에너지 저장"
+    ],
+    "founded_year": 2022,
+    "headquarters": {
+      "city": "Tokyo",
+      "country": "Japan",
+      "country_ko": "일본"
+    },
+    "company_stage": "Seed",
+    "employee_count": "11-50",
+    "website": "https://greengrowth.co.jp/",
+    "founders": [
+      {
+        "name_en": "Jumpei Kawano",
+        "name_ko": "카와노 준페이",
+        "role": "대표이사",
+        "background": "와세다대학 상학부 졸업. 재생에너지 개발 전문 상장기업 레노바에서 메가솔라·바이오매스·해상풍력 프로젝트 매니저로 근무. 이후 독립해 컨설턴트로 활동하다 2022년 그린 그로스 창업.",
+        "notable_achievement": "2026년 6월 규슈 가가시야 태양광 발전소에 최초의 배터리 저장장치 결합 프로젝트를 기획·운영·애그리게이션까지 완료"
+      }
+    ],
+    "team_highlights": "사내이사 후쿠나가 신사쿠(도쿄대 경제학부, CDI 출신), CFO 하시즈메 쇼타(다이와증권·MICIN·SPACER 출신) 등 20여 명 규모로 2026년 중 30명까지 확대 예정",
+    "product": {
+      "summary": "기존 태양광 발전소에 배터리 저장장치를 추가 설치하고, 전력 시장 판매 및 환경 가치 증명서 발급까지 원스톱으로 제공하는 '社外 재생에너지 부서' 서비스",
+      "problem_statement": "일본의 태양광 발전소는 출력제어(공급 과잉 시 발전 정지)로 인한 수익 손실과 FIT(고정가격매수제도) 기간 종료(2030년대)에 따른 매출 급락 위험에 직면. 발전소 운영자는 대부분 개인이나 지역 기업으로 재생에너지 전문 인력이 없어 배터리 도입·운용이 어려움.",
+      "solution": "발전소 운영자를 대신해 배터리 저장장치 도입 기획·허가·시공 조율·운전 개시 후 시장 거래·환경 가치 판매까지 전 과정을 단일 창구로 처리. 전력을 매입해 시장에 판매하고 환경 가치를 증서화해 수요 기업에 판매, 수익을 발전소에 환원.",
+      "key_features": [
+        "특정 제조사에 얽매이지 않는 벤더프리 체계로 도입 비용 절감",
+        "발전소별 용량·판매 전략 최적화",
+        "발전소 전력 매입 후 시장 거래(애그리게이션) 및 환경 가치 증서 판매",
+        "규슈 지역 출력제어 대응 경험 보유"
+      ],
+      "tech_stack_or_innovation": "전력 시장 거래 및 애그리게이션을 위한 자체 소프트웨어 플랫폼(추정)",
+      "target_customer": "일본 내 기존 태양광 발전소 운영자(개인·지역 기업) 및 재생에너지 전력을 조달하려는 기업",
+      "business_model": "프로젝트 매니지먼트 수수료, 전력 매매 차익, 환경 가치 증서 판매 수익"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [],
+      "key_differentiator": "기획부터 운영·전력 판매까지 일관 수행하며 발전소의 전력을 직접 매입해 시장에서 거래(리스크 테이킹)한다는 점",
+      "moat": "출력제어가 가장 심각한 규슈 지역에서 8건의 실적(동사 기준 국내 최상위), 발전소 운영자와의 신뢰 관계 및 현지 금융기관·행정기관과의 네트워크",
+      "competitive_position_summary": "일본 재생에너지 배터리 애그리게이션 시장에서 선도적 위치(자체 조사 기준). 다만 경쟁사 구체 명칭은 공개 자료에서 확인되지 않음."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 약 5억 엔 규모 시드 라운드(ANRI 리드)를 발표하며 주목. FIT 종료를 앞둔 47만 개 태양광 발전소의 생존 전략으로 배터리 저장장치 필요성이 급부상한 가운데, 규슈에서의 조기 실적과 '社外 재생에너지 부서'라는 독특한 포지셔닝이 투자자와 미디어의 관심을 끌고 있음.",
+      "catalysts": [
+        "일본 규슈 지역 출력제어 본격화",
+        "2036년까지 순차적 FIT 기간 종료 (47만 건, 2,900만 kW)",
+        "FIP 제도 전환과 배터리 결합에 대한 정부 지원"
+      ],
+      "growth_metrics": "8건 배터리 결합 프로젝트 완료(합계 약 10MW), 팀 20명→30명 확대 중",
+      "media_mentions": [
+        {
+          "source": "PR Times",
+          "title": "グリーングロース、シードラウンドで約5億円の資金調達を実施",
+          "url": "https://prtimes.jp/main/html/rd/p/000000020.000114719.html",
+          "date": "2026-10-29",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "FastGrow",
+          "title": "「47万件の発電所」に稼ぐ力を──商流全体を担う“社外再エネ事業部”で突破、約5億円調達のグリーングロースが描く街づくりとは",
+          "url": "https://www.fastgrow.jp/articles/finance-sideview-greengrowth",
+          "date": "2026-11-02",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "OHYASHIMA",
+          "title": "Green Growth raises $3m seed round to help renewable power plants boost revenue",
+          "url": "https://ohyashima.com/business/green-growth-raises-3m-seed-round-to-help-renewable-power-plants-boost-revenue/",
+          "date": "2026-10-30",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Osegi",
+          "title": "Green Growth raises ¥500M for solar battery storage",
+          "url": "https://osegi.com/en/green-growth-raises-500-million-yen-solar-battery-storage",
+          "date": "2026-10-30",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "株式会社ドーガン",
+          "title": "MGXファンド 投資実行及び業務提携契約締結のお知らせ",
+          "url": "https://www.dogan.jp/news/20261030mgxfund/",
+          "date": "2026-10-29",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "¥500M",
+      "total_raised_note": "엡티티와 부채 포함. 시드 라운드로 발표. (USD 약 330만 달러, 1USD=150엔 기준)",
+      "total_raised_usd": 3300000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "¥500M",
+        "note": "엡티티: ANRI 6호 펀드, 도간 MGX 펀드, 유스케 도요타(개인). 부채: 리소나은행, 일본정책금융공단. 자본금과 부채 비율은 비공개.",
+        "amount_usd": 3333333,
+        "date": "2026-10",
+        "lead_investor": "ANRI",
+        "notable_investors": [
+          "Dogan MGX Fund",
+          "Yusuke Toyota"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "¥500M",
+          "note": "첫 외부 자본 조달. 이전에는 자체 자금과 은행 대출로 운영.",
+          "amount_usd": 3333333,
+          "date": "2026-10",
+          "lead_investor": "ANRI"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: 일본 내 FIT 종료 예정 태양광 발전소 47만 곳(약 2,900만 kW). SAM: 출력제어 문제가 심각한 규슈·혼슈 일부. SOM: 2026년 현재 8건(약 10MW) 실적.",
+      "market_trend": "일본 정부의 재생에너지 우대 정책, 출력제어 심화, FIT 종료 대비 배터리 저장장치 수요 급증. 2030년대 전망 밝음.",
+      "growth_potential": "고성장 예상: 규슈 지역 외 전국 확장 가능성, FIT 종료 시점 도래에 따른 필수 서비스화. 다만 정책 변화 리스크 존재.",
+      "risks": [
+        "정부 보조금·규제 변화",
+        "배터리 가격 변동성",
+        "대형 에너지 기업의 시장 진입"
+      ],
+      "risk_mitigation": "선발주자로서 규슈 내 레퍼런스 구축, 벤더프리 체계로 비용 경쟁력 확보, 전력 판매 수익을 통한 안정적 현금흐름"
+    },
+    "related_links": [
+      {
+        "title": "회사 공식 웹사이트",
+        "url": "https://greengrowth.co.jp/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "회사 공식 뉴스 페이지",
+        "url": "https://greengrowth.co.jp/news/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "PR Times 보도자료",
+        "url": "https://prtimes.jp/main/html/rd/p/000000020.000114719.html",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "FastGrow 기사",
+        "url": "https://www.fastgrow.jp/articles/finance-sideview-greengrowth",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "출력제어가 본격화된 규슈에서 8건의 배터리 결합 프로젝트를 완료하며, ‘社外 재생에너지 부서’라는 독특한 포지셔닝으로 FIT 종료 위기에 대응하는 일본 스타트업.",
+    "attention": 3,
+    "id": "green-growth-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/green-growth-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "fintech",
+    "name_en": "Seeds Fincap",
+    "name_ko": "시즈 핀캡",
+    "tagline": "인도 소상공인을 위한 데이터 기반 대출 플랫폼",
+    "category": [
+      "디지털 대출",
+      "MSME 금융"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Gurugram",
+      "country": "India",
+      "country_ko": "인도"
+    },
+    "company_stage": "Series B",
+    "employee_count": "201-500",
+    "website": "https://www.seedsfincap.com",
+    "founders": [
+      {
+        "name_en": "Subhash Chandra Acharya",
+        "name_ko": "수바시 찬드라 아차리아",
+        "role": "MD & CEO",
+        "background": "약 20년 금융 분야 경력, 전 Satya Microcapital Ltd 운영 총괄",
+        "notable_achievement": "공동 창업 전 Satya Microcapital에서 운영 총괄 역임"
+      },
+      {
+        "name_en": "Avishek Sarkar",
+        "name_ko": "아비쉑 사르카르",
+        "role": "Chief Risk Officer",
+        "background": "Satya Microcapital에서 리스크/신용 담당, Satin Creditcare 부사장",
+        "notable_achievement": "리스크 관리 전문가, 시즈 핀캡의 언더라이팅 모델 설계 주도"
+      },
+      {
+        "name_en": "Sumeet Dhall",
+        "name_ko": "수미트 달",
+        "role": "Co-Founder",
+        "background": "정보 없음 (비공개)",
+        "notable_achievement": ""
+      }
+    ],
+    "team_highlights": "설립자 3인 중 2인이 15년 이상 금융업 경력 보유. 2026년 9월 기준 164개 지점, 70,000명 이상 활성 차주 관리.",
+    "product": {
+      "summary": "인도 티어2/3 도시의 소상공인(MSME) 및 개인 사업자에게 무담보·담보 소액 대출을 제공하는 디지털 NBFC.",
+      "problem_statement": "인도 영세 기업은 재무제표·신용 이력이 불완전해 전통 금융권에서 소외되어 왔으며, 적시에 적절한 신용을 받지 못함.",
+      "solution": "현장 영업팀과 자체 현금흐름 기반 언더라이팅 기술을 결합한 '터치 앤 테크(Touch & Tech)' 모델로 신용 평가.",
+      "key_features": [
+        "무담보 사업자 대출 (₹60,000~₹2,00,000)",
+        "담보 사업자 대출 (₹2,00,000~₹10,00,000, 주택/상업용 부동산 담보)",
+        "낙농업자 대상 운전자금 대출 (₹70,000~₹10,00,000)",
+        "공급망 금융 및 기후·영향 금융 상품"
+      ],
+      "tech_stack_or_innovation": "자체 현금흐름 기반 신용 평가 모델, AI·빅데이터 분석을 활용한 디지털 운영, 현장 평가와 기술 평가 결합.",
+      "target_customer": "인도 티어2/3 도시의 영세·소상공인(MSME), 개인 사업자, 낙농업자, 여성 창업자.",
+      "business_model": "대출 이자 수익, 수수료 수익. 평균 대출 규모 ₹5만~₹10만. 2026년 8월 기준 AUM ₹722 crore (약 8,700만 달러)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Kinara Capital",
+          "comparison": "유사 MSME 대상 무담보 대출 NBFC, 티어2/3 도시 집중, 시즈 핀캡 대비 규모 더 큼."
+        },
+        {
+          "name": "Lendingkart",
+          "comparison": "온라인 우선 MSME 대출 플랫폼, 디지털 채널 위주로 시즈 핀캡의 지점 중심 모델과 대조적."
+        },
+        {
+          "name": "Aye Finance",
+          "comparison": "영세 기업 대상 소액 담보 대출, 여성·소외 계층 집중, 시즈 핀캡과 유사 고객층."
+        }
+      ],
+      "key_differentiator": "현장 영업팀과 기술 평가를 결합한 '터치 앤 테크' 모델로, 재무제표 부족 고객도 현금흐름 기반으로 심사 가능.",
+      "moat": "164개 지점 네트워크, 7만+ 차주 데이터 기반 언더라이팅 모델, 25개 이상 금융기관과 협력 관계.",
+      "competitive_position_summary": "인도 MSME 대출 시장 내 차별화된 오프라인-온라인 결합 모델로 성장 중이나, 대형 NBFC·뱅크 진출 확대와 경쟁 심화."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 Michael & Susan Dell Foundation 주도 ₹100 crore+ 시리즈B 유치로 주목. 인도 MSME 신용 갭 해소 모델에 대한 관심 증가.",
+      "catalysts": [
+        "2026년 10월 1일 시리즈B 라운드 (₹100 crore+, MS Dell Foundation·Z47·Lok Capital 참여)",
+        "2026년 9월 CRISIL BBB-/Stable 신용등급 신규 배정",
+        "2026년 11월 BW Disrupt 인터뷰에서 AUM ₹1,000 crore 목표 발표"
+      ],
+      "growth_metrics": "AUM: ₹509 crore (FY25) → ₹722 crore (2026.8, YoY 42%↑). 지점 수: 128→164. 활성 차주: 70,000명+. FY26 누적 집행액 ~₹620 crore.",
+      "media_mentions": [
+        {
+          "source": "BW Disrupt",
+          "title": "Our Growth Will Be Driven By Deeper Market Penetration & Product Diversification: Subhash Acharya, Seeds Fincap",
+          "url": "https://www.bwdisrupt.com/article/our-growth-will-be-driven-by-deeper-market-penetration-product-diversification-subhash-acharya-seeds-fincap-631767",
+          "date": "2026-11-03",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Entrackr",
+          "title": "Seeds Fincap raises Rs 100 Cr in Series B led by Michael & Susan Dell Foundation",
+          "url": "https://entrackr.com/news/seeds-fincap-raises-rs-100-cr-in-series-b-led-by-michael-susan-dell-foundation-12611889",
+          "date": "2026-10-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Z47 News",
+          "title": "Z47-backed Seeds Fincap raises ₹100+ crore in Series B",
+          "url": "https://www.z47.com/news/z47-backed-seeds-fincap-raises-series-b-to-expand-credit-access",
+          "date": "2026-10-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "CRISIL Ratings",
+          "title": "Rating Rationale - Seeds Fincap Private Limited",
+          "url": "https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/SeedsFincapPrivateLimited_September%2023_%202026_RR_404997.html",
+          "date": "2026-09-23",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "약 ₹150 crore",
+      "total_raised_note": "시리즈A(2024.7, $8M≈₹67.5 crore) + 시리즈B 첫 트랜치(2026.10, ₹100 crore+) 합계. 출처 간 분기 없음.",
+      "total_raised_usd": 18000000,
+      "valuation_estimate": "$80M (추정)",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "₹100 crore",
+        "note": "₹100 crore 이상, 여러 소스에서 ₹100 crore+, Z47 블로그에 ₹100+ crore로 기재.",
+        "amount_usd": 11904762,
+        "date": "2026-10",
+        "lead_investor": "Michael & Susan Dell Foundation",
+        "notable_investors": [
+          "Michael & Susan Dell Foundation",
+          "Z47 (Matrix Partners India)",
+          "Lok Capital",
+          "Norinchukin Capital",
+          "Alteria Capital"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Series A",
+          "amount": "$8.5M",
+          "note": "Entrackr 기준 $8.5M.",
+          "amount_usd": 8500000,
+          "date": "2024-07",
+          "lead_investor": "Lok Capital, Matrix Partners India (현 Z47)"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "인도 MSME 신용 갭 약 1.2조 달러 (TAM). 시즈 핀캡은 영세·소액 구간 (₹50,000~₹10,00,000) 타겟.",
+      "market_trend": "인도 NBCC 규제 강화, 디지털 대출 확대, 티어2/3 도시 금융 접근성 증가.",
+      "growth_potential": "기존 AUM ₹722 crore에서 ₹1,000 crore (2027.3 목표)로 38% 성장. 지점당 10년 경험의 영업팀으로 유기적 확장 용이.",
+      "risks": [
+        "소액 무담보 대출 비중 높아 90일 이상 연체율 4.0% (2026.6)로 상승세",
+        "대형 은행·핀테크의 MSME 시장 진출로 경쟁 심화",
+        "거시경제 둔화 시 차주 상환 능력 위축"
+      ],
+      "risk_mitigation": "담보 대출(LAP) 비중 확대 계획, CRISIL BBB-/Stable 등급 유지, 25개 이상 금융기관과 조달 다변화."
+    },
+    "related_links": [
+      {
+        "title": "Seeds Fincap 공식 홈페이지",
+        "url": "https://www.seedsfincap.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Seeds Fincap 연차 보고서 (FY25-26)",
+        "url": "https://www.seedsfincap.com/Pdf/2025-26.pdf",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "델 재단이 주목한 인도의 '터치 앤 테크' NBFC, 소상공인 신용 갭을 파고드는 현장 중심 모델이 돋보인다.",
+    "attention": 3,
+    "id": "seeds-fincap-2026",
+    "date": "2026-11-10",
+    "logo_url": "",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "infra",
+    "name_en": "North",
+    "name_ko": "노스",
+    "tagline": "클라우드·AI·데이터 비용 지능형 자동화 플랫폼",
+    "category": [
+      "클라우드 비용 관리",
+      "FinOps",
+      "AI 인프라"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "New York",
+      "country": "USA",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series B",
+    "employee_count": "51-200",
+    "website": "https://north.cloud",
+    "founders": [
+      {
+        "name_en": "Matt Biringer",
+        "name_ko": "매트 버링어",
+        "role": "CEO 및 공동창업자",
+        "background": "클라우드 및 SaaS 분야 경영 경험; 이전 스타트업 창업 이력 보유 (상세 미확인)",
+        "notable_achievement": "North 공동 창업, 시리즈 B $60M 유치 주도"
+      }
+    ],
+    "team_highlights": "핵심 팀은 클라우드 인프라 및 핀테크 전문가로 구성 (구체적 인력 정보는 비공개)",
+    "product": {
+      "summary": "North는 클라우드, AI, 데이터 지출을 하나의 플랫폼에서 관리하는 자동화된 FinOps 솔루션입니다. 수동 최적화를 제거하고 AI 기반으로 비용을 분석, 예측, 최적화합니다.",
+      "problem_statement": "기업이 멀티 클라우드와 AI 서비스를 확장하면서 인프라 비용이 예측 불가능해지고, 엔지니어링과 재무팀이 분산된 도구로 수동 관리해야 함.",
+      "solution": "North는 통합된 단일 시스템에서 비용 가시성, 할당, 예측, 최적화를 제공하며, AI 에이전트가 자동으로 구매 결정과 리소스 조정을 수행.",
+      "key_features": [
+        "Autobot: 자동 약정 래더링 (Commitment laddering)",
+        "Flexbot: North 관리 계정을 통한 할인 제공",
+        "TokenFlow: AI 모델 사용량 및 비용 추적",
+        "Noros: 자연어 기반 FinOps 어시스턴트",
+        "리소스 적정화 (Rightsizing) 추천",
+        "이상 징후 탐지 (Anomaly Detection)",
+        "태그 없이 실시간 비용 할당",
+        "AWS, GCP, Azure, OpenAI, Anthropic, Snowflake 통합"
+      ],
+      "tech_stack_or_innovation": "AI 기반 자동화, 머신러닝 예측 모델, 클라우드 API 통합, 노코드 설정",
+      "target_customer": "엔터프라이즈 기업의 재무팀, 엔지니어링팀, DevOps",
+      "business_model": "SaaS 기반 구독 (관리 지출 규모에 따른 과금 추정)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "CloudHealth (VMware)",
+          "comparison": "레거시 FinOps 플랫폼, 수동 최적화 중심, AI 자동화 부재"
+        },
+        {
+          "name": "CloudCheckr (NetApp)",
+          "comparison": "클라우드 비용 관리에 특화, AI 및 데이터 지출 통합 기능 미흡"
+        },
+        {
+          "name": "Vantage",
+          "comparison": "모던 UI와 비용 분석, 하지만 AI 워크로드 비용 관리 기능 제한적"
+        }
+      ],
+      "key_differentiator": "완전 자동화된 FinOps: 사용자가 대시보드를 해석하지 않아도 AI가 구매와 할당을 실행.",
+      "moat": "Autobot 자동화 기술 특허, $2B 관리 지출 데이터 기반 네트워크 효과, 98.8% 고객 유지율, AWS Marketplace 우수 파트너",
+      "competitive_position_summary": "AI 및 데이터 지출을 통합 관리하는 차세대 FinOps 플랫폼으로, 전통 업체 대비 자동화 수준과 통합 범위에서 리더십 보유."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월, North는 PeakSpan Capital 주도로 $60M 시리즈 B를 유치하며 클라우드·AI·데이터 비용 관리 시장에서 주목받고 있습니다. AI 도입 확대에 따른 비용 복잡성을 해결하는 자동화 플랫폼으로 성장 가속화.",
+      "catalysts": [
+        "AI 모델 사용 급증으로 인한 예측 불가능한 비용 증가",
+        "멀티 클라우드 및 AI 서비스 채택 확대",
+        "기존 수동 FinOps의 비효율성 대두",
+        "시리즈 B 자금으로 제품 및 팀 확장"
+      ],
+      "growth_metrics": "관리 지출 $2B, 누적 절감액 $400M+, 고객 유지율 98.8%, Assembly AI 등 주요 고객 확보",
+      "media_mentions": [
+        {
+          "source": "North.cloud Newsroom",
+          "title": "North.cloud Raises $60M Series B to Unify Spend Intelligence and Enable Full Automation Across Cloud, AI, and Data",
+          "url": "https://north.cloud/newsroom/north-series-b-release",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Axios",
+          "title": "Exclusive: Cloud spend startup North raises $60M",
+          "url": "https://www.axios.com/pro/enterprise-software-deals/2026/10/15/cloud-spend-northcloud-peakspan",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Ideas Everywhere VC",
+          "title": "North Raises $60M to Bring Cloud, AI, and Data Spend Into One System",
+          "url": "https://ideas.everywhere.vc/p/north-raises-60m-to-bring-cloud-ai",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Protocol Wire",
+          "title": "North.cloud $60M Series B: Cloud Cost Automation",
+          "url": "https://protocolwire.com/startups/north-cloud-60-million-series-b-cloud-cost-automation/",
+          "date": "2026-10-23",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Unite.AI",
+          "title": "North.cloud, 클라우드 및 AI 지출 관리 자동화를 위해 시리즈 B에서 6,000만 달러 유치",
+          "url": "https://www.unite.ai/ko/north-cloud-60m-series-b-cloud-ai-spend-management/",
+          "date": "2026-10-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$60.3M",
+      "total_raised_note": "시리즈 B $60M, 시드 $300K 포함. 2025년 시리즈 A 금액 미공개.",
+      "total_raised_usd": 60300000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series B",
+        "amount": "$60M",
+        "note": "리드: PeakSpan Capital; 참여: Litquidity Ventures, Companyon Ventures, Alpaca, Uncommon Denominator, Gaingels, Mana Ventures",
+        "amount_usd": 60000000,
+        "date": "2026-10",
+        "lead_investor": "PeakSpan Capital",
+        "notable_investors": [
+          "Litquidity Ventures",
+          "Companyon Ventures",
+          "Alpaca",
+          "Uncommon Denominator",
+          "Gaingels",
+          "Mana Ventures"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$300K",
+          "note": "PitchBook 기준 Early Stage VC (Series A)로 분류; 금액 $300K",
+          "amount_usd": 300000,
+          "date": "2023-09",
+          "lead_investor": ""
+        },
+        {
+          "stage": "Series A",
+          "amount": "비공개",
+          "note": "2025년 7월 조달, 리더 및 규모 미공개",
+          "date": "2025-07",
+          "lead_investor": ""
+        },
+        {
+          "stage": "Series B",
+          "amount": "$60M",
+          "note": "리드: PeakSpan Capital, 추가 투자자 다수",
+          "amount_usd": 60000000,
+          "date": "2026-10",
+          "lead_investor": "PeakSpan Capital"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 클라우드 지출 관리 시장은 2025년 약 300억 달러로 추정 (출처: Gartner 등). AI 관련 지출 급증으로 시장 확대 중.",
+      "market_trend": "기업의 멀티 클라우드 및 AI 모델 도입 가속화로 통합 비용 관리의 필요성이 빠르게 증가.",
+      "growth_potential": "AI 모델 비용이 전체 IT 예산에서 차지하는 비중이 증가함에 따라 자동화된 FinOps 솔루션 수요 지속 성장 전망.",
+      "risks": [
+        "AWS, Azure, GCP 등 클라우드 제공업체의 자체 비용 관리 도구와 경쟁",
+        "기존 FinOps 솔루션 (CloudHealth, Apptio) 시장 지배력",
+        "고객 집중도: 상위 몇몇 고객이 매출의 상당 부분 차지 가능성",
+        "AI 요금 모델의 빠른 변화에 대응 필요"
+      ],
+      "risk_mitigation": "높은 고객 유지율(98.8%)과 적극적인 제품 확장, AI 네이티브 차별성, 대규모 관리 데이터 기반 네트워크 효과로 경쟁사 대비 우위 확보."
+    },
+    "related_links": [
+      {
+        "title": "North 공식 웹사이트",
+        "url": "https://north.cloud",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "AWS Marketplace - North",
+        "url": "https://aws.amazon.com/marketplace/pp/prodview-axjowgejulzlm",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "PitchBook Company Profile",
+        "url": "https://pitchbook.com/profiles/company/537820-66",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "CB Insights Company Profile",
+        "url": "https://www.cbinsights.com/company/north-4",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "수동 해석이 필요 없던 AI FinOps 시대를 열려는 North의 시도는 인프라 관리 패러다임 전환의 신호다.",
+    "attention": 3,
+    "id": "north-2026",
+    "date": "2026-11-10",
+    "logo_url": "",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "infra",
+    "name_en": "Mueon Corporation",
+    "name_ko": "뮤온 코퍼레이션",
+    "tagline": "모듈형 3D 컴퓨팅 큐블릿으로 AI 인프라를 재정의하다",
+    "category": [
+      "반도체",
+      "AI 인프라",
+      "데이터센터"
+    ],
+    "founded_year": 2025,
+    "headquarters": {
+      "city": "Portland",
+      "country": "United States",
+      "country_ko": "미국"
+    },
+    "company_stage": "Series A",
+    "employee_count": "51-100",
+    "website": "https://mueon.com",
+    "founders": [
+      {
+        "name_en": "Wilfred Gomes",
+        "name_ko": "윌프레드 고메스",
+        "role": "CEO",
+        "background": "전 Intel Fellow (29년 근무), CPU·GPU 아키텍처, 메모리, 패키징, 전력·열 설계 전문. 250개 이상 특허 보유.",
+        "notable_achievement": "Intel에서 Foveros(3D 패키징) 및 이종 집적 기술 개발 주도"
+      },
+      {
+        "name_en": "Jack Hwang",
+        "name_ko": "잭 황",
+        "role": "CTO",
+        "background": "Intel에서 Foveros, backside power delivery, 고급 패키징 공정을 함께 개발한 반도체 엔지니어. 대량 생산 경험 보유.",
+        "notable_achievement": "Intel Foveros 핵심 기술자, 고급 리소그래피·박막 공정 전문"
+      }
+    ],
+    "team_highlights": "50명 규모의 엔지니어링 팀, 전 Intel 출신의 실리콘·패키징·전력·열 설계 전문가들로 구성.",
+    "product": {
+      "summary": "Mueon은 Cubelets™라는 모듈형 3D 컴퓨팅/메모리 빌딩 블록을 개발한다. 연산·메모리·전력·냉각을 하나의 작은 폼팩터로 통합해 데이터센터 랙 당 밀도를 10배 높이고, 전력·비용 효율에서 10배 향상을 목표로 한다.",
+      "problem_statement": "AI 모델이 거대해짐에 따라 데이터센터는 전력·냉각·메모리 대역폭·확장성 등 물리적 제약에 직면했다. 기존 랙 기반 구조는 칩 하나를 개선하는 방식으로는 한계에 도달했다.",
+      "solution": "Cubelets™는 칩·기판·보드·서버·랙·냉각·케이블이 분산된 구조를 하나의 압축된 빌딩 블록으로 통합한다. 3D 적층과 시스템-스케일 통합 설계로 데이터 이동 거리를 극단적으로 줄이고, 전력 밀도를 낮춘다.",
+      "key_features": [
+        "모듈형 3D Cubelets™: 연산 + 메모리 + 전력 + 냉각을 하나의 적층 블록으로 통합",
+        "시스템-스케일 통합 설계: 패키징, 인터커넥트, 전력, 열 관리를 개별 문제가 아닌 통합 변수로 취급",
+        "최대 10배 성능·전력 효율 개선: 동일 랙 공간 내 밀도 10배, 비용 효율 10배 목표",
+        "메가와트급 랙 밀도 확장 설계: 소형 데이터센터에서 차세대 초대형 시설까지 대응"
+      ],
+      "tech_stack_or_innovation": "3D 적층 패키징, 고밀도 인터커넥트, 통합 전력·열 관리, 소프트웨어 오케스트레이션 레이어 (PyTorch/Kubernetes 기반). 단일 가속기 기술에 의존하지 않고 전체 시스템 균형을 최적화.",
+      "target_customer": "초대형 클라우드/하이퍼스케일러, AI 기업, 데이터센터 운영사, 엣지/온프레미스 AI를 원하는 조직, 군/우주 분야",
+      "business_model": "자체 Cubelets™ 시스템 판매 (하드웨어), 고객 맞춤형 설계 및 라이선스, 소프트웨어 플랫폼 제공"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "d-Matrix",
+          "comparison": "Mueon은 d-Matrix와 협업 파트너 관계. d-Matrix는 인메모리 컴퓨팅에 특화, Mueon은 전체 시스템 통합에 초점."
+        },
+        {
+          "name": "Cerebras Systems",
+          "comparison": "Cerebras는 웨이퍼 스케일 칩으로 연산 밀도를 높이는 반면, Mueon은 모듈형 3D 큐블릿으로 접근."
+        },
+        {
+          "name": "Groq",
+          "comparison": "Groq는 자체 LPU 아키텍처에 집중, Mueon은 여러 아키텍처(CPU, GPU 등)를 수용하는 개방형 플랫폼."
+        },
+        {
+          "name": "Lightmatter",
+          "comparison": "Lightmatter는 실리콘 포토닉스 인터커넥트로 데이터 이동을 가속, Mueon은 통합 패키징 자체로 데이터 거리를 물리적으로 단축."
+        }
+      ],
+      "key_differentiator": "단일 칩이나 단일 계층 최적화가 아닌, 시스템 전반을 재설계한 통합 아키텍처. 인텔·d-Matrix 등과의 생태계 협력을 통한 검증 가능성.",
+      "moat": "3D 적층 패키징·전력·열 관리·소프트웨어를 아우르는 통합 설계 능력, 전 Intel 핵심 인력의 대량 생산 경험, 250개 이상 특허 (고메스).",
+      "competitive_position_summary": "AI 하드웨어 스타트업 중에서도 시스템-스케일 통합이라는 차별점을 가진 선두주자. 대규모 자금 확보와 검증된 팀으로 빠른 성장 궤도."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 6500만 달러 규모의 시리즈 A 유치 성공 (총 8000만 달러 이상 조달). 전 Intel 핵심 인력이 창업한 반도체 설계 회사로, AI 인프라의 물리적 한계를 극복할 혁신적 접근법을 제시.",
+      "catalysts": [
+        "6500만 달러 시리즈 A 라운드 완료 (Maverick Silicon 리드, Intel Capital 등 참여)",
+        "전 Intel Fellow 출신 창업자의 기술적 권위와 인맥",
+        "AI 데이터센터 전력·공간 문제가 산업 전반의 화두로 부상"
+      ],
+      "growth_metrics": "2026년 10월 기준 50명에서 10명 추가 채용 예정. 아직 제품 양산 단계는 아니나 고객사와 초기 협업 진행 중.",
+      "media_mentions": [
+        {
+          "source": "PRNewswire",
+          "title": "Mueon Raises $65M in Series A Funding to Scale its Cubelets™ Exponential Computing Platform",
+          "url": "https://www.prnewswire.com/news-releases/mueon-raises-65m-in-series-a-funding-to-scale-its-cubelets-exponential-computing-platform-302909367.html",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "The Information",
+          "title": "Exclusive: Mueon Raises $65 Million to Rework How Data Centers Are Put Together",
+          "url": "https://www.theinformation.com/briefings/exclusive-mueon-raises-65-million-rework-data-centers-put-together",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "OregonLive",
+          "title": "Oregon chip startup Mueon raises $65 million for more efficient computing",
+          "url": "https://www.oregonlive.com/silicon-forest/2026/10/oregon-chip-startup-mueon-raises-65-million-for-more-efficient-computing.html",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Geodesic Capital Blog",
+          "title": "Thinking Beyond the Chip",
+          "url": "https://geodesiccap.com/insight/thinking-beyond-the-chip/",
+          "date": "2026-10-16",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "SemiWiki",
+          "title": "CEO Interview with Wilfred Gomes of Mueon Corporation",
+          "url": "https://semiwiki.com/ceo-interviews/363054-ceo-interview-with-wilfred-gomes-of-mueon-corporation/",
+          "date": "2026-10-16",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Oregon Venture Fund Blog",
+          "title": "Why We Invested: Mueon",
+          "url": "https://www.oregonventurefund.com/perspectives/why-we-invested-mueon",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Latham & Watkins LLP News",
+          "title": "Latham Watkins Advises on Chip Startup Mueon Series A",
+          "url": "https://www.lw.com/en/news/2026/11/latham-watkins-advises-on-chip-startup-mueon-series-a",
+          "date": "2026-11-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "LinkedIn (Wilfred Gomes)",
+          "title": "Thrilled to announce Mueon Corporation Series A funding...",
+          "url": "https://www.linkedin.com/posts/wilfredgomes_exclusive-mueon-raises-65-million-to-rework-activity-7516716819613773824-xiea",
+          "date": "2026-10-15",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$80.5M",
+      "total_raised_note": "Series A $65M + Seed $15.5M (공식 보도 기준).",
+      "total_raised_usd": 80500000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "$65M",
+        "amount_usd": 65000000,
+        "date": "2026-10",
+        "lead_investor": "Maverick Silicon",
+        "notable_investors": [
+          "Intel Capital",
+          "Geodesic Capital",
+          "Oregon Venture Fund",
+          "M-Ventures",
+          "Wellington Management",
+          "IQT",
+          "Defined"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$15.5M",
+          "amount_usd": 15500000,
+          "date": "2025-07",
+          "lead_investor": "Intel Capital"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "(추정) AI 반도체 시장 2030년 약 2000억 달러, 데이터센터 인프라 시장은 별도로 5000억 달러 규모. Mueon은 이 중 고밀도 통합 컴퓨팅 시스템 부문을 타겟.",
+      "market_trend": "AI 모델 규모가 계속 커지면서 데이터센터 전력·공간·비용 문제가 심화. 하이퍼스케일러들이 전용 칩, 광 인터커넥트, 액체 냉각 등 다양한 솔루션을 도입 중이며, 시스템 수준의 통합 아키텍처가 주목받고 있음.",
+      "growth_potential": "초기 단계지만, 시리즈 A에서 유수의 VC와 전략적 투자자(Intel Capital) 참여로 기술 및 시장 검증 완료. d-Matrix와의 협업은 초기 고객 확보 가능성을 시사.",
+      "risks": [
+        "아직 제품 양산 단계 도달 전으로, 기술 구현과 생산 안정성에 대한 리스크",
+        "대형 반도체 기업(NVIDIA, AMD, Intel 자체)과의 경쟁 및 특허 분쟁 가능성",
+        "고객사 확보 및 대규모 생산을 위한 추가 자금 조달 필요"
+      ],
+      "risk_mitigation": "Intel Capital 파트너십을 통한 생산 및 생태계 지원 가능. d-Matrix와 같은 검증된 파트너와 협력해 초기 시장 진입 리스크 분산. 경험 많은 팀의 대량 생산 Know-how."
+    },
+    "related_links": [
+      {
+        "title": "Mueon 공식 웹사이트",
+        "url": "https://mueon.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "PRNewswire Series A 보도 (정정 포함)",
+        "url": "https://www.prnewswire.com/news-releases/mueon-raises-65m-in-series-a-funding-to-scale-its-cubelets-exponential-computing-platform-302909367.html",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Geodesic Capital 블로그 - Thinking Beyond the Chip",
+        "url": "https://geodesiccap.com/insight/thinking-beyond-the-chip/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "OregonLive 보도",
+        "url": "https://www.oregonlive.com/silicon-forest/2026/10/oregon-chip-startup-mueon-raises-65-million-for-more-efficient-computing.html",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "SemiWiki CEO 인터뷰",
+        "url": "https://semiwiki.com/ceo-interviews/363054-ceo-interview-with-wilfred-gomes-of-mueon-corporation/",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "전 Intel Fellow가 이끄는 AI 하드웨어 통합 플레이어. 단일 칩이 아닌 시스템 전체를 재설계해, 데이터센터 전력·공간 문제를 근본적으로 해결하려는 야심이 돋보인다.",
+    "attention": 3,
+    "id": "mueon-corporation-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/mueon-corporation-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "enterprise",
+    "name_en": "Procuros",
+    "name_ko": "프로큐로스",
+    "tagline": "AI 기반 B2B 공급망 연결 인프라",
+    "category": [
+      "B2B SaaS",
+      "공급망 자동화",
+      "EDI 대체"
+    ],
+    "founded_year": 2021,
+    "headquarters": {
+      "city": "Hamburg",
+      "country": "Germany",
+      "country_ko": "독일"
+    },
+    "company_stage": "Series A",
+    "employee_count": "51-200",
+    "website": "https://www.procuros.io",
+    "founders": [
+      {
+        "name_en": "Patrick Thelen",
+        "name_ko": "패트릭 텔렌",
+        "role": "Co-founder & CEO",
+        "background": "영업 경력, 기계공학 회사에서 팩스/PDF/고객툴로 주문 처리 경험",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Benjamin Wulff",
+        "name_ko": "벤야민 불프",
+        "role": "Co-founder & CTO",
+        "background": "에어버스에서 항공사 연결 인터페이스 구축 (1~2년 소요 프로젝트 경험)",
+        "notable_achievement": ""
+      }
+    ],
+    "team_highlights": "50명 이상 팀 (2026년 10월 기준)",
+    "product": {
+      "summary": "Procuros는 AI 네이티브 B2B 연결 인프라로, 공급업체와 소매업체 간의 데이터 교환을 자동화하여 전통적인 EDI, 팩스, PDF, 엑셀 등 다양한 형식을 단일 연결로 처리한다.",
+      "problem_statement": "대부분의 B2B 거래(주문, 송장 등)는 여전히 팩스, PDF, 엑셀 등 수동 방식으로 처리되며, 새로운 거래처마다 수개월이 걸리는 EDI 통합 프로젝트가 필요하다.",
+      "solution": "Procuros에 한 번 연결하면 모든 거래처와 즉시 데이터를 주고받을 수 있다. 플랫폼이 모든 형식을 변환·검증·보정하여 ERP에 전달하며, AI 에이전트가 주문 입력, 송장 처리 등을 자동화한다.",
+      "key_features": [
+        "단일 연결로 모든 거래처 연결 (EDI, PDF, 엑셀, API 등 지원)",
+        "실시간 데이터 검증 및 자동 보정",
+        "AI 에이전트를 통한 엔드투엔드 워크플로우 자동화",
+        "컨텍스트 기반 트랜잭션 이해"
+      ],
+      "tech_stack_or_innovation": "AI 네이티브 아키텍처: 각 거래의 컨텍스트를 이해하고 학습하여 자동으로 오류 해결 및 데이터 변환",
+      "target_customer": "유럽 및 미국의 소매업체, 공급업체, 유통업체 (DACH 지역, 영국 중심)",
+      "business_model": "SaaS 구독 기반, 거래량에 따른 과금"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Freehand",
+          "comparison": "$75M 조달, 메타·유니레버 등 대상 AI 에이전트로 공급망 지출 자동화, Procuros는 하부 연결 인프라에 집중"
+        },
+        {
+          "name": "Magnetic",
+          "comparison": "런던 기반, $18M 시리즈A, 제조업체 대상 조달 의사결정 AI 에이전트"
+        },
+        {
+          "name": "Atomic",
+          "comparison": "$12.5M 시리즈A, DoorDash DashMart 조달의 90% 자동화"
+        },
+        {
+          "name": "Didero",
+          "comparison": "2026년 2월 $30M 조달, 조달 에이전트"
+        }
+      ],
+      "key_differentiator": "Procuros는 단일 조달 태스크가 아닌 전체 거래 네트워크 연결 인프라를 제공하며, AI 에이전트가 신뢰할 수 있는 데이터 레이어 위에서 동작하도록 한다.",
+      "moat": "300개 이상 고객, 연간 30억 유로 이상 주문량 처리 (네트워크 효과), 다양한 형식 처리 경험",
+      "competitive_position_summary": "Procuros는 AI 에이전트 판매사보다 하부 인프라 레이어에 포지셔닝되어 있으며, 기존 EDI 대체를 위한 플랫폼으로 독특한 위치를 차지한다."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 6일, XAnge 주도로 €20M (약 $22.4M) 시리즈A 투자 유치 발표. AI 기반 공급망 자동화에 대한 관심이 높은 가운데, Procuros는 하부 연결 인프라로서 주목받고 있다.",
+      "catalysts": [
+        "€20M 시리즈A 투자 유치 (XAnge, W23 Global, Point Nine, Creandum, b2venture, SquareOne 참여)",
+        "300+ 고객, 연간 30억 유로 이상 주문량 처리",
+        "브로이닝어, flaconi 등 유명 소매업체 고객 확보"
+      ],
+      "growth_metrics": "300+ 고객 (DACH, 영국), 연간 30억 유로 이상 주문량, 50명+ 팀",
+      "media_mentions": [
+        {
+          "source": "Tech Funding News",
+          "title": "German startup Procuros bags €20M led by XAnge to let AI agents automate global B2B trade",
+          "url": "https://techfundingnews.com/german-startup-procuros-bags-e20m-led-by-xange-to-let-ai-agents-automate-global-b2b-trade/",
+          "date": "2026-10-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "XAnge",
+          "title": "XAnge Leads Procuros Series A with Its XAnge 5 Fund",
+          "url": "https://www.xange.vc/press/prucorus-series-a",
+          "date": "2026-10-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "TextilWirtschaft",
+          "title": "Wie Procuros ERP-Systeme in Industrie und Handel vernetzt",
+          "url": "https://www.textilwirtschaft.de/tech/brueckenbauer-wie-procuros-industrie-und-handel-verbindet-159195",
+          "date": "2026-10-01",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Dossaro",
+          "title": "Procuros €20m Series A: 578-Share Transfer",
+          "url": "https://dossaro.com/articles/procuros-series-a-founder-transfer",
+          "date": "2026-10-07",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "€34M",
+      "total_raised_note": "€20M 시리즈A + 이전 라운드 포함 (2026년 10월 기준)",
+      "total_raised_usd": 38000000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "€20M",
+        "note": "XAnge 주도, 기존 투자자 모두 참여",
+        "amount_usd": 21600000,
+        "date": "2026-10",
+        "lead_investor": "XAnge",
+        "notable_investors": [
+          "XAnge",
+          "W23 Global",
+          "Point Nine",
+          "Creandum",
+          "b2venture",
+          "SquareOne"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "비공개",
+          "note": "SquareOne, b2venture, Point Nine, Creandum 참여 (추정)",
+          "date": "2023-01",
+          "lead_investor": "SquareOne"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "전 세계 B2B 전자상거래 및 EDI 시장은 수십억 달러 규모 (정확한 수치 비공개)",
+      "market_trend": "AI 에이전트 기반 공급망 자동화에 대한 투자 급증 (Freehand, Magnetic, Atomic 등 대규모 투자 유치)",
+      "growth_potential": "유럽 및 미국 확장, 300+ 고객에서 더 많은 대형 고객 확보 가능",
+      "risks": [
+        "대형 EDI 기존 업체 및 클라우드 ERP 업체와의 경쟁",
+        "고객 데이터 보안 및 규제 준수 (GDPR 등)"
+      ],
+      "risk_mitigation": "AI 네이티브 접근으로 기존 EDI보다 빠른 통합 및 유연성 제공, 보안 인증 및 파트너십 강화"
+    },
+    "related_links": [
+      {
+        "title": "Procuros 공식 사이트",
+        "url": "https://procuros.io",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "About Us",
+        "url": "https://procuros.io/about-us",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Raue 법률 자문 보도",
+        "url": "https://raue.com/en/news/industries/private-equity-und-venture-capital-en/venture-capital-en/raue-advises-xange-in-connection-with-procuros-series-a-financing-round-totalling-eur-20-million/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Martius 법률 자문 보도",
+        "url": "https://martius-partner.com/en/martius-advises-procuros-on-series-a-financing-of-over-eur-20-million",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "팩스와 PDF가 지배하는 B2B 거래를 AI로 해체하려는 시도, 아직 한국에선 안 알려졌다.",
+    "attention": 3,
+    "id": "procuros-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/procuros-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "enterprise",
+    "name_en": "Pandektes",
+    "name_ko": "판덱테스",
+    "tagline": "AI 기반 법률 리서치 데이터 인프라",
+    "category": [
+      "법률 리서치",
+      "LegalTech",
+      "B2B SaaS"
+    ],
+    "founded_year": 2023,
+    "headquarters": {
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "country_ko": "덴마크"
+    },
+    "company_stage": "Series A",
+    "employee_count": "11-50",
+    "website": "https://pandektes.com",
+    "founders": [
+      {
+        "name_en": "Casper Laursen",
+        "name_ko": "카스페 라우르센",
+        "role": "CEO & Co-founder",
+        "background": "ProTruck 영업 관리자 역임",
+        "notable_achievement": "법률 업계 경험 없이 AI 기반 법률 인프라를 구축, 500곳 이상 로펌·기관 고객 확보"
+      },
+      {
+        "name_en": "Søren Brokær",
+        "name_ko": "쇠렌 브로카에르",
+        "role": "CTO/CPO & Co-founder",
+        "background": "Peakon 시니어 소프트웨어 엔지니어 역임",
+        "notable_achievement": "법학 교수진과 협업해 법률 방법론을 AI에 적용한 추론 엔진 및 데이터 자동 수집 시스템 설계"
+      }
+    ],
+    "team_highlights": "11개국 출신 글로벌 팀 (코펜하겐·런던·함부르크 오피스), 법학 교수진과의 긴밀한 R&D 협업",
+    "product": {
+      "summary": "공개 법률 정보를 AI로 수집·구조화·연결해 변호사와 기관에 단일 진실 공급원(Single Source of Truth)을 제공하는 차세대 법률 리서치 플랫폼.",
+      "problem_statement": "법률 정보는 대부분 공개 데이터지만 수천 개 출처에 분산되어 수동 편집 비용이 막대하고, 이로 인해 LexisNexis·Karnov 등 소수 공급자의 독점 구조가 고착화됨.",
+      "solution": "AI와 현대 컴퓨팅 기술로 법률 데이터 수집·분류·개정 추적·참조 연결을 자동화. 법률 전문가는 판단과 품질 관리에 집중하고 반복 작업은 기계에 위임.",
+      "key_features": [
+        "통합 판례·법령·준비 작업 데이터베이스",
+        "법률 방법론 기반 AI 리서치 어시스턴트 (출처 추적 가능 답변)",
+        "시간 경과에 따른 법률 변경 추적",
+        "국가 간(Cross-jurisdictional) 리서치",
+        "AI 문서 분석 및 레드액션(Redaction)",
+        "Microsoft Word Add-in 및 iOS 앱",
+        "법률 데이터 API (타사 제품 임베딩 가능)"
+      ],
+      "tech_stack_or_innovation": "커스텀 AI 모델로 공개 법률 데이터를 수집·연결하는 엔진. 법학 교수진 협업으로 법률 방법론(legal methodology)을 AI 추론에 적용해 모든 답변의 출처를 투명하게 추적 가능.",
+      "target_customer": "로펌, 기업 법무팀, 정부 기관 및 공공 기관 (덴마크·독일·스위스·영국 중심)",
+      "business_model": "SaaS 기반 구독. 고객사가 20년간 사용하던 레거시 플랫폼(Westlaw, Karnov 등)을 대체. 테스트 조직의 약 66%가 유료 전환."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "LexisNexis",
+          "comparison": "글로벌 법률 리서치 시장 선두. 방대한 데이터와 편집 인력을 보유했으나 AI 혁신 속도와 가격 경쟁력에서 Pandektes에 밀림."
+        },
+        {
+          "name": "Westlaw (Thomson Reuters)",
+          "comparison": "미국 및 글로벌 핵심 플레이어였으나 유럽에서 Pandektes로 교체되는 사례 증가."
+        },
+        {
+          "name": "Karnov",
+          "comparison": "덴마크 및 북유럽 주요 경쟁사. 전통적 편집자 중심 모델로 AI 전환 속도가 더딤."
+        },
+        {
+          "name": "Beck",
+          "comparison": "독일 법률 출판 시장의 주요 공급자. Pandektes가 독일에서 직접 경쟁 중."
+        }
+      ],
+      "key_differentiator": "수동 편집 대신 'AI 네이티브' 데이터 레이어를 핵심 자산으로 구축. API를 통해 모든 제품에 법률 지능을 임베딩할 수 있는 인프라 제공.",
+      "moat": "데이터 네트워크 효과 (사용자 증가 시 연결성·정확성 향상), 높은 전환 비용 (수십 년 레거시 대체), 법률 방법론 기반 검증된 AI 정확성.",
+      "competitive_position_summary": "레거시 법률 리서치를 파괴하는 강력한 Product-Market Fit 증명 단계. 유럽 500여 기관 고객 확보, 전년 대비 매출 6배 성장."
+    },
+    "trending_reason": {
+      "summary": "2026년 10월 5일, 1,350만 유로(한화 약 192억 원) 규모 Series A 투자 유치 성공. Alstin Capital 리드, PROfounders·Scale Capital 등 참여. 전년 대비 매출 6배 증가 및 고객사들의 레거시 시스템 대체 현상이 업계 주목을 받음.",
+      "catalysts": [
+        "1,350만 유로 규모 Series A 투자 유치 (2026년 10월)",
+        "전년 대비 매출 6배 성장",
+        "테스트 조직의 3분의 2가 유료 고객 전환",
+        "고객들이 수십 년간 사용하던 Westlaw, Karnov 등을 과감히 대체하는 현상"
+      ],
+      "growth_metrics": "전년 대비 매출 6배 성장(sixfold), 500개 이상 로펌·기관 고객, 테스트 조직 약 66% 유료 전환율.",
+      "media_mentions": [
+        {
+          "source": "Pandektes Blog",
+          "title": "Pandektes raises €13.5M in Series A funding",
+          "url": "https://pandektes.com/blog/pandektes-13-5m-series-a",
+          "date": "2026-10-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "The Global Legal Post",
+          "title": "Danish AI legal research start-up Pandektes raises €13.5m in Series A funding round",
+          "url": "https://www.globallegalpost.com/news/danish-ai-legal-research-start-up-pandektes-raises-eur135m-in-series-a-funding-round-645970493",
+          "date": "2026-10-13",
+          "verified": true,
+          "http_status": 403,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Finans",
+          "title": "Havde aldrig arbejdet med jura: Nu har advokat-startup rejst 100 mio. kr.",
+          "url": "https://finans.dk/erhverv/ECE19702077/havde-aldrig-arbejdet-med-jura-nu-har-advokatstartup-rejst-100-mio-kr/",
+          "date": "2026-10-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Scale Capital",
+          "title": "Our investment in Pandektes: Building the single source of truth for law",
+          "url": "https://www.scalecapital.com/stories/our-investment-in-pandektes-building-the-single-source-of-truth-for-law",
+          "date": "2026-10-05",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "DLA Piper",
+          "title": "DLA Piper has advised Pandektes ApS on its Series A funding round",
+          "url": "https://denmark.dlapiper.com/en/news/dla-piper-has-advised-pandektes-aps-its-series-funding-round",
+          "date": "2026-10-13",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "€17.5M",
+      "total_raised_note": "시드 €2.9M + Series A €13.5M 합계. 웹사이트 및 Finans 기사(DKK 100M) 기준.",
+      "total_raised_usd": 19075000,
+      "valuation_estimate": "$80M (추정)",
+      "latest_round": {
+        "stage": "Series A",
+        "amount": "€13.5M",
+        "note": "Alstin Capital 리드, PROfounders·Scale Capital·People Ventures·Interface Capital 참여.",
+        "amount_usd": 14580000,
+        "date": "2026-10",
+        "lead_investor": "Alstin Capital",
+        "notable_investors": [
+          "Alstin Capital",
+          "PROfounders",
+          "Scale Capital",
+          "People Ventures",
+          "Interface Capital"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "€2.9M",
+          "amount_usd": 3132000,
+          "date": "2025-02",
+          "lead_investor": "People Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: 글로벌 법률 정보 서비스 시장 (약 500억 달러). SAM: 유럽 법률 리서치 시장.",
+      "market_trend": "생성형 AI가 법률 업무를 근본적으로 변화시키면서 'AI 네이티브' 데이터 인프라 수요 폭발. 전통적 법률 출판사도 AI 전환 중이나 레거시 시스템의 제약 존재.",
+      "growth_potential": "유럽 내 국가 간 법률 리서치 수요 증가, API 기반 플랫폼 비즈니스 확장, AI 에이전트를 위한 백엔드 데이터 인프라로서의 성장 잠재력.",
+      "risks": [
+        "LexisNexis, Thomson Reuters의 막대한 자본을 앞세운 AI 대응",
+        "유럽 각국의 법률 데이터 개방성 및 규제 차이",
+        "AI 환각(Hallucination)에 따른 법적 신뢰도 위험"
+      ],
+      "risk_mitigation": "모든 AI 답변의 출처를 투명하게 공개하여 환각 리스크 최소화. 법학 교수진과 협력한 법률 방법론 AI로 신뢰도 극대화. 레거시 대체를 통해 시장 리더십 조기 확보."
+    },
+    "related_links": [
+      {
+        "title": "Pandektes 공식 웹사이트",
+        "url": "https://pandektes.com",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Pandektes Series A 투자 유치 공식 블로그",
+        "url": "https://pandektes.com/blog/pandektes-13-5m-series-a",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Scale Capital 투자 설명: 단일 진실 공급원 구축",
+        "url": "https://www.scalecapital.com/stories/our-investment-in-pandektes-building-the-single-source-of-truth-for-law",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "수십 년간 독점됐던 법률 정보 시장에서, 기술적 우위만으로 전통의 강자를 무너뜨리고 있는 대표적인 사례.",
+    "attention": 3,
+    "id": "pandektes-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/pandektes-2026.webp",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "ai",
+    "name_en": "Inception Labs",
+    "name_ko": "인셉션 랩스",
+    "tagline": "확산 모델 기반 dLLM으로 LLM의 속도와 비용 혁신",
+    "category": [
+      "AI Models & Agents",
+      "Diffusion Language Models",
+      "Developer Tools"
+    ],
+    "founded_year": 2024,
+    "headquarters": {
+      "city": "Palo Alto",
+      "country": "USA",
+      "country_ko": "미국"
+    },
+    "company_stage": "Seed",
+    "employee_count": "11-50",
+    "website": "https://www.inceptionlabs.ai",
+    "founders": [
+      {
+        "name_en": "Stefano Ermon",
+        "name_ko": "스테파노 에르몬",
+        "role": "CEO",
+        "background": "Stanford University 교수, 확산 모델 연구 선도",
+        "notable_achievement": "ICML 2024 Best Paper 수상 (Discrete Diffusion Modeling)"
+      },
+      {
+        "name_en": "Aditya Grover",
+        "name_ko": "아디티아 그로버",
+        "role": "Chief Scientist",
+        "background": "UCLA 교수, 확산 모델 및 생성 모델 전문가",
+        "notable_achievement": "확산 언어 모델 분야 기초 연구"
+      },
+      {
+        "name_en": "Volodymyr Kuleshov",
+        "name_ko": "볼로디미르 쿨레쇼프",
+        "role": "CTO",
+        "background": "Cornell University 교수, 확산 모델 및 생성 모델 전문가",
+        "notable_achievement": "확산 언어 모델 분야 기초 연구"
+      }
+    ],
+    "team_highlights": "Stanford, UCLA, Cornell 교수진이 공동 창업; Google DeepMind, Meta AI, Microsoft AI, OpenAI 출신 연구진 포함; Andrew Ng, Andrej Karpathy가 엔젤 투자자로 참여",
+    "product": {
+      "summary": "Mercury 시리즈는 확산(diffusion) 기반의 대규모 언어 모델(dLLM)로, 기존 autoregressive LLM보다 5~10배 빠른 속도(최대 1,107 tokens/s)와 70% 낮은 비용을 제공",
+      "problem_statement": "기존 LLM은 autoregressive 방식의 순차적 토큰 생성으로 인해 높은 지연 시간과 비용이 발생하고, 긴 문맥이나 복잡한 코드 작업에서 효율성이 떨어짐",
+      "solution": "확산 모델을 언어 생성에 적용하여 여러 토큰을 병렬로 생성함으로써 속도와 효율성을 획기적으로 개선. RAG, 도구 사용, 에이전트 워크플로우 등 기존 LLM 사용 사례를 그대로 지원",
+      "key_features": [
+        "최초의 상용 수준 dLLM (Mercury 시리즈)",
+        "1,107 tokens/s 처리 속도 (Mercury 2.5 기준)",
+        "GPT-6 Luna 및 Claude Haiku 5.5 대비 4~8배 빠름",
+        "저지연 실시간 음성 에이전트 지원 (Mercury Voice)",
+        "코드 생성, 추론, 수학 문제 해결 능력 향상"
+      ],
+      "tech_stack_or_innovation": "Discrete Diffusion Language Model (dLLM): autoregressive 방식 대신 coarse-to-fine 방식으로 전체 문맥을 동시에 생성하는 확산 과정 사용",
+      "target_customer": "Fortune 500 기업, AI 개발자, 코드 에디터 및 에이전트 워크플로우 구축 기업, 실시간 음성 인터페이스 필요 기업",
+      "business_model": "API 기반 사용량 과금 (토큰 단위); 엔터프라이즈 라이선스 제공"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "OpenAI (GPT 시리즈)",
+          "comparison": "autoregressive 방식으로 속도와 비용에서 열위, 하지만 생태계와 브랜드 우위"
+        },
+        {
+          "name": "Anthropic (Claude 시리즈)",
+          "comparison": "autoregressive 방식, 안전성과 추론에 강점, Inception 대비 속도 열위"
+        },
+        {
+          "name": "Google DeepMind (Gemini 시리즈)",
+          "comparison": "multimodal 중심, autoregressive 방식, Inception보다 느리고 비싸"
+        },
+        {
+          "name": "Nous Research (DisTrO 등)",
+          "comparison": "확산 모델 연구에서 경쟁하나 아직 상용화 단계는 아님"
+        }
+      ],
+      "key_differentiator": "확산(diffusion) 기반 언어 모델로 autoregressive 모델 대비 5~10배 빠른 속도와 70% 낮은 비용; 학계와 업계의 최고 연구진이 창업",
+      "moat": "특허 출원된 확산 언어 모델 기술; ICML 2024 Best Paper 수상; Intel, Nvidia 등 주요 GPU 벤더와 협업; Fortune 500 고객 확보",
+      "competitive_position_summary": "확산 LLM 시장의 선두주자로, 속도와 비용 면에서 확실한 우위를 점하고 있으나 OpenAI/Anthropic 대비 생태계와 인지도는 낮음"
+    },
+    "trending_reason": {
+      "summary": "2025년 11월 5,000만 달러 시드 투자 유치와 Mercury 모델 업데이트 발표로 주목받음. 2026년에는 Mercury 2.5, Mercury Voice 등 제품 라인업 확장 중",
+      "catalysts": [
+        "2025년 11월 5,000만 달러 시드 투자 (Menlo Ventures, Nvidia, Microsoft, Snowflake, Databricks 등 참여)",
+        "Mercury 2.5 출시 (1,107 tokens/s, 2026년 9월)",
+        "Mercury Voice 출시 (실시간 음성 에이전트, 2026년 9월)",
+        "TIME Best Inventions 2026 선정 (Mercury 2)"
+      ],
+      "growth_metrics": "Fortune 500 기업 도입; ProxyAI, Buildglare, Kilo Code 등 개발 도구와 통합; 1,000+ tokens/s 처리 속도",
+      "media_mentions": [
+        {
+          "source": "TechCrunch",
+          "title": "Inception raises $50 million to build diffusion models for code and text",
+          "url": "https://techcrunch.com/2025/11/06/inception-raises-50-million-to-build-diffusion-models-for-code-and-text/",
+          "date": "2025-11-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Menlo Ventures",
+          "title": "From the Lab to the Frontier: The Story Behind Inception",
+          "url": "https://menlovc.com/perspective/from-the-lab-to-the-frontier-the-story-behind-inception/",
+          "date": "2026-03-25",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Innovation Endeavors",
+          "title": "Meet Inception",
+          "url": "https://www.innovationendeavors.com/insights/meet-inception",
+          "date": "2025-11-06",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "RuntimeWire",
+          "title": "Inception ships Mercury 2.5 at 1,107 tokens per second, by its count",
+          "url": "https://runtimewire.com/article/inception-mercury-2-5-diffusion-language-model-launch",
+          "date": "2026-09-08",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$50M",
+      "total_raised_note": null,
+      "total_raised_usd": 50000000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "$50M",
+        "note": "2025년 11월 마감; 이전 시드 라운드(2024년 8월, 약 5M-10M 추정)는 포함되지 않은 것으로 보임",
+        "amount_usd": 50000000,
+        "date": "2025-11",
+        "lead_investor": "Menlo Ventures",
+        "notable_investors": [
+          "Menlo Ventures",
+          "Mayfield",
+          "Innovation Endeavors",
+          "Microsoft M12",
+          "Snowflake Ventures",
+          "Databricks Investment",
+          "Nvidia NVentures",
+          "Andrew Ng",
+          "Andrej Karpathy"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "비공개",
+          "note": "2024년 8월경 초기 시드 라운드 (추정 5M-10M)",
+          "date": "2024-08",
+          "lead_investor": "비공개"
+        },
+        {
+          "stage": "Seed",
+          "amount": "$50M",
+          "note": "공식 발표된 시드 라운드",
+          "amount_usd": 50000000,
+          "date": "2025-11",
+          "lead_investor": "Menlo Ventures"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "전 세계 LLM 시장은 2026년 약 400억 달러로 추정되며, Inception은 속도와 비용에 민감한 엔터프라이즈 및 개발자 도구 시장을 타겟",
+      "market_trend": "AI 모델의 효율성과 지연 시간 최적화가 핵심 경쟁력으로 부상; diffusion 기반 접근법이 autoregressive 모델의 대안으로 주목받음",
+      "growth_potential": "확산 LLM은 아직 초기 단계이나 속도와 비용 우위로 빠른 채택 가능; 코드 생성, 실시간 음성, 멀티모달 등으로 확장 중",
+      "risks": [
+        "OpenAI, Anthropic 등 대형 기업의 유사 기술 개발 및 시장 장악",
+        "확산 모델의 텍스트 생성 품질이 아직 autoregressive 모델에 완전히 미치지 못할 가능성",
+        "대규모 GPU 확보 및 비용 경쟁력 유지의 어려움",
+        "규제 및 데이터 저작권 리스크"
+      ],
+      "risk_mitigation": "특허와 연구 성과로 기술적 진입장벽 확보; Nvidia, Microsoft, Databricks 등 전략적 투자자와의 협력으로 GPU 및 유통 채널 확보; Fortune 500 도입 사례를 통한 신뢰도 구축"
+    },
+    "related_links": [
+      {
+        "title": "Inception Labs 공식 홈페이지",
+        "url": "https://www.inceptionlabs.ai",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Mercury 소개 블로그",
+        "url": "https://www.inceptionlabs.ai/blog/introducing-mercury",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Mercury 리프레시 블로그 (투자 발표)",
+        "url": "https://www.inceptionlabs.ai/blog/mercury-refreshed",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Inception: The Story (Menlo Ventures)",
+        "url": "https://menlovc.com/perspective/from-the-lab-to-the-frontier-the-story-behind-inception/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Meet Inception (Innovation Endeavors)",
+        "url": "https://www.innovationendeavors.com/insights/meet-inception",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "TechCrunch: Inception raises $50M",
+        "url": "https://techcrunch.com/2025/11/06/inception-raises-50-million-to-build-diffusion-models-for-code-and-text/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "RuntimeWire: Mercury 2.5 launch",
+        "url": "https://runtimewire.com/article/inception-mercury-2-5-diffusion-language-model-launch",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "확산 모델로 LLM의 패러다임을 바꾸려는 도전, 속도와 비용에서 확실한 우위를 증명 중",
+    "attention": 4,
+    "id": "inception-labs-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/inception-labs-2026.webp",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  },
+  {
+    "sector": "ai",
+    "name_en": "Moonshot",
+    "name_ko": "Moonshot",
+    "tagline": "모두를 위한 AI 에이전트",
+    "category": [
+      "AI Agent",
+      "Wearable",
+      "Consumer AI"
+    ],
+    "founded_year": 2026,
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "USA",
+      "country_ko": "미국"
+    },
+    "company_stage": "Seed",
+    "employee_count": "3",
+    "website": "https://moonshot.computer/",
+    "founders": [
+      {
+        "name_en": "Ojas Kandhare",
+        "name_ko": "오자스 칸다레",
+        "role": "Co-founder & CEO",
+        "background": "YC Summer 2026 batch; previous startup experience不详.",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Tario You",
+        "name_ko": "타리오 유",
+        "role": "Co-founder & CTO",
+        "background": "YC Summer 2026 batch; technical lead.",
+        "notable_achievement": ""
+      },
+      {
+        "name_en": "Dylan Pak",
+        "name_ko": "딜런 팍",
+        "role": "Co-founder",
+        "background": "Previously founded OpenTrade (YC S26), a trading platform that reached 225k users and $1.4M volume with $0.08 CAC.",
+        "notable_achievement": "OpenTrade 사용자 225k 명 확보 (CAC $0.08)"
+      }
+    ],
+    "team_highlights": "YC Summer 2026 배치 출신의 3인 팀. 이전에 OpenTrade를 구축, 극도로 낮은 CAC로 빠른 성장 경험.",
+    "product": {
+      "summary": "Moonshot은 iPhone 앱(Samantha)과 목걸이형 웨어러블(Luna)을 통해 사용자의 하루 대화를 지속적으로 청취하고 맥락을 이해하는 AI 에이전트입니다. 약속, 감정, 계획을 능동적으로 기억하고 필요할 때 먼저 알려줍니다.",
+      "problem_statement": "일상의 대화, 약속, 감정은 기록되지 않고 사라지는 경우가 많습니다. 기존 디지털 도구는 사용자가 직접 입력해야만 정보를 저장하고 처리합니다.",
+      "solution": "앱(또는 목걸이)의 마이크를 통해 오디오를 청취하고 즉시 텍스트로 전사·분석하여 개인 맥락 데이터베이스를 구축합니다. 이를 기반으로 약속을 리마인드하고, 감정 추세를 파악하며, 다른 AI 비서(Claude, ChatGPT)와 연결합니다.",
+      "key_features": [
+        "앰비언트 청취 (기기 탭 두 번으로 음소거)",
+        "전사된 하루 검색 가능",
+        "말한 약속·계획을 능동적으로 기억하고 알림",
+        "감정·라이프 트렌드 인사이트",
+        "Claude/ChatGPT 등 외부 AI로 맥락 전달",
+        "Google Doc 자동 내보내기"
+      ],
+      "tech_stack_or_innovation": "비공개 전사 서비스 + LLM, 프라이버시 중심 설계 (짧은 청크 전사 후 삭제, 데이터 허가제)",
+      "target_customer": "개인 사용자, AI 초기 채택자, 바쁜 현대인",
+      "business_model": "앱 구독 (첫 해 $25/월, 이후 $50/월; 대량 사용 시 $20/월 추가); 하드웨어 Luna($499 킥스타터) $1 예약금 환불 가능"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Limitless",
+          "comparison": "일상을 녹음·기억하는 웨어러블, Moonshot은 능동적 추천에 더 초점."
+        },
+        {
+          "name": "Poke",
+          "comparison": "프로액티브 AI 비서, Moonshot은 더 인간적 동반자 관계 강조."
+        },
+        {
+          "name": "Instinct / Meta Dots / OpenAI Dots",
+          "comparison": "일 중심 AI, Moonshot은 개인 생활 전반을 다루며 '관계' 먼저 구축."
+        }
+      ],
+      "key_differentiator": "'관계'를 먼저 형성하고, 이해한 후에 유용함이 따른다는 철학. 사용자가 그리워할 만한 인격체를 목표.",
+      "moat": "하드웨어(Luna)와 앱의 통합, 프라이버시 중심 아키텍처, YC 네트워크. 특화된 개인 맥락 데이터.",
+      "competitive_position_summary": "초기 단계지만 YC 데뷔와 킥스타터 관심으로 빠르게 입지 확보 중."
+    },
+    "trending_reason": {
+      "summary": "YC 서머 2026 배치 이후 6주 만에 파운딩 베타를 출시하고, 2026년 11월 10일 루나 웨어러블 킥스타터 런칭을 앞둔 점이 주목할 만하다.",
+      "catalysts": [
+        "YC Summer 2026 데모 데이",
+        "2026년 10월 파운딩 베타 출시 (마감 임박)",
+        "2026년 11월 10일 Luna 킥스타터 런칭"
+      ],
+      "growth_metrics": "비공개. 베타 신청자는 빠르게 마감되었으며, 정확한 사용자 수는 공개되지 않음.",
+      "media_mentions": [
+        {
+          "source": "LinkedIn",
+          "title": "After 6 weeks of long nights and weekends, I’m thrilled to introduce Moonshot (YC s26) and the launch of our founding beta",
+          "url": "https://www.linkedin.com/posts/heymoonshot_after-6-weeks-of-long-nights-and-weekends-activity-7514030669560311810-jDdr",
+          "date": "2026-10-08",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "letter.moonshot.computer (Substack)",
+          "title": "rip opentrade. prologue: moonshot",
+          "url": "https://letter.moonshot.computer/p/rip-opentrade-prologue-moonshot",
+          "date": "2026-11-04",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "letter.moonshot.computer (Substack)",
+          "title": "ChatGPT's dots, Grok's bots, our moonshot",
+          "url": "https://letter.moonshot.computer/p/liftoff-dots-and-bots",
+          "date": "2026-11-02",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "letter.moonshot.computer (Substack)",
+          "title": "Day 55: control your life like it's a video game",
+          "url": "https://letter.moonshot.computer/p/control-your-life-like-a-video-game",
+          "date": "2026-11-??",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        },
+        {
+          "source": "Y Combinator",
+          "title": "Moonshot: agents for the rest of us",
+          "url": "https://www.ycombinator.com/companies/moonshot-computer",
+          "date": "2026",
+          "verified": true,
+          "http_status": 200,
+          "checked_at": "2026-11-10T02:50:15.417Z"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "$500K",
+      "total_raised_note": "PitchBook 기준; YC 일반 투자 $125K 외 추가 금액 포함 가능",
+      "total_raised_usd": 500000,
+      "valuation_estimate": "비공개",
+      "latest_round": {
+        "stage": "Seed",
+        "amount": "$500K",
+        "note": "Y Combinator Summer 2026 액셀러레이터 투자",
+        "amount_usd": 500000,
+        "date": "2026-01",
+        "lead_investor": "Y Combinator",
+        "notable_investors": [
+          "Y Combinator"
+        ]
+      },
+      "funding_history": [
+        {
+          "stage": "Seed",
+          "amount": "$500K",
+          "note": "Y Combinator Summer 2026 액셀러레이터 투자",
+          "amount_usd": 500000,
+          "date": "2026-01",
+          "lead_investor": "Y Combinator"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "글로벌 AI 개인 비서 시장은 급성장 중. 개인 동반자 AI는 웨어러블 디바이스와 접목되어 확대 예상. 초기 단계로 TAM/SAM/SOM 구체적 수치 미확인.",
+      "market_trend": "앰비언트 청취, 프로액티브 AI, 개인화된 AI 동반자에 대한 관심 증가. Limitless·Poke·Big Tech 진입 가속화.",
+      "growth_potential": "인간-인공지능 상호작용의 패러다임 전환점에 있음. 일상 기록·관리의 수요가 높음. 선점 시 강한 충성도 가능.",
+      "risks": [
+        "프라이버시 및 보안 우려 (항상 청취)",
+        "빅테크(Apple, Meta, Google)의 유사 기능 탑재 가능",
+        "전용 하드웨어(Luna) 채택률 및 제품 완성도 리스크"
+      ],
+      "risk_mitigation": "투명한 데이터 정책 및 사용자 제어권 강조, 프라이버시 중심 설계, 차별화된 '동반자' 접근법으로 경쟁력 확보."
+    },
+    "related_links": [
+      {
+        "title": "공식 웹사이트",
+        "url": "https://moonshot.computer/",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Moonshot 소개 페이지",
+        "url": "https://moonshot.computer/about",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Y Combinator Company Profile",
+        "url": "https://www.ycombinator.com/companies/moonshot-computer",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "리브랜딩 블로그 (Substack)",
+        "url": "https://letter.moonshot.computer/p/rip-opentrade-prologue-moonshot",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "Kickstarter 예고 블로그",
+        "url": "https://letter.moonshot.computer/p/liftoff-dots-and-bots",
+        "verified": true,
+        "http_status": 200,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      },
+      {
+        "title": "PitchBook 프로필",
+        "url": "https://pitchbook.com/profiles/company/1458675-64",
+        "verified": true,
+        "http_status": 403,
+        "checked_at": "2026-11-10T02:50:15.417Z"
+      }
+    ],
+    "editor_pick_comment": "일상을 듣고 기억하는 AI 목걸이, '사람처럼' 먼저 다가가는 첫 시도.",
+    "attention": 2,
+    "id": "moonshot-2026",
+    "date": "2026-11-10",
+    "logo_url": "/logos/moonshot-2026.png",
+    "generated_at": "2026-11-10T02:50:15.417Z",
+    "model": "deepseek/deepseek-v4-flash",
+    "website_check": {
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-11-10T02:50:15.417Z"
+    },
+    "featured": false
+  }
+]

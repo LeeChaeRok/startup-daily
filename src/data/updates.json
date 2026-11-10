@@ -361,6 +361,76 @@
         "source_name": "again.bio",
         "found": "2026-11-09"
       }
+    ],
+    "lightspeed-restaurant-2026": [
+      {
+        "date": "2026-08-11",
+        "kind": "funding",
+        "title_ko": "시리즈 D 8,000만 달러 유치",
+        "title_en": "Secures $80 million Series D",
+        "detail_ko": "MarginEdge가 주로 Schooner Capital과 Ten Coves Capital이 공동 주도한 8,000만 달러 규모의 시리즈 D 투자를 유치했다. 참여한 기존 투자자로는 Osage Venture Partners, Derive Ventures, Western Alliance Bank가 있다.",
+        "detail_en": "MarginEdge closed an $80 million Series D financing co-led by Schooner Capital and Ten Coves Capital, with participation from existing investors Osage Venture Partners, Derive Ventures, and Western Alliance Bank.",
+        "source_url": "https://www.globenewswire.com/news-release/2026/08/11/3342785/0/en/marginedge-secures-80-million-in-series-d-funding-to-power-the-next-generation-of-restaurant-operations.html",
+        "source_name": "GlobeNewswire",
+        "found": "2026-11-10"
+      },
+      {
+        "date": "2026-06-01",
+        "kind": "product",
+        "title_ko": "AI 어시스턴트 '톰 2.0' 출시",
+        "title_en": "Launches AI assistant 'Tom 2.0'",
+        "detail_ko": "MarginEdge가 반기 업데이트(H1 2026)의 일환으로 인앱 AI 어시스턴트 'Tom 2.0'을 출시했다. 이 업데이트에는 'MarginEdge Card' 상업용 구매 카드, 'SmartPrep' 사전 준비 도구, QR 코드 인쇄 기능도 포함됐다.",
+        "detail_en": "MarginEdge released 'Tom 2.0', an in-app AI assistant, as part of its H1 2026 product update. The release also included the 'MarginEdge Card' commercial purchasing card, a 'SmartPrep' predictive preparation tool, and QR code printing functionality.",
+        "source_url": "https://www.marginedge.com/blog/h1-2026-product-release-notes",
+        "source_name": "MarginEdge",
+        "found": "2026-11-10"
+      }
+    ],
+    "motherduck-2026": [
+      {
+        "date": "2026-10-26",
+        "kind": "product",
+        "title_ko": "Ducktober: 8일간 8개 신제품 공개",
+        "title_en": "Ducktober: 8 launches in 8 days",
+        "detail_ko": "MotherDuck이 10월 26일부터 11월 4일까지 Ducktober 이벤트를 통해 BYOC, RLS+CLS, Giga, Dive Apps, AWS Marketplace, EXPLAIN ANALYZE, Agent Chat, Dark Mode 등 8개의 새로운 기능을 순차적으로 출시했습니다.",
+        "detail_en": "MotherDuck held Ducktober from Oct 26 to Nov 4, launching 8 features: BYOC, RLS+CLS, Giga, Dive Apps, AWS Marketplace, EXPLAIN ANALYZE, Agent Chat, and Dark Mode.",
+        "source_url": "https://motherduck.com/ducktober/",
+        "source_name": "MotherDuck",
+        "found": "2026-11-10"
+      },
+      {
+        "date": "2026-09-01",
+        "kind": "product",
+        "title_ko": "일본 리전 정식 출시",
+        "title_en": "Japan region goes GA",
+        "detail_ko": "MotherDuck과 액티브코어가 MotherDuck 일본 리전의 일반 제공(GA)을 시작했습니다. 이제 데이터를 일본 내에 저장하면서 사용할 수 있어 국내 기업의 도입이 용이해졌습니다.",
+        "detail_en": "MotherDuck and Active Core launched the Japan region GA, allowing data to stay within Japan. This enables enterprises with data residency requirements to adopt MotherDuck.",
+        "source_url": "https://www.brainpad.co.jp/news/2026/09/02/25911",
+        "source_name": "ブレインパッド (BrainPad)",
+        "found": "2026-11-10"
+      },
+      {
+        "date": "2026-08-24",
+        "kind": "acquired",
+        "title_ko": "데이터 파이프라인 스타트업 Tower 인수",
+        "title_en": "Acquires data infrastructure startup Tower",
+        "detail_ko": "MotherDuck이 AI 기반 데이터 파이프라인을 구축하는 Tower를 인수했습니다. Tower의 기술은 이미 MotherDuck Flights의 핵심 인프라로 사용 중이었습니다.",
+        "detail_en": "MotherDuck has acquired Tower, whose technology already powered MotherDuck Flights. The deal brings Tower's team and runtime infrastructure in-house for AI-native data pipelines.",
+        "source_url": "https://tower.dev/blog/tower-joins-motherduck",
+        "source_name": "Tower",
+        "found": "2026-11-10"
+      },
+      {
+        "date": "2026-06-10",
+        "kind": "product",
+        "title_ko": "AI 에이전트 데이터 파이프라인 Flights 출시",
+        "title_en": "Launches Flights: AI-native data pipelines",
+        "detail_ko": "MotherDuck이 Flights를 프리뷰로 공개했습니다. 자연어만으로 데이터 수집, 변환, 적재, 스케줄링을 수행하는 AI 에이전트 기능입니다. 비즈니스 및 엔터프라이즈 요금제에서 사용 가능합니다.",
+        "detail_en": "MotherDuck launched Flights in Preview, enabling AI agents to build and run data pipelines from natural language. Available on Business and Enterprise plans.",
+        "source_url": "https://motherduck.com/docs/about-motherduck/release-notes/",
+        "source_name": "MotherDuck Release Notes",
+        "found": "2026-11-10"
+      }
     ]
   },
   "checked": {
@@ -387,6 +457,8 @@
     "form-energy-2026": "2026-11-08",
     "legislate-2026": "2026-11-08",
     "talkiatry-2026": "2026-11-09",
-    "zymergen-bio-2026": "2026-11-09"
+    "zymergen-bio-2026": "2026-11-09",
+    "lightspeed-restaurant-2026": "2026-11-10",
+    "motherduck-2026": "2026-11-10"
   }
 }
