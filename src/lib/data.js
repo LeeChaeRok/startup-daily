@@ -105,6 +105,17 @@ const localStage = (stage) =>
 /* Corrections carry English text in status_en / note_en. */
 const localCorrection = (c) => (isEn && c ? { ...c, status: c.status_en || c.status, note: c.note_en || c.note } : c)
 
+/* "RegCell (레그셀)" → "RegCell", "Bionsight (BionSite)" → "Bionsight": the name, not the name and its gloss */
+const PAREN = /^(.+?)\s*[(（](.+)[)）]\s*$/
+function tidyNames(s) {
+  const out = {}
+  const ko = s.name_ko?.match(PAREN)
+  if (ko) out.name_ko = ko[1].trim()
+  const en = s.name_en?.match(PAREN)
+  if (en) out.name_en = en[1].trim()
+  return out
+}
+
 function prepare(raw, corrections, lensIndex, updates) {
   const now = Date.now()
   return raw
@@ -119,6 +130,7 @@ function prepare(raw, corrections, lensIndex, updates) {
       const raisedKo = cleanAmount(s._ko?.total_raised ?? s.funding?.total_raised)
       return {
         ...s,
+        ...tidyNames(s),
         category,
         founders,
         _raised: raised,

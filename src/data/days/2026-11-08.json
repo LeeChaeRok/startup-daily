@@ -4346,7 +4346,7 @@
     "attention": 3,
     "id": "infisical-2026",
     "date": "2026-11-08",
-    "logo_url": "",
+    "logo_url": "/logos/infisical-2026.png",
     "generated_at": "2026-11-07T23:47:32.267Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -5306,7 +5306,7 @@
     "attention": 4,
     "id": "liner-2026",
     "date": "2026-11-08",
-    "logo_url": "",
+    "logo_url": "/logos/liner-2026.png",
     "generated_at": "2026-11-07T23:47:32.267Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {

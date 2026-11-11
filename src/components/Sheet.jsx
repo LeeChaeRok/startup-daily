@@ -18,6 +18,8 @@ export default function Sheet({ open, onClose, title, children, footer, head, cl
     if (open && !dlg.open) {
       opener.current = document.activeElement
       dlg.showModal()
+      // start on the title, not the close button: no focus ring flashes on open, and readers hear the title
+      dlg.querySelector('.sheet__title')?.focus({ preventScroll: true })
     } else if (!open && dlg.open) {
       dlg.close()
     }
@@ -50,7 +52,7 @@ export default function Sheet({ open, onClose, title, children, footer, head, cl
           <>
             <div className="sheet__head sheet__head--bar">{head}</div>
             <div className="sheet__body">
-              <h2 id={titleId} className="sheet__title sheet__title--lg">
+              <h2 id={titleId} className="sheet__title sheet__title--lg" tabIndex={-1}>
                 {title}
               </h2>
               {children}
@@ -59,7 +61,7 @@ export default function Sheet({ open, onClose, title, children, footer, head, cl
         ) : (
           <>
             <div className="sheet__head">
-              <h2 id={titleId} className="sheet__title">
+              <h2 id={titleId} className="sheet__title" tabIndex={-1}>
                 {title}
               </h2>
               <button type="button" className="icon-btn" onClick={onClose} aria-label={L('닫기', 'Close')}>

@@ -18,7 +18,7 @@ import { sectorHue } from '../lib/sectors.js'
  *            No English name, stage or amount (the company page has them); read rows
  *            fold to one line with a check
  */
-export default function StartupRow({ startup: s, rank, showDate, compact, selected, reason, showSave, from, issue }) {
+export default function StartupRow({ startup: s, rank, showDate, compact, selected, reason, showSave, from, issue, hideSector }) {
   const { isRead } = useReadLog()
   const { isInterest } = useInterests()
   const read = isRead(s.id)
@@ -57,12 +57,19 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
             <span className="row__meta">
               <Meta
                 items={[
-                  <span className={`sector ${isInterest(s._sector.key) ? 'is-interest' : ''}`} key="s" style={sectorHue(s._sector.key)}>
+                  hideSector ? null : <span className={`sector ${isInterest(s._sector.key) ? 'is-interest' : ''}`} key="s" style={sectorHue(s._sector.key)}>
                     {s._sector.label}
                     {isInterest(s._sector.key) && <span className="sr-only">{L(' (관심 분야)', ' (a sector you follow)')}</span>}
                   </span>,
                   s._correction || issue ? null : s._stage,
                   s.headquarters?.country_ko,
+                  // the issue list's one money signal: stage and total raised, so a row says how far along it is
+                  issue && !s._correction && (s._stage || raised) ? (
+                    <span key="f" className="row__funding">
+                      {s._stage}
+                      {raised && <span className={numClass(raised)}> {raised}</span>}
+                    </span>
+                  ) : null,
                   showDate ? L(`${monthDay(s.date)} 호`, `${monthDay(s.date)} issue`) : null,
                 ]}
               />

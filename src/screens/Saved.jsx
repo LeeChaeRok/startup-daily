@@ -108,7 +108,7 @@ export default function Saved({ params }) {
             </label>
             <label className="toggle">
               <input type="checkbox" checked={unread} onChange={(e) => set({ unread: e.target.checked ? 1 : null })} />
-              <span>{L('안 읽은 것만', 'Unread only')}</span>
+              <span>{L('안 읽은 곳만', 'Unread only')}</span>
             </label>
           </div>
 

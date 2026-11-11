@@ -116,7 +116,8 @@ function SideList({ route }) {
   const date = startup ? startup.date : route.date
   return (
     <aside className="split__list" aria-label={L('이 호의 회사', 'Companies in this issue')}>
-      <IssueHeader date={date} compact />
+      {/* on the issue's own page the centre column already carries the date and progress */}
+      {startup ? <IssueHeader date={date} compact /> : <p className="split__label">{L('이 호의 회사', 'In this issue')}</p>}
       <IssueList date={date} selectedId={route.id} compact />
     </aside>
   )

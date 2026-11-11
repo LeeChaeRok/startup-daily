@@ -31,8 +31,8 @@ export default function About({ params }) {
         <strong>{L('아직 모르는, 지금 뜨는 스타트업', "Startups you haven't heard of yet")}</strong>
         <br />
         {L(
-          '하루 한 묶음, 덜 알려진 국내외 신생 스타트업을 왜 지금 뜨는지와 함께 소개해요.',
-          'A handful of under-the-radar startups every day, with why they matter now.',
+          '하루 한 묶음, 덜 알려진 국내외 신생 스타트업을 왜 지금 뜨는지와 함께 소개해요. 공모전 탭에서는 여섯 개 공모전 사이트에 올라온, 지금 접수 중인 공모전을 한곳에 모아 보여 드려요.',
+          'A handful of under-the-radar startups every day, with why they matter now. The Contests tab gathers every open Korean contest from six listing sites in one place.',
         )}
       </p>
       <p className="about-settings-link">
@@ -112,14 +112,14 @@ export default function About({ params }) {
           <li>{L('기업가치와 시장 규모는 ‘AI 추정’ 값입니다.', 'Valuations and market sizes are AI estimates.')}</li>
           <li>
             {L(
-              '언론 보도 링크는 존재가 확인될 때까지 보여 주지 않습니다. 점검 결과 상당수가 열리지 않았기 때문입니다.',
-              'Press links stay hidden until we confirm they exist — many failed to open when we checked.',
+              '언론 보도는 실제로 열리는지 확인한 기사만 ‘확인된 보도’로 링크합니다. 확인하지 못한 기사는 보여 주지 않습니다.',
+              'Press coverage is linked only after we confirm the article opens (“Verified coverage”); unchecked links stay hidden.',
             )}
           </li>
           <li>
             {L(
-              '외부 링크는 회사 공식 웹사이트, 뉴스 검색, 정정 출처뿐입니다.',
-              'The only outbound links are the company’s website, a news search, and correction sources.',
+              '외부 링크는 회사 공식 웹사이트, 확인된 보도, 뉴스 검색, 정정 출처뿐입니다.',
+              'Outbound links are limited to the company’s website, verified coverage, a news search, and correction sources.',
             )}
           </li>
           <li>

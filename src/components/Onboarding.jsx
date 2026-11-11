@@ -211,7 +211,7 @@ function TasteSheet({ open, mode }) {
             <p className="taste__sub">
               {poolLive
                 ? L('고른 분야로 매일 5곳을 골라 드려요. 하나는 관심 밖에서 골라요.', 'We pick five a day from these sectors, and one from outside them.')
-                : L('3개쯤 고르면 순서가 잘 맞아요. 오늘의 묶음은 모두에게 같아요.', "About 3 works best. Today's picks are the same for everyone.")}
+                : L('고른 분야의 회사가 위로 올라와요. 3개쯤이 좋아요.', 'Companies in these sectors move up the list. About 3 works best.')}
             </p>
             {sectorChips}
             {picked.length > 0 && picked.length < SECTORS.length - 1 && (

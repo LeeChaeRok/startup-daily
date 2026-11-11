@@ -90,3 +90,6 @@ export function langOf(text) {
 export function pad2(n) {
   return String(n).padStart(2, '0')
 }
+
+/** "A and B" / "A & B" → "A · B" so co-leads read as a list in either language. */
+export const investorList = (s) => (s ? s.replace(/\s*(?:,\s*)?\b(?:and|&)\s+/g, ' · ') : s)

@@ -381,6 +381,7 @@ a { color: inherit; text-decoration: none; }
 
 .sector-mix { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 13px; color: var(--sd-ink-2); margin-bottom: 8px; line-height: 1.5; }
 .sector-mix__label { font-weight: 700; color: var(--sd-ink); }
+.sector-mix__item { white-space: nowrap; }
 /* "오늘 읽은 5곳": the day's mix, at the close */
 .day-sum { margin-top: 10px; }
 .day-sum__line { font-size: 14px; color: var(--sd-ink-2); line-height: 1.6; }
@@ -464,6 +465,8 @@ a { color: inherit; text-decoration: none; }
 .issue-rows--grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 24px; }
 .issue-rows--grid .issue-row { grid-template-columns: minmax(0, 1fr) auto; }
 .issue-rows--grid .issue-row__date { display: none; }
+.issue-row__no { display: none; }
+.issue-rows--grid .issue-row__no { display: inline; }
 
 .data-range { margin-top: 24px; font-size: 13px; color: var(--sd-ink-3); }
 
@@ -707,7 +710,7 @@ a { color: inherit; text-decoration: none; }
   height: 44px; padding: 0 12px; margin-left: 4px;
   background: var(--sd-ink); color: var(--sd-on-ink); border-radius: var(--sd-radius-2); font-size: 15px; font-weight: 700;
 }
-.actionbar__nextlabel { font-size: 13px; font-weight: 500; opacity: 0.8; }
+.actionbar__nextlabel { font-size: 13px; font-weight: 500; opacity: 0.8; white-space: nowrap; flex-shrink: 0; }
 .actionbar__nextname { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 
 .keyfacts { display: grid; }
@@ -770,6 +773,7 @@ a { color: inherit; text-decoration: none; }
 .results td:not(:first-child) { white-space: nowrap; }
 .results-wrap { overflow-x: auto; }
 .explore__results { min-width: 0; }
+.page--explore-desktop .explore > .shelf { grid-column: 1 / -1; }
 .results tr:hover td { background: var(--sd-surface); }
 .th-btn { display: inline-flex; align-items: center; gap: 2px; background: none; border: 0; font: inherit; color: inherit; cursor: pointer; padding: 8px 0; }
 .th-btn.is-on { color: var(--sd-ink); }
@@ -831,6 +835,7 @@ a { color: inherit; text-decoration: none; }
   opacity: 0; transition: opacity var(--sd-dur-1);
 }
 .logo__img.is-loaded { opacity: 1; }
+.logo__img.is-small { padding: 25%; image-rendering: auto; }
 
 .empty { text-align: center; max-width: 340px; margin: 48px auto; display: flex; flex-direction: column; align-items: center; }
 .empty__icon { color: var(--sd-ink-3); }
@@ -1043,6 +1048,14 @@ a.hero > .hero__comment {
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
   margin-top: 8px; font-size: 15px; font-weight: 400; line-height: 23px; color: var(--sd-ink-2);
 }
+a.hero > .hero__facts { display: flex; flex-wrap: wrap; gap: 2px 12px; margin-top: 12px; font-size: 13px; line-height: 20px; color: var(--sd-ink-3); }
+a.hero .hero__facts b { font-weight: 700; color: var(--sd-ink); }
+a.hero > .hero__why {
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--sd-line);
+  font-size: 15px; line-height: 23px; color: var(--sd-ink-2);
+}
+a.hero .hero__why strong { color: var(--sd-accent); font-weight: 700; margin-right: 4px; }
 /* AI disclosure for the comment: a small boxed tag, not a run-in label */
 a.hero .hero__ai { display: inline-block; margin-right: 6px; padding: 0 4px; border: 1px solid var(--sd-line-ui); font-size: 11px; font-weight: 600; line-height: 15px; color: var(--sd-ink-3); vertical-align: 1px; }
 
@@ -1211,6 +1224,11 @@ a.hero .hero__ai { display: inline-block; margin-right: 6px; padding: 0 4px; bor
   margin-right: calc(var(--sd-gutter) * -1); padding-right: var(--sd-gutter);
 }
 .cfilters__chips::-webkit-scrollbar { display: none; }
+@media (min-width: 1024px) {
+  .cfilters__chips { flex-wrap: wrap; overflow: visible; margin-right: 0; padding-right: 0; row-gap: 6px; }
+  .cfilters__row { align-items: flex-start; }
+  .cfilters__row .cfilters__label { line-height: 36px; }
+}
 .cchip { flex: none; padding: 0 12px; }
 .cchip[aria-pressed="true"] { background: var(--sd-ink); color: var(--sd-on-ink); border-color: var(--sd-ink); font-weight: 600; }
 .cchip:disabled { color: var(--sd-ink-3); border-color: var(--sd-line); cursor: default; }
@@ -1360,3 +1378,19 @@ a.hero .hero__ai { display: inline-block; margin-right: 6px; padding: 0 4px; bor
   .crow__meta { grid-column: 2; grid-row: 3; gap: 2px 10px; }
   .crow__host { max-width: 11em; }
 }
+
+/* issue rows: stage + total raised, the one money signal on the list */
+.row__funding { color: var(--sd-ink-2); white-space: nowrap; }
+
+/* contest deadline → calendar (.ics) */
+.cdetail__cal { display: inline-flex; align-items: center; gap: 4px; margin-top: 8px; min-height: 32px; font-size: 13px; font-weight: 600; color: var(--sd-ink-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--sd-line-strong); }
+@media (hover: hover) { .cdetail__cal:hover { color: var(--sd-ink); } }
+
+/* desktop issue page: the side list needs no second issue header */
+.split__label { font-size: 13px; font-weight: 700; color: var(--sd-ink-3); padding: 4px 0 10px; border-bottom: 2px solid var(--sd-line-strong); }
+.sheet__title:focus { outline: none; }
+
+/* "읽음" is a done state, not an alert: green check, neutral frame */
+.readbtn.is-on { color: var(--sd-positive); }
+.btn.readbtn.is-on, .btn--secondary.readbtn.is-on { color: var(--sd-ink); border-color: var(--sd-line-strong); }
+.btn.readbtn.is-on svg { color: var(--sd-positive); }

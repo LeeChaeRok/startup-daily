@@ -210,7 +210,7 @@
       }
     ],
     "editor_pick_comment": "보험 상품을 소프트웨어로 찍어내겠다는 말보다, 첫 고객이 공동창업자의 MGA라는 사실이 이 라운드의 진짜 검증 과제다.",
-    "logo_url": "",
+    "logo_url": "/logos/slingshot-insurance-2026.png",
     "generated_at": "2026-10-26T00:45:51.254Z",
     "model": "anthropic/claude-haiku-5.5",
     "website_check": {
@@ -701,7 +701,7 @@
       }
     ],
     "editor_pick_comment": "1상 이전 단계인 회사에 대형 제약사 Shionogi가 들어왔다는 점은 주목할 만하지만, 공개된 근거는 아직 동물 데이터와 약 $22M의 누적 자금에 머물러 있다.",
-    "logo_url": "",
+    "logo_url": "/logos/celaid-therapeutics-inc-2026.png",
     "generated_at": "2026-10-26T00:45:51.254Z",
     "model": "anthropic/claude-haiku-5.5",
     "website_check": {

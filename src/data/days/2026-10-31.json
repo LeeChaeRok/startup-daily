@@ -192,7 +192,7 @@
       }
     ],
     "editor_pick_comment": "통신사가 되지 않고 브랜드가 '연결의 주인'이 되는 임베디드 커넥티비티 선두주자. 외부 자본 없이 수익을 낸 상태에서 맞은 첫 $38M Series A가 핵심 포인트다.",
-    "logo_url": "",
+    "logo_url": "/logos/braid-2026.svg",
     "generated_at": "2026-10-30T23:40:44.383Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {

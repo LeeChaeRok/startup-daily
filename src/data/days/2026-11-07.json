@@ -1686,7 +1686,7 @@
     "attention": 3,
     "id": "emm-2026",
     "date": "2026-11-07",
-    "logo_url": "",
+    "logo_url": "/logos/emm-2026.png",
     "generated_at": "2026-11-07T00:15:25.656Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -2505,7 +2505,7 @@
     "attention": 4,
     "id": "yuma-energy-2026",
     "date": "2026-11-07",
-    "logo_url": "",
+    "logo_url": "/logos/yuma-energy-2026.svg",
     "generated_at": "2026-11-07T00:15:25.656Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -3290,7 +3290,7 @@
     "attention": 3,
     "id": "jpyc-2026",
     "date": "2026-11-07",
-    "logo_url": "",
+    "logo_url": "/logos/jpyc-2026.png",
     "generated_at": "2026-11-07T00:15:25.656Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -3681,7 +3681,7 @@
     "attention": 3,
     "id": "konst-2026",
     "date": "2026-11-07",
-    "logo_url": "",
+    "logo_url": "/logos/konst-2026.png",
     "generated_at": "2026-11-07T00:15:25.656Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -4573,7 +4573,7 @@
     "attention": 2,
     "id": "ssenstone-2026",
     "date": "2026-11-07",
-    "logo_url": "",
+    "logo_url": "/logos/ssenstone-2026.webp",
     "generated_at": "2026-11-07T00:15:25.656Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {

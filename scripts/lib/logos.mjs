@@ -4,18 +4,19 @@
  *
  * Lookup order: <link rel="apple-touch-icon"> → largest <link rel="icon"> →
  * /apple-touch-icon.png → Google s2 favicon (128px). A file is accepted only when
- * its bytes say PNG, JPEG or WebP (SVG and ICO are refused), it is ≤ 200 KB and
- * both sides are ≥ 64 px — read from the image header, no image library.
+ * its bytes say PNG, JPEG or WebP with both sides ≥ 64 px, or it is an SVG (tried last,
+ * after every raster), else the largest raster ≥ 32 px; ICO is refused; ≤ 200 KB — read from the image header, no image library.
  */
 import fs from 'node:fs'
 import path from 'node:path'
 
 export const MAX_BYTES = 200 * 1024
 export const MIN_SIDE = 64
+export const SMALL_SIDE = 32
 const TIMEOUT_MS = 8000
 const HTML_MAX = 512 * 1024
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36'
-const EXTS = ['png', 'jpg', 'webp']
+const EXTS = ['png', 'jpg', 'webp', 'svg']
 
 /* ---------- Image headers ---------- */
 
@@ -26,6 +27,13 @@ export function sniffType(buf) {
   if (buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) return 'jpg'
   if (buf.toString('latin1', 0, 4) === 'RIFF' && buf.toString('latin1', 8, 12) === 'WEBP') return 'webp'
   return null
+}
+
+/** An SVG document (shown only through <img>, where its scripts never run). */
+export function isSvg(buf) {
+  if (!buf?.length) return false
+  const head = buf.toString('utf-8', 0, Math.min(buf.length, 1024)).replace(/^\uFEFF/, '').trimStart()
+  return /^(<\?xml[^>]*>\s*)?(<!--[\s\S]*?-->\s*)*(<!DOCTYPE[^>]*>\s*)?<svg\b/i.test(head)
 }
 
 /** → { width, height } from the header, or null when it cannot be read. */
@@ -84,7 +92,8 @@ export function checkImage(buf) {
   if (!buf?.length) return { ok: false, reason: 'empty' }
   if (buf.length > MAX_BYTES) return { ok: false, reason: `too large (${Math.round(buf.length / 1024)} KB)` }
   const type = sniffType(buf)
-  if (!type) return { ok: false, reason: 'not png/jpeg/webp' }
+  if (!type && isSvg(buf)) return { ok: true, type: 'svg', width: 0, height: 0 }
+  if (!type) return { ok: false, reason: 'not png/jpeg/webp/svg' }
   const size = imageSize(buf, type)
   if (!size) return { ok: false, type, reason: 'unreadable header' }
   if (size.width < MIN_SIDE || size.height < MIN_SIDE) return { ok: false, type, ...size, reason: `too small (${size.width}x${size.height})` }
@@ -164,7 +173,8 @@ async function download(url, fetchImpl) {
     const buf = await readCapped(res, MAX_BYTES)
     if (!buf) return { ok: false, reason: 'too large' }
     const check = checkImage(buf)
-    return check.ok ? { ...check, buf } : check
+    // a small favicon is kept aside: the app shows it inset on a tile when nothing larger exists
+    return check.ok || check.width >= SMALL_SIDE ? { ...check, buf } : check
   } catch (err) {
     return { ok: false, reason: err.name === 'TimeoutError' ? 'timeout' : err.message }
   }
@@ -197,16 +207,32 @@ export async function findLogo(website, { fetchImpl = fetch } = {}) {
   candidates.push(`https://www.google.com/s2/favicons?domain=${new URL(base).hostname}&sz=128`)
 
   const tried = []
+  const vectors = []
+  let small = null
   for (const url of [...new Set(candidates)]) {
-    // known-bad formats by extension save a request; content is still sniffed for the rest
-    if (/\.(svg|ico)(\?|#|$)/i.test(url)) {
-      tried.push({ url, reason: 'svg/ico' })
+    // ICO is refused by extension; SVG waits until every raster candidate has failed
+    if (/\.ico(\?|#|$)/i.test(url)) {
+      tried.push({ url, reason: 'ico' })
       continue
     }
+    if (/\.svg(\?|#|$)/i.test(url)) {
+      vectors.push(url)
+      continue
+    }
+    const r = await download(url, fetchImpl)
+    if (r.ok && r.type === 'svg') vectors.unshift(url)
+    else if (r.ok) return { ...r, source: url }
+    else {
+      if (r.buf && (!small || r.width > small.width)) small = { ...r, ok: true, source: url }
+      tried.push({ url, reason: r.reason })
+    }
+  }
+  for (const url of vectors) {
     const r = await download(url, fetchImpl)
     if (r.ok) return { ...r, source: url }
     tried.push({ url, reason: r.reason })
   }
+  if (small) return small
   return { ok: false, tried }
 }
 

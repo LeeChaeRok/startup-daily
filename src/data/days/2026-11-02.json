@@ -397,7 +397,7 @@
     "attention": 5,
     "id": "noah-2026",
     "date": "2026-11-02",
-    "logo_url": "",
+    "logo_url": "/logos/noah-2026.png",
     "generated_at": "2026-11-01T15:32:31.496Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -1244,7 +1244,7 @@
     "attention": 3,
     "id": "hits-2026",
     "date": "2026-11-02",
-    "logo_url": "",
+    "logo_url": "/logos/hits-2026.png",
     "generated_at": "2026-11-01T15:32:31.496Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -2861,7 +2861,7 @@
     "attention": 4,
     "id": "carbonfarm-2026",
     "date": "2026-11-02",
-    "logo_url": "",
+    "logo_url": "/logos/carbonfarm-2026.png",
     "generated_at": "2026-11-01T15:32:31.496Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -3064,7 +3064,7 @@
     "attention": 3,
     "id": "laki-power-2026",
     "date": "2026-11-02",
-    "logo_url": "",
+    "logo_url": "/logos/laki-power-2026.png",
     "generated_at": "2026-11-01T15:32:31.496Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -4456,7 +4456,7 @@
     "attention": 3,
     "id": "matiks-2026",
     "date": "2026-11-02",
-    "logo_url": "",
+    "logo_url": "/logos/matiks-2026.png",
     "generated_at": "2026-11-01T15:32:31.496Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -4874,7 +4874,7 @@
     "attention": 3,
     "id": "sionicai-2026",
     "date": "2026-11-02",
-    "logo_url": "",
+    "logo_url": "/logos/sionicai-2026.png",
     "generated_at": "2026-11-01T15:32:31.496Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {

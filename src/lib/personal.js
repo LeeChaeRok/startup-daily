@@ -184,7 +184,10 @@ const when = (v) => {
   const m = /^(\d{4})-(\d{2})/.exec(v)
   return m ? new Date(Date.UTC(+m[1], +m[2] - 1)).toLocaleString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' }) : v
 }
-const amountMain = (v) => (cleanAmount(v) ? splitAmount(cleanAmount(v)).main : null)
+const amountMain = (v) => {
+  const main = cleanAmount(v) ? splitAmount(cleanAmount(v)).main : null
+  return main && !/^(비공개|미공개|undisclosed|n\/a)/i.test(main.trim()) ? main : null
+}
 
 // "11-50" → "11-50명", "51-100 (추정)" → "51-100명 (추정)"; anything else as written
 const headcount = (v) => {

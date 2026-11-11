@@ -179,7 +179,7 @@
     "attention": 5,
     "id": "dren-bio-2026",
     "date": "2026-11-10",
-    "logo_url": "",
+    "logo_url": "/logos/dren-bio-2026.png",
     "generated_at": "2026-11-10T02:50:15.417Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -382,7 +382,7 @@
     "attention": 5,
     "id": "anibiz-2026",
     "date": "2026-11-10",
-    "logo_url": "",
+    "logo_url": "/logos/anibiz-2026.svg",
     "generated_at": "2026-11-10T02:50:15.417Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -844,7 +844,7 @@
     "attention": 4,
     "id": "openrec-2026",
     "date": "2026-11-10",
-    "logo_url": "",
+    "logo_url": "/logos/openrec-2026.png",
     "generated_at": "2026-11-10T02:50:15.417Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -1807,7 +1807,7 @@
     "attention": 2,
     "id": "armatrix-2026",
     "date": "2026-11-10",
-    "logo_url": "",
+    "logo_url": "/logos/armatrix-2026.png",
     "generated_at": "2026-11-10T02:50:15.417Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -3460,7 +3460,7 @@
     "attention": 3,
     "id": "north-2026",
     "date": "2026-11-10",
-    "logo_url": "",
+    "logo_url": "/logos/north-2026.png",
     "generated_at": "2026-11-10T02:50:15.417Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {

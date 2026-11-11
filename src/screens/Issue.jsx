@@ -9,7 +9,7 @@ import { AiNote, CorrectionBadge, MarkAllRead, Meta, ProgressRing } from '../com
 import { Footer } from '../components/Chrome.jsx'
 import { byDate, dates, followUps, formatUSD, issueNo, sectorMix, stats } from '../lib/data.js'
 import { buildQuery, localDate, useFlag, useInterests, useMuted, useReadLog } from '../lib/hooks.js'
-import { daysSince, dotDate, longDate, monthDay, pad2, readMinutes, shortDate } from '../lib/format.js'
+import { daysSince, dotDate, longDate, monthDay, numClass, pad2, readMinutes, shortDate } from '../lib/format.js'
 import { canonicalUrl, shareOrCopy } from '../lib/share.js'
 import { currentEntry } from '../lib/nav.js'
 import { useIssueOrder, useOrder, usePastPicks, useRole, useTastePrompt } from '../lib/personal.js'
@@ -136,14 +136,14 @@ export function IssueList({ date, selectedId, compact }) {
   )
 }
 
-export function SectorMix({ list }) {
+export function SectorMix({ list, label = L('이 호의 분야', 'Sectors in this issue') }) {
   const mix = sectorMix(list)
   return (
     <p className="sector-mix">
-      <span className="sector-mix__label">{L('이 호의 분야', 'Sectors in this issue')}</span>
+      <span className="sector-mix__label">{label}</span>
       <Meta
         items={mix.map(([label, n]) => (
-          <span key={label}>
+          <span key={label} className="sector-mix__item">
             {label} <span className="num">{n}</span>
           </span>
         ))}
@@ -278,12 +278,20 @@ export function IssueRowItem({ date, isRead, showSectors = false }) {
   return (
     <li>
       <a className="issue-row" href={date === dates[0] ? '#/' : `#/d/${date}`}>
-        <span className="issue-row__date mono">{shortDate(date).split(' ')[0]}</span>
+        <span className="issue-row__date">
+          <span className="num">{issueNo(date)}</span>
+          {L('호', '')}
+        </span>
         <span className="issue-row__main">
           <span className="issue-row__title">
-            {longDate(date).replace(/요일$/, '')} · {L('제', '#')}
-            <span className="num">{issueNo(date)}</span>
-            {L('호', '')}
+            {longDate(date).replace(/요일$/, '')}
+            {/* the number sits in the left column; the grid layout has no left column */}
+            <span className="issue-row__no">
+              {' '}
+              · {L('제', '#')}
+              <span className="num">{issueNo(date)}</span>
+              {L('호', '')}
+            </span>
           </span>
           <span className="issue-row__stack" aria-hidden="true">
             {items.slice(0, 5).map((s) => (
@@ -292,12 +300,16 @@ export function IssueRowItem({ date, isRead, showSectors = false }) {
             {items.length > 5 && <span className="issue-row__more mono">+{items.length - 5}</span>}
           </span>
           {showSectors && (
-            <span className="issue-row__sectors">
-              {sectorMix(items)
+            <Meta
+              className="issue-row__sectors"
+              items={sectorMix(items)
                 .slice(0, 3)
-                .map(([l, n]) => `${l} ${n}`)
-                .join(' · ')}
-            </span>
+                .map(([l, n]) => (
+                  <span key={l} className="sector-mix__item">
+                    {l} {n}
+                  </span>
+                ))}
+            />
           )}
         </span>
         <span className="issue-row__status">
@@ -574,7 +586,23 @@ function Hero({ startup: s, resume, discovery, from }) {
         <span className="hero__name">{s.name_ko || s.name_en}</span>
       </span>
       {s.tagline && <span className="hero__tagline">{s.tagline}</span>}
-      {s.editor_pick_comment && (
+      {(s._stage || s._raisedShort) && (
+        <span className="hero__facts">
+          {s._stage && <span>{s._stage}</span>}
+          {s._raisedShort && (
+            <span>
+              {L('누적', 'Raised')} <b className={numClass(s._raisedShort)}>{s._raisedShort}</b>
+            </span>
+          )}
+          {s.founded_year && <span>{L(`${s.founded_year}년 설립`, `Founded ${s.founded_year}`)}</span>}
+        </span>
+      )}
+      {/* why now is the concrete reason to read today; the AI one-liner only when it is missing */}
+      {s.trending_reason?.summary ? (
+        <span className="hero__why">
+          <strong>{L('왜 지금', 'Why now')}</strong> {s.trending_reason.summary}
+        </span>
+      ) : s.editor_pick_comment && (
         <span className="hero__comment">
           {/* first, so the two-line clamp never hides it */}
           <span className="hero__ai">
@@ -920,8 +948,7 @@ export function IssueMobile({ date }) {
       <p className="footnote">
         <Icon name="info" size={16} />
         <span>
-          {L('AI가 공개 자료로 작성하고 모든 사실을 사람이 확인하지는 않아요', 'Written by AI from public sources; not every fact is checked by a person')} ·{' '}
-          <a href="#/about?sec=corrections">{L('정정 기록', 'Corrections')} ›</a>
+          {L('AI가 공개 자료로 작성하고 모든 사실을 사람이 확인하지는 않아요.', 'Written by AI from public sources; not every fact is checked by a person.')}
         </span>
       </p>
       <p className="data-range">

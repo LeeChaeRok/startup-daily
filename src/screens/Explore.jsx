@@ -457,7 +457,9 @@ export default function Explore({ params, desktop }) {
                   </>
                 }
               >
-                {L('철자를 확인하거나 필터를 줄여 보세요.', 'Check the spelling or try fewer filters.')}
+                {filterCount > 0
+                  ? L('철자를 확인하거나 필터를 줄여 보세요.', 'Check the spelling or try fewer filters.')
+                  : L('철자를 확인하거나, 회사 이름 대신 분야나 창업자 이름으로 찾아보세요.', 'Check the spelling, or search by sector or founder instead.')}
               </EmptyState>
             ) : desktop ? (
               <div className="results-wrap">

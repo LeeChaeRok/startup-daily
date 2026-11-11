@@ -130,7 +130,13 @@ Lead: ${c.why_now || '—'}
 
 Search for: the official site, founders and their backgrounds, the latest funding round and investors, what the product does and for whom, direct competitors, and press coverage from the last 90 days. Re-check that the company is still private and independent; set "status" accordingly.
 
-Writing: all prose in Korean (proper nouns stay in English), concrete and specific, no hype. Numbers you could not confirm are marked "(추정)" in the note. media_mentions only lists articles you actually opened in search results. editor_pick_comment is one sharp sentence.
+Writing: all prose in Korean (proper nouns stay in English), concrete and specific, no hype. Numbers you could not confirm are marked "(추정)" in the note. media_mentions only lists articles you actually opened in search results.
+- tagline: natural Korean a reader would say aloud — who it serves and what it does, at most one "·". Not a stack of nouns. Bad: "희귀 혈액암 표적 항체 치료제 개발 임상 단계 바이오텍". Good: "치료제가 없는 희귀 혈액암에 첫 항체 신약을 내는 바이오텍".
+- editor_pick_comment: one sharp sentence that adds a judgment the other fields do not state (what to watch, who should care, the bet being made). Never restate the tagline or the funding amount.
+- tagline ends in a noun (…플랫폼, …바이오텍, …를 만드는 회사), never "~하다", and never the words "재정의", "혁신".
+- Prose fields are full sentences ending in "~한다/~했다", not clipped notes ("…발표. …높아짐.").
+- Money in prose uses the same form as the funding fields: "$350M", "약 173억원" — not "3억5천만 달러".
+- lead_investor: names only, several joined with ", " (never "and").
 
 Funding amounts (strict):
 - "total_raised" and every round "amount" hold the figure ONLY, in the currency the source reported: "$12.6M", "약 131억 엔", "약 173억원", "₹65 crore". Unknown → "비공개". Never a bare unit like "M+", never parentheses or sentences.

@@ -413,7 +413,7 @@
     "attention": 4,
     "id": "rivio-2026",
     "date": "2026-11-06",
-    "logo_url": "",
+    "logo_url": "/logos/rivio-2026.svg",
     "generated_at": "2026-11-06T01:13:20.852Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -4324,7 +4324,7 @@
     "attention": 2,
     "id": "caveman-2026",
     "date": "2026-11-06",
-    "logo_url": "",
+    "logo_url": "/logos/caveman-2026.png",
     "generated_at": "2026-11-06T01:13:20.852Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -4747,7 +4747,7 @@
     "attention": 3,
     "id": "osavul-2026",
     "date": "2026-11-06",
-    "logo_url": "",
+    "logo_url": "/logos/osavul-2026.png",
     "generated_at": "2026-11-06T01:13:20.852Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -5165,7 +5165,7 @@
     "attention": 3,
     "id": "bytexl-2026",
     "date": "2026-11-06",
-    "logo_url": "",
+    "logo_url": "/logos/bytexl-2026.png",
     "generated_at": "2026-11-06T01:13:20.852Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {

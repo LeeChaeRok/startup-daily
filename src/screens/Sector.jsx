@@ -125,7 +125,7 @@ export default function Sector({ sector }) {
       {view === 'list' ? (
         <ol className="rows">
           {list.map((s) => (
-            <StartupRow key={s.id} startup={s} showDate />
+            <StartupRow key={s.id} startup={s} showDate hideSector />
           ))}
         </ol>
       ) : (

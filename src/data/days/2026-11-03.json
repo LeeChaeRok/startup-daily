@@ -709,7 +709,7 @@
     "attention": 4,
     "id": "aiz-entertainment-2026",
     "date": "2026-11-03",
-    "logo_url": "",
+    "logo_url": "/logos/aiz-entertainment-2026.png",
     "generated_at": "2026-11-03T02:19:07.621Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -5020,7 +5020,7 @@
     "attention": 3,
     "id": "indent-2026",
     "date": "2026-11-03",
-    "logo_url": "",
+    "logo_url": "/logos/indent-2026.png",
     "generated_at": "2026-11-03T02:19:07.621Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -5244,7 +5244,7 @@
     "attention": 2,
     "id": "edtechx-2026",
     "date": "2026-11-03",
-    "logo_url": "",
+    "logo_url": "/logos/edtechx-2026.png",
     "generated_at": "2026-11-03T02:19:07.621Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {

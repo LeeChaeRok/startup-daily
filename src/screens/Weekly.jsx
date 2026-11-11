@@ -41,7 +41,7 @@ export default function Weekly({ week }) {
         <p className="issue-head__sub">
           {L(
             <>
-              <span className="num">{issues}</span>호 · 스타트업 <span className="num">{list.length}</span>곳 · 읽음{' '}
+              발행 <span className="num">{issues}</span>회 · 스타트업 <span className="num">{list.length}</span>곳 · 읽음{' '}
               <span className="num">{list.length - unread.length}</span>곳
             </>,
             <>
@@ -51,12 +51,12 @@ export default function Weekly({ week }) {
           )}
         </p>
       </header>
-      <SectorMix list={list} />
+      <SectorMix list={list} label={L('이번 주 분야', 'Sectors this week')} />
 
       {biggest.length > 0 && (
         <section className="weekly__sec" aria-labelledby="w-big">
           <h2 id="w-big" className="weekly__title">
-            {L(`가장 큰 투자 ${biggest.length}곳`, 'Biggest rounds')}
+            {L(`누적 투자가 큰 ${biggest.length}곳`, 'Most funded')}
           </h2>
           <ol className="rows">
             {biggest.map((s) => (

@@ -118,7 +118,7 @@ export default function Contests({ params, desktop }) {
       <div className="contests__main page">
         <header className="contests__head">
           <div className="issue-head__rule" />
-          <span className="eyebrow mono">{L(`${monthDay(doc.updated)} 갱신`, `Updated ${monthDay(doc.updated)}`)}</span>
+          <span className="eyebrow">{L(`${monthDay(doc.updated)} 갱신`, `Updated ${monthDay(doc.updated)}`)}</span>
           <h1 className="issue-head__title" tabIndex={-1}>
             {L('공모전', 'Contests')}
           </h1>
@@ -353,7 +353,9 @@ function Filters({ f, open, except, go, count, filtered, savedCount, desktop }) 
               <button type="button" className="btn btn--primary" onClick={() => setSheet(null)}>
                 {L(
                   <>
-                    <span className="num">{count}</span>건 보기
+                    <span>
+                      <span className="num">{count}</span>건 보기
+                    </span>
                   </>,
                   <>
                     Show <span className="num">{count}</span>
@@ -449,6 +451,36 @@ function ContestRow({ c, selected, onPick, now }) {
 
 /* ---------- Detail ---------- */
 
+/** An all-day event on the deadline with a reminder three days before, as an .ics data link. */
+function icsHref(c) {
+  const d = c.deadline.replaceAll('-', '')
+  const next = new Date(`${c.deadline}T00:00:00`)
+  next.setDate(next.getDate() + 1)
+  const end = `${next.getFullYear()}${String(next.getMonth() + 1).padStart(2, '0')}${String(next.getDate()).padStart(2, '0')}`
+  const esc = (t = '') => t.replace(/[\\;,]/g, (m) => `\\${m}`).replace(/\n/g, ' ')
+  const ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Startup Daily//Contests//KO',
+    'BEGIN:VEVENT',
+    `UID:contest-${c.id}@startup-daily`,
+    `DTSTAMP:${d}T000000Z`,
+    `DTSTART;VALUE=DATE:${d}`,
+    `DTEND;VALUE=DATE:${end}`,
+    `SUMMARY:${esc(`[마감] ${c.title}`)}`,
+    `DESCRIPTION:${esc([c.host, c.sites[0]?.url].filter(Boolean).join(' · '))}`,
+    `URL:${c.sites[0]?.url || ''}`,
+    'BEGIN:VALARM',
+    'TRIGGER:-P3D',
+    'ACTION:DISPLAY',
+    `DESCRIPTION:${esc(`마감 3일 전: ${c.title}`)}`,
+    'END:VALARM',
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\r\n')
+  return `data:text/calendar;charset=utf-8,${encodeURIComponent(ics)}`
+}
+
 function ContestFacts({ c, now }) {
   const n = daysLeft(c.deadline, now)
   const [amount, label] = prizeCell(c)
@@ -467,6 +499,10 @@ function ContestFacts({ c, now }) {
           <div className="cdetail__k">{L('접수 마감', 'Deadline')}</div>
           <div className={`cdetail__v mono ${n <= 3 ? 'is-soon' : ''}`}>{ddayLabel(n)}</div>
           <div className="cdetail__vsub">{dateWithDay(c.deadline)}</div>
+          <a className="cdetail__cal" href={icsHref(c)} download={`contest-${c.id}.ics`}>
+            <Icon name="calendar" size={14} />
+            {L('캘린더에 추가', 'Add to calendar')}
+          </a>
         </div>
         <div>
           <div className="cdetail__k">{amount ? L(`${label} 상금`, `Prize (${label})`) : L('상금', 'Prize')}</div>
@@ -479,7 +515,10 @@ function ContestFacts({ c, now }) {
           <dt>{L('참가 대상', 'Who can enter')}</dt>
           <dd>
             {c.who?.length > 0 && <strong className="cdetail__who">{whoLabel(c)}</strong>}
-            {c.target && !/^(기타|제한\s*없음|대상 제한 없음)$/.test(c.target) ? c.target : !c.who?.length && L('공고에 없음', 'Not stated')}
+            {/* the notice's own words, unless they only repeat the bold label (일반인 / 누구나) */}
+            {c.target && !/^(기타|제한\s*없음|대상 제한 없음)$/.test(c.target) && c.target.replace(/\s/g, '') !== whoLabel(c).replace(/\s/g, '')
+              ? c.target
+              : !c.who?.length && L('공고에 없음', 'Not stated')}
           </dd>
         </div>
         <div>

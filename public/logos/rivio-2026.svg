@@ -1,0 +1,8 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="7" fill="#31353D"/>
+  <!-- the "r" of the Rivio mark — path geometry exactly as exported from
+       Figma node 623:74172, only translated and scaled into the square -->
+  <g transform="translate(9.17 4.89) scale(0.926)">
+    <path d="M13.5416 5.3297H8.40138C6.69805 5.3297 5.31716 6.7146 5.31716 8.42294V22.7946H1.20497V8.42294C1.20497 4.43683 4.42693 1.20545 8.40138 1.20545H13.5416V5.3297Z" fill="#F7F9FF"/>
+  </g>
+</svg>

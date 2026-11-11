@@ -64,16 +64,50 @@ for it in data["items"]:
         "sites": [{"site": s["site"], "url": s["url"], "posted": s.get("posted") or ""} for s in it["sites"]],
     })
 
-# a site sometimes lists one contest twice: same title + deadline → one row, sites combined
+# not contests at all: races, meetups, briefings, fairs, hiring
+NOT_CONTEST = re.compile(r"마라톤|밋업|설명회|박람회|채용|교육생\s*모집|참여기업\s*모집|서포터즈|기자단|봉사단")
+items = [i for i in items if not NOT_CONTEST.search(i["title"])]
+
+
+def norm_title(t):
+    # "[보건복지부] 2026 청년 e-Room 공모전 참가자 모집" ≈ "보건복지부 2026 청년e-Room 공모전"
+    t = re.sub(r"(참가자|참여자|작품|응모작|아이디어)?\s*(모집|접수)(\s*안내)?\s*$", "", t.strip())
+    return re.sub(r"[\s\[\]()（）「」『』<>〈〉《》'\"“”‘’·:,._\-~!?]", "", t).lower()
+
+
+# one contest listed twice (by one site, or by two under slightly different titles):
+# same normalized title + deadline → one row, sites combined
 byid = {}
 for i in items:
-    if i["id"] in byid:
-        b = byid[i["id"]]
+    key = (norm_title(i["title"]), i["deadline"])
+    if key in byid:
+        b = byid[key]
         b["sites"] += [s for s in i["sites"] if s["url"] not in {z["url"] for z in b["sites"]}]
         for f in ("prize_top", "prize_total"):
             b[f] = b[f] or i[f]
+        if not b["host"]:
+            b["host"] = i["host"]
+        if len(i["target"]) > len(b["target"]):
+            b["target"] = i["target"]
+        b["who"] = b["who"] if "any" in b["who"] else sorted(set(b["who"]) | set(i["who"])) if "any" not in i["who"] else ["any"]
     else:
-        byid[i["id"]] = i
+        byid[key] = i
+# second pass: same deadline and one title contains the other ("[식약처] 식중독 … 공모전" ⊃ "식중독 … 공모전")
+rows = sorted(byid.values(), key=lambda x: -len(norm_title(x["title"])))
+kept = []
+for i in rows:
+    k = norm_title(i["title"])
+    host = next((b for b in kept if b["deadline"] == i["deadline"] and len(k) >= 8 and k in norm_title(b["title"])), None)
+    if not host:
+        kept.append(i)
+        continue
+    host["sites"] += [z for z in i["sites"] if z["url"] not in {y["url"] for y in host["sites"]}]
+    for f in ("prize_top", "prize_total"):
+        host[f] = host[f] or i[f]
+    host["host"] = host["host"] or i["host"]
+byid = {i["id"]: i for i in kept}
+for i in byid.values():
+    i["sites"].sort(key=lambda z: z["posted"] or "9")
 items = sorted(byid.values(), key=lambda x: (x["deadline"], x["title"]))
 assert len({i["id"] for i in items}) == len(items), "duplicate contest ids"
 posted = sorted(i["posted"] for i in items)

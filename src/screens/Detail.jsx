@@ -3,7 +3,6 @@ import Icon from '../components/Icon.jsx'
 import Logo from '../components/Logo.jsx'
 import Sheet from '../components/Sheet.jsx'
 import StartupRow from '../components/StartupRow.jsx'
-import ForRoleLine from '../components/ForRoleLine.jsx'
 import { useToast } from '../components/toast-context.js'
 import { Meta, ReadButton, SaveButton, Tag } from '../components/bits.jsx'
 import { startups, byId, canAnalyze, cleanAmount, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
@@ -13,7 +12,7 @@ import { UpdateBanner } from '../components/FollowUp.jsx'
 import { MuteSectorButton } from '../components/MuteSector.jsx'
 import { sectorHue } from '../lib/sectors.js'
 import { navigate, prefersReducedMotion, useFlag, useFontSize } from '../lib/hooks.js'
-import { dotDate, enDash, langOf, monthDay, numClass, pad2, ym } from '../lib/format.js'
+import { dotDate, enDash, investorList, langOf, monthDay, numClass, pad2, ym } from '../lib/format.js'
 import { isColdStart } from '../lib/nav.js'
 import { isEn, L } from '../lib/i18n.js'
 import { recordOpen } from '../lib/personal.js'
@@ -340,7 +339,13 @@ function AmountNote({ text, note }) {
 }
 
 /** Just the figure, for tight spots (the commentary is in the 투자 section). */
-const amountMain = (text) => (cleanAmount(text) ? splitAmount(cleanAmount(text)).main : null)
+// "비공개 (Dealroom 범위 …)" has digits but no figure: undisclosed, not an estimate
+const amountMain = (text) => {
+  const main = cleanAmount(text) ? splitAmount(cleanAmount(text)).main : null
+  return main && !/^(비공개|미공개|undisclosed|n\/a)/i.test(main.trim()) ? main : null
+}
+/** A lead investor we can name: "비공개 (발표문상 …)" is not one. */
+const knownLead = (v) => (v && !/^(비공개|미공개|undisclosed|unknown)/i.test(v.trim()) ? investorList(v) : null)
 
 function Summary({ startup: s, summaryRef }) {
   const f = s.funding || {}
@@ -372,7 +377,8 @@ function Summary({ startup: s, summaryRef }) {
           </div>
           <div>
             <dt>
-              {L('기업가치', 'Valuation')} <Tag tone="warn">{L('AI 추정', 'AI estimate')}</Tag>
+              {L('기업가치', 'Valuation')}{' '}
+              {amountMain(f.valuation_estimate) && <Tag tone="warn">{L('AI 추정', 'AI estimate')}</Tag>}
             </dt>
             <dd className={cleanAmount(f.valuation_estimate) ? numClass(f.valuation_estimate) : ''}>
               {amountMain(f.valuation_estimate) || UNDISCLOSED}
@@ -383,9 +389,9 @@ function Summary({ startup: s, summaryRef }) {
           <Meta
             items={[
               s.employee_count ? L(`직원 ${enDash(s.employee_count)}명`, `${enDash(s.employee_count)} employees`) : null,
-              lr.lead_investor ? (
+              knownLead(lr.lead_investor) ? (
                 <span key="l">
-                  {L('리드', 'Lead')} <span lang={langOf(lr.lead_investor)}>{lr.lead_investor}</span>
+                  {L('리드', 'Lead')} <span lang={langOf(lr.lead_investor)}>{knownLead(lr.lead_investor)}</span>
                 </span>
               ) : null,
             ]}
@@ -436,9 +442,9 @@ function FundingTimeline({ funding: f }) {
             <span className="timeline__node" aria-hidden="true" />
             <span className="timeline__body">
               <span className="timeline__stage">{r.stage}</span>
-              {r.lead_investor && (
+              {knownLead(r.lead_investor) && (
                 <span className="timeline__lead" lang={langOf(r.lead_investor)}>
-                  {r.lead_investor}
+                  {knownLead(r.lead_investor)}
                 </span>
               )}
               {note && <span className="timeline__note">{note}</span>}
@@ -1052,7 +1058,6 @@ export default function Detail({ id, from, desktop, wide }) {
       <UpdateBanner startup={s} />
       <Hero startup={s} list={list} share={share} from={from} desktop={desktop} wide={wide} timeRef={timeRef} />
       <Summary startup={s} summaryRef={summaryRef} />
-      <ForRoleLine startup={s} variant="detail" />
 
       {!wide && <SectionNav active={active} sections={sections} />}
 

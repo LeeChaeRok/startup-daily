@@ -22,7 +22,7 @@ function initials(name = '') {
 export default function Logo({ startup, size = 40, person = false, name }) {
   const label = name || startup?.name_en || startup?.name_ko || ''
   const src = person ? null : startup?.logo_url || null
-  const [loaded, setLoaded] = useState(false)
+  const [loaded, setLoaded] = useState('') // '' | 'full' | 'small' (a favicon under 64px, shown inset)
   const idx = person ? 7 : monoIndex(label)
   const text = initials(label)
 
@@ -41,14 +41,17 @@ export default function Logo({ startup, size = 40, person = false, name }) {
       <span className="logo__mono">{text}</span>
       {src && (
         <img
-          className={`logo__img ${loaded ? 'is-loaded' : ''}`}
+          className={`logo__img ${loaded ? 'is-loaded' : ''} ${loaded === 'small' ? 'is-small' : ''}`}
           src={src}
           alt=""
           width={size}
           height={size}
           loading="lazy"
           decoding="async"
-          onLoad={(e) => setLoaded(e.currentTarget.naturalWidth >= 48)}
+          onLoad={(e) => {
+            const w = e.currentTarget.naturalWidth
+            setLoaded(src.endsWith('.svg') || w >= 64 ? 'full' : w >= 32 ? 'small' : '')
+          }}
         />
       )}
     </span>

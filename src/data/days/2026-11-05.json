@@ -238,7 +238,7 @@
     "attention": 5,
     "id": "gardens-interactive-2026",
     "date": "2026-11-05",
-    "logo_url": "",
+    "logo_url": "/logos/gardens-interactive-2026.png",
     "generated_at": "2026-11-05T01:04:42.971Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -1972,7 +1972,7 @@
     "attention": 2,
     "id": "lingsheng-technology-livsyn-2026",
     "date": "2026-11-05",
-    "logo_url": "",
+    "logo_url": "/logos/lingsheng-technology-livsyn-2026.png",
     "generated_at": "2026-11-05T01:04:42.971Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -3634,7 +3634,7 @@
     "attention": 3,
     "id": "scribeup-2026",
     "date": "2026-11-05",
-    "logo_url": "",
+    "logo_url": "/logos/scribeup-2026.svg",
     "generated_at": "2026-11-05T01:04:42.971Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {
@@ -4379,7 +4379,7 @@
     "attention": 3,
     "id": "restate-2026",
     "date": "2026-11-05",
-    "logo_url": "",
+    "logo_url": "/logos/restate-2026.png",
     "generated_at": "2026-11-05T01:04:42.971Z",
     "model": "deepseek/deepseek-v4-flash",
     "website_check": {

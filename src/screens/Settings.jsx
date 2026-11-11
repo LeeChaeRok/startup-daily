@@ -75,7 +75,7 @@ export default function Settings() {
                     "Everyone's five is the same for all. Your five takes four from your sectors and one from outside them.",
                   )
                 : L(
-                    '오늘의 묶음은 모두에게 같아요. 순서와 회사마다 붙는 "○○라면" 한 줄만 달라져요.',
+                    '5곳 구성은 모두에게 같아요. 고른 분야가 위로 올라오고, 회사마다 "○○라면" 한 줄이 붙어요.',
                     'Everyone gets the same picks. Only the order and the one line for your role change.',
                   )}
             </p>
