@@ -1,0 +1,2541 @@
+{
+  "neysa-2026": {
+    "tagline": "Indian AI Infrastructure Cloud Platform",
+    "category": [
+      "AI Infrastructure",
+      "GPU Cloud",
+      "Cloud Computing"
+    ],
+    "headquarters": {
+      "country_ko": "India"
+    },
+    "founders": [
+      {
+        "background": "Former founder and CEO of Netmagic, India's largest data center provider",
+        "notable_achievement": "Grew Netmagic into India's largest data infrastructure company, then sold it to NTT in 2020"
+      },
+      {
+        "background": "Served as a technology and operations executive at Netmagic for many years"
+      }
+    ],
+    "team_highlights": "Specific team composition besides the founders has not been disclosed, but the company is known to have many engineering personnel from Netmagic",
+    "product": {
+      "summary": "An end-to-end AI acceleration cloud platform that provides GPU computing and managed AI PaaS so enterprises can train, deploy, and operate AI models",
+      "problem_statement": "Indian enterprises lack high-performance GPU infrastructure specialized for AI workloads; global hyperscalers are costly and difficult to comply with local regulations",
+      "solution": "Offers bare metal, virtual machines, and Kubernetes clusters based on NVIDIA and AMD GPUs, with a platform integrating orchestration, cost governance, and enterprise security",
+      "key_features": [
+        "Various compute options including GPU virtual machines, containers, and bare metal",
+        "Non-blocking fabric and high-bandwidth networking",
+        "On-demand and long-term commitment (take-or-pay) pricing plans",
+        "Role-based access control, immutable audit logs, and zero-trust security",
+        "Support for notebooks, frameworks, and toolchains familiar to ML teams"
+      ],
+      "tech_stack_or_innovation": "Plans to adopt latest GPUs like NVIDIA Blackwell and Vera Rubin, AMD Helios; reviewing building its own data centers",
+      "target_customer": "Enterprises in India's finance, manufacturing, healthcare, and public sectors, as well as startups and research institutes",
+      "business_model": "Pay-as-you-go hourly GPU compute and contracts based on long-term commitments; customers pay even if they do not use the committed capacity"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "AWS, Azure, GCP (hyperscalers)",
+          "comparison": "Can cross-subsidize GPU via bundled non-GPU workloads; Neysa differentiates with AI-only optimization"
+        },
+        {
+          "name": "CoreWeave, Lambda (global neoclouds)",
+          "comparison": "Focused on US and Europe; limited entry into Indian market; Neysa meets local data residency requirements"
+        },
+        {
+          "comparison": "GPU cloud competitors in India, but Neysa has advantages in scale and Blackstone's financial backing"
+        }
+      ],
+      "key_differentiator": "End-to-end platform specialized for AI workloads, Indian data residency compliance, support from large investors like Blackstone, and predictable revenue from long-term commitments",
+      "moat": "Long-term take-or-pay contracts with customers (4-5 years), ability to secure latest GPUs, and the founders' data center operational experience and network from Netmagic",
+      "competitive_position_summary": "Leading position in Indian AI infrastructure market; perceives hyperscalers as competitors; targets 20,000 GPU expansion within the year"
+    },
+    "trending_reason": {
+      "summary": "Attracted large-scale investment of $1.2B (equity $600M + debt $600M) led by Blackstone and announced IPO plans for late 2027",
+      "catalysts": [
+        "February 2026: $600M equity investment led by Blackstone (valuation $1.4B)",
+        "October 2026: IPO preparations announced along with plans to adopt new GPUs like NVIDIA Vera Rubin and AMD Helios",
+        "Participates in government tenders such as IndiaAI Mission"
+      ],
+      "growth_metrics": "Currently 12,500 GPUs live; targeting over 20,000 by March 2027; revenue undisclosed but customer contracts secured for 12,000 GPUs"
+    },
+    "funding": {
+      "total_raised_note": "Seed/Series A $50M + Blackstone-led Series C equity $600M; additional $600M debt not included",
+      "valuation_estimate": "$1.4B (February 2026)",
+      "latest_round": {
+        "note": "$600M equity investment (part of Blackstone's $600M, co-invested by TVG, TVS Capital, 360 ONE Assets, Nexus Venture Partners); separate $600M debt to be raised"
+      },
+      "funding_history": [
+        {
+          "note": "Z47, Nexus Venture Partners, and NTTVC participated"
+        }
+      ]
+    },
+    "market_outlook": {
+      "market_trend": "Accelerating AI adoption among Indian enterprises, government support via IndiaAI Mission, and rising GPU demand from global companies within India",
+      "growth_potential": "Indian AI infrastructure market expected to grow at CAGR over 30% from 2025 to 2030; Neysa as first-mover plans 20,000 GPU expansion",
+      "risks": [
+        "Hyperscalers' GPU cross-subsidization strategy",
+        "GPU supply chain bottlenecks and export controls on advanced chips",
+        "Risk of customer default on long-term commitments"
+      ],
+      "risk_mitigation": "Revenue visibility via long-term take-or-pay contracts, introduction of customer credit evaluation process, and financial backing from Blackstone"
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      }
+    ],
+    "editor_pick_comment": "With a $600M investment from Blackstone, Neysa has emerged as a game-changer in the Indian AI infrastructure market and is also preparing for an IPO."
+  },
+  "meanwhile-2026": {
+    "tagline": "Bitcoin-only life insurance company",
+    "category": [
+      "Insurance",
+      "Cryptocurrency"
+    ],
+    "headquarters": {
+      "country_ko": "Bermuda"
+    },
+    "founders": [
+      {
+        "role": "CEO, Co-founder",
+        "background": "Former Head of Data at Stripe, former U.S. Treasury innovation lead",
+        "notable_achievement": "Obtained the first Class IILT license from the Bermuda Monetary Authority"
+      },
+      {
+        "role": "Co-founder",
+        "background": "Experience in insurance and fintech",
+        "notable_achievement": "Designed Bitcoin-based insurance products"
+      }
+    ],
+    "product": {
+      "summary": "The world's first licensed life insurance that accepts Bitcoin for premiums and pays death benefits in Bitcoin",
+      "problem_statement": "High-net-worth individuals holding Bitcoin lack regulated financial products to protect assets and pass them to the next generation tax-free",
+      "solution": "Offers Bitcoin-based whole life insurance (BTC Life): a single Bitcoin premium payment provides guaranteed Bitcoin death benefits, with loans up to 90% of the policy's value (no margin calls, no repayment schedule)",
+      "key_features": [
+        "Premium payment: single pay (1-Pay) or 10-year pay (10-Pay) in Bitcoin",
+        "Coverage growth: policy value increases at 2% compound annual growth (in Bitcoin terms)",
+        "Loans: up to 90% of policy value at 3% annual Bitcoin loan rate after one year",
+        "Beneficiaries: individuals, trusts, or corporations can be named",
+        "Tax benefits: loans are not taxable in many jurisdictions"
+      ],
+      "tech_stack_or_innovation": "First licensed life insurer to denominate its balance sheet, reserves, and audited financial statements in Bitcoin",
+      "target_customer": "High-net-worth individuals holding Bitcoin (outside the U.S., in Singapore, Hong Kong, UAE, Switzerland, etc.)",
+      "business_model": "Premium-based revenue (underwriting income), investment returns (Bitcoin holdings), and loan interest income"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Bitcoin Life Insurance (other startups)",
+          "comparison": "Most have not yet obtained formal licenses; Meanwhile is the only insurer with a Class IILT license from the Bermuda BMA"
+        },
+        {
+          "name": "Traditional life insurers (MetLife, Prudential, etc.)",
+          "comparison": "Do not offer Bitcoin products; are fiat-based. Meanwhile uses Bitcoin for premiums, benefits, and reserves"
+        }
+      ],
+      "key_differentiator": "The world's first and only licensed Bitcoin-only life insurer; obtained license after two years in the Bermuda regulator's sandbox",
+      "moat": "Regulatory license (Class IILT), Bitcoin-only insurance infrastructure, institutional custody partnerships, broker network (Lioner, Apeiron Group, etc.)",
+      "competitive_position_summary": "First-mover in Bitcoin insurance, with regulatory barriers making it difficult for competitors to enter"
+    },
+    "trending_reason": {
+      "summary": "Raised an additional $37.5M in October 2026 led by Bain Capital Crypto; growing demand from global high-net-worth individuals is expected to more than double long-term insurance underwriting results year-over-year",
+      "catalysts": [
+        "Launched BTC Life 1-Pay in early 2026 to target overseas markets",
+        "Secured 15 broker partners in Singapore, Hong Kong, UAE, Switzerland, etc.",
+        "Participation of notable investors including Sam Altman increased credibility"
+      ],
+      "growth_metrics": "Assets grew 5.4x in 2025; capital and surplus grew 6.2x; long-term underwriting income expected to more than double year-over-year in 2026",
+      "media_mentions": [
+        null,
+        {
+          "source": "CoinDesk (Korean)",
+          "title": "Bitcoin insurer Meanwhile, backed by Sam Altman, raises $37.5M"
+        },
+        {
+          "source": "Financial Economic Plus",
+          "title": "Meanwhile, with Sam Altman's investment, raises additional $37.5M for Bitcoin life insurance"
+        },
+        {
+          "source": "Meanwhile official press release"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Total amount raised as of October 2026, including previous rounds (Seed in 2022, Series A in 2023, etc.)",
+      "valuation_estimate": "$350M (est.)",
+      "latest_round": {
+        "note": "Led by existing investors; no new investors"
+      },
+      "funding_history": [
+        {
+          "note": "Announced December 2022; led by Bain Capital Crypto; Sam Altman participated"
+        },
+        {
+          "note": "Announced November 2023; led by Bain Capital Crypto; Apollo, NW Mutual, etc. participated"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global life insurance TAM approx. $2.5T (2025); Bitcoin-holding HNWI SAM approx. $20B (est.); Meanwhile target SOM approx. $1B (within 2026)",
+      "market_trend": "Growing Bitcoin adoption, HNWI demand for crypto inheritance, improving regulatory environment",
+      "growth_potential": "Ongoing demand to hold Bitcoin as a real asset due to global debt and inflation concerns; expanding customer base in East Asia, Middle East, and Europe",
+      "risks": [
+        "Reserve risk from Bitcoin price volatility",
+        "Potential regulatory changes (country-level insurance/crypto regulations)",
+        "Possible emergence of similar products from competitors"
+      ],
+      "risk_mitigation": "Bitcoin-denominated reserves and audit framework to mitigate volatility; strengthened cooperation with Bermuda regulators; building patent and license barriers"
+    },
+    "related_links": [
+      {
+        "title": "Meanwhile official website"
+      },
+      {
+        "title": "Stillmark portfolio page"
+      }
+    ],
+    "editor_pick_comment": "As the first licensed insurer to use Bitcoin as the base asset for premiums and benefits, Meanwhile directly targets HNWIs' crypto inheritance needs, which is intriguing."
+  },
+  "maven-robotics-2026": {
+    "tagline": "World's first industrial general-purpose robotics platform",
+    "category": [
+      "Industrial robots",
+      "Logistics automation"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Over 20 years of experience in autonomous driving and robotics. Formerly in Apple's Special Projects Group (autonomous vehicles).",
+        "notable_achievement": "Led over 100 engineers in Apple's autonomous vehicle project"
+      },
+      {
+        "background": "Experience in scaling businesses in the private equity industry.",
+        "notable_achievement": "Experience growing multiple companies in global markets"
+      }
+    ],
+    "team_highlights": "Engineers and autonomous driving experts from Apple, Tesla, Rivian, Cruise, Zoox, Ford, Archer Aviation with over 200 years of combined experience",
+    "product": {
+      "summary": "Maven Robotics designs and builds general-purpose industrial robot systems for logistics and manufacturing tasks. Integrating proprietary hardware and AI software, it automates challenging tasks like mixed palletizing and tote handling, achieving over 99% uptime.",
+      "problem_statement": "Mixed palletizing, tote handling, and similar tasks in logistics and manufacturing are mostly done manually. Existing robots are specialized for single tasks, resulting in low flexibility and high cost.",
+      "solution": "Applies a 4-layer software stack to a robot with an omnidirectional wheel base, telescopic column, two 7-DOF arms, and modular end-effectors, providing reliable automation in industrial settings.",
+      "key_features": [
+        "Omnidirectional wheel base (can move up to 16 km/h)",
+        "Two 7-DOF robot arms (lift up to 30 kg)",
+        "Modular end-effectors (e.g., vacuum suction)",
+        "4-layer software stack (robot, fleet, factory, network)",
+        "Over 99% uptime, 16 hours of operation per day",
+        "Continuous learning and redeployment pipeline based on real data"
+      ],
+      "tech_stack_or_innovation": "Applied an autonomous vehicle data-driven learning pipeline to industrial robots, building a loop for rapid collection, retraining, and redeployment of field data",
+      "target_customer": "Large enterprises in logistics and manufacturing (e.g., Fortune 250 consumer goods companies)",
+      "business_model": "Robot hardware sales and operations services (exact model undisclosed)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Agility focuses on bipedal robots, but Maven claims its wheeled base is more practical in industrial settings, differentiating on ROI."
+        }
+      ],
+      "key_differentiator": "A general-purpose system designed from first principles to meet stringent industrial requirements, leveraging autonomous vehicle engineering experience for AI and data pipelines",
+      "moat": "Outstanding team (from Apple, Tesla, etc.), enterprise customer acquisition and real-world operational experience, continuous data collection and model update loop",
+      "competitive_position_summary": "Holds a leading position in industrial general-purpose robotics through reliability and a task-by-task expansion strategy"
+    },
+    "trending_reason": {
+      "summary": "Raised a $100M Series A in September 2026 and exited stealth mode, drawing attention with news of enterprise customer acquisition",
+      "catalysts": [
+        "Large Series A investment ($100M)",
+        "Successful deployment with a Fortune 250 consumer goods company",
+        "Gathering of talent from autonomous vehicle industry"
+      ],
+      "growth_metrics": "Cumulative autonomous operation target: 100K hours by end of 2026, 1M hours by end of 2027",
+      "media_mentions": [
+        null,
+        null,
+        null,
+        {
+          "source": "Robot Newspaper",
+          "title": "US Maven Robotics secures $100M for general-purpose logistics robot development"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "This is the only publicly disclosed round and includes only Series A",
+      "valuation_estimate": "Undisclosed"
+    },
+    "market_outlook": {
+      "tam_sam_som": "Approx. $80B TAM for mixed palletizing and tote handling alone, expanding to over $1T market when including more complex material handling and assembly",
+      "market_trend": "Increasing demand for automation in logistics and manufacturing, AI and robotics technology advances accelerating adoption of general-purpose robots",
+      "growth_potential": "With initial customer acquisition and 99% uptime proven, high potential for expansion into additional tasks and customers",
+      "risks": [
+        "Intensifying competition (Agility, existing industrial robot companies)",
+        "Technical difficulty in generalizing to new task domains",
+        "Risks of large-scale production and operational scaling"
+      ],
+      "risk_mitigation": "Incremental approach solving tasks one by one, technical expertise of autonomous vehicle team, long-term partnerships with large enterprises"
+    },
+    "related_links": [
+      {
+        "title": "Maven Robotics Official Website"
+      },
+      {
+        "title": "GlobeNewswire Press Release"
+      },
+      {
+        "title": "RoboStrategy Investment Blog"
+      },
+      {
+        "title": "TechCrunch Article"
+      },
+      {
+        "title": "Robot Newspaper Article (Korean)"
+      }
+    ],
+    "editor_pick_comment": "Impressive that they applied data pipelines learned from autonomous vehicles to industrial settings, achieving 99% uptime and quickly winning enterprise customers."
+  },
+  "anacardio-2026": {
+    "tagline": "A clinical-stage Swedish biotech developing heart failure treatments.",
+    "category": [
+      "Drug Development",
+      "Cardiovascular Disease"
+    ],
+    "headquarters": {
+      "country_ko": "Sweden"
+    },
+    "founders": [
+      {
+        "role": "Founder and Scientific Advisor",
+        "background": "Professor of Medicine at Karolinska Institutet, Head of Heart Failure Research at Karolinska University Hospital",
+        "notable_achievement": "Authored over 350 papers, H-index 69"
+      },
+      {
+        "background": "Previously at AstraZeneca and Sobi (VP), Ph.D. in Biochemistry from Karolinska Institutet, MBA from Stockholm University",
+        "notable_achievement": "Former Vice President of External Innovation and Business Development at Sobi"
+      }
+    ],
+    "product": {
+      "summary": "AC01 is an oral ghrelin receptor agonist that improves cardiac contractility in heart failure patients through a calcium-sensitizing mechanism.",
+      "problem_statement": "Existing heart failure treatments do not directly enhance contractility, and intravenous inotropes carry risks of arrhythmia, ischemia, and increased mortality, limiting their use to short-term settings.",
+      "solution": "AC01 activates the ghrelin signaling pathway to induce calcium sensitization in cardiac cells, safely increasing heart contractility.",
+      "key_features": [
+        "Oral administration, twice daily",
+        "Calcium-sensitizing mechanism offers superior safety over conventional inotropes",
+        "Phase 1b/2a showed LVEF improvement of 4.8 percentage points (4 weeks) – comparable or superior to existing treatments"
+      ],
+      "tech_stack_or_innovation": "Ghrelin receptor agonist-based, first-in-class oral inotrope with calcium-sensitizing mechanism",
+      "target_customer": "Patients with chronic progressive heart failure (HFrEF) who are unresponsive or intolerant to existing therapies",
+      "business_model": "Biotech-pharma licensing and partnerships; in-house clinical development followed by commercialization"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Cardiac myosin activator; completed Phase 3 but received FDA CRL; failed to demonstrate reduction in cardiovascular mortality"
+        },
+        {
+          "comparison": "ARNI class; current standard of care but does not directly improve contractility"
+        },
+        {
+          "comparison": "SGLT2 inhibitors, reduce heart failure hospitalization rates – mechanism differs from contractility-improving approach"
+        }
+      ],
+      "key_differentiator": "Oral first-in-class ghrelin receptor agonist; favorable safety profile; no increase in heart rate",
+      "moat": "Patent protection; proof-of-concept data published in The Lancet; FDA/EMA clinical trial approval obtained",
+      "competitive_position_summary": "Differentiated mechanism addressing safety issues of existing inotropes; clinical success is critical given Cytokinetics' failure"
+    },
+    "trending_reason": {
+      "catalysts": [
+        "Large Series B co-led by Novo Holdings and Ljungström Family Office",
+        "Publication in The Lancet establishing scientific credibility",
+        "Phase 2b trial GOAL-HF2 expects first patient enrollment in Q4 2026"
+      ],
+      "growth_metrics": "Phase 1b/2a: AC01 3mg group showed LVEF improvement of 4.8 percentage points (vs. 1.6 for control); 58 patients across 14 sites",
+      "summary": "Series B raise of €62.5M (approx. KRW 82.5B) in September 2026, progress to Phase 2b, and positive clinical data published in The Lancet"
+    },
+    "funding": {
+      "total_raised_note": "Series B single round amount; prior round amounts undisclosed",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "€62.5M; as of September 30, 2026"
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global heart failure market approx. $50B (2025 est.); about one-third of progressive HFrEF patients are refractory to existing treatments",
+      "growth_potential": "A safe oral inotrope could capture a high-unmet need area; if Phase 2b succeeds, Phase 3 readiness by 2028",
+      "risks": [
+        "Cytokinetics' omecamtiv mecarbil failure raises regulatory and market concerns for the inotrope class",
+        "Potential failure to replicate efficacy and safety in Phase 2b",
+        "Limited resources compared to large pharma companies",
+        "Strong position of existing treatments (Entresto, SGLT2i) in the heart failure market"
+      ],
+      "risk_mitigation": "Proof-of-concept data published in The Lancet provides scientific evidence; trial design incorporates FDA/EMA feedback; strong investor consortium",
+      "market_trend": "ARNI and SGLT2 inhibitors have expanded standard therapy, but no treatment directly targeting contractility improvement exists"
+    },
+    "related_links": [
+      {
+        "title": "Anacardio Official Website"
+      },
+      {
+        "title": "Industrifonden Participation News"
+      },
+      {
+        "title": "Preqin Profile"
+      }
+    ],
+    "editor_pick_comment": "A first-in-class oral drug that directly increases cardiac contractility while solving safety issues; foundational research at Sweden's Karolinska Institutet is advancing into Phase 2b."
+  },
+  "incerasolution-2026": {
+    "tagline": "A company localizing ultra-precision laser steering mirrors (Fast Steering Mirrors) for space optical communications.",
+    "category": [
+      "Space Optical Communications",
+      "Precision Opto-Mechanical Systems",
+      "Defense"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "From the Institute for Basic Science (IBS)",
+        "notable_achievement": "Founded the company in 2023 based on research experience at IBS."
+      },
+      {
+        "background": "From the Institute for Basic Science (IBS)",
+        "notable_achievement": "Co-founded with CEO Kwon Young-kwan; over 10 years of experience in precision motion control technology."
+      }
+    ],
+    "team_highlights": "A total of over 7 research personnel, including 4 Ph.D.-level researchers, with over 10 years of experience in precision motion control.",
+    "product": {
+      "summary": "Develops and manufactures ultra-precision, high-speed Fast Steering Mirrors (FSM) and optical acquisition, pointing, and tracking (PAT) platforms needed for laser communications between satellites, satellite-to-ground, and defense systems such as laser weapons.",
+      "problem_statement": "Laser communication between low-Earth orbit satellites requires precise targeting of a small receiver thousands of kilometers away. The FSM, a core component that maintains a stable beam despite vibrations, thermal deformation, and satellite attitude changes, has been entirely dependent on foreign companies such as Germany's PI. There is an urgent need for high-reliability, high-shock-resistant FSMs tailored to domestic satellite and defense demand.",
+      "solution": "Developed both piezo and voice coil FSMs in-house. The voice coil type achieves a range of ±18 mrad (max), while the piezo type achieves a control accuracy of 0.6 µrad and a resonance frequency of approximately 1,900 Hz. Completed development of a space-grade FSM in December 2025, passed ground-based space environment tests, and is currently undergoing actual space environment verification aboard the 5th launch of Nuri in October 2026.",
+      "key_features": [
+        "Voice coil FSM: 25mm mirror diameter, maximum ±18 mrad deflection range, 10 µrad control accuracy",
+        "Piezo FSM: 25mm diameter, 50g weight, 0.6 µrad control accuracy",
+        "KQS 9100 (Aerospace and Defense Quality Management System) certification obtained",
+        "In-house space environment testing facilities (vibration, thermal vacuum) established",
+        "Expanding product lineup to include Laser Steering Systems (LCT) and PAT modules"
+      ],
+      "tech_stack_or_innovation": "The only domestic FSM company with dual technology platforms: piezoelectric (Piezo) and electromagnetic (Voice Coil) actuation. Core technologies include precision actuation and control algorithms and optimization for resistance to space environments (vibration, radiation, temperature changes). Currently developing a PAT system through a Scale-Up TIPS R&D project (total KRW 1.2B) awarded in 2025.",
+      "target_customer": "Domestic and international space and defense companies (e.g., Hanwha Systems), national research institutions (KARI, KASA), satellite communication operators (LEO constellations), and laser weapon system developers.",
+      "business_model": "B2B supply of FSM components and PAT subsystems. Revenue generated through custom design and manufacturing per customer specifications. Aims to enter overseas supply chains after establishing mass production systems."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Germany-based global FSM market leader. Has a track record (space heritage) of embedding FSMs in numerous satellites. Incerasolution is challenging with its own technology for the first time in South Korea."
+        },
+        {
+          "comparison": "France-based FSM and adaptive optics specialist. Has a MEMS-based FSM lineup. Incerasolution responds with its dual piezo and voice coil platform."
+        },
+        {
+          "comparison": "Supplies FSMs for research and industrial use. Stronger in the research and laboratory market than in space-grade applications."
+        },
+        {
+          "comparison": "Specialized in MEMS-type FSMs. Advantages include small size and low cost, but limited space certification track record."
+        },
+        {
+          "comparison": "Major U.S. defense conglomerate. Produces satellite optical communication terminals and FSMs in-house. Has overwhelming advantages in scale and capital compared to Incerasolution."
+        }
+      ],
+      "key_differentiator": "The only domestic company independently developing and manufacturing FSMs. Covers both piezo and voice coil methods with a dual technology platform. Has a track record of supplying actual domestic defense customers such as Hanwha Systems. Securing space heritage through the 5th Nuri launch.",
+      "moat": "High barriers to entry for space and defense FSMs (shock resistance, radiation resistance, temperature tolerance, military security, quality certification). Incerasolution has obtained KQS 9100 certification, been selected for consecutive government projects, and secured anchor domestic customers like Hanwha Systems, enabling initial market entry. The government's space component localization policy provides strong backing.",
+      "competitive_position_summary": "The global market is dominated by Germany's PI, France's Alpao, and the U.S.'s L3Harris, but in the domestic space and defense market, Incerasolution is the only native supplier. With the government's space component localization policy and explosive growth in the LEO satellite communication market, the strategy is to build a domestic base and then expand overseas. Lacks scale and space heritage compared to global top-tier companies, but is targeting a niche with verification through the Korean launch vehicle (Nuri) and competitive pricing and customization."
+    },
+    "trending_reason": {
+      "summary": "Achieved two major milestones simultaneously in September-October 2026: attracting a KRW 13.5B (approx. $10.3M) Series A investment and successfully launching an FSM on the 5th Nuri rocket in October 2026. Also initiated a joint demonstration of LEO satellite optical communication through an MOU with Innospace. Gaining attention amid a macro trend where the space optical communication market is growing 25–30% annually.",
+      "catalysts": [
+        "KRW 13.5B Series A investment in September 2026 (SV Investment, Shinhan Venture Investment, etc.)",
+        "FSM onboard the 5th Nuri launch in October 2026, securing space heritage",
+        "MOU with Innospace in October 2026, plan to demonstrate LCT (Laser Communication Terminal) in 2027",
+        "Selected for Scale-Up TIPS R&D (KRW 1.2B, 3 years); PAT system development initiated",
+        "Contract for 8 FSMs for Hanwha Systems' LEO satellite communication (KRW 400M) and delivery completed"
+      ],
+      "growth_metrics": "Cumulative investment attracted approx. KRW 17.4B (including seed). FSM deliveries to Hanwha Systems (2024–2025). Entered space verification phase through 5th Nuri launch. Currently conducting 2 R&D projects (total KRW 590M).",
+      "media_mentions": [
+        {
+          "title": "Incerasolution attracts KRW 13.5B Series A investment… targets precision opto-mechanical market for space optical communications"
+        },
+        {
+          "source": "Unicorn Factory",
+          "title": "\"Competitiveness in the LEO era lies in optical communication\"… Innospace and Incerasolution join forces"
+        },
+        {
+          "title": "Incerasolution attracts KRW 3.3B Pre-Series A investment"
+        },
+        {
+          "title": "[Startup Analysis] Incerasolution – FSM that targets lasers for space optical communications"
+        },
+        {
+          "source": "Jungdo Ilbo",
+          "title": "Complete localization of core space and defense component FSM succeeds"
+        },
+        {
+          "source": "Global Economic Times",
+          "title": "Incerasolution, which attracted KRW 13.5B investment, rides Nuri into space"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Approx. KRW 17.4B",
+      "total_raised_note": "Series A (KRW 13.5B) + Pre-Series A Bridge (KRW 300M) + Pre-Series A (KRW 3.3B) + Seed. Cumulative based on composite data from multiple sources.",
+      "valuation_estimate": "$45M–$50M (est.)",
+      "latest_round": {
+        "amount": "KRW 13.5B",
+        "note": "Converted to $10.3M by Fundz and $11M by Dealroom. Based on an exchange rate of approx. 1 USD = 1,350 KRW."
+      },
+      "funding_history": [
+        {
+          "amount": "Approx. KRW 350M",
+          "note": "$252K based on Dealroom. JB Ventures participated."
+        },
+        {
+          "amount": "KRW 3.3B",
+          "note": "Existing seed investors and institutions participated.",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "amount": "KRW 300M",
+          "note": "Listed in the company's official timeline. Exact announcement date unverified.",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Space-based laser communication market: approx. $2.8B in 2026, $17.5B in 2034 (CAGR 25.7%). Optical satellite communication market: approx. $2.69B in 2025, $7.29B in 2034 (CAGR 11.7%). The FSM component market is a subset of this; optical components and subsystems are estimated to account for approximately 20–30% of the overall optical satellite communication market.",
+      "market_trend": "With the full-scale deployment of LEO satellite constellations (Starlink, Kuiper, etc.), demand for inter-satellite and satellite-to-ground optical communication is exploding. Adoption of optical communication is expanding due to advantages over RF: higher bandwidth, lower latency, power efficiency, and no need for frequency licenses. Government space localization policies in various countries present opportunities for domestic players.",
+      "growth_potential": "The domestic FSM market is in an early stage, and Incerasolution is the only local supplier. The Hanwha Systems contract, Nuri launch, and LCT development are significant milestones. Successful entry into overseas markets could lead to tens of times growth. However, global verification (space heritage) and mass production capability are key.",
+      "risks": [
+        "Disadvantaged in scale and reliability data (space heritage) compared to large foreign competitors (PI, L3Harris, etc.)",
+        "Long lead time to secure customers due to the nature of the space industry",
+        "If the 5th Nuri payload fails verification, brand damage and additional verification would be needed",
+        "Slower-than-expected growth of the LEO satellite communication market or changes in government budgets",
+        "Rapid development of alternative technologies such as MEMS-based FSMs"
+      ],
+      "risk_mitigation": "Securing objective space heritage through Nuri demonstration. Demonstrating quality systems with KQS 9100 certification. Funding R&D through government projects like Scale-Up TIPS. Stabilizing initial revenue by securing a base with domestic defense customer Hanwha Systems. Expanding product range to LCT and PAT to reduce reliance on a single component."
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "beSUCCESS Investment News (English)"
+      },
+      {
+        "title": "Dealroom Profile"
+      },
+      {
+        "title": "Fundz Profile"
+      },
+      {
+        "title": "doinghun.com Analysis Article"
+      },
+      {
+        "title": "CB Insights Profile"
+      },
+      {
+        "title": "Official Timeline Page"
+      }
+    ],
+    "editor_pick_comment": "Supplying FSMs to Hanwha Systems and sending a payload on the 5th Nuri launch is proof that localization has advanced beyond concept to real demand. Now, it only needs to be confirmed that it works properly in space."
+  },
+  "midstream-health-2026": {
+    "tagline": "AI autonomous operations platform that prevents hospital financial leakage",
+    "category": [
+      "Healthcare AI",
+      "Medical financial management"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Former healthcare operations professional. Deep understanding of health system financial issues.",
+        "notable_achievement": "Gained diverse experience in the healthcare field before co-founding."
+      },
+      {
+        "background": "Experience in technology and healthcare. Focuses on hospital financial recovery.",
+        "notable_achievement": "Played a key role in establishing Midstream's business direction."
+      }
+    ],
+    "team_highlights": "Leadership includes Omar Nagji (CCO), Anisha Mocherla (Head of Product), Aneesh Kulkarni (VP of Engineering), Kelsey Mellard (Chief Customer Officer), and others.",
+    "product": {
+      "summary": "AI-based autonomous financial operations platform for health systems. Connects contract, billing, procurement, and payment data, and domain-specific AI agents detect, recover, and prevent margin leakage.",
+      "problem_statement": "Due to multi-layered contract, rebate, and payment structures, U.S. health systems experience large gaps between negotiated prices and actual amounts collected; existing tools only provide insights without enabling execution. Millions of dollars in margin disappear annually.",
+      "solution": "An atomic-level financial model and six types of AI agents (Recovery, Pricing, Optimizer, Negotiator, Reporter, Pulse) verify transactions in real time, automatically identifying, recovering, and preventing billing omissions, pricing errors, unclaimed rebates, etc.",
+      "key_features": [
+        "Real-time verification of the entire contract-order-payment process",
+        "AI agents automatically create, submit, and track claims for underpayments",
+        "Custom modules for three areas: supply chain, managed care, and pharmacy",
+        "Provides ROI of 5x or more on recovered amounts",
+        "All actions traceable to source data"
+      ],
+      "tech_stack_or_innovation": "Domain-trained AI agents automatically compare contract terms with real-time transactions, performing 'execution' rather than just 'insight', unlike traditional analytical tools.",
+      "target_customer": "Large U.S. health systems and hospital networks (CommonSpirit Health, Mount Sinai, Houston Methodist, Keck Medicine of USC, Fairview Health Services, etc., covering 250+ hospitals with annual operating expenses over $100B).",
+      "business_model": "SaaS-based platform subscription fee + a percentage fee on recovered amounts (est.)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Primarily focused on revenue cycle management (RCM); Midstream covers cost, rebates, and the entire supply chain, automating execution with AI."
+        },
+        {
+          "comparison": "Data analytics platforms with limited financial execution capabilities."
+        },
+        {
+          "comparison": "GPO-centric support for procurement cost negotiation, but lacks real-time automated recovery."
+        }
+      ],
+      "key_differentiator": "Unlike traditional analytical tools, AI agents perform real-time automatic verification, recovery, and prevention of contracts, billing, and payments, focusing on 'execution' rather than 'insight'.",
+      "moat": "Exclusive datasets integrated with health systems, domain-specific AI agents, and network effects from large-scale customer operations experience.",
+      "competitive_position_summary": "Leading position in health system financial automation. Secured customers with over $100B in operating expenses, targeting $100M in customer savings. Invested by top VCs such as a16z."
+    },
+    "trending_reason": {
+      "summary": "Announced $20M Series A on October 29, 2026. Amid the financial crisis in U.S. health systems (110 rural hospital closures, 720 more at risk), the AI solution promising real margin recovery attracts attention. Targeting $100M in customer savings this year.",
+      "catalysts": [
+        "Deepening health system financial sustainability crisis",
+        "Maturation of AI agent technology enabling real-time automated recovery",
+        "Adoption and ROI proof by major health systems (CommonSpirit, Mount Sinai, etc.)",
+        "Participation of top VCs like a16z and Valtruis"
+      ],
+      "growth_metrics": "Customer annual operating expenses $100B+, 250+ hospitals, 2026 customer savings target $100M, 5x ROI, identified over 1,500 financial recovery opportunities."
+    },
+    "funding": {
+      "total_raised_note": "Includes Seed $6.68M + Series A $20M (October 2026) + additional $2.52M (Series A closing, per PitchBook).",
+      "valuation_estimate": "Undisclosed (est. $80M–$120M)",
+      "funding_history": [
+        {
+          "note": "Closed December 22, 2023; additional $5.8M (?) in 2024? Possible duplicate notation in PitchBook for Series A.",
+          "lead_investor": "Not specified"
+        },
+        {
+          "note": "Announced October 29, 2026, lead Valtruis. Total $29.2M achieved."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: U.S. healthcare financial management market (hospital operating expenses $1T+), SAM: Supply chain, billing, rebate optimization market (tens of billions of dollars), SOM: Annual savings target of $100M.",
+      "market_trend": "Deepening financial crisis in health systems, surging demand for cost reduction via AI and automation. Increasing regulatory pressure on profitability.",
+      "growth_potential": "Based on initial 250+ hospitals and $100B in operating expenses, potential to expand to all U.S. health systems (6,000+ hospitals). Expected annual growth of over 100%.",
+      "risks": [
+        "Burden of healthcare data regulation compliance (HIPAA, etc.)",
+        "Intensifying competition with existing RCM and GPO companies",
+        "Difficulty of IT integration at customer sites",
+        "Accuracy and bias issues of AI models"
+      ],
+      "risk_mitigation": "Accumulated regulatory and integration experience through partnerships with major health systems, transparent data processing and auditability, continuous AI learning improvement."
+    },
+    "related_links": [
+      {
+        "title": "Midstream Health Official Website"
+      },
+      {
+        "title": "Midstream Health Introduction Page"
+      }
+    ],
+    "editor_pick_comment": "Midstream Health offers a practical solution where AI agents directly recover and prevent the structural problem of U.S. hospitals not receiving the money they negotiated."
+  },
+  "anaconda-biomed-2026": {
+    "tagline": "Funnel-shaped thrombectomy catheter technology for stroke treatment.",
+    "category": [
+      "Medical Devices",
+      "Cerebrovascular Intervention"
+    ],
+    "headquarters": {
+      "country_ko": "Spain"
+    },
+    "founders": [
+      {
+        "role": "Co-founder",
+        "background": "Interventional neurologist at Vall d'Hebron University Hospital, principal investigator of the VHIR stroke research group.",
+        "notable_achievement": "Clinical research leader in cerebrovascular intervention."
+      },
+      {
+        "background": "PhD in organic chemistry, over 15 years of experience in medical device materials research.",
+        "notable_achievement": "Developed proprietary funnel catheter technology."
+      }
+    ],
+    "product": {
+      "summary": "The ANA Funnel Catheter is a self-expanding funnel-shaped catheter that captures and removes clots and prevents embolization in acute ischemic stroke.",
+      "problem_statement": "Existing thrombectomy procedures often fragment clots, which then migrate to distal vessels (embolization), leading to low complete recanalization rates and poor patient outcomes.",
+      "solution": "The funnel structure temporarily blocks blood flow and encases the clot proximally, allowing aspiration and removal without fragmentation.",
+      "key_features": [
+        "Self-expanding nitinol braid with silicone coating to restrict blood flow.",
+        "High aspiration efficiency.",
+        "Controlled flow arrest.",
+        "Minimized embolization risk.",
+        "Secured clot collection space."
+      ],
+      "tech_stack_or_innovation": "Funnel platform technology combining flow arrest and flow reversal.",
+      "target_customer": "Neurologists, neurosurgeons, and hospitals performing cerebrovascular intervention procedures.",
+      "business_model": "Sales of single-use catheters and ancillary devices (stent retrievers, sheaths, guidewires)."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Existing stent retriever-centric approach; no funnel technology."
+        },
+        {
+          "comparison": "Market-leading product but lacks embolization prevention."
+        },
+        {
+          "comparison": "Has a portfolio of aspiration catheters; not a funnel structure."
+        }
+      ],
+      "key_differentiator": "Enhances complete recanalization rates by removing clots without fragmentation via flow arrest and reversal.",
+      "moat": "Patented funnel structure design; ongoing ATHENA clinical trial with 327 patients; nearing FDA/EMA approval.",
+      "competitive_position_summary": "Pre-commercialization, but early clinical data shows improved complete recanalization; market entry expected after 2027 approval."
+    },
+    "trending_reason": {
+      "summary": "Closed a $56M (approx. €49M) Series C in September 2026, led by Omega Funds, accelerating completion of the ATHENA trial and FDA/EMA approvals.",
+      "catalysts": [
+        "$56M (€49M) funding close (2026-09-23)",
+        "ATHENA pivotal IDE trial (327 patients) ongoing, targeting completion in first half of 2027.",
+        "ANA5 CE mark obtained; preparing for US FDA approval."
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Based on the $56M round in September 2026; some reports list it as €49M; when combined with previous rounds, approximately €100M (per company).",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "notable_investors": [
+          "FOCO (managed by COFIDES)"
+        ]
+      },
+      "funding_history": [
+        {
+          "note": "Some reports list it as €49M."
+        }
+      ]
+    },
+    "market_outlook": {
+      "market_trend": "Increasing use of mechanical thrombectomy for ischemic stroke and growing demand for improved embolic complication management.",
+      "growth_potential": "Entry into European and US markets after CE marking and FDA approval; potential expansion into carotid artery interventions.",
+      "risks": [
+        "Potential failure of the ATHENA trial.",
+        "Market dominance by large competitors (Stryker, Medtronic).",
+        "Regulatory approval delays."
+      ],
+      "risk_mitigation": "Already obtained CE mark (ANA5); ongoing 327-patient trial; core patent protection."
+    },
+    "related_links": [
+      {
+        "title": "Anaconda Biomed Official Site"
+      },
+      {
+        "title": "Dealroom Profile"
+      }
+    ],
+    "editor_pick_comment": "The attempt to solve the challenge of clot fragmentation and embolization in stroke treatment with a funnel structure; the results from the large-scale clinical trial are noteworthy."
+  },
+  "wirobotics-2026": {
+    "tagline": "Connecting wearables and humanoids through human motion data",
+    "category": [
+      "Wearable Robots",
+      "Humanoid Robots",
+      "Walking Assist Robots"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "background": "Former member of Samsung Electronics' robot development team. Worked as a principal researcher at Samsung Advanced Institute of Technology (SAIT) for over 8 years, then at Samsung Research. Left in 2021 to co-found WIRobotics.",
+        "notable_achievement": "Experience developing surgical robots, humanoid prototypes, and collaborative robots during Samsung tenure"
+      },
+      {
+        "background": "11 years at Samsung Electronics' robot development team, MIT visiting scholar before founding. Concurrent professor at Korea University of Technology and Education (KOREATECH) since 2014.",
+        "notable_achievement": "Led development of the WIM single-actuator system, spearheaded establishment of Robot Innovation Hub on KOREATECH campus"
+      }
+    ],
+    "team_highlights": "Co-founded by four engineers from Samsung Electronics' robot development team. Grew from 29 employees in 2023 to 91 in 2026 (3x+). Only humanoid company selected for the NVIDIA-AWS Physical AI Fellowship (2026).",
+    "product": {
+      "summary": "Develops WIM, an ultra-lightweight (1.6kg) walking assist wearable robot, and ALLEX, an upper-body humanoid robot based on back-drivable technology. A data-hardware virtuous cycle where real human gait data accumulated from WIM is used for ALLEX's control algorithms.",
+      "problem_statement": "Existing wearable robots are heavy (3-4kg+), making daily wear difficult, and humanoids rely on expensive external force/torque sensors, resulting in high manufacturing costs and limited safe physical interaction with humans.",
+      "solution": "WIM uses the world's first single-motor (single-actuator) system to achieve 1.6kg weight, wearable in 30 seconds. ALLEX uses back-drivable actuators and proprietary motor control algorithms (integrated position, force, and stiffness control) to achieve full-body force sensing (100gf level) without external sensors, enabling a compliant humanoid.",
+      "key_features": [
+        "WIM: 1.6kg ultra-lightweight, single actuator, 20% walking energy reduction, 6 modes (assist/resist/uphill/downhill/slow/hiking), AI gait analysis app, IP54 dust/water resistance",
+        "WIM: Over 3,000 units sold cumulatively. 78% of users showed improved physical function after 4 weeks (experimental group, average age 70, walking age dropped to 54)",
+        "ALLEX: 48 degrees of freedom (15 DoF per hand), 100gf finger force sensing (sensorless), 40N fingertip force, 30kg+ hook grip strength, 0.3mm or less repeatability",
+        "ALLEX: Upper body approx. 5kg lightweight structure, 3kg+ one-hand payload (20kg-class collaborative robot level), EtherCAT-based real-time whole-body control",
+        "WIM Premium: Subscription-based software feature updates, customized assistive force adjustment for gait patterns"
+      ],
+      "tech_stack_or_innovation": "Core technology is back-drivability — the motor's natural yielding to external forces. WIM's single actuator drives both sides simultaneously with a symmetrical assist frame. ALLEX combines low-friction, high-load actuators with gravity-compensating waist mechanism to detect subtle forces of 100gf. Integrated with AWS and NVIDIA Isaac simulation platforms.",
+      "target_customer": "B2C: Seniors, gait rehabilitation patients, hikers, fitness enthusiasts. B2B: Logistics and manufacturing workers (industrial WIBS). B2B research institutions: AI companies and university labs (ALLEX research platform). B2B manufacturing: Global automakers (production line PoC).",
+      "business_model": "WIM single unit sales (approx. KRW 3.2M) + Coway rental channel (October 2026) + WIM Premium subscription for software updates. ALLEX sold as a research platform (est. ~$180,000) → expanding to modular sales (arm, hand, body separately) after mass production in 2027. Mobile ALLEX (wheeled version) planned for 2026 release."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Dali Technology",
+          "comparison": "Owns the domestic wearable walking assist robot 'Welfare'. Compared to WIM, heavier (3kg+) and uses dual actuators; lags behind WIRobotics in scale and overseas expansion speed."
+        },
+        {
+          "comparison": "Germany-based industrial powersuit/wearable company. Focused on logistics and manufacturing. WIM specializes in personal daily walking, limiting market overlap."
+        },
+        {
+          "comparison": "Chinese humanoid and quadruped robot company. Price-competitive with low-cost humanoids like G1. ALLEX focuses on high-precision manipulation and safe interaction, differentiating through technology rather than price."
+        },
+        {
+          "comparison": "South Korean humanoid/collaborative robot company (Samsung Electronics holds a stake). RB-Y1 humanoid. Differentiates from ALLEX in force control and compliance. Rainbow is a publicly listed company with size advantage."
+        }
+      ],
+      "key_differentiator": "A 'data virtuous cycle' structure: three years of accumulated real-world gait data from over 3,000 WIM users trains the control algorithms for the humanoid ALLEX. Back-drivable technology eliminates the need for external force sensors, simultaneously ensuring cost competitiveness and safety.",
+      "moat": "① Real user gait data (3 years, 3,000+ users) — impossible for competitors to replicate short-term ② Engineering organization with 11+ years of R&D experience from Samsung's robot team ③ Robot Innovation Hub on KOREATECH campus (R&D and mass production infrastructure) ④ NVIDIA-AWS Physical AI Fellowship selection (only humanoid company) ⑤ PoC collaboration network with global automakers",
+      "competitive_position_summary": "Clear leader in the domestic wearable robot market. In the humanoid space, Rainbow Robotics (listed) and China's Unitree and Fourier Intelligence lead in volume and price, but ALLEX differentiates with high precision, safe interaction, and data-driven control. Medium- to long-term positioning as a 'humanoid with data' provides competitive edge."
+    },
+    "trending_reason": {
+      "summary": "In May 2026, raised a KRW 95B (approx. $68M) Series B led by JB Investment. In September, partnered with Coway to launch a wearable robot rental service. In October, preparing for ALLEX research platform shipments and collaborating with global research institutions. Selected for the NVIDIA-AWS Physical AI Fellowship, emerging as a leading K-humanoid company.",
+      "catalysts": [
+        "May 2026: Series B of KRW 95B (approx. $68M) — led by JB Investment, with all Series A investors participating",
+        "September 2026: Signed rental agreement with Coway for walking assist wearable robot (dedicated rental product targeting active seniors)",
+        "March 2026: Selected for NVIDIA-AWS Physical AI Fellowship (2nd cohort, only humanoid company among 9; cloud credits and Isaac simulation platform support)",
+        "August 2025: Unveiled ALLEX upper body → planned research platform shipments in H2 2026",
+        "2026: Establishing North American subsidiary in California, discussing production line PoC with global automakers"
+      ],
+      "growth_metrics": "Revenue: KRW 0.56B (2023) → KRW 1.3B (2024, 2.3x) → KRW 2.79B (2025, 2.1x). Q1 2026 revenue exceeded full-year 2024 revenue. WIM cumulative sales exceeded 3,000 units. Employees: 29 (2023) → 91 (2026, 3.1x).",
+      "media_mentions": [
+        null,
+        {
+          "source": "Hankyung",
+          "title": "WIRobotics completes Series B investment of approx. KRW 100B"
+        },
+        {
+          "source": "MoneyToday",
+          "title": "\"Made to follow human movement\"… WIRobotics attracts Series B investment of KRW 100B"
+        },
+        {
+          "source": "Coway Newsroom",
+          "title": "Coway unveils new product 'Walking Assist Wearable Robot'"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Approx. KRW 108B",
+      "valuation_estimate": "Approx. KRW 300B-400B (est.)",
+      "latest_round": {
+        "amount": "KRW 95B",
+        "note": "PRNewswire: approx. $68M. Some media report 'approx. KRW 100B'. Reported by Hankyung, MoneyToday, etc.",
+        "lead_investor": "JB Investment",
+        "notable_investors": [
+          "Intervest",
+          "Hana Ventures",
+          "Smilegate Investment",
+          null,
+          "NH Investment & Securities",
+          "Company K Partners",
+          "GU Equity Partners",
+          "FuturePlay"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Approx. KRW 13B",
+          "note": "Based on multiple domestic databases including The VC. Led by Intervest, with participation from GU Equity Partners, JB Investment, Company K Partners, Hana Ventures, FuturePlay.",
+          "lead_investor": "Intervest"
+        }
+      ],
+      "total_raised_note": "Total of Series A KRW 13B (March 2024) and Series B KRW 95B (May 2026). Based on the PRN report, listed as $68M (KRW 95B). Additional investors such as KODIT and Navion may have also participated, but this is unconfirmed."
+    },
+    "market_outlook": {
+      "tam_sam_som": "Wearable robot market: $1.6B (2024) to $21.9B (2032, CAGR 34.2%, Grand View Research). Humanoid robot market: $2.1B (2024) to $66.2B (2032, CAGR 52.4%, MarketsandMarkets). Domestic wearable robot market is nascent; WIM has secured a foothold with 3,000+ cumulative sales.",
+      "market_trend": "① Aging population driving demand for walking aids (65+ population in South Korea exceeds 20%) ② Growing demand for human-robot safe coexistence technologies ③ Increased Physical AI/humanoid investment by global Big Tech (NVIDIA, Meta, Amazon) ④ Manufacturing automation demand (especially interest from Korean manufacturers in adopting humanoids)",
+      "growth_potential": "WIM can expand from senior/rehabilitation focus to general consumers, sports, and industrial use. ALLEX roadmap: research platform (2026) → manufacturing PoC (2027) → general-purpose humanoid (2030). Coway rental channel removes B2C distribution barriers.",
+      "risks": [
+        "Low-cost volume offensive from China's Unitree and Fourier Intelligence — price competitiveness disadvantage",
+        "Cash burn rate until humanoid commercialization — possible need for additional funding",
+        "Slow market adoption of wearable robots — consumer awareness and distribution channel limitations",
+        "Possible direct entry by listed company Rainbow Robotics or large corporations like Samsung Electronics",
+        "Risk of delay in ALLEX lower body (walking) implementation — currently only upper body unveiled"
+      ],
+      "risk_mitigation": "Defend valuation with real revenue and real user data from WIM. Avoid price competition, differentiate with high-precision, safe interaction technology. Distribute technology and operational risks via partnerships with Coway, AWS, NVIDIA, etc. Mobile ALLEX (wheeled) allows market entry before walking implementation."
+    },
+    "related_links": [
+      {
+        "title": "WIRobotics Official Website"
+      },
+      {
+        "title": "WIRobotics Official Company Introduction (English)"
+      },
+      {
+        "title": "WIM Product Page"
+      },
+      {
+        "title": "ALLEX Product Page (English)"
+      },
+      {
+        "title": "WIRobotics Series B Press Release (PRNewswire)"
+      },
+      {
+        "title": "WIRobotics Series B Coverage (Hankyung)"
+      },
+      {
+        "title": "Korea Biomedical Review Deep Dive Interview"
+      },
+      {
+        "title": "AI Wiki - WIRobotics Comprehensive Profile"
+      },
+      {
+        "title": "ALLEX Technical Details (maxon Group Blog)"
+      }
+    ],
+    "editor_pick_comment": "The strategy of generating cash flow with wearables while evolving into humanoids is a rare 'data virtuous cycle' model in the Korean robot industry."
+  },
+  "darerobot-2026": {
+    "tagline": "Developing intelligent robotic workstations for heavy industry",
+    "category": [
+      "Industrial robots",
+      "Heavy industry automation"
+    ],
+    "headquarters": {
+      "city": "Suzhou",
+      "country": "China",
+      "country_ko": "China"
+    },
+    "founders": [
+      {
+        "background": "Master's degree from Tsinghua University's Institute of Nuclear Engineering and New Energy Technology. Experience in industrial control and robotics technology development in nuclear industry, shipbuilding, construction machinery, and engineering machinery.",
+        "notable_achievement": "Led or participated in several major national special projects, built a robotics research team from scratch."
+      }
+    ],
+    "team_highlights": "Core team members from Tsinghua University, Xi'an Jiaotong University, Xidian University, and Northwestern Polytechnical University; average industry experience of over 10 years; over 40% hold master's or doctoral degrees.",
+    "product": {
+      "summary": "Provides intelligent cutting, grinding, welding, and painting robot workstations and automated production lines for heavy industry.",
+      "problem_statement": "Heavy industry, with non-standard workpieces and high-mix, low-volume production, makes traditional industrial robot deployment difficult, relying on dangerous and repetitive manual labor.",
+      "solution": "Intelligent robot system that uses 3D vision and AI algorithms to recognize workpiece shapes, autonomously plan paths, and achieve unmanned operations.",
+      "key_features": [
+        "Physical perception, data learning, model inference, autonomous path planning, and process control",
+        "3D vision-based workpiece shape recognition",
+        "Multi-machine collaboration and automatic loading/unloading",
+        "Modular design for quick response to various processes and industries"
+      ],
+      "tech_stack_or_innovation": "Integrates physical perception, data learning, model inference, autonomous path planning, and process control into robots, eliminating the need for extensive programming in traditional industrial robots.",
+      "target_customer": "Manufacturing enterprises in heavy industry sectors such as defense, steel, shipbuilding, and energy equipment",
+      "business_model": "Sales, integration, and maintenance of intelligent robot workstations and production lines"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Traditional industrial robots (FANUC, ABB, etc.)",
+          "comparison": "Specialized in standardized tasks, requiring additional programming and modification for non-standard workpieces"
+        },
+        {
+          "comparison": "Mainly focused on logistics and mobile robots, competing with DareRobot in the process robot field"
+        }
+      ],
+      "key_differentiator": "AI-based fully autonomous operation for heavy industry-specific non-standard workpieces, hardware-software integration, and accumulation of real field data",
+      "moat": "AI model advancement through on-site production data, long-term partnerships with major heavy industry customers, and a modular software platform (DR_AI)",
+      "competitive_position_summary": "Leading in technology and customer references in heavy industry intelligent process robots; recent large-scale funding accelerates growth."
+    },
+    "trending_reason": {
+      "summary": "In October 2026, successfully raised a $14M Pre-A+ round. Increasing heavy industry automation demand and AI robot technology maturity are key catalysts.",
+      "catalysts": [
+        "Chinese government's manufacturing upgrade policy",
+        "Severe labor shortages and safety issues in heavy industry",
+        "Advances in AI and 3D vision technology enable automation of non-standard tasks"
+      ],
+      "growth_metrics": "An intelligent grinding robot at a steel customer has been stably operating for over a year, with productivity 4x that of manual labor and equipment payback period of a few months."
+    },
+    "funding": {
+      "total_raised_note": "Previous Seed and Pre-A round amounts are undisclosed. Only the latest round amount of $14.9M is confirmed per PitchBook.",
+      "valuation_estimate": "$80M (est.)",
+      "latest_round": {
+        "note": "Approximately 100M RMB (nine-digit RMB); specific amount undisclosed but recorded as $14.9M by PitchBook."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "BlueRun Ventures made a Seed investment of approximately 10M RMB (est.)"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "PitchBook records Early Stage VC in August 2024.",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "China's heavy industry manufacturing automation market is estimated to be in the trillions of KRW as of 2026. DareRobot focuses on specialized sectors such as defense, steel, shipbuilding, and energy.",
+      "market_trend": "China's 'Made in China 2025' and 'AI+Manufacturing' policies drive surging demand for heavy industry automation, especially the need to replace dangerous and repetitive processes with robots.",
+      "growth_potential": "High entry barriers due to the difficulty of non-standard workpiece automation, but strong customer lock-in once entered. Potential for over 30% annual growth.",
+      "risks": [
+        "Intensifying competition from large robot manufacturers and existing automation companies",
+        "Conservative investment decisions and long sales cycles of heavy industry customers",
+        "Difficulty in securing and generalizing AI data"
+      ],
+      "risk_risk_mitigation": "Modular software and hardware design for rapid response to diverse customer needs, AI model refinement through real production data accumulation, leveraging government policy support."
+    },
+    "related_links": [
+      {
+        "title": "Company official website"
+      },
+      {
+        "title": "PitchBook Profile"
+      }
+    ],
+    "editor_pick_comment": "An AI robot startup specialized in non-standard heavy industry processes, gaining attention by proving efficiency and economic viability in real production environments."
+  },
+  "spacelab-2026": {
+    "tagline": "Developing an electrically controlled chemical thruster based on low-toxicity propellant.",
+    "category": [
+      "Space Propulsion Systems",
+      "Satellite Orbital Maneuvering",
+      "On-Orbit Servicing"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "Ph.D. in Aerospace Engineering from KAIST. Graduated from the Department of Aeronautical and Mechanical Engineering at Korea Aerospace University. Professor at Chosun University since 2009. Founded and served as the first director of the 'SPACE LAB Space Technology Research Institute' at Chosun University in 2023. Nearly 20 years of research on thrusters and propellants.",
+        "notable_achievement": "Established Korea's third space technology research institute (after Seoul National University and KAIST) at Chosun University. Participated in the development of satellites for the 5th and 6th launches of Nuri. Holds core technology for catalyst-free chemical thrusters using an electrically controlled method."
+      }
+    ],
+    "team_highlights": "Kim Taegyu serves as the sole CEO. Team consists of researchers from Chosun University's lab. Operates as a small-scale organization.",
+    "product": {
+      "summary": "Develops chemical thrusters for satellites that use low-toxicity propellant and control combustion electrically. Combines the high thrust of conventional chemical thrusters with the control flexibility of electric thrusters.",
+      "problem_statement": "Existing satellite thrusters have two limitations: (1) Chemical thrusters provide high thrust but have limited catalyst life, making refueling difficult; (2) Electric thrusters offer good fuel efficiency but low thrust, limiting rapid orbit changes. Additionally, traditional hydrazine propellant poses high toxicity and explosion risks, significantly increasing safety management costs.",
+      "solution": "Technology for an 'electrically controlled chemical thruster' that directly decomposes and combusts propellant with electricity, eliminating the need for a catalyst. Ensures safety by synthesizing low-toxicity propellant in-house. Without a catalyst, satellite life can be extended by simply refueling propellant.",
+      "key_features": [
+        "Catalyst-free, electrically controlled ignition, extinction, and thrust regulation",
+        "In-house synthesis of low-toxicity, high-safety propellant",
+        "High thrust comparable to chemical thrusters",
+        "On-orbit refueling capability (no catalyst life constraints)",
+        "Self-owned R&D capabilities from propellant synthesis to combustion and vacuum environment testing"
+      ],
+      "tech_stack_or_innovation": "Electrically Controlled Chemical Thruster. Decomposes and combusts propellant using electrical energy, eliminating the catalyst. Has a product roadmap including electrically controlled solid thrusters, electrically ignited monopropellant thrusters, and self-pressurized premixed thrusters.",
+      "target_customer": "Domestic and international satellite manufacturers and operators. Defense companies such as Hanwha Systems. Launch vehicle companies such as Perigee Aerospace.",
+      "business_model": "B2B supply of thrusters and propulsion systems. Satellite orbital maneuvering services. Future expansion into development and operation of orbital transfer vehicles."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "name": "Kairospace",
+          "comparison": "A domestic space propulsion startup based in Daejeon. Developing orbital propulsion technology similar to SpaceLab, but detailed technical information is limited."
+        },
+        {
+          "name": "EPS Tech",
+          "comparison": "An electric propulsion system developer based in Daejeon. Specializes in electric propulsion, differentiating from SpaceLab's chemical + electric control hybrid approach."
+        },
+        {
+          "name": "INNOSPACE",
+          "comparison": "A launch vehicle company focused on hybrid rocket-based launch services. Competes in launch vehicle engines rather than satellite thrusters."
+        }
+      ],
+      "key_differentiator": "Electrically controlled chemical thruster approach that completely eliminates catalysts. Enables on-orbit refueling without catalyst life constraints, and vertical integration capability to synthesize and supply low-toxicity propellant in-house.",
+      "moat": "Over 20 years of research experience in thrusters and propellants. Self-owned R&D infrastructure from propellant synthesis to combustion and vacuum testing. Plan to secure 'space heritage' through the 6th Nuri launch. Collaboration with Hanwha Aerospace and Hanwha Systems.",
+      "competitive_position_summary": "The only domestic startup pursuing electrically controlled chemical thrusters in the satellite propulsion field. Differentiated positioning in the on-orbit servicing (OOS) market with catalyst-free technology. At seed stage and yet to be space-qualified, but plans first orbital verification in 2027 via the 6th Nuri launch."
+    },
+    "trending_reason": {
+      "summary": "Attracted seed investment from Bluepoint Partners in September 2026. Demand for satellite thrusters is surging due to the increase in LEO constellations and the FCC's regulation requiring disposal within 5 years of mission end. Global trend towards low-toxicity, high-performance propulsion systems.",
+      "catalysts": [
+        "Seed investment from Bluepoint Partners in September 2026",
+        "Planned orbital verification of thruster via the 6th Nuri launch (scheduled for 2027)",
+        "FCC regulation mandating thruster installation for LEO satellite disposal within 5 years",
+        "IR presentation at the 2nd K-Space Forum in October 2026 (joint with CSO and Walkerin Space)",
+        "PoC and next-generation propellant cooperation with defense conglomerates such as Hanwha Systems and Hanwha Aerospace"
+      ],
+      "media_mentions": [
+        {
+          "source": "Asia Economy Daily"
+        },
+        {
+          "source": "Edaily"
+        },
+        {
+          "source": "MoneyToday",
+          "title": "“Abandon satellites just because they run out of fuel?”… The man challenging the ‘space gas station’"
+        },
+        {
+          "source": "MoneyToday"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Undisclosed",
+      "total_raised_note": "The amount of the seed round investment is listed as undisclosed in all sources. Confirmed as undisclosed by Fusion42, Caplight, StartupRecipe, Edaily, and all other media outlets.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Undisclosed",
+        "note": "Led by Bluepoint Partners, a Korean deep-tech accelerator. Amount undisclosed."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Sole investment by Bluepoint Partners. Announced on September 1, 2026."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global space propulsion system market is expected to grow from approximately $12B in 2025 at an average annual rate of over 15% through 2030. Demand for satellite thrusters is rapidly increasing due to the growth of LEO constellations (e.g., Starlink) and stricter satellite disposal regulations. The domestic space propulsion market is at an early stage.",
+      "market_trend": "Since September 2024, the FCC mandates orbital disposal within 5 years of mission end for commercial LEO satellite launch approvals. Global tightening of hydrazine usage regulations is accelerating the transition to low-toxicity propellants. The on-orbit servicing (OOS) and refueling market is at an early stage.",
+      "growth_potential": "Considering demand for orbital maneuvering and collision avoidance due to increasing constellations, the space debris issue, and the need for satellite life extension services, high growth is expected in the satellite propulsion system market over the next 5 years. Global expansion could further enlarge the TAM.",
+      "risks": [
+        "Orbital verification (space heritage) not yet secured — reliability needs to be demonstrated",
+        "Small organization lacking large-scale production and supply capacity",
+        "Potential entry of large corporations like Hanwha and LIG Nex1 into space propulsion",
+        "Risk of delay in the 6th Nuri launch schedule",
+        "Disadvantage in scale and financial resources compared to global competitors (Busek, Aerojet Rocketdyne, Dawn Aerospace, etc.)"
+      ],
+      "risk_mitigation": "Established plan for orbital verification through the 6th Nuri launch. Built cooperative relationships with Hanwha Systems and Hanwha Aerospace to manage reliance on large corporations. Targeting a differentiated niche market with low-toxicity, refuelable technology."
+    },
+    "related_links": [
+      {
+        "title": "theVC Company Information – SpaceLab"
+      }
+    ],
+    "editor_pick_comment": "A deep-tech startup targeting both satellite orbital maneuvering and refueling markets with a proprietary method of electrically igniting and controlling thrusters without catalysts."
+  },
+  "delian-alliance-industries-2026": {
+    "tagline": "AI-based autonomous sensing, navigation, surveillance, and strike defense startup",
+    "category": [
+      "Defense",
+      "Drones",
+      "Autonomous Systems"
+    ],
+    "headquarters": {
+      "country_ko": "Greece"
+    },
+    "founders": [
+      {
+        "background": "Former Apple Special Projects Group (autonomous vehicle) engineer. Research in sensor fusion and GPS-denied navigation has been cited over 1,400 times.",
+        "notable_achievement": "Developed autonomous vehicle perception system at Apple"
+      }
+    ],
+    "team_highlights": "Ioannis Souriadakis (Senior Engineer, MSc in Robotics from King's College London, former researcher at Hellenic Army Academy), Apostolos Anyfantakis (Strategy & Finance Lead, 6 years at McKinsey), Andreas Nomikos (Software Lead, ex-Meta, Uber, LinkedIn, MSc in Computer Science and Management Science & Engineering from Stanford), Mark Melhorn (Aircraft Systems Lead, 20 years in British Armed Forces, former MoD Defense Procurement Advisor)",
+    "product": {
+      "summary": "A comprehensive defense system including GPS-independent navigation modules, autonomous surveillance towers, electronic warfare modules, loitering munitions, and unmanned surface vessels for coastal defense.",
+      "problem_statement": "Traditional defense contractors have slow development cycles and cannot quickly deliver the AI- and software-centric solutions needed for modern warfare.",
+      "solution": "Combine commercial hardware with proprietary AI software to build fast, affordable autonomous defense systems.",
+      "key_features": [
+        "GPS-independent navigation – can operate at altitudes below 70m",
+        "Electronic warfare resistance",
+        "RF-silent stealth operation",
+        "Modular architecture connecting sensors and effectors",
+        "Deployable within a day"
+      ],
+      "tech_stack_or_innovation": "Proprietary sensor fusion, edge computing communication systems, and AI-based kill chain software stack",
+      "target_customer": "Defense ministries of NATO and allied nations, European coast guards",
+      "business_model": "Direct sales and licensing (B2G), project-based large contracts"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "German AI defense startup focused mainly on software; Delian integrates hardware and software"
+        },
+        {
+          "comparison": "Traditional defense contractors have slow development; Delian takes an agile startup approach"
+        },
+        {
+          "comparison": "Large European defense companies; Delian competes on low cost and rapid deployment"
+        }
+      ],
+      "key_differentiator": "Develops the entire stack in-house, offers integrated solutions rather than single products, and holds ITAR-free licensed IP",
+      "moat": "Battle-proven (over 3,000km flown in Ukraine), NATO customer base, key algorithm patents",
+      "competitive_position_summary": "The only AI defense startup in Europe with its own ecosystem, differentiated between traditional incumbents and emerging AI defense companies"
+    },
+    "trending_reason": {
+      "summary": "Raised $14M (approx. KRW 18.5B) Series A in July 2025, completed over 3,000km of flight testing in Ukraine, and expects expanded contracts with NATO member states",
+      "catalysts": [
+        "Increasing defense spending in Europe",
+        "Exploding demand for autonomous drones and anti-drone systems due to the Russia-Ukraine war",
+        "Entering mass production phase after real-world validation"
+      ],
+      "growth_metrics": "Conducted autonomous missions over 50km in Ukraine, completed 3,000km flight tests"
+    },
+    "funding": {
+      "valuation_estimate": "$80M (est.)",
+      "funding_history": [
+        {
+          "note": "Raised $6M in 2023 (per Bloomberg report) / Estimated",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "Global defense market of $2T, with the autonomous systems market estimated at $50B in 2030",
+      "market_trend": "Rising defense spending in Europe, surging demand for autonomous drones and AI-based defense systems post-Ukraine war",
+      "growth_potential": "Potential annual growth of over 50% with expansion into NATO countries",
+      "risks": [
+        "Regulatory risks (export controls, arms export licenses)",
+        "Intensifying competition from large defense companies",
+        "Data security risks during battlefield operations"
+      ],
+      "risk_mitigation": "ITAR-free licensing, cooperation with NATO member states, continuous improvement through software updates"
+    },
+    "related_links": [
+      {
+        "title": "Delian Alliance Industries Official Site"
+      },
+      {
+        "title": "Leadership Page"
+      },
+      {
+        "title": "Newsroom"
+      }
+    ],
+    "editor_pick_comment": "A Greek defense startup founded by a former Apple engineer is validating its systems in real combat and now aggressively targeting the NATO market."
+  },
+  "vensum-power-2026": {
+    "tagline": "A power conversion startup that minimizes power loss with software",
+    "category": [
+      "Power Conversion",
+      "AI Data Centers",
+      "EV Charging"
+    ],
+    "headquarters": {
+      "country_ko": "Finland"
+    },
+    "founders": [
+      {
+        "background": "Ph.D. from Aalto University, former member of Aalto Power Conversion Research Group"
+      },
+      {
+        "background": "Serial entrepreneur and angel investor"
+      }
+    ],
+    "team_highlights": "CEO Peter Nisula, COO Tero Lehtonen; approx. 20 employees, mostly Finnish",
+    "product": {
+      "summary": "Ultra-compact high-efficiency converter that maintains top-tier DC-DC power conversion efficiency through Software-Defined Power Conversion (SDPC) technology",
+      "problem_statement": "Surge in AI data center power consumption (415 TWh in 2024, expected 945 TWh in 2030) causing significant losses (conventional 7-10%) in power conversion process",
+      "solution": "Achieves nearly constant high efficiency (3-5% loss) across full load range using software-based digital control and Zero Voltage/Zero Current Switching (ZVS/ZCS) soft switching technique",
+      "key_features": [
+        "Maintains high efficiency across full load range",
+        "Small size (world’s smallest 24kW DC-DC converter)",
+        "Remote diagnostics and updates",
+        "High reliability due to reduced component count"
+      ],
+      "tech_stack_or_innovation": "Software-Defined Power Conversion (SDPC) technology: real-time switching control via digital signal processor, ZVS/ZCS soft switching",
+      "target_customer": "Converter OEMs, EV charging station operators, energy storage system companies, AI data center operators",
+      "business_model": "Hardware sales (converter modules), mass production and revenue expected in 2027"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Raised $140M Series B in February 2026, building 40GW factory, solid-state transformer company"
+        },
+        {
+          "comparison": "Raised $60M in February 2026, led by Engine Ventures"
+        },
+        {
+          "comparison": "Raised $80M in November 2025, similar solid-state conversion technology"
+        }
+      ],
+      "key_differentiator": "Software-defined approach maintains constant high efficiency across all load conditions, small form factor",
+      "moat": "Patented SDPC technology, 20 R&D personnel in Finland, research foundation from Aalto University",
+      "competitive_position_summary": "Smaller scale compared to hardware competitors, but differentiated by software approach; no revenue yet"
+    },
+    "trending_reason": {
+      "summary": "Announced €9M (approx. KRW 13.5B) Series A investment on November 6, 2026, gaining attention as a solution to AI data center power shortage",
+      "catalysts": [
+        "Explosive growth in AI data center power demand",
+        "Strategic investment from Larsen & Toubro (global EPC) and Eviny Ventures (renewable energy infrastructure)",
+        "Mass production plan announced for 2027"
+      ],
+      "media_mentions": [
+        null,
+        {
+          "title": "\"AI power shortage: building more plants is not the only answer\"... Finland's Vensum Power attracts investment with technology that reduces power loss"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "Includes Series A €9M, Seed €3.8M (May 2023), etc.",
+      "valuation_estimate": "Undisclosed",
+      "funding_history": [
+        {
+          "note": "Participants: Lifeline Ventures, Grid.vc, Harjavalta, Business Finland"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "IEA expects data center power demand to more than double from 415 TWh in 2024 to 945 TWh in 2030; power conversion market is multi-billion dollar scale",
+      "market_trend": "AI data center power supply bottleneck deepening, improving power conversion efficiency emerges as key challenge",
+      "growth_potential": "Expect rapid revenue growth after mass production in 2027; EV charging and energy storage markets also grow in tandem",
+      "risks": [
+        "No revenue yet, potential delay in 2027 production schedule",
+        "Limited funding compared to large competitors (e.g., Heron Power)",
+        "Need to prove reliability to secure data center customers"
+      ],
+      "risk_mitigation": "Securing global supply chain and references through strategic investors like Larsen & Toubro"
+    },
+    "related_links": [
+      {
+        "title": "Vensum Power Official Website"
+      },
+      {
+        "title": "Vensum Power Product Page"
+      },
+      {
+        "title": "CB Insights Profile"
+      }
+    ],
+    "editor_pick_comment": "A novel solution to the AI data center power shortage by cutting power loss in half with software"
+  },
+  "mantel-2026": {
+    "tagline": "Molten salt-based, high-efficiency carbon capture solution",
+    "category": [
+      "Carbon Capture",
+      "Heavy Industry Decarbonization"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "MIT Ph.D. in Chemical Engineering ('22), MBA ('22), SM ('19). Researched molten salt-based carbon capture under Prof. T. Alan Hatton.",
+        "notable_achievement": "Core technology developed with support from the MIT Energy Initiative (MITEI)"
+      },
+      {
+        "background": "MIT alum, founding member. Oversees company operations and business development."
+      },
+      {
+        "background": "MIT Ph.D. in Chemical Engineering ('22). Leads technology development and engineering."
+      }
+    ],
+    "team_highlights": "MIT Prof. T. Alan Hatton and researcher Takuya Harada serve as scientific advisors. The Engine provided early investment and incubation support.",
+    "product": {
+      "summary": "Mantel has developed a system that uses a proprietary molten borate sorbent to directly capture CO₂ from high-temperature industrial flue gas while simultaneously producing high-pressure steam. It claims to reduce energy loss by 97% compared to conventional amine-based processes and lower cost per ton to less than half.",
+      "problem_statement": "CO₂ emissions from heavy industries such as power plants, cement, and steel mills account for a significant portion of global emissions, but existing carbon capture technologies face commercialization challenges due to high energy consumption and cost.",
+      "solution": "Mantel's system uses molten salt, liquid at high temperatures (above 600°C), to directly contact flue gas and absorb CO₂, which is then released as pure CO₂ upon heating. The heat from this process is recovered and converted into high-pressure steam, which is supplied back to the plant, maximizing energy efficiency.",
+      "key_features": [
+        "Remains liquid at high temperatures (no performance degradation over 1,000+ cycles)",
+        "97% reduction in energy loss",
+        "Capture cost per ton less than half the industry average",
+        "Produces 99.9% pure CO₂ (saleable)",
+        "Integrates with existing industrial equipment with minimal modifications"
+      ],
+      "tech_stack_or_innovation": "The core is a sodium-doped molten borate material, which fundamentally solves the degradation issue of solid sorbents, along with a system design that recovers heat from the absorption-desorption process as steam.",
+      "target_customer": "Heavy industry companies with large stationary emission sources, such as power plants (coal, gas), refineries, pulp & paper, cement, and steel mills.",
+      "business_model": "Revenue generation through system sales and maintenance, or carbon capture as a service (CCaS). Additional revenue from selling or storing captured CO₂ (CCUS) is also possible."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Uses amine-based solutions; high energy consumption. Lower energy efficiency compared to Mantel."
+        },
+        {
+          "comparison": "Uses solid sorbents; may face degradation issues compared to Mantel's molten salt."
+        },
+        {
+          "comparison": "Amine-based; has large-scale commercialization experience but high energy costs."
+        }
+      ],
+      "key_differentiator": "Long-term stability of the liquid sorbent and high energy recovery rate due to high-temperature operation. 97% lower energy loss and less than half the cost compared to conventional processes are key differentiators.",
+      "moat": "Proprietary molten salt composition and system integration design developed at MIT. Durability verified through over 1,000 cycle tests. Technology validated through multiple pilot projects (Canadian oil sands, Quebec paper mill, West Virginia coal-fired plant).",
+      "competitive_position_summary": "Mantel is a next-generation carbon capture technology specialized for high-temperature industrial processes, drastically reducing energy costs compared to traditional amine methods. It is rapidly expanding its market with over 100 commercial pipelines."
+    },
+    "trending_reason": {
+      "summary": "In August 2026, Mantel secured a $18M strategic investment from Constellation Technology Ventures (the largest clean energy generator in the U.S.) and Azimut Investments, bringing total cumulative funding to $50M. Commercialization is accelerating with large-scale projects such as the TerraSpark Energy Campus (1.6GW).",
+      "catalysts": [
+        "Strategic investment from Constellation (largest clean energy company in the U.S.)",
+        "Awarded an $18.5M grant from the U.S. Department of Energy (DOE)",
+        "Ongoing pilot projects at Canadian oil sands and paper mill",
+        "Contract to provide carbon capture technology to TerraSpark Energy Campus's 1.6GW coal-fired power plant"
+      ],
+      "growth_metrics": "Cumulative funding of $50M, over 100 commercial pipelines, planning a full Series B round in 2027 ($50M–$200M)."
+    },
+    "funding": {
+      "total_raised_note": "Includes this round of $18M. Series A extension. The DOE grant of $18.5M is separate.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Constellation Technology Ventures and Azimut Investments participated. Existing investors also joined.",
+        "notable_investors": [
+          null,
+          null,
+          "The Engine (existing investor)"
+        ]
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Led by The Engine, with participation from MIT-related investors"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "Initial Series A (round size undisclosed)",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global carbon capture market is expected to grow at over 20% CAGR through 2030. According to the IEA, achieving net-zero by 2050 will require an annual capture capacity of over 6 billion tons. Mantel's SAM is particularly large in point-source capture for heavy industry.",
+      "market_trend": "Demand for carbon capture technology is surging due to the introduction of carbon taxes, stricter regulations, and the expansion of 45Q tax credits under the IRA (U.S. Inflation Reduction Act). CCS (carbon capture and storage) project announcements are increasing globally.",
+      "growth_potential": "With strategic investments from large energy companies like Constellation and DOE support, Mantel plans to raise a large Series B round in 2027. Over 100 commercial pipelines are concrete evidence of growth.",
+      "risks": [
+        "Lack of large-scale commercialization cases for carbon capture technology",
+        "Uncertainty in carbon pricing and regulations",
+        "Technology and capital strength of existing competitors (Climeworks, Carbon Engineering, etc.)",
+        "CAPEX burden on customers"
+      ],
+      "risk_mitigation": "Technology validation completed through pilot projects; policy support such as 45Q tax credits; modular design reduces CAPEX burden; additional revenue from CO₂ sales."
+    },
+    "related_links": [
+      {
+        "title": "Mantel Capture Official Website"
+      },
+      null,
+      {
+        "title": "GlobeNewswire Press Release"
+      },
+      {
+        "title": "MIT Energy Initiative Article"
+      }
+    ],
+    "editor_pick_comment": "The molten salt carbon capture technology, born as an MIT spin-off, has entered its first phase of commercialization following a strategic investment from Constellation."
+  },
+  "liquid-energy-2026": {
+    "tagline": "Modular data centers powering AI inference with solar energy",
+    "category": [
+      "AI Infrastructure",
+      "Renewable Energy",
+      "Modular Data Centers"
+    ],
+    "headquarters": {
+      "country_ko": "Canada"
+    },
+    "founders": [
+      {
+        "background": "M.S. in Computer Engineering from Georgia Tech and University at Buffalo, co-founder of Jelly.fm, senior engineer at Lotus Laboratories"
+      },
+      {
+        "background": "Founded AJMER (property tech), runs Dasvandh Charity"
+      },
+      {
+        "background": "University of Waterloo graduate"
+      }
+    ],
+    "team_highlights": "5 people (as of YC Fall 2026), NVIDIA Inception, Velocity Fund, University of Waterloo affiliation",
+    "product": {
+      "summary": "Factory-produces foldable NanoDC modules with built-in solar, battery, and Starlink, deployed on-site within 4 weeks to provide AI inference services",
+      "problem_statement": "Traditional data centers take years for grid connection, permits, and construction, unable to meet surging AI inference demand",
+      "solution": "Self-powered, self-cooled modules manufactured in containers, deployed on-site instantly, starting inference in 30 minutes without grid, water, or construction",
+      "key_features": [
+        "Foldable solar panels (accordion design)",
+        "High-density patented air cooling",
+        "Starlink internet connectivity",
+        "4-week deployment, 30-minute activation",
+        "Under 8 weeks from contract to first token"
+      ],
+      "tech_stack_or_innovation": "Patented high-density air cooling technology (patent pending), proprietary energy storage and solar tracking system",
+      "target_customer": "Companies with heavy AI inference workloads (from startups to large enterprises)",
+      "business_model": "Contract for AI inference service (token sales), not hardware sales — users only sign a compute contract"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Crusoe uses diverse power sources like flare gas and has a cloud stack; Liquid Energy uses pure solar and modular design"
+        },
+        {
+          "comparison": "Exowatt primarily supplies energy and site infrastructure; Liquid Energy offers fully integrated inference services"
+        },
+        {
+          "comparison": "Announced a 25MW modular AI factory framework contract (expected deployment in 2026); full operation not yet confirmed"
+        }
+      ],
+      "key_differentiator": "Fully self-sufficient (power, cooling, connectivity) modules deployable in 4 weeks without grid or construction, from contract to service in 8 weeks",
+      "moat": "Patents on foldable solar and high-density air cooling, factory mass-production capability (currently 2MW/month, targeting 20MW/month), NVIDIA Inception participation",
+      "competitive_position_summary": "Early stage but differentiated by unique self-sufficient modules avoiding power and permitting bottlenecks; still lacks large-scale deployment and customer references"
+    },
+    "trending_reason": {
+      "summary": "Official launch of NanoDC on November 5, 2026, participation in YC Fall 2026 Demo Day, attention for ability to provide inference services within 8 weeks",
+      "catalysts": [
+        "YC Fall 2026 batch Demo Day",
+        "Power and infrastructure bottlenecks due to surging AI inference demand",
+        "Growing modular data center trend"
+      ]
+    },
+    "funding": {
+      "total_raised_note": "$125,000 per Dealroom (possibly part of YC standard $500,000)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "YC Fall 2026 batch; likely YC standard deal ($125,000 for 7% + $375,000 uncapped MFN SAFE), but not officially confirmed"
+      },
+      "funding_history": [
+        {
+          "note": "YC Fall 2026 batch; only the $125,000 portion of the standard YC deal recorded on Dealroom"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "AI infrastructure market estimated at over $100B in 2027; modular data center segment growing rapidly",
+      "market_trend": "Surging AI inference demand, grid and permitting delays driving demand for modular, self-powered data centers",
+      "growth_potential": "8 weeks from contract to service; rapid scaling possible with factory mass-production system established; securing initial customers is key",
+      "risks": [
+        "Lack of large-scale deployment and customer references",
+        "Insufficient third-party verification of performance, cost, and battery self-sufficiency",
+        "Need to prove competitiveness versus existing cloud and data center solutions"
+      ],
+      "risk_mitigation": "Support from YC and NVIDIA Inception, factory production capacity (2MW/month), target to ship thousands of units in 2027"
+    },
+    "related_links": [
+      {
+        "title": "Liquid Energy Official Website"
+      },
+      {
+        "title": "Y Combinator Company Page"
+      },
+      {
+        "title": "Dealroom Profile"
+      }
+    ],
+    "editor_pick_comment": "The vision of delivering AI inference in 8 weeks without grid or permits is compelling, but with no references yet, it remains unproven."
+  },
+  "bloquo-2026": {
+    "tagline": "Stablecoin-based B2B financial infrastructure",
+    "category": [
+      "Fintech",
+      "Stablecoin Infrastructure",
+      "Cross-border Remittance"
+    ],
+    "headquarters": {
+      "country_ko": "Brazil"
+    },
+    "founders": [
+      {
+        "background": "Co-founder of Transfero. Led the launch of BRZ, Latin America's first stablecoin.",
+        "notable_achievement": "Developed and commercialized Latin America's first stablecoins (BRZ, ARZ) at Transfero"
+      },
+      {
+        "background": "Former co-founder of Transfero. Expert in digital assets and blockchain products.",
+        "notable_achievement": "Participated in the launch of the BRZ stablecoin"
+      },
+      {
+        "background": "Technology expert from Transfero. Experience in building blockchain infrastructure.",
+        "notable_achievement": "Led the construction of Transfero's blockchain infrastructure"
+      }
+    ],
+    "team_highlights": "All founders are former co-founders and key executives of Transfero (issuer of Latin America's first stablecoin, BRZ). Total of 125 institutional clients, annual transaction volume of $2B.",
+    "product": {
+      "summary": "Bloquo is a B2B financial infrastructure platform that enables banks, fintechs, and enterprises to use stablecoins (USDC, USDT) for cross-border remittances, forex transactions, and liquidity provisioning via a single API or dashboard.",
+      "problem_statement": "International remittances via traditional banks (SWIFT, Wire) are slow (2-5 days) and expensive (3-7% fees), with poor traceability due to intermediary bank chains. To use stablecoins, companies must separately build liquidity, currency exchange, regulatory compliance, and technical integration—a fragmented market.",
+      "solution": "Bloquo integrates payments, liquidity provisioning, and regulatory license sharing (VASP-as-a-Service) into one platform. Enables payments in over 30 currencies to 100+ countries via API, same-day settlement (D0), with up to 60% cost reduction compared to SWIFT.",
+      "key_features": [
+        "Stablecoin Liquidity Provisioning: USDC/USDT trading for local currencies, real-time pricing, direct wallet transfers",
+        "Payments Orchestration: Multi-currency payments to overseas suppliers and customers, integrated via a single API",
+        "VASP-as-a-Service: Institutions offer stablecoin services to their own customers under Bloquo's license",
+        "On/Off Ramp: Deposits and withdrawals between local currency (PIX) and stablecoins, with individual PIX keys and accounts per customer",
+        "24/7 Settlement: Same-day settlement year-round, 60% cheaper than SWIFT and Wire"
+      ],
+      "tech_stack_or_innovation": "Based on a modular settlement architecture. Built-in KYC/KYB and transaction monitoring. Application for virtual asset broker registration with the Banco Central do Brasil completed. Registered with FinCEN MSB in the US.",
+      "target_customer": "Banks, securities firms, payment service providers, virtual asset exchanges, digital wallets, and international trade companies in Brazil and Latin America",
+      "business_model": "Transaction fee-based (per-transaction charges for remittances, forex, liquidity provisioning). VASP-as-a-Service via subscription or volume-based revenue. White-label and API licensing."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Circle issues USDC and offers its own cross-chain payment protocol, but Bloquo has a deeper integration with local regulatory and banking networks in Latin America."
+        },
+        {
+          "comparison": "A previous company founded by the same team, issuing the BRZ stablecoin. Bloquo focuses on the infrastructure layer, offering institutional services rather than coin issuance."
+        },
+        {
+          "comparison": "A leader in retail and SME B2C remittances. Bloquo specializes in large-scale inter-institutional liquidity and white-label APIs."
+        }
+      ],
+      "key_differentiator": "Ongoing virtual asset broker registration with the Central Bank of Brazil plus FinCEN MSB in the US—combining local and global regulatory compliance in a single platform. The founders' experience issuing Transfero's stablecoin translates into technical and regulatory know-how.",
+      "moat": "Multi-jurisdictional regulatory licenses (Brazil BC + US FinCEN). VASP-as-a-Service model creates client lock-in. Network effects from 125 institutional clients and $2B annual transaction volume.",
+      "competitive_position_summary": "Bloquo is the only stablecoin infrastructure startup in Latin America holding both Central Bank of Brazil registration and US MSB. Though early-stage, the founders' industry experience and regulatory advantage create strong entry barriers against competitors."
+    },
+    "trending_reason": {
+      "summary": "Raised a $3.7M (approx. BRL 20M) seed round in October 2026, co-led by Crescera Capital and Triaxis Capital. Institutional demand surged after Brazil's stablecoin regulation clarity (Banco Central Resolutions 519-521 in 2025).",
+      "catalysts": [
+        "Brazilian Central Bank's finalized virtual asset broker regulatory framework (2025) → institutional advantages for licensed entities",
+        "Growing demand for cross-border payments between Brazil and the US (estimated over $40B annually)",
+        "Limitations of Brazil's PIX (no international payments) → rising need for stablecoin-based alternatives"
+      ],
+      "growth_metrics": "125 institutional clients, annual transaction volume of $2B (as of October 2026, annualized). A startup in its second year."
+    },
+    "funding": {
+      "total_raised": "Approx. BRL 20M",
+      "total_raised_note": "Seed round of $3.7M (approx. BRL 20M) in October 2026. Amount of the 2025 pre-seed round (angel investors) undisclosed.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Approx. BRL 20M",
+        "note": "Co-led by Crescera Capital and Triaxis Capital. Lattice Capital and other investors participated."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "From angel investors, 2025",
+          "lead_investor": "Angel investors"
+        },
+        {
+          "amount": "Approx. BRL 20M",
+          "note": "Co-led by Crescera Capital and Triaxis Capital. Lattice Capital included."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global stablecoin payment market (over $3T in transaction volume in 2026). SAM: Latin American B2B cross-border payment market (estimated $200B annually). SOM: Stablecoin infrastructure for Brazilian institutional clients (initial scale of $1B).",
+      "market_trend": "Brazil's Central Bank virtual asset regulatory framework (effective June 2025) enables legal stablecoin operations. PIX's inability to handle international payments and high SWIFT fees drive companies to seek alternatives. High dollar dependency across Latin America (Argentina, Venezuela, etc.) increases stablecoin demand.",
+      "growth_potential": "Brazil is Latin America's largest economy and fintech hub. With regulatory clarity, the stablecoin payment market is expected to grow at a CAGR of over 40% from 2026 to 2028. Bloquo's VASP-as-a-Service model accelerates adoption as banks and fintechs can quickly launch their own stablecoin services.",
+      "risks": [
+        "Possible delay or rejection of Central Bank of Brazil virtual asset broker registration approval",
+        "Volatility of the Brazilian real and regulatory uncertainty (potential future legislation restricting stablecoin use)",
+        "Intensified competition from incumbents like Circle and Transfero, plus large banks building their own stablecoin infrastructure",
+        "Seed stage as of 2026, with insufficient track record of financial health and profitability"
+      ],
+      "risk_mitigation": "Founders' experience at Transfero equips them to handle regulatory risks. US FinCEN MSB registration provides dual regulatory framework. 125 initial institutional clients demonstrate product-market fit (PMF). Plans to expand into additional markets like Argentina."
+    },
+    "related_links": [
+      {
+        "title": "Bloquo Official Website"
+      },
+      {
+        "title": "Valor Econômico Article (October 30, 2026)"
+      },
+      {
+        "title": "LatamList Article (November 4, 2026)"
+      },
+      {
+        "title": "TokenPost Article (November 2, 2026)"
+      },
+      {
+        "title": "LinkedIn - Triaxis Capital Announcement"
+      },
+      {
+        "title": "MarketersMedia Press Release"
+      }
+    ],
+    "editor_pick_comment": "Founders from Transfero seize Brazil's regulatory clarity to pivot into stablecoin B2B infrastructure, impressively securing 125 institutional clients early on."
+  },
+  "qlo-2026": {
+    "tagline": "AI agent that automates commercial insurance underwriting",
+    "category": [
+      "Insurtech",
+      "AI Agent"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "background": "Founder of PinchLabs, a B2B product studio that achieved $500K ARR. Built a commercial insurance marketplace and received an acquisition offer from a publicly traded insurer. Dropped out of an electrical engineering program and moved to the US.",
+        "notable_achievement": "Developed deep understanding of insurance industry workflows through PinchLabs"
+      },
+      {
+        "background": "Former cloud engineer at CuboAi. Studied educational psychology, then taught herself engineering and focused on AI agent technology. Strength in human-computer collaboration.",
+        "notable_achievement": "Unique background: transitioned from educational psychology major to self-taught engineer"
+      }
+    ],
+    "team_highlights": "Two-person founding team. Both founders have engineering backgrounds. Selected for the YC S26 batch.",
+    "product": {
+      "summary": "Qlo is a platform that automates the entire commercial insurance underwriting process using AI agents. The agent handles the full workflow from submission intake to renewal, while human underwriters supervise and make final decisions.",
+      "problem_statement": "Commercial insurance underwriters spend most of their time on operational tasks—manually opening submitted documents to extract data and entering it into existing spreadsheet rating templates. Many submissions go unprocessed.",
+      "solution": "Qlo consists of two layers of AI agents. Lower-level agents handle repetitive tasks (document parsing, data entry, rating calculations), and a higher-level supervisor agent coordinates them and delivers results to the underwriter. Underwriters can give natural language instructions to the agent via their phone.",
+      "key_features": [
+        "Inbox Agent: When the underwriter sends a text message instruction, the agent calls the appropriate sub-agent to perform the task",
+        "Rater Converter: Analyzes existing Excel rating templates and converts them into digital worksheets usable directly within Qlo",
+        "Submission Intake Agent: Automatically parses broker emails and attachments to generate worksheets",
+        "Full audit trail: The underwriter can click any field to trace back to the original document"
+      ],
+      "tech_stack_or_innovation": "Multi-agent architecture. The supervisor agent interprets natural language commands and invokes specialized sub-agents. The entire system is designed as an 'agent-compatible' system where all agents share the same accounts, rules, documents, and permissions.",
+      "target_customer": "Insurance companies, MGAs (Managing General Agents), and program managers that run commercial insurance underwriting. First customer: Distinguished Programs (Executive Lines team).",
+      "business_model": "SaaS subscription. Annual contracts with enterprise customers. Onboarding period of approximately 2 weeks."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Traditional P&C insurance core systems, focused on existing workflow automation without an AI agent layer. Qlo differentiates with its agent-native architecture."
+        },
+        {
+          "comparison": "Agency management system-focused. Qlo approaches underwriting with a dedicated AI agent."
+        }
+      ],
+      "key_differentiator": "Designed to have AI agents operate on top of existing systems (Excel, email, Word) without requiring users to change how they work. Underwriters command agents via text messages.",
+      "moat": "Long-term contract (2 years) with first customer (Distinguished Programs), plus proven productivity improvement in real workflows (3x increase in quoting throughput). Features like Rater Converter preserve spreadsheet logic, creating data migration barriers.",
+      "competitive_position_summary": "In the insurance SaaS market dominated by Guidewire/Vertafore, Qlo is positioning itself as a next-generation underwriting platform leveraging AI agents. Has secured its first large enterprise customer at the pre-Series A stage."
+    },
+    "trending_reason": {
+      "summary": "Received attention after the YC S26 Demo Day by sharing a case where the first large customer, Distinguished Programs, achieved a 3x increase in quoting throughput. Launched Rater Converter to demonstrate AI-driven onboarding automation.",
+      "catalysts": [
+        "YC S26 Demo Day in September 2026",
+        "Disclosure of Distinguished Programs Executive Lines results (3× quote throughput) in October 2026",
+        "August 2026 launch of Rater Converter demonstrating AI-driven implementation feasibility"
+      ],
+      "growth_metrics": "First customer (Distinguished Programs Executive Lines) achieved 3x weekly initial quoting throughput. Onboarding period shortened to 2 weeks.",
+      "media_mentions": [
+        {
+          "source": "YC Blog"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Undisclosed",
+      "total_raised_note": "Received standard seed funding (est. around $500K) and YC accelerator investment upon participating in YC S26. Specific amount undisclosed.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Undisclosed",
+        "note": "Seed round accompanied by YC S26. Lead investor is YC (est.)."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "Seed investment from participation in YC S26."
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "The global commercial insurance market is estimated at approximately $700B. The SaaS market for underwriting automation within it is estimated to be tens of billions of dollars.",
+      "market_trend": "The insurance industry is actively adopting AI, with growing demand for next-generation platforms to replace legacy systems like Guidewire and Vertafore. Operational efficiency via AI agents in commercial insurance is particularly in focus.",
+      "growth_potential": "Based on the first customer’s 3x productivity increase, can expand across multiple program lines. Onboarding period of two weeks enables fast new customer acquisition. Currently a two-person team in early market entry stage.",
+      "risks": [
+        "Early stage, product-market fit (PMF) not yet fully validated",
+        "Two-person team may have limited capacity to support large enterprise customers",
+        "Need to build trust in an industry with high security and compliance requirements"
+      ],
+      "risk_mitigation": "Access to talent and customers through YC network. Begun proving reliability with a long-term contract from the first large customer. AI agent designed to operate under human supervision, minimizing regulatory risk."
+    },
+    "related_links": [
+      {
+        "title": "Official Website"
+      },
+      {
+        "title": "YC Company Profile"
+      },
+      {
+        "title": "Introduction Page"
+      }
+    ],
+    "editor_pick_comment": "The startup in the YC Summer 2026 batch that showed the most concrete results: secured empirical data showing a 3x increase in quoting throughput for its first customer."
+  },
+  "greptile-2026": {
+    "tagline": "AI-powered code review and test automation platform",
+    "category": [
+      "Code Review",
+      "AI Testing"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Computer Science major at Georgia Tech, participated in CREATE-X program, YC Winter 2024 batch",
+        "notable_achievement": "Co-founded and leads Greptile"
+      },
+      {
+        "background": "Computer Science major at Georgia Tech, YC Winter 2024 batch",
+        "notable_achievement": "Technical architecture and CTO at Greptile"
+      },
+      {
+        "role": "Co-founder",
+        "background": "Computer Science major at Georgia Tech with a minor in Linguistics",
+        "notable_achievement": "Co-founded Greptile"
+      }
+    ],
+    "team_highlights": "3 co-founders from Georgia Tech, YC Winter 2024 batch",
+    "product": {
+      "summary": "Greptile is a platform that uses AI agents to review and test pull requests (PRs). It indexes the entire codebase as a graph to understand context, and swarm agents find bugs and security vulnerabilities, delivering them as comments to reviewers.",
+      "problem_statement": "It is difficult to manually verify the quality of code generated by developers and AI coding agents, and bugs and side effects are easily missed.",
+      "solution": "It builds a graph index of the codebase and performs parallel reviews with multiple agents to accurately pinpoint issues. Additionally, a sandboxed test agent called T-Rex catches errors in actual runtime environments.",
+      "key_features": [
+        "Codebase graph indexing and real-time updates",
+        "PR review via swarm agents",
+        "T-Rex: automated test runner (writes and runs tests in a sandbox)",
+        "Learns from team review comments to adapt to coding standards"
+      ],
+      "tech_stack_or_innovation": "Graph-based codebase map, multi-agent collaboration, sandboxed test environment",
+      "target_customer": "Engineering teams (used by 22,000+ teams including Nvidia, Coinbase, Scale AI, Vanta)",
+      "business_model": "SaaS subscription (est.)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Provides automated PR review, context-based review and learning features similar to Greptile"
+        },
+        {
+          "comparison": "Context-aware review and engineering governance, strengths in sharing rules across multiple repositories"
+        },
+        {
+          "comparison": "Built into Cursor IDE, PR review and fix suggestions, usage-based pricing"
+        },
+        {
+          "comparison": "Includes AI review in stack PR workflow, merge queue features"
+        }
+      ],
+      "key_differentiator": "Serves as an independent verification layer that can be used alongside multiple coding agents (Claude Code, Cursor, Devin, etc.).",
+      "moat": "Dataset of 10M+ labeled bugs from 2M+ repositories; reviews over 1% of all daily GitHub PRs",
+      "competitive_position_summary": "Provides neutral verification in multi-agent environments, rapid growth, strengthened by key customers and Series B funding."
+    },
+    "trending_reason": {
+      "summary": "Menlo Ventures-led $50M Series B in October 2026 (valuation $750M); launch of T-Rex automated testing; secured major enterprise customers including Nvidia, Coinbase, Scale AI, and Vanta",
+      "catalysts": [
+        "$50M Series B round (October 2026)",
+        "Launch of T-Rex automated test agent",
+        "Secured major enterprise customers including Nvidia, Coinbase, Scale AI, Vanta"
+      ],
+      "growth_metrics": "Reviews 1% of all daily GitHub PRs; 25,000 code changes tested in first week of T-Rex beta"
+    },
+    "funding": {
+      "total_raised_note": "Sum of announced amounts (Seed $4.1M + Series A $25M + Series B $50M)"
+    },
+    "market_outlook": {
+      "tam_sam_som": "AI code review market size estimated at approx. $2B in 2026 (source: industry analysis)",
+      "market_trend": "Demand for automated verification surges due to increase in AI-generated code; need for independent verification layer in multi-agent environments rises.",
+      "growth_potential": "Sustained growth potential through enterprise expansion and support for complex testing",
+      "risks": [
+        "Risk of large competitors entering (GitHub, GitLab, etc. with native integration)",
+        "AI model false detection and false positives",
+        "Possibility of customers replacing with internal tools"
+      ],
+      "risk_mitigation": "Data network effects (10M+ bug labels), multi-agent compatibility, first-mover advantage through rapid product launches"
+    },
+    "related_links": [
+      {
+        "title": "Greptile official website"
+      },
+      {
+        "title": "Y Combinator company profile"
+      },
+      {
+        "title": "Series B announcement blog"
+      },
+      {
+        "title": "Operator Collective company introduction"
+      }
+    ],
+    "editor_pick_comment": "A 'verification layer' that makes AI-generated code trustworthy, already processing 1% of GitHub PRs."
+  },
+  "executor-2026": {
+    "tagline": "Open-source unified gateway for AI agents",
+    "category": [
+      "AI Infrastructure",
+      "Developer Tools",
+      "Agent Integration"
+    ],
+    "headquarters": {
+      "country_ko": "United States"
+    },
+    "founders": [
+      {
+        "background": "Software engineer formerly at Vercel; previously built Answeroverflow.com solo to 1.5M MAU",
+        "notable_achievement": "Engineering experience at Vercel, solo success with Answeroverflow.com"
+      }
+    ],
+    "team_highlights": "Currently a solo founder; participated in Y Combinator Summer 2026 batch",
+    "product": {
+      "summary": "Executor is an MCP gateway that lets AI agents securely access services (Gmail, GitHub, Slack, Stripe, etc.). A single connection works across all agents, with permission control and sandboxed execution.",
+      "problem_statement": "Multiple AI agents (Claude Code, Cursor, ChatGPT, etc.) each require separate OAuth authentication, struggle with simultaneous multi-account connections, and lack granular permission management, creating security risks.",
+      "solution": "Executor provides a central gateway that manages all integrations in one place. It allows connecting multiple accounts per service and setting per-tool policies (allow, block, require approval). It converts various API specs—MCP, OpenAPI, GraphQL—into a unified interface.",
+      "key_features": [
+        "One connection works with all MCP-compatible agents",
+        "Support for multiple accounts per service (e.g., work vs. personal Gmail)",
+        "Per-tool permission policies (always allow, require approval, block)",
+        "Credential protection in a sandboxed execution environment",
+        "Compresses 1,600+ integrations into approximately 1,000 tokens",
+        "Open source (MIT); supports local execution, self-hosting, and cloud hosting"
+      ],
+      "tech_stack_or_innovation": "MCP-based gateway that converts diverse API specs into a unified tool interface and runs tool calls in a JavaScript sandbox for security",
+      "target_customer": "Developers and teams using AI agents, and any organization using MCP-compatible tools",
+      "business_model": "Open-source core (MIT license) + paid cloud hosting plan (specific pricing not yet disclosed)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Both provide account connections, but Executor differentiates with custom integration import, tool modification, and app building capabilities"
+        },
+        {
+          "comparison": "n8n uses a flow builder approach; Executor lets agents directly write code-based automation"
+        },
+        {
+          "comparison": "Zapier is UI-based automation; Executor is an agent-friendly MCP gateway"
+        }
+      ],
+      "key_differentiator": "Agent-native: works with any agent supporting MCP, granular per-tool permission control, simultaneous multi-account connections, and open-source community-driven development",
+      "moat": "Open-source ecosystem (2,800+ GitHub stars), early adoption and deep integration with the MCP standard, and a library of 1,600+ integrations",
+      "competitive_position_summary": "An infrastructure layer for centrally and securely managing tools used by AI agents in the agent era; competes with players like Composio but holds advantages in open-source approach and security policies"
+    },
+    "trending_reason": {
+      "summary": "Rapid growth following its debut in the Y Combinator Summer 2026 batch; rising demand for MCP gateways amid the AI agent boom is the key catalyst.",
+      "catalysts": [
+        "Participation and announcement in YC Summer 2026 batch (August 2026)",
+        "Explosive growth of the AI agent market highlighting the need for agent-tool connection infrastructure",
+        "Growing adoption of the MCP protocol (Claude, Cursor, ChatGPT, etc.)"
+      ],
+      "growth_metrics": "2,800+ GitHub stars, 14,000+ weekly npm downloads, approximately 3,000 local version users (as of August 2026)"
+    },
+    "funding": {
+      "total_raised_note": "Raised via Y Combinator convertible note",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "Part of Y Combinator Summer 2026 batch"
+      }
+    },
+    "market_outlook": {
+      "tam_sam_som": "The AI agent market is projected to grow to trillions of dollars by 2030. Executor targets the tool connection segment of the agent infrastructure layer. Specific figures not disclosed.",
+      "market_trend": "As the number of agents increases, the need for centralized integration management surges. Protocol standardization (e.g., MCP) is underway, and open-source infrastructure is gaining attention.",
+      "growth_potential": "High potential to become essential infrastructure as agent adoption expands. Although early, strong open-source community growth is a positive signal.",
+      "risks": [
+        "Need to adapt if the MCP standard changes or a competing protocol emerges",
+        "Risk that large cloud providers (AWS, Azure, etc.) natively offer similar functionality",
+        "Operational resource constraints as a solo founder"
+      ],
+      "risk_mitigation": "Ongoing development through open-source community, potential for additional fundraising via YC network, and risk diversification by supporting multiple protocols"
+    },
+    "related_links": [
+      {
+        "title": "Executor official website"
+      },
+      {
+        "title": "Executor GitHub repository"
+      },
+      {
+        "title": "Y Combinator company page"
+      }
+    ],
+    "editor_pick_comment": "An open-source gateway connecting all agent tools in one place, with strong potential to become core infrastructure in the MCP ecosystem."
+  },
+  "claimlane-2026": {
+    "tagline": "Automating warranty claims and returns with an after-sales AI agent.",
+    "category": [
+      "Warranty Claim Management",
+      "Return Management SaaS",
+      "AI Agent"
+    ],
+    "headquarters": {
+      "country_ko": "Denmark"
+    },
+    "founders": [
+      {
+        "background": "Co-founded after careers in legal and consumer goods. Former GANNI executive (est.).",
+        "notable_achievement": "Prior to founding, managed logistics/returns at Danish fashion brand GANNI, securing Claimlane's first customer."
+      },
+      {
+        "background": "Software engineer background. Leads technology and platform development.",
+        "notable_achievement": "Developed the initial product prototype and conducted a PoC with GANNI."
+      }
+    ],
+    "team_highlights": "CEO Sommer-Larsen relocated to Austin, Texas to lead US expansion. Engineering teams in Copenhagen and London.",
+    "product": {
+      "summary": "A B2B SaaS that connects warranty claims, repair, replacement, and refund workflows between manufacturers, brands, retailers, and suppliers on a single platform. An AI agent learns each company's policies and contract terms to automatically review and process claims.",
+      "problem_statement": "When products fail, customers, retailers, brands, suppliers, and repair shops exchange scattered information via email and spreadsheets, wasting time and money and damaging customer trust.",
+      "solution": "A single platform accessible to all stakeholders, integrating warranty policies, supplier contracts, and case history. An AI agent suggests and automates appropriate actions (repair, replace, refund, credit note) on a per-case basis.",
+      "key_features": [
+        "AI Agent: Learns each client's products, warranty policies, and supplier contracts to automatically review, approve, reject, or escalate claims.",
+        "B2C Self-Service Portal: Customized claim submission forms that pre-collect photos and detailed information.",
+        "B2B Module: Structured claim transmission between suppliers and automated chargeback recovery.",
+        "Workflow Automation: Triggers repair, replacement, and refund by connecting with ERP, e-commerce, and warehouse systems.",
+        "Analytics Dashboard: Reporting on return/claim trends by SKU and supplier credit note status."
+      ],
+      "tech_stack_or_innovation": "Combines structured rule-based workflows with an LLM-based AI agent to perform reasoning specific to each client's products and contracts. Rules can be defined in natural language, and can transition to full automation once accuracy is verified.",
+      "target_customer": "Brands and retailers in furniture, electronics, outdoor apparel, household goods, and other categories requiring complex after-sales services. Approximately 20,000 retailers and brands currently on the network.",
+      "business_model": "Flat-rate subscription (SaaS) starting at $800 (€700) per month, with additional fees per excess ticket. Custom pricing available based on company size and usage."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Specializes in simple B2C exchanges and returns. Lacks support for complex warranty claims, supplier integration, and B2B workflows."
+        },
+        {
+          "comparison": "Owned by PayPal. Focuses primarily on B2C returns, with no warranty or repair workflows."
+        },
+        {
+          "comparison": "UK-based B2C returns platform. Strong in premium fashion but limited warranty and B2B capabilities."
+        }
+      ],
+      "key_differentiator": "The only platform that supports complex warranty claims (multi-stakeholder, policy-based review, supplier chargebacks) as first-class workflows. Network effects from 20,000 participating companies create an entry barrier: 'partners are already on the network.'",
+      "moat": "Accumulated claim data (correlations between supplier contracts, policies, and physical product defects) increases AI agent accuracy and creates high switching costs. Network effects with 20,000 companies already connected.",
+      "competitive_position_summary": "Unlike simple B2C return tools like Loop Returns and Happy Returns, Claimlane offers warranty repairs and B2B supply chain chargebacks as core features, securing a dominant position in complex product categories. New US customer numbers surpassed Europe in 2026, accelerating growth."
+    },
+    "trending_reason": {
+      "summary": "Raised €5.6M Series A on November 5, 2026, and announced CEO relocation to Austin, Texas. New customer numbers in North America surpassed Europe, and sales opportunities increased 150% year-over-year, drawing attention to its positioning as a 'global after-sales AI agent.'",
+      "catalysts": [
+        "€5.6M Series A investment (Verb Ventures, Skagerak Capital, Vendep Capital)",
+        "CEO Anders Sommer relocated to Austin to lead US market expansion.",
+        "North America new customer numbers surpassed Europe; sales opportunities up 150% YoY; pipeline value doubled.",
+        "Secured global brand clients including Skechers, Black Diamond, tonies, and Hummel.",
+        "Official launch of AI agent's policy- and contract-based automatic review feature."
+      ],
+      "growth_metrics": "US sales opportunities up +150% YoY in 2026; pipeline value doubled. Network scale of 20,000 retailers and brands (more than doubled from 9,000 at seed stage in two years). 50% of new customers come from the US.",
+      "media_mentions": [
+        null,
+        {
+          "title": "Claimlane raises €5.6M Series A for After-Sales AI and US Expansion"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised_note": "€1.8M Seed (May 2024) + €5.6M Series A (November 2026). Excluding grants and loans.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "notable_investors": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Nicolaj Reffstrup (GANNI founder)"
+        ]
+      }
+    },
+    "market_outlook": {
+      "market_trend": "E-commerce growth, strengthening consumer rights, and sustainability pressure on manufacturers and retailers are accelerating the digital transformation of warranty and returns management. Demand for AI agent automation is surging.",
+      "growth_potential": "The US market surpassing Europe is a strong growth signal. As AI agent accuracy improves, it can expand into the simple B2C returns market. The strong network effects create a significant first-mover advantage.",
+      "risks": [
+        "Large competitors (Loop Returns, Happy Returns/PayPal) adding similar features or acquiring warranty claim startups.",
+        "Customer trust damage from AI agent errors (especially risky for high-value products).",
+        "Management and organizational culture issues for European teams (Copenhagen, London) due to CEO's US residency."
+      ],
+      "risk_mitigation": "The AI agent is designed with human-in-the-loop review before full automation. Copenhagen and London teams continue to lead product development despite CEO relocation. Differentiation is maintained through unique B2B warranty and supplier chargeback features."
+    },
+    "related_links": [
+      {
+        "title": "Claimlane Official Website"
+      },
+      {
+        "title": "Series A Announcement Blog (English)"
+      },
+      {
+        "title": "FAQ - Differences from Competitors"
+      },
+      {
+        "title": "Pricing Page"
+      }
+    ],
+    "editor_pick_comment": "The CEO's personal relocation to Austin demonstrates a genuine commitment to the US market in this Series A."
+  },
+  "booost-2026": {
+    "tagline": "AI-Powered Corporate Value Management OS",
+    "category": [
+      null,
+      "ESG/Sustainability Management",
+      "Corporate Value Management"
+    ],
+    "headquarters": {
+      "country_ko": "Japan"
+    },
+    "founders": [
+      {
+        "background": "Over 10 years of experience in the New Power industry. Former leader of the Smart Energy Business Team at the Funai Research Institute.",
+        "notable_achievement": "Founded Booost in 2015. Achieved No.1 market share in the sustainability ERP market for Japanese large enterprises."
+      },
+      {
+        "background": "Oversees product and AI engineering. Co-founder of Booost.",
+        "notable_achievement": "Developed an AI-based non-financial data integration platform and leads technology strategy."
+      }
+    ],
+    "team_highlights": "Founder Hirokazu Aoi has deep domain knowledge in energy and sustainability, and together with CTO Takeshi Oga, built an AI-native ERP. The management team includes former executives of large corporations and energy consultants.",
+    "product": {
+      "summary": "AI-native Corporate Value Management OS 'booost'. An all-in-one platform that integrates and manages financial and non-financial (ESG, carbon, human capital, supply chain) data, responds to global regulations such as SSBJ and CSRD, and connects financial impact analysis to management decision-making.",
+      "problem_statement": "Sustainability-related information at large corporations is dispersed across departments and countries, and is merely collected once a year for disclosure purposes, failing to be used for actual management decisions and growth investments.",
+      "solution": "A SaaS-based ERP that supports AI agents and 25 languages, integrating supply chain data collection, evidence management, draft disclosure report generation, Scope 1-3 emissions calculation, and economic profit (EP) impact. It connects regulatory compliance and corporate value enhancement in a single workflow.",
+      "key_features": [
+        "AI for automatic collection of supplier ESG data",
+        "AI for generating draft SSBJ/CSRD reports",
+        "Scope 1, 2, 3 emissions calculation",
+        "Evidence management and third-party assurance support",
+        "Integrated financial/non-financial dashboard and EP impact analysis"
+      ],
+      "tech_stack_or_innovation": "Based on multi-agent AI, automates non-financial data collection, classification, and report generation. Standardizes over 1,200 data points to comply with global regulations (SSBJ, ISSB, CSRD).",
+      "target_customer": "Listed companies in Japan's prime market (market cap of ¥3T or more) and global large enterprises. Currently adopted by 6,500 companies across 95 countries, with 197,000 business sites.",
+      "business_model": "SaaS subscription-based. Includes revenue from feature expansion and consulting."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Global CRM-based, but Booost has the advantage in Japan-specific SSBJ regulatory compliance."
+        },
+        {
+          "comparison": "Global carbon accounting platform. Booost is ahead in AI integration and Japan market coverage."
+        },
+        {
+          "name": "Green Impact / Zero Carbon (Japan local)",
+          "comparison": "Limited feature scope. Booost differentiates with financial impact analysis and AI adoption."
+        }
+      ],
+      "key_differentiator": "No. 1 market share for two consecutive years among Japanese large enterprises. An AI-native platform that integrates non-financial and financial data to offer a 'Corporate Value Management' framework.",
+      "moat": "Regulatory compliance know-how and data consistency secured from over 6,500 customers and 197,000 business sites in Japan. Global supply chain coverage with 25 languages and AI agent-based capabilities.",
+      "competitive_position_summary": "A solid leader in the Japanese sustainability ERP market. With the combination of AI integration and the strong 'Why Now' of SSBJ mandatory requirements, it is further widening the gap with competitors."
+    },
+    "trending_reason": {
+      "summary": "On October 28, 2026, raised approx. ¥1.75B in Series C. Cumulative funding approx. ¥5.2B. With Japan's SSBJ (Sustainability Disclosure Standards) becoming mandatory for prime market listed companies from the fiscal year ending March 2027, demand for a Corporate Value Management OS has exploded.",
+      "catalysts": [
+        "Japan's SSBJ disclosure mandate (fiscal year ending March 2027)",
+        "Simultaneous emergence of the Corporate Value Management paradigm (capital allocation revolution) and the AI revolution",
+        "Soaring demand for automation and integrated management of sustainability data using AI"
+      ],
+      "growth_metrics": "As of December 2025, adopted by 6,500 companies in 95 countries, with 197,000 business sites. Ranked No.1 in revenue share for two consecutive years among large enterprises (annual revenue of ¥500B or more) in ITR market research."
+    },
+    "funding": {
+      "total_raised": "approx. ¥5.2B",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "approx. ¥1.75B",
+        "note": "Series C final close. Separate from the first close of approx. ¥700M in March 2026 (One Capital, Pronexus)."
+      },
+      "funding_history": [
+        {
+          "amount": "approx. ¥700M"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "ESG and sustainability management market for Japanese and global companies. The mandatory SSBJ is driving rapid growth in SAM (serviceable addressable market) in a short period.",
+      "market_trend": "Mandatory ESG disclosure (SSBJ, CSRD, ISSB), AI-based data management automation, and the spread of the integrated paradigm of Corporate Value Management.",
+      "growth_potential": "Explosive growth expected with the full implementation of SSBJ in the fiscal year ending March 2027. Additional scalability secured through expansion into the global CSRD market.",
+      "risks": [
+        "Intensifying competition: possibility of global SaaS companies (e.g., Salesforce) entering the Japanese market",
+        "Regulatory risk: business dependence on changes in SSBJ policy",
+        "Large enterprise market limitations: customer acquisition cost and possible market saturation"
+      ],
+      "risk_mitigation": "Diversifies regulations through AI differentiation and parallel response to global regulations (CSRD, ISSB). Reduces dependence on SSBJ while maintaining the platform's technological advantage."
+    },
+    "related_links": [
+      {
+        "title": "Booost Official Website"
+      },
+      {
+        "title": "Series C Final Close Press Release (PR TIMES)"
+      },
+      {
+        "title": "Declaration of Evolution into an AI Company (July 2026)"
+      }
+    ],
+    "editor_pick_comment": "Japan's No.1 sustainability ERP for large enterprises has evolved into an AI Corporate Value Management OS ahead of the SSBJ mandate and successfully attracted Series C investment."
+  },
+  "theo-2026": {
+    "tagline": "AI-powered service that automates website building and SEO",
+    "category": [
+      "Website Builder",
+      null,
+      "AI Agent"
+    ],
+    "headquarters": {
+      "country_ko": "USA"
+    },
+    "founders": [
+      {
+        "background": "Harvard CS degree, built low-latency software at Citadel Securities. Previously co-founded Endgrate, a bootstrapped startup reaching $100K annual revenue.",
+        "notable_achievement": "Applied experience from Endgrate in driving organic traffic to thousands via SEO to Theo"
+      }
+    ],
+    "team_highlights": "Solo founder, accepted into YC F26 batch.",
+    "product": {
+      "summary": "AI-powered website builder and SEO agent for small businesses. Automates website building, hosting, and ongoing search optimization.",
+      "problem_statement": "Small businesses can't afford expensive SEO agencies ($3,000–12,000/month) or freelancers, and even when using DIY tools like Wix, they lack time to get found in search.",
+      "solution": "Theo's AI builds and hosts the site, publishes new content weekly, improves technical SEO, and works to get cited in AI search tools like ChatGPT and AI Overviews. All changes are made instantly via chat in English.",
+      "key_features": [
+        "Chat-based website editing (no drag-and-drop needed)",
+        "Automated keyword research and competitor analysis",
+        "Regular blog and landing page content generation",
+        "Page speed optimization, sitemap submission, technical SEO fixes",
+        "Getting cited in AI search tools (ChatGPT, AI Overviews)",
+        "Real-time visitor and performance analytics"
+      ],
+      "tech_stack_or_innovation": "LLM-based agent continuously performs SEO tasks automatically, optimizing the site without human intervention.",
+      "target_customer": "Small businesses, local businesses, freelancers (owners who can't spare 10–20 hours/month on SEO)",
+      "business_model": "Monthly subscription: Basic $29.99 (site + hosting), Starter $69.99 (SEO included, 30-day free trial), Pro $129.99 (advanced SEO)"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Wix costs $17–159/month, offers only basic SEO tools, requiring users to handle SEO themselves. Theo's AI manages SEO for them."
+        },
+        {
+          "comparison": "Similar price range, drag-and-drop editor, built-in SEO features but no automatic content generation or AI search optimization."
+        },
+        {
+          "name": "SEO agencies",
+          "comparison": "Fixed cost of $3,000–12,000/month vs. Theo at $69.99. Agencies do manual work; Theo operates 24/7 automatically."
+        },
+        {
+          "comparison": "Advanced tools for designers/developers, higher price, need manual SEO setup. Theo is for non-experts."
+        }
+      ],
+      "key_differentiator": "Acts as an 'SEO agent' that continuously performs SEO work automatically after site launch, boosting search traffic.",
+      "moat": "SEO data and feedback loop from 10,000+ sites, YC brand, market insights from 'State of Small Business Websites' report.",
+      "competitive_position_summary": "Fills the gap between cheap DIY builders (Wix, Squarespace) and expensive agencies with an affordable AI SEO agent."
+    },
+    "trending_reason": {
+      "summary": "Gained attention after being selected for Y Combinator Fall 2026 batch. Built 10,000+ sites since July 2026, with cases showing average traffic increases of over 50%.",
+      "catalysts": [
+        "Y Combinator F26 Demo Day",
+        "Live launch announcement on October 2, 2026",
+        "Publication of 'State of Small Business Websites 2026' report (audit of 10,470 sites)"
+      ],
+      "growth_metrics": "As of September 2026, built 10,000+ sites, average traffic increase of over 50%. 118 118 Money case: 213K Google clicks in 90 days. Buy My Lunch: Google clicks from 131 to 929 in 90 days."
+    },
+    "funding": {
+      "total_raised": "Undisclosed",
+      "total_raised_note": "Y Combinator standard seed investment amount is undisclosed. (Part of YC F26 batch)",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Undisclosed",
+        "note": "Part of Y Combinator Fall 2026 batch"
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "YC F26 standard investment"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global website builder market (~$20B in 2026), part of SEO services market (~$80B). SAM: Among 30M US small businesses, those willing to invest in digital marketing. SOM: Assuming 100K customers at $69.99/month, approximately $84M annual revenue.",
+      "market_trend": "Trend of AI agents automating marketing tasks, especially as search behavior shifts from traditional SEO to AI summaries. Theo excels at optimizing for AI search citations.",
+      "growth_potential": "Track record of 10,000 sites built, leveraging YC network, possibly targeting 500K sites in first year? Risk: AI integration by major players.",
+      "risks": [
+        "Increased competition if incumbents like Wix and Squarespace add AI agent features",
+        "Customer churn if SEO results are not fast enough",
+        "Solo founder operational burden"
+      ],
+      "risk_mitigation": "Differentiated AI agent with continuous learning, YC mentorship, marketing of customer success stories"
+    },
+    "related_links": [
+      {
+        "title": "Theo official website"
+      },
+      {
+        "title": "Theo press kit (Fact Sheet)"
+      },
+      {
+        "title": "YC launch page"
+      },
+      {
+        "title": "SOTA2 preview article"
+      },
+      {
+        "title": "Miles Pines LinkedIn announcement"
+      }
+    ],
+    "editor_pick_comment": "Automates website building and SEO into a single AI agent, lowering the digital marketing barrier for small businesses."
+  },
+  "pepper-games-2026": {
+    "tagline": "A mid-core action RPG studio founded by Elsword and Cookie Run veterans",
+    "category": [
+      "Mobile Game",
+      "Action RPG"
+    ],
+    "headquarters": {
+      "country_ko": "South Korea"
+    },
+    "founders": [
+      {
+        "role": "CEO",
+        "background": "Founded Agesoft (now Pepper Games) in 2021. Estimated to be from KOG, the developer of Elsword, and a 10–20 year game industry veteran. In April 2025, changed the company name to Pepper Games, accelerating global strategy.",
+        "notable_achievement": "Signed Com2uS publishing contract, led Series A investment"
+      }
+    ],
+    "team_highlights": "Former art director of Cookie Run: Tower of Adventure leads the art team. Composed of 30 (est.) personnel with 10–20 years of experience in planning, launching, and live operations of major domestic action and collection games including Elsword and Cookie Run: Tower of Adventure. COO Ki-hyun Kim is a co-founder of Fitogether.",
+    "product": {
+      "summary": "A studio developing mid-core action RPGs that combine casual art style with deep action. The flagship title is a casual MMORPG (Project M) published by Com2uS, and the team is simultaneously developing a quarter-view action RPG 'Project K' and a PC survival action RPG 'Lost in a Fairytale'.",
+      "problem_statement": "The mobile RPG market is polarized between hardcore games with high entry barriers for light users and casual games lacking depth. There is a shortage of games that are easy to start but offer deep, long-term engagement.",
+      "solution": "A mid-core action RPG that lowers entry barriers with casual graphics and intuitive controls while adding depth of action and collection/growth elements to induce long-term immersion. Proprietary server engine technology provides stable multiplayer experience.",
+      "key_features": [
+        "Mid-core blend of casual art × hardcore action",
+        "Global launch readiness through Com2uS publishing",
+        "Proprietary game server engine technology",
+        "PC and mobile cross-platform strategy (Lost in a Fairytale)"
+      ],
+      "tech_stack_or_innovation": "Owns proprietary server engine technology. Conducted national R&D in software and game engines in 2023.",
+      "target_customer": "Global mobile game users in their 20s and 30s who are tired of casual games and find hardcore MMORPGs too demanding – the 'mid-core' segment.",
+      "business_model": "Free-to-play with in-app purchases. Revenue share with Com2uS for publishing. Plans to expand global publishing based on own IP later."
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Has established a foothold in the action genre with Eternal Return, but Pepper Games specializes in mobile MMORPGs."
+        },
+        {
+          "comparison": "Has mobile RPG experience with King's Raid etc. Owns clear IP, but Pepper Games secures global distribution via Com2uS publishing."
+        },
+        {
+          "comparison": "Has multiple hits including Heroes of the Storm-style games. Larger in scale, but Pepper Games operates a lean team of veteran talent."
+        }
+      ],
+      "key_differentiator": "Personnel with success experience in contrasting genres – Elsword (action) and Cookie Run (casual, collection-based) – combine to create a unique positioning of 'casual appearance + deep action'.",
+      "moat": "High development efficiency from a lean organization of veterans with 10–20 years of experience. Stable global distribution via Com2uS publishing contract. Proprietary server engine technology.",
+      "competitive_position_summary": "First mover in the 'mid-core' niche of the Korean mobile action RPG market. An early-stage studio preparing for global launch with veteran talent and a major publisher contract."
+    },
+    "trending_reason": {
+      "summary": "On November 5–6, 2026, Pepper Games, a team of veterans from Elsword and Cookie Run, attracted attention by securing a Series A investment led by Stonebridge Ventures with Horizon Investment participating. The imminent global launch of a Com2uS-published MMORPG and pipeline expansion were investment drivers.",
+      "catalysts": [
+        "Series A investment led by Stonebridge Ventures with Horizon Investment (2026-11-05)",
+        "Global launch preparation for Com2uS-published casual MMORPG",
+        "Simultaneous development of two new titles: Project K and Lost in a Fairytale"
+      ],
+      "growth_metrics": "Revenue approx. KRW 3.7B and operating profit approx. KRW 1B in 2023 (source: RNDcircle).",
+      "media_mentions": [
+        null,
+        {
+          "source": "Game Donga",
+          "title": "Pepper Games Secures Series A Investment.. \"We Will Make an Action RPG That You Can Dive Deep Into\""
+        },
+        {
+          "source": "Ruliweb",
+          "title": "Pepper Games Secures Series A Investment from Stonebridge Ventures and Horizon Investment"
+        },
+        {
+          "source": "The Games Daily",
+          "title": "Pepper Games Secures Series A Investment"
+        }
+      ]
+    },
+    "funding": {
+      "total_raised": "Undisclosed",
+      "total_raised_note": "The Series A amount is undisclosed in all articles. Whether a seed or pre-Series A round existed is also unconfirmed.",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "amount": "Undisclosed",
+        "note": "Led by Stonebridge Ventures, with Horizon Investment participating. Based on fund size, estimated to be in the tens of billions of KRW."
+      },
+      "funding_history": [
+        {
+          "amount": "Undisclosed",
+          "note": "The first and only confirmed investment round. Whether a seed round existed is unconfirmed."
+        }
+      ]
+    },
+    "market_outlook": {
+      "market_trend": "The mobile game market is seeing a slowdown in hyper-casual and growth in the mid-core genre. The 'casualization' strategy of drawing light users to action RPGs is a key direction for global publishers (Com2uS, Netmarble).",
+      "growth_potential": "The global launch of the Com2uS-published MMORPG is the first growth gateway. Marketing can leverage Elsword fandom and Cookie Run IP nostalgia, and two sequels in development diversify pipeline risk.",
+      "risks": [
+        "Uncertainty of the global success of the Com2uS-published MMORPG",
+        "Development resource dispersion from simultaneously developing three games with a small team (30 people)",
+        "Positioning risk inherent to the mid-core genre: difficulty appealing to both hardcore and casual users",
+        "Oversaturation of the Korean mobile RPG market and competition from large companies (Nexon, NCsoft, Netmarble)"
+      ],
+      "risk_mitigation": "Leveraging Com2uS's global publishing network and marketing capabilities. High per-person productivity from a lean team of veterans. Platform diversification with PC platform (Lost in a Fairytale).",
+      "tam_sam_som": "Global mobile gaming market at approx. $120B in 2026. Of this, the action RPG genre accounts for about 15%, or $18B (est.). Korean mobile action RPG market at approx. KRW 2T (est.)."
+    },
+    "related_links": [
+      {
+        "title": "Pepper Games Official Website"
+      },
+      {
+        "title": "THE VC Company Info"
+      },
+      {
+        "title": "FuturePlay Portfolio"
+      },
+      {
+        "title": "Namuwiki – Pepper Games"
+      }
+    ],
+    "editor_pick_comment": "What happens when Elsword and Cookie Run experiences combine? 30 veterans are about to prove it by developing three games simultaneously."
+  },
+  "vatar-2026": {
+    "tagline": "The social gaming platform taking Nigeria by storm",
+    "category": [
+      "Gaming",
+      "Social Platform"
+    ],
+    "headquarters": {
+      "country_ko": "Nigeria"
+    },
+    "founders": [
+      {
+        "background": "Software engineer with over 7 years of experience. Built AML technology at Napier AI. Co-founded Fractn, processing NGN 182M for over 10 financial institutions in 3 months without external investment.",
+        "notable_achievement": "Built Lagos Life in a short time, going viral in a single day and acquiring millions of users"
+      },
+      {
+        "background": "Worked as a product manager at Citi, covering enterprise security, digital workplace, and managed services. Specializes in designing scalable products within regulatory environments.",
+        "notable_achievement": "Oversees Vatar's product roadmap and launch"
+      },
+      {
+        "background": "Two-time founder (one exit) with 15 years building African tech businesses. Co-founded Heala, with 100+ paying organizations and 2,500+ providers processing over 1 million transactions.",
+        "notable_achievement": "Drives brand partnerships and revenue growth"
+      }
+    ],
+    "team_highlights": "$500K angel round featuring notable angel investors including Flutterwave CEO Olugbenga Agboola, Mono CEO Abdulhamid Hassan, Terra Industries CEO Nathan Nwachukwu",
+    "product": {
+      "summary": "Vatar is a browser-based social gaming platform where real users live, interact, and engage in economic activities in a virtual city. Its first game, 'Lagos Life,' is a life simulation game set in Lagos, Nigeria.",
+      "problem_statement": "African consumers lack high-quality online social experiences that resonate culturally, and traditional game distribution models (credit card payments) struggle with low penetration rates.",
+      "solution": "A free-to-play browser game that incorporates local cultural elements (danfo buses, power outages, real locations) and generates revenue through brand advertising, music promotion, and virtual item sales.",
+      "key_features": [
+        "Real-time multiplayer virtual city",
+        "In-game economy (jobs, housing, vehicles)",
+        "Player elections and virtual government",
+        "Real-time synchronization",
+        "Brand integration (billboards, virtual stores)",
+        "AI-powered rapid content creation"
+      ],
+      "tech_stack_or_innovation": "Browser-based, uses AI for fast game development and updates, integrates Flutterwave for payments",
+      "target_customer": "Primarily Gen Z and millennials in Nigeria and West Africa, with gradual global expansion",
+      "business_model": "Free-to-play, brand advertising and sponsorships, music promotions, in-game currency sales (cash payments), corporate partnerships, with 5+ revenue streams"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "A browser game from Nigeria, a danfo driving game, attracted 140K users in a week but is simpler compared to Vatar's social simulation"
+        },
+        {
+          "comparison": "Global metaverse platforms lack localized African content; Vatar differentiates through cultural specificity"
+        }
+      ],
+      "key_differentiator": "Reflects local culture based on real Nigerian cities, real-time multiplayer with player-driven governance, a browser game optimized for viral marketing",
+      "moat": "Network effects from early viral growth, network of prominent investors, rapid feature development, local brand partnerships",
+      "competitive_position_summary": "Leading position in the African social gaming market through cultural localization and rapid expansion, targeting a niche compared to global competitors"
+    },
+    "trending_reason": {
+      "summary": "Lagos Life went viral within 24 hours of launch, attracting over 4.7 million players in 10 days, and gained attention with investments from prominent fintech founders.",
+      "catalysts": [
+        "Viral spread through game sharing on X (Twitter)",
+        "Game design that faithfully reflects Nigerian local culture",
+        "Ultra-fast development cycles using AI",
+        "Participation of prominent angel investors"
+      ],
+      "growth_metrics": "4.7 million players after 9 days, 200K concurrent users, users from 15+ countries, over 860 million minutes of playtime (self-reported, unaudited)"
+    },
+    "funding": {
+      "total_raised_note": "Angel round, confirmed by TechCabal and BusinessDay. Additional reports from StartupActu mention a $2.5M pre-seed in discussion, but unconfirmed.",
+      "latest_round": {
+        "note": "Closed 3 days after company incorporation (October 6). Participants: Olugbenga Agboola (Resilience17 fund), Abdulhamid Hassan, Nathan Nwachukwu, Oo Nwoye.",
+        "lead_investor": "Multiple angel investors",
+        "notable_investors": [
+          "Olugbenga Agboola (Flutterwave CEO)",
+          "Abdulhamid Hassan (Mono CEO)",
+          "Nathan Nwachukwu (Terra Industries CEO)"
+        ]
+      },
+      "funding_history": [
+        {
+          "lead_investor": "Multiple angels"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "TAM: Global social gaming market approx. $50B in 2026. SAM: African gaming market approx. $3B. SOM: Targeting digital native population in Nigeria and West Africa, short-term millions of dollars.",
+      "market_trend": "The African gaming market is growing rapidly, centered on mobile and browser games. Increasing demand for local cultural content. Expanding brand spending on in-game marketing.",
+      "growth_potential": "4.7 million players in the first week, $170K in revenue. Potential for additional city expansion and globalization. Profitability expected to improve with expanded brand partnerships.",
+      "risks": [
+        "User protection and content moderation issues",
+        "Emergence of copycat games",
+        "Increasing server infrastructure costs",
+        "Sustainability of the revenue model",
+        "Limitations of payment infrastructure in Africa"
+      ],
+      "risk_mitigation": "Differentiation through rapid feature updates, introduction of age verification and reporting systems, solving payment issues via Flutterwave integration, risk diversification through multiple revenue streams"
+    },
+    "related_links": [
+      {
+        "title": "Vatar Official Site"
+      },
+      {
+        "title": "Lagos Life LinkedIn"
+      },
+      {
+        "title": "Fireround Investment Info"
+      }
+    ],
+    "editor_pick_comment": "A case where a viral strategy embedding Nigerian local culture into the game attracted 4.7 million users in 10 days and secured angel investments from fintech founders."
+  },
+  "lets-game-now-2026": {
+    "tagline": "India’s first franchise e-sports league gaming platform",
+    "category": [
+      "e-Sports",
+      "Gaming Platform"
+    ],
+    "headquarters": {
+      "country_ko": "India"
+    },
+    "founders": [
+      {
+        "background": "Former top Indian e-sports player, ranked 3rd in FIFA international tournament",
+        "notable_achievement": "Pioneer in building India’s e-sports ecosystem"
+      },
+      {
+        "background": "Over 20 years of leadership experience across various fields",
+        "notable_achievement": "Drove the company’s early growth"
+      }
+    ],
+    "team_highlights": "One co-founder is a former pro e-sports player with deep industry insight",
+    "product": {
+      "summary": "A B2B2C e-sports and gaming tournament platform, operating India’s first franchise-based e-sports league, the Indian Super Gaming League (ISGL)",
+      "problem_statement": "In India, e-sports is not recognized as a profession, lacks a structured league, and gamers have limited platforms to compete and grow.",
+      "solution": "An all-in-one platform offering a proprietary tournament management system, AI-powered match analysis, and highlight generation; gamers participate for free and monetize through brand collaborations.",
+      "key_features": [
+        "AI-powered match review and analysis tools",
+        "Real-time automatic highlight generation",
+        "Live streaming and tournament management system",
+        "Discord-based community operations",
+        "Indian Super Gaming League (ISGL) franchise system"
+      ],
+      "tech_stack_or_innovation": "SaaS-based tournament operations platform, AI analysis engine, and in-house game development studio",
+      "target_customer": "Gamers, e-sports teams, brand advertisers, and franchise clubs in India and Southeast Asia",
+      "business_model": "Tournament operations fees, brand sponsorships, merchandise sales (Shop Let's Game Now), and league franchise revenue"
+    },
+    "competitive_landscape": {
+      "direct_competitors": [
+        {
+          "comparison": "Major e-sports event organizers in India, focusing on individual tournaments rather than a league like ISGL"
+        },
+        {
+          "name": "Gametion (developer of Ludo King)",
+          "comparison": "Focuses on casual games and its own gaming platform, not on operating e-sports leagues"
+        },
+        {
+          "comparison": "A skill gaming platform focusing on casual games and cash rewards, not e-sports"
+        }
+      ],
+      "key_differentiator": "Franchise league structure tied to real sports clubs (e.g., Kerala Blasters, Mumbai City FC), merging with traditional sports ecosystem",
+      "moat": "Strategic investment from Anand Mahindra (founder of Pro Kabaddi League) and sports club network, experience organizing 2,000+ events in 18 countries",
+      "competitive_position_summary": "First-mover advantage as India's first franchise e-sports league and partnerships with traditional sports clubs differentiate it from competitors"
+    },
+    "trending_reason": {
+      "summary": "Raised ₹30 crore (approx. $3M) in October 2026, with strategic participation from Anand Mahindra (Chairman of Mahindra Group) and the launch announcement of the Indian Super Gaming League (ISGL)",
+      "catalysts": [
+        "Anand Mahindra's investment and public endorsement on social media",
+        "Launch of Indian Super Gaming League (ISGL): 8 franchise teams (affiliated with football and kabaddi clubs)",
+        "Endorsements from celebrities like Ranveer Singh and Abhishek Bachchan"
+      ],
+      "growth_metrics": "Reached over 50M cumulative, hosted 2,000 events, 30 clients, 1.4M community members, 400 college network"
+    },
+    "funding": {
+      "total_raised_note": "₹30 crore (approx. $3M) in Series B round; according to PitchBook, total raised more than $3M including previous rounds",
+      "valuation_estimate": "Undisclosed",
+      "latest_round": {
+        "note": "A UAE-based family office co-invested; Bestvantage Investments acted as advisor"
+      },
+      "funding_history": [
+        {
+          "note": "Investment from Auxano (2024) / estimated"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "$168K angel investment in January 2024 per PitchBook",
+          "lead_investor": "Undisclosed"
+        },
+        {
+          "amount": "Undisclosed",
+          "note": "$168K in a Later Stage VC round in November 2023",
+          "lead_investor": "Undisclosed"
+        }
+      ]
+    },
+    "market_outlook": {
+      "tam_sam_som": "India's e-sports market estimated at $6B in 2025 (within overall gaming market), with e-sports league and tournament platforms growing",
+      "market_trend": "E-sports gaining recognition as a profession in India, traditional sports clubs accelerating e-sports entry, expansion from mobile-centric market to PC/console e-sports",
+      "growth_potential": "India has the world's largest gamer population (over 500M), but e-sports league penetration is low, leaving significant room for growth",
+      "risks": [
+        "ISGL league's revenue model not yet validated (sponsorships, broadcast rights, franchise revenue uncertain)",
+        "Intensifying market competition with rivals like Nodwin Gaming",
+        "Lack of e-sports infrastructure and awareness in India requiring long-term investment"
+      ],
+      "risk_mitigation": "Applying Anand Mahindra's success experience with Pro Kabaddi League to ISGL, expanding gamer accessibility with a free-to-play model, focusing on brand collaboration"
+    },
+    "related_links": [
+      {
+        "title": "Let's Game Now official website"
+      },
+      null,
+      {
+        "title": "PitchBook company profile"
+      },
+      {
+        "title": "Insidesport interview (2024)"
+      },
+      {
+        "title": "Auxano portfolio"
+      }
+    ],
+    "editor_pick_comment": "An India-style e-sports league directly invested by Anand Mahindra, its franchise tie-up with traditional sports clubs is the key differentiator from existing gaming platforms."
+  }
+}

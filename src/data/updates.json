@@ -431,6 +431,65 @@
         "source_name": "MotherDuck Release Notes",
         "found": "2026-11-10"
       }
+    ],
+    "the-every-company-2026": [
+      {
+        "date": "2026-07-14",
+        "kind": "product",
+        "title_ko": "ADM과 상업 생산 파트너십 체결",
+        "title_en": "Commercial Manufacturing Partnership with ADM",
+        "detail_ko": "에브리 컴퍼니가 ADM과 협력하여 아이오와주 클린턴 공장에서 OvoPro를 상업 규모로 생산합니다.",
+        "detail_en": "The EVERY Company partnered with ADM to commercially produce OvoPro at its Clinton, Iowa facility.",
+        "source_url": "https://www.greenqueen.com.hk/the-every-company-adm-precision-fermentation-egg-protein-clinton-facility/",
+        "source_name": "Green Queen",
+        "found": "2026-11-11"
+      },
+      {
+        "date": "2026-06-23",
+        "kind": "product",
+        "title_ko": "OvoPro 수요 550% 급증, 월마트·타겟 진출",
+        "title_en": "OvoPro Demand Surges 550% with Walmart, Target Rollout",
+        "detail_ko": "월마트와 타겟 전국 진출 후 2026년 첫 4개월간 OvoPro 주문량이 전년 대비 550% 증가했습니다.",
+        "detail_en": "Nationwide rollout at Walmart and Target drove 550% order growth for OvoPro in first four months of 2026 vs. full 2025.",
+        "source_url": "https://www.foodnavigator.com/Article/2026/06/23/every-company-scales-animal-free-egg-protein-as-ovopro-demand-surges-550/",
+        "source_name": "FoodNavigator",
+        "found": "2026-11-11"
+      },
+      {
+        "date": "2026-06-15",
+        "kind": "product",
+        "title_ko": "Huvepharma와 생산능력 4배 확장",
+        "title_en": "4x Production Capacity Expansion with Huvepharma",
+        "detail_ko": "에브리 컴퍼니가 불가리아 Huvepharma와 파트너십을 통해 OvoPro 생산능력을 4배로 늘렸습니다.",
+        "detail_en": "The EVERY Company quadrupled OvoPro production capacity through an expanded partnership with Huvepharma in Bulgaria.",
+        "source_url": "https://every.com/category/press-releases/",
+        "source_name": "EVERY Press Releases",
+        "found": "2026-11-11"
+      }
+    ],
+    "varjo-2026": [
+      {
+        "date": "2026-10-29",
+        "kind": "product",
+        "title_ko": "핀란드 방위군과 드론 대응 훈련 협력",
+        "title_en": "Collaboration with Finnish Defence Forces for counter-UAS training",
+        "detail_ko": "Varjo가 핀란드 방위군 혁신 부서와 협력하여 XR-4 헤드셋을 활용한 혼합 현실 드론 대응 훈련 시스템을 시험합니다.",
+        "detail_en": "Varjo and the Finnish Defence Forces Innovation Unit are collaborating to test mixed reality training for counter-drone operations using XR-4 headsets.",
+        "source_url": "https://milidom.net/news/1440558",
+        "source_name": "milidom.net",
+        "found": "2026-11-11"
+      },
+      {
+        "date": "2026-07",
+        "kind": "ipo",
+        "title_ko": "주식회사로 전환, IPO 준비",
+        "title_en": "Changed to public limited company, preparing for IPO",
+        "detail_ko": "Varjo가 2026년 7월에 기업 형태를 유한회사에서 주식회사(public limited company)로 전환했습니다. 이는 헬싱키 증시 상장을 위한 준비 단계로 보입니다.",
+        "detail_en": "Varjo changed its corporate form from a limited company to a public limited company in July 2026, seen as a step towards a Helsinki stock exchange listing.",
+        "source_url": "https://www.talouselama.fi/uutiset/a/4c38571a-fd2c-419f-94c6-424d87f23901",
+        "source_name": "Talouselämä",
+        "found": "2026-11-11"
+      }
     ]
   },
   "checked": {
@@ -459,6 +518,8 @@
     "talkiatry-2026": "2026-11-09",
     "zymergen-bio-2026": "2026-11-09",
     "lightspeed-restaurant-2026": "2026-11-10",
-    "motherduck-2026": "2026-11-10"
+    "motherduck-2026": "2026-11-10",
+    "the-every-company-2026": "2026-11-11",
+    "varjo-2026": "2026-11-11"
   }
 }
