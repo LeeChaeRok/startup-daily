@@ -1,6 +1,119 @@
 {
   "days": [
     {
+      "date": "2026-11-12",
+      "cost_usd": 1.1283,
+      "budget_stops": 0,
+      "pool": 25,
+      "featured": [
+        "sandai-2026",
+        "project-omega-2026",
+        "voize-2026",
+        "palomma-2026",
+        "phaze-2026"
+      ],
+      "sectors": {
+        "health": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 38,
+          "adopted": 3
+        },
+        "robotics": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 30,
+          "adopted": 3
+        },
+        "mobility": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 39,
+          "adopted": 3
+        },
+        "climate": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 2
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 26,
+          "adopted": 3
+        },
+        "fintech": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 38,
+          "adopted": 3
+        },
+        "infra": {
+          "leads": 6,
+          "rejected": {
+            "country": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 16,
+          "adopted": 2
+        },
+        "enterprise": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 61,
+          "adopted": 3
+        },
+        "consumer": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 14,
+          "adopted": 2
+        },
+        "ai": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 2
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 24,
+          "adopted": 3
+        }
+      },
+      "yc": {
+        "leads": 10,
+        "accepted": 10,
+        "researched": 10,
+        "research_failed": 0,
+        "links_dropped": 0,
+        "links_kept": 68,
+        "adopted": 10
+      }
+    },
+    {
       "date": "2026-11-11",
       "cost_usd": 0.8802,
       "budget_stops": 0,

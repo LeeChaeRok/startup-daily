@@ -490,6 +490,65 @@
         "source_name": "Talouselämä",
         "found": "2026-11-11"
       }
+    ],
+    "fourcasting-2026": [
+      {
+        "date": "2026-10-14",
+        "kind": "product",
+        "title_ko": "Outcome-as-a-Service 출시",
+        "title_en": "Launches Outcome-as-a-Service for Supply Chain",
+        "detail_ko": "포카이츠가 AI 에이전트 기반의 새로운 판매·전달 모델 'Outcome-as-a-Service for Supply Chain'을 출시했다. 10년간의 네트워크 데이터를 바탕으로 고객이 책임지는 비즈니스 결과에 맞춰 서비스를 제공한다.",
+        "detail_en": "FourKites launched Outcome-as-a-Service for Supply Chain, a go-to-market model centered on customers' business results, backed by over a decade of network data and AI agents.",
+        "source_url": "https://www.fourkites.ai/press/fourkites-launches-outcome-as-a-service-for-supply-chain",
+        "source_name": "FourKites",
+        "found": "2026-11-12"
+      },
+      {
+        "date": "2026-07-07",
+        "kind": "product",
+        "title_ko": "tms, FourKites 도입 발표",
+        "title_en": "tms Selects FourKites for Global Delivery",
+        "detail_ko": "tms가 포카이츠의 실시간 네트워크와 디지털 트윈 솔루션을 도입해 글로벌 해상 및 미국 철도 화물 추적을 시작했다.",
+        "detail_en": "tms deployed FourKites to track global ocean shipments and U.S. rail movements, improving OTIF performance and reducing manual work.",
+        "source_url": "https://www.fourkites.ai/press/tms-selects-fourkites-global-delivery",
+        "source_name": "FourKites",
+        "found": "2026-11-12"
+      },
+      {
+        "date": "2026-05-07",
+        "kind": "product",
+        "title_ko": "Booking Connect for Ocean 출시",
+        "title_en": "Launches Booking Connect for Ocean",
+        "detail_ko": "포카이츠가 해상 운송 예약 자동화 도구 'Booking Connect for Ocean'을 출시했다. 이를 통해 화주가 선사와 직접 해상 예약을 수행할 수 있게 됐다.",
+        "detail_en": "FourKites launched Booking Connect for Ocean, a tool that automates ocean freight booking requests, confirmations and shipment creation for shippers.",
+        "source_url": "https://www.joc.com/article/fourkites-takes-aim-at-automating-ocean-bookings-for-shippers-6216525",
+        "source_name": "Journal of Commerce",
+        "found": "2026-11-12"
+      }
+    ],
+    "gradiant-2026": [
+      {
+        "date": "2026-09-22",
+        "kind": "acquired",
+        "title_ko": "말레이시아 시그마 워터 인수",
+        "title_en": "Gradiant acquires Malaysia's Sigma Water",
+        "detail_ko": "그래디언트가 말레이시아 산업용 폐수처리 기업 시그마 워터 엔지니어링을 인수했다. 이는 말레이시아 및 동남아시아 시장 확장을 위한 첫 물리적 진출이다.",
+        "detail_en": "Gradiant acquired Sigma Water Engineering, a Malaysia-based industrial wastewater treatment company, marking its first physical expansion into Malaysia and strengthening its presence in Southeast Asia.",
+        "source_url": "https://theedgemalaysia.com/article/water-solutions-provider-gradiant-acquires-malaysiabased-sigma-water-regional-expansion",
+        "source_name": "The Edge Malaysia",
+        "found": "2026-11-12"
+      },
+      {
+        "date": "2026-05-18",
+        "kind": "funding",
+        "title_ko": "시리즈 E 투자 유치, 기업가치 20억 달러",
+        "title_en": "Series E financing at $2 billion valuation",
+        "detail_ko": "그래디언트가 시리즈 E 투자 유치를 마감하며 기업가치 20억 달러를 인정받았다. Safar Partners와 Hostplus가 주도했고 ClearVision Ventures 등이 참여했다.",
+        "detail_en": "Gradiant closed a Series E financing at a $2 billion valuation, led by Safar Partners and Hostplus Superannuation Fund, with participation from ClearVision Ventures and other global investors.",
+        "source_url": "https://gradiant.com/press-release/gradiant-announces-series-e-financing-at-2-billion-valuation-to-accelerate-expansion-in-ai-semiconductors-and-industrial-water-infrastructure/",
+        "source_name": "Gradiant",
+        "found": "2026-11-12"
+      }
     ]
   },
   "checked": {
@@ -520,6 +579,8 @@
     "lightspeed-restaurant-2026": "2026-11-10",
     "motherduck-2026": "2026-11-10",
     "the-every-company-2026": "2026-11-11",
-    "varjo-2026": "2026-11-11"
+    "varjo-2026": "2026-11-11",
+    "fourcasting-2026": "2026-11-12",
+    "gradiant-2026": "2026-11-12"
   }
 }
