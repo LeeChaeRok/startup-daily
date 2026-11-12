@@ -5,7 +5,7 @@ import Sheet from '../components/Sheet.jsx'
 import StartupRow from '../components/StartupRow.jsx'
 import { useToast } from '../components/toast-context.js'
 import { Meta, ReadButton, SaveButton, Tag } from '../components/bits.jsx'
-import { startups, byId, canAnalyze, cleanAmount, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
+import { startups, byId, canAnalyze, cleanAmount, isYcPick, issueNo, LENS_VERDICTS, parseAmountUSD } from '../lib/data.js'
 import { splitAmount } from '../lib/amount.js'
 import { CompareTable } from './Sector.jsx'
 import { UpdateBanner } from '../components/FollowUp.jsx'
@@ -244,7 +244,9 @@ function EntryBanner({ startup: s }) {
         <strong>Startup Daily</strong> · {L('지금 뜨는 회사를 하루 한 묶음으로 소개해요.', 'Startups on the rise, one batch a day.')}
       </p>
       <p>
-        {s.featured === false
+        {isYcPick(s)
+          ? L(`Y Combinator ${s.yc.batch} 배치 회사로, 제${issueNo(s.date)}호(${monthDay(s.date)}) YC 섹션에 실렸어요.`, `A Y Combinator ${s.yc.batch} company, in the YC picks of Issue #${issueNo(s.date)} (${monthDay(s.date)}).`)
+          : s.featured === false
           ? L(`${monthDay(s.date)} 분야별로 고른 회사예요.`, `Picked by sector on ${monthDay(s.date)}.`)
           : L(`이 글은 제${issueNo(s.date)}호(${monthDay(s.date)})에 실렸어요.`, `This profile ran in Issue #${issueNo(s.date)} (${monthDay(s.date)}).`)}{' '}
         <a href={`#/d/${s.date}`}>{s.featured === false ? L('그날 호 보기', "See that day's issue") : L('이 호 전체 보기', 'See the full issue')}</a>
@@ -305,7 +307,9 @@ function Hero({ startup: s, list, share, from, desktop, wide, timeRef }) {
               ? L(`저장함 ${list.length}곳 중 ${pos + 1}번째`, `${pos + 1} of ${list.length} saved`)
               : from === 'mine'
                 ? L(`내 5곳 중 ${pos + 1}번째`, `${pos + 1} of your ${list.length}`)
-                : L(`${list.length}곳 중 ${pos + 1}번째`, `${pos + 1} of ${list.length}`)}
+                : isYcPick(s)
+                  ? L(`YC ${list.length}곳 중 ${pos + 1}번째`, `${pos + 1} of ${list.length} from YC`)
+                  : L(`${list.length}곳 중 ${pos + 1}번째`, `${pos + 1} of ${list.length}`)}
           </>
         )}
       </p>
@@ -926,7 +930,13 @@ function NextCard({ startup: s, list, from }) {
     return (
       <div className="next next--end">
         <p className="next__kicker">
-          {from === 'saved' ? L('저장함 끝', 'End of saved') : from === 'mine' ? L('내 5곳 끝', 'End of your five') : L(`제${issueNo(s.date)}호 끝`, `End of Issue #${issueNo(s.date)}`)}
+          {from === 'saved'
+            ? L('저장함 끝', 'End of saved')
+            : from === 'mine'
+              ? L('내 5곳 끝', 'End of your five')
+              : isYcPick(s)
+                ? L(`제${issueNo(s.date)}호 YC 끝`, `End of Issue #${issueNo(s.date)}'s YC picks`)
+                : L(`제${issueNo(s.date)}호 끝`, `End of Issue #${issueNo(s.date)}`)}
         </p>
         <a className="link-cta" href={backHref(from, s)}>
           {backLabel(from)} <Icon name="arrowRight" size={16} />

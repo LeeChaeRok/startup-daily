@@ -9,6 +9,8 @@ export function liteRecord(s) {
     date: s.date,
     // false: a sector-pool company that is not in the day's shared five (_workspace/14)
     featured: s.featured !== false,
+    // the issue's YC section (scripts/lib/yc.mjs): batch for the row's label
+    ...(s.yc ? { yc: { batch: s.yc.batch, url: s.yc.url } } : {}),
     sector: s.sector,
     name_ko: s.name_ko,
     name_en: s.name_en,

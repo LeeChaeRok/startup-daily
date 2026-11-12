@@ -1354,7 +1354,11 @@
       "http_status": 200,
       "checked_at": "2026-11-08T23:49:02.729Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Summer 2026",
+      "url": "https://www.ycombinator.com/companies/gutgutgoose"
+    }
   },
   {
     "sector": "robotics",
@@ -1546,7 +1550,11 @@
       "http_status": 200,
       "checked_at": "2026-11-08T23:49:02.729Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/rodeo-robotics"
+    }
   },
   {
     "sector": "robotics",
@@ -3310,7 +3318,11 @@
       "http_status": 200,
       "checked_at": "2026-11-08T23:49:02.729Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Summer 2026",
+      "url": "https://www.ycombinator.com/companies/hyperprobe"
+    }
   },
   {
     "sector": "infra",
@@ -4442,7 +4454,11 @@
       "http_status": 200,
       "checked_at": "2026-11-08T23:49:02.729Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Summer 2026",
+      "url": "https://www.ycombinator.com/companies/trynearby"
+    }
   },
   {
     "sector": "consumer",
@@ -4649,7 +4665,11 @@
       "http_status": 200,
       "checked_at": "2026-11-08T23:49:02.729Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/roma"
+    }
   },
   {
     "sector": "ai",

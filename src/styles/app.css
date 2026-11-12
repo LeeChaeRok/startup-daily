@@ -427,6 +427,8 @@ a { color: inherit; text-decoration: none; }
 .row.is-selected .row__link { background: var(--sd-surface); box-shadow: inset 3px 0 0 var(--sd-accent); }
 
 .row--compact .row__link { grid-template-columns: auto 32px minmax(0, 1fr) auto; padding-block: 12px; column-gap: 10px; margin-inline: 0; }
+/* no rank column (the YC section, the saved list beside a company) */
+.row--compact .row__link:not(:has(.row__rank)) { grid-template-columns: 32px minmax(0, 1fr) auto; }
 .row--compact .row__rank { padding-top: 5px; font-size: 13px; width: 18px; }
 .row--compact .row__name { font-size: 15px; }
 .row--compact .row__en { display: none; }
@@ -444,6 +446,15 @@ a { color: inherit; text-decoration: none; }
 .card__title { display: flex; align-items: center; gap: 6px; font-size: var(--sd-fs-title-3); font-weight: 700; color: var(--sd-positive); }
 .card__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .card__hint { font-size: 13px; color: var(--sd-ink-3); margin-top: 10px; }
+
+/* the issue's YC section: Y Combinator companies outside the five (scripts/lib/yc.mjs) */
+.yc { margin-top: 32px; }
+.yc__count { color: var(--sd-ink-3); font-weight: 600; margin-left: 2px; }
+.yc__lede { font-size: 13px; line-height: 1.5; color: var(--sd-ink-3); margin: 2px 0 0; }
+.rows--yc { border-top: 0; margin-top: 8px; }
+.yc__more { width: 100%; margin-top: 12px; }
+.yc--side { margin-top: 28px; }
+.yc--side .section-head__title { font-size: 15px; }
 
 /* past issues */
 .past { margin-top: 32px; }

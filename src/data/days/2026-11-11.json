@@ -2866,7 +2866,11 @@
       "http_status": 200,
       "checked_at": "2026-11-11T00:42:45.023Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/liquid-energy"
+    }
   },
   {
     "sector": "fintech",
@@ -3272,7 +3276,11 @@
       "http_status": 200,
       "checked_at": "2026-11-11T00:42:45.023Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Summer 2026",
+      "url": "https://www.ycombinator.com/companies/qlo"
+    }
   },
   {
     "sector": "infra",
@@ -3685,7 +3693,11 @@
       "http_status": 200,
       "checked_at": "2026-11-11T00:42:45.023Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Summer 2026",
+      "url": "https://www.ycombinator.com/companies/executor"
+    }
   },
   {
     "sector": "enterprise",
@@ -4265,7 +4277,11 @@
       "http_status": 200,
       "checked_at": "2026-11-11T00:42:45.023Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/theo"
+    }
   },
   {
     "sector": "consumer",

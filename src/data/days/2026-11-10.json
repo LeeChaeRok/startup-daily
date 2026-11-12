@@ -2675,7 +2675,11 @@
       "http_status": 200,
       "checked_at": "2026-11-10T02:50:15.417Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/inflection-space-systems"
+    }
   },
   {
     "sector": "climate",
@@ -4611,6 +4615,10 @@
       "http_status": 200,
       "checked_at": "2026-11-10T02:50:15.417Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Summer 2026",
+      "url": "https://www.ycombinator.com/companies/moonshot-computer"
+    }
   }
 ]

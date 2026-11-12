@@ -19,7 +19,8 @@
  *      ISSUE_DATE          YYYY-MM-DD (default: today in KST)
  *      POOL_SECTORS        comma-separated sector keys to generate (default: all nine)
  *      MAX_COST_USD        stop researching once the run has spent this much (default 3)
- *      YC_PICKS            Y Combinator leads mixed in a day (default 5, 0 turns them off)
+ *      YC_PICKS            Y Combinator companies a day for the issue's YC section, outside the
+ *                          pools and the shared five (default 10, 0 turns them off)
  *      RESEARCH_PARALLEL   research calls at once (default 6; lower it if OpenRouter rate-limits)
  *      FOLLOWUPS           0 turns off the follow-up step (default on)
  *      TRANSLATE           0 turns off the English translation step (default on)
@@ -59,7 +60,7 @@ const RESEARCH = 4 // researched per sector
 const DISCOVER_PARALLEL = 3
 const RESEARCH_PARALLEL = Number(process.env.RESEARCH_PARALLEL || 6)
 const MAX_COST = Number(process.env.MAX_COST_USD || 3)
-const YC_PICKS = Number(process.env.YC_PICKS ?? 5) // Y Combinator leads a day (scripts/lib/yc.mjs)
+const YC_PICKS = Number(process.env.YC_PICKS ?? 10) // the YC section's companies a day (scripts/lib/yc.mjs)
 
 const args = process.argv.slice(2)
 const flag = (name) => {
@@ -194,7 +195,7 @@ async function research(llm, candidate, searched) {
       r.citations.forEach((c) => searched.add(stripUrl(c.url)))
       const profile = await parseOrRepair(llm, r.text)
       console.log(`  researched ${candidate.name_en} (${r.model}, ${r.citations.length} citations)`)
-      return { ...profile, _model: r.model, _sector: candidate._sector, attention: candidate.attention }
+      return { ...profile, _model: r.model, _sector: candidate._sector, _yc: candidate._yc, attention: candidate.attention }
     } catch (err) {
       // OpenRouter's own fallback only covers API errors; a cut-off or broken answer is retried
       // here on the next model in the list
@@ -246,6 +247,7 @@ async function main() {
     poolSectors.map((k) => [k, { leads: 0, rejected: {}, researched: 0, research_failed: 0, links_dropped: 0, links_kept: 0, adopted: 0 }]),
   )
   const statOf = (k) => stats[k] || (stats[k] = { leads: 0, rejected: {}, researched: 0, research_failed: 0, links_dropped: 0, links_kept: 0, adopted: 0 })
+  const ycStats = { leads: 0, accepted: 0, researched: 0, research_failed: 0, links_dropped: 0, links_kept: 0, adopted: 0 }
   const searched = new Set()
   let profiles
   let llm = null
@@ -272,26 +274,6 @@ async function main() {
       }
     })
 
-    // up to five YC companies (scripts/lib/yc.mjs), each in another sector, go first in their
-    // sector's leads, so the research cap can't push them out; the same selection rules apply.
-    // They take a research slot the web discovery would have used, so the cost stays the same.
-    if (YC_PICKS > 0) {
-      try {
-        const yc = pickYc(await fetchYcCompanies({ log: console.log }), {
-          date,
-          want: YC_PICKS,
-          sectors: poolSectors,
-          existingNames: existing.flatMap((s) => [s.name_en, s.name_ko]),
-        })
-        for (const lead of yc) {
-          leadsBySector[sectors.findIndex((x) => x.key === lead._sector)].unshift(lead)
-          console.log(`YC lead: ${lead.name_en} (${lead._sector})`)
-        }
-      } catch (err) {
-        console.log(`YC leads skipped: ${err.message}`)
-      }
-    }
-
     // selection rules per sector, against everything published and everything picked so far today
     const picked = []
     const shortlists = leadsBySector.map((leads, i) => {
@@ -308,6 +290,27 @@ async function main() {
     const queue = interleave(shortlists)
     if (queue.length < 3) throw new Error(`Only ${queue.length} leads passed the selection rules`)
 
+    // the YC track (scripts/lib/yc.mjs): up to ten companies from the newest batches, researched
+    // after the sector leads and kept out of the pools and the shared five (see below)
+    if (YC_PICKS > 0) {
+      try {
+        const leads = pickYc(await fetchYcCompanies({ log: console.log }), {
+          date,
+          want: YC_PICKS,
+          sectors: poolSectors,
+          existingNames: existing.flatMap((s) => [s.name_en, s.name_ko]),
+        })
+        const { accepted, rejected } = selectCandidates(leads, [...existing, ...picked], YC_PICKS, { maxPerCountry: Infinity })
+        for (const r of rejected) console.log(`  reject YC lead ${r.name}: ${r.reason}`)
+        ycStats.leads = leads.length
+        ycStats.accepted = accepted.length
+        for (const lead of accepted) console.log(`YC lead: ${lead.name_en} (${lead._sector}, ${lead._yc.batch})`)
+        queue.push(...accepted)
+      } catch (err) {
+        console.log(`YC leads skipped: ${err.message}`)
+      }
+    }
+
     console.log(`Researching ${queue.length} companies (${RESEARCH_PARALLEL} at a time)…`)
     profiles = (
       await mapLimit(queue, RESEARCH_PARALLEL, async (c) => {
@@ -316,8 +319,9 @@ async function main() {
           return null
         }
         const p = await research(llm, c, searched)
-        statOf(c._sector).researched++
-        if (!isComplete(p)) statOf(c._sector).research_failed++
+        const st = c._yc ? ycStats : statOf(c._sector)
+        st.researched++
+        if (!isComplete(p)) st.research_failed++
         return p
       })
     ).filter(isComplete)
@@ -331,9 +335,10 @@ async function main() {
   for (const r of rejected) console.log(`  reject ${r.name}: ${r.reason}`)
 
   const generatedAt = new Date().toISOString()
-  const normalized = accepted.map(({ _model, _sector, ...c }) => {
+  const normalized = accepted.map(({ _model, _sector, _yc, ...c }) => {
     const n = normalize(c, { date, model: _model || 'manual', generatedAt, log: console.log })
-    return { ...n, sector: poolSector(c, _sector) }
+    const yc = _yc || c.yc
+    return { ...n, sector: poolSector(c, _sector), ...(yc ? { yc } : {}) }
   })
   // ids and names are final only now; catch a company already published under another id
   const { kept: unique } = dropDuplicates(normalized, existingForDedup, { log: console.log })
@@ -341,8 +346,9 @@ async function main() {
   const { profiles: verified, kept, dropped } = await verifyLinks(unique, { searched, checkedAt: generatedAt, log: console.log })
   console.log(`Links: kept ${kept}, dropped ${dropped} unverifiable`)
   for (const p of verified) {
-    statOf(p.sector).links_kept += linkCount(p)
-    statOf(p.sector).links_dropped += before.get(p.id) - linkCount(p)
+    const st = p.yc ? ycStats : statOf(p.sector)
+    st.links_kept += linkCount(p)
+    st.links_dropped += before.get(p.id) - linkCount(p)
   }
 
   // strongest first within each sector, then at most PER_SECTOR each
@@ -350,13 +356,16 @@ async function main() {
     .map((p, i) => ({ p, i, score: featureScore(p, date) }))
     .sort((a, b) => b.score - a.score || a.i - b.i)
     .map(({ p }) => p)
-  const { kept: pool, over } = capPerSector(ranked, PER_SECTOR)
+  const { kept: pool, over } = capPerSector(ranked.filter((p) => !p.yc), PER_SECTOR)
   for (const p of over) console.log(`  over the sector cap: ${p.name_en} (${p.sector})`)
   for (const p of pool) statOf(p.sector).adopted++
 
+  // the shared five come from the sector pools only, so the YC section never repeats them
   const featuredIds = pickFeatured(pool, { date, want: FEATURED })
   if (featuredIds.length < 3) throw new Error(`Only ${featuredIds.length} companies for the shared five`)
-  const day = orderDay(pool, featuredIds)
+  const yc = ranked.filter((p) => p.yc).slice(0, YC_PICKS)
+  ycStats.adopted = yc.length
+  const day = [...orderDay(pool, featuredIds), ...yc.map((p) => ({ ...p, featured: false }))]
 
   // Logos are saved into public/logos; a dry run skips them unless --logos.
   if (live || args.includes('--logos')) {
@@ -434,7 +443,7 @@ async function main() {
 
   const statsFile = fs.existsSync(STATS_PATH) ? JSON.parse(fs.readFileSync(STATS_PATH, 'utf-8')) : { days: [] }
   statsFile.days = [
-    { date, cost_usd: llm ? Number(llm.cost().toFixed(4)) : 0, budget_stops: budgetStops, pool: day.length, featured: featuredIds, sectors: stats },
+    { date, cost_usd: llm ? Number(llm.cost().toFixed(4)) : 0, budget_stops: budgetStops, pool: day.length - yc.length, featured: featuredIds, sectors: stats, yc: ycStats },
     ...statsFile.days.filter((d) => d.date !== date),
   ].slice(0, 120)
   fs.writeFileSync(STATS_PATH, JSON.stringify(statsFile, null, 2) + '\n', 'utf-8')

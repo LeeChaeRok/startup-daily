@@ -2721,7 +2721,11 @@
       "http_status": 200,
       "checked_at": "2026-11-07T23:47:32.267Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Summer 2026",
+      "url": "https://www.ycombinator.com/companies/greypoint-industries"
+    }
   },
   {
     "sector": "climate",
@@ -3338,7 +3342,11 @@
       "http_status": 200,
       "checked_at": "2026-11-07T23:47:32.267Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/ailit"
+    }
   },
   {
     "sector": "fintech",
@@ -3721,7 +3729,11 @@
       "http_status": 200,
       "checked_at": "2026-11-07T23:47:32.267Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/vouchwealth"
+    }
   },
   {
     "sector": "fintech",
@@ -4748,7 +4760,11 @@
       "http_status": 200,
       "checked_at": "2026-11-07T23:47:32.267Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/quippy"
+    }
   },
   {
     "sector": "ai",

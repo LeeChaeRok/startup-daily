@@ -32,7 +32,9 @@ function companyFiles() {
   const all = readAll()
   const en = readEn()
   const poolPublic = readData('pool-config.json', {}).public === true
-  const isPublic = (s) => poolPublic || s.featured !== false
+  // the shared five, and the YC section's companies (scripts/lib/yc.mjs); the rest of the
+  // sector pool waits for pool-config.json
+  const isPublic = (s) => poolPublic || s.featured !== false || Boolean(s.yc)
   const files = {}
   const set = (prefix, records) => {
     const english = records.map((s) => englishRecord(s, en[s.id]))
@@ -79,7 +81,7 @@ function companyPages() {
     name: 'startup-daily-company-pages',
     generateBundle() {
       const poolPublic = readData('pool-config.json', {}).public === true
-      const all = readAll().filter((s) => poolPublic || s.featured !== false)
+      const all = readAll().filter((s) => poolPublic || s.featured !== false || Boolean(s.yc))
       const dates = [...new Set(all.map((s) => s.date))].sort()
       for (const s of all) {
         if (!/^[\w-]+$/.test(s.id || '')) continue

@@ -1,12 +1,13 @@
 /**
- * Y Combinator as a second lead source: up to five companies a day (one per sector) from the newest batches,
- * next to the model's own web discovery. Data comes from yc-oss (https://github.com/yc-oss/api),
- * an unofficial daily mirror of ycombinator.com/companies — when it is down the run just goes
- * on without YC leads.
+ * Y Combinator as its own daily track: up to ten companies a day from the newest batches,
+ * researched like the rest but kept out of the sector pools and the shared five. They are
+ * published with a `yc` field and shown in the issue's YC section (five, or ten on request).
+ * Data comes from yc-oss (https://github.com/yc-oss/api), an unofficial daily mirror of
+ * ycombinator.com/companies — when it is down the run just goes on without YC companies.
  *
- * Capped at one per sector: YC alone would tilt the pool towards US B2B AI. Only tiny, active,
- * non-"top" companies from the two newest full batches, so they are early and not famous.
- * The pick is seeded by the issue date: a rerun of the same day asks for the same companies.
+ * Spread over the sectors (one each, then a second each): YC alone would tilt towards US B2B AI.
+ * Only tiny, active, non-"top" companies from the two newest full batches, so they are early and
+ * not famous. The pick is seeded by the issue date: a rerun of the same day asks for the same companies.
  */
 const API = 'https://yc-oss.github.io/api'
 const TIMEOUT_MS = 15000
@@ -72,8 +73,8 @@ function seeded(seedText) {
 const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '')
 
 /**
- * Pick `want` YC companies for `date`, each from a different sector in `sectors`, skipping
- * names already published. Returns discovery-shaped leads ({ name_en, website, …, _sector }).
+ * Pick `want` YC companies for `date`, spread over the sectors in `sectors`, skipping names
+ * already published. Returns discovery-shaped leads ({ name_en, website, …, _sector, _yc }).
  */
 export function pickYc(companies, { date, want = 2, sectors, existingNames = [] }) {
   const seen = new Set(existingNames.map(norm))
@@ -89,30 +90,45 @@ export function pickYc(companies, { date, want = 2, sectors, existingNames = [] 
     const j = Math.floor(rand() * (i + 1))
     ;[pool[i], pool[j]] = [pool[j], pool[i]]
   }
-  const used = new Set()
+  // spread over the sectors: one each first, then a second each when more are wanted than
+  // there are sectors (ten a day over nine sectors)
+  const used = new Map()
   const out = []
-  for (const co of pool) {
-    if (out.length >= want) break
-    const sector = ycSector(co)
-    if (used.has(sector)) continue
-    used.add(sector)
-    const place = ycPlace(co.all_locations)
-    out.push({
-      name_en: co.name.trim(),
-      name_ko: '',
-      website: co.website,
-      country_ko: place.country_ko,
-      company_stage: 'Seed',
-      status: 'active',
-      why_now: `Y Combinator ${co.batch} batch company: ${String(co.one_liner || '').trim()} Find its most recent news (demo day, round, launch, customers).`,
-      evidence_url: co.url || '',
-      attention: 2,
-      _sector: sector,
-      _source: 'yc',
-    })
+  const taken = new Set()
+  for (const cap of [1, Math.max(1, Math.ceil(want / Math.max(1, sectors.length)))]) {
+    for (const co of pool) {
+      if (out.length >= want) break
+      const sector = ycSector(co)
+      if (taken.has(co.id) || (used.get(sector) || 0) >= cap) continue
+      used.set(sector, (used.get(sector) || 0) + 1)
+      taken.add(co.id)
+      out.push(lead(co, sector))
+    }
   }
   return out
 }
+
+function lead(co, sector) {
+  const place = ycPlace(co.all_locations)
+  return {
+    name_en: co.name.trim(),
+    name_ko: '',
+    website: co.website,
+    country_ko: place.country_ko,
+    company_stage: 'Seed',
+    status: 'active',
+    why_now: `Y Combinator ${co.batch} batch company: ${String(co.one_liner || '').trim()} Find its most recent news (demo day, round, launch, customers).`,
+    evidence_url: co.url || '',
+    attention: 2,
+    _sector: sector,
+    _source: 'yc',
+    // kept on the published record as `yc`: the issue's YC section (src/screens/Issue.jsx)
+    _yc: ycTag(co),
+  }
+}
+
+/** What a published record keeps about its YC listing. */
+export const ycTag = (co) => ({ batch: co.batch, url: co.url || `https://www.ycombinator.com/companies/${co.slug || ''}` })
 
 async function getJson(url) {
   const res = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT_MS) })

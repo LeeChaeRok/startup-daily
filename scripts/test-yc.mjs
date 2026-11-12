@@ -43,6 +43,14 @@ eq('published names skipped', pick({ existingNames: ['ALPHA', 'beta', 'Gamma', '
 eq('only the generated sectors', pick({ sectors: ['enterprise'] }), ['Delta'])
 const lead = pickYc(all, { date: '2026-11-06', sectors: ['fintech'] })[0]
 eq('lead shape', [lead.country_ko, lead.company_stage, lead._sector, lead.why_now.startsWith('Y Combinator Fall 2026')], ['미국', 'Seed', 'fintech', true])
+eq('lead keeps its YC listing', lead._yc, { batch: 'Fall 2026', url: 'https://www.ycombinator.com/companies/gamma' })
+
+// ten a day over nine sectors: one per sector first, then a second where there is one
+const many = [...Array(30)].map((_, i) => C(100 + i, `Co${i}`, ['Healthcare', 'Fintech', 'B2B'][i % 3], ['Healthcare', 'Fintech', 'B2B -> Legal'][i % 3]))
+const four = pickYc(many, { date: '2026-11-12', want: 4, sectors })
+const per = four.reduce((m, l) => ((m[l._sector] = (m[l._sector] || 0) + 1), m), {})
+eq('more than the sectors: spread, at most two each', [four.length, Object.keys(per).length, Math.max(...Object.values(per))], [4, 3, 2])
+eq('ten wanted, ten given when there are enough', pickYc(many, { date: '2026-11-12', want: 10, sectors: ['health', 'fintech', 'enterprise', 'ai', 'infra'] }).length >= 6, true)
 
 console.log(fails ? `\n${fails} failed` : '\nall passed')
 process.exit(fails ? 1 : 0)

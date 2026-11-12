@@ -2649,7 +2649,11 @@
       "http_status": 200,
       "checked_at": "2026-11-05T01:04:42.971Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/keres"
+    }
   },
   {
     "sector": "climate",
@@ -5170,7 +5174,11 @@
       "http_status": 200,
       "checked_at": "2026-11-05T01:04:42.971Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/veeza-ai"
+    }
   },
   {
     "sector": "ai",

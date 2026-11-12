@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from 'react'
 import Icon from '../components/Icon.jsx'
 import Sheet from '../components/Sheet.jsx'
 import { useToast } from '../components/toast-context.js'
-import { byDate, byId, dates, issueNo } from '../lib/data.js'
+import { byDate, byId, dates, isYcPick, issueNo, ycOf } from '../lib/data.js'
 import { prefersReducedMotion, useFlag, useMuted, useReadLog, useSaved } from '../lib/hooks.js'
 import { useMyIssue } from '../lib/my-issue.js'
 import { monthDay } from '../lib/format.js'
@@ -188,6 +188,8 @@ export function useContextList(startup, from, desktop = false) {
   return useMemo(() => {
     if (!startup) return []
     if (from === 'saved') return saved.map(byId).filter(Boolean)
+    // a YC-section company steps through the day's YC section, not the five
+    if (isYcPick(startup)) return ycOf(startup.date)
     if (from === 'mine' && my.available) return my.list
     if (my.available && !desktop) {
       const l = byDate(startup.date)

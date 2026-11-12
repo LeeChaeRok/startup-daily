@@ -7,7 +7,7 @@ import StartupRow from '../components/StartupRow.jsx'
 import ForRoleLine from '../components/ForRoleLine.jsx'
 import { AiNote, CorrectionBadge, MarkAllRead, Meta, ProgressRing } from '../components/bits.jsx'
 import { Footer } from '../components/Chrome.jsx'
-import { byDate, dates, followUps, formatUSD, issueNo, sectorMix, stats } from '../lib/data.js'
+import { byDate, dates, followUps, formatUSD, issueNo, sectorMix, stats, ycOf } from '../lib/data.js'
 import { buildQuery, localDate, useFlag, useInterests, useMuted, useReadLog } from '../lib/hooks.js'
 import { daysSince, dotDate, longDate, monthDay, numClass, pad2, readMinutes, shortDate } from '../lib/format.js'
 import { canonicalUrl, shareOrCopy } from '../lib/share.js'
@@ -133,6 +133,50 @@ export function IssueList({ date, selectedId, compact }) {
         <StartupRow key={s.id} startup={s} rank={i + 1} compact={compact} selected={s.id === selectedId} />
       ))}
     </ol>
+  )
+}
+
+const YC_SHORT = 5
+const YC_LONG = 10
+
+/** "YC 새 배치": the day's Y Combinator companies, never one of the five (scripts/lib/yc.mjs).
+    Five by default; a reader who wants more gets ten, and the choice is remembered. */
+export function YcSection({ date, compact = false, selectedId }) {
+  const all = ycOf(date)
+  const [ten, setTen] = useFlag('sd_yc_ten', false)
+  const headId = useId()
+  if (!all.length) return null
+  const max = Math.min(all.length, YC_LONG)
+  const shown = all.slice(0, ten ? max : YC_SHORT)
+  const batches = [...new Set(all.map((s) => s.yc?.batch).filter(Boolean))]
+  const toggle = () => {
+    setTen(!ten)
+    track('yc_toggle', { ten: !ten, date })
+  }
+  return (
+    <section className={`yc ${compact ? 'yc--side' : ''}`} aria-labelledby={headId}>
+      <div className="section-head">
+        <h2 id={headId} className="section-head__title">
+          {L('YC 새 배치', 'New at Y Combinator')} <span className="num yc__count">{shown.length}</span>
+        </h2>
+      </div>
+      <p className="yc__lede">
+        {L(
+          `Y Combinator ${batches.join('·')} 배치에서 고른 초기 회사예요. 위 5곳과 겹치지 않아요.`,
+          `Early companies from YC's ${batches.join(' and ')} ${batches.length === 1 ? 'batch' : 'batches'}, none of them in the five above.`,
+        )}
+      </p>
+      <ul className="rows rows--yc" aria-label={L('YC 새 배치 회사', 'Y Combinator companies')}>
+        {shown.map((s) => (
+          <StartupRow key={s.id} startup={s} issue={!compact} compact={compact} selected={s.id === selectedId} />
+        ))}
+      </ul>
+      {max > YC_SHORT && (
+        <button type="button" className="btn btn--secondary yc__more" aria-expanded={ten} onClick={toggle}>
+          {ten ? L(`${YC_SHORT}곳만 보기`, `Show ${YC_SHORT} only`) : L(`${max - YC_SHORT}곳 더 보기`, `Show ${max - YC_SHORT} more`)}
+        </button>
+      )}
+    </section>
   )
 }
 
@@ -940,6 +984,7 @@ export function IssueMobile({ date }) {
       )}
       {mine && my.short && <ShortCard n={my.list.length} hidden={muted.length > 0} />}
       {done > 0 && <MarkAllRead list={issue} />}
+      <YcSection date={date} />
       {latest && <TasteCard />}
       {latest && <LastWeekCard />}
       {/* when the done card already lists them, don't repeat */}

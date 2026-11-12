@@ -2124,7 +2124,11 @@
       "http_status": 200,
       "checked_at": "2026-11-07T00:15:25.656Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/odin-robotics"
+    }
   },
   {
     "sector": "mobility",
@@ -3481,7 +3485,11 @@
       "http_status": 200,
       "checked_at": "2026-11-07T00:15:25.656Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/ignition-benefits"
+    }
   },
   {
     "sector": "infra",
@@ -3903,7 +3911,11 @@
       "http_status": 200,
       "checked_at": "2026-11-07T00:15:25.656Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Summer 2026",
+      "url": "https://www.ycombinator.com/companies/inkbox"
+    }
   },
   {
     "sector": "infra",
@@ -5664,6 +5676,10 @@
       "http_status": 200,
       "checked_at": "2026-11-07T00:15:25.656Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Summer 2026",
+      "url": "https://www.ycombinator.com/companies/evergrove"
+    }
   }
 ]

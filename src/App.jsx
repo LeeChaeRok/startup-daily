@@ -5,7 +5,7 @@ import Onboarding from './components/Onboarding.jsx'
 import { useToast } from './components/toast-context.js'
 import { EmptyState } from './components/bits.jsx'
 import StartupRow from './components/StartupRow.jsx'
-import { IssueHeader, IssueList, IssueMobile, IssueOverview, IssueRail } from './screens/Issue.jsx'
+import { IssueHeader, IssueList, IssueMobile, IssueOverview, IssueRail, YcSection } from './screens/Issue.jsx'
 import Detail, { DetailRail } from './screens/Detail.jsx'
 import { onLensReady, useContextList } from './screens/detail-hooks.jsx'
 import Explore from './screens/Explore.jsx'
@@ -119,6 +119,7 @@ function SideList({ route }) {
       {/* on the issue's own page the centre column already carries the date and progress */}
       {startup ? <IssueHeader date={date} compact /> : <p className="split__label">{L('이 호의 회사', 'In this issue')}</p>}
       <IssueList date={date} selectedId={route.id} compact />
+      <YcSection date={date} compact selectedId={route.id} />
     </aside>
   )
 }

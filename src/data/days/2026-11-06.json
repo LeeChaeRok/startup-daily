@@ -3002,7 +3002,11 @@
       "http_status": 200,
       "checked_at": "2026-11-06T01:13:20.852Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/ryhla"
+    }
   },
   {
     "sector": "fintech",
@@ -4332,7 +4336,11 @@
       "http_status": 200,
       "checked_at": "2026-11-06T01:13:20.852Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/caveman"
+    }
   },
   {
     "sector": "enterprise",
@@ -4946,7 +4954,11 @@
       "http_status": 200,
       "checked_at": "2026-11-06T01:13:20.852Z"
     },
-    "featured": false
+    "featured": false,
+    "yc": {
+      "batch": "Fall 2026",
+      "url": "https://www.ycombinator.com/companies/godhands"
+    }
   },
   {
     "sector": "consumer",

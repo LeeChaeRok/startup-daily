@@ -172,6 +172,7 @@ export let weeks = []
 export let stats = { issues: 0, companies: 0, first: null, last: null }
 let issueCache = new Map()
 let poolCache = new Map()
+let ycCache = new Map()
 /** The data has sector-pool companies beyond the shared five (public pool, or ?preview=pool). */
 export let poolLive = false
 let context = { corrections: {}, lensIndex: {}, updates: {} }
@@ -186,10 +187,20 @@ const notify = () => {
 /** Re-render on any data change (a day's full records arriving). */
 export const useDataVersion = () => useSyncExternalStore(subscribe, () => version)
 
+/** A company of the issue's YC section: published with `yc`, outside the shared five and the
+    sector pools (scripts/lib/yc.mjs). */
+export const isYcPick = (s) => Boolean(s.yc) && s.featured === false
+
 function index() {
   issueCache = new Map()
   poolCache = new Map()
+  ycCache = new Map()
   for (const s of startups) {
+    if (isYcPick(s)) {
+      if (!ycCache.has(s.date)) ycCache.set(s.date, [])
+      ycCache.get(s.date).push(s)
+      continue
+    }
     if (!poolCache.has(s.date)) poolCache.set(s.date, [])
     poolCache.get(s.date).push(s)
     // the issue is the day's shared five; older records have no flag and all count
@@ -198,7 +209,7 @@ function index() {
     issueCache.get(s.date).push(s)
   }
   dates = [...issueCache.keys()]
-  poolLive = startups.some((s) => s.featured === false)
+  poolLive = startups.some((s) => s.featured === false && !isYcPick(s))
 }
 
 export function initData({ startups: raw, corrections = {}, lensIndex = {}, updates = {} }) {
@@ -300,6 +311,11 @@ export function companiesOfSector(key) {
 /** The day's issue: its shared five ("모두의 5곳"). */
 export function byDate(date) {
   return issueCache.get(date) || []
+}
+
+/** The day's YC section, in the day file's order (strongest first). Never one of the five. */
+export function ycOf(date) {
+  return ycCache.get(date) || []
 }
 
 /** Every company of the day: the shared five first, then the rest of the sector pool. */
