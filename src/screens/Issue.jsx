@@ -140,9 +140,11 @@ const YC_SHORT = 5
 const YC_LONG = 10
 
 /** "YC 새 배치": the day's Y Combinator companies, never one of the five (scripts/lib/yc.mjs).
-    Five by default; a reader who wants more gets ten, and the choice is remembered. */
-export function YcSection({ date, compact = false, selectedId }) {
+    A lighter block than the issue: two-line items in a panel. Five by default; a reader who wants
+    more gets ten, and the choice is remembered. `grid` = two columns (desktop centre column). */
+export function YcSection({ date, grid = false, side = false, selectedId }) {
   const all = ycOf(date)
+  const { isRead } = useReadLog()
   const [ten, setTen] = useFlag('sd_yc_ten', false)
   const headId = useId()
   if (!all.length) return null
@@ -154,26 +156,45 @@ export function YcSection({ date, compact = false, selectedId }) {
     track('yc_toggle', { ten: !ten, date })
   }
   return (
-    <section className={`yc ${compact ? 'yc--side' : ''}`} aria-labelledby={headId}>
-      <div className="section-head">
-        <h2 id={headId} className="section-head__title">
-          {L('YC 새 배치', 'New at Y Combinator')} <span className="num yc__count">{shown.length}</span>
-        </h2>
-      </div>
-      <p className="yc__lede">
-        {L(
-          `Y Combinator ${batches.join('·')} 배치에서 고른 초기 회사예요. 위 5곳과 겹치지 않아요.`,
-          `Early companies from YC's ${batches.join(' and ')} ${batches.length === 1 ? 'batch' : 'batches'}, none of them in the five above.`,
-        )}
-      </p>
-      <ul className="rows rows--yc" aria-label={L('YC 새 배치 회사', 'Y Combinator companies')}>
+    <section className={`yc ${grid ? 'yc--grid' : ''} ${side ? 'yc--side' : ''}`} aria-labelledby={headId}>
+      <header className="yc__head">
+        <span className="yc__mark" aria-hidden="true">
+          Y
+        </span>
+        <div className="yc__titles">
+          <h2 id={headId} className="yc__title">
+            {L('YC 새 배치', 'New at Y Combinator')}
+          </h2>
+          <p className="yc__sub">
+            {L(`${batches.join('·')} · 오늘의 5곳과 별도`, `${batches.join(' · ')} · apart from the five`)}
+          </p>
+        </div>
+        <span className="yc__count num">{L(`${shown.length}곳`, `${shown.length}`)}</span>
+      </header>
+      <ul className="yc__list" aria-label={L('YC 새 배치 회사', 'Y Combinator companies')}>
         {shown.map((s) => (
-          <StartupRow key={s.id} startup={s} issue={!compact} compact={compact} selected={s.id === selectedId} />
+          <li key={s.id}>
+            <a
+              className={`yc-item ${isRead(s.id) ? 'is-read' : ''} ${s.id === selectedId ? 'is-selected' : ''}`}
+              href={`#/s/${s.id}`}
+              aria-current={s.id === selectedId ? 'page' : undefined}
+            >
+              <Logo startup={s} size={32} />
+              <span className="yc-item__body">
+                <span className="yc-item__name">
+                  {s.name_ko || s.name_en}
+                  {isRead(s.id) && <span className="sr-only">{L(', 읽음', ', read')}</span>}
+                </span>
+                <span className="yc-item__tag">{s.tagline}</span>
+              </span>
+            </a>
+          </li>
         ))}
       </ul>
       {max > YC_SHORT && (
-        <button type="button" className="btn btn--secondary yc__more" aria-expanded={ten} onClick={toggle}>
-          {ten ? L(`${YC_SHORT}곳만 보기`, `Show ${YC_SHORT} only`) : L(`${max - YC_SHORT}곳 더 보기`, `Show ${max - YC_SHORT} more`)}
+        <button type="button" className="yc__more" aria-expanded={ten} onClick={toggle}>
+          {ten ? L('5곳만 보기', 'Show five') : L(`${max - YC_SHORT}곳 더 보기`, `Show ${max - YC_SHORT} more`)}
+          <Icon name={ten ? 'chevronUp' : 'chevronDown'} size={16} />
         </button>
       )}
     </section>
@@ -1025,6 +1046,7 @@ export function IssueOverview({ date, wide }) {
       <ContinueCard date={date} />
       {date === dates[0] && <LastWeekCard />}
       <Preview startup={hero || ordered[0]} rank={hero ? rank : 1} resume={Boolean(hero) && resume} />
+      <YcSection date={date} grid />
       {date === dates[0] && <FollowUpSection />}
       {/* without the ≥1280 rail, past issues and the footer move under the article */}
       {!wide && (

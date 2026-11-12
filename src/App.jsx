@@ -15,7 +15,7 @@ import Settings from './screens/Settings.jsx'
 import Weekly from './screens/Weekly.jsx'
 import Sector from './screens/Sector.jsx'
 import Contests from './screens/Contests.jsx'
-import { SECTORS, byDate, byId, canonicalSector, dates, issueNo, retryDay, useDayLevel, weeks } from './lib/data.js'
+import { SECTORS, byDate, byId, canonicalSector, dates, isYcPick, issueNo, retryDay, useDayLevel, weeks } from './lib/data.js'
 import { navigate, useMediaQuery, useReadLog, useRoute } from './lib/hooks.js'
 import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
 import { longDate, monthDay, weekLabel } from './lib/format.js'
@@ -119,7 +119,8 @@ function SideList({ route }) {
       {/* on the issue's own page the centre column already carries the date and progress */}
       {startup ? <IssueHeader date={date} compact /> : <p className="split__label">{L('이 호의 회사', 'In this issue')}</p>}
       <IssueList date={date} selectedId={route.id} compact />
-      <YcSection date={date} compact selectedId={route.id} />
+      {/* beside a YC company, its section; the issue page shows it in the centre column */}
+      {startup && isYcPick(startup) && <YcSection date={date} side selectedId={route.id} />}
     </aside>
   )
 }
