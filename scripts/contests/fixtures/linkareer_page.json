@@ -1,0 +1,67 @@
+{
+ "data": {
+  "activities": {
+   "totalCount": 471,
+   "nodes": [
+    {
+     "id": "363781",
+     "title": "화포천습지 생물다양성 사진 공모전",
+     "organizationName": "김해시",
+     "createdAt": 1794408589000,
+     "recruitStartAt": 1794322800000,
+     "recruitCloseAt": 1796396399999,
+     "status": "OPEN",
+     "tenThousandUnitOfReward": 0,
+     "additionalBenefit": null,
+     "categories": [
+      {
+       "name": "사진/영상/UCC"
+      }
+     ],
+     "targets": [
+      {
+       "name": "대상 제한 없음"
+      }
+     ],
+     "benefits": [
+      {
+       "name": "기타"
+      }
+     ],
+     "detailText": {
+      "text": "상금 없음"
+     }
+    },
+    {
+     "id": "363780",
+     "title": "2026 강원일보 시니어문학상",
+     "organizationName": "강원일보",
+     "createdAt": 1794408528000,
+     "recruitStartAt": 1794322800000,
+     "recruitCloseAt": 1794495599999,
+     "status": "OPEN",
+     "tenThousandUnitOfReward": 500,
+     "additionalBenefit": null,
+     "categories": [
+      {
+       "name": "문학/시나리오"
+      }
+     ],
+     "targets": [
+      {
+       "name": "직장인/일반인"
+      }
+     ],
+     "benefits": [
+      {
+       "name": "상장 수여"
+      }
+     ],
+     "detailText": {
+      "text": "- 대상: 1편, 상금 300만원<br>- 최우수상: 부문별 1편씩, 상금 100만원<br>- 우수상: 부문별 1편씩, 상금 50만원<br>- 가작: 부문별 5편씩, 상금 10만원"
+     }
+    }
+   ]
+  }
+ }
+}

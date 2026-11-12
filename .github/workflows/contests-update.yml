@@ -1,0 +1,108 @@
+name: Contests Update
+
+# 공모전 탭 데이터: five Korean contest listing sites, collected incrementally every night
+# (scripts/contests/, _workspace/18_contests_batch-design.md).
+#
+# Scheduled runs use the repository variable CONTESTS_MODE and stay in dry-run (report only,
+# nothing committed) until it is set to `publish` (Settings → Secrets and variables → Actions →
+# Variables). The first three days are meant to be dry-runs.
+
+on:
+  schedule:
+    # 04:20 KST (19:20 UTC the day before), ahead of the 05:07 daily issue. Off the top of the
+    # hour on purpose: runs at :00 are delayed most when many workflows start at once.
+    - cron: '20 19 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'probe = one request per site · dry-run = collect and report · publish = commit and deploy'
+        type: choice
+        options: [dry-run, probe, publish]
+        default: dry-run
+      full_resync:
+        description: 'Ignore the stored state and read every site again (slow, about 1,300 requests)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# same group as the daily issue: their commits and deploys never overlap
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      MODE: ${{ inputs.mode || vars.CONTESTS_MODE || 'dry-run' }}
+      FULL_RESYNC: ${{ inputs.full_resync && '--full-resync' || '' }}
+      # Not secrets: they identify the Vercel project (same values as .vercel/project.json).
+      VERCEL_ORG_ID: team_mTcuMUdWSKLQ6vVS8OT93zHW
+      VERCEL_PROJECT_ID: prj_NNnu7wdtYfKdZPMPCQRWu94xKq36
+      HAS_VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # parsers against saved responses first: a site that changed its layout fails here,
+      # before anything is fetched
+      - name: Parser tests
+        run: python scripts/contests/test_parsers.py
+
+      - name: Collect
+        id: collect
+        run: |
+          set +e
+          python scripts/contests/run.py --mode "$MODE" $FULL_RESYNC --summary "$GITHUB_STEP_SUMMARY"
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          # 2 = published, but one site has failed three days running: deploy, then fail the job
+          if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then exit "$code"; fi
+
+      - uses: actions/setup-node@v4
+        if: env.MODE == 'publish'
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Build check
+        if: env.MODE == 'publish'
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit data
+        id: commit
+        if: env.MODE == 'publish'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/contests src/data/contests.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore: refresh contests for $(TZ=Asia/Seoul date +%F)"
+            git pull --rebase origin main
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # git pushes don't deploy this project; production goes out through the Vercel CLI.
+      - name: Deploy to Vercel
+        if: steps.commit.outputs.changed == 'true' && env.HAS_VERCEL_TOKEN == 'true'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: npx --yes vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
+
+      - name: Repeated site failure
+        if: steps.collect.outputs.code == '2'
+        run: |
+          echo "::error::A contest site has failed three days in a row; see the run summary."
+          exit 1

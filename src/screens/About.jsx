@@ -31,8 +31,8 @@ export default function About({ params }) {
         <strong>{L('아직 모르는, 지금 뜨는 스타트업', "Startups you haven't heard of yet")}</strong>
         <br />
         {L(
-          '하루 한 묶음, 덜 알려진 국내외 신생 스타트업을 왜 지금 뜨는지와 함께 소개해요. 공모전 탭에서는 여섯 개 공모전 사이트에 올라온, 지금 접수 중인 공모전을 한곳에 모아 보여 드려요.',
-          'A handful of under-the-radar startups every day, with why they matter now. The Contests tab gathers every open Korean contest from six listing sites in one place.',
+          '하루 한 묶음, 덜 알려진 국내외 신생 스타트업을 왜 지금 뜨는지와 함께 소개해요. 공모전 탭에서는 다섯 개 공모전 사이트에 올라온, 지금 접수 중인 공모전을 한곳에 모아 보여 드려요.',
+          'A handful of under-the-radar startups every day, with why they matter now. The Contests tab gathers every open Korean contest from five listing sites in one place.',
         )}
       </p>
       <p className="about-settings-link">
@@ -126,6 +126,30 @@ export default function About({ params }) {
             {L(
               '로고는 회사 웹사이트의 아이콘을 쓰고, 없으면 이니셜로 표시합니다.',
               'Logos come from each company’s website icon; when there isn’t one, we show its initial.',
+            )}
+          </li>
+        </ul>
+      </section>
+
+      <section id="about-contests" className="about-sec">
+        <h2>{L('공모전은 어떻게 모으나요', 'How contests are collected')}</h2>
+        <ul className="bullets">
+          <li>
+            {L(
+              'StartupDailyBot이 매일 새벽 한 번 위비티·콘테스트코리아·링커리어·씽굿·올콘의 공모전 목록을 읽고, 같은 공모전은 한 줄로 합칩니다.',
+              'StartupDailyBot reads the contest lists of Wevity, Contest Korea, Linkareer, Thinkgood and All-con once a night and merges the same contest into one row.',
+            )}
+          </li>
+          <li>
+            {L(
+              '제목·주최·기간·참가 대상·상금 같은 사실만 싣고 원문으로 연결합니다. 공고 본문과 포스터는 옮기지 않습니다.',
+              'Only facts are kept (title, host, dates, who can enter, prize), with a link to the original notice. Notice text and posters are not copied.',
+            )}
+          </li>
+          <li>
+            {L(
+              '사이트마다 1초에 한 번 넘게 요청하지 않고 robots.txt를 따릅니다. 거부 응답을 받은 날은 그 사이트를 더 읽지 않습니다.',
+              'At most one request a second per site, following robots.txt. A site that refuses the bot is not read again that day.',
             )}
           </li>
         </ul>

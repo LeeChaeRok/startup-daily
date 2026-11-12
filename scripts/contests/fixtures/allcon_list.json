@@ -1,0 +1,36 @@
+{
+ "sql": "SELECT C.cl_srl, C.cl_type, C.cl_cate, C.mb_id, C.cl_name, C.cl_title, C.cl_host, C.cl_start_date, C.cl_end_date, C.cl_target,\n                C.cl_status, C.cl_dday, C.cl_reg_date, A.ad_srl, C.cl_update,\n\t\t\t\t\t\t\t\t(SELECT SUM(cv_visit) FROM a2_contest_visit WHERE cl_srl = C.cl_srl) AS cl_view\n            FROM a2_ad_list A LEFT JOIN a2_contest_list C\n                ON A.cl_srl = C.cl_srl\n            WHERE C.cl_status > 0 AND C.cl_disp = 1 AND C.cl_type IN (1,3) AND C.cl_reserve_date < '2026-11-12 09:08:42' /*AND A.ad_status = 2*/ AND A.ad_code = 'BOT'\n            AND A.ad_st < '2026-11-12 09:08:42' AND A.ad_et > '2026-11-12 09:08:42'  AND (FIND_IN_SET(1, REPLACE(C.cl_target, ' ', '')) > 0 OR FIND_IN_SET(2, REPLACE(C.cl_target, ' ', '')) > 0 OR FIND_IN_SET(3, REPLACE(C.cl_target, ' ', '')) > 0 OR FIND_IN_SET(4, REPLACE(C.cl_target, ' ', '')) > 0 OR FIND_IN_SET(8, REPLACE(C.cl_target, ' ', '')) > 0 OR FIND_IN_SET(9, REPLACE(C.cl_target, ' ', '')) > 0)  order by A.ad_order asc, A.ad_et desc",
+ "currentPage": 1,
+ "totalPage": 12,
+ "totalCount": 147,
+ "perPage": 10,
+ "rows": [
+  {
+   "cl_srl": "541883",
+   "cl_cate": "<span class=\"badge cl_cate\">아이디어·창업·마케팅·네이밍</span><span class=\"badge cl_cate\">대학생</span><span class=\"badge cl_cate\">대학원생</span>",
+   "cl_status": "<span class='badge cl_status2'>접수중</span><br>D-29",
+   "cl_view": "14460",
+   "cl_title": "<a href='/hit/contest/4490?page=1&sortname=cl_order&sortorder=asc&t=1&ct=&sc=&tg='>2027 KT&G 국제 대학생 창업교류전(ASVF) 한국대표 모집</a>",
+   "cl_date": "26.08.10~26.12.11",
+   "cl_host": "한국경제신문",
+   "cl_is_star": "1"
+  },
+  {
+   "cl_srl": "543498",
+   "cl_cate": "<span class=\"badge cl_cate\">사진·영상</span><span class=\"badge cl_cate\">제한없음</span>",
+   "cl_status": "<span class='badge cl_status2'>접수중</span><br>D-5",
+   "cl_view": "4599",
+   "cl_title": "<a href='/hit/contest/4564?page=1&sortname=cl_order&sortorder=asc&t=1&ct=&sc=&tg='>[29역숏폼왕] 제1회 인스탁스 영화제</a>",
+   "cl_date": "26.10.08~26.11.17",
+   "cl_host": "한국후지필름, 한국경제…",
+   "cl_is_star": "1"
+  }
+ ],
+ "para": {
+  "sortorder": "asc",
+  "page": "1",
+  "sortname": "cl_order",
+  "t": "1",
+  "rows": "15"
+ }
+}

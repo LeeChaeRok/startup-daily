@@ -1,6 +1,6 @@
-/* 공모전 (contests): Korean contest notices collected from six listing sites, merged so
-   one contest is one row (_workspace/16_contests). Fetched only when the tab opens:
-   /data/contests.json = { updated, from, to, sources, items[] }.
+/* 공모전 (contests): Korean contest notices collected nightly from five listing sites, merged so
+   one contest is one row (scripts/contests, data/contests). Fetched only when the tab opens:
+   /data/contests.json = { updated, from, to, sources, checked, items[] }.
 
    Contest text stays Korean in the English edition; only the interface is translated. */
 import { useEffect, useState } from 'react'
