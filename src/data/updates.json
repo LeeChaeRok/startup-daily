@@ -549,6 +549,30 @@
         "source_name": "Gradiant",
         "found": "2026-11-12"
       }
+    ],
+    "insilico-medicine-2026": [
+      {
+        "date": "2026-09-03",
+        "kind": "funding",
+        "title_ko": "3억 500만 달러 전환사채 발행 완료",
+        "title_en": "Completed Issue of US$305 Million Zero Coupon Convertible Bonds",
+        "detail_ko": "인실리코 메디신이 2026년 9월 3일, 2027년 만기 3억 500만 달러 규모의 무이자 전환사채 발행을 완료했다. 순수익은 약 3억 160만 달러다.",
+        "detail_en": "InSilico Medicine completed the issue of US$305,000,000 zero coupon convertible bonds due 2027 on September 3, 2026, with net proceeds of approximately US$301.6 million.",
+        "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090302431.pdf",
+        "source_name": "Hong Kong Stock Exchange (HKEX) filing",
+        "found": "2026-11-13"
+      },
+      {
+        "date": "2026-05",
+        "kind": "product",
+        "title_ko": "LabClaw 출시",
+        "title_en": "LabClaw Autonomous Laboratory Operating System Launch",
+        "detail_ko": "인실리코 메디신이 2026년 5월, 업계 최초의 경량 에이전트 기반 자율 실험실 운영 시스템 LabClaw를 출시했다.",
+        "detail_en": "In May 2026, Insilico Medicine released LabClaw, the industry's first autonomous laboratory operating system based on a lightweight agent architecture.",
+        "source_url": "https://insilico.com/news/s11n46hx31-commercialization-roadmap-validated-with",
+        "source_name": "Insilico Medicine News",
+        "found": "2026-11-13"
+      }
     ]
   },
   "checked": {
@@ -581,6 +605,8 @@
     "the-every-company-2026": "2026-11-11",
     "varjo-2026": "2026-11-11",
     "fourcasting-2026": "2026-11-12",
-    "gradiant-2026": "2026-11-12"
+    "gradiant-2026": "2026-11-12",
+    "insilico-medicine-2026": "2026-11-13",
+    "nuro-2026": "2026-11-13"
   }
 }

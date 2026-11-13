@@ -1,6 +1,117 @@
 {
   "days": [
     {
+      "date": "2026-11-13",
+      "cost_usd": 1.0515,
+      "budget_stops": 0,
+      "pool": 26,
+      "featured": [
+        "bharat-llm-2026",
+        "holiday-robotics-2026",
+        "north-vector-dynamics-2026",
+        "verda-2026",
+        "novamind-ai-2026"
+      ],
+      "sectors": {
+        "health": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 30,
+          "adopted": 3
+        },
+        "robotics": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 3
+          },
+          "researched": 3,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 30,
+          "adopted": 3
+        },
+        "mobility": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 33,
+          "adopted": 3
+        },
+        "climate": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 39,
+          "adopted": 3
+        },
+        "fintech": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 25,
+          "adopted": 3
+        },
+        "infra": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 28,
+          "adopted": 3
+        },
+        "enterprise": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 10,
+          "links_kept": 46,
+          "adopted": 3
+        },
+        "consumer": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 21,
+          "adopted": 3
+        },
+        "ai": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 5,
+          "adopted": 2
+        }
+      },
+      "yc": {
+        "leads": 10,
+        "accepted": 10,
+        "researched": 10,
+        "research_failed": 0,
+        "links_dropped": 2,
+        "links_kept": 77,
+        "adopted": 10
+      }
+    },
+    {
       "date": "2026-11-12",
       "cost_usd": 1.1283,
       "budget_stops": 0,
