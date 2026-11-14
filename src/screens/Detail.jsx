@@ -65,8 +65,8 @@ const BACK_SAVED = L('저장함으로', 'Back to saved')
 const BACK_ISSUE = L('이 호로 돌아가기', 'Back to this issue')
 const BACK_MINE = L('내 5곳으로', 'Back to your five')
 // where the end of the list leads back to, by the list the reader came from
-const backHref = (from, s) => (from === 'saved' ? '#/saved' : from === 'mine' ? '#/' : `#/d/${s.date}`)
-const backLabel = (from) => (from === 'saved' ? BACK_SAVED : from === 'mine' ? BACK_MINE : BACK_ISSUE)
+const backHref = (from, s) => (from === 'saved' ? '#/saved' : from === 'mine' ? '#/' : isYcPick(s) ? '#/yc' : `#/d/${s.date}`)
+const backLabel = (from, s) => (from === 'saved' ? BACK_SAVED : from === 'mine' ? BACK_MINE : s && isYcPick(s) ? L('YC 새 배치로', 'Back to YC') : BACK_ISSUE)
 const roundsLabel = (n) => L(`라운드 ${n}회`, `${n} ${n === 1 ? 'round' : 'rounds'}`)
 
 function Section({ id, n, title, children }) {
@@ -939,7 +939,7 @@ function NextCard({ startup: s, list, from }) {
                 : L(`제${issueNo(s.date)}호 끝`, `End of Issue #${issueNo(s.date)}`)}
         </p>
         <a className="link-cta" href={backHref(from, s)}>
-          {backLabel(from)} <Icon name="arrowRight" size={16} />
+          {backLabel(from, s)} <Icon name="arrowRight" size={16} />
         </a>
       </div>
     )
@@ -1172,7 +1172,7 @@ export default function Detail({ id, from, desktop, wide }) {
             </a>
           ) : (
             <a className="actionbar__next" href={backHref(from, s)}>
-              <span className="actionbar__nextname">{backLabel(from)}</span>
+              <span className="actionbar__nextname">{backLabel(from, s)}</span>
               <Icon name="arrowRight" size={18} />
             </a>
           )}

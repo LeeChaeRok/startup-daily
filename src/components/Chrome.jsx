@@ -3,6 +3,7 @@ import Icon from './Icon.jsx'
 import { LangToggle } from './LangSwitch.jsx'
 import { navigate, useSaved, useTheme } from '../lib/hooks.js'
 import { L } from '../lib/i18n.js'
+import { useSavedContests } from '../lib/contests.js'
 
 const THEME_NEXT = { system: 'light', light: 'dark', dark: 'system' }
 const THEME_LABEL = {
@@ -38,9 +39,31 @@ function Wordmark() {
 const NAV = [
   { key: 'issue', href: '#/', label: L('최신 호', 'Latest'), icon: 'today' },
   { key: 'explore', href: '#/explore', label: L('탐색', 'Explore'), icon: 'explore' },
+  { key: 'yc', href: '#/yc', label: L('YC', 'YC'), icon: 'spark' },
   { key: 'contests', href: '#/contests', label: L('공모전', 'Contests'), icon: 'trophy' },
-  { key: 'saved', href: '#/saved', label: L('저장', 'Saved'), icon: 'bookmark' },
 ]
+
+/** 저장함 lives in the top bar: a bookmark with the count of saved companies and contests. */
+function SavedButton({ section, desktop }) {
+  const { saved } = useSaved()
+  const { saved: contests } = useSavedContests()
+  const n = saved.length + contests.length
+  return (
+    <a
+      href="#/saved"
+      className={`icon-btn saved-btn ${desktop ? 'saved-btn--desktop' : ''}`}
+      aria-current={section === 'saved' ? 'page' : undefined}
+      aria-label={L(`저장함${n ? `, ${n}개` : ''}`, `Saved${n ? `, ${n}` : ''}`)}
+    >
+      <Icon name={section === 'saved' ? 'bookmarkFill' : 'bookmark'} size={22} />
+      {n > 0 && (
+        <span className="saved-btn__count mono" aria-hidden="true">
+          {n > 99 ? '99+' : n}
+        </span>
+      )}
+    </a>
+  )
+}
 
 /**
  * Sticky top bar. On mobile detail pages it becomes a back bar whose title
@@ -48,7 +71,6 @@ const NAV = [
  */
 export function AppHeader({ section, back, title, desktop }) {
   const [scrolled, setScrolled] = useState(false)
-  const { saved } = useSaved()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -66,7 +88,6 @@ export function AppHeader({ section, back, title, desktop }) {
             {[...NAV, { key: 'about', href: '#/about', label: L('소개', 'About') }].map((n) => (
               <a key={n.key} href={n.href} className="topnav__link" aria-current={section === n.key ? 'page' : undefined}>
                 {n.label}
-                {n.key === 'saved' && saved.length > 0 && <span className="topnav__count mono">{saved.length}</span>}
               </a>
             ))}
           </nav>
@@ -85,6 +106,7 @@ export function AppHeader({ section, back, title, desktop }) {
             </label>
             <input id="global-search" name="q" type="search" placeholder={L('회사·분야·창업자 검색', 'Search companies, sectors, founders')} autoComplete="off" />
           </form>
+          <SavedButton section={section} desktop />
           <LangToggle />
           <ThemeButton />
         </div>
@@ -109,6 +131,7 @@ export function AppHeader({ section, back, title, desktop }) {
         )}
         <span className="appbar__spacer" />
         {/* search is the 탐색 tab; language and theme live in 설정 */}
+        {!back && <SavedButton section={section} />}
         {!back && (
           <a href="#/settings" className="icon-btn" aria-label={L('설정', 'Settings')}>
             <Icon name="more" />
@@ -120,19 +143,14 @@ export function AppHeader({ section, back, title, desktop }) {
 }
 
 export function TabBar({ section }) {
-  const { saved } = useSaved()
   return (
     <nav className="tabbar" aria-label={L('주 메뉴', 'Main')}>
       {NAV.map((n) => (
         <a key={n.key} href={n.href} className="tabbar__tab" aria-current={section === n.key ? 'page' : undefined}>
           <span className="tabbar__icon">
             <Icon name={n.icon} size={24} />
-            {n.key === 'saved' && saved.length > 0 && <span className="tabbar__dot" aria-hidden="true" />}
           </span>
-          <span className="tabbar__label">
-            {n.label}
-            {n.key === 'saved' && saved.length > 0 && <span className="sr-only">{L(`, ${saved.length}개`, `, ${saved.length}`)}</span>}
-          </span>
+          <span className="tabbar__label">{n.label}</span>
         </a>
       ))}
     </nav>

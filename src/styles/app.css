@@ -228,6 +228,10 @@ a { color: inherit; text-decoration: none; }
   max-width: 1400px; margin: 0 auto;
 }
 .appbar__spacer { flex: 1; }
+/* 저장함 in the top bar (moved up from the tab bar) */
+.saved-btn { position: relative; }
+.saved-btn[aria-current='page'] { color: var(--sd-accent); }
+.saved-btn__count { position: absolute; top: 6px; right: 2px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 8px; background: var(--sd-accent); color: #fff; font-size: 10px; font-weight: 700; line-height: 16px; text-align: center; }
 .appbar__title {
   flex: 1; min-width: 0; font-size: 15px; font-weight: 700;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -471,6 +475,25 @@ a { color: inherit; text-decoration: none; }
 .yc--grid .yc__list > li:nth-child(n + 3) { border-top: 1px solid var(--sd-line); }
 .yc--side { margin-top: 24px; padding: 12px 12px 4px; }
 .yc--side .yc__title { font-size: 15px; }
+
+/* 저장함: closed contests stay listed, quieter */
+.saved-tabs { margin-top: 12px; }
+.saved-closed { margin-top: 28px; }
+.saved-closed__title { font-size: 13px; font-weight: 700; color: var(--sd-ink-3); padding-bottom: 6px; border-bottom: 1px solid var(--sd-line); }
+.crow.is-closed { opacity: 0.55; }
+.crow.is-closed .crow__btn { cursor: default; }
+
+/* the issue's pointer to the YC tab */
+.yc-teaser { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; column-gap: 12px; margin-top: 28px; padding: 14px 16px; background: var(--sd-surface); border: 1px solid var(--sd-line); border-radius: var(--sd-radius-3); color: inherit; text-decoration: none; }
+.yc-teaser__body { display: flex; flex-direction: column; min-width: 0; }
+.yc-teaser__title { font-size: 15px; font-weight: 700; }
+.yc-teaser__names { font-size: 13px; color: var(--sd-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.yc-teaser > svg { color: var(--sd-ink-3); }
+@media (hover: hover) { .yc-teaser:hover { border-color: var(--sd-line-ui); } }
+/* #/yc */
+.page-lede { font-size: 15px; line-height: 1.6; color: var(--sd-ink-2); margin-top: 6px; }
+.page--yc .yc { margin-top: 20px; }
+.yc-page__more { width: 100%; margin-top: 20px; }
 
 /* past issues */
 .past { margin-top: 32px; }

@@ -7,6 +7,8 @@ import { byId } from '../lib/data.js'
 import { buildQuery, localDate, navigate, useReadLog, useSaved } from '../lib/hooks.js'
 import { canonicalUrl, copyText } from '../lib/share.js'
 import { L } from '../lib/i18n.js'
+import { today, useContests, useSavedContests } from '../lib/contests.js'
+import { ContestRow } from './Contests.jsx'
 
 const SORTS = [
   { key: 'saved', label: L('저장순', 'Recently saved') },
@@ -14,8 +16,69 @@ const SORTS = [
   { key: 'sector', label: L('분야별', 'By sector') },
 ]
 
+/** Saved contests: the ids kept by the 공모전 tab, matched against the current list. */
+function SavedContests() {
+  const { saved } = useSavedContests()
+  const { status, doc, retry } = useContests()
+  const now = today()
+  if (!saved.length)
+    return (
+      <EmptyState
+        icon="bookmark"
+        title={L('아직 저장한 공모전이 없어요', 'No saved contests yet')}
+        actions={
+          <a className="btn btn--primary" href="#/contests">
+            {L('공모전 보기', 'See contests')}
+          </a>
+        }
+      >
+        {L('공모전 화면의 저장 버튼을 누르면 여기에 모여요.', 'Tap Save on a contest and it will show up here.')}
+      </EmptyState>
+    )
+  if (status === 'loading') return <p className="page-note">{L('공모전을 불러오는 중…', 'Loading contests…')}</p>
+  if (status === 'failed')
+    return (
+      <EmptyState icon="alert" title={L('공모전을 불러오지 못했어요', "Couldn't load contests")} actions={<button type="button" className="btn btn--secondary" onClick={retry}>{L('다시 시도', 'Try again')}</button>} />
+    )
+  const byIdMap = new Map(doc.items.map((c) => [c.id, c]))
+  const found = saved.map((id) => byIdMap.get(id)).filter(Boolean)
+  const open = found.filter((c) => c.deadline >= now).sort((a, b) => a.deadline.localeCompare(b.deadline))
+  const closed = found.filter((c) => c.deadline < now).sort((a, b) => b.deadline.localeCompare(a.deadline))
+  const gone = saved.length - found.length
+  return (
+    <>
+      {open.length > 0 && (
+        <ul className="crows">
+          {open.map((c) => (
+            <ContestRow key={c.id} c={c} now={now} href={`#/contests?c=${c.id}`} />
+          ))}
+        </ul>
+      )}
+      {closed.length > 0 && (
+        <section className="saved-closed" aria-labelledby="saved-closed-title">
+          <h2 id="saved-closed-title" className="saved-closed__title">
+            {L(`마감된 공모전 ${closed.length}`, `Closed ${closed.length}`)}
+          </h2>
+          <ul className="crows">
+            {closed.map((c) => (
+              <ContestRow key={c.id} c={c} now={now} closed />
+            ))}
+          </ul>
+        </section>
+      )}
+      {gone > 0 && (
+        <p className="page-note saved-gone">
+          <Icon name="info" size={16} /> {L(`목록에서 내려간 공모전 ${gone}건은 보여 드릴 수 없어요.`, `${gone} removed ${gone === 1 ? 'contest is' : 'contests are'} no longer listed.`)}
+        </p>
+      )}
+    </>
+  )
+}
+
 export default function Saved({ params }) {
   const { saved } = useSaved()
+  const { saved: savedContests } = useSavedContests()
+  const tab = params.get('tab') === 'contests' ? 'contests' : 'companies'
   // Rows un-saved here stay visible (with an empty bookmark) until the user
   // leaves, so focus isn't lost and undo has something to point at.
   const [shown, setShown] = useState(saved)
@@ -38,7 +101,7 @@ export default function Saved({ params }) {
   }, [shown, unread, sort, isRead])
 
   const set = (patch) =>
-    navigate(`/saved${buildQuery({ sort: sort === 'saved' ? null : sort, unread: unread ? 1 : null, ...patch })}`, {
+    navigate(`/saved${buildQuery({ tab: tab === 'contests' ? 'contests' : null, sort: sort === 'saved' ? null : sort, unread: unread ? 1 : null, ...patch })}`, {
       replace: true,
     })
 
@@ -74,13 +137,32 @@ export default function Saved({ params }) {
   return (
     <div className="page page--saved">
       <h1 className="page-title" tabIndex={-1}>
-        {L('저장함', 'Saved')} {saved.length > 0 && <span className="mono page-title__count">{saved.length}</span>}
+        {L('저장함', 'Saved')}{' '}
+        {saved.length + savedContests.length > 0 && <span className="mono page-title__count">{saved.length + savedContests.length}</span>}
       </h1>
+      <div className="segmented saved-tabs" role="group" aria-label={L('저장한 항목 종류', 'Saved items')}>
+        {[
+          ['companies', L('회사', 'Companies'), saved.length],
+          ['contests', L('공모전', 'Contests'), savedContests.length],
+        ].map(([k, label, n]) => (
+          <button
+            key={k}
+            type="button"
+            className="segmented__tab"
+            aria-pressed={tab === k}
+            onClick={() => navigate(`/saved${k === 'contests' ? '?tab=contests' : ''}`, { replace: true })}
+          >
+            {label} <span className="mono">{n}</span>
+          </button>
+        ))}
+      </div>
       <p className="page-note">
         <Icon name="info" size={16} /> {L('이 기기의 브라우저에만 저장돼요.', 'Saved only in this browser on this device.')}
       </p>
 
-      {shown.length === 0 ? (
+      {tab === 'contests' ? (
+        <SavedContests />
+      ) : shown.length === 0 ? (
         <EmptyState
           icon="bookmark"
           title={L('아직 저장한 회사가 없어요', 'Nothing saved yet')}

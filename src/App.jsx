@@ -15,6 +15,7 @@ import Settings from './screens/Settings.jsx'
 import Weekly from './screens/Weekly.jsx'
 import Sector from './screens/Sector.jsx'
 import Contests from './screens/Contests.jsx'
+import Yc from './screens/Yc.jsx'
 import { SECTORS, byDate, byId, canonicalSector, dates, isYcPick, issueNo, retryDay, useDayLevel, weeks } from './lib/data.js'
 import { navigate, useMediaQuery, useReadLog, useRoute } from './lib/hooks.js'
 import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
@@ -28,7 +29,9 @@ function resolve({ parts, params }) {
   const [head, arg] = parts
   if (!head) return { kind: 'issue', date: dates[0], section: 'issue' }
   if (head === 'd' && dates.includes(arg)) return { kind: 'issue', date: arg, section: 'issue' }
-  if (head === 's' && byId(arg)) return { kind: 'detail', id: arg, from: params.get('from'), section: params.get('from') === 'saved' ? 'saved' : 'issue' }
+  if (head === 's' && byId(arg))
+    return { kind: 'detail', id: arg, from: params.get('from'), section: params.get('from') === 'saved' ? 'saved' : isYcPick(byId(arg)) ? 'yc' : 'issue' }
+  if (head === 'yc') return { kind: 'yc', section: 'yc' }
   if (head === 'explore') return { kind: 'explore', section: 'explore' }
   if (head === 'saved') return { kind: 'saved', section: 'saved' }
   if (head === 'contests') return { kind: 'contests', section: 'contests' }
@@ -45,6 +48,7 @@ function titleFor(r) {
   if (r.kind === 'explore') return `${L('탐색', 'Explore')} — Startup Daily`
   if (r.kind === 'saved') return `${L('저장함', 'Saved')} — Startup Daily`
   if (r.kind === 'contests') return `${L('공모전', 'Contests')} — Startup Daily`
+  if (r.kind === 'yc') return `${L('YC 새 배치', 'New at YC')} — Startup Daily`
   if (r.kind === 'about') return `${L('소개·선정 기준', 'About and how we pick')} — Startup Daily`
   if (r.kind === 'settings') return `${L('설정', 'Settings')} — Startup Daily`
   if (r.kind === 'weekly') return `${L(`${weekLabel(r.week)} 주간 정리`, weekLabel(r.week))} — Startup Daily`
@@ -88,7 +92,7 @@ function useRouteEffects(routeKey, title) {
 
 function goBackFrom(route) {
   if (currentEntry()?.depth > 0) window.history.back()
-  else if (route.kind === 'detail') navigate(route.from === 'saved' ? '/saved' : `/d/${byId(route.id).date}`)
+  else if (route.kind === 'detail') navigate(route.from === 'saved' ? '/saved' : isYcPick(byId(route.id)) ? '/yc' : `/d/${byId(route.id).date}`)
   else navigate('/')
 }
 
@@ -114,13 +118,23 @@ function SideList({ route }) {
     )
   }
   const date = startup ? startup.date : route.date
+  if (startup && isYcPick(startup)) {
+    return (
+      <aside className="split__list" aria-label={L('YC 새 배치', 'New at YC')}>
+        <div className="side-head">
+          <a href="#/yc" className="side-head__back">
+            {L('YC 새 배치', 'New at YC')}
+          </a>
+        </div>
+        <YcSection date={date} side selectedId={route.id} title={monthDay(date)} />
+      </aside>
+    )
+  }
   return (
     <aside className="split__list" aria-label={L('이 호의 회사', 'Companies in this issue')}>
       {/* on the issue's own page the centre column already carries the date and progress */}
       {startup ? <IssueHeader date={date} compact /> : <p className="split__label">{L('이 호의 회사', 'In this issue')}</p>}
       <IssueList date={date} selectedId={route.id} compact />
-      {/* beside a YC company, its section; the issue page shows it in the centre column */}
-      {startup && isYcPick(startup) && <YcSection date={date} side selectedId={route.id} />}
     </aside>
   )
 }
@@ -267,6 +281,7 @@ export default function App() {
   else if (route.kind === 'explore') content = <Explore params={loc.params} desktop={desktop} />
   else if (route.kind === 'saved') content = <Saved params={loc.params} />
   else if (route.kind === 'contests') content = <Contests params={loc.params} desktop={desktop} />
+  else if (route.kind === 'yc') content = <Yc desktop={desktop} />
   else if (route.kind === 'about') content = <About params={loc.params} />
   else if (route.kind === 'settings') content = <Settings />
   else if (route.kind === 'weekly') content = <Weekly week={route.week} />

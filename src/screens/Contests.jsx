@@ -411,15 +411,17 @@ function ContestList({ list, sort, selectedId, onPick, now }) {
   ))
 }
 
-function ContestRow({ c, selected, onPick, now }) {
+/** One contest row. With `href` it is a link (the saved list), otherwise a button that opens the detail. */
+export function ContestRow({ c, selected, onPick, now, href, closed = false }) {
   const n = daysLeft(c.deadline, now)
   const [amount, label] = prizeCell(c)
   const fresh = daysLeft(c.posted, now) >= -1
+  const Tag = href ? 'a' : closed ? 'div' : 'button'
   return (
-    <li className={`crow ${selected ? 'is-selected' : ''}`}>
-      <button type="button" className="crow__btn" onClick={() => onPick(c)} aria-current={selected || undefined}>
-        <span className={`crow__dday ${n <= 3 ? 'is-soon' : ''}`}>
-          <span className="crow__n mono">{ddayLabel(n)}</span>
+    <li className={`crow ${selected ? 'is-selected' : ''} ${closed ? 'is-closed' : ''}`}>
+      <Tag {...(href ? { href } : closed ? {} : { type: 'button', onClick: () => onPick(c) })} className="crow__btn" aria-current={selected || undefined}>
+        <span className={`crow__dday ${n <= 3 && !closed ? 'is-soon' : ''}`}>
+          <span className="crow__n mono">{closed ? L('마감', 'Closed') : ddayLabel(n)}</span>
           <span className="crow__date mono">{dotMD(c.deadline)}</span>
         </span>
         <span className="crow__body">
@@ -444,7 +446,7 @@ function ContestRow({ c, selected, onPick, now }) {
             <span className="crow__na">{label}</span>
           )}
         </span>
-      </button>
+      </Tag>
     </li>
   )
 }

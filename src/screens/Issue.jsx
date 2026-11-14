@@ -142,7 +142,7 @@ const YC_LONG = 10
 /** "YC 새 배치": the day's Y Combinator companies, never one of the five (scripts/lib/yc.mjs).
     A lighter block than the issue: two-line items in a panel. Five by default; a reader who wants
     more gets ten, and the choice is remembered. `grid` = two columns (desktop centre column). */
-export function YcSection({ date, grid = false, side = false, selectedId }) {
+export function YcSection({ date, grid = false, side = false, selectedId, title }) {
   const all = ycOf(date)
   const { isRead } = useReadLog()
   const [ten, setTen] = useFlag('sd_yc_ten', false)
@@ -163,7 +163,7 @@ export function YcSection({ date, grid = false, side = false, selectedId }) {
         </span>
         <div className="yc__titles">
           <h2 id={headId} className="yc__title">
-            {L('YC 새 배치', 'New at Y Combinator')}
+            {title || L('YC 새 배치', 'New at Y Combinator')}
           </h2>
           <p className="yc__sub">
             {L(`${batches.join('·')} · 오늘의 5곳과 별도`, `${batches.join(' · ')} · apart from the five`)}
@@ -198,6 +198,24 @@ export function YcSection({ date, grid = false, side = false, selectedId }) {
         </button>
       )}
     </section>
+  )
+}
+
+/** The issue's pointer to the YC tab (#/yc): the day's YC companies live there, not under the five. */
+function YcTeaser({ date }) {
+  const list = ycOf(date)
+  if (!list.length) return null
+  return (
+    <a className="yc-teaser" href="#/yc">
+      <span className="yc__mark" aria-hidden="true">
+        Y
+      </span>
+      <span className="yc-teaser__body">
+        <span className="yc-teaser__title">{L(`이 날의 YC 새 배치 ${list.length}곳`, `${list.length} new YC companies this day`)}</span>
+        <span className="yc-teaser__names">{list.slice(0, 3).map((s) => s.name_ko || s.name_en).join(' · ')}</span>
+      </span>
+      <Icon name="chevronRight" size={20} />
+    </a>
   )
 }
 
@@ -1005,7 +1023,7 @@ export function IssueMobile({ date }) {
       )}
       {mine && my.short && <ShortCard n={my.list.length} hidden={muted.length > 0} />}
       {done > 0 && <MarkAllRead list={issue} />}
-      <YcSection date={date} />
+      <YcTeaser date={date} />
       {latest && <TasteCard />}
       {latest && <LastWeekCard />}
       {/* when the done card already lists them, don't repeat */}
@@ -1046,7 +1064,7 @@ export function IssueOverview({ date, wide }) {
       <ContinueCard date={date} />
       {date === dates[0] && <LastWeekCard />}
       <Preview startup={hero || ordered[0]} rank={hero ? rank : 1} resume={Boolean(hero) && resume} />
-      <YcSection date={date} grid />
+      <YcTeaser date={date} />
       {date === dates[0] && <FollowUpSection />}
       {/* without the ≥1280 rail, past issues and the footer move under the article */}
       {!wide && (

@@ -147,6 +147,7 @@ const savedStore = createStore('sd_saved_contests', [], Array.isArray)
 export function useSavedContests() {
   const saved = useStore(savedStore)
   return {
+    saved,
     isSaved: (id) => saved.includes(id),
     toggle: (id) => savedStore.set((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [id, ...prev])),
   }
