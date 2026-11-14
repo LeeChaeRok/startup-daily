@@ -65,7 +65,7 @@ const BACK_SAVED = L('저장함으로', 'Back to saved')
 const BACK_ISSUE = L('이 호로 돌아가기', 'Back to this issue')
 const BACK_MINE = L('내 5곳으로', 'Back to your five')
 // where the end of the list leads back to, by the list the reader came from
-const backHref = (from, s) => (from === 'saved' ? '#/saved' : from === 'mine' ? '#/' : isYcPick(s) ? '#/yc' : `#/d/${s.date}`)
+const backHref = (from, s) => (from === 'saved' ? '#/saved' : from === 'mine' ? '#/' : isYcPick(s) ? `#/yc/${s.date}` : `#/d/${s.date}`)
 const backLabel = (from, s) => (from === 'saved' ? BACK_SAVED : from === 'mine' ? BACK_MINE : s && isYcPick(s) ? L('YC 새 배치로', 'Back to YC') : BACK_ISSUE)
 const roundsLabel = (n) => L(`라운드 ${n}회`, `${n} ${n === 1 ? 'round' : 'rounds'}`)
 

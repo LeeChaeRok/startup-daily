@@ -313,6 +313,15 @@ export function byDate(date) {
   return issueCache.get(date) || []
 }
 
+/** Dates that have YC companies, newest first. */
+export const ycDates = () => dates.filter((d) => ycCache.has(d))
+
+/** "Fall 2026" → "F26", YC's own short form (W, X = spring, S, F). */
+export function ycShort(batch = '') {
+  const m = /^(Winter|Spring|Summer|Fall)\s+\d{2}(\d{2})$/.exec(batch.trim())
+  return m ? `${{ Winter: 'W', Spring: 'X', Summer: 'S', Fall: 'F' }[m[1]]}${m[2]}` : batch
+}
+
 /** The day's YC section, in the day file's order (strongest first). Never one of the five. */
 export function ycOf(date) {
   return ycCache.get(date) || []

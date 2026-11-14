@@ -7,7 +7,9 @@ import StartupRow from '../components/StartupRow.jsx'
 import ForRoleLine from '../components/ForRoleLine.jsx'
 import { AiNote, CorrectionBadge, MarkAllRead, Meta, ProgressRing } from '../components/bits.jsx'
 import { Footer } from '../components/Chrome.jsx'
-import { byDate, dates, followUps, formatUSD, issueNo, sectorMix, stats, ycOf } from '../lib/data.js'
+import { byDate, dates, followUps, formatUSD, issueNo, sectorMix, stats } from '../lib/data.js'
+import { useMarkSeen, useSeen } from '../lib/seen.js'
+import { YcIssueSection } from './Yc.jsx'
 import { buildQuery, localDate, useFlag, useInterests, useMuted, useReadLog } from '../lib/hooks.js'
 import { daysSince, dotDate, longDate, monthDay, numClass, pad2, readMinutes, shortDate } from '../lib/format.js'
 import { canonicalUrl, shareOrCopy } from '../lib/share.js'
@@ -133,89 +135,6 @@ export function IssueList({ date, selectedId, compact }) {
         <StartupRow key={s.id} startup={s} rank={i + 1} compact={compact} selected={s.id === selectedId} />
       ))}
     </ol>
-  )
-}
-
-const YC_SHORT = 5
-const YC_LONG = 10
-
-/** "YC 새 배치": the day's Y Combinator companies, never one of the five (scripts/lib/yc.mjs).
-    A lighter block than the issue: two-line items in a panel. Five by default; a reader who wants
-    more gets ten, and the choice is remembered. `grid` = two columns (desktop centre column). */
-export function YcSection({ date, grid = false, side = false, selectedId, title }) {
-  const all = ycOf(date)
-  const { isRead } = useReadLog()
-  const [ten, setTen] = useFlag('sd_yc_ten', false)
-  const headId = useId()
-  if (!all.length) return null
-  const max = Math.min(all.length, YC_LONG)
-  const shown = all.slice(0, ten ? max : YC_SHORT)
-  const batches = [...new Set(all.map((s) => s.yc?.batch).filter(Boolean))]
-  const toggle = () => {
-    setTen(!ten)
-    track('yc_toggle', { ten: !ten, date })
-  }
-  return (
-    <section className={`yc ${grid ? 'yc--grid' : ''} ${side ? 'yc--side' : ''}`} aria-labelledby={headId}>
-      <header className="yc__head">
-        <span className="yc__mark" aria-hidden="true">
-          Y
-        </span>
-        <div className="yc__titles">
-          <h2 id={headId} className="yc__title">
-            {title || L('YC 새 배치', 'New at Y Combinator')}
-          </h2>
-          <p className="yc__sub">
-            {L(`${batches.join('·')} · 오늘의 5곳과 별도`, `${batches.join(' · ')} · apart from the five`)}
-          </p>
-        </div>
-        <span className="yc__count num">{L(`${shown.length}곳`, `${shown.length}`)}</span>
-      </header>
-      <ul className="yc__list" aria-label={L('YC 새 배치 회사', 'Y Combinator companies')}>
-        {shown.map((s) => (
-          <li key={s.id}>
-            <a
-              className={`yc-item ${isRead(s.id) ? 'is-read' : ''} ${s.id === selectedId ? 'is-selected' : ''}`}
-              href={`#/s/${s.id}`}
-              aria-current={s.id === selectedId ? 'page' : undefined}
-            >
-              <Logo startup={s} size={32} />
-              <span className="yc-item__body">
-                <span className="yc-item__name">
-                  {s.name_ko || s.name_en}
-                  {isRead(s.id) && <span className="sr-only">{L(', 읽음', ', read')}</span>}
-                </span>
-                <span className="yc-item__tag">{s.tagline}</span>
-              </span>
-            </a>
-          </li>
-        ))}
-      </ul>
-      {max > YC_SHORT && (
-        <button type="button" className="yc__more" aria-expanded={ten} onClick={toggle}>
-          {ten ? L('5곳만 보기', 'Show five') : L(`${max - YC_SHORT}곳 더 보기`, `Show ${max - YC_SHORT} more`)}
-          <Icon name={ten ? 'chevronUp' : 'chevronDown'} size={16} />
-        </button>
-      )}
-    </section>
-  )
-}
-
-/** The issue's pointer to the YC tab (#/yc): the day's YC companies live there, not under the five. */
-function YcTeaser({ date }) {
-  const list = ycOf(date)
-  if (!list.length) return null
-  return (
-    <a className="yc-teaser" href="#/yc">
-      <span className="yc__mark" aria-hidden="true">
-        Y
-      </span>
-      <span className="yc-teaser__body">
-        <span className="yc-teaser__title">{L(`이 날의 YC 새 배치 ${list.length}곳`, `${list.length} new YC companies this day`)}</span>
-        <span className="yc-teaser__names">{list.slice(0, 3).map((s) => s.name_ko || s.name_en).join(' · ')}</span>
-      </span>
-      <Icon name="chevronRight" size={20} />
-    </a>
   )
 }
 
@@ -356,11 +275,13 @@ export function PastIssues({ current, limit = 3, title = L('지난 호', 'Past i
 }
 
 export function IssueRowItem({ date, isRead, showSectors = false }) {
+  const isSeen = useSeen('issue')
   const items = byDate(date)
   const done = items.filter((s) => isRead(s.id)).length
+  const seen = isSeen(date)
   return (
     <li>
-      <a className="issue-row" href={date === dates[0] ? '#/' : `#/d/${date}`}>
+      <a className={`issue-row ${seen ? 'is-seen' : ''}`} href={date === dates[0] ? '#/' : `#/d/${date}`}>
         <span className="issue-row__date">
           <span className="num">{issueNo(date)}</span>
           {L('호', '')}
@@ -404,7 +325,11 @@ export function IssueRowItem({ date, isRead, showSectors = false }) {
             <>
               <span className="num">{items.length}</span>
               {L('곳', '')}
-              {done > 0 && <> · {done} {L('읽음', 'read')}</>}
+              {done > 0 ? (
+                <> · {done} {L('읽음', 'read')}</>
+              ) : (
+                seen && <span className="seen-tag"> · {L('봤음', 'Seen')}</span>
+              )}
             </>
           )}
         </span>
@@ -544,7 +469,7 @@ function IssueTitle({ date }) {
 }
 
 /** "아직 모르는, 지금 뜨는 스타트업 5곳 · 2/5" + one cell per company, in published order. */
-function IssueProgress({ date, list = byDate(date), folded = 0, mine = false, discovery = false }) {
+export function IssueProgress({ date, list = byDate(date), folded = 0, mine = false, discovery = false, label }) {
   const { isRead } = useReadLog()
   const done = list.filter((s) => isRead(s.id)).length
   const all = list.length > 0 && done === list.length
@@ -553,7 +478,9 @@ function IssueProgress({ date, list = byDate(date), folded = 0, mine = false, di
     <div className="issue-progress">
       <p className="issue-progress__text">
         <span className="issue-progress__count">
-          {mine ? (
+          {label ? (
+            label
+          ) : mine ? (
             discovery ? (
               L(
                 <>
@@ -904,6 +831,7 @@ function ShortCard({ n, hidden }) {
 /* ---------- Screens ---------- */
 
 export function IssueMobile({ date }) {
+  useMarkSeen('issue', date)
   const { isRead, readLog } = useReadLog()
   const { interests } = useInterests()
   const { muted, unmute } = useMuted()
@@ -1023,7 +951,7 @@ export function IssueMobile({ date }) {
       )}
       {mine && my.short && <ShortCard n={my.list.length} hidden={muted.length > 0} />}
       {done > 0 && <MarkAllRead list={issue} />}
-      <YcTeaser date={date} />
+      <YcIssueSection date={date} />
       {latest && <TasteCard />}
       {latest && <LastWeekCard />}
       {/* when the done card already lists them, don't repeat */}
@@ -1050,6 +978,7 @@ export function IssueMobile({ date }) {
 
 /** Desktop center column for #/ and #/d/:date. */
 export function IssueOverview({ date, wide }) {
+  useMarkSeen('issue', date)
   const list = byDate(date)
   const { hero, rank, list: ordered } = useHeroPick(date)
   const { isRead } = useReadLog()
@@ -1064,7 +993,7 @@ export function IssueOverview({ date, wide }) {
       <ContinueCard date={date} />
       {date === dates[0] && <LastWeekCard />}
       <Preview startup={hero || ordered[0]} rank={hero ? rank : 1} resume={Boolean(hero) && resume} />
-      <YcTeaser date={date} />
+      <YcIssueSection date={date} />
       {date === dates[0] && <FollowUpSection />}
       {/* without the ≥1280 rail, past issues and the footer move under the article */}
       {!wide && (

@@ -5,7 +5,7 @@ import Onboarding from './components/Onboarding.jsx'
 import { useToast } from './components/toast-context.js'
 import { EmptyState } from './components/bits.jsx'
 import StartupRow from './components/StartupRow.jsx'
-import { IssueHeader, IssueList, IssueMobile, IssueOverview, IssueRail, YcSection } from './screens/Issue.jsx'
+import { IssueHeader, IssueList, IssueMobile, IssueOverview, IssueRail } from './screens/Issue.jsx'
 import Detail, { DetailRail } from './screens/Detail.jsx'
 import { onLensReady, useContextList } from './screens/detail-hooks.jsx'
 import Explore from './screens/Explore.jsx'
@@ -15,8 +15,8 @@ import Settings from './screens/Settings.jsx'
 import Weekly from './screens/Weekly.jsx'
 import Sector from './screens/Sector.jsx'
 import Contests from './screens/Contests.jsx'
-import Yc from './screens/Yc.jsx'
-import { SECTORS, byDate, byId, canonicalSector, dates, isYcPick, issueNo, retryDay, useDayLevel, weeks } from './lib/data.js'
+import Yc, { YcDaySide, YcDaysSide } from './screens/Yc.jsx'
+import { SECTORS, byDate, byId, canonicalSector, dates, isYcPick, issueNo, retryDay, useDayLevel, weeks, ycDates } from './lib/data.js'
 import { navigate, useMediaQuery, useReadLog, useRoute } from './lib/hooks.js'
 import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
 import { longDate, monthDay, weekLabel } from './lib/format.js'
@@ -31,7 +31,7 @@ function resolve({ parts, params }) {
   if (head === 'd' && dates.includes(arg)) return { kind: 'issue', date: arg, section: 'issue' }
   if (head === 's' && byId(arg))
     return { kind: 'detail', id: arg, from: params.get('from'), section: params.get('from') === 'saved' ? 'saved' : isYcPick(byId(arg)) ? 'yc' : 'issue' }
-  if (head === 'yc') return { kind: 'yc', section: 'yc' }
+  if (head === 'yc') return { kind: 'yc', date: ycDates().includes(arg) ? arg : ycDates()[0], section: 'yc' }
   if (head === 'explore') return { kind: 'explore', section: 'explore' }
   if (head === 'saved') return { kind: 'saved', section: 'saved' }
   if (head === 'contests') return { kind: 'contests', section: 'contests' }
@@ -92,7 +92,7 @@ function useRouteEffects(routeKey, title) {
 
 function goBackFrom(route) {
   if (currentEntry()?.depth > 0) window.history.back()
-  else if (route.kind === 'detail') navigate(route.from === 'saved' ? '/saved' : isYcPick(byId(route.id)) ? '/yc' : `/d/${byId(route.id).date}`)
+  else if (route.kind === 'detail') navigate(route.from === 'saved' ? '/saved' : isYcPick(byId(route.id)) ? `/yc/${byId(route.id).date}` : `/d/${byId(route.id).date}`)
   else navigate('/')
 }
 
@@ -118,18 +118,8 @@ function SideList({ route }) {
     )
   }
   const date = startup ? startup.date : route.date
-  if (startup && isYcPick(startup)) {
-    return (
-      <aside className="split__list" aria-label={L('YC 새 배치', 'New at YC')}>
-        <div className="side-head">
-          <a href="#/yc" className="side-head__back">
-            {L('YC 새 배치', 'New at YC')}
-          </a>
-        </div>
-        <YcSection date={date} side selectedId={route.id} title={monthDay(date)} />
-      </aside>
-    )
-  }
+  if (route.kind === 'yc') return <YcDaysSide date={route.date} />
+  if (startup && isYcPick(startup)) return <YcDaySide date={date} selectedId={route.id} />
   return (
     <aside className="split__list" aria-label={L('이 호의 회사', 'Companies in this issue')}>
       {/* on the issue's own page the centre column already carries the date and progress */}
@@ -266,7 +256,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [route.kind])
 
-  const split = desktop && (route.kind === 'issue' || route.kind === 'detail')
+  const split = desktop && (route.kind === 'issue' || route.kind === 'detail' || route.kind === 'yc')
   const showBack = !desktop && (route.kind === 'detail' || route.kind === 'about' || route.kind === 'settings')
 
   let content
@@ -281,14 +271,14 @@ export default function App() {
   else if (route.kind === 'explore') content = <Explore params={loc.params} desktop={desktop} />
   else if (route.kind === 'saved') content = <Saved params={loc.params} />
   else if (route.kind === 'contests') content = <Contests params={loc.params} desktop={desktop} />
-  else if (route.kind === 'yc') content = <Yc desktop={desktop} />
+  else if (route.kind === 'yc') content = <Yc key={route.date} date={route.date} desktop={desktop} />
   else if (route.kind === 'about') content = <About params={loc.params} />
   else if (route.kind === 'settings') content = <Settings />
   else if (route.kind === 'weekly') content = <Weekly week={route.week} />
   else if (route.kind === 'sector') content = <Sector sector={route.sector} />
   else content = <NotFound head={route.head} arg={route.arg} />
 
-  const rail = wide && split && (route.kind !== 'detail' || dayLevel === 'full') && (route.kind === 'detail' ? <DetailRail key={route.id} id={route.id} /> : <IssueRail date={route.date} />)
+  const rail = wide && split && route.kind !== 'yc' && (route.kind !== 'detail' || dayLevel === 'full') && (route.kind === 'detail' ? <DetailRail key={route.id} id={route.id} /> : <IssueRail date={route.date} />)
 
   return (
     <ToastProvider>

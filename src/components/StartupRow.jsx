@@ -18,7 +18,7 @@ import { sectorHue } from '../lib/sectors.js'
  *            No English name, stage or amount (the company page has them); read rows
  *            fold to one line with a check
  */
-export default function StartupRow({ startup: s, rank, showDate, compact, selected, reason, showSave, from, issue, hideSector }) {
+export default function StartupRow({ startup: s, rank, showDate, compact, selected, reason, showSave, from, issue, hideSector, badge }) {
   const { isRead } = useReadLog()
   const { isInterest } = useInterests()
   const read = isRead(s.id)
@@ -44,6 +44,7 @@ export default function StartupRow({ startup: s, rank, showDate, compact, select
               {s.name_ko || s.name_en}
               {hasNews && <span className="row__news" title={L('소개 이후 새 소식', 'News since we covered it')} />}
               {hasNews && <span className="sr-only">{L(' (새 소식)', ' (news)')}</span>}
+              {badge && <span className="badge row__badge">{badge}</span>}
               {folded && <Icon name="check" size={16} className="row__check" />}
             </span>
             {!issue && s.name_en && s.name_en !== s.name_ko && (
