@@ -1,6 +1,118 @@
 {
   "days": [
     {
+      "date": "2026-11-14",
+      "cost_usd": 1.0052,
+      "budget_stops": 0,
+      "pool": 27,
+      "featured": [
+        "daylight-security-2026",
+        "wally-health-2026",
+        "sazhi-intelligent-technology-2026",
+        "se3-2026",
+        "motif-technologies-2026"
+      ],
+      "sectors": {
+        "health": {
+          "leads": 6,
+          "rejected": {
+            "country": 2
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 30,
+          "adopted": 3
+        },
+        "robotics": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 26,
+          "adopted": 3
+        },
+        "mobility": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 37,
+          "adopted": 3
+        },
+        "climate": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 24,
+          "adopted": 3
+        },
+        "fintech": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 28,
+          "adopted": 3
+        },
+        "infra": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 28,
+          "adopted": 3
+        },
+        "enterprise": {
+          "leads": 6,
+          "rejected": {
+            "country": 3,
+            "duplicate": 1
+          },
+          "researched": 2,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 27,
+          "adopted": 3
+        },
+        "consumer": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 24,
+          "adopted": 3
+        },
+        "ai": {
+          "leads": 6,
+          "rejected": {
+            "country": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 25,
+          "adopted": 3
+        }
+      },
+      "yc": {
+        "leads": 10,
+        "accepted": 10,
+        "researched": 10,
+        "research_failed": 0,
+        "links_dropped": 0,
+        "links_kept": 78,
+        "adopted": 10
+      }
+    },
+    {
       "date": "2026-11-13",
       "cost_usd": 1.0515,
       "budget_stops": 0,
