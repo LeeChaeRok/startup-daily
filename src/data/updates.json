@@ -573,6 +573,65 @@
         "source_name": "Insilico Medicine News",
         "found": "2026-11-13"
       }
+    ],
+    "bland-ai-2026": [
+      {
+        "date": "2026-08-04",
+        "kind": "product",
+        "title_ko": "블랜드 스피치 v3 출시",
+        "title_en": "Bland Speech v3 launched",
+        "detail_ko": "블랜드가 최초의 인간 음성 엔진을 탑재한 텍스트 음성 변환 플랫폼 블랜드 스피치 v3를 출시했습니다.",
+        "detail_en": "Bland introduced Bland Speech v3, the first human speech engine, as a text-to-speech platform for developers.",
+        "source_url": "https://aventure.vc/companies/bland-ai-san-francisco-ca-us/news",
+        "source_name": "aventure.vc",
+        "found": "2026-11-15"
+      },
+      {
+        "date": "2026-06-16",
+        "kind": "funding",
+        "title_ko": "시리즈 C 5,000만 달러 유치",
+        "title_en": "Series C $50 million raised",
+        "detail_ko": "블랜드가 Dell Technologies Capital 주도로 5,000만 달러 시리즈 C 투자를 유치했으며, 누적 조달액이 1억 달러를 넘었습니다.",
+        "detail_en": "Bland closed a $50 million Series C led by Dell Technologies Capital, bringing total funding to over $100 million.",
+        "source_url": "https://fortune.com/2026/06/16/voice-ai-bland-50-million-after-being-rejected-by-180-investors/",
+        "source_name": "Fortune",
+        "found": "2026-11-15"
+      }
+    ],
+    "climeworks-2026": [
+      {
+        "date": "2026-09-10",
+        "kind": "product",
+        "title_ko": "일본항공과 최초 CDR CORSIA 계약 체결",
+        "title_en": "First CDR CORSIA deal signed with Japan Airlines",
+        "detail_ko": "클라임웍스 솔루션즈가 일본항공과 최초의 탄소제거 CORSIA 계약을 체결했습니다.",
+        "detail_en": "Climeworks Solutions signed its first carbon removal CORSIA deal with Japan Airlines.",
+        "source_url": "https://climeworks.com/newsroom",
+        "source_name": "Climeworks Newsroom",
+        "found": "2026-11-15"
+      },
+      {
+        "date": "2026-09-09",
+        "kind": "product",
+        "title_ko": "매머드 시설 CO₂ 포집량 6배 증가",
+        "title_en": "Mammoth plant CO₂ capture increased sixfold",
+        "detail_ko": "세계 최대 DAC 시설인 아이슬란드 매머드 플랜트가 2026년 상반기 CO₂ 포집량 675톤을 기록, 전년 대비 6배 증가했으며 운영 비용은 절반으로 감소했습니다.",
+        "detail_en": "Climeworks' Mammoth facility in Iceland captured 675 tons of CO₂ in H1 2026, nearly six times more than a year earlier, with operating costs reduced by more than half.",
+        "source_url": "https://www.bloomberg.com/news/articles/2026-09-10/carbon-removal-pioneer-climeworks-increases-co2-capture-sixfold",
+        "source_name": "Bloomberg",
+        "found": "2026-11-15"
+      },
+      {
+        "date": "2026-04-28",
+        "kind": "product",
+        "title_ko": "미국 루이지애나 프로젝트 사이프러스 승인",
+        "title_en": "US Louisiana Project Cypress gets green light",
+        "detail_ko": "미국 에너지부가 루이지애나주에 클라임웍스의 CO₂ 포집 플랜트 건설을 승인했습니다. 프로젝트는 최대 6억 달러의 정부 투자를 받을 수 있습니다.",
+        "detail_en": "The US Department of Energy approved Climeworks' CO₂ capture plant in Louisiana under Project Cypress, which could receive up to $600 million in government investment.",
+        "source_url": "https://www.swissinfo.ch/eng/climate-solutions/climeworks-receives-surprising-green-light-for-plant-in-louisiana/91326278",
+        "source_name": "SWI swissinfo.ch",
+        "found": "2026-11-15"
+      }
     ]
   },
   "checked": {
@@ -609,6 +668,8 @@
     "insilico-medicine-2026": "2026-11-13",
     "nuro-2026": "2026-11-13",
     "propertyguru-2026": "2026-11-14",
-    "akili-interactive-2026": "2026-11-14"
+    "akili-interactive-2026": "2026-11-14",
+    "bland-ai-2026": "2026-11-15",
+    "climeworks-2026": "2026-11-15"
   }
 }

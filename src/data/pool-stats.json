@@ -1,6 +1,121 @@
 {
   "days": [
     {
+      "date": "2026-11-15",
+      "cost_usd": 0.9996,
+      "budget_stops": 0,
+      "pool": 24,
+      "featured": [
+        "biomatter-2026",
+        "cocos-2026",
+        "bites-2026",
+        "genrobot-jianzhi-robotics-2026",
+        "electric-plant-company-2026"
+      ],
+      "sectors": {
+        "health": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 40,
+          "adopted": 3
+        },
+        "robotics": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 24,
+          "adopted": 3
+        },
+        "mobility": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 1,
+          "links_dropped": 0,
+          "links_kept": 18,
+          "adopted": 3
+        },
+        "climate": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 19,
+          "adopted": 3
+        },
+        "fintech": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 3,
+          "links_kept": 30,
+          "adopted": 3
+        },
+        "infra": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 26,
+          "adopted": 3
+        },
+        "enterprise": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 4,
+          "links_kept": 66,
+          "adopted": 3
+        },
+        "consumer": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 24,
+          "adopted": 3
+        },
+        "ai": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 3
+          },
+          "researched": 3,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 0,
+          "adopted": 0
+        }
+      },
+      "yc": {
+        "leads": 10,
+        "accepted": 10,
+        "researched": 10,
+        "research_failed": 0,
+        "links_dropped": 7,
+        "links_kept": 80,
+        "adopted": 10
+      }
+    },
+    {
       "date": "2026-11-14",
       "cost_usd": 1.0052,
       "budget_stops": 0,
