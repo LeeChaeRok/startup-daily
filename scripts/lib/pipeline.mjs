@@ -407,15 +407,29 @@ export function poolSector(profile, asked = null) {
   return sectorFor(profile).key
 }
 
-/** At most `max` profiles per sector, in the given order; the rest come back as `over`. */
-export function capPerSector(profiles, max = 3) {
+/**
+ * Pools that missed the supply gate share a cap with a neighbour (_workspace/14 §1-6, checked
+ * 2026-11-16: ai filled 3 a day on 8/15 days, consumer on 10/15). Discovery still runs per
+ * sector and every company keeps its own sector label; only the cap is shared, so a thin ai
+ * day is topped up from infra instead of leaving the pool short.
+ */
+export const POOL_MERGES = { ai: 'infra', consumer: 'enterprise' }
+
+/**
+ * At most `max` profiles per pool, in the given order; the rest come back as `over`. A merged
+ * pair (see POOL_MERGES) shares `max` × its size.
+ */
+export function capPerSector(profiles, max = 3, merges = {}) {
+  const poolOf = (sector) => merges[sector] || sector
+  const size = (pool) => 1 + Object.values(merges).filter((to) => to === pool).length
   const count = new Map()
   const kept = []
   const over = []
   for (const p of profiles) {
-    const n = count.get(p.sector) || 0
-    if (n < max) {
-      count.set(p.sector, n + 1)
+    const pool = poolOf(p.sector)
+    const n = count.get(pool) || 0
+    if (n < max * size(pool)) {
+      count.set(pool, n + 1)
       kept.push(p)
     } else over.push(p)
   }

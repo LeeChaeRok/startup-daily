@@ -34,7 +34,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { capPerSector, dropDuplicates, featureScore, merge, normalize, orderDay, pickFeatured, poolSector, selectCandidates, stripUrl, verifyLinks } from './lib/pipeline.mjs'
+import { POOL_MERGES, capPerSector, dropDuplicates, featureScore, merge, normalize, orderDay, pickFeatured, poolSector, selectCandidates, stripUrl, verifyLinks } from './lib/pipeline.mjs'
 import { attachLogos } from './lib/logos.mjs'
 import { createClient, modelsFromEnv, OpenRouterError, parseOrRepair } from './lib/openrouter.mjs'
 import { updateLensFiles } from './lib/korea-lens.mjs'
@@ -351,12 +351,12 @@ async function main() {
     st.links_dropped += before.get(p.id) - linkCount(p)
   }
 
-  // strongest first within each sector, then at most PER_SECTOR each
+  // strongest first within each sector, then at most PER_SECTOR per pool (merged pairs share theirs)
   const ranked = verified
     .map((p, i) => ({ p, i, score: featureScore(p, date) }))
     .sort((a, b) => b.score - a.score || a.i - b.i)
     .map(({ p }) => p)
-  const { kept: pool, over } = capPerSector(ranked.filter((p) => !p.yc), PER_SECTOR)
+  const { kept: pool, over } = capPerSector(ranked.filter((p) => !p.yc), PER_SECTOR, POOL_MERGES)
   for (const p of over) console.log(`  over the sector cap: ${p.name_en} (${p.sector})`)
   for (const p of pool) statOf(p.sector).adopted++
 
@@ -443,7 +443,7 @@ async function main() {
 
   const statsFile = fs.existsSync(STATS_PATH) ? JSON.parse(fs.readFileSync(STATS_PATH, 'utf-8')) : { days: [] }
   statsFile.days = [
-    { date, cost_usd: llm ? Number(llm.cost().toFixed(4)) : 0, budget_stops: budgetStops, pool: day.length - yc.length, featured: featuredIds, sectors: stats, yc: ycStats },
+    { date, cost_usd: llm ? Number(llm.cost().toFixed(4)) : 0, budget_stops: budgetStops, pool: day.length - yc.length, featured: featuredIds, pool_merges: POOL_MERGES, sectors: stats, yc: ycStats },
     ...statsFile.days.filter((d) => d.date !== date),
   ].slice(0, 120)
   fs.writeFileSync(STATS_PATH, JSON.stringify(statsFile, null, 2) + '\n', 'utf-8')

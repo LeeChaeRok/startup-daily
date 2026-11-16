@@ -160,6 +160,11 @@ eq('unknown key → asked pool', poolSector({ sector: 'space' }, 'mobility'), 'm
 eq('no key, no pool → category guess', poolSector({ category: ['핀테크'] }), 'fintech')
 const P = (id, sector, country, attention = 3, extra = {}) => ({ id, sector, attention, headquarters: { country_ko: country }, ...extra })
 eq('cap per sector', capPerSector([P('a', 'ai'), P('b', 'ai'), P('c', 'ai'), P('d', 'ai'), P('e', 'health')], 3).kept.map((p) => p.id), ['a', 'b', 'c', 'e'])
+const merges = { ai: 'infra', consumer: 'enterprise' }
+eq('thin ai day topped up from infra', capPerSector([P('a1', 'ai'), P('i1', 'infra'), P('i2', 'infra'), P('i3', 'infra'), P('i4', 'infra')], 3, merges).kept.map((p) => p.id), ['a1', 'i1', 'i2', 'i3', 'i4'])
+eq('merged pair shares 6', capPerSector(['a', 'b', 'c', 'd', 'e', 'f', 'g'].map((id) => P(id, id < 'd' ? 'ai' : 'infra')), 3, merges).kept.length, 6)
+eq('merged pair keeps sector labels', capPerSector([P('c1', 'consumer'), P('e1', 'enterprise')], 3, merges).kept.map((p) => p.sector), ['consumer', 'enterprise'])
+eq('other pools unchanged', capPerSector([P('h1', 'health'), P('h2', 'health'), P('h3', 'health'), P('h4', 'health')], 3, merges).kept.length, 3)
 const recent = { funding: { latest_round: { date: '2026-10' } } }
 eq('fresh round scores higher', featureScore(P('x', 'ai', '미국', 3, recent), '2026-10-31') > featureScore(P('y', 'ai', '미국', 3), '2026-10-31'), true)
 const pool = [
