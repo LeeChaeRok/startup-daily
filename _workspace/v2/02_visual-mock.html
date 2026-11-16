@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>잉크 블루 브리핑</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+/* ===== v2 tokens (same values as 02_visual-designer_system.md §2.6), scoped per theme ===== */
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --sd-bg: #F5F5F3; --sd-surface: #FFFFFF; --sd-surface-2: #EDEDEA; --sd-surface-raised: #FFFFFF;
+  --sd-ink: #15161A; --sd-ink-2: #474A52; --sd-ink-3: #666971;
+  --sd-line: #E6E6E2; --sd-line-ui: #83868D;
+  --sd-accent: #2D4BC8; --sd-accent-ink: #FFFFFF; --sd-accent-soft: #E8ECFB;
+  --sd-positive: #1D7A4C; --sd-positive-soft: #E2F2E8;
+  --sd-warning: #9A5700; --sd-warning-soft: #FBEFD9; --sd-warning-ink: #FFFFFF;
+  --sd-focus: #2D4BC8; --sd-scrim: rgb(12 13 16 / .40);
+  --sd-logo-bg: #FFFFFF; --sd-logo-ring: rgb(21 22 26 / .08);
+  --sd-header-bg: rgb(245 245 243 / .86); --sd-tabbar-bg: rgb(255 255 255 / .92);
+  --sd-toast-action: #AFC0FF;
+  --sd-sector-health: #B8325A;     --sd-sector-health-soft: #FBE9EF;
+  --sd-sector-robotics: #A84B0C;   --sd-sector-robotics-soft: #FCEBDD;
+  --sd-sector-mobility: #0A6A9E;   --sd-sector-mobility-soft: #E1F0F8;
+  --sd-sector-climate: #2D7432;    --sd-sector-climate-soft: #E5F2E3;
+  --sd-sector-fintech: #0C6F64;    --sd-sector-fintech-soft: #DDF1EE;
+  --sd-sector-infra: #3F5A7A;      --sd-sector-infra-soft: #E6ECF3;
+  --sd-sector-enterprise: #80600F; --sd-sector-enterprise-soft: #F5EDD6;
+  --sd-sector-consumer: #A0368F;   --sd-sector-consumer-soft: #F7E5F3;
+  --sd-sector-ai: #6646BF;         --sd-sector-ai-soft: #EEE8FA;
+  --sd-shadow-1: 0 1px 2px rgb(16 17 20 / .04), 0 0 0 1px rgb(16 17 20 / .04);
+  --sd-shadow-2: 0 4px 16px rgb(16 17 20 / .08), 0 0 0 1px rgb(16 17 20 / .04);
+  --sd-shadow-3: 0 12px 40px rgb(16 17 20 / .16);
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --sd-bg: #111214; --sd-surface: #1A1B1E; --sd-surface-2: #25272B; --sd-surface-raised: #2C2E33;
+  --sd-ink: #EDEEF0; --sd-ink-2: #B6B9C0; --sd-ink-3: #9498A0;
+  --sd-line: #2A2C30; --sd-line-ui: #6E727A;
+  --sd-accent: #8EA1FF; --sd-accent-ink: #0E1330; --sd-accent-soft: #232B4D;
+  --sd-positive: #5FCB92; --sd-positive-soft: #163323;
+  --sd-warning: #F2B24E; --sd-warning-soft: #3A2C14; --sd-warning-ink: #1A1206;
+  --sd-focus: #8EA1FF; --sd-scrim: rgb(0 0 0 / .56);
+  --sd-logo-ring: rgb(255 255 255 / .10);
+  --sd-header-bg: rgb(17 18 20 / .86); --sd-tabbar-bg: rgb(26 27 30 / .92);
+  --sd-toast-action: #8EA1FF;
+  --sd-sector-health: #F28AA5;     --sd-sector-health-soft: #3A1E27;
+  --sd-sector-robotics: #F2A066;   --sd-sector-robotics-soft: #3A2618;
+  --sd-sector-mobility: #6CC0EC;   --sd-sector-mobility-soft: #16303D;
+  --sd-sector-climate: #86CF7C;    --sd-sector-climate-soft: #1D3320;
+  --sd-sector-fintech: #5FD0C1;    --sd-sector-fintech-soft: #14322F;
+  --sd-sector-infra: #9DB4D3;      --sd-sector-infra-soft: #232C38;
+  --sd-sector-enterprise: #E2C063; --sd-sector-enterprise-soft: #352D17;
+  --sd-sector-consumer: #E994DA;   --sd-sector-consumer-soft: #36203A;
+  --sd-sector-ai: #B9A2F5;         --sd-sector-ai-soft: #2A2442;
+  --sd-shadow-1: 0 0 0 1px rgb(255 255 255 / .04);
+  --sd-shadow-2: 0 0 0 1px rgb(255 255 255 / .06);
+  --sd-shadow-3: 0 12px 40px rgb(0 0 0 / .5);
+}
+:root {
+  --sd-font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  --sd-dur-1: 120ms; --sd-dur-2: 200ms; --sd-dur-3: 320ms;
+  --sd-ease: cubic-bezier(.2,.8,.2,1);
+  --sd-r-xs: 6px; --sd-r-sm: 10px; --sd-r-md: 14px; --sd-r-lg: 18px; --sd-r-xl: 24px;
+  /* page chrome (outside the phones) */
+  --pg-bg: #E9E9E6; --pg-ink: #15161A; --pg-ink-2: #55585F;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --pg-bg: #0B0C0D; --pg-ink: #EDEEF0; --pg-ink-2: #A3A6AD; }
+}
+@media (prefers-reduced-motion: reduce) { :root { --sd-dur-1: 1ms; --sd-dur-2: 120ms; --sd-dur-3: 120ms; } }
+
+* { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body {
+  margin: 0; background: var(--pg-bg); color: var(--pg-ink);
+  font-family: var(--sd-font); font-size: 15px; line-height: 24px; letter-spacing: -0.006em;
+  word-break: keep-all; overflow-wrap: anywhere; line-break: strict;
+}
+.num { font-variant-numeric: tabular-nums lining-nums; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* ===== page chrome ===== */
+.page { max-width: 1640px; margin: 0 auto; padding: 40px 16px 80px; }
+.intro { max-width: 760px; margin: 0 0 32px; }
+.intro h1 { font-size: 28px; line-height: 36px; letter-spacing: -0.024em; margin: 0 0 8px; font-weight: 700; }
+.intro p { margin: 0 0 6px; color: var(--pg-ink-2); }
+.row-label { font-size: 13px; line-height: 18px; font-weight: 600; color: var(--pg-ink-2); margin: 0 0 12px; }
+.phones { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; margin-bottom: 56px; }
+.phone-wrap { width: min(375px, 100%); }
+
+/* ===== phone frame ===== */
+.phone {
+  position: relative; width: 100%; height: 812px; overflow: hidden;
+  border-radius: 36px; background: var(--sd-bg); color: var(--sd-ink);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / .08), 0 24px 60px rgb(0 0 0 / .14);
+}
+.screen { position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; }
+.screen::-webkit-scrollbar { display: none; }
+.status { height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; font-size: 15px; font-weight: 600; }
+.status .dots { display: flex; gap: 5px; align-items: center; }
+.status .dots i { width: 17px; height: 10px; border-radius: 3px; background: currentColor; opacity: .9; display: block; }
+.status .dots i:first-child { width: 14px; opacity: .6; }
+
+svg.ic { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+svg.ic.s16 { width: 16px; height: 16px; }
+svg.ic.s14 { width: 14px; height: 14px; }
+svg.ic.s20 { width: 20px; height: 20px; }
+
+/* app header */
+.appbar {
+  position: sticky; top: 0; z-index: 5; height: 52px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 8px 0 20px; background: var(--sd-header-bg);
+  -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px);
+}
+.wordmark { font-size: 18px; font-weight: 800; letter-spacing: -0.03em; display: flex; align-items: center; gap: 0; }
+.wordmark::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--sd-accent); margin-left: 3px; margin-top: 7px; }
+.iconbtn {
+  width: 44px; height: 44px; border: 0; border-radius: 999px; background: transparent; color: var(--sd-ink-2);
+  display: inline-grid; place-items: center; cursor: pointer;
+  transition: background var(--sd-dur-1) var(--sd-ease), transform var(--sd-dur-1) var(--sd-ease);
+}
+.iconbtn:hover { background: var(--sd-surface-2); }
+.iconbtn:active { transform: scale(.94); }
+:focus-visible { outline: 2px solid var(--sd-focus); outline-offset: 2px; }
+
+.content { padding: 8px 20px 104px; }
+
+/* page title */
+.eyebrow { font-size: 13px; line-height: 18px; font-weight: 600; color: var(--sd-ink-3); margin: 0 0 4px; }
+.ptitle { font-size: 28px; line-height: 36px; font-weight: 700; letter-spacing: -0.024em; margin: 0; }
+.psub { margin: 6px 0 24px; color: var(--sd-ink-2); }
+
+/* section header */
+.sh { display: flex; align-items: center; justify-content: space-between; margin-top: 40px; min-height: 44px; }
+.sh h2 { font-size: 21px; line-height: 30px; font-weight: 700; letter-spacing: -0.018em; margin: 0; }
+.sh a { display: inline-flex; align-items: center; gap: 2px; min-height: 44px; color: var(--sd-accent); font-weight: 600; text-decoration: none; }
+.sh-desc { font-size: 13px; line-height: 18px; color: var(--sd-ink-3); margin: -6px 0 12px; }
+
+/* logo + monogram */
+.logo {
+  --size: 44px; width: var(--size); height: var(--size); flex: none;
+  border-radius: calc(var(--size) * .26); background: var(--sd-logo-bg);
+  box-shadow: inset 0 0 0 1px var(--sd-logo-ring);
+  display: grid; place-items: center; overflow: hidden;
+}
+.logo svg { width: 64%; height: 64%; }
+.logo.l40 { --size: 40px; } .logo.l48 { --size: 48px; } .logo.l64 { --size: 64px; border-radius: 16px; }
+.logo.l44 { border-radius: 12px; } .logo.l48 { border-radius: 12px; } .logo.l40 { border-radius: 10px; }
+.mono {
+  background: var(--soft); color: var(--fg); box-shadow: none;
+  font-weight: 700; font-size: calc(var(--size) * .42); letter-spacing: -0.02em; line-height: 1;
+}
+.sec-health { --fg: var(--sd-sector-health); --soft: var(--sd-sector-health-soft); }
+.sec-robotics { --fg: var(--sd-sector-robotics); --soft: var(--sd-sector-robotics-soft); }
+.sec-mobility { --fg: var(--sd-sector-mobility); --soft: var(--sd-sector-mobility-soft); }
+.sec-climate { --fg: var(--sd-sector-climate); --soft: var(--sd-sector-climate-soft); }
+.sec-fintech { --fg: var(--sd-sector-fintech); --soft: var(--sd-sector-fintech-soft); }
+.sec-infra { --fg: var(--sd-sector-infra); --soft: var(--sd-sector-infra-soft); }
+.sec-enterprise { --fg: var(--sd-sector-enterprise); --soft: var(--sd-sector-enterprise-soft); }
+.sec-consumer { --fg: var(--sd-sector-consumer); --soft: var(--sd-sector-consumer-soft); }
+.sec-ai { --fg: var(--sd-sector-ai); --soft: var(--sd-sector-ai-soft); }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--fg); flex: none; display: inline-block; }
+
+/* featured card */
+.card {
+  display: block; text-decoration: none; color: inherit;
+  background: var(--sd-surface); border-radius: var(--sd-r-lg); box-shadow: var(--sd-shadow-1);
+  padding: 20px; transition: box-shadow var(--sd-dur-1) var(--sd-ease), transform var(--sd-dur-1) var(--sd-ease);
+}
+.card:hover { box-shadow: var(--sd-shadow-2); }
+.card:active { transform: scale(.99); }
+.card-top { display: flex; align-items: center; gap: 12px; }
+.meta { font-size: 13px; line-height: 18px; font-weight: 500; color: var(--sd-ink-3); }
+.sector { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; line-height: 18px; font-weight: 600; color: var(--sd-ink-2); }
+.card h3 { font-size: 21px; line-height: 30px; font-weight: 700; letter-spacing: -0.018em; margin: 14px 0 4px; }
+.card .tag { font-size: 17px; line-height: 27px; color: var(--sd-ink-2); margin: 0; letter-spacing: -0.01em;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.why-label { font-size: 13px; line-height: 18px; font-weight: 600; color: var(--sd-accent); margin: 16px 0 4px; }
+.why { margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.facts-inline { display: flex; gap: 24px; margin-top: 16px; }
+.facts-inline div { display: flex; flex-direction: column; }
+.facts-inline b { font-size: 17px; line-height: 24px; font-weight: 700; letter-spacing: -0.01em; }
+
+/* row group */
+.group { background: var(--sd-surface); border-radius: var(--sd-r-lg); box-shadow: var(--sd-shadow-1); padding: 0 16px; margin-top: 12px; }
+.crow {
+  position: relative; display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center;
+  min-height: 72px; padding: 14px 0; text-decoration: none; color: inherit;
+}
+.crow + .crow::before { content: ""; position: absolute; top: 0; left: 56px; right: 0; height: 1px; background: var(--sd-line); }
+.contest + .contest::before { left: 56px; }
+.crow .body { min-width: 0; }
+.crow .name { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.crow .name b { font-size: 17px; line-height: 24px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.crow .line2 { color: var(--sd-ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+.crow .fig { align-self: start; padding-top: 1px; font-weight: 600; color: var(--sd-ink-2); }
+.crow.read b, .crow.read .fig { color: var(--sd-ink-3); }
+.crow.read .logo { opacity: .72; }
+
+/* badges */
+.badge { display: inline-flex; align-items: center; height: 20px; padding: 0 6px; border-radius: var(--sd-r-xs);
+  font-size: 11px; line-height: 14px; font-weight: 600; letter-spacing: .01em; flex: none; white-space: nowrap; }
+.b-yc { background: var(--sd-surface-2); color: var(--sd-ink); font-weight: 700; }
+.b-new { background: var(--sd-accent-soft); color: var(--sd-accent); }
+.b-sector { background: var(--sd-surface-2); color: var(--sd-ink-2); gap: 6px; }
+.b-est { background: var(--sd-warning-soft); color: var(--sd-warning); }
+.dday { width: 44px; height: 24px; border-radius: var(--sd-r-xs); display: grid; place-items: center;
+  font-size: 13px; line-height: 18px; font-weight: 700; align-self: start; margin-top: 2px; }
+.d-today { background: var(--sd-warning); color: var(--sd-warning-ink); }
+.d-soon { background: var(--sd-warning-soft); color: var(--sd-warning); }
+.d-later { background: var(--sd-surface-2); color: var(--sd-ink-2); }
+
+/* contest row */
+.contest { grid-template-columns: 44px 1fr 44px; align-items: start; }
+.contest .title { font-size: 17px; line-height: 24px; font-weight: 600; letter-spacing: -0.01em;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.contest .iconbtn { margin: -10px -12px 0 0; }
+
+.trust { margin-top: 40px; text-align: center; }
+.trust a { color: var(--sd-ink-2); }
+
+/* tab bar */
+.tabbar {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 6; height: 56px; padding-bottom: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  background: var(--sd-tabbar-bg); box-shadow: inset 0 1px 0 var(--sd-line);
+  -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px);
+}
+.phone .tabbar { height: 82px; padding-bottom: 26px; } /* includes home-indicator safe area */
+.tab { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: var(--sd-ink-3);
+  font-size: 11px; line-height: 14px; font-weight: 600; letter-spacing: .01em; text-decoration: none; }
+.tab.on { color: var(--sd-ink); }
+.tab.on svg { color: var(--sd-accent); fill: currentColor; fill-opacity: .14; }
+.homebar { position: absolute; bottom: 8px; left: 50%; width: 134px; height: 5px; margin-left: -67px; border-radius: 3px; background: var(--sd-ink); z-index: 7; opacity: .85; }
+
+/* ===== profile ===== */
+.dbar { position: sticky; top: 0; z-index: 5; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 4px;
+  background: var(--sd-header-bg); -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); }
+.dbar .right { display: flex; }
+.progress { position: absolute; left: 0; bottom: -2px; height: 2px; width: 9%; background: var(--sd-accent); }
+.pcontent { padding: 8px 20px 120px; }
+.pname { font-size: 28px; line-height: 36px; font-weight: 700; letter-spacing: -0.024em; margin: 16px 0 4px; }
+.psite { color: var(--sd-ink-2); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.psite a { color: var(--sd-accent); text-decoration: none; display: inline-flex; align-items: center; gap: 2px; font-weight: 500; }
+.badges { display: flex; gap: 6px; margin-top: 12px; }
+.ptag { font-size: 17px; line-height: 29px; font-weight: 600; letter-spacing: -0.01em; margin: 20px 0 24px; }
+.facts { background: var(--sd-surface-2); border-radius: var(--sd-r-lg); padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+.fact .lab { font-size: 13px; line-height: 18px; font-weight: 500; color: var(--sd-ink-3); display: flex; justify-content: space-between; align-items: center; }
+.fact .val { font-size: 21px; line-height: 30px; font-weight: 700; letter-spacing: -0.018em; margin-top: 4px; }
+.fact .sub { font-size: 13px; line-height: 18px; color: var(--sd-ink-3); }
+.psec { padding-top: 32px; }
+.psec + .psec { margin-top: 32px; box-shadow: inset 0 1px 0 var(--sd-line); }
+.psec-h { display: flex; align-items: center; justify-content: space-between; min-height: 44px; width: 100%; border: 0; background: none; padding: 0;
+  color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.psec-h h2 { font-size: 21px; line-height: 30px; font-weight: 700; letter-spacing: -0.018em; margin: 0; }
+.psec-h svg { color: var(--sd-ink-3); transition: transform var(--sd-dur-2) var(--sd-ease); }
+.psec-h[aria-expanded="true"] svg { transform: rotate(180deg); }
+.reading { font-size: 17px; line-height: 29px; letter-spacing: -0.01em; margin: 8px 0 0; }
+.preview { color: var(--sd-ink-2); margin: 4px 0 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.trustline { display: flex; align-items: center; gap: 6px; margin-top: 16px; }
+.trustline svg { color: var(--sd-positive); }
+.actionbar { position: absolute; left: 0; right: 0; bottom: 0; z-index: 6; display: flex; gap: 8px; align-items: center;
+  padding: 10px 16px 34px; background: var(--sd-tabbar-bg); box-shadow: inset 0 1px 0 var(--sd-line);
+  -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); }
+.btn { height: 44px; padding: 0 20px; border: 0; border-radius: var(--sd-r-md); font: inherit; font-weight: 600; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap;
+  transition: transform var(--sd-dur-1) var(--sd-ease), background var(--sd-dur-1) var(--sd-ease); }
+.btn:active { transform: scale(.98); }
+.btn-primary { background: var(--sd-accent); color: var(--sd-accent-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--sd-accent) 94%, black); }
+.btn-secondary { background: var(--sd-surface-2); color: var(--sd-ink); }
+.btn-ghost { background: transparent; color: var(--sd-accent); }
+.btn-ghost:hover { background: var(--sd-accent-soft); }
+.actionbar .btn-primary { flex: 1; height: 52px; }
+.btn-primary .faint { opacity: .78; font-weight: 500; }
+
+/* full-length view: show whole screens without inner scroll */
+.full .phone { height: auto; }
+.full .screen { position: relative; overflow: visible; }
+
+/* ===== component sheet ===== */
+.sheet-panel { background: var(--sd-bg); color: var(--sd-ink); border-radius: 24px; padding: 24px 20px; width: min(560px, 100%);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / .06); }
+.sheet-panel h3 { font-size: 13px; line-height: 18px; font-weight: 600; color: var(--sd-ink-3); margin: 20px 0 10px; }
+.sheet-panel h3:first-child { margin-top: 0; }
+.wrap { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { height: 36px; padding: 0 14px; border-radius: 999px; border: 0; font: inherit; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;
+  background: var(--sd-surface-2); color: var(--sd-ink-2); cursor: pointer; }
+.chip.on { background: var(--sd-ink); color: var(--sd-surface); }
+.seg { display: inline-grid; grid-template-columns: 1fr 1fr; background: var(--sd-surface-2); border-radius: 999px; padding: 3px; height: 40px; width: 220px; }
+.seg span { display: grid; place-items: center; border-radius: 999px; font-weight: 600; color: var(--sd-ink-3); }
+.seg span.on { background: var(--sd-surface); color: var(--sd-ink); box-shadow: var(--sd-shadow-1); }
+[data-theme="dark"] .seg span.on { background: var(--sd-surface-raised); }
+.toast { display: flex; align-items: center; justify-content: space-between; height: 48px; padding: 0 8px 0 16px; border-radius: var(--sd-r-md);
+  background: var(--sd-ink); color: var(--sd-surface); box-shadow: var(--sd-shadow-3); max-width: 340px; font-weight: 500; }
+[data-theme="dark"] .toast { background: var(--sd-surface-raised); color: var(--sd-ink); }
+.toast button { border: 0; background: none; color: var(--sd-toast-action); font: inherit; font-weight: 600; height: 44px; padding: 0 8px; cursor: pointer; }
+.monos { display: grid; grid-template-columns: repeat(auto-fill, minmax(116px, 1fr)); gap: 12px 8px; }
+.monos figure { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 11px; line-height: 14px; font-weight: 600; color: var(--sd-ink-2); }
+.skel { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: center; background: var(--sd-surface); border-radius: var(--sd-r-lg); padding: 14px 16px; box-shadow: var(--sd-shadow-1); }
+.skel i { display: block; background: var(--sd-surface-2); border-radius: var(--sd-r-xs); animation: pulse 1.2s ease-in-out infinite alternate; }
+@keyframes pulse { from { opacity: .55; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .skel i { animation: none; } }
+</style>
+</head>
+<body>
+<!-- icon sprite: 24 grid, 1.75 stroke, round caps -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+  <symbol id="i-today" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4.5v1.5A3.5 3.5 0 0 0 8 11M17 6h2.5v1.5A3.5 3.5 0 0 1 16 11M12 14v3.5M8.5 20.5h7M9.5 17.5h5"/></symbol>
+  <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-4-5.5 4z"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6"/></symbol>
+  <symbol id="i-chev-d" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 3.5v11M8 7.5l4-4 4 4M6 11.5v7a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-7"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5.5" cy="12" r=".9"/><circle cx="12" cy="12" r=".9"/><circle cx="18.5" cy="12" r=".9"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4.5h5.5V10M19.5 4.5 11 13M17 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 4 18.5v-10A1.5 1.5 0 0 1 5.5 7H10"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m8.5 12.2 2.4 2.3 4.6-4.8"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+  <!-- generic placeholder marks (not real company logos) -->
+  <symbol id="m-sun" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6" fill="#E8A21B"/><g stroke="#E8A21B" stroke-width="2.4" stroke-linecap="round"><path d="M16 3v3.5M16 25.5V29M3 16h3.5M25.5 16H29M6.8 6.8l2.5 2.5M22.7 22.7l2.5 2.5M6.8 25.2l2.5-2.5M22.7 9.3l2.5-2.5"/></g></symbol>
+  <symbol id="m-tooth" viewBox="0 0 32 32"><circle cx="16" cy="16" r="13" fill="#F7C9CF"/><path d="M9.5 10.5 12.5 22l3.5-8 3.5 8 3-11.5" fill="none" stroke="#1B1B1B" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="m-tri" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="#111"/><path d="M16 7 25 24H7z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 15l3 5h-6z" fill="#fff"/></symbol>
+  <symbol id="m-arc" viewBox="0 0 32 32"><path d="M5 22a11 11 0 0 1 22 0" fill="none" stroke="#4B3FD1" stroke-width="4" stroke-linecap="round"/><circle cx="16" cy="22" r="3.2" fill="#4B3FD1"/></symbol>
+  <symbol id="m-relay" viewBox="0 0 32 32"><rect x="4" y="4" width="10" height="10" rx="2.5" fill="#111"/><rect x="18" y="18" width="10" height="10" rx="2.5" fill="#111"/><path d="M14 9h4a5 5 0 0 1 5 5v4" fill="none" stroke="#111" stroke-width="2.4"/></symbol>
+  <symbol id="m-card" viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="16" rx="3.5" fill="#0F8A63"/><path d="M8 19h7" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></symbol>
+</svg>
+
+<main class="page">
+  <header class="intro">
+    <h1>잉크 블루 브리핑 — v2 비주얼 방향</h1>
+    <p>375px 기준. 왼쪽부터 홈(라이트·다크), 회사 상세 상단(라이트·다크). 폰 화면 안은 스크롤된다.</p>
+    <p><button class="btn btn-secondary" id="toggle-full" type="button" style="margin:8px 0 12px">전체 길이로 보기</button></p>
+    <p>데이터는 2026-11-14 실제 레코드. 로고 그림은 실제 로고가 아닌 자리표시용 도형이고, 사즈지능·라이즈 리포밍은 로고가 없는 회사의 분야 색 모노그램 규칙을 보여준다.</p>
+  </header>
+
+  <p class="row-label">홈 — 오늘의 5곳 · YC 새 배치 · 마감 임박 공모전</p>
+  <div class="phones" id="home-row"></div>
+
+  <p class="row-label">회사 상세 상단 — 1층(30초 요약) + 2층 아코디언</p>
+  <div class="phones" id="profile-row"></div>
+
+  <p class="row-label">부품 — 칩 · 세그먼트 · 버튼 · 배지 · 모노그램 · 토스트 · 스켈레톤</p>
+  <div class="phones" id="parts-row"></div>
+</main>
+
+<template id="tpl-home">
+  <div class="phone-wrap"><div class="phone">
+    <div class="screen">
+      <div class="status"><span class="num">9:41</span><span class="dots"><i></i><i></i></span></div>
+      <header class="appbar">
+        <span class="wordmark">Startup Daily</span>
+        <button class="iconbtn" aria-label="검색"><svg class="ic"><use href="#i-search"/></svg></button>
+      </header>
+      <div class="content">
+        <p class="eyebrow">11월 14일 금요일</p>
+        <h1 class="ptitle">오늘의 스타트업 5곳</h1>
+        <p class="psub">약 6분 · AI가 공개 자료로 조사</p>
+
+        <a class="card sec-enterprise" href="#">
+          <div class="card-top">
+            <span class="logo l48"><svg><use href="#m-sun"/></svg></span>
+            <span><span class="sector"><span class="dot"></span>엔터프라이즈</span><br><span class="meta">미국·이스라엘</span></span>
+          </div>
+          <h3>데이라이트 시큐리티</h3>
+          <p class="tag">AI 에이전트와 보안 엔지니어를 결합해 기업을 보호하는 MDR 플랫폼</p>
+          <p class="why-label">왜 지금</p>
+          <p class="why">11월 10일 Goldman Sachs Alternatives 주도로 $80M 시리즈 B를 마감했다. 지난 1년 동안 매출이 40배 넘게 늘었다.</p>
+          <div class="facts-inline">
+            <div><span class="meta">누적 투자</span><b class="num">$120M</b></div>
+            <div><span class="meta">최근 라운드</span><b class="num">Series B · 2026.11</b></div>
+          </div>
+        </a>
+
+        <div class="group">
+          <a class="crow read" href="#">
+            <span class="logo l44"><svg><use href="#m-tooth"/></svg></span>
+            <span class="body"><span class="name"><b>월리 헬스</b></span><span class="line2" style="display:block">보험 없이 연회비로 무제한 치과 진료를 제공하는 구독형 덴탈케어</span></span>
+            <span class="fig num">$28.1M</span>
+          </a>
+          <a class="crow" href="#">
+            <span class="logo l44 mono sec-robotics" aria-hidden="true">S</span>
+            <span class="body"><span class="name"><b>사즈지능</b></span><span class="line2" style="display:block">조립·포장 공정을 다관절 로봇으로 자동화하는 산업 로봇 기업</span></span>
+            <span class="fig num">$42M</span>
+          </a>
+          <a class="crow" href="#">
+            <span class="logo l44"><svg><use href="#m-tri"/></svg></span>
+            <span class="body"><span class="name"><b>SE3</b><span class="badge b-new">NEW</span></span><span class="line2" style="display:block">GPS 없이 3차원 공간을 이해하는 군용 드론 AI 소프트웨어</span></span>
+            <span class="fig num">$36M</span>
+          </a>
+          <a class="crow" href="#">
+            <span class="logo l44"><svg><use href="#m-arc"/></svg></span>
+            <span class="body"><span class="name"><b>모티프테크놀로지스</b></span><span class="line2" style="display:block">AI 에이전트용 파운데이션 모델을 처음부터 자체 개발</span></span>
+            <span class="fig num">240억 원</span>
+          </a>
+        </div>
+
+        <div class="sh"><h2>YC 새 배치</h2><a href="#">10곳 모두<svg class="ic s16"><use href="#i-chev-r"/></svg></a></div>
+        <p class="sh-desc">Summer · Fall 2026 배치</p>
+        <div class="group">
+          <a class="crow" href="#">
+            <span class="logo l44"><svg><use href="#m-relay"/></svg></span>
+            <span class="body"><span class="name"><b>오픈릴레이</b><span class="badge b-yc num">YC</span></span><span class="line2" style="display:block">모든 가속기를 하나의 API로 잇는 추론 인프라</span></span>
+            <span class="fig num">$10M</span>
+          </a>
+          <a class="crow" href="#">
+            <span class="logo l44 mono sec-climate" aria-hidden="true">R</span>
+            <span class="body"><span class="name"><b>라이즈 리포밍</b><span class="badge b-yc num">YC</span></span><span class="line2" style="display:block">폐기물 바이오가스를 현장에서 메탄올로 바꾸는 기후테크</span></span>
+            <span class="fig num">$1.7M</span>
+          </a>
+          <a class="crow" href="#">
+            <span class="logo l44"><svg><use href="#m-card"/></svg></span>
+            <span class="body"><span class="name"><b>ernd</b><span class="badge b-yc num">YC</span></span><span class="line2" style="display:block">AI 지출에 4% 캐시백을 주는 기업 신용카드</span></span>
+            <span class="fig num">Seed</span>
+          </a>
+        </div>
+
+        <div class="sh"><h2>마감 임박 공모전</h2><a href="#">전체<svg class="ic s16"><use href="#i-chev-r"/></svg></a></div>
+        <div class="group">
+          <div class="crow contest">
+            <span class="dday d-today">오늘</span>
+            <span class="body">
+              <span class="title">2026 태권도 의류형 굿즈 · 체험형 굿즈 아이디어 공모전</span>
+              <span class="meta" style="display:block;margin-top:2px">전북테크노파크 · 최고 <span class="num">100만 원</span></span>
+            </span>
+            <button class="iconbtn" aria-label="저장"><svg class="ic s20"><use href="#i-bookmark"/></svg></button>
+          </div>
+        </div>
+
+        <p class="meta trust">AI가 공개 자료로 조사 · <a href="#">오류 알리기</a></p>
+      </div>
+    </div>
+    <nav class="tabbar" aria-label="주요 메뉴">
+      <a class="tab on" href="#"><svg class="ic"><use href="#i-today"/></svg>오늘</a>
+      <a class="tab" href="#"><svg class="ic"><use href="#i-compass"/></svg>탐색</a>
+      <a class="tab" href="#"><svg class="ic"><use href="#i-trophy"/></svg>공모전</a>
+      <a class="tab" href="#"><svg class="ic"><use href="#i-bookmark"/></svg>보관함</a>
+    </nav>
+    <span class="homebar"></span>
+  </div></div>
+</template>
+
+<template id="tpl-profile">
+  <div class="phone-wrap"><div class="phone">
+    <div class="screen">
+      <div class="status"><span class="num">9:41</span><span class="dots"><i></i><i></i></span></div>
+      <header class="dbar">
+        <button class="iconbtn" aria-label="뒤로"><svg class="ic"><use href="#i-chev-l"/></svg></button>
+        <span class="right">
+          <button class="iconbtn" aria-label="공유"><svg class="ic"><use href="#i-share"/></svg></button>
+          <button class="iconbtn" aria-label="더보기"><svg class="ic"><use href="#i-more"/></svg></button>
+        </span>
+        <span class="progress"></span>
+      </header>
+      <div class="pcontent">
+        <span class="logo l64"><svg><use href="#m-tooth"/></svg></span>
+        <h1 class="pname">월리 헬스</h1>
+        <p class="psite" style="margin:0">Wally Health · <a href="#">carebywally.com<svg class="ic s14"><use href="#i-ext"/></svg></a></p>
+        <div class="badges"><span class="badge b-sector sec-health"><span class="dot"></span>헬스·바이오</span></div>
+        <p class="ptag">보험 없이 연회비로 무제한 치과 진료를 제공하는 구독형 덴탈케어 플랫폼</p>
+
+        <div class="facts">
+          <div class="fact"><div class="lab">누적 투자<svg class="ic s14"><use href="#i-info"/></svg></div><div class="val num">$28.1M</div><div class="sub">투자 2회</div></div>
+          <div class="fact"><div class="lab">최근 라운드</div><div class="val num">Series A</div><div class="sub num">$25M · 2026.10</div></div>
+          <div class="fact"><div class="lab">설립</div><div class="val num">2020</div><div class="sub">6년 차</div></div>
+          <div class="fact"><div class="lab">본사</div><div class="val">미국</div><div class="sub">뉴욕</div></div>
+        </div>
+
+        <section class="psec" style="padding-top:32px">
+          <button class="psec-h" aria-expanded="true"><h2>왜 지금</h2><svg class="ic s20"><use href="#i-chev-d"/></svg></button>
+          <p class="reading">2026년 10월 2,500만 달러 시리즈 A를 유치하면서 EMS Dental과 전략적 파트너십을 맺었다. 15개 지점에서 멤버 5만 명을 모았고, 2027년 말까지 100개 지점으로 늘릴 계획이다.</p>
+          <p class="meta trustline"><svg class="ic s14"><use href="#i-check"/></svg>출처 6개 · 웹사이트 확인 <span class="num">11월 14일</span></p>
+        </section>
+        <section class="psec">
+          <button class="psec-h" aria-expanded="false"><h2>제품</h2><svg class="ic s20"><use href="#i-chev-d"/></svg></button>
+          <p class="preview">연회비 하나로 검진·스케일링·충전·응급 진료까지 무제한. 보험 청구 없이 앱에서 예약하고, 자체 운영 지점에서 같은 품질로 진료한다.</p>
+        </section>
+        <section class="psec">
+          <button class="psec-h" aria-expanded="false"><h2>경쟁</h2><svg class="ic s20"><use href="#i-chev-d"/></svg></button>
+          <p class="preview">Tend · Aspen Dental 대비 보험을 아예 빼고 구독만 받는다는 점이 다르다.</p>
+        </section>
+      </div>
+    </div>
+    <div class="actionbar">
+      <button class="iconbtn" aria-label="저장" style="background:var(--sd-surface-2);border-radius:14px;width:52px;height:52px"><svg class="ic"><use href="#i-bookmark"/></svg></button>
+      <button class="btn btn-primary"><span class="faint">다음</span> 사즈지능<svg class="ic s20"><use href="#i-arrow-r"/></svg></button>
+    </div>
+    <span class="homebar"></span>
+  </div></div>
+</template>
+
+<template id="tpl-parts">
+  <div class="sheet-panel">
+    <h3>칩 (한 줄, 선택 = 잉크 알약)</h3>
+    <div class="wrap">
+      <button class="chip on"><svg class="ic s16"><use href="#i-sliders"/></svg>필터 <span class="num">2</span></button>
+      <button class="chip">YC</button>
+      <button class="chip sec-health"><span class="dot"></span>헬스·바이오</button>
+      <button class="chip sec-infra"><span class="dot"></span>AI 인프라</button>
+    </div>
+    <h3>세그먼트</h3>
+    <div class="seg"><span class="on">회사</span><span>공모전</span></div>
+    <h3>버튼 — primary · secondary · ghost · icon</h3>
+    <div class="wrap">
+      <button class="btn btn-primary"><span><span class="num">252</span>곳 보기</span></button>
+      <button class="btn btn-secondary">초기화</button>
+      <button class="btn btn-ghost">오늘의 5곳 보기</button>
+      <button class="iconbtn" aria-label="저장"><svg class="ic"><use href="#i-bookmark"/></svg></button>
+    </div>
+    <h3>배지</h3>
+    <div class="wrap">
+      <span class="badge b-yc num">YC S26</span>
+      <span class="badge b-new">새 소식</span>
+      <span class="badge b-sector sec-climate"><span class="dot"></span>기후·에너지·푸드</span>
+      <span class="badge b-est">추정</span>
+      <span class="dday d-today num" style="margin:0">오늘</span>
+      <span class="dday d-soon num" style="margin:0">D-2</span>
+      <span class="dday d-later num" style="margin:0">D-12</span>
+    </div>
+    <h3>로고 폴백 — 분야 색 모노그램 (44px)</h3>
+    <div class="monos">
+      <figure><span class="logo l44 mono sec-health">W</span>헬스·바이오</figure>
+      <figure><span class="logo l44 mono sec-robotics">S</span>로보틱스</figure>
+      <figure><span class="logo l44 mono sec-mobility">E</span>모빌리티</figure>
+      <figure><span class="logo l44 mono sec-climate">R</span>기후·에너지</figure>
+      <figure><span class="logo l44 mono sec-fintech">P</span>핀테크</figure>
+      <figure><span class="logo l44 mono sec-infra">G</span>AI 인프라</figure>
+      <figure><span class="logo l44 mono sec-enterprise">D</span>엔터프라이즈</figure>
+      <figure><span class="logo l44 mono sec-consumer">A</span>컨슈머</figure>
+      <figure><span class="logo l44 mono sec-ai">M</span>AI 모델</figure>
+    </div>
+    <h3>토스트</h3>
+    <div class="toast"><span>저장했어요</span><button>되돌리기</button></div>
+    <h3>스켈레톤 (실제 행 모양)</h3>
+    <div class="skel"><i style="width:44px;height:44px;border-radius:12px"></i><span><i style="width:46%;height:12px;margin-bottom:10px"></i><i style="width:88%;height:11px"></i></span></div>
+  </div>
+</template>
+
+<script>
+  // stamp each template twice: light + dark
+  const put = (tplId, rowId) => {
+    const tpl = document.getElementById(tplId), row = document.getElementById(rowId);
+    for (const theme of ['light', 'dark']) {
+      const node = tpl.content.firstElementChild.cloneNode(true);
+      node.setAttribute('data-theme', theme);
+      const cap = document.createElement('p');
+      cap.className = 'row-label';
+      cap.textContent = theme === 'light' ? '라이트' : '다크';
+      const box = document.createElement('div');
+      box.className = tplId === 'tpl-parts' ? '' : 'phone-wrap';
+      if (tplId === 'tpl-parts') box.style.width = 'min(560px, 100%)';
+      box.append(cap, node);
+      row.append(box);
+    }
+  };
+  put('tpl-home', 'home-row');
+  put('tpl-profile', 'profile-row');
+  put('tpl-parts', 'parts-row');
+  const tg = document.getElementById('toggle-full');
+  tg.addEventListener('click', () => {
+    const on = document.body.classList.toggle('full');
+    tg.textContent = on ? '첫 화면(812px)만 보기' : '전체 길이로 보기';
+  });
+</script>
+</body>
+</html>

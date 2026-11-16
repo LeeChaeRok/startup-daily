@@ -1,47 +1,40 @@
 import { useState } from 'react'
 
-// djb2 over the lowercased name → one of 7 muted paper tones (8th is reserved for people).
-function monoIndex(text = '') {
-  let h = 5381
-  for (const c of text.toLowerCase().replace(/\s+/g, '')) h = ((h << 5) + h + c.charCodeAt(0)) >>> 0
-  return h % 7
-}
-
-function initials(name = '') {
-  const words = name.replace(/[^\p{L}\p{N}\s]/gu, ' ').split(/\s+/).filter(Boolean)
-  if (words.length === 0) return '?'
-  if (words.length === 1) return words[0][0].toUpperCase()
-  return (words[0][0] + words[1][0]).toUpperCase()
+/** First Latin letter of the English name, else the first syllable of the Korean name. */
+function initial(s, name) {
+  const en = (name || s?.name_en || '').match(/[A-Za-z0-9]/)
+  if (en) return en[0].toUpperCase()
+  const ko = (s?.name_ko || name || '').trim()
+  return ko ? [...ko][0] : '?'
 }
 
 /**
- * Company mark. The monogram is always painted first; the logo the generator saved
- * under /logos (logo_url) covers it once loaded. No third-party favicon fallback:
- * the generator already tried those and kept only usable images.
+ * Company mark (spec v2 §3.21). The monogram — the sector's soft tile with its letter — is
+ * painted first; the saved logo (logo_url) covers it once it has loaded, and a failed image
+ * simply leaves the monogram. Colour comes from the sector only, never from a hash.
+ * person: a founder's initial on a neutral tile.
  */
-export default function Logo({ startup, size = 40, person = false, name }) {
-  const label = name || startup?.name_en || startup?.name_ko || ''
+export default function Logo({ startup, size = 44, person = false, name }) {
   const src = person ? null : startup?.logo_url || null
-  const [loaded, setLoaded] = useState('') // '' | 'full' | 'small' (a favicon under 64px, shown inset)
-  const idx = person ? 7 : monoIndex(label)
-  const text = initials(label)
-
+  const [state, setState] = useState('') // '' | 'full' | 'small' | 'failed'
+  const sector = person ? 'other' : startup?._sector?.key || 'other'
   return (
     <span
-      className={`logo ${size >= 56 ? 'logo--lg' : ''}`}
+      className={`logo ${person ? 'logo--person' : ''}`}
       style={{
         width: size,
         height: size,
-        fontSize: Math.round(size * (text.length > 1 ? 0.36 : 0.44)),
-        '--mono-bg': `var(--sd-mono-${idx}-bg)`,
-        '--mono-fg': `var(--sd-mono-${idx}-fg)`,
+        borderRadius: Math.round(size * 0.26),
+        fontSize: Math.round(size * 0.42),
+        '--mono-bg': `var(--sd-sector-${sector}-soft)`,
+        '--mono-fg': `var(--sd-sector-${sector})`,
       }}
       aria-hidden="true"
     >
-      <span className="logo__mono">{text}</span>
-      {src && (
+      <span className="logo__mono">{initial(startup, name)}</span>
+      {src && state !== 'failed' && (
         <img
-          className={`logo__img ${loaded ? 'is-loaded' : ''} ${loaded === 'small' ? 'is-small' : ''}`}
+          className={`logo__img ${state === 'full' || state === 'small' ? 'is-loaded' : ''} ${state === 'small' ? 'is-small' : ''}`}
           src={src}
           alt=""
           width={size}
@@ -50,8 +43,9 @@ export default function Logo({ startup, size = 40, person = false, name }) {
           decoding="async"
           onLoad={(e) => {
             const w = e.currentTarget.naturalWidth
-            setLoaded(src.endsWith('.svg') || w >= 64 ? 'full' : w >= 32 ? 'small' : '')
+            setState(src.endsWith('.svg') || w >= 64 ? 'full' : w >= 24 ? 'small' : 'failed')
           }}
+          onError={() => setState('failed')}
         />
       )}
     </span>

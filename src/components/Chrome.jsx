@@ -1,171 +1,176 @@
+/* App chrome (spec v2 §2-5, §3.1–3.2): the phone top bar, the bottom tabs, the desktop
+   top navigation and the one-line footer. */
 import { useEffect, useState } from 'react'
 import Icon from './Icon.jsx'
-import { LangToggle } from './LangSwitch.jsx'
-import { navigate, useSaved, useTheme } from '../lib/hooks.js'
-import { L } from '../lib/i18n.js'
-import { useSavedContests } from '../lib/contests.js'
+import { byId } from '../lib/data.js'
+import { navigate, useSaved } from '../lib/hooks.js'
+import { isEn, L, setLang } from '../lib/i18n.js'
 
-const THEME_NEXT = { system: 'light', light: 'dark', dark: 'system' }
-const THEME_LABEL = {
-  system: L('시스템 테마', 'System theme'),
-  light: L('라이트 테마', 'Light theme'),
-  dark: L('다크 테마', 'Dark theme'),
+/** Bottom tabs = desktop nav, same order and names. Contests are Korean-only (hidden in English). */
+export const TABS = [
+  { key: 'today', href: '#/', label: L('오늘', 'Today'), icon: 'today' },
+  { key: 'explore', href: '#/explore', label: L('탐색', 'Explore'), icon: 'explore' },
+  !isEn && { key: 'contests', href: '#/contests', label: L('공모전', 'Contests'), icon: 'trophy' },
+  { key: 'saved', href: '#/saved', label: L('저장', 'Saved'), icon: 'bookmark' },
+].filter(Boolean)
+
+function useScrolled(past = 8) {
+  const [scrolled, setScrolled] = useState(false)
+  useEffect(() => {
+    const on = () => setScrolled(window.scrollY > past)
+    on()
+    window.addEventListener('scroll', on, { passive: true })
+    return () => window.removeEventListener('scroll', on)
+  }, [past])
+  return scrolled
 }
 
-export function ThemeButton() {
-  const [theme, setTheme] = useTheme()
-  const icon = theme === 'dark' ? 'moon' : theme === 'light' ? 'sun' : 'monitor'
-  return (
-    <button
-      type="button"
-      className="icon-btn"
-      onClick={() => setTheme(THEME_NEXT[theme])}
-      aria-label={L(`테마: ${THEME_LABEL[theme]} (눌러서 변경)`, `Theme: ${THEME_LABEL[theme]} (tap to change)`)}
-      title={THEME_LABEL[theme]}
-    >
-      <Icon name={icon} />
-    </button>
-  )
+/** Saved companies with news since we covered them: a dot on the 저장 tab. */
+function useSavedNews() {
+  const { saved } = useSaved()
+  return saved.some((id) => byId(id)?._hasNews)
 }
 
-function Wordmark() {
+/** Tapping the tab you are on scrolls to the top; at the top it returns to the tab's first page (§8-3). */
+function onTabClick(e, tab, active, atRoot) {
+  if (!active) return
+  e.preventDefault()
+  if (window.scrollY > 4) window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
+  else if (!atRoot) navigate(tab.href)
+}
+
+export function Wordmark() {
   return (
-    <a href="#/" className="wordmark" aria-label={L('Startup Daily 최신 호', 'Startup Daily, latest issue')}>
+    <a href="#/" className="wordmark" aria-label={L('Startup Daily, 오늘', 'Startup Daily, today')}>
       Startup Daily<span className="wordmark__dot" aria-hidden="true" />
     </a>
   )
 }
 
-const NAV = [
-  { key: 'issue', href: '#/', label: L('최신 호', 'Latest'), icon: 'today' },
-  { key: 'explore', href: '#/explore', label: L('탐색', 'Explore'), icon: 'explore' },
-  { key: 'yc', href: '#/yc', label: L('YC', 'YC'), icon: 'spark' },
-  { key: 'contests', href: '#/contests', label: L('공모전', 'Contests'), icon: 'trophy' },
-]
-
-/** 저장함 lives in the top bar: a bookmark with the count of saved companies and contests. */
-function SavedButton({ section, desktop }) {
-  const { saved } = useSaved()
-  const { saved: contests } = useSavedContests()
-  const n = saved.length + contests.length
-  return (
-    <a
-      href="#/saved"
-      className={`icon-btn saved-btn ${desktop ? 'saved-btn--desktop' : ''}`}
-      aria-current={section === 'saved' ? 'page' : undefined}
-      aria-label={L(`저장함${n ? `, ${n}개` : ''}`, `Saved${n ? `, ${n}` : ''}`)}
-    >
-      <Icon name={section === 'saved' ? 'bookmarkFill' : 'bookmark'} size={22} />
-      {n > 0 && (
-        <span className="saved-btn__count mono" aria-hidden="true">
-          {n > 99 ? '99+' : n}
-        </span>
-      )}
-    </a>
-  )
-}
-
 /**
- * Sticky top bar. On mobile detail pages it becomes a back bar whose title
- * fades in once the hero has scrolled away.
+ * Phone top bar. Tab roots: wordmark + settings. Other screens: back, a title (optionally only
+ * once the page heading has scrolled away) and the screen's own actions.
  */
-export function AppHeader({ section, back, title, desktop }) {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  if (desktop) {
-    return (
-      <header className={`appbar appbar--desktop ${scrolled ? 'is-scrolled' : ''}`}>
-        <div className="appbar__inner">
-          <Wordmark />
-          <nav className="topnav" aria-label={L('주 메뉴', 'Main')}>
-            {[...NAV, { key: 'about', href: '#/about', label: L('소개', 'About') }].map((n) => (
-              <a key={n.key} href={n.href} className="topnav__link" aria-current={section === n.key ? 'page' : undefined}>
-                {n.label}
-              </a>
-            ))}
-          </nav>
-          <form
-            className="appbar__search"
-            role="search"
-            onSubmit={(e) => {
-              e.preventDefault()
-              const q = new FormData(e.currentTarget).get('q')?.toString().trim()
-              navigate(`/explore${q ? `?q=${encodeURIComponent(q)}` : ''}`)
-            }}
-          >
-            <Icon name="explore" size={18} />
-            <label className="sr-only" htmlFor="global-search">
-              {L('회사, 분야, 창업자 검색', 'Search companies, sectors, founders')}
-            </label>
-            <input id="global-search" name="q" type="search" placeholder={L('회사·분야·창업자 검색', 'Search companies, sectors, founders')} autoComplete="off" />
-          </form>
-          <SavedButton section={section} desktop />
-          <LangToggle />
-          <ThemeButton />
-        </div>
-      </header>
-    )
-  }
-
+export function TopBar({ back, title, titleVisible, actions, progress }) {
+  const scrolled = useScrolled()
+  // a page with its own heading: the bar's title shows once that heading has scrolled away
+  const pastHeading = useScrolled(64)
+  const showTitle = titleVisible ?? pastHeading
   return (
-    <header className={`appbar ${scrolled ? 'is-scrolled' : ''}`}>
-      <div className="appbar__inner">
+    <header className={`topbar ${scrolled ? 'is-scrolled' : ''}`}>
+      <div className="topbar__inner">
         {back ? (
-          <>
-            <button type="button" className="icon-btn" onClick={back.onClick} aria-label={back.label}>
-              <Icon name="back" />
-            </button>
-            <span className={`appbar__title ${title?.visible ? 'is-visible' : ''}`} aria-hidden={!title?.visible}>
-              {title?.text}
-            </span>
-          </>
+          <button type="button" className="btn-icon topbar__back" onClick={back.onClick} aria-label={back.label}>
+            <Icon name="back" size={24} />
+          </button>
         ) : (
           <Wordmark />
         )}
-        <span className="appbar__spacer" />
-        {/* search is the 탐색 tab; language and theme live in 설정 */}
-        {!back && <SavedButton section={section} />}
-        {!back && (
-          <a href="#/settings" className="icon-btn" aria-label={L('설정', 'Settings')}>
-            <Icon name="more" />
-          </a>
+        {back && (
+          <span className={`topbar__title ${showTitle ? 'is-visible' : ''}`} aria-hidden={!showTitle}>
+            {title}
+          </span>
         )}
+        <span className="topbar__spacer" />
+        {actions ??
+          (!back && (
+            <a href="#/settings" className="btn-icon" aria-label={L('설정', 'Settings')}>
+              <Icon name="settings" size={22} />
+            </a>
+          ))}
+      </div>
+      {progress}
+    </header>
+  )
+}
+
+export function TabBar({ section, atRoot }) {
+  const news = useSavedNews()
+  return (
+    <nav className="tabbar" aria-label={L('주 메뉴', 'Main')}>
+      {TABS.map((t) => {
+        const active = section === t.key
+        return (
+          <a key={t.key} href={t.href} className="tabbar__tab" aria-current={active ? 'page' : undefined} onClick={(e) => onTabClick(e, t, active, atRoot)}>
+            <span className="tabbar__icon">
+              <Icon name={t.key === 'saved' && active ? 'bookmarkFill' : t.icon} size={24} strokeWidth={active ? 2.1 : 1.75} />
+              {t.key === 'saved' && news && <span className="tabbar__dot" role="img" aria-label={L('새 소식', 'News')} />}
+            </span>
+            <span className="tabbar__label">{t.label}</span>
+          </a>
+        )
+      })}
+    </nav>
+  )
+}
+
+export function DesktopNav({ section, atRoot, query = '' }) {
+  const scrolled = useScrolled()
+  const news = useSavedNews()
+  return (
+    <header className={`dnav ${scrolled ? 'is-scrolled' : ''}`}>
+      <div className="dnav__inner">
+        <Wordmark />
+        <nav className="dnav__tabs" aria-label={L('주 메뉴', 'Main')}>
+          {TABS.map((t) => {
+            const active = section === t.key
+            return (
+              <a key={t.key} href={t.href} className="dnav__tab" aria-current={active ? 'page' : undefined} onClick={(e) => onTabClick(e, t, active, atRoot)}>
+                {t.label}
+                {t.key === 'saved' && news && <span className="tabbar__dot tabbar__dot--inline" role="img" aria-label={L('새 소식', 'News')} />}
+              </a>
+            )
+          })}
+        </nav>
+        <form
+          key={query}
+          className="dnav__search"
+          role="search"
+          onSubmit={(e) => {
+            e.preventDefault()
+            const q = new FormData(e.currentTarget).get('q')?.toString().trim()
+            navigate(`/explore${q ? `?q=${encodeURIComponent(q)}` : ''}`)
+          }}
+        >
+          <Icon name="explore" size={18} />
+          <label className="sr-only" htmlFor="global-search">
+            {L('회사·분야·투자사 검색', 'Search companies, sectors, investors')}
+          </label>
+          <input id="global-search" name="q" type="search" defaultValue={query} placeholder={L('회사·분야·투자사 검색', 'Search companies, sectors, investors')} autoComplete="off" />
+        </form>
+        <button type="button" className="dnav__lang" lang={isEn ? 'ko' : 'en'} onClick={() => setLang(isEn ? 'ko' : 'en')} aria-label={isEn ? '한국어로 보기' : 'Read in English'}>
+          {isEn ? '한국어' : 'EN'}
+        </button>
+        <a href="#/settings" className="btn-icon" aria-label={L('설정', 'Settings')} aria-current={section === 'settings' ? 'page' : undefined}>
+          <Icon name="settings" size={22} />
+        </a>
       </div>
     </header>
   )
 }
 
-export function TabBar({ section }) {
+/** One quiet line: what this is, how long it has run, where to read more (spec v2 §5-12). */
+export function FooterLine({ days }) {
   return (
-    <nav className="tabbar" aria-label={L('주 메뉴', 'Main')}>
-      {NAV.map((n) => (
-        <a key={n.key} href={n.href} className="tabbar__tab" aria-current={section === n.key ? 'page' : undefined}>
-          <span className="tabbar__icon">
-            <Icon name={n.icon} size={24} />
-          </span>
-          <span className="tabbar__label">{n.label}</span>
-        </a>
-      ))}
-    </nav>
-  )
-}
-
-export function Footer() {
-  return (
-    <footer className="footer">
-      <nav className="footer__links" aria-label={L('사이트 정보', 'Site info')}>
-        <a href="#/about">{L('소개·선정 기준', 'About and how we pick')}</a>
-        <a href="#/settings">{L('설정', 'Settings')}</a>
-        <a href="#/about?sec=corrections">{L('정정 기록', 'Corrections log')}</a>
-        <a href="#/about?sec=how">{L('투자 조언 아님', 'Not investment advice')}</a>
-      </nav>
+    <footer className="footline">
+      <p>
+        {L('매일 아침 발행', 'Every morning')}
+        {days ? (
+          <>
+            {' · '}
+            <span className="num">{L(`${days}일째`, `day ${days}`)}</span>
+          </>
+        ) : null}
+        {' · '}
+        {L('AI가 공개 자료로 정리 · 투자 조언 아님', 'Written by AI from public sources · Not investment advice')}
+      </p>
+      <p className="footline__links">
+        <a href="#/about">{L('소개·선정 기준', 'About')}</a>
+        <a href="#/about?sec=corrections">{L('정정 기록', 'Corrections')}</a>
+        <button type="button" className="linkbtn" lang={isEn ? 'ko' : 'en'} onClick={() => setLang(isEn ? 'ko' : 'en')}>
+          {isEn ? '한국어' : 'English'}
+        </button>
+      </p>
     </footer>
   )
 }

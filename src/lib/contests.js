@@ -94,6 +94,7 @@ export const prizeValue = (c) => c.prize_top ?? c.prize_total ?? 0
 // one threshold at a time; they nest, so a single choice is enough
 export const PRIZES = [
   { key: 'all', label: L('전체', 'Any'), test: () => true },
+  { key: 'cash', label: L('상금 있음', 'Cash prize'), test: (c) => prizeValue(c) > 0 },
   { key: '1m', label: L('100만원 이상', '₩1M+'), test: (c) => prizeValue(c) >= 1e6 },
   { key: '3m', label: L('300만원 이상', '₩3M+'), test: (c) => prizeValue(c) >= 3e6 },
   { key: '10m', label: L('1천만원 이상', '₩10M+'), test: (c) => prizeValue(c) >= 1e7 },

@@ -1,208 +1,207 @@
+/* 설정 (#/settings) — five groups: 나에게 맞추기 · 알림 · 화면 · 내 기록 · 정보 (IA §3-8). */
+import { useState } from 'react'
 import Icon from '../components/Icon.jsx'
+import Sheet from '../components/Sheet.jsx'
 import AlertSetting from '../components/AlertSetting.jsx'
-import LangSwitch from '../components/LangSwitch.jsx'
-import { SECTORS, poolLive } from '../lib/data.js'
-import { useFontSize, useInterests, useMuted, useReadLog, useSaved, useTheme } from '../lib/hooks.js'
-import { ROLES, useOrder, useRole } from '../lib/personal.js'
-import { openTaste } from '../lib/taste.js'
-import { L } from '../lib/i18n.js'
+import { Chip, ChipWrap, PageTitle, Segmented } from '../components/ui.jsx'
+import { useToast } from '../components/toast-context.js'
+import { SECTORS, byId } from '../lib/data.js'
+import { localDate, useFontSize, useInterests, useReadLog, useSaved, useTheme } from '../lib/hooks.js'
+import { ROLES, useRole } from '../lib/personal.js'
+import { canonicalUrl, copyText } from '../lib/share.js'
+import { isEn, L, lang, setLang } from '../lib/i18n.js'
 
 const THEMES = [
-  ['system', L('시스템', 'System')],
-  ['light', L('라이트', 'Light')],
-  ['dark', L('다크', 'Dark')],
+  { key: 'system', label: L('시스템', 'System') },
+  { key: 'light', label: L('라이트', 'Light') },
+  { key: 'dark', label: L('다크', 'Dark') },
 ]
 const FONTS = [
-  ['sm', L('작게', 'Small')],
-  ['md', L('기본', 'Default')],
-  ['lg', L('크게', 'Large')],
+  { key: 'sm', label: L('작게', 'Small') },
+  { key: 'md', label: L('기본', 'Default') },
+  { key: 'lg', label: L('크게', 'Large') },
 ]
-const ORDERS = [
-  ['personal', L('내 관심 순', 'Your order')],
-  ['editorial', L('발행 순', 'As published')],
+const LANGS = [
+  { key: 'ko', label: '한국어' },
+  { key: 'en', label: 'English' },
 ]
 
-function Segmented({ labelledBy, options, value, onChange }) {
-  return (
-    <div className="segmented segmented--inline" role="group" aria-labelledby={labelledBy}>
-      {options.map(([k, label]) => (
-        <button key={k} type="button" aria-pressed={value === k} className="segmented__tab" onClick={() => onChange(k)}>
-          {label}
-        </button>
-      ))}
-    </div>
-  )
-}
-
-/** S8 설정 (#/settings): everything the reader can change, split out of 소개. */
 export default function Settings() {
   const [theme, setTheme] = useTheme()
   const [font, setFont] = useFontSize()
-  const [role] = useRole()
-  const [order, setOrder] = useOrder()
-  const { interests } = useInterests()
-  const { muted } = useMuted()
+  const [role, setRole] = useRole()
+  const { isInterest, toggle } = useInterests()
   const { readLog, clearRead } = useReadLog()
   const { saved } = useSaved()
+  const toast = useToast()
+  const [confirm, setConfirm] = useState(false)
   const readCount = Object.keys(readLog).length
-  const roleLabel = ROLES.find((r) => r.key === role)?.label
-  const sectorLabels = SECTORS.filter((s) => interests.includes(s.key)).map((s) => s.label)
+
+  const copyLinks = async () => {
+    const text = saved
+      .map(byId)
+      .filter(Boolean)
+      .map((s) => `${s.name_ko} — ${s.tagline} ${canonicalUrl(`/s/${s.id}`)}`)
+      .join('\n')
+    toast((await copyText(text)) ? L(`${saved.length}곳의 링크를 복사했어요`, `Copied ${saved.length} links`) : L('복사하지 못했어요', "Couldn't copy"))
+  }
+  const downloadJson = () => {
+    const data = {
+      exported_at: new Date().toISOString(),
+      items: saved
+        .map(byId)
+        .filter(Boolean)
+        .map((s) => ({ id: s.id, name_ko: s.name_ko, name_en: s.name_en, url: canonicalUrl(`/s/${s.id}`), date: s.date })),
+    }
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }))
+    a.download = `startup-daily-saved-${localDate()}.json`
+    a.click()
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000)
+  }
 
   return (
-    <div className="page page--settings prose">
-      <h1 className="page-title" tabIndex={-1}>
-        {L('설정', 'Settings')}
-      </h1>
+    <div className="page">
+      <PageTitle title={L('설정', 'Settings')} />
 
-      <section className="about-sec" aria-labelledby="set-you">
-        <h2 id="set-you">{L('나에게 맞추기', 'Make it yours')}</h2>
-        <div className="setting">
-          <span className="setting__label">{L('역할과 관심 분야', 'Role and sectors')}</span>
-          <div className="setting__body">
-            <p>
-              {roleLabel || L('역할 없음', 'No role')} · {sectorLabels.length ? sectorLabels.join(', ') : L('관심 분야 없음', 'No sectors')}
-              {muted.length > 0 && L(` · 숨김 ${muted.length}`, ` · ${muted.length} hidden`)}
-            </p>
-            <div className="setting__actions">
-              <button type="button" className="btn btn--secondary" onClick={() => openTaste('edit')}>
-                {L('바꾸기', 'Change')}
-              </button>
-            </div>
-            <p className="setting__hint">
-              {poolLive
-                ? L(
-                    '모두의 5곳은 모두에게 같아요. 내 5곳은 고른 분야에서 4곳, 관심 밖에서 1곳을 골라요.',
-                    "Everyone's five is the same for all. Your five takes four from your sectors and one from outside them.",
-                  )
-                : L(
-                    '5곳 구성은 모두에게 같아요. 고른 분야가 위로 올라오고, 회사마다 "○○라면" 한 줄이 붙어요.',
-                    'Everyone gets the same picks. Only the order and the one line for your role change.',
-                  )}
-            </p>
+      <section className="setsec" aria-labelledby="set-you">
+        <h2 id="set-you" className="setsec__title">
+          {L('나에게 맞추기', 'Make it yours')}
+        </h2>
+        <div className="setbox">
+          <div className="set">
+            <span className="set__label">{L('역할', 'Your role')}</span>
+            <ChipWrap label={L('역할', 'Your role')}>
+              {ROLES.map((r) => (
+                <Chip key={r.key} on={role === r.key} onClick={() => setRole(role === r.key ? null : r.key)}>
+                  {r.label}
+                </Chip>
+              ))}
+            </ChipWrap>
+            <p className="set__hint">{L('회사 화면의 ‘내 입장에서’ 한 줄이 이 역할에 맞춰져요.', 'The “from your seat” line on company pages follows this role.')}</p>
           </div>
-        </div>
-        <div className="setting">
-          <span className="setting__label" id="order-label">
-            {L('호 안의 순서', 'Order in an issue')}
-          </span>
-          <div className="setting__body">
-            <Segmented labelledBy="order-label" options={ORDERS} value={order} onChange={setOrder} />
-            <p className="setting__hint">
-              {L(
-                '내 관심 순: 관심 분야와 읽고 저장한 기록으로 순서를 정해요. 이 기기에만 저장돼요.',
-                'Your order uses your sectors and what you read and save. It stays on this device.',
-              )}
-              {poolLive &&
-                L(
-                  ' 내 5곳이 있는 날 휴대폰 홈의 모두의 5곳은 늘 발행 순이에요.',
-                  " On days with your five, everyone's five on the phone home stays as published.",
-                )}
-            </p>
+          <div className="set">
+            <span className="set__label">{L('관심 분야', 'Sectors you follow')}</span>
+            <ChipWrap label={L('관심 분야', 'Sectors')}>
+              {SECTORS.map((s) => (
+                <Chip key={s.key} on={isInterest(s.key)} dot={`var(--sd-sector-${s.key})`} onClick={() => toggle(s.key)}>
+                  {s.label}
+                </Chip>
+              ))}
+            </ChipWrap>
+            <p className="set__hint">{L('탐색에서 먼저 보이고, 알림을 고를 때 쓰여요. 오늘의 5곳은 모두에게 같아요.', 'They come first in Explore and can narrow alerts. Today’s five are the same for everyone.')}</p>
           </div>
         </div>
       </section>
 
-      <section className="about-sec" aria-labelledby="set-alerts">
-        <h2 id="set-alerts">{L('알림', 'Alerts')}</h2>
-        <div className="setting">
-          <span className="setting__label">{L('새 호 알림', 'New-issue alerts')}</span>
-          <div className="setting__body">
+      <section className="setsec" aria-labelledby="set-alerts">
+        <h2 id="set-alerts" className="setsec__title">
+          {L('알림', 'Alerts')}
+        </h2>
+        <div className="setbox">
+          <div className="set">
+            <span className="set__label">{L('새 다섯 곳 알림', 'New five alerts')}</span>
             <AlertSetting />
           </div>
         </div>
       </section>
 
-      <section className="about-sec" aria-labelledby="set-display">
-        <h2 id="set-display">{L('화면', 'Display')}</h2>
-        <div className="setting">
-          <span className="setting__label">{L('언어', 'Language')}</span>
-          <LangSwitch />
-        </div>
-        <div className="setting">
-          <span className="setting__label" id="theme-label">
-            {L('테마', 'Theme')}
-          </span>
-          <Segmented labelledBy="theme-label" options={THEMES} value={theme} onChange={setTheme} />
-        </div>
-        <div className="setting">
-          <span className="setting__label" id="font-label">
-            {L('글자 크기', 'Text size')}
-          </span>
-          <Segmented labelledBy="font-label" options={FONTS} value={font} onChange={setFont} />
+      <section className="setsec" aria-labelledby="set-display">
+        <h2 id="set-display" className="setsec__title">
+          {L('화면', 'Display')}
+        </h2>
+        <div className="setbox">
+          <div className="set">
+            <span className="set__label" lang={isEn ? 'en' : 'ko'}>
+              {L('언어', 'Language')}
+            </span>
+            <Segmented label={L('언어', 'Language')} options={LANGS} value={lang} onChange={setLang} />
+          </div>
+          <div className="set">
+            <span className="set__label">{L('테마', 'Theme')}</span>
+            <Segmented label={L('테마', 'Theme')} options={THEMES} value={theme} onChange={setTheme} />
+          </div>
+          <div className="set">
+            <span className="set__label">{L('글자 크기', 'Text size')}</span>
+            <Segmented label={L('글자 크기', 'Text size')} options={FONTS} value={font} onChange={setFont} />
+            <p className="set__hint">{L('회사 화면의 본문 크기예요.', 'For the text on company pages.')}</p>
+          </div>
         </div>
       </section>
 
-      <section className="about-sec" aria-labelledby="set-data">
-        <h2 id="set-data">{L('내 기록', 'Your data')}</h2>
-        <div className="setting">
-          <span className="setting__label">{L('이 기기', 'This device')}</span>
-          <div className="setting__body">
-            <p>
-              {L(
-                <>
-                  읽은 회사 <span className="num">{readCount}</span>곳 · 저장 <span className="num">{saved.length}</span>곳
-                </>,
-                <>
-                  <span className="num">{readCount}</span> read · <span className="num">{saved.length}</span> saved
-                </>,
-              )}
+      <section className="setsec" aria-labelledby="set-data">
+        <h2 id="set-data" className="setsec__title">
+          {L('내 기록', 'Your data')}
+        </h2>
+        <div className="setbox">
+          <div className="set">
+            <span className="set__label num">{L(`읽은 회사 ${readCount}곳 · 저장 ${saved.length}곳`, `${readCount} read · ${saved.length} saved`)}</span>
+            <p className="set__hint" style={{ marginTop: 0, marginBottom: 12 }}>
+              {L('저장과 읽은 기록은 이 기기의 브라우저에만 있어요.', 'Saves and reading history live only in this browser.')}
             </p>
-            <div className="setting__actions">
-              <button
-                type="button"
-                className="btn btn--secondary"
-                disabled={!readCount}
-                onClick={() => {
-                  if (
-                    window.confirm(
-                      L(
-                        '읽음 기록을 모두 지울까요? 순서에 쓰던 기록도 함께 지워져요. 저장한 회사는 그대로 남아요.',
-                        'Clear your whole read history? It also resets your order. Saved companies stay saved.',
-                      ),
-                    )
-                  )
-                    clearRead()
-                }}
-              >
-                {L('읽음 기록 지우기', 'Clear read history')}
+            <div className="set__row">
+              <button type="button" className="btn btn--secondary" onClick={copyLinks} disabled={!saved.length}>
+                <Icon name="copy" size={18} /> {L('저장 링크 복사', 'Copy saved links')}
               </button>
-              <a className="btn btn--secondary" href="#/saved">
-                {L('저장함 내보내기', 'Export saved')}
-              </a>
+              <button type="button" className="btn btn--secondary" onClick={downloadJson} disabled={!saved.length}>
+                <Icon name="download" size={18} /> {L('JSON 저장', 'Download JSON')}
+              </button>
+              <button type="button" className="btn btn--ghost" onClick={() => setConfirm(true)} disabled={!readCount}>
+                {L('읽은 기록 지우기', 'Clear reading history')}
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="about-sec" aria-labelledby="set-about">
-        <h2 id="set-about">{L('정보', 'About')}</h2>
-        <p className="settings-note">
-          <Icon name="info" size={16} />
-          <span>
-            {L(
-              'AI가 공개 자료로 작성하고, 모든 사실을 사람이 확인하지는 않아요. 투자 조언이 아닙니다.',
-              'Written by AI from public sources; not every fact is checked by a person. Not investment advice.',
-            )}
-          </span>
-        </p>
-        <ul className="settings-links">
-          <li>
-            <a href="#/about">
-              {L('소개·선정 기준', 'About and how we pick')} <Icon name="chevronRight" size={16} />
+      <section className="setsec" aria-labelledby="set-about">
+        <h2 id="set-about" className="setsec__title">
+          {L('정보', 'About')}
+        </h2>
+        <div className="setbox">
+          <a className="setlink" href="#/about">
+            {L('소개·선정 기준', 'About and how we pick')} <Icon name="chevronRight" size={18} />
+          </a>
+          <a className="setlink" href="#/about?sec=how">
+            {L('어떻게 만드나요', 'How it’s made')} <Icon name="chevronRight" size={18} />
+          </a>
+          <a className="setlink" href="#/about?sec=corrections">
+            {L('정정 기록', 'Corrections')} <Icon name="chevronRight" size={18} />
+          </a>
+          {!isEn && (
+            <a className="setlink" href="#/about?sec=contests">
+              공모전은 어떻게 모으나요 <Icon name="chevronRight" size={18} />
             </a>
-          </li>
-          <li>
-            <a href="#/about?sec=how">
-              {L('어떻게 만드나요', 'How it’s made')} <Icon name="chevronRight" size={16} />
-            </a>
-          </li>
-          <li>
-            <a href="#/about?sec=corrections">
-              {L('정정 기록', 'Corrections')} <Icon name="chevronRight" size={16} />
-            </a>
-          </li>
-        </ul>
+          )}
+        </div>
+        <p className="small-note">{L('AI가 공개 자료로 작성하고, 모든 사실을 사람이 확인하지는 않아요. 투자 조언이 아니에요.', 'Written by AI from public sources; not every fact is checked by a person. Not investment advice.')}</p>
       </section>
+
+      <Sheet
+        open={confirm}
+        onClose={() => setConfirm(false)}
+        title={L('읽은 기록을 지울까요?', 'Clear reading history?')}
+        footer={
+          <>
+            <button type="button" className="btn btn--secondary" onClick={() => setConfirm(false)}>
+              {L('취소', 'Cancel')}
+            </button>
+            <button
+              type="button"
+              className="btn btn--primary"
+              onClick={() => {
+                clearRead()
+                setConfirm(false)
+                toast(L('읽은 기록을 지웠어요', 'Reading history cleared'))
+              }}
+            >
+              {L('지우기', 'Clear')}
+            </button>
+          </>
+        }
+      >
+        <p>{L(`읽은 회사 ${readCount}곳의 기록이 사라지고 오늘 카드가 다시 펼쳐져요. 저장한 회사는 그대로예요. 되돌릴 수 없어요.`, `The record of ${readCount} read companies goes and today’s cards unfold again. Saved companies stay. This can’t be undone.`)}</p>
+      </Sheet>
     </div>
   )
 }

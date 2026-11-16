@@ -363,11 +363,11 @@ export function search(query, list = startups) {
     }
     const f = s._search.founders.find((x) => x.key.includes(q))
     if (f) {
-      out.push({ startup: s, reason: `창업자: ${f.label}` })
+      out.push({ startup: s, reason: L(`창업자: ${f.label}`, `Founder: ${f.label}`) })
       continue
     }
     const c = s._search.competitors.find((x) => x.key.includes(q))
-    if (c) out.push({ startup: s, reason: c.lens ? `비슷한 곳으로 언급: ${c.label}` : `경쟁사로 언급: ${c.label}` })
+    if (c) out.push({ startup: s, reason: c.lens ? L(`비슷한 곳으로 언급: ${c.label}`, `Named as similar: ${c.label}`) : L(`경쟁사로 언급: ${c.label}`, `Named as a competitor: ${c.label}`) })
   }
   return out
 }

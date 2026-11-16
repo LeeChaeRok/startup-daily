@@ -1,0 +1,339 @@
+/* 오늘 (#/) and a past day (#/d/:date) — spec v2 §3 "오늘", IA §3-1.
+   The day's five as same-format cards, then at most three conditional blocks, then one line.
+   No issue number, no progress bar, no second list: the day ends where the five end. */
+import { useState } from 'react'
+import Icon from '../components/Icon.jsx'
+import Logo from '../components/Logo.jsx'
+import Sheet from '../components/Sheet.jsx'
+import { CompanyCard, CompanyRow } from '../components/Company.jsx'
+import { FooterLine } from '../components/Chrome.jsx'
+import { Badge, Chip, ChipWrap, LogoStack, PageTitle, SectionHeader } from '../components/ui.jsx'
+import { useToast } from '../components/toast-context.js'
+import { usePush } from '../components/usePush.js'
+import { SECTORS, UPDATE_KINDS, byDate, dates, followUps, poolLive, stats, ycDates, ycOf } from '../lib/data.js'
+import { batchLine } from '../lib/company.js'
+import { localDate, useFlag, useInterests, useReadLog } from '../lib/hooks.js'
+import { daysSince, longDate, monthDay, parseDate, readMinutes } from '../lib/format.js'
+import { useMarkSeen, useSeen, useSeenCount } from '../lib/seen.js'
+import { leaveSheetTo } from '../lib/nav.js'
+import { canonicalUrl, shareOrCopy } from '../lib/share.js'
+import { track } from '../lib/analytics.js'
+import { L } from '../lib/i18n.js'
+
+const RECENT = 14
+const dayGap = (a, b) => Math.round((parseDate(b) - parseDate(a)) / 864e5)
+const shortWeekday = (ymd) => longDate(ymd).replace(/요일$/, '')
+const dayHref = (kind, d) => (kind === 'yc' ? `#/yc/${d}` : d === dates[0] ? '#/' : `#/d/${d}`)
+
+/* ---------- Date sheet: the recent days, with what the reader has done with each ---------- */
+
+function DayState({ list, seen }) {
+  const { isRead } = useReadLog()
+  const done = list.filter((s) => isRead(s.id)).length
+  if (list.length && done === list.length)
+    return (
+      <span className="dayrow__state is-done">
+        <Icon name="check" size={14} /> {L('다 읽음', 'All read')}
+      </span>
+    )
+  if (done) return <span className="dayrow__state">{L(`${done}곳 읽음`, `${done} read`)}</span>
+  if (seen) return <span className="dayrow__state is-seen">{L('봤음', 'Seen')}</span>
+  return <span className="dayrow__state">{L('안 봄', 'New')}</span>
+}
+
+export function DayRow({ kind, date, current, onPick }) {
+  const isSeen = useSeen(kind)
+  const list = kind === 'yc' ? ycOf(date).slice(0, 10) : byDate(date)
+  const href = dayHref(kind, date)
+  return (
+    <li>
+      <a
+        className="dayrow"
+        href={href}
+        aria-current={current ? 'page' : undefined}
+        onClick={
+          onPick &&
+          ((e) => {
+            e.preventDefault()
+            onPick(href)
+          })
+        }
+      >
+        <span className="dayrow__date num">{shortWeekday(date)}</span>
+        <span className="dayrow__mid">
+          <LogoStack>
+            {list.slice(0, 3).map((s) => (
+              <Logo key={s.id} startup={s} size={22} />
+            ))}
+          </LogoStack>
+          <span className="num">{L(`${list.length}곳`, `${list.length}`)}</span>
+        </span>
+        <DayState list={list} seen={isSeen(date)} />
+      </a>
+    </li>
+  )
+}
+
+/** kind: 'issue' (the five) | 'yc'. Moving between past days replaces the entry, so back returns to today. */
+export function DaySheet({ kind = 'issue', date, open, onClose, replace = false }) {
+  const all = kind === 'yc' ? ycDates() : dates
+  const pick = (href) => leaveSheetTo(href, { replace: replace && href !== '#/' })
+  return (
+    <Sheet open={open} onClose={onClose} title={kind === 'yc' ? L('YC 새 배치 날짜', 'YC days') : L('날짜', 'Days')}>
+      <ul className="daylist">
+        {all.slice(0, RECENT).map((d) => (
+          <DayRow key={d} kind={kind} date={d} current={d === date} onPick={pick} />
+        ))}
+      </ul>
+      {kind === 'issue' && all.length > RECENT && (
+        <button type="button" className="btn btn--ghost" style={{ marginTop: 8 }} onClick={() => leaveSheetTo('#/explore?view=dates')}>
+          {L(`전체 ${all.length}일 보기`, `All ${all.length} days`)} <Icon name="chevronRight" size={16} />
+        </button>
+      )}
+    </Sheet>
+  )
+}
+
+/* ---------- Blocks ---------- */
+
+function InterestsSheet({ open, onClose }) {
+  const { isInterest, toggle } = useInterests()
+  return (
+    <Sheet
+      open={open}
+      onClose={onClose}
+      title={L('관심 분야', 'Sectors you follow')}
+      footer={
+        <button type="button" className="btn btn--primary" onClick={onClose}>
+          {L('완료', 'Done')}
+        </button>
+      }
+    >
+      <p className="sheet__hint">{L('고른 분야는 탐색에서 먼저 보이고, 알림을 고를 때도 쓰여요. 이 기기에만 저장돼요.', 'Your sectors come first in Explore and can narrow alerts. Saved on this device only.')}</p>
+      <ChipWrap label={L('분야', 'Sectors')}>
+        {SECTORS.map((s) => (
+          <Chip key={s.key} on={isInterest(s.key)} onClick={() => toggle(s.key)} dot={`var(--sd-sector-${s.key})`}>
+            {s.label}
+          </Chip>
+        ))}
+      </ChipWrap>
+    </Sheet>
+  )
+}
+
+/** Five read: one line of closure, one suggestion at most, and sharing the day. */
+function DoneCard({ date, list }) {
+  const toast = useToast()
+  const push = usePush()
+  const seenDays = useSeenCount('issue')
+  const { interests } = useInterests()
+  const [sectors, setSectors] = useState(false)
+  const share = async () => {
+    const r = await shareOrCopy({
+      title: L(`${monthDay(date)} 스타트업 5곳`, `Five startups · ${monthDay(date)}`),
+      text: L(`${monthDay(date)} 스타트업 5곳: ${list.map((s) => s.name_ko).join(', ')}`, `Five startups on ${monthDay(date)}: ${list.map((s) => s.name_ko).join(', ')}`),
+      url: canonicalUrl(`/d/${date}`),
+    })
+    if (r === 'copied') toast(L('링크를 복사했어요', 'Link copied'))
+    track('share_day', { date, result: r })
+  }
+  const askAlert = push.status === 'off' && seenDays >= 2
+  const askSectors = !askAlert && !interests.length
+  return (
+    <section className="done" aria-labelledby="done-title">
+      <span className="done__icon" aria-hidden="true">
+        <Icon name="checkCircle" size={28} />
+      </span>
+      <h2 id="done-title" className="done__title">
+        {L('오늘 다섯 곳 끝', 'That’s today’s five')}
+      </h2>
+      <p className="done__text">{L('내일 아침 새 다섯 곳이 와요.', 'Five new ones arrive tomorrow morning.')}</p>
+      <div className="done__actions">
+        <button type="button" className="btn btn--secondary" onClick={share}>
+          <Icon name="share" size={18} /> {L('오늘 5곳 공유', 'Share today’s five')}
+        </button>
+      </div>
+      {askAlert && (
+        <div className="done__ask">
+          <p>{L('내일 아침, 새 다섯 곳이 오면 알려 드릴까요?', 'Want a heads-up when tomorrow’s five arrive?')}</p>
+          <button type="button" className="btn btn--primary" disabled={push.busy} onClick={() => push.enable()}>
+            <Icon name="bell" size={18} /> {L('알림 켜기', 'Turn on alerts')}
+          </button>
+        </div>
+      )}
+      {askSectors && (
+        <div className="done__ask">
+          <p>{L('관심 분야를 고르면 탐색에서 먼저 보여 드려요.', 'Pick the sectors you follow and they come first in Explore.')}</p>
+          <button type="button" className="btn btn--ghost" onClick={() => setSectors(true)}>
+            {L('관심 분야 고르기', 'Pick sectors')}
+          </button>
+        </div>
+      )}
+      <InterestsSheet open={sectors} onClose={() => setSectors(false)} />
+    </section>
+  )
+}
+
+function LinkRow({ href, title, sub, logos }) {
+  return (
+    <a className="linkrow" href={href}>
+      {logos?.length > 0 && (
+        <LogoStack>
+          {logos.slice(0, 3).map((s) => (
+            <Logo key={s.id} startup={s} size={28} />
+          ))}
+        </LogoStack>
+      )}
+      <span className="linkrow__body">
+        <span className="linkrow__title">{title}</span>
+        {sub && <span className="linkrow__sub">{sub}</span>}
+      </span>
+      <Icon name="chevronRight" size={20} />
+    </a>
+  )
+}
+
+function useBlocks(date, past) {
+  const { isRead, readLog } = useReadLog()
+  const { interests } = useInterests()
+  const blocks = []
+  const returning = Object.keys(readLog).length > 0
+  if (!past) {
+    const prev = dates[dates.indexOf(date) + 1]
+    const missed = prev ? byDate(prev).filter((s) => !isRead(s.id)) : []
+    if (returning && missed.length && daysSince(prev) <= 3) {
+      blocks.push({
+        key: 'missed',
+        node: (
+          <LinkRow
+            href={`#/d/${prev}`}
+            logos={missed}
+            title={dayGap(prev, date) === 1 ? L(`어제 놓친 ${missed.length}곳`, `${missed.length} you missed yesterday`) : L(`지난번 놓친 ${missed.length}곳`, `${missed.length} you missed last time`)}
+            sub={longDate(prev)}
+          />
+        ),
+      })
+    }
+  }
+  const yc = ycOf(date)
+  if (yc.length) {
+    blocks.push({
+      key: 'yc',
+      node: <LinkRow href={`#/yc/${date}`} logos={yc} title={L(`YC 새 배치 · ${Math.min(yc.length, 10)}곳`, `New at YC · ${Math.min(yc.length, 10)}`)} sub={L(`${batchLine(yc)} 배치 · 다섯 곳과 겹치지 않아요`, `${batchLine(yc)} · separate from the five`)} />,
+    })
+  }
+  if (!past) {
+    const news = followUps(6).filter((s) => s._hasNews).slice(0, 2)
+    if (news.length) {
+      blocks.push({
+        key: 'news',
+        node: (
+          <div>
+            <SectionHeader id="news-title" title={L('그때 그 회사', 'Where are they now')} note={L('소개한 뒤 생긴 새 소식', 'News since we covered them')} />
+            <ul className="group" aria-labelledby="news-title">
+              {news.map((s) => {
+                const u = s._updates[0]
+                return (
+                  <CompanyRow
+                    key={s.id}
+                    startup={s}
+                    value={null}
+                    sub={
+                      <span className="news-line">
+                        <Badge tone="accent">{UPDATE_KINDS[u.kind] || L('소식', 'News')}</Badge>
+                        <span>{L(u.title_ko, u.title_en || u.title_ko)}</span>
+                      </span>
+                    }
+                  />
+                )
+              })}
+            </ul>
+          </div>
+        ),
+      })
+    }
+    if (poolLive && interests.length) {
+      const labels = SECTORS.filter((s) => interests.includes(s.key)).map((s) => s.label)
+      blocks.push({
+        key: 'mine',
+        node: <LinkRow href={`#/explore?sector=${interests.join(',')}`} title={L('내 분야에서 더 보기', 'More in your sectors')} sub={labels.slice(0, 3).join(' · ')} />,
+      })
+    }
+  }
+  return blocks.slice(0, 3)
+}
+
+/* ---------- Screen ---------- */
+
+export default function Today({ date, past = false }) {
+  useMarkSeen('issue', date)
+  const list = byDate(date)
+  const { isRead } = useReadLog()
+  const left = list.filter((s) => !isRead(s.id))
+  const [intro, setIntro] = useFlag('sd_intro_dismissed', false)
+  const [sheet, setSheet] = useState(false)
+  const blocks = useBlocks(date, past)
+  const today = localDate()
+  const stale = !past && date < today
+  const minutes = readMinutes(left.length ? left : list)
+
+  const sub = !list.length
+    ? null
+    : left.length === list.length
+      ? L(`${list.length}곳 · 요약만 약 ${minutes}분`, `${list.length} startups · about ${minutes} min`)
+      : left.length
+        ? L(`${left.length}곳 남음 · 약 ${minutes}분`, `${left.length} left · about ${minutes} min`)
+        : L('다 읽었어요', 'All read')
+
+  return (
+    <div className="page">
+      {!past && !intro && (
+        <div className="intro" role="note">
+          <p>{L('매일 아침, 아직 덜 알려졌지만 지금 뜨는 스타트업 5곳을 왜 뜨는지와 함께 요약해 드려요.', 'Every morning: five startups you probably haven’t heard of yet, and why they matter now.')}</p>
+          <button type="button" className="btn-icon" onClick={() => setIntro(true)} aria-label={L('안내 닫기', 'Dismiss')}>
+            <Icon name="close" size={18} />
+          </button>
+        </div>
+      )}
+      <PageTitle
+        eyebrow={
+          <>
+            <button type="button" className="datebtn" aria-haspopup="dialog" onClick={() => setSheet(true)} aria-label={L(`${longDate(date)}, 다른 날짜 보기`, `${longDate(date)}, pick another day`)}>
+              <span className="num">{longDate(date)}</span>
+              <Icon name="chevronDown" size={16} />
+            </button>
+            {stale && daysSince(date) === 1 && <span className="tag-past">{L('어제 분', 'Yesterday’s')}</span>}
+            {past && <span className="tag-past">{L('지난 날', 'Earlier')}</span>}
+          </>
+        }
+        title={past ? L(`${monthDay(date)}의 스타트업 5곳`, `Five startups · ${monthDay(date)}`) : L('오늘의 스타트업 5곳', 'Today’s five startups')}
+        sub={sub}
+      >
+        {stale && new Date().getHours() < 12 && <p className="ptitle__sub muted">{L('오늘 다섯 곳은 오전 중에 올라와요.', 'Today’s five arrive later this morning.')}</p>}
+        {past && (
+          <a className="chip" href="#/" style={{ marginTop: 12 }}>
+            {L('오늘로', 'Back to today')}
+          </a>
+        )}
+      </PageTitle>
+
+      <ol className="cards" aria-label={L(`${monthDay(date)}의 다섯 곳`, `The five for ${monthDay(date)}`)}>
+        {list.map((s, i) => (
+          <CompanyCard key={s.id} startup={s} rank={i + 1} from="today" />
+        ))}
+      </ol>
+
+      {(blocks.length > 0 || (!past && list.length > 0 && !left.length)) && (
+        <div className="blocks">
+          {!past && list.length > 0 && !left.length && <DoneCard date={date} list={list} />}
+          {blocks.map((b) => (
+            <div key={b.key}>{b.node}</div>
+          ))}
+        </div>
+      )}
+
+      <FooterLine days={stats.issues} />
+      <DaySheet kind="issue" date={date} open={sheet} onClose={() => setSheet(false)} replace={past} />
+    </div>
+  )
+}

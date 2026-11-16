@@ -1,159 +1,167 @@
 /* ============================================================
-   Startup Daily — design tokens ("원장과 인주")
-   Warm newsprint + ink + one seal-ink accent. Spec:
-   _workspace/02_visual-designer_system.md
+   Startup Daily v2 — "잉크 블루 브리핑" tokens
+   Spec: _workspace/v2/02_visual-designer_system.md §2.6
+   Colour literals live here only; app.css uses var(--sd-*).
    ============================================================ */
-
 :root {
   color-scheme: light;
-  --sd-bg: #F3EFE6;
-  --sd-surface: #FAF8F3;
-  --sd-surface-2: #E9E3D6;
-  --sd-ink: #1A1915;
-  --sd-ink-2: #45413A;
-  --sd-ink-3: #69645A;
-  --sd-line: #D6CFC0;
-  --sd-line-ui: #827B6D;
-  --sd-line-strong: #1A1915;
-  --sd-accent: #B7321C;
+  /* surfaces */
+  --sd-bg: #F5F5F3;
+  --sd-surface: #FFFFFF;
+  --sd-surface-2: #EDEDEA;
+  --sd-surface-raised: #FFFFFF;
+  /* ink */
+  --sd-ink: #15161A;
+  --sd-ink-2: #474A52;
+  --sd-ink-3: #666971;
+  /* lines */
+  --sd-line: #E6E6E2;
+  --sd-line-ui: #83868D;
+  /* accent + semantic */
+  --sd-accent: #2D4BC8;
   --sd-accent-ink: #FFFFFF;
-  --sd-accent-soft: #F6DED6;
-  --sd-positive: #1E6B3F;
-  --sd-positive-soft: #DCEBDF;
-  --sd-warning: #8A5A00;
-  --sd-warning-soft: #F5E7C8;
-  --sd-focus: #B7321C;
-  --sd-on-ink: #F3EFE6;
+  --sd-accent-soft: #E8ECFB;
+  --sd-positive: #1D7A4C;
+  --sd-positive-soft: #E2F2E8;
+  --sd-warning: #9A5700;
+  --sd-warning-soft: #FBEFD9;
+  --sd-warning-ink: #FFFFFF;
+  --sd-focus: #2D4BC8;
+  --sd-scrim: rgb(12 13 16 / 0.40);
   --sd-logo-bg: #FFFFFF;
-  --sd-scrim: rgb(26 25 21 / 0.48);
-  --sd-surface-lift: #ECE7DC;   /* raised app bar / navigation bar (with --sd-shadow-1) */
-  --sd-indicator: #DDD5C4;      /* active tab indicator; decorative, no ink-3/accent on it */
+  --sd-logo-ring: rgb(21 22 26 / 0.08);
+  --sd-header-bg: rgb(245 245 243 / 0.86);
+  --sd-tabbar-bg: rgb(255 255 255 / 0.92);
+  --sd-toast-bg: #15161A;
+  --sd-toast-ink: #FFFFFF;
+  --sd-toast-action: #AFC0FF;
+  --sd-press: rgb(21 22 26 / 0.05);
 
-  --sd-mono-0-bg: #DCE3E8; --sd-mono-0-fg: #24384A;
-  --sd-mono-1-bg: #DEE5D4; --sd-mono-1-fg: #33452A;
-  --sd-mono-2-bg: #EEDBCD; --sd-mono-2-fg: #6A3219;
-  --sd-mono-3-bg: #ECE1C4; --sd-mono-3-fg: #5A4411;
-  --sd-mono-4-bg: #D3E5E1; --sd-mono-4-fg: #1C4943;
-  --sd-mono-5-bg: #EFD7D4; --sd-mono-5-fg: #6D2A25;
-  --sd-mono-6-bg: #D9DCE6; --sd-mono-6-fg: #2D3550;
-  --sd-mono-7-bg: #1A1915; --sd-mono-7-fg: #F3EFE6;
-
-  /* sector hues: one per pool, so an issue's mix shows at a glance (dots, progress cells).
-     Graphic marks only, never body text; each clears 3:1 on --sd-bg and --sd-surface.
-     None is ink: a black cell would read as "you are here" in the progress bar. */
-  --sd-sector-health: #1F7A6C; --sd-sector-robotics: #4A5BA8; --sd-sector-mobility: #2F6E9E;
-  --sd-sector-climate: #4C7A2A; --sd-sector-fintech: #946500; --sd-sector-infra: #9A4A26;
-  --sd-sector-enterprise: #6B5340; --sd-sector-consumer: #8C3F78; --sd-sector-ai: #6A4FA0;
-
-  --sd-shadow-1: 0 1px 0 var(--sd-line);
-  --sd-shadow-2: 0 2px 8px rgb(26 25 21 / 0.08), 0 0 0 1px var(--sd-line);
-  --sd-shadow-3: 0 12px 32px rgb(26 25 21 / 0.16), 0 0 0 1px var(--sd-line);
+  /* sectors: fg (dot, monogram letter) / soft (monogram tile) */
+  --sd-sector-health: #B8325A;      --sd-sector-health-soft: #FBE9EF;
+  --sd-sector-robotics: #A84B0C;    --sd-sector-robotics-soft: #FCEBDD;
+  --sd-sector-mobility: #0A6A9E;    --sd-sector-mobility-soft: #E1F0F8;
+  --sd-sector-climate: #2D7432;     --sd-sector-climate-soft: #E5F2E3;
+  --sd-sector-fintech: #0C6F64;     --sd-sector-fintech-soft: #DDF1EE;
+  --sd-sector-infra: #3F5A7A;       --sd-sector-infra-soft: #E6ECF3;
+  --sd-sector-enterprise: #80600F;  --sd-sector-enterprise-soft: #F5EDD6;
+  --sd-sector-consumer: #A0368F;    --sd-sector-consumer-soft: #F7E5F3;
+  --sd-sector-ai: #6646BF;          --sd-sector-ai-soft: #EEE8FA;
+  --sd-sector-other: var(--sd-ink-3); --sd-sector-other-soft: var(--sd-surface-2);
 
   /* type */
-  --sd-font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-  --sd-font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, "Pretendard Variable", monospace;
-  --sd-fs-display: clamp(30px, 24.2px + 1.55vw, 44px);
-  --sd-fs-title-1: clamp(26px, 21.9px + 1.1vw, 36px);
-  --sd-fs-title-2: clamp(22px, 20.3px + 0.44vw, 26px);
-  --sd-fs-headline: clamp(20px, 18.3px + 0.44vw, 24px);
-  --sd-fs-title-3: 18px;
-  --sd-fs-row: 17px;
-  --sd-fs-body: clamp(17px, 16.6px + 0.11vw, 18px);
-  --sd-fs-body-sm: 15px;
-  --sd-fs-caption: 13px;
-  --sd-fs-label: 13px;
-  --sd-fs-micro: 12px;
-  --sd-fs-data-xl: clamp(24px, 21.9px + 0.55vw, 30px);
-  --sd-fs-data: 15px;
-  --sd-measure: 36em;
-  --sd-measure-narrow: 30em;
+  --sd-font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+             "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  --sd-text-display: 700 28px/36px var(--sd-font);
+  --sd-text-title: 700 21px/30px var(--sd-font);
+  --sd-text-body-lg: 400 17px/29px var(--sd-font);
+  --sd-text-body: 400 15px/24px var(--sd-font);
+  --sd-text-meta: 500 13px/18px var(--sd-font);
+  --sd-text-micro: 600 11px/14px var(--sd-font);
+  --sd-track-display: -0.024em;
+  --sd-track-title: -0.018em;
+  --sd-track-body-lg: -0.01em;
+  --sd-track-body: -0.006em;
+  --sd-track-micro: 0.01em;
+  --sd-measure: 640px;
+  /* reading text on the company page (설정 → 글자 크기) */
+  --sd-read-size: 17px;
+  --sd-read-line: 29px;
 
-  /* space & layout */
+  /* space */
+  --sd-space-1: 4px;  --sd-space-2: 8px;  --sd-space-3: 12px; --sd-space-4: 16px;
+  --sd-space-5: 20px; --sd-space-6: 24px; --sd-space-7: 32px; --sd-space-8: 40px;
+  --sd-space-9: 56px; --sd-space-10: 72px;
   --sd-gutter: 20px;
-  --sd-container: 1200px;
+  --sd-section-gap: 40px;
+
+  /* radius */
+  --sd-radius-xs: 6px; --sd-radius-sm: 10px; --sd-radius-md: 14px;
+  --sd-radius-lg: 18px; --sd-radius-xl: 24px; --sd-radius-pill: 999px;
+
+  /* elevation */
+  --sd-shadow-1: 0 1px 2px rgb(16 17 20 / 0.04), 0 0 0 1px rgb(16 17 20 / 0.04);
+  --sd-shadow-2: 0 4px 16px rgb(16 17 20 / 0.08), 0 0 0 1px rgb(16 17 20 / 0.04);
+  --sd-shadow-3: 0 12px 40px rgb(16 17 20 / 0.16);
+
+  /* motion */
+  --sd-dur-1: 120ms; --sd-dur-2: 200ms; --sd-dur-3: 320ms;
+  --sd-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --sd-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* sizes */
   --sd-header-h: 52px;
-  --sd-chipnav-h: 48px;
   --sd-tabbar-h: 56px;
-  --sd-sticky-top: calc(var(--sd-header-h) + env(safe-area-inset-top));
-  --sd-anchor-offset: calc(var(--sd-sticky-top) + var(--sd-chipnav-h) + 12px);
-  --sd-tap: 44px;
-  /* system bar insets: the Android shell (Capacitor) injects --safe-area-inset-*, the web falls back to env() */
+  --sd-touch: 44px;
   --sd-inset-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
-  --sd-inset-right: var(--safe-area-inset-right, env(safe-area-inset-right, 0px));
   --sd-inset-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
   --sd-inset-left: var(--safe-area-inset-left, env(safe-area-inset-left, 0px));
-  --sd-sheet-pad-bottom: calc(16px + var(--sd-inset-bottom));
+  --sd-inset-right: var(--safe-area-inset-right, env(safe-area-inset-right, 0px));
 
-  --sd-radius-1: 2px;
-  --sd-radius-2: 4px;
-  --sd-radius-3: 12px;
-
+  /* layers */
   --sd-z-sticky: 20;
   --sd-z-header: 30;
   --sd-z-tabbar: 30;
-  --sd-z-scrim: 40;
-  --sd-z-sheet: 50;
   --sd-z-toast: 60;
-
-  /* motion */
-  --sd-dur-1: 120ms;
-  --sd-dur-2: 200ms;
-  --sd-dur-3: 320ms;
-  --sd-ease-out: cubic-bezier(0.2, 0, 0, 1);
-  --sd-ease-in: cubic-bezier(0.4, 0, 1, 1);
-  --sd-ease-std: cubic-bezier(0.2, 0, 0.2, 1);
 }
 
-[data-theme="dark"] {
-  color-scheme: dark;
-  --sd-bg: #111317;
-  --sd-surface: #181B20;
-  --sd-surface-2: #21252C;
-  --sd-ink: #ECE7DC;
-  --sd-ink-2: #B8B2A6;
-  --sd-ink-3: #969085;
-  --sd-line: #2E333B;
-  --sd-line-ui: #6B717C;
-  --sd-line-strong: #ECE7DC;
-  --sd-accent: #FF7452;
-  --sd-accent-ink: #1A0E0A;
-  --sd-accent-soft: #3A1D16;
-  --sd-positive: #5CC98A;
-  --sd-positive-soft: #16301F;
-  --sd-warning: #E8B24A;
-  --sd-warning-soft: #33280F;
-  --sd-focus: #FF7452;
-  --sd-on-ink: #111317;
-  --sd-logo-bg: #ECE7DC;
-  --sd-scrim: rgb(0 0 0 / 0.6);
-  --sd-surface-lift: #1C1F25;
-  --sd-indicator: #2E333C;
-
-  --sd-mono-0-bg: #22303B; --sd-mono-0-fg: #BCD0DF;
-  --sd-mono-1-bg: #263222; --sd-mono-1-fg: #C3D6B3;
-  --sd-mono-2-bg: #3A271C; --sd-mono-2-fg: #EBC3A8;
-  --sd-mono-3-bg: #352D18; --sd-mono-3-fg: #E3CF94;
-  --sd-mono-4-bg: #1C3330; --sd-mono-4-fg: #A8D8CF;
-  --sd-mono-5-bg: #3A2221; --sd-mono-5-fg: #ECB8B2;
-  --sd-mono-6-bg: #262B3B; --sd-mono-6-fg: #C2C9E0;
-  --sd-mono-7-bg: #ECE7DC; --sd-mono-7-fg: #111317;
-
-  --sd-sector-health: #6CC5B4; --sd-sector-robotics: #9DA9E8; --sd-sector-mobility: #7FB4DD;
-  --sd-sector-climate: #9CC77A; --sd-sector-fintech: #E0B65A; --sd-sector-infra: #E39A73;
-  --sd-sector-enterprise: #C9A88F; --sd-sector-consumer: #DB97C8; --sd-sector-ai: #B9A3E3;
-
-  --sd-shadow-2: 0 0 0 1px var(--sd-line);
-  --sd-shadow-3: 0 16px 40px rgb(0 0 0 / 0.5), 0 0 0 1px var(--sd-line);
-}
-
-@media (min-width: 640px) {
-  :root { --sd-gutter: 32px; }
-}
 @media (min-width: 1024px) {
-  :root { --sd-gutter: 40px; --sd-header-h: 64px; }
+  :root {
+    --sd-text-display: 700 32px/40px var(--sd-font);
+    --sd-gutter: 32px;
+    --sd-section-gap: 56px;
+    --sd-header-h: 64px;
+  }
 }
 
-/* Reading text size (설정 → 글자 크기), set as data-font on <html> */
-:root[data-font='sm'] { --sd-fs-body: 15px; --sd-fs-body-sm: 14px; }
-:root[data-font='lg'] { --sd-fs-body: 20px; --sd-fs-body-sm: 17px; }
+:root[data-font="sm"] { --sd-read-size: 15px; --sd-read-line: 26px; }
+:root[data-font="lg"] { --sd-read-size: 19px; --sd-read-line: 32px; }
+
+/* dark: index.html and hooks.js always set data-theme, so one block is enough */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --sd-bg: #111214;
+  --sd-surface: #1A1B1E;
+  --sd-surface-2: #25272B;
+  --sd-surface-raised: #2C2E33;
+  --sd-ink: #EDEEF0;
+  --sd-ink-2: #B6B9C0;
+  --sd-ink-3: #9498A0;
+  --sd-line: #2A2C30;
+  --sd-line-ui: #6E727A;
+  --sd-accent: #8EA1FF;
+  --sd-accent-ink: #0E1330;
+  --sd-accent-soft: #232B4D;
+  --sd-positive: #5FCB92;
+  --sd-positive-soft: #163323;
+  --sd-warning: #F2B24E;
+  --sd-warning-soft: #3A2C14;
+  --sd-warning-ink: #1A1206;
+  --sd-focus: #8EA1FF;
+  --sd-scrim: rgb(0 0 0 / 0.56);
+  --sd-logo-ring: rgb(255 255 255 / 0.10);
+  --sd-header-bg: rgb(17 18 20 / 0.86);
+  --sd-tabbar-bg: rgb(26 27 30 / 0.92);
+  --sd-toast-bg: #2C2E33;
+  --sd-toast-ink: #EDEEF0;
+  --sd-toast-action: #8EA1FF;
+  --sd-press: rgb(255 255 255 / 0.06);
+
+  --sd-sector-health: #F28AA5;      --sd-sector-health-soft: #3A1E27;
+  --sd-sector-robotics: #F2A066;    --sd-sector-robotics-soft: #3A2618;
+  --sd-sector-mobility: #6CC0EC;    --sd-sector-mobility-soft: #16303D;
+  --sd-sector-climate: #86CF7C;     --sd-sector-climate-soft: #1D3320;
+  --sd-sector-fintech: #5FD0C1;     --sd-sector-fintech-soft: #14322F;
+  --sd-sector-infra: #9DB4D3;       --sd-sector-infra-soft: #232C38;
+  --sd-sector-enterprise: #E2C063;  --sd-sector-enterprise-soft: #352D17;
+  --sd-sector-consumer: #E994DA;    --sd-sector-consumer-soft: #36203A;
+  --sd-sector-ai: #B9A2F5;          --sd-sector-ai-soft: #2A2442;
+
+  --sd-shadow-1: 0 0 0 1px rgb(255 255 255 / 0.04);
+  --sd-shadow-2: 0 0 0 1px rgb(255 255 255 / 0.06);
+  --sd-shadow-3: 0 12px 40px rgb(0 0 0 / 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --sd-dur-1: 1ms; --sd-dur-2: 120ms; --sd-dur-3: 120ms; }
+}

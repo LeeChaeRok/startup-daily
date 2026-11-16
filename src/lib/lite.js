@@ -25,6 +25,8 @@ export function liteRecord(s) {
     funding: {
       total_raised: s.funding?.total_raised,
       total_raised_usd: s.funding?.total_raised_usd,
+      // the company page's third fact, so it doesn't change once the full record arrives
+      valuation_estimate: s.funding?.valuation_estimate,
       // the "투자자라면 / 커리어로 보면" line (personal.js forRole)
       latest_round: s.funding?.latest_round && {
         stage: s.funding.latest_round.stage,

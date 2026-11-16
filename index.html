@@ -43,25 +43,25 @@
       #splash { display: none; }
       .sd-splash #splash {
         position: fixed; inset: 0; z-index: 9999; display: flex; flex-direction: column;
-        align-items: center; justify-content: center; gap: 30px; background: #1A1915; color: #F3EFE6;
+        align-items: center; justify-content: center; gap: 30px; background: #111214; color: #EDEEF0;
         font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', system-ui, sans-serif;
         transition: opacity .38s ease, visibility 0s linear .38s;
       }
       .sd-splash #splash::before {
         content: ''; position: absolute; left: 50%; top: 50%; width: 340px; height: 340px; margin: -230px 0 0 -170px;
-        border-radius: 50%; background: radial-gradient(closest-side, rgba(224, 74, 47, .16), rgba(224, 74, 47, 0));
+        border-radius: 50%; background: radial-gradient(closest-side, rgba(142, 161, 255, .18), rgba(142, 161, 255, 0));
         animation: sd-glow 1.6s ease-out .35s both;
       }
       .splash__mark { position: relative; width: 84px; height: 84px; }
       .splash__s { display: block; width: 100%; height: 100%; animation: sd-rise .6s cubic-bezier(.2, .8, .2, 1) .08s both; }
       .splash__dot {
-        position: absolute; left: 76.3%; top: 76.3%; width: 19.3%; height: 19.3%; background: #E04A2F;
+        position: absolute; left: 76.3%; top: 76.3%; width: 19.3%; height: 19.3%; background: #8EA1FF; border-radius: 50%;
         transform-origin: 50% 100%; animation: sd-drop .62s cubic-bezier(.3, .7, .3, 1) .5s both;
       }
       .splash__word { position: relative; text-align: center; animation: sd-rise .55s cubic-bezier(.2, .8, .2, 1) .78s both; }
       .splash__name { font-size: 19px; font-weight: 700; letter-spacing: -.01em; }
-      .splash__name i { display: inline-block; width: 5px; height: 5px; margin-left: 2px; background: #E04A2F; }
-      .splash__tag { margin-top: 8px; font-size: 13px; color: rgba(243, 239, 230, .55); letter-spacing: -.005em; }
+      .splash__name i { display: inline-block; width: 5px; height: 5px; margin-left: 3px; background: #8EA1FF; border-radius: 50%; }
+      .splash__tag { margin-top: 8px; font-size: 13px; color: rgba(237, 238, 240, .55); letter-spacing: -.005em; }
       #splash.is-out { opacity: 0; visibility: hidden; }
       #splash.is-out .splash__mark { transform: scale(1.08); transition: transform .4s cubic-bezier(.4, 0, .2, 1); }
       @keyframes sd-rise { from { opacity: 0; transform: translateY(12px) scale(.94); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
@@ -79,8 +79,8 @@
     </style>
     <title>Startup Daily — 아직 모르는, 지금 뜨는 스타트업</title>
     <meta name="description" content="아직 모르는, 지금 뜨는 스타트업. 하루 한 묶음, 덜 알려진 국내외 신생 스타트업을 왜 지금 뜨는지와 함께 소개해요. AI가 공개 자료로 작성합니다." />
-    <meta name="theme-color" content="#F3EFE6" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#111317" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F5F5F3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Startup Daily" />
@@ -108,11 +108,8 @@
     <link rel="apple-touch-startup-image" href="/splash/splash-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- web fonts must not block the first paint: load as print, switch to all once fetched -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
     <script>
       // Start fetching the issue list now, in the reading language (see src/lib/i18n.js).
       (function () {
@@ -141,7 +138,7 @@
     <div id="root">
       <!-- static shell, replaced when the app mounts -->
       <div class="boot" aria-busy="true">
-        <header class="appbar"><div class="appbar__inner"><span class="wordmark">Startup Daily<span class="wordmark__dot"></span></span></div></header>
+        <header class="topbar"><div class="topbar__inner"><span class="wordmark">Startup Daily<span class="wordmark__dot"></span></span></div></header>
         <div class="boot__body">
           <div class="boot__line boot__line--eyebrow"></div>
           <div class="boot__line boot__line--title"></div>

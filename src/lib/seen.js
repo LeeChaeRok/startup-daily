@@ -24,3 +24,8 @@ export function useMarkSeen(kind, date) {
     return () => clearTimeout(t)
   }, [kind, date])
 }
+
+/** How many days of this kind the reader has opened (a second visit day unlocks the alert ask). */
+export function useSeenCount(kind) {
+  return useStore(store)[kind].length
+}

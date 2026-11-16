@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import Icon from '../components/Icon.jsx'
+import { PageTitle } from '../components/ui.jsx'
 import { startups, correctionList, getDomain, stageLabel, stats } from '../lib/data.js'
 import { navigate } from '../lib/hooks.js'
 import { dotDate } from '../lib/format.js'
 import { scrollToSection } from './detail-hooks.jsx'
-import { L } from '../lib/i18n.js'
+import { isEn, L } from '../lib/i18n.js'
 
 const plural = (n, one, many = `${one}s`) => (n === 1 ? one : many)
 
@@ -23,27 +24,21 @@ export default function About({ params }) {
   const shutdown = startups.filter((s) => s._correction?.kind === 'shutdown').length
 
   return (
-    <div className="page page--about prose">
-      <h1 className="page-title" tabIndex={-1}>
-        {L('Startup Daily는', 'About Startup Daily')}
-      </h1>
+    <div className="prose">
+      <PageTitle title={L('Startup Daily는', 'About Startup Daily')} />
       <p className="lede">
         <strong>{L('아직 모르는, 지금 뜨는 스타트업', "Startups you haven't heard of yet")}</strong>
         <br />
         {L(
           '하루 한 묶음, 덜 알려진 국내외 신생 스타트업을 왜 지금 뜨는지와 함께 소개해요. 공모전 탭에서는 다섯 개 공모전 사이트에 올라온, 지금 접수 중인 공모전을 한곳에 모아 보여 드려요.',
-          'A handful of under-the-radar startups every day, with why they matter now. The Contests tab gathers every open Korean contest from five listing sites in one place.',
+          'A handful of under-the-radar startups every day, with why they matter now.',
         )}
       </p>
-      <p className="about-settings-link">
-        <a className="link-cta" href="#/settings">
-          {L('설정: 역할·관심 분야, 순서, 알림, 테마', 'Settings: role and sectors, order, alerts, theme')} <Icon name="arrowRight" size={16} />
-        </a>
-      </p>
 
-      <section id="about-how" className="about-sec">
+
+      <section id="about-how">
         <h2>{L('어떻게 만드나요', 'How it’s made')}</h2>
-        <ul className="bullets">
+        <ul className="bul">
           <li>
             {L(
               '각 프로필은 AI(대규모 언어 모델)가 공개 자료를 바탕으로 자동 작성합니다.',
@@ -67,9 +62,9 @@ export default function About({ params }) {
         </ul>
       </section>
 
-      <section id="about-criteria" className="about-sec">
+      <section id="about-criteria">
         <h2>{L('선정 기준', 'How we pick')}</h2>
-        <ol className="bullets bullets--ol">
+        <ol className="bul">
           <li>{L('비상장이며 인수되지 않은 회사', 'Private and not acquired')}</li>
           <li>{L('국내에 아직 덜 알려진 회사', 'Not widely known yet')}</li>
           <li>
@@ -80,15 +75,15 @@ export default function About({ params }) {
           </li>
           <li>{L('분야는 제한하지 않음', 'Any sector')}</li>
         </ol>
-        <div className="callout">
-          <h3 className="callout__label">{L('현재 데이터의 예외', 'Exceptions in the current data')}</h3>
+        <div className="box">
+          <h3 className="rd-h">{L('현재 데이터의 예외', 'Exceptions in the current data')}</h3>
           <p>
             {L(
               '기준을 정비하기 전에 발행된 호에는 기준에 맞지 않는 회사가 섞여 있어요. 숨기지 않고 그대로 공개합니다.',
               'Issues published before these criteria were tightened include some companies that don’t fit them. We leave them up rather than hide them.',
             )}
           </p>
-          <p className="callout__nums">
+          <p className="num">
             {L(
               <>
                 상장사 <span className="num">{listed}</span>곳 · 인수 <span className="num">{exits}</span>곳 · 운영
@@ -100,15 +95,15 @@ export default function About({ params }) {
               </>,
             )}
           </p>
-          <a className="link-cta" href="#/explore?stage=exit">
+          <a className="btn btn--ghost" href="#/explore?stage=exit">
             {L('해당 회사 보기', 'See these companies')} <Icon name="arrowRight" size={16} />
           </a>
         </div>
       </section>
 
-      <section id="about-read" className="about-sec">
+      <section id="about-read">
         <h2>{L('정보를 읽는 법', 'Reading the profiles')}</h2>
-        <ul className="bullets">
+        <ul className="bul">
           <li>{L('기업가치와 시장 규모는 ‘AI 추정’ 값입니다.', 'Valuations and market sizes are AI estimates.')}</li>
           <li>
             {L(
@@ -131,9 +126,10 @@ export default function About({ params }) {
         </ul>
       </section>
 
-      <section id="about-contests" className="about-sec">
+      {!isEn && (
+      <section id="about-contests">
         <h2>{L('공모전은 어떻게 모으나요', 'How contests are collected')}</h2>
-        <ul className="bullets">
+        <ul className="bul">
           <li>
             {L(
               'StartupDailyBot이 매일 새벽 한 번 위비티·콘테스트코리아·링커리어·씽굿·올콘의 공모전 목록을 읽고, 같은 공모전은 한 줄로 합칩니다.',
@@ -154,20 +150,21 @@ export default function About({ params }) {
           </li>
         </ul>
       </section>
+      )}
 
-      <section id="about-corrections" className="about-sec">
+      <section id="about-corrections">
         <h2>
           {L('정정 기록', 'Corrections')} <span className="num">({correctionList.length})</span>
         </h2>
-        <ul className="corrections">
+        <ul className="corr">
           {correctionList.map((s) => (
             <li key={s.id}>
-              <p className="corrections__head">
-                <span className="mono">{dotDate(s._correction.checked)}</span> ·{' '}
+              <p className="corr__head">
+                <span className="num">{dotDate(s._correction.checked)}</span> ·{' '}
                 <a href={`#/s/${s.id}`}>{s.name_ko}</a> · <strong>{s._correction.status}</strong>
               </p>
               <p>{s._correction.note}</p>
-              <p className="corrections__src">
+              <p className="corr__head">
                 {L('출처', 'Source')}{' '}
                 <a href={s._correction.source} target="_blank" rel="noopener noreferrer">
                   {getDomain(s._correction.source) || L('출처', 'Source')}
@@ -180,15 +177,15 @@ export default function About({ params }) {
         </ul>
       </section>
 
-      <section id="about-data" className="about-sec">
+      <section id="about-data">
         <h2>{L('데이터 현황', 'The data so far')}</h2>
-        <dl className="keyfacts">
+        <dl className="kv">
           <div>
             <dt>{L('발행', 'Published')}</dt>
             <dd>
               {L(
                 <>
-                  <span className="num">{stats.issues}</span>호 · <span className="num">{stats.companies}</span>곳
+                  <span className="num">{stats.issues}</span>일 · <span className="num">{stats.companies}</span>곳
                 </>,
                 <>
                   <span className="num">{stats.issues}</span> {plural(stats.issues, 'issue')} ·{' '}
@@ -199,13 +196,13 @@ export default function About({ params }) {
           </div>
           <div>
             <dt>{L('기간', 'Period')}</dt>
-            <dd className="mono">
+            <dd className="num">
               {dotDate(stats.first)} – {dotDate(stats.last)}
             </dd>
           </div>
           <div>
             <dt>{L('마지막 발행', 'Latest issue')}</dt>
-            <dd className="mono">{dotDate(stats.last)}</dd>
+            <dd className="num">{dotDate(stats.last)}</dd>
           </div>
         </dl>
       </section>

@@ -1,67 +1,86 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { AppHeader, Footer, TabBar } from './components/Chrome.jsx'
+import { useEffect, useLayoutEffect, useRef } from 'react'
+import { DesktopNav, TabBar, TopBar } from './components/Chrome.jsx'
+import Icon from './components/Icon.jsx'
 import { ToastProvider } from './components/Toast.jsx'
-import Onboarding from './components/Onboarding.jsx'
 import { useToast } from './components/toast-context.js'
-import { EmptyState } from './components/bits.jsx'
-import StartupRow from './components/StartupRow.jsx'
-import { IssueHeader, IssueList, IssueMobile, IssueOverview, IssueRail } from './screens/Issue.jsx'
-import Detail, { DetailRail } from './screens/Detail.jsx'
-import { onLensReady, useContextList } from './screens/detail-hooks.jsx'
-import Explore from './screens/Explore.jsx'
+import { EmptyState } from './components/ui.jsx'
+import Today from './screens/Today.jsx'
+import Detail from './screens/Detail.jsx'
+import { onLensReady } from './screens/detail-hooks.jsx'
+import Explore, { DatesView } from './screens/Explore.jsx'
 import Saved from './screens/Saved.jsx'
 import About from './screens/About.jsx'
 import Settings from './screens/Settings.jsx'
-import Weekly from './screens/Weekly.jsx'
-import Sector from './screens/Sector.jsx'
 import Contests from './screens/Contests.jsx'
-import Yc, { YcDaySide, YcDaysSide } from './screens/Yc.jsx'
-import { SECTORS, byDate, byId, canonicalSector, dates, isYcPick, issueNo, retryDay, useDayLevel, weeks, ycDates } from './lib/data.js'
+import Yc from './screens/Yc.jsx'
+import { byDate, byId, canonicalSector, dates, isYcPick, ycDates } from './lib/data.js'
 import { navigate, useMediaQuery, useReadLog, useRoute } from './lib/hooks.js'
-import { claimEntry, currentEntry, scrollMemory } from './lib/nav.js'
-import { longDate, monthDay, weekLabel } from './lib/format.js'
+import { claimEntry, currentEntry, goBack, replaceHash, scrollMemory } from './lib/nav.js'
+import { longDate, monthDay } from './lib/format.js'
 import { onUpdate } from './lib/update.js'
-import { L } from './lib/i18n.js'
+import { isEn, L } from './lib/i18n.js'
 
-/* ---------- Route → screen ---------- */
+/* ---------- Route → screen (spec v2 §3, IA §2-4) ---------- */
 
 function resolve({ parts, params }) {
   const [head, arg] = parts
-  if (!head) return { kind: 'issue', date: dates[0], section: 'issue' }
-  if (head === 'd' && dates.includes(arg)) return { kind: 'issue', date: arg, section: 'issue' }
-  if (head === 's' && byId(arg))
-    return { kind: 'detail', id: arg, from: params.get('from'), section: params.get('from') === 'saved' ? 'saved' : isYcPick(byId(arg)) ? 'yc' : 'issue' }
-  if (head === 'yc') return { kind: 'yc', date: ycDates().includes(arg) ? arg : ycDates()[0], section: 'yc' }
-  if (head === 'explore') return { kind: 'explore', section: 'explore' }
-  if (head === 'saved') return { kind: 'saved', section: 'saved' }
-  if (head === 'contests') return { kind: 'contests', section: 'contests' }
-  if (head === 'about') return { kind: 'about', section: 'about' }
-  if (head === 'settings') return { kind: 'settings', section: 'about' }
-  if (head === 'w' && weeks.some((w) => w.key === arg)) return { kind: 'weekly', week: arg, section: 'explore' }
-  if (head === 't' && arg) return { kind: 'sector', sector: canonicalSector(arg), section: 'explore' }
-  return { kind: 'missing', section: null, head, arg }
+  if (!head) return { kind: 'today', date: dates[0], tab: 'today' }
+  if (head === 'd' && dates.includes(arg)) return arg === dates[0] ? { kind: 'redirect', to: '#/' } : { kind: 'day', date: arg, tab: 'today' }
+  if (head === 's' && byId(arg)) {
+    const from = params.get('from')
+    return { kind: 'detail', id: arg, from, tab: from === 'saved' ? 'saved' : from === 'explore' ? 'explore' : 'today' }
+  }
+  if (head === 'yc' && ycDates().length) return arg && !ycDates().includes(arg) ? { kind: 'redirect', to: '#/yc' } : { kind: 'yc', date: arg || ycDates()[0], tab: 'today' }
+  if (head === 'explore') {
+    const view = params.get('view')
+    if (view === 'issues') return { kind: 'redirect', to: '#/explore?view=dates' }
+    if (view === 'dates') return { kind: 'dates', tab: 'explore' }
+    return { kind: 'explore', tab: 'explore' }
+  }
+  // contests are Korean-only; the English edition has no tab for them
+  if (head === 'contests' && isEn) return { kind: 'redirect', to: '#/' }
+  if (head === 'contests') return { kind: 'contests', tab: 'contests', sel: params.get('c') }
+  if (head === 'saved') return { kind: 'saved', tab: 'saved' }
+  if (head === 'settings') return { kind: 'settings', tab: null }
+  if (head === 'about') return { kind: 'about', tab: null }
+  // retired screens: 분야 모아 보기 → 탐색 filter, 주간 정리 → 날짜별
+  if (head === 't' && arg) return { kind: 'redirect', to: `#/explore?sector=${encodeURIComponent(canonicalSector(arg))}` }
+  if (head === 'w') return { kind: 'redirect', to: '#/explore?view=dates' }
+  return { kind: 'missing', tab: null, head, arg }
+}
+
+/** Where the on-screen back goes when there is no in-app page behind (opened from a link). */
+function parentOf(route) {
+  if (route.kind === 'detail') {
+    const s = byId(route.id)
+    if (route.from === 'saved') return '/saved'
+    if (route.from === 'explore') return '/explore'
+    if (isYcPick(s)) return `/yc/${s.date}`
+    return s.date === dates[0] ? '/' : `/d/${s.date}`
+  }
+  if (route.kind === 'dates') return '/explore'
+  if (route.kind === 'contests') return '/contests'
+  return '/'
 }
 
 function titleFor(r) {
-  if (r.kind === 'issue') return L(`제${issueNo(r.date)}호 ${longDate(r.date)}`, `Issue ${issueNo(r.date)} · ${longDate(r.date)}`) + ' — Startup Daily'
-  if (r.kind === 'detail') return `${byId(r.id).name_ko} — Startup Daily`
-  if (r.kind === 'explore') return `${L('탐색', 'Explore')} — Startup Daily`
-  if (r.kind === 'saved') return `${L('저장함', 'Saved')} — Startup Daily`
-  if (r.kind === 'contests') return `${L('공모전', 'Contests')} — Startup Daily`
-  if (r.kind === 'yc') return `${L('YC 새 배치', 'New at YC')} — Startup Daily`
-  if (r.kind === 'about') return `${L('소개·선정 기준', 'About and how we pick')} — Startup Daily`
-  if (r.kind === 'settings') return `${L('설정', 'Settings')} — Startup Daily`
-  if (r.kind === 'weekly') return `${L(`${weekLabel(r.week)} 주간 정리`, weekLabel(r.week))} — Startup Daily`
-  if (r.kind === 'sector') {
-    const label = SECTORS.find((s) => s.key === r.sector)?.label
-    return `${L(`${label || '분야'} 모아 보기`, label || 'Sector')} — Startup Daily`
-  }
-  return `${L('찾을 수 없음', 'Not found')} — Startup Daily`
+  const t = (x) => `${x} — Startup Daily`
+  if (r.kind === 'today') return L(`오늘의 스타트업 5곳 · ${monthDay(r.date)}`, `Today's five startups · ${monthDay(r.date)}`) + ' — Startup Daily'
+  if (r.kind === 'day') return t(L(`${longDate(r.date)}의 5곳`, `Five startups · ${longDate(r.date)}`))
+  if (r.kind === 'detail') return t(byId(r.id).name_ko)
+  if (r.kind === 'yc') return t(L(`YC 새 배치 · ${monthDay(r.date)}`, `New at YC · ${monthDay(r.date)}`))
+  if (r.kind === 'explore') return t(L('탐색', 'Explore'))
+  if (r.kind === 'dates') return t(L('날짜별', 'By date'))
+  if (r.kind === 'saved') return t(L('저장', 'Saved'))
+  if (r.kind === 'contests') return t(L('공모전', 'Contests'))
+  if (r.kind === 'about') return t(L('소개·선정 기준', 'About'))
+  if (r.kind === 'settings') return t(L('설정', 'Settings'))
+  return t(L('찾을 수 없음', 'Not found'))
 }
 
-/* ---------- Scroll restoration + focus on route change ----------
-   A new history entry (link, typed URL, navigate()) starts at the top; an
-   entry seen before (back/forward) restores its own scroll position.      */
+/* ---------- Scroll and focus on route change (spec v2 §8-4, §8-8) ----------
+   A new entry starts at the top with focus on its heading; an entry seen before
+   (back/forward) gets its own scroll position back.                            */
 
 function useRouteEffects(routeKey, title) {
   const prevKey = useRef(null)
@@ -82,122 +101,15 @@ function useRouteEffects(routeKey, title) {
       prevKey.current = routeKey
       return
     }
-    // same screen, different query (explore filters): keep position
+    // same screen, different query (filters, search): keep the position
     if (prevKey.current === routeKey) return
     prevKey.current = routeKey
-    window.scrollTo(0, entry.fresh ? 0 : scrollMemory.get(entry.key) || 0)
+    const y = entry.fresh ? 0 : scrollMemory.get(entry.key) || 0
+    window.scrollTo(0, y)
+    // content that grows after paint (a list loading) gets one more try
+    if (y) requestAnimationFrame(() => window.scrollY < y - 2 && window.scrollTo(0, y))
     document.querySelector('main h1')?.focus({ preventScroll: true })
   })
-}
-
-function goBackFrom(route) {
-  if (currentEntry()?.depth > 0) window.history.back()
-  else if (route.kind === 'detail') navigate(route.from === 'saved' ? '/saved' : isYcPick(byId(route.id)) ? `/yc/${byId(route.id).date}` : `/d/${byId(route.id).date}`)
-  else navigate('/')
-}
-
-/* ---------- Desktop side list ---------- */
-
-function SideList({ route }) {
-  const startup = route.kind === 'detail' ? byId(route.id) : null
-  const ctx = useContextList(startup, route.from)
-  if (route.kind === 'detail' && route.from === 'saved') {
-    return (
-      <aside className="split__list" aria-label={L('저장한 회사', 'Saved companies')}>
-        <div className="side-head">
-          <a href="#/saved" className="side-head__back">
-            {L('저장함', 'Saved')}
-          </a>
-        </div>
-        <ul className="rows">
-          {ctx.map((s) => (
-            <StartupRow key={s.id} startup={s} compact selected={s.id === route.id} from="saved" />
-          ))}
-        </ul>
-      </aside>
-    )
-  }
-  const date = startup ? startup.date : route.date
-  if (route.kind === 'yc') return <YcDaysSide date={route.date} />
-  if (startup && isYcPick(startup)) return <YcDaySide date={date} selectedId={route.id} />
-  return (
-    <aside className="split__list" aria-label={L('이 호의 회사', 'Companies in this issue')}>
-      {/* on the issue's own page the centre column already carries the date and progress */}
-      {startup ? <IssueHeader date={date} compact /> : <p className="split__label">{L('이 호의 회사', 'In this issue')}</p>}
-      <IssueList date={date} selectedId={route.id} compact />
-    </aside>
-  )
-}
-
-function NotFound({ head, arg }) {
-  if (head === 'd' && /^\d{4}-\d{2}-\d{2}$/.test(arg || '')) {
-    // closest published issue to the requested date
-    const target = new Date(arg).getTime()
-    const nearest = [...dates].sort((a, b) => Math.abs(new Date(a) - target) - Math.abs(new Date(b) - target))[0]
-    return (
-      <div className="page">
-        <EmptyState
-          icon="calendar"
-          level={1}
-          title={L('이 날은 발행하지 않았어요', 'No issue on this date')}
-          actions={
-            <a className="btn btn--primary" href={nearest === dates[0] ? '#/' : `#/d/${nearest}`}>
-              {L(`가장 가까운 호 보기 (${longDate(nearest).replace(/요일$/, '')})`, `See the nearest issue (${monthDay(nearest)})`)}
-            </a>
-          }
-        />
-      </div>
-    )
-  }
-  const guess = head === 's' ? arg?.replace(/-\d{4}$/, '').replace(/-/g, ' ') : null
-  return (
-    <div className="page">
-      <EmptyState
-        icon="info"
-        level={1}
-        title={L('이 페이지를 찾을 수 없어요', 'Page not found')}
-        actions={
-          <>
-            <a className="btn btn--primary" href="#/">
-              {L('최신 호 보기', 'See the latest issue')}
-            </a>
-            <a className="btn btn--secondary" href={`#/explore${guess ? `?q=${encodeURIComponent(guess)}` : ''}`}>
-              {guess ? L(`‘${guess}’ 검색`, `Search for “${guess}”`) : L('탐색에서 찾기', 'Search in Explore')}
-            </a>
-          </>
-        }
-      >
-        {L('주소가 바뀌었거나 없는 회사·호예요.', 'The link may have changed, or this company or issue doesn’t exist.')}
-      </EmptyState>
-    </div>
-  )
-}
-
-/** A company page opened before the full records arrived (usually a fraction of a second). */
-function DetailPending({ failed, date }) {
-  if (failed) {
-    return (
-      <EmptyState
-        icon="explore"
-        title={L('회사 정보를 불러오지 못했어요', 'Couldn’t load this company')}
-        actions={
-          <button type="button" className="btn btn--primary" onClick={() => retryDay(date)}>
-            {L('다시 시도', 'Try again')}
-          </button>
-        }
-      >
-        {L('인터넷 연결을 확인해 주세요.', 'Check your connection and try again.')}
-      </EmptyState>
-    )
-  }
-  return (
-    <div className="boot__body" aria-busy="true">
-      <div className="boot__line boot__line--title" />
-      <div className="boot__line boot__line--sub" />
-      <div className="boot__row" />
-      <div className="boot__row" />
-    </div>
-  )
 }
 
 /* ---------- Background news: a new issue, a finished "한국에서는" request ---------- */
@@ -207,15 +119,15 @@ function Notifier() {
   useEffect(
     () =>
       onUpdate((kind, meta) => {
-        const label = kind === 'issue' && meta?.last_issue_date ? L(`${monthDay(meta.last_issue_date)} 호가 나왔어요`, `New issue: ${monthDay(meta.last_issue_date)}`) : L('새 버전이 있어요', 'A new version is available')
-        toast(label, { label: L('새로고침', 'Reload'), onClick: () => window.location.reload() }, 15000)
+        const label = kind === 'issue' && meta?.last_issue_date ? L('새 다섯 곳이 도착했어요', 'Five new startups are here') : L('새 버전이 있어요', 'A new version is available')
+        toast(label, { label: L('보기', 'View'), onClick: () => window.location.reload() }, 15000)
       }),
     [toast],
   )
   useEffect(
     () =>
       onLensReady((id) => {
-        if (window.location.hash.startsWith(`#/s/${id}`)) return // already looking at it
+        if (window.location.hash.startsWith(`#/s/${id}`)) return
         const s = byId(id)
         toast(L(`${s?.name_ko || '요청한 회사'} 한국 분석이 준비됐어요`, `Korea analysis is ready for ${s?.name_ko || 'the company you asked about'}`), { label: L('보기', 'View'), onClick: () => navigate(`/s/${id}`) }, 10000)
       }),
@@ -224,7 +136,7 @@ function Notifier() {
   return null
 }
 
-/** App icon badge = companies in the latest issue not read yet (installed apps only). */
+/** App icon badge = today's companies not read yet (installed apps only). */
 function useAppBadge() {
   const { isRead } = useReadLog()
   const unread = dates[0] ? byDate(dates[0]).filter((s) => !isRead(s.id)).length : 0
@@ -234,76 +146,101 @@ function useAppBadge() {
   }, [unread])
 }
 
+function NotFound({ head, arg }) {
+  const nearDay = head === 'd' && /^\d{4}-\d{2}-\d{2}$/.test(arg || '')
+  const nearest = nearDay ? [...dates].sort((a, b) => Math.abs(new Date(a) - new Date(arg)) - Math.abs(new Date(b) - new Date(arg)))[0] : null
+  return (
+    <div className="page">
+      <EmptyState
+        level={1}
+        icon={nearDay ? 'calendar' : 'info'}
+        title={nearDay ? L('이 날은 발행하지 않았어요', 'Nothing was published that day') : L('이 페이지를 찾을 수 없어요', 'Page not found')}
+        action={
+          nearest ? (
+            <a className="btn btn--secondary" href={nearest === dates[0] ? '#/' : `#/d/${nearest}`}>
+              {L(`가장 가까운 날 보기 (${monthDay(nearest)})`, `See the nearest day (${monthDay(nearest)})`)}
+            </a>
+          ) : (
+            <a className="btn btn--secondary" href="#/">
+              {L('오늘로 가기', 'Go to today')}
+            </a>
+          )
+        }
+      >
+        {!nearDay && L('주소가 바뀌었거나 없는 회사예요.', 'The link may have changed, or this company doesn’t exist.')}
+      </EmptyState>
+    </div>
+  )
+}
+
+const SUB_TITLE = {
+  day: (r) => monthDay(r.date),
+  yc: () => L('YC 새 배치', 'New at YC'),
+  dates: () => L('날짜별', 'By date'),
+  settings: () => L('설정', 'Settings'),
+  about: () => L('소개', 'About'),
+}
+
+const ROOT_HASHES = ['', '#', '#/', '#/explore', '#/contests', '#/saved']
+
 /* ---------- App ---------- */
 
 export default function App() {
   const loc = useRoute()
   const route = resolve(loc)
   const desktop = useMediaQuery('(min-width: 1024px)')
-  const wide = useMediaQuery('(min-width: 1280px)')
-  // a company page needs its day's full records (data/days/<date>.json)
-  const dayLevel = useDayLevel(route.kind === 'detail' ? byId(route.id).date : null)
   useAppBadge()
-  const routeKey = `${route.kind}:${route.date || route.id || ''}:${route.from || ''}`
+  const routeKey = `${route.kind}:${route.date || route.id || ''}:${route.from || ''}:${route.kind === 'contests' && !desktop ? route.sel || '' : ''}`
   useRouteEffects(routeKey, titleFor(route))
 
-  const [scrolledPastHero, setScrolledPastHero] = useState(false)
+  // retired or duplicate addresses: swap the entry, so back doesn't bounce through them
   useEffect(() => {
-    if (route.kind !== 'detail') return
-    const onScroll = () => setScrolledPastHero(window.scrollY > 200)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [route.kind])
+    if (route.kind === 'redirect') replaceHash(route.to)
+  }, [route.kind, route.to])
+  if (route.kind === 'redirect') return null
 
-  const split = desktop && (route.kind === 'issue' || route.kind === 'detail' || route.kind === 'yc')
-  const showBack = !desktop && (route.kind === 'detail' || route.kind === 'about' || route.kind === 'settings')
+  const back = { label: L('뒤로', 'Back'), onClick: () => goBack(parentOf(route)) }
+  const atRoot = ROOT_HASHES.includes(window.location.hash)
+  // screens that draw their own top bar (company page, a contest on a phone)
+  const ownBar = route.kind === 'detail' || (route.kind === 'contests' && route.sel && !desktop)
+  const hideTabs = desktop || ownBar || route.kind === 'settings' || route.kind === 'about'
 
   let content
-  if (route.kind === 'issue') content = desktop ? <IssueOverview date={route.date} wide={wide} /> : <IssueMobile date={route.date} />
-  else if (route.kind === 'detail')
-    content =
-      dayLevel === 'full' ? (
-        <Detail key={route.id} id={route.id} from={route.from} desktop={desktop} wide={wide} />
-      ) : (
-        <DetailPending failed={dayLevel === 'failed'} date={byId(route.id).date} />
-      )
+  if (route.kind === 'today' || route.kind === 'day') content = <Today key={route.date} date={route.date} past={route.kind === 'day'} desktop={desktop} />
+  else if (route.kind === 'detail') content = <Detail key={route.id} id={route.id} from={route.from} desktop={desktop} back={back} />
+  else if (route.kind === 'yc') content = <Yc key={route.date} date={route.date} />
   else if (route.kind === 'explore') content = <Explore params={loc.params} desktop={desktop} />
+  else if (route.kind === 'dates') content = <DatesView />
   else if (route.kind === 'saved') content = <Saved params={loc.params} />
-  else if (route.kind === 'contests') content = <Contests params={loc.params} desktop={desktop} />
-  else if (route.kind === 'yc') content = <Yc key={route.date} date={route.date} desktop={desktop} />
+  else if (route.kind === 'contests') content = <Contests params={loc.params} desktop={desktop} back={back} />
   else if (route.kind === 'about') content = <About params={loc.params} />
   else if (route.kind === 'settings') content = <Settings />
-  else if (route.kind === 'weekly') content = <Weekly week={route.week} />
-  else if (route.kind === 'sector') content = <Sector sector={route.sector} />
   else content = <NotFound head={route.head} arg={route.arg} />
 
-  const rail = wide && split && route.kind !== 'yc' && (route.kind !== 'detail' || dayLevel === 'full') && (route.kind === 'detail' ? <DetailRail key={route.id} id={route.id} /> : <IssueRail date={route.date} />)
+  const layout = route.kind === 'detail' ? 'detail' : route.kind === 'contests' ? 'contests' : 'list'
 
   return (
     <ToastProvider>
       <Notifier />
-      {/* the taste sheet (role and sectors); opened from the issue screen and 설정 */}
-      <Onboarding />
       <a className="skip" href="#main" onClick={(e) => (e.preventDefault(), document.getElementById('main')?.focus())}>
         {L('본문으로 건너뛰기', 'Skip to content')}
       </a>
-      <AppHeader
-        desktop={desktop}
-        section={route.section}
-        back={showBack ? { label: L('뒤로', 'Back'), onClick: () => goBackFrom(route) } : null}
-        title={route.kind === 'detail' ? { text: byId(route.id).name_ko, visible: scrolledPastHero } : null}
-      />
-      <div className={`shell ${split ? 'shell--split' : ''} ${rail ? 'shell--rail' : ''} shell--${route.kind}`}>
-        {split && <SideList route={route} />}
-        <main id="main" tabIndex={-1} className="shell__main">
-          {content}
-          {desktop && !split && route.kind !== 'about' && <Footer />}
-        </main>
-        {rail && <aside className="split__rail">{rail}</aside>}
-      </div>
-      {!desktop && route.kind !== 'detail' && <TabBar section={route.section} />}
+      {desktop ? (
+        <DesktopNav section={route.tab} atRoot={atRoot} query={route.kind === 'explore' ? loc.params.get('q') || '' : ''} />
+      ) : (
+        !ownBar && <TopBar back={SUB_TITLE[route.kind] ? back : null} title={SUB_TITLE[route.kind]?.(route)} />
+      )}
+      <main id="main" tabIndex={-1} className={`shell shell--${layout} ${hideTabs ? '' : 'shell--tabs'}`}>
+        {desktop && SUB_TITLE[route.kind] && (
+          <div className="dback">
+            <button type="button" className="btn btn--ghost" onClick={back.onClick}>
+              <Icon name="back" size={18} /> {L('뒤로', 'Back')}
+            </button>
+          </div>
+        )}
+        {content}
+      </main>
+      {!hideTabs && <TabBar section={route.tab} atRoot={atRoot} />}
     </ToastProvider>
   )
 }
-

@@ -2,28 +2,10 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from 'react'
 import Icon from '../components/Icon.jsx'
 import Sheet from '../components/Sheet.jsx'
 import { useToast } from '../components/toast-context.js'
-import { byDate, byId, dates, isYcPick, issueNo, ycOf } from '../lib/data.js'
-import { prefersReducedMotion, useFlag, useMuted, useReadLog, useSaved } from '../lib/hooks.js'
-import { useMyIssue } from '../lib/my-issue.js'
-import { monthDay } from '../lib/format.js'
-import { canNativeShare, canonicalUrl, shareOrCopy } from '../lib/share.js'
+import { byDate, byId, isYcPick, ycOf } from '../lib/data.js'
+import { createStore, prefersReducedMotion, useFlag, useReadLog, useSaved, useStore } from '../lib/hooks.js'
+import { canNativeShare, canonicalUrl, copyText, shareOrCopy } from '../lib/share.js'
 import { L } from '../lib/i18n.js'
-import { useIssueOrder } from '../lib/personal.js'
-
-// "왜 지금" leads the summary above, so the first section is its evidence
-const BASE_SECTIONS = [
-  { id: 'why', label: L('뜨는 근거', 'Signals') },
-  { id: 'product', label: L('제품·경쟁', 'Product') },
-  { id: 'funding', label: L('팀·투자', 'Team & funding') },
-  { id: 'market', label: L('시장', 'Market') },
-]
-const KOREA_SECTION = { id: 'korea', label: L('한국', 'Korea') }
-const SOURCES_SECTION = { id: 'sources', label: L('출처', 'Sources') }
-
-/** The "한국" section exists only for companies that have a "한국에서는" analysis. */
-export function sectionsFor(hasKorea) {
-  return [...BASE_SECTIONS, ...(hasKorea ? [KOREA_SECTION] : []), SOURCES_SECTION]
-}
 
 /* Analyses that shipped with the site come from /data/korea-lens.json, fetched on demand.
    Others are generated when the reader asks, by /api/korea-lens, and kept on this device.
@@ -172,31 +154,50 @@ export function useKoreaLens(id, hasStatic, canRequest) {
   }
 }
 
-const NONE = []
+/* The list a company page belongs to, in the order the reader saw it: the saved list, the
+   last explore results (kept for the session by Explore), the day's YC list, or the day's five.
+   "다음" and the desktop side list walk this list. */
+const EXPLORE_KEY = 'sd_explore_ctx'
+export function rememberExplore(ids) {
+  try {
+    sessionStorage.setItem(EXPLORE_KEY, JSON.stringify(ids.slice(0, 60)))
+  } catch {
+    /* private mode: "다음" falls back to the day's five */
+  }
+}
+function exploreIds() {
+  try {
+    return JSON.parse(sessionStorage.getItem(EXPLORE_KEY)) || []
+  } catch {
+    return []
+  }
+}
 
-/** Ordered list this detail page belongs to, in the order the reader saw it: "내 5곳"
-    (from=mine), the saved list, or the issue — published order (hidden sectors last)
-    on a day with "내 5곳" (phone layout only: the desktop list has no tabs), the reader's
-    order otherwise, as on the issue screen. */
-export function useContextList(startup, from, desktop = false) {
+export function useContextList(startup, from) {
   const { saved } = useSaved()
-  const { muted } = useMuted()
-  // "내 5곳" exists for the latest issue only, and can hold a company from an earlier day
-  const mineDay = from === 'mine' ? dates[0] : startup?.date
-  const my = useMyIssue(mineDay)
-  const issue = useIssueOrder(startup ? byDate(startup.date) : NONE).list
   return useMemo(() => {
     if (!startup) return []
     if (from === 'saved') return saved.map(byId).filter(Boolean)
-    // a YC-section company steps through the day's YC section, not the five
-    if (isYcPick(startup)) return ycOf(startup.date)
-    if (from === 'mine' && my.available) return my.list
-    if (my.available && !desktop) {
-      const l = byDate(startup.date)
-      return [...l.filter((s) => !muted.includes(s._sector.key)), ...l.filter((s) => muted.includes(s._sector.key))]
+    if (from === 'explore') {
+      const ids = exploreIds()
+      if (ids.includes(startup.id)) return ids.map(byId).filter(Boolean)
     }
-    return issue
-  }, [startup, from, desktop, saved, issue, my.available, my.list, muted])
+    if (isYcPick(startup)) return ycOf(startup.date).slice(0, 10)
+    return byDate(startup.date)
+  }, [startup, from, saved])
+}
+
+/* Which second-layer sections are open. null = never touched: all open on desktop, closed on phones.
+   Kept across companies (someone who always opens 제품 finds it open on the next one). */
+const openStore = createStore('sd_open_sections', null, (v) => v === null || Array.isArray(v))
+export function useOpenSections(all, desktop) {
+  const stored = useStore(openStore)
+  const open = stored ?? (desktop ? all : [])
+  const isOpen = (id) => open.includes(id)
+  const toggle = (id) => openStore.set(isOpen(id) ? open.filter((x) => x !== id) : [...open, id])
+  const setAll = (on) => openStore.set(on ? all : [])
+  const openOne = (id) => !isOpen(id) && openStore.set([...open, id])
+  return { isOpen, toggle, setAll, openOne, allOpen: all.every(isOpen) }
 }
 
 /** Public link for a company: /s/:id is a small static page with that company's link
@@ -212,14 +213,16 @@ export function useShare(startup) {
     const url = shareUrl(startup.id)
     const r = await shareOrCopy({
       title: `${startup.name_ko} — Startup Daily`,
-      text: L(
-        `${startup.tagline} · 제${issueNo(startup.date)}호(${monthDay(startup.date)})`,
-        `${startup.tagline} · Issue #${issueNo(startup.date)} (${monthDay(startup.date)})`,
-      ),
+      text: `${startup.name_ko} — ${startup.tagline}`,
       url,
     })
     if (r === 'copied') toast(L('링크를 복사했어요', 'Link copied'))
     if (r === 'manual') setManualUrl(url)
+  }
+  const copyLink = async () => {
+    const url = shareUrl(startup.id)
+    if (await copyText(url)) toast(L('링크를 복사했어요', 'Link copied'))
+    else setManualUrl(url)
   }
   const shareImage = async () => {
     setOpen(false)
@@ -230,29 +233,31 @@ export function useShare(startup) {
   const sheet = (
     <>
       <Sheet open={open} onClose={() => setOpen(false)} title={L('공유하기', 'Share')}>
-        <div className="share-options">
-          <button type="button" className="btn btn--secondary" onClick={shareLink}>
-            <Icon name="share" size={18} /> {canNativeShare() ? L('링크 공유', 'Share link') : L('링크 복사', 'Copy link')}
-          </button>
-          <button type="button" className="btn btn--secondary" onClick={shareImage}>
-            <Icon name="image" size={18} />{' '}
-            {canNativeShare() ? L('카드 이미지로 공유', 'Share as card image') : L('카드 이미지로 저장', 'Save as card image')}
-          </button>
-        </div>
-        <p className="sheet__hint">
-          {L(
-            '카드 이미지에는 ‘AI가 공개 자료로 작성’ 표시가 함께 들어가요.',
-            'Card images include a “Written by AI from public sources” label.',
-          )}
+        <ul className="menu">
+          <li>
+            <button type="button" className="menu__item" onClick={shareLink}>
+              <Icon name="share" size={20} />
+              <span className="menu__label">{canNativeShare() ? L('링크 공유', 'Share link') : L('링크 복사', 'Copy link')}</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" className="menu__item" onClick={shareImage}>
+              <Icon name="image" size={20} />
+              <span className="menu__label">{canNativeShare() ? L('카드 이미지로 공유', 'Share as an image') : L('카드 이미지로 저장', 'Save as an image')}</span>
+            </button>
+          </li>
+        </ul>
+        <p className="sheet__hint" style={{ marginTop: 12, marginBottom: 0 }}>
+          {L('카드 이미지에는 ‘AI가 공개 자료로 작성’ 표시가 함께 들어가요.', 'Card images include a “Written by AI from public sources” label.')}
         </p>
       </Sheet>
       <Sheet open={Boolean(manualUrl)} onClose={() => setManualUrl(null)} title={L('링크 복사', 'Copy link')}>
         <p className="sheet__hint">{L('아래 주소를 길게 눌러 복사하세요.', 'Press and hold the address below to copy it.')}</p>
-        <input className="field" readOnly value={manualUrl || ''} onFocus={(e) => e.currentTarget.select()} autoFocus />
+        <input className="field" readOnly value={manualUrl || ''} onFocus={(e) => e.currentTarget.select()} />
       </Sheet>
     </>
   )
-  return { share: () => setOpen(true), sheet, label: L('공유', 'Share') }
+  return { share: () => setOpen(true), copyLink, shareImage, sheet, label: L('공유', 'Share') }
 }
 
 /* Mark as read once the summary has been on screen for 2s while the tab is visible.
@@ -276,25 +281,6 @@ export function useReadTracking(ref, id) {
     }, 500)
     return () => clearInterval(timer)
   }, [ref, id, markRead, setIntro])
-}
-
-/* Which section is under the sticky nav. */
-export function useActiveSection(idList) {
-  const key = idList.join(',') // a new array each render must not re-create the observer
-  const [active, setActive] = useState(idList[0])
-  useEffect(() => {
-    const els = key.split(',').map((id) => document.getElementById(id)).filter(Boolean)
-    const io = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
-        if (visible[0]) setActive(visible[0].target.id)
-      },
-      { rootMargin: '-120px 0px -60% 0px' },
-    )
-    els.forEach((el) => io.observe(el))
-    return () => io.disconnect()
-  }, [key])
-  return active
 }
 
 export function scrollToSection(id) {

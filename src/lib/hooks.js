@@ -1,6 +1,7 @@
 import { useCallback, useState, useSyncExternalStore } from 'react'
 import { load, save } from './storage.js'
 import { SECTOR_KEYS, canonicalSector } from './sectors.js'
+import { replaceHash } from './nav.js'
 
 /* ---------- Hash router ----------
    Static hosting on Vercel without rewrites, so routes live in the hash:
@@ -38,15 +39,21 @@ export function useRoute() {
   return readHash(hash)
 }
 
+/** Go to a hash route. replace: swap the current entry (filters, "다음 회사"): it gets a new
+    scroll id and keeps its depth, so back skips it (nav.js). */
 export function navigate(to, { replace = false } = {}) {
   const next = to.startsWith('#') ? to : `#${to}`
   if (window.location.hash === next) return
-  if (replace) {
-    history.replaceState(history.state, '', next)
-    window.dispatchEvent(new HashChangeEvent('hashchange'))
-  } else {
-    window.location.hash = next
-  }
+  if (replace) replaceHash(next)
+  else window.location.hash = next
+}
+
+/** Swap only the query of the current entry, keeping its scroll id (filters, search). */
+export function setQuery(to) {
+  const next = to.startsWith('#') ? to : `#${to}`
+  if (window.location.hash === next) return
+  history.replaceState(history.state, '', next)
+  window.dispatchEvent(new HashChangeEvent('hashchange'))
 }
 
 export function buildQuery(params) {
