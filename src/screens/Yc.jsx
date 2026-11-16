@@ -5,12 +5,11 @@ import Icon from '../components/Icon.jsx'
 import { CompanyCard } from '../components/Company.jsx'
 import { EmptyState, PageTitle } from '../components/ui.jsx'
 import { ycOf, ycShort } from '../lib/data.js'
-import { longDate } from '../lib/format.js'
 import { useFlag, useReadLog } from '../lib/hooks.js'
 import { useMarkSeen } from '../lib/seen.js'
 import { track } from '../lib/analytics.js'
 import { L } from '../lib/i18n.js'
-import { DaySheet } from './Today.jsx'
+import { DayNav, DayPager, DaySheet } from './Today.jsx'
 import { batchLine } from '../lib/company.js'
 
 const SHORT = 5
@@ -37,10 +36,7 @@ export default function Yc({ date }) {
     <div className="page">
       <PageTitle
         eyebrow={
-          <button type="button" className="datebtn" aria-haspopup="dialog" onClick={() => setSheet(true)} aria-label={L(`${longDate(date)}, 다른 날짜 보기`, `${longDate(date)}, pick another day`)}>
-            <span className="num">{longDate(date)}</span>
-            <Icon name="chevronDown" size={16} />
-          </button>
+          <DayNav kind="yc" date={date} onOpen={() => setSheet(true)} />
         }
         title={L('YC 새 배치', 'New at Y Combinator')}
         sub={
@@ -70,6 +66,7 @@ export default function Yc({ date }) {
           </button>
         </div>
       )}
+      <DayPager kind="yc" date={date} />
       <p className="note-line">
         {L('오늘의 다섯 곳과 겹치지 않는 별도 목록이에요. ', 'A separate list that never repeats the day’s five. ')}
         <a href="#/explore?yc=1">{L('모든 YC 회사 보기', 'All YC companies')}</a>

@@ -1,7 +1,7 @@
 /* 오늘 (#/) and a past day (#/d/:date) — spec v2 §3 "오늘", IA §3-1.
    The day's five as same-format cards, then at most three conditional blocks, then one line.
    No issue number, no progress bar, no second list: the day ends where the five end. */
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Icon from '../components/Icon.jsx'
 import Logo from '../components/Logo.jsx'
 import Sheet from '../components/Sheet.jsx'
@@ -15,7 +15,7 @@ import { batchLine } from '../lib/company.js'
 import { localDate, useFlag, useInterests, useReadLog } from '../lib/hooks.js'
 import { daysSince, longDate, monthDay, parseDate, readMinutes } from '../lib/format.js'
 import { useMarkSeen, useSeen, useSeenCount } from '../lib/seen.js'
-import { leaveSheetTo } from '../lib/nav.js'
+import { currentEntry, leaveSheetTo, replaceHash, sheetBack, whenSettled } from '../lib/nav.js'
 import { canonicalUrl, shareOrCopy } from '../lib/share.js'
 import { track } from '../lib/analytics.js'
 import { L } from '../lib/i18n.js'
@@ -24,6 +24,102 @@ const RECENT = 14
 const dayGap = (a, b) => Math.round((parseDate(b) - parseDate(a)) / 864e5)
 const shortWeekday = (ymd) => longDate(ymd).replace(/요일$/, '')
 const dayHref = (kind, d) => (kind === 'yc' ? `#/yc/${d}` : d === dates[0] ? '#/' : `#/d/${d}`)
+
+/* ---------- Moving between days ----------
+   From today the first step pushes, so back returns to today. Further steps between past days
+   replace. Stepping onto today again pops back to it instead of stacking a second today.
+   (A YC day is a sub-page already: every step replaces.) */
+
+function goDay(kind, href, { fromRoot = false } = {}) {
+  const go = () => {
+    if (window.location.hash === href) return
+    const cameFromRoot = Boolean(history.state?.sd_dayFromRoot)
+    if (fromRoot) {
+      window.location.hash = href
+      history.replaceState({ ...(history.state || {}), sd_dayFromRoot: true }, '')
+    } else if (kind === 'issue' && href === '#/') {
+      if (cameFromRoot && currentEntry()?.depth > 0) history.back()
+      else replaceHash('#/')
+    } else {
+      replaceHash(href)
+      if (cameFromRoot) history.replaceState({ ...(history.state || {}), sd_dayFromRoot: true }, '')
+    }
+  }
+  if (history.state?.sdSheet) sheetBack().then(go)
+  else whenSettled(go)
+}
+
+function useDaySteps(kind, date, past) {
+  const all = kind === 'yc' ? ycDates() : dates
+  const i = all.indexOf(date)
+  const older = i >= 0 ? all[i + 1] || null : null
+  const newer = i > 0 ? all[i - 1] : null
+  const fromRoot = kind === 'issue' && !past
+  const step = (d) => d && goDay(kind, dayHref(kind, d), { fromRoot })
+  return { older, newer, step }
+}
+
+const dayName = (d) => (d === dates[0] ? L('오늘', 'today') : monthDay(d))
+
+/** ‹ date ▾ › — one tap to the day before or after; the date itself opens the list. ←/→ keys too. */
+export function DayNav({ kind = 'issue', date, past = false, onOpen }) {
+  const { older, newer, step } = useDaySteps(kind, date, past)
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return
+      if (e.target.closest?.('input, textarea, select, [contenteditable], dialog')) return
+      const to = e.key === 'ArrowLeft' ? older : e.key === 'ArrowRight' ? newer : null
+      if (to) step(to)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  })
+  return (
+    <span className="daynav">
+      <button type="button" className="btn-icon daynav__step" disabled={!older} onClick={() => step(older)} aria-label={older ? L(`이전 날, ${monthDay(older)}`, `Previous day, ${monthDay(older)}`) : L('이전 날 없음', 'No earlier day')}>
+        <Icon name="chevronLeft" size={20} />
+      </button>
+      <button type="button" className="datebtn" aria-haspopup="dialog" onClick={onOpen} aria-label={L(`${longDate(date)}, 날짜 목록 열기`, `${longDate(date)}, open the list of days`)}>
+        <span className="num">{longDate(date)}</span>
+        <Icon name="chevronDown" size={16} />
+      </button>
+      <button type="button" className="btn-icon daynav__step" disabled={!newer} onClick={() => step(newer)} aria-label={newer ? L(`다음 날, ${dayName(newer)}`, `Next day, ${dayName(newer)}`) : L('다음 날 없음', 'No later day')}>
+        <Icon name="chevronRight" size={20} />
+      </button>
+    </span>
+  )
+}
+
+/** Under the cards: where to go once the day is done. */
+export function DayPager({ kind = 'issue', date, past = false }) {
+  const { older, newer, step } = useDaySteps(kind, date, past)
+  if (!older && !newer) return null
+  const what = kind === 'yc' ? L('YC', 'YC') : L('5곳', 'five')
+  return (
+    <nav className="daypager" aria-label={L('다른 날', 'Other days')}>
+      {older ? (
+        <button type="button" className="daypager__btn" onClick={() => step(older)}>
+          <Icon name="chevronLeft" size={18} />
+          <span>
+            <span className="daypager__k">{L('이전 날', 'Previous day')}</span>
+            <span className="daypager__v num">{L(`${monthDay(older)} ${what}`, `${monthDay(older)} ${what}`)}</span>
+          </span>
+        </button>
+      ) : (
+        <span />
+      )}
+      {newer && (
+        <button type="button" className="daypager__btn daypager__btn--next" onClick={() => step(newer)}>
+          <span>
+            <span className="daypager__k">{L('다음 날', 'Next day')}</span>
+            <span className="daypager__v num">{kind === 'issue' && newer === dates[0] ? L('오늘의 5곳', 'Today’s five') : L(`${monthDay(newer)} ${what}`, `${monthDay(newer)} ${what}`)}</span>
+          </span>
+          <Icon name="chevronRight" size={18} />
+        </button>
+      )}
+    </nav>
+  )
+}
 
 /* ---------- Date sheet: the recent days, with what the reader has done with each ---------- */
 
@@ -77,7 +173,7 @@ export function DayRow({ kind, date, current, onPick }) {
 /** kind: 'issue' (the five) | 'yc'. Moving between past days replaces the entry, so back returns to today. */
 export function DaySheet({ kind = 'issue', date, open, onClose, replace = false }) {
   const all = kind === 'yc' ? ycDates() : dates
-  const pick = (href) => leaveSheetTo(href, { replace: replace && href !== '#/' })
+  const pick = (href) => goDay(kind, href, { fromRoot: kind === 'issue' && !replace })
   return (
     <Sheet open={open} onClose={onClose} title={kind === 'yc' ? L('YC 새 배치 날짜', 'YC days') : L('날짜', 'Days')}>
       <ul className="daylist">
@@ -298,10 +394,7 @@ export default function Today({ date, past = false }) {
       <PageTitle
         eyebrow={
           <>
-            <button type="button" className="datebtn" aria-haspopup="dialog" onClick={() => setSheet(true)} aria-label={L(`${longDate(date)}, 다른 날짜 보기`, `${longDate(date)}, pick another day`)}>
-              <span className="num">{longDate(date)}</span>
-              <Icon name="chevronDown" size={16} />
-            </button>
+            <DayNav kind="issue" date={date} past={past} onOpen={() => setSheet(true)} />
             {stale && daysSince(date) === 1 && <span className="tag-past">{L('어제 분', 'Yesterday’s')}</span>}
             {past && <span className="tag-past">{L('지난 날', 'Earlier')}</span>}
           </>
@@ -311,9 +404,9 @@ export default function Today({ date, past = false }) {
       >
         {stale && new Date().getHours() < 12 && <p className="ptitle__sub muted">{L('오늘 다섯 곳은 오전 중에 올라와요.', 'Today’s five arrive later this morning.')}</p>}
         {past && (
-          <a className="chip" href="#/" style={{ marginTop: 12 }}>
+          <button type="button" className="chip" style={{ marginTop: 12 }} onClick={() => goDay('issue', '#/')}>
             {L('오늘로', 'Back to today')}
-          </a>
+          </button>
         )}
       </PageTitle>
 
@@ -322,6 +415,7 @@ export default function Today({ date, past = false }) {
           <CompanyCard key={s.id} startup={s} rank={i + 1} from="today" />
         ))}
       </ol>
+      <DayPager kind="issue" date={date} past={past} />
 
       {(blocks.length > 0 || (!past && list.length > 0 && !left.length)) && (
         <div className="blocks">

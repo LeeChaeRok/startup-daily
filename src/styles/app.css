@@ -205,6 +205,24 @@ button { color: inherit; font: inherit; letter-spacing: inherit; cursor: pointer
   transition: background-color var(--sd-dur-1) var(--sd-ease);
 }
 .datebtn:hover, .datebtn:active { background: var(--sd-surface-2); }
+.daynav { display: inline-flex; align-items: center; margin: -12px 0 -12px -12px; }
+.daynav .datebtn { margin: 0; }
+.daynav__step { width: 40px; color: var(--sd-ink-2); }
+.daynav__step:disabled { opacity: 0.3; pointer-events: none; }
+.daypager { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--sd-space-2); margin-top: var(--sd-space-4); }
+.daypager__btn {
+  display: flex; align-items: center; gap: var(--sd-space-2); min-height: 56px; padding: var(--sd-space-2) var(--sd-space-3);
+  border: 0; border-radius: var(--sd-radius-md); background: var(--sd-surface); box-shadow: var(--sd-shadow-1);
+  font: inherit; color: var(--sd-ink); text-align: left; transition: background-color var(--sd-dur-1) var(--sd-ease);
+}
+.daypager__btn > span { display: flex; flex-direction: column; min-width: 0; }
+.daypager__btn--next { grid-column: 2; justify-content: flex-end; text-align: right; }
+.daypager__btn--next > span { align-items: flex-end; }
+.daypager__btn > svg { flex: none; color: var(--sd-ink-3); }
+.daypager__btn:active { background: var(--sd-surface-2); }
+@media (hover: hover) { .daypager__btn:hover { background: var(--sd-surface-2); } }
+.daypager__k { font: var(--sd-text-micro); color: var(--sd-ink-3); }
+.daypager__v { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 .tag-past { font: var(--sd-text-micro); padding: 3px 7px; border-radius: var(--sd-radius-xs); background: var(--sd-surface-2); color: var(--sd-ink-2); }
 
 /* ---------- Section header ---------- */
