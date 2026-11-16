@@ -632,6 +632,30 @@
         "source_name": "SWI swissinfo.ch",
         "found": "2026-11-15"
       }
+    ],
+    "together-ai-2026": [
+      {
+        "date": "2026-09-10",
+        "kind": "product",
+        "title_ko": "프리엠터블 컴퓨트 출시",
+        "title_en": "Preemptible Compute Launched",
+        "detail_ko": "GPU 클러스터에 프리엠터블 노드를 도입, 온디맨드 대비 50% 할인된 가격으로 중단 가능한 작업을 지원한다.",
+        "detail_en": "Introduced preemptible compute for GPU clusters at a flat 50% discount for interruption-tolerant workloads.",
+        "source_url": "https://www.together.ai/blog/introducing-preemptible-compute-the-same-compute-half-the-price",
+        "source_name": "Together AI Blog",
+        "found": "2026-11-16"
+      },
+      {
+        "date": "2026-07-01",
+        "kind": "funding",
+        "title_ko": "시리즈 C 8억 달러 유치",
+        "title_en": "Series C $800M Raised",
+        "detail_ko": "투게더 AI가 아람코 벤처스, 엔비디아 등으로부터 8억 달러의 시리즈 C 투자를 유치하며 기업 가치 83억 달러를 인정받았다.",
+        "detail_en": "Together AI raised $800 million in Series C funding led by Aramco Ventures, with participation from NVIDIA and others, at an $8.3 billion valuation.",
+        "source_url": "https://www.together.ai/blog/announcing-our-series-c",
+        "source_name": "Together AI Blog",
+        "found": "2026-11-16"
+      }
     ]
   },
   "checked": {
@@ -670,6 +694,8 @@
     "propertyguru-2026": "2026-11-14",
     "akili-interactive-2026": "2026-11-14",
     "bland-ai-2026": "2026-11-15",
-    "climeworks-2026": "2026-11-15"
+    "climeworks-2026": "2026-11-15",
+    "together-ai-2026": "2026-11-16",
+    "wefox-2026": "2026-11-16"
   }
 }
