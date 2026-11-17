@@ -12,8 +12,7 @@ import Saved from './screens/Saved.jsx'
 import About from './screens/About.jsx'
 import Settings from './screens/Settings.jsx'
 import Contests from './screens/Contests.jsx'
-import Yc from './screens/Yc.jsx'
-import { byDate, byId, canonicalSector, dates, isYcPick, ycDates } from './lib/data.js'
+import { byId, canonicalSector, dates, dayList } from './lib/data.js'
 import { navigate, useMediaQuery, useReadLog, useRoute } from './lib/hooks.js'
 import { claimEntry, currentEntry, goBack, replaceHash, scrollMemory } from './lib/nav.js'
 import { longDate, monthDay } from './lib/format.js'
@@ -30,7 +29,8 @@ function resolve({ parts, params }) {
     const from = params.get('from')
     return { kind: 'detail', id: arg, from, tab: from === 'saved' ? 'saved' : from === 'explore' ? 'explore' : 'today' }
   }
-  if (head === 'yc' && ycDates().length) return arg && !ycDates().includes(arg) ? { kind: 'redirect', to: '#/yc' } : { kind: 'yc', date: arg || ycDates()[0], tab: 'today' }
+  // the YC list now sits inside the day itself
+  if (head === 'yc') return { kind: 'redirect', to: arg && dates.includes(arg) && arg !== dates[0] ? `#/d/${arg}` : '#/' }
   if (head === 'explore') {
     const view = params.get('view')
     if (view === 'issues') return { kind: 'redirect', to: '#/explore?view=dates' }
@@ -55,7 +55,6 @@ function parentOf(route) {
     const s = byId(route.id)
     if (route.from === 'saved') return '/saved'
     if (route.from === 'explore') return '/explore'
-    if (isYcPick(s)) return `/yc/${s.date}`
     return s.date === dates[0] ? '/' : `/d/${s.date}`
   }
   if (route.kind === 'dates') return '/explore'
@@ -65,10 +64,9 @@ function parentOf(route) {
 
 function titleFor(r) {
   const t = (x) => `${x} — Startup Daily`
-  if (r.kind === 'today') return L(`오늘의 스타트업 5곳 · ${monthDay(r.date)}`, `Today's five startups · ${monthDay(r.date)}`) + ' — Startup Daily'
-  if (r.kind === 'day') return t(L(`${longDate(r.date)}의 5곳`, `Five startups · ${longDate(r.date)}`))
+  if (r.kind === 'today') return L(`오늘의 스타트업 · ${monthDay(r.date)}`, `Today's startups · ${monthDay(r.date)}`) + ' — Startup Daily'
+  if (r.kind === 'day') return t(L(`${longDate(r.date)}의 스타트업`, `Startups · ${longDate(r.date)}`))
   if (r.kind === 'detail') return t(byId(r.id).name_ko)
-  if (r.kind === 'yc') return t(L(`YC 새 배치 · ${monthDay(r.date)}`, `New at YC · ${monthDay(r.date)}`))
   if (r.kind === 'explore') return t(L('탐색', 'Explore'))
   if (r.kind === 'dates') return t(L('날짜별', 'By date'))
   if (r.kind === 'saved') return t(L('저장', 'Saved'))
@@ -139,7 +137,7 @@ function Notifier() {
 /** App icon badge = today's companies not read yet (installed apps only). */
 function useAppBadge() {
   const { isRead } = useReadLog()
-  const unread = dates[0] ? byDate(dates[0]).filter((s) => !isRead(s.id)).length : 0
+  const unread = dates[0] ? dayList(dates[0]).filter((s) => !isRead(s.id)).length : 0
   useEffect(() => {
     if (!('setAppBadge' in navigator)) return
     ;(unread ? navigator.setAppBadge(unread) : navigator.clearAppBadge()).catch(() => {})
@@ -208,7 +206,6 @@ export default function App() {
   let content
   if (route.kind === 'today' || route.kind === 'day') content = <Today key={route.date} date={route.date} past={route.kind === 'day'} desktop={desktop} />
   else if (route.kind === 'detail') content = <Detail key={route.id} id={route.id} from={route.from} desktop={desktop} back={back} />
-  else if (route.kind === 'yc') content = <Yc key={route.date} date={route.date} />
   else if (route.kind === 'explore') content = <Explore params={loc.params} desktop={desktop} />
   else if (route.kind === 'dates') content = <DatesView />
   else if (route.kind === 'saved') content = <Saved params={loc.params} />

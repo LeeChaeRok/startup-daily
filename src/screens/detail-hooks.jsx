@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from 'react'
 import Icon from '../components/Icon.jsx'
 import Sheet from '../components/Sheet.jsx'
 import { useToast } from '../components/toast-context.js'
-import { byDate, byId, isYcPick, ycOf } from '../lib/data.js'
+import { byId, dayList } from '../lib/data.js'
 import { createStore, prefersReducedMotion, useFlag, useReadLog, useSaved, useStore } from '../lib/hooks.js'
 import { canNativeShare, canonicalUrl, copyText, shareOrCopy } from '../lib/share.js'
 import { L } from '../lib/i18n.js'
@@ -182,8 +182,7 @@ export function useContextList(startup, from) {
       const ids = exploreIds()
       if (ids.includes(startup.id)) return ids.map(byId).filter(Boolean)
     }
-    if (isYcPick(startup)) return ycOf(startup.date).slice(0, 10)
-    return byDate(startup.date)
+    return dayList(startup.date)
   }, [startup, from, saved])
 }
 

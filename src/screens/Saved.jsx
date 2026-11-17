@@ -56,7 +56,7 @@ function Companies() {
   if (!items.length)
     return (
       <>
-        <EmptyState icon="bookmark" title={L('아직 저장한 회사가 없어요', 'Nothing saved yet')} action={<a className="btn btn--secondary" href="#/">{L('오늘의 5곳 보기', 'See today’s five')}</a>}>
+        <EmptyState icon="bookmark" title={L('아직 저장한 회사가 없어요', 'Nothing saved yet')} action={<a className="btn btn--secondary" href="#/">{L('오늘의 스타트업 보기', 'See today’s startups')}</a>}>
           {L('회사 화면의 책갈피를 누르면 여기에 모여요. 이 기기에만 저장돼요.', 'Tap the bookmark on a company page and it collects here. Saved on this device only.')}
         </EmptyState>
         <RecentRead />

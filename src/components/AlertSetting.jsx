@@ -25,7 +25,7 @@ export default function AlertSetting() {
           <span>{L('내 관심 분야가 있는 날만', 'Only when a sector I follow is in')}</span>
         </label>
       )}
-      <p className="alert-note">{L('하루 한 번, 새 다섯 곳이 나왔을 때만 보내요.', 'Once a day, only when the new five are out.')}</p>
+      <p className="alert-note">{L('하루 한 번, 새 목록이 나왔을 때만 보내요.', 'Once a day, only when the new list is out.')}</p>
     </div>
   )
 }

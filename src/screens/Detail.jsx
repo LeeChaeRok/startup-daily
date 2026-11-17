@@ -12,7 +12,7 @@ import { CompanyRow } from '../components/Company.jsx'
 import { companyHref, firstSentence } from '../lib/company.js'
 import { Badge, Chip, ChipWrap, SaveButton, Segmented, SkeletonRows } from '../components/ui.jsx'
 import { useToast } from '../components/toast-context.js'
-import { UPDATE_KINDS, byId, canAnalyze, cleanAmount, dates, isYcPick, LENS_VERDICTS, retryDay, useDayLevel, ycShort } from '../lib/data.js'
+import { UPDATE_KINDS, byId, canAnalyze, cleanAmount, dates, LENS_VERDICTS, retryDay, useDayLevel, ycShort } from '../lib/data.js'
 import { splitAmount } from '../lib/amount.js'
 import { navigate, useFlag, useFontSize, useReadLog } from '../lib/hooks.js'
 import { dotDate, enDash, investorList, langOf, monthDay, ym } from '../lib/format.js'
@@ -152,8 +152,8 @@ function EntryLine() {
   if (!show) return null
   return (
     <p className="d-entry">
-      <strong>Startup Daily</strong> · {L('매일 아침, 아직 덜 알려진 스타트업 5곳을 소개해요. ', 'Five startups you haven’t heard of yet, every morning. ')}
-      <a href="#/">{L('오늘의 5곳 보기', 'See today’s five')}</a>
+      <strong>Startup Daily</strong> · {L('매일 아침, 아직 덜 알려진 스타트업과 YC 새 회사를 소개해요. ', 'Startups you haven’t heard of yet, plus new YC companies, every morning. ')}
+      <a href="#/">{L('오늘의 스타트업 보기', 'See today’s startups')}</a>
     </p>
   )
 }
@@ -972,12 +972,11 @@ function usePastHeading(ref) {
 function listLabel(s, from) {
   if (from === 'saved') return { label: L('저장한 회사', 'Saved companies'), href: '#/saved', end: L('저장 목록 끝', 'End of your saved list'), back: L('저장 목록으로', 'Back to saved') }
   if (from === 'explore') return { label: L('검색 결과', 'Search results'), href: '#/explore', end: L('결과 끝', 'End of results'), back: L('검색 결과로', 'Back to results') }
-  if (isYcPick(s)) return { label: L(`YC 새 배치 · ${monthDay(s.date)}`, `New at YC · ${monthDay(s.date)}`), href: `#/yc/${s.date}`, end: L('YC 목록 끝', 'End of the YC list'), back: L('YC 목록으로', 'Back to YC') }
   const today = s.date === dates[0]
   return {
-    label: today ? L(`오늘의 5곳 · ${monthDay(s.date)}`, `Today’s five · ${monthDay(s.date)}`) : L(`${monthDay(s.date)}의 5곳`, `Five · ${monthDay(s.date)}`),
+    label: today ? L(`오늘의 스타트업 · ${monthDay(s.date)}`, `Today’s startups · ${monthDay(s.date)}`) : L(`${monthDay(s.date)}의 스타트업`, `Startups · ${monthDay(s.date)}`),
     href: today ? '#/' : `#/d/${s.date}`,
-    end: today ? L('오늘 다섯 곳 끝', 'That’s today’s five') : L('이날 다섯 곳 끝', 'End of that day’s five'),
+    end: today ? L('오늘 목록 끝', 'End of today’s list') : L('이날 목록 끝', 'End of that day’s list'),
     back: today ? L('오늘 화면으로', 'Back to today') : L('그날 목록으로', 'Back to that day'),
   }
 }
@@ -1175,7 +1174,7 @@ export default function Detail({ id, from, desktop, back }) {
           </button>
           {cold ? (
             <a className="btn btn--primary" href="#/">
-              <span>{L('오늘의 5곳 보기', 'See today’s five')}</span>
+              <span>{L('오늘의 스타트업 보기', 'See today’s startups')}</span>
               <Icon name="arrowRight" size={20} />
             </a>
           ) : next ? (

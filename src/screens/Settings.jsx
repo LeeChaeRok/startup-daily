@@ -89,7 +89,7 @@ export default function Settings() {
                 </Chip>
               ))}
             </ChipWrap>
-            <p className="set__hint">{L('탐색에서 먼저 보이고, 알림을 고를 때 쓰여요. 오늘의 5곳은 모두에게 같아요.', 'They come first in Explore and can narrow alerts. Today’s five are the same for everyone.')}</p>
+            <p className="set__hint">{L('탐색에서 먼저 보이고, 알림을 고를 때 쓰여요. 오늘 목록은 모두에게 같아요.', 'They come first in Explore and can narrow alerts. Today’s list is the same for everyone.')}</p>
           </div>
         </div>
       </section>
@@ -100,7 +100,7 @@ export default function Settings() {
         </h2>
         <div className="setbox">
           <div className="set">
-            <span className="set__label">{L('새 다섯 곳 알림', 'New five alerts')}</span>
+            <span className="set__label">{L('새 목록 알림', 'New list alerts')}</span>
             <AlertSetting />
           </div>
         </div>

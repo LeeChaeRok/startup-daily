@@ -1,6 +1,6 @@
 /* 오늘 (#/) and a past day (#/d/:date) — spec v2 §3 "오늘", IA §3-1.
-   The day's five as same-format cards, then at most three conditional blocks, then one line.
-   No issue number, no progress bar, no second list: the day ends where the five end. */
+   The whole day as one list of same-format cards: the five, then up to ten new YC companies
+   (badged). Then at most three conditional blocks, then one line. */
 import { useEffect, useState } from 'react'
 import Icon from '../components/Icon.jsx'
 import Logo from '../components/Logo.jsx'
@@ -10,8 +10,7 @@ import { FooterLine } from '../components/Chrome.jsx'
 import { Badge, Chip, ChipWrap, LogoStack, PageTitle, SectionHeader } from '../components/ui.jsx'
 import { useToast } from '../components/toast-context.js'
 import { usePush } from '../components/usePush.js'
-import { SECTORS, UPDATE_KINDS, byDate, dates, followUps, poolLive, stats, ycDates, ycOf } from '../lib/data.js'
-import { batchLine } from '../lib/company.js'
+import { SECTORS, UPDATE_KINDS, dates, dayList, followUps, isYcPick, poolLive, stats, ycShort } from '../lib/data.js'
 import { localDate, useFlag, useInterests, useReadLog } from '../lib/hooks.js'
 import { daysSince, longDate, monthDay, parseDate, readMinutes } from '../lib/format.js'
 import { useMarkSeen, useSeen, useSeenCount } from '../lib/seen.js'
@@ -23,7 +22,7 @@ import { L } from '../lib/i18n.js'
 const RECENT = 14
 const dayGap = (a, b) => Math.round((parseDate(b) - parseDate(a)) / 864e5)
 const shortWeekday = (ymd) => longDate(ymd).replace(/요일$/, '')
-const dayHref = (kind, d) => (kind === 'yc' ? `#/yc/${d}` : d === dates[0] ? '#/' : `#/d/${d}`)
+const dayHref = (kind, d) => (d === dates[0] ? '#/' : `#/d/${d}`)
 
 /* ---------- Moving between days ----------
    From today the first step pushes, so back returns to today. Further steps between past days
@@ -50,7 +49,7 @@ function goDay(kind, href, { fromRoot = false } = {}) {
 }
 
 function useDaySteps(kind, date, past) {
-  const all = kind === 'yc' ? ycDates() : dates
+  const all = dates
   const i = all.indexOf(date)
   const older = i >= 0 ? all[i + 1] || null : null
   const newer = i > 0 ? all[i - 1] : null
@@ -94,7 +93,7 @@ export function DayNav({ kind = 'issue', date, past = false, onOpen }) {
 export function DayPager({ kind = 'issue', date, past = false }) {
   const { older, newer, step } = useDaySteps(kind, date, past)
   if (!older && !newer) return null
-  const what = kind === 'yc' ? L('YC', 'YC') : L('5곳', 'five')
+  const what = (d) => L(`${monthDay(d)} ${dayList(d).length}곳`, monthDay(d))
   return (
     <nav className="daypager" aria-label={L('다른 날', 'Other days')}>
       {older ? (
@@ -102,7 +101,7 @@ export function DayPager({ kind = 'issue', date, past = false }) {
           <Icon name="chevronLeft" size={18} />
           <span>
             <span className="daypager__k">{L('이전 날', 'Previous day')}</span>
-            <span className="daypager__v num">{L(`${monthDay(older)} ${what}`, `${monthDay(older)} ${what}`)}</span>
+            <span className="daypager__v num">{what(older)}</span>
           </span>
         </button>
       ) : (
@@ -112,7 +111,7 @@ export function DayPager({ kind = 'issue', date, past = false }) {
         <button type="button" className="daypager__btn daypager__btn--next" onClick={() => step(newer)}>
           <span>
             <span className="daypager__k">{L('다음 날', 'Next day')}</span>
-            <span className="daypager__v num">{kind === 'issue' && newer === dates[0] ? L('오늘의 5곳', 'Today’s five') : L(`${monthDay(newer)} ${what}`, `${monthDay(newer)} ${what}`)}</span>
+            <span className="daypager__v num">{newer === dates[0] ? L('오늘의 스타트업', 'Today’s startups') : what(newer)}</span>
           </span>
           <Icon name="chevronRight" size={18} />
         </button>
@@ -139,7 +138,7 @@ function DayState({ list, seen }) {
 
 export function DayRow({ kind, date, current, onPick }) {
   const isSeen = useSeen(kind)
-  const list = kind === 'yc' ? ycOf(date).slice(0, 10) : byDate(date)
+  const list = dayList(date)
   const href = dayHref(kind, date)
   return (
     <li>
@@ -172,10 +171,10 @@ export function DayRow({ kind, date, current, onPick }) {
 
 /** kind: 'issue' (the five) | 'yc'. Moving between past days replaces the entry, so back returns to today. */
 export function DaySheet({ kind = 'issue', date, open, onClose, replace = false }) {
-  const all = kind === 'yc' ? ycDates() : dates
+  const all = dates
   const pick = (href) => goDay(kind, href, { fromRoot: kind === 'issue' && !replace })
   return (
-    <Sheet open={open} onClose={onClose} title={kind === 'yc' ? L('YC 새 배치 날짜', 'YC days') : L('날짜', 'Days')}>
+    <Sheet open={open} onClose={onClose} title={L('날짜', 'Days')}>
       <ul className="daylist">
         {all.slice(0, RECENT).map((d) => (
           <DayRow key={d} kind={kind} date={d} current={d === date} onPick={pick} />
@@ -226,8 +225,8 @@ function DoneCard({ date, list }) {
   const [sectors, setSectors] = useState(false)
   const share = async () => {
     const r = await shareOrCopy({
-      title: L(`${monthDay(date)} 스타트업 5곳`, `Five startups · ${monthDay(date)}`),
-      text: L(`${monthDay(date)} 스타트업 5곳: ${list.map((s) => s.name_ko).join(', ')}`, `Five startups on ${monthDay(date)}: ${list.map((s) => s.name_ko).join(', ')}`),
+      title: L(`${monthDay(date)} 스타트업 ${list.length}곳`, `${list.length} startups · ${monthDay(date)}`),
+      text: L(`${monthDay(date)} 스타트업 ${list.length}곳: ${list.map((s) => s.name_ko).join(', ')}`, `${list.length} startups on ${monthDay(date)}: ${list.map((s) => s.name_ko).join(', ')}`),
       url: canonicalUrl(`/d/${date}`),
     })
     if (r === 'copied') toast(L('링크를 복사했어요', 'Link copied'))
@@ -241,17 +240,17 @@ function DoneCard({ date, list }) {
         <Icon name="checkCircle" size={28} />
       </span>
       <h2 id="done-title" className="done__title">
-        {L('오늘 다섯 곳 끝', 'That’s today’s five')}
+        {L(`오늘 ${list.length}곳 끝`, `That’s today’s ${list.length}`)}
       </h2>
-      <p className="done__text">{L('내일 아침 새 다섯 곳이 와요.', 'Five new ones arrive tomorrow morning.')}</p>
+      <p className="done__text">{L('내일 아침 새 회사들이 와요.', 'New ones arrive tomorrow morning.')}</p>
       <div className="done__actions">
         <button type="button" className="btn btn--secondary" onClick={share}>
-          <Icon name="share" size={18} /> {L('오늘 5곳 공유', 'Share today’s five')}
+          <Icon name="share" size={18} /> {L('오늘 목록 공유', 'Share today’s list')}
         </button>
       </div>
       {askAlert && (
         <div className="done__ask">
-          <p>{L('내일 아침, 새 다섯 곳이 오면 알려 드릴까요?', 'Want a heads-up when tomorrow’s five arrive?')}</p>
+          <p>{L('내일 아침 새 회사들이 오면 알려 드릴까요?', 'Want a heads-up when tomorrow’s list arrives?')}</p>
           <button type="button" className="btn btn--primary" disabled={push.busy} onClick={() => push.enable()}>
             <Icon name="bell" size={18} /> {L('알림 켜기', 'Turn on alerts')}
           </button>
@@ -296,7 +295,7 @@ function useBlocks(date, past) {
   const returning = Object.keys(readLog).length > 0
   if (!past) {
     const prev = dates[dates.indexOf(date) + 1]
-    const missed = prev ? byDate(prev).filter((s) => !isRead(s.id)) : []
+    const missed = prev ? dayList(prev).filter((s) => !isRead(s.id)) : []
     if (returning && missed.length && daysSince(prev) <= 3) {
       blocks.push({
         key: 'missed',
@@ -310,13 +309,6 @@ function useBlocks(date, past) {
         ),
       })
     }
-  }
-  const yc = ycOf(date)
-  if (yc.length) {
-    blocks.push({
-      key: 'yc',
-      node: <LinkRow href={`#/yc/${date}`} logos={yc} title={L(`YC 새 배치 · ${Math.min(yc.length, 10)}곳`, `New at YC · ${Math.min(yc.length, 10)}`)} sub={L(`${batchLine(yc)} 배치 · 다섯 곳과 겹치지 않아요`, `${batchLine(yc)} · separate from the five`)} />,
-    })
   }
   if (!past) {
     const news = followUps(6).filter((s) => s._hasNews).slice(0, 2)
@@ -363,7 +355,7 @@ function useBlocks(date, past) {
 
 export default function Today({ date, past = false }) {
   useMarkSeen('issue', date)
-  const list = byDate(date)
+  const list = dayList(date)
   const { isRead } = useReadLog()
   const left = list.filter((s) => !isRead(s.id))
   const [intro, setIntro] = useFlag('sd_intro_dismissed', false)
@@ -385,7 +377,7 @@ export default function Today({ date, past = false }) {
     <div className="page">
       {!past && !intro && (
         <div className="intro" role="note">
-          <p>{L('매일 아침, 아직 덜 알려졌지만 지금 뜨는 스타트업 5곳을 왜 뜨는지와 함께 요약해 드려요.', 'Every morning: five startups you probably haven’t heard of yet, and why they matter now.')}</p>
+          <p>{L('매일 아침, 아직 덜 알려졌지만 지금 뜨는 스타트업과 YC 새 회사를 왜 뜨는지와 함께 요약해 드려요.', 'Every morning: startups you probably haven’t heard of yet, plus new YC companies, and why they matter now.')}</p>
           <button type="button" className="btn-icon" onClick={() => setIntro(true)} aria-label={L('안내 닫기', 'Dismiss')}>
             <Icon name="close" size={18} />
           </button>
@@ -399,10 +391,10 @@ export default function Today({ date, past = false }) {
             {past && <span className="tag-past">{L('지난 날', 'Earlier')}</span>}
           </>
         }
-        title={past ? L(`${monthDay(date)}의 스타트업 5곳`, `Five startups · ${monthDay(date)}`) : L('오늘의 스타트업 5곳', 'Today’s five startups')}
+        title={past ? L(`${monthDay(date)}의 스타트업 ${list.length}곳`, `${list.length} startups · ${monthDay(date)}`) : L(`오늘의 스타트업 ${list.length}곳`, `Today’s ${list.length} startups`)}
         sub={sub}
       >
-        {stale && new Date().getHours() < 12 && <p className="ptitle__sub muted">{L('오늘 다섯 곳은 오전 중에 올라와요.', 'Today’s five arrive later this morning.')}</p>}
+        {stale && new Date().getHours() < 12 && <p className="ptitle__sub muted">{L('오늘 목록은 오전 중에 올라와요.', 'Today’s list arrives later this morning.')}</p>}
         {past && (
           <button type="button" className="chip" style={{ marginTop: 12 }} onClick={() => goDay('issue', '#/')}>
             {L('오늘로', 'Back to today')}
@@ -410,9 +402,9 @@ export default function Today({ date, past = false }) {
         )}
       </PageTitle>
 
-      <ol className="cards" aria-label={L(`${monthDay(date)}의 다섯 곳`, `The five for ${monthDay(date)}`)}>
+      <ol className="cards" aria-label={L(`${monthDay(date)}의 스타트업`, `Startups for ${monthDay(date)}`)}>
         {list.map((s, i) => (
-          <CompanyCard key={s.id} startup={s} rank={i + 1} from="today" />
+          <CompanyCard key={s.id} startup={s} rank={i + 1} from="today" badge={isYcPick(s) ? `YC ${ycShort(s.yc?.batch)}` : undefined} />
         ))}
       </ol>
       <DayPager kind="issue" date={date} past={past} />

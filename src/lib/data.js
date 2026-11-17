@@ -327,6 +327,13 @@ export function ycOf(date) {
   return ycCache.get(date) || []
 }
 
+export const YC_PER_DAY = 10
+
+/** The whole day as one list: the five, then up to ten new YC companies. */
+export function dayList(date) {
+  return [...byDate(date), ...ycOf(date).slice(0, YC_PER_DAY)]
+}
+
 /** Every company of the day: the shared five first, then the rest of the sector pool. */
 export function poolOf(date) {
   return poolCache.get(date) || []
