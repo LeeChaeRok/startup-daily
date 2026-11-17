@@ -3,13 +3,14 @@
    Phone: a contest opens as its own page (pushed, so back returns to the list where it was).
    Desktop: list on the left, the contest on the right (replaced, no history per click).
    Filters live in the hash and are replaced, like 탐색. */
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Icon from '../components/Icon.jsx'
 import Sheet from '../components/Sheet.jsx'
 import { TopBar } from '../components/Chrome.jsx'
 import { Chip, ChipRow, ChipWrap, Dday, EmptyState, PageTitle, SkeletonRows } from '../components/ui.jsx'
 import { useToast } from '../components/toast-context.js'
 import { buildQuery, navigate, setQuery } from '../lib/hooks.js'
+import { goBack } from '../lib/nav.js'
 import { L } from '../lib/i18n.js'
 import { monthDay } from '../lib/format.js'
 import { canonicalUrl, shareOrCopy } from '../lib/share.js'
@@ -31,8 +32,89 @@ function group(n) {
   return { key: 3, label: L('그 이후', 'Later') }
 }
 
+/* ---------- Days: contests by the day they were posted ---------- */
+
+const DAY_SPAN = 30 // how far back the day view steps
+const isYmd = (s) => /^\d{4}-\d{2}-\d{2}$/.test(s || '')
+
+/** Posting days with at least one contest, newest first, within the last DAY_SPAN days. */
+function postDays(items, now) {
+  const from = new Date(`${now}T00:00:00`)
+  from.setDate(from.getDate() - DAY_SPAN)
+  const floor = `${from.getFullYear()}-${String(from.getMonth() + 1).padStart(2, '0')}-${String(from.getDate()).padStart(2, '0')}`
+  return [...new Set(items.map((c) => c.posted).filter((d) => d && d <= now && d >= floor))].sort().reverse()
+}
+
+function useDayStep(days, day) {
+  const older = days.find((d) => d < day) || null
+  const newer = days.filter((d) => d > day).at(-1) || null
+  const step = (to) => {
+    const q = new URLSearchParams(window.location.hash.split('?')[1] || '')
+    q.set('day', to)
+    q.delete('c')
+    setQuery(`/contests?${q.toString()}`)
+    window.scrollTo(0, 0)
+  }
+  return { older, newer, step }
+}
+
+function ContestDayNav({ days, day }) {
+  const { older, newer, step } = useDayStep(days, day)
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return
+      if (e.target.closest?.('input, textarea, select, [contenteditable], dialog')) return
+      const to = e.key === 'ArrowLeft' ? older : e.key === 'ArrowRight' ? newer : null
+      if (to) step(to)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  })
+  return (
+    <span className="daynav">
+      <button type="button" className="btn-icon daynav__step" disabled={!older} onClick={() => step(older)} aria-label={older ? `이전 날, ${monthDay(older)}` : '이전 날 없음'}>
+        <Icon name="chevronLeft" size={20} />
+      </button>
+      <span className="daynav__label num">{dateWithDay(day)}</span>
+      <button type="button" className="btn-icon daynav__step" disabled={!newer} onClick={() => step(newer)} aria-label={newer ? `다음 날, ${monthDay(newer)}` : '다음 날 없음'}>
+        <Icon name="chevronRight" size={20} />
+      </button>
+    </span>
+  )
+}
+
+function ContestDayPager({ days, day, countOf }) {
+  const { older, newer, step } = useDayStep(days, day)
+  if (!older && !newer) return null
+  return (
+    <nav className="daypager" aria-label="다른 날">
+      {older ? (
+        <button type="button" className="daypager__btn" onClick={() => step(older)}>
+          <Icon name="chevronLeft" size={18} />
+          <span>
+            <span className="daypager__k">이전 날</span>
+            <span className="daypager__v num">{`${monthDay(older)} ${countOf(older)}건`}</span>
+          </span>
+        </button>
+      ) : (
+        <span />
+      )}
+      {newer && (
+        <button type="button" className="daypager__btn daypager__btn--next" onClick={() => step(newer)}>
+          <span>
+            <span className="daypager__k">다음 날</span>
+            <span className="daypager__v num">{`${monthDay(newer)} ${countOf(newer)}건`}</span>
+          </span>
+          <Icon name="chevronRight" size={18} />
+        </button>
+      )}
+    </nav>
+  )
+}
+
 function readParams(params) {
   return {
+    day: isYmd(params.get('day')) ? params.get('day') : null,
     topics: (params.get('topic') || '').split(',').filter((t) => TOPICS.some((x) => x.key === t)),
     who: whoByKey(params.get('who')).key,
     prize: prizeByKey(params.get('prize')).key,
@@ -44,6 +126,7 @@ function readParams(params) {
 
 const queryOf = (n) =>
   buildQuery({
+    day: n.day,
     who: n.who === 'all' ? null : n.who,
     topic: n.topics,
     prize: n.prize === 'all' ? null : n.prize,
@@ -322,20 +405,25 @@ export default function Contests({ params, desktop, back }) {
   const pick = (c) => (desktop ? setQuery(`/contests${queryOf({ ...f, sel: c.id })}`) : navigate(`/contests${queryOf({ ...f, sel: c.id })}`))
 
   const open = useMemo(() => (doc ? doc.items.filter((c) => c.deadline >= now) : []), [doc, now])
+  const days = useMemo(() => (doc ? postDays(doc.items, now) : []), [doc, now])
+  const postedOn = (d) => (doc ? doc.items.filter((c) => c.posted === d) : [])
+  // a day shows everything posted that day, the ones already closed last
+  const base = useMemo(() => (doc && f.day ? doc.items.filter((c) => c.posted === f.day) : open), [doc, f.day, open])
   const preds = {
     who: whoByKey(f.who).test,
     topic: (c) => !f.topics.length || f.topics.includes(c.topic),
     prize: prizeByKey(f.prize).test,
     saved: (c) => !f.savedOnly || isSaved(c.id),
   }
-  const pool = (dim) => open.filter((c) => Object.entries(preds).every(([k, p]) => k === dim || p(c)))
+  const pool = (dim) => base.filter((c) => Object.entries(preds).every(([k, p]) => k === dim || p(c)))
   const list = useMemo(() => {
-    const xs = open.filter((c) => Object.values(preds).every((p) => p(c)))
+    const xs = base.filter((c) => Object.values(preds).every((p) => p(c)))
+    if (f.day) return xs.sort((a, b) => (a.deadline < now) - (b.deadline < now) || a.deadline.localeCompare(b.deadline))
     if (f.sort === 'prize') return xs.sort((a, b) => prizeValue(b) - prizeValue(a) || a.deadline.localeCompare(b.deadline))
     if (f.sort === 'new') return xs.sort((a, b) => (b.posted || '').localeCompare(a.posted || '') || a.deadline.localeCompare(b.deadline))
     return xs.sort((a, b) => a.deadline.localeCompare(b.deadline) || prizeValue(b) - prizeValue(a))
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open, params.toString(), saved])
+  }, [base, params.toString(), saved])
 
   if (status === 'loading')
     return (
@@ -376,7 +464,17 @@ export default function Contests({ params, desktop, back }) {
   const selected = desktop ? list.find((c) => c.id === f.sel) || list[0] : null
 
   const groups = []
-  if (f.sort === 'deadline') {
+  if (f.day) {
+    const live = list.filter((c) => c.deadline >= now)
+    const gone = list.filter((c) => c.deadline < now)
+    if (live.length) groups.push({ key: 'live', label: '접수 중', items: live })
+    if (gone.length) groups.push({ key: 'gone', label: '이미 마감', items: gone, closed: true })
+  } else if (f.sort === 'new') {
+    for (const c of list) {
+      if (groups.at(-1)?.key !== c.posted) groups.push({ key: c.posted, label: `${dateWithDay(c.posted)} 등록`, items: [] })
+      groups.at(-1).items.push(c)
+    }
+  } else if (f.sort === 'deadline') {
     for (const c of list) {
       const g = group(daysLeft(c.deadline, now))
       if (groups.at(-1)?.key !== g.key) groups.push({ ...g, items: [] })
@@ -384,14 +482,42 @@ export default function Contests({ params, desktop, back }) {
     }
   } else groups.push({ key: 'all', label: SORTS.find((s) => s.key === f.sort).label, items: list })
 
+  const dayAll = f.day ? postedOn(f.day) : []
+  const dayOpen = dayAll.filter((c) => c.deadline >= now).length
+  const latest = days[0]
+  const weekFloor = (() => {
+    const d = new Date(`${now}T00:00:00`)
+    d.setDate(d.getDate() - 6)
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+  })()
+  const newThisWeek = open.filter((c) => c.posted >= weekFloor).length
+
   const listPart = (
     <div className="page">
-      <PageTitle
-        eyebrow={<span className="num">{L(`${monthDay(doc.updated)} 갱신`, `Updated ${monthDay(doc.updated)}`)}</span>}
-        title={L('공모전', 'Contests')}
-        sub={L(`접수 중 ${open.length}건 · 7일 안에 마감 ${closingWeek}건`, `${open.length} open · ${closingWeek} closing within 7 days`)}
-      />
-      {savedOpen.length > 0 && (
+      {f.day ? (
+        <PageTitle
+          eyebrow={<ContestDayNav days={days} day={f.day} />}
+          title="새로 올라온 공모전"
+          sub={dayAll.length ? `이날 등록 ${dayAll.length}건 · 지금 접수 중 ${dayOpen}건` : '이날 새로 올라온 공모전이 없어요'}
+        />
+      ) : (
+        <PageTitle
+          eyebrow={<span className="num">{L(`${monthDay(doc.updated)} 갱신`, `Updated ${monthDay(doc.updated)}`)}</span>}
+          title={L('공모전', 'Contests')}
+          sub={L(`접수 중 ${open.length}건 · 7일 안에 마감 ${closingWeek}건`, `${open.length} open · ${closingWeek} closing within 7 days`)}
+        />
+      )}
+      {!f.day && latest && (
+        <a className="linkrow cnew" href={`#/contests?day=${latest}`} onClick={() => window.scrollTo(0, 0)}>
+          <Icon name="calendar" size={20} />
+          <span className="linkrow__body">
+            <span className="linkrow__title">날짜별 새 공모전</span>
+            <span className="linkrow__sub num">{`${dateWithDay(latest)} ${postedOn(latest).length}건 · 최근 7일 ${newThisWeek}건`}</span>
+          </span>
+          <Icon name="chevronRight" size={20} />
+        </a>
+      )}
+      {!f.day && savedOpen.length > 0 && (
         <a className="linkrow csaved" href="#/saved?tab=contests">
           <Icon name="bookmarkFill" size={20} />
           <span className="linkrow__body">
@@ -433,7 +559,11 @@ export default function Contests({ params, desktop, back }) {
           <Icon name="chevronDown" size={16} />
         </button>
       </div>
-      {list.length === 0 ? (
+      {list.length === 0 && f.day && !dayAll.length ? (
+        <EmptyState icon="calendar" title="이날은 새 공모전이 없어요">
+          옆 날짜로 넘겨 보세요.
+        </EmptyState>
+      ) : list.length === 0 ? (
         <EmptyState icon="trophy" title={L('조건에 맞는 공모전이 없어요', 'No contests match')} action={<button type="button" className="btn btn--secondary" onClick={() => go({ who: 'all', topics: [], prize: 'all', savedOnly: false })}>{L('조건 지우기', 'Clear filters')}</button>} />
       ) : (
         groups.map((g) => (
@@ -444,11 +574,21 @@ export default function Contests({ params, desktop, back }) {
             </h2>
             <ul className="group">
               {g.items.map((c) => (
-                <ContestRow key={c.id} c={c} now={now} selected={selected?.id === c.id} onPick={pick} />
+                <ContestRow key={c.id} c={c} now={now} selected={selected?.id === c.id} onPick={pick} closed={g.closed} />
               ))}
             </ul>
           </section>
         ))
+      )}
+      {f.day && (
+        <>
+          <ContestDayPager days={days} day={f.day} countOf={(d) => postedOn(d).length} />
+          <p className="note-line">
+            <button type="button" className="linkbtn" onClick={() => goBack('/contests')}>
+              접수 중인 전체 공모전 보기
+            </button>
+          </p>
+        </>
       )}
       <p className="ctrust">
         {L(

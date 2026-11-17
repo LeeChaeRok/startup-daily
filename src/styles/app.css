@@ -207,6 +207,7 @@ button { color: inherit; font: inherit; letter-spacing: inherit; cursor: pointer
 .datebtn:hover, .datebtn:active { background: var(--sd-surface-2); }
 .daynav { display: inline-flex; align-items: center; margin: -12px 0 -12px -12px; }
 .daynav .datebtn { margin: 0; }
+.daynav__label { padding: 0 4px; color: var(--sd-ink-2); white-space: nowrap; }
 .daynav__step { width: 40px; color: var(--sd-ink-2); }
 .daynav__step:disabled { opacity: 0.3; pointer-events: none; }
 .daypager { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--sd-space-2); margin-top: var(--sd-space-4); }
@@ -532,7 +533,8 @@ body:not(:has(.tabbar)):not(:has(.actionbar)) .toast-region { bottom: calc(var(-
 
 .yc-more { display: flex; justify-content: center; margin-top: var(--sd-space-3); }
 .note-line { margin-top: var(--sd-space-5); font: var(--sd-text-meta); color: var(--sd-ink-3); }
-.note-line a { color: var(--sd-accent); font-weight: 600; }
+.note-line a, .note-line .linkbtn { color: var(--sd-accent); font-weight: 600; }
+.note-line .linkbtn { text-decoration: none; min-height: 44px; font: inherit; font-weight: 600; cursor: pointer; }
 
 /* ---------- 회사 상세 ---------- */
 
@@ -747,7 +749,7 @@ ol.bul li::before { counter-increment: n; content: counter(n); width: auto; heig
 
 /* ---------- 공모전 ---------- */
 
-.csaved { margin-bottom: var(--sd-space-2); }
+.csaved, .cnew { margin-bottom: var(--sd-space-2); }
 .cgroup { margin-top: var(--sd-space-4); }
 .cgroup__head {
   position: sticky; top: calc(var(--sd-header-h) + var(--sd-inset-top)); z-index: var(--sd-z-sticky);
