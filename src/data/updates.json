@@ -656,6 +656,54 @@
         "source_name": "Together AI Blog",
         "found": "2026-11-16"
       }
+    ],
+    "lattice-2026": [
+      {
+        "date": "2026-11-12",
+        "kind": "product",
+        "title_ko": "비즈니스 성과 플랫폼 Pace 출시",
+        "title_en": "Launches Pace, a New Business Performance Platform",
+        "detail_ko": "래티스가 사람과 AI의 업무를 연결하는 새로운 비즈니스 성과 플랫폼 'Pace'를 2026년 11월 12일에 출시했습니다.",
+        "detail_en": "On November 12, 2026, Lattice unveiled Pace, a new business performance platform that connects the work being done, the people and agents doing it, and the business outcomes they are responsible for delivering.",
+        "source_url": "https://lattice.com/blog?c1344893_page=2",
+        "source_name": "Lattice Blog",
+        "found": "2026-11-17"
+      },
+      {
+        "date": "2026-06-10",
+        "kind": "product",
+        "title_ko": "AI 시대 인력 인텔리전스 플랫폼 출시",
+        "title_en": "Launches Workforce Intelligence for AI Era",
+        "detail_ko": "래티스가 2026년 6월 10일, AI 시대 인력 전략을 비즈니스 성과에 연결하는 '워크포스 인텔리전스'를 출시했습니다.",
+        "detail_en": "On June 10, 2026, Lattice launched Workforce Intelligence for the AI Era, a trusted infrastructure layer to leverage AI insights and support MCP for secure performance data integration.",
+        "source_url": "https://lattice.com/newsroom",
+        "source_name": "Lattice Newsroom",
+        "found": "2026-11-17"
+      }
+    ],
+    "modal-labs-2026": [
+      {
+        "date": "2026-10-14",
+        "kind": "funding",
+        "title_ko": "시리즈 D 7억 5,000만 달러 유치",
+        "title_en": "Series D $750 million raised",
+        "detail_ko": "Modal Labs가 15.75B 달러 평가로 7억 5,000만 달러 시리즈 D를 유치. Accel 주도.",
+        "detail_en": "Modal Labs raised $750 million in Series D at a $15.75 billion valuation, led by Accel.",
+        "source_url": "https://modal.com/blog/1-billion-annualized-run-rate-series-d",
+        "source_name": "Modal Blog",
+        "found": "2026-11-17"
+      },
+      {
+        "date": "2026-05-21",
+        "kind": "funding",
+        "title_ko": "시리즈 C 3억 5,500만 달러 유치",
+        "title_en": "Series C $355 million raised",
+        "detail_ko": "Modal Labs가 4.65B 달러 평가로 3억 5,500만 달러 시리즈 C를 유치. General Catalyst와 Redpoint가 주도.",
+        "detail_en": "Modal Labs raised $355 million in Series C at a $4.65 billion valuation, led by General Catalyst and Redpoint.",
+        "source_url": "https://modal.com/blog/modal-series-c",
+        "source_name": "Modal Blog",
+        "found": "2026-11-17"
+      }
     ]
   },
   "checked": {
@@ -696,6 +744,8 @@
     "bland-ai-2026": "2026-11-15",
     "climeworks-2026": "2026-11-15",
     "together-ai-2026": "2026-11-16",
-    "wefox-2026": "2026-11-16"
+    "wefox-2026": "2026-11-16",
+    "lattice-2026": "2026-11-17",
+    "modal-labs-2026": "2026-11-17"
   }
 }
