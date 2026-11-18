@@ -704,6 +704,52 @@
         "source_name": "Modal Blog",
         "found": "2026-11-17"
       }
+    ],
+    "ponyai-2026": [
+      {
+        "date": "2026-11-16",
+        "kind": "product",
+        "title_ko": "토요타와 7세대 bZ4X 무인 로보택시 상용 서비스 개시",
+        "title_en": "Toyota and Pony.ai Launch Fully Driverless Commercial Services with Gen-7 bZ4X Robotaxi",
+        "detail_ko": "포니아이와 토요타가 광저우에서 7세대 bZ4X 로보택시를 활용한 완전 무인 상용 서비스를 시작했습니다. 이용자는 포니파일럿 앱이나 위챗·알리페이로 24시간 호출 가능합니다.",
+        "detail_en": "Pony.ai and Toyota launched fully driverless commercial robotaxi services in Guangzhou using the Gen-7 bZ4X Robotaxi. Passengers can hail rides 24/7 via the PonyPilot app, WeChat, or Alipay miniprograms.",
+        "source_url": "https://ir.pony.ai/news-events/press-releases",
+        "source_name": "Pony AI Inc. Press Releases",
+        "found": "2026-11-18"
+      },
+      {
+        "date": "2026-08-18",
+        "kind": "product",
+        "title_ko": "2026년 2분기 매출 68.8% 성장, 로보택시 수익 691% 급증",
+        "title_en": "Pony.ai Reports Q2 2026 Revenue Up 68.8% YoY, Robotaxi Revenue Up 691.2%",
+        "detail_ko": "포니아이의 2분기 총 매출은 3620만 달러, 로보택시 서비스 수익은 691% 증가한 1210만 달러입니다. 글로벌 로보택시 함대는 1975대로 확대됐습니다.",
+        "detail_en": "Pony.ai's Q2 2026 total revenues were US$36.2 million (up 68.8% YoY), with robotaxi service revenues reaching US$12.1 million (up 691.2% YoY). The global robotaxi fleet expanded to 1,975 vehicles.",
+        "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-reports-second-quarter-2026-financial-results-total",
+        "source_name": "Pony AI Inc. Press Release",
+        "found": "2026-11-18"
+      },
+      {
+        "date": "2026-08-14",
+        "kind": "product",
+        "title_ko": "Uber와 유럽 5개 도시 2000대 로보택시 배치 확대",
+        "detail_ko": "포니아이는 우버와 협력을 확대해 유럽 5개 도시에 2000대 이상의 로보택시를 배치하고 중동에도 진출할 계획입니다.",
+        "source_url": "https://ir.pony.ai/static-files/a1ac1dc8-9c81-42cf-a913-9302797cb7e5",
+        "source_name": "Pony AI Inc. (SEC Form 6-K)",
+        "found": "2026-11-18",
+        "title_en": "Uber expands robo-taxi deployment to 2,000 units in five European cities",
+        "detail_en": "Pony.ai plans to expand cooperation with Uber to deploy over 2,000 robo-taxis in five European cities and also enter the Middle East."
+      },
+      {
+        "date": "2026-04-24",
+        "kind": "product",
+        "title_ko": "L4 전기 경트럭 및 저가 로보택시 발표",
+        "title_en": "Pony.ai Unveils L4 Electric Light-duty Truck and Lower-Cost Robotaxis",
+        "detail_ko": "포니아이가 CATL과 협력해 L4 전기 경트럭을 공개하고 운영비 40~50% 절감을 약속했습니다. 또한 저가 로보택시를 함께 발표했습니다.",
+        "detail_en": "Pony.ai unveiled an L4 electric light-duty truck co-developed with CATL, aiming to reduce per-km operating costs by 40-50%, alongside lower-cost robotaxis.",
+        "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-drives-commercialization-scale-lower-cost-robotaxis",
+        "source_name": "Pony AI Inc. Press Release",
+        "found": "2026-11-18"
+      }
     ]
   },
   "checked": {
@@ -746,6 +792,8 @@
     "together-ai-2026": "2026-11-16",
     "wefox-2026": "2026-11-16",
     "lattice-2026": "2026-11-17",
-    "modal-labs-2026": "2026-11-17"
+    "modal-labs-2026": "2026-11-17",
+    "ponyai-2026": "2026-11-18",
+    "replicate-2026": "2026-11-18"
   }
 }
