@@ -750,6 +750,65 @@
         "source_name": "Pony AI Inc. Press Release",
         "found": "2026-11-18"
       }
+    ],
+    "trm-labs-2026": [
+      {
+        "date": "2026-11-12",
+        "kind": "product",
+        "title_ko": "'Beacon Concierge' 출시로 불법 암호화폐 자금 차단 지원",
+        "title_en": "Launch of Beacon Concierge to Interdict and Seize Illicit Crypto Funds",
+        "detail_ko": "TRM Labs가 법 집행 기관이 어떤 블록체인과 자산에서든 불법 암호화폐 자금을 차단·압류할 수 있도록 돕는 'Beacon Concierge'를 출시.",
+        "detail_en": "TRM Labs launched Beacon Concierge to help law enforcement worldwide interdict and seize illicit crypto funds on any chain in any asset.",
+        "source_url": "https://www.trmlabs.com/category/company-news",
+        "source_name": "TRM Labs",
+        "found": "2026-11-19"
+      },
+      {
+        "date": "2026-10-13",
+        "kind": "product",
+        "title_ko": "AI 수사 플랫폼 'Ardence' 출시",
+        "title_en": "Launch of Ardence AI Investigation Platform",
+        "detail_ko": "TRM Labs가 AI 기반 수사 플랫폼 'Ardence'를 출시. 정부 수사관, 사이버 위협 분석가, 컴플라이언스 팀을 대상으로 하며 60개 이상 파트너의 인텔리전스를 통합하여 사기, 사이버 범죄, 아동 착취, 테러 자금 조달 사건을 해결.",
+        "detail_en": "TRM Labs launched Ardence, an AI investigation platform for government investigators, cyber threat analysts, and compliance teams. It integrates intelligence from over 60 partners to tackle fraud, cybercrime, child exploitation, and terrorism financing.",
+        "source_url": "https://www.trmlabs.com/resources/blog/trm-launches-ardence-ai-investigation-platform",
+        "source_name": "TRM Labs",
+        "found": "2026-11-19"
+      },
+      {
+        "date": "2026-09-09",
+        "kind": "funding",
+        "title_ko": "시리즈 C 확장으로 20억 달러 가치 평가",
+        "title_en": "Series C Expansion at $2 Billion Valuation",
+        "detail_ko": "TRM Labs가 블록체인 캐피털 주도로 시리즈 C 확장 라운드를 완료, 기업 가치가 20억 달러로 두 배 증가. 연간 반복 매출(ARR)이 3년 만에 4배 성장.",
+        "detail_en": "TRM Labs completed a Series C expansion led by Blockchain Capital, doubling its valuation to $2 billion. Annual recurring revenue quadrupled in three years.",
+        "source_url": "https://www.trmlabs.com/resources/blog/trm-labs-announces-series-c-expansion-at-usd-2-billion-valuation-to-continue-building-crimefighting-ai",
+        "source_name": "TRM Labs",
+        "found": "2026-11-19"
+      }
+    ],
+    "aleph-alpha-2026": [
+      {
+        "date": "2026-10-05",
+        "kind": "product",
+        "title_ko": "소형 언어 모델 콜리브리 출시",
+        "title_en": "Releases Kolibri language model",
+        "detail_ko": "독일어에 최적화된 78B 파라미터 혼합 전문가 모델 'Kolibri' 출시. 공공 행정 및 산업용 미션 크리티컬 애플리케이션 대상.",
+        "detail_en": "Released Kolibri, a 78 billion parameter mixture-of-experts model optimized for German, designed for mission-critical applications in public administration and industry.",
+        "source_url": "https://aleph-alpha.com/en/news/kolibri-sovereign-ai-made-in-germany/",
+        "source_name": "Aleph Alpha",
+        "found": "2026-11-19"
+      },
+      {
+        "date": "2026-09-16",
+        "kind": "acquired",
+        "title_ko": "코히어와 합병 계약 체결",
+        "title_en": "Signs merger agreement with Cohere",
+        "detail_ko": "캐나다 AI 기업 코히어와의 합병 계약을 체결. 합병 후 회사는 코히어로 운영되며, 토론토와 베를린에 본사를 둠. 거래는 규제 승인 대상.",
+        "detail_en": "Aleph Alpha signed a definitive business combination agreement with Cohere. The combined company will operate as Cohere with dual headquarters in Toronto and Berlin. Transaction subject to regulatory approval.",
+        "source_url": "https://aleph-alpha.com/en/news/cohere-agreement-transatlantic-sovereign-ai/",
+        "source_name": "Aleph Alpha",
+        "found": "2026-11-19"
+      }
     ]
   },
   "checked": {
@@ -794,6 +853,8 @@
     "lattice-2026": "2026-11-17",
     "modal-labs-2026": "2026-11-17",
     "ponyai-2026": "2026-11-18",
-    "replicate-2026": "2026-11-18"
+    "replicate-2026": "2026-11-18",
+    "trm-labs-2026": "2026-11-19",
+    "aleph-alpha-2026": "2026-11-19"
   }
 }

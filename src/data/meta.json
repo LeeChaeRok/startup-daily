@@ -1,9 +1,10 @@
 {
-  "last_issue_date": "2026-11-18",
-  "issue_count": 41,
-  "generated_at": "2026-11-18T02:27:08.975Z",
+  "last_issue_date": "2026-11-19",
+  "issue_count": 42,
+  "generated_at": "2026-11-19T01:58:08.245Z",
   "models": [
-    "deepseek/deepseek-v4-flash"
+    "deepseek/deepseek-v4-flash",
+    "anthropic/claude-haiku-5.5"
   ],
-  "pool_size": 36
+  "pool_size": 37
 }
