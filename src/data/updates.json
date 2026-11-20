@@ -809,6 +809,98 @@
         "source_name": "Aleph Alpha",
         "found": "2026-11-19"
       }
+    ],
+    "exa-2026": [
+      {
+        "date": "2026-10-29",
+        "kind": "product",
+        "title_ko": "팟캐스트 인덱스 추가",
+        "title_en": "Exa Podcasts Added",
+        "detail_ko": "119,000개 쇼의 320만 개 에피소드와 전체 대본을 인덱스에 포함.",
+        "detail_en": "Index includes 3.2M podcast episodes from 119K shows with full transcripts.",
+        "source_url": "https://exa.ai/docs/changelog",
+        "source_name": "Exa Changelog",
+        "found": "2026-11-20"
+      },
+      {
+        "date": "2026-10-19",
+        "kind": "product",
+        "title_ko": "Exa 3.0 및 라이트 검색 출시",
+        "title_en": "Exa 3.0 and Exa Lite Launched",
+        "detail_ko": "검색 품질 대폭 개선 및 $4/1천 건의 저비용 검색 타입 'Exa Lite' 출시.",
+        "detail_en": "Major search quality improvement and launched low-cost 'Exa Lite' at $4/1k requests.",
+        "source_url": "https://exa.ai/blog/exa-3",
+        "source_name": "Exa Blog",
+        "found": "2026-11-20"
+      },
+      {
+        "date": "2026-10-05",
+        "kind": "product",
+        "title_ko": "장소 검색 2억 1,100만 곳 지원",
+        "title_en": "Exa Places: 211M Places Added",
+        "detail_ko": "식당, 박물관 등 2억 1,100만 개의 장소 데이터를 인덱스에 추가.",
+        "detail_en": "Added 211 million places (restaurants, museums, etc.) to the index.",
+        "source_url": "https://exa.ai/blog/places-search",
+        "source_name": "Exa Blog",
+        "found": "2026-11-20"
+      },
+      {
+        "date": "2026-09-25",
+        "kind": "product",
+        "title_ko": "에이전트 울트라 출시",
+        "title_en": "Exa Agent Ultra Launched",
+        "detail_ko": "딥 리서치를 위한 최고 수준의 에이전트 모드인 Exa Agent Ultra를 출시.",
+        "detail_en": "Launched Exa Agent Ultra, a new state-of-the-art deep research agent.",
+        "source_url": "https://exa.ai/blog/exa-agent-ultra",
+        "source_name": "Exa Blog",
+        "found": "2026-11-20"
+      },
+      {
+        "date": "2026-05-20",
+        "kind": "funding",
+        "title_ko": "시리즈 C 2억 5천만 달러 유치",
+        "title_en": "Series C $250M Raised",
+        "detail_ko": "a16z 주도로 2억 5천만 달러를 유치했으며, 기업 가치는 22억 달러로 평가됨.",
+        "detail_en": "Raised $250M at a $2.2B valuation, led by a16z.",
+        "source_url": "https://exa.ai/blog/announcing-series-c",
+        "source_name": "Exa Blog",
+        "found": "2026-11-20"
+      }
+    ],
+    "plenty-2026": [
+      {
+        "date": "2026-10-05",
+        "kind": "acquired",
+        "title_ko": "사우디 노포스, 플렌티 푸드 65% 인수 완료",
+        "title_en": "Nofoth Food Products Company completes acquisition of 65% stake in Plenty Food Company",
+        "detail_ko": "사우디 노포스 푸드 프로덕츠가 플렌티 푸드 컴퍼니 지분 65%를 인수하고 관련 규제 절차를 완료했다.",
+        "detail_en": "Nofoth Food Products Company completed the acquisition of a 65% stake in Plenty Food Company on October 5, 2026, after regulatory approvals.",
+        "source_url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=98426&cs=2288&locale=en",
+        "source_name": "Saudi Exchange",
+        "found": "2026-11-20"
+      },
+      {
+        "date": "2026-08-31",
+        "kind": "product",
+        "title_ko": "프리미엄 딸기 출시 위한 AOR 계약",
+        "title_en": "Plenty taps Bakery as creative AOR for premium strawberry launch",
+        "detail_ko": "플렌티가 프리미엄 및 울트라 프리미엄 딸기 라인 출시를 위해 오스틴 기반 크리에이티브 에이전시 Bakery를 광고 대행사로 선정했다.",
+        "detail_en": "Plenty has named Austin-based creative agency Bakery as its agency of record to launch a new line of premium and ultra-premium strawberries grown via indoor vertical farming.",
+        "source_url": "https://reel360.com/article/plenty-taps-bakery-as-creative-aor-for-premium-strawberry-launch/",
+        "source_name": "Reel 360 News",
+        "found": "2026-11-20"
+      },
+      {
+        "date": "2026-07-15",
+        "kind": "product",
+        "title_ko": "체스터필드 딸기 농장 확장 계획 축소",
+        "title_en": "Plenty shrinks Chesterfield strawberry farm expansion plans",
+        "detail_ko": "플렌티가 버지니아 체스터필드에 있는 딸기 농장의 66에이커 확장 옵션을 포기하고 30에이커 부지로 계획을 축소했다.",
+        "detail_en": "Plenty waived its option on a 66-acre expansion at Meadowville Technology Park and will focus on a 30-acre site for its strawberry farm.",
+        "source_url": "https://chesterfieldreport.com/story/plenty-waives-option-on-meadowville-tech-park-expansion.html",
+        "source_name": "The Chesterfield Report",
+        "found": "2026-11-20"
+      }
     ]
   },
   "checked": {
@@ -855,6 +947,8 @@
     "ponyai-2026": "2026-11-18",
     "replicate-2026": "2026-11-18",
     "trm-labs-2026": "2026-11-19",
-    "aleph-alpha-2026": "2026-11-19"
+    "aleph-alpha-2026": "2026-11-19",
+    "exa-2026": "2026-11-20",
+    "plenty-2026": "2026-11-20"
   }
 }
