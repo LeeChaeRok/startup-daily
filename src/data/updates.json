@@ -901,6 +901,30 @@
         "source_name": "The Chesterfield Report",
         "found": "2026-11-20"
       }
+    ],
+    "recursion-pharma-2026": [
+      {
+        "date": "2026-10-15",
+        "kind": "funding",
+        "title_ko": "2억 달러 후속 공모 유치",
+        "title_en": "$200 Million Follow-On Offering",
+        "detail_ko": "리커전은 2026년 10월 15일, Janus Henderson Investors, Invus, ARK Invest 등이 참여한 2억 달러 규모의 후속 공모를 발표하고 10월 16일 완료했다. 순수익은 약 1억 8720만 달러이다.",
+        "detail_en": "On October 15, 2026, Recursion announced a $200 million oversubscribed follow-on offering led by Janus Henderson Investors, Invus, ARK Invest, and others. The offering closed on October 16, 2026, with net proceeds of approximately $187.2 million.",
+        "source_url": "https://ir.recursion.com/node/13141/pdf",
+        "source_name": "Recursion IR (GlobeNewswire)",
+        "found": "2026-11-21"
+      },
+      {
+        "date": "2026-09-21",
+        "kind": "product",
+        "title_ko": "RNA 기반 모델 TxFM 라이선스",
+        "title_en": "RNA Foundation Model TxFM License to Tempus",
+        "detail_ko": "리커전은 2026년 9월 21일, Tempus에 자체 RNA 시퀀싱 모델 TxFM에 대한 비독점 라이선스를 제공한다고 발표했다. 라이선스 수수료는 1,200만 달러이며 2년 기한이다.",
+        "detail_en": "On September 21, 2026, Recursion announced a non-exclusive, worldwide license to its proprietary RNA sequencing model TxFM to Tempus. The license fee is $12 million over a two-year term.",
+        "source_url": "https://investors.tempus.com/news/news-details/2026/Tempus-and-Recursion-Extend-Existing-Data-License-Agreement-and-Enter-New-License-Agreement-for-Recursions-RNA-Foundation-Model-09-21-2026/default.aspx",
+        "source_name": "Tempus AI Investor Relations",
+        "found": "2026-11-21"
+      }
     ]
   },
   "checked": {
@@ -949,6 +973,8 @@
     "trm-labs-2026": "2026-11-19",
     "aleph-alpha-2026": "2026-11-19",
     "exa-2026": "2026-11-20",
-    "plenty-2026": "2026-11-20"
+    "plenty-2026": "2026-11-20",
+    "recursion-pharma-2026": "2026-11-21",
+    "stytch-2026": "2026-11-21"
   }
 }
