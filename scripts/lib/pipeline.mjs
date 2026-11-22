@@ -416,6 +416,32 @@ export function poolSector(profile, asked = null) {
 export const POOL_MERGES = { ai: 'infra', consumer: 'enterprise' }
 
 /**
+ * Where discovery looks, and in which language. Every sector's search covers the whole list, and
+ * two regions per sector get dedicated searches written in their own language, rotating by day so
+ * every region is searched in its language every day (9 sectors × 2 slots ≥ the regions).
+ */
+export const REGIONS = [
+  { name: 'Greater China (mainland China, Hong Kong, Taiwan)', langs: 'Simplified and Traditional Chinese', press: '36Kr, 投资界, 钛媒体, 动点科技 TechNode, KrASIA' },
+  { name: 'Oceania (Australia, New Zealand)', langs: 'English', press: 'SmartCompany, Capital Brief, AFR, The Spinoff, NZ Entrepreneur' },
+  { name: 'Japan', langs: 'Japanese', press: 'THE BRIDGE, 日経クロステック, PR TIMES, INITIAL' },
+  { name: 'Korea', langs: 'Korean', press: '플래텀, 벤처스퀘어, 더브이씨' },
+  { name: 'Southeast Asia (Singapore, Indonesia, Vietnam, Thailand, Philippines, Malaysia)', langs: 'English, Indonesian, Vietnamese, Thai', press: 'e27, Tech in Asia, DealStreetAsia' },
+  { name: 'India', langs: 'English, Hindi', press: 'Inc42, YourStory, Entrackr' },
+  { name: 'Europe (UK, Germany, France, Nordics, Spain, Italy, Central Europe)', langs: 'English, German, French, Spanish, Italian, Swedish', press: 'Sifted, Gründerszene, Maddyness, El Referente' },
+  { name: 'Latin America', langs: 'Spanish, Portuguese', press: 'LAVCA, Contxto, Startupi, Bloomberg Línea' },
+  { name: 'Middle East and Israel', langs: 'Arabic, Hebrew, English', press: 'Wamda, MAGNiTT, CTech, Geektime' },
+  { name: 'Africa', langs: 'English, French', press: 'TechCabal, Disrupt Africa, Techpoint Africa' },
+  { name: 'North America (US, Canada)', langs: 'English', press: 'funding announcements, accelerator demo days' },
+]
+
+/** The two regions a sector searches in their own language today. */
+export function focusRegions(date, sectorIndex, regions = REGIONS) {
+  const day = Math.round(Date.parse(`${date}T00:00:00Z`) / 864e5)
+  const start = (day * 2 + sectorIndex * 2) % regions.length
+  return [regions[start], regions[(start + 1) % regions.length]]
+}
+
+/**
  * At most `max` profiles per pool, in the given order; the rest come back as `over`. A merged
  * pair (see POOL_MERGES) shares `max` × its size.
  */

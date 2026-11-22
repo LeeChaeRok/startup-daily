@@ -34,7 +34,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { POOL_MERGES, capPerSector, dropDuplicates, featureScore, merge, normalize, orderDay, pickFeatured, poolSector, selectCandidates, stripUrl, verifyLinks } from './lib/pipeline.mjs'
+import { POOL_MERGES, REGIONS, capPerSector, focusRegions, dropDuplicates, featureScore, merge, normalize, orderDay, pickFeatured, poolSector, selectCandidates, stripUrl, verifyLinks } from './lib/pipeline.mjs'
 import { attachLogos } from './lib/logos.mjs'
 import { createClient, modelsFromEnv, OpenRouterError, parseOrRepair } from './lib/openrouter.mjs'
 import { updateLensFiles } from './lib/korea-lens.mjs'
@@ -92,7 +92,12 @@ const SECTOR_LIST = SECTORS.map((x) => `${x.key} (${x.en}: ${x.hint})`).join('; 
 
 function discoveryPrompt(sector, avoid) {
   return `Find ${DISCOVER} candidate startups for the ${date} issue, all in one sector: ${sector.en} — ${sector.hint}.
-Search broadly: recent funding announcements, launches, accelerator demo days, regional tech press (Korea, Japan, Europe, LatAm, India, Africa, North America). Spread them over at least 3 countries. Korea-based companies are welcome.
+Search broadly: recent funding announcements, launches, accelerator demo days and regional tech press in every one of these regions: ${REGIONS.map((r) => r.name).join('; ')}.
+Search in each region's own language, not only English: news about a Chinese, Japanese or Brazilian startup often appears first, or only, in that language.
+Today, spend at least two searches on each of these, with the queries written in the languages listed:
+${focusRegions(date, SECTORS.indexOf(sector), REGIONS).map((r) => `- ${r.name}: ${r.langs} (press such as ${r.press})`).join('\n')}
+Spread the candidates over at least 3 countries. Korea-based companies are welcome.
+For a company named mainly in another script, give in name_en the English name it uses itself (website, press release), not your own translation, so the same company is never listed twice under two names.
 Do not include any of these already-covered companies: ${avoid.join(', ') || '—'}
 
 "attention" rates the momentum of the news itself from 1 to 5 (5 = a large round or a launch the trade press is talking about this week), not how famous the company is.
@@ -159,7 +164,7 @@ async function discover(llm, sector, avoid, searched) {
     if (useModels && !useModels.length) break
     try {
       // the model plans its own queries (several regions/languages) instead of one fixed search
-      const r = await llm.chat({ system: RULES, user: discoveryPrompt(sector, avoid), web: 'tool', maxResults: 8, maxSearches: 8, maxTokens: 32000, useModels })
+      const r = await llm.chat({ system: RULES, user: discoveryPrompt(sector, avoid), web: 'tool', maxResults: 8, maxSearches: 10, maxTokens: 32000, useModels })
       r.citations.forEach((c) => searched.add(stripUrl(c.url)))
       const parsed = await parseOrRepair(llm, r.text)
       const list = Array.isArray(parsed) ? parsed : parsed.candidates

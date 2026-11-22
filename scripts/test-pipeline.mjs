@@ -1,6 +1,6 @@
 // Guard tests for the daily pipeline: duplicate detection, amount normalization, logo checks.
 // No network, no LLM. Run: npm run test:pipeline
-import { capPerSector, companyKey, dropDuplicates, featureScore, fixAmount, merge, normalize, orderDay, pickFeatured, poolSector, registrableDomain, selectCandidates, stripCitations } from './lib/pipeline.mjs'
+import { REGIONS, focusRegions, capPerSector, companyKey, dropDuplicates, featureScore, fixAmount, merge, normalize, orderDay, pickFeatured, poolSector, registrableDomain, selectCandidates, stripCitations } from './lib/pipeline.mjs'
 import { checkImage, iconLinks, imageSize, sniffType } from './lib/logos.mjs'
 
 let fails = 0
@@ -176,6 +176,14 @@ eq('deterministic', pickFeatured(pool, { date: '2026-10-31' }), pickFeatured([..
 eq('thin day relaxes sectors', pickFeatured([P('a', 'ai', '미국', 5), P('b', 'ai', '한국', 4), P('c', 'ai', '일본', 3)], { date: '2026-10-31' }), ['a', 'b', 'c'])
 const ordered = orderDay([P('x', 'ai', '미국'), P('y', 'health', '미국'), P('z', 'fintech', '미국')], ['z'])
 eq('featured first and flagged', ordered.map((r) => [r.id, r.featured]), [['z', true], ['y', false], ['x', false]])
+
+/* ---------- discovery regions ---------- */
+const covered = new Set()
+for (let i = 0; i < 9; i++) focusRegions('2026-11-22', i).forEach((r) => covered.add(r.name))
+eq('every region searched in its language each day', covered.size, REGIONS.length)
+eq('oceania and china listed', ['Oceania', 'Greater China'].every((k) => REGIONS.some((r) => r.name.startsWith(k))), true)
+eq('rotates by day', focusRegions('2026-11-22', 0)[0].name !== focusRegions('2026-11-23', 0)[0].name, true)
+eq('two distinct regions', new Set(focusRegions('2026-11-22', 3).map((r) => r.name)).size, 2)
 
 console.log(fails ? `\n${fails} failed` : '\nall passed')
 process.exit(fails ? 1 : 0)
