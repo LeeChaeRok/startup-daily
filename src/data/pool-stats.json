@@ -1,6 +1,125 @@
 {
   "days": [
     {
+      "date": "2026-11-22",
+      "cost_usd": 0.9596,
+      "budget_stops": 0,
+      "pool": 24,
+      "featured": [
+        "hoplite-2026",
+        "kindo-2026",
+        "stryx-ai-2026",
+        "connect-money-2026",
+        "hypercent-2026"
+      ],
+      "pool_merges": {
+        "ai": "infra",
+        "consumer": "enterprise"
+      },
+      "sectors": {
+        "health": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 33,
+          "adopted": 3
+        },
+        "robotics": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 4
+          },
+          "researched": 2,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 17,
+          "adopted": 2
+        },
+        "mobility": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 31,
+          "adopted": 3
+        },
+        "climate": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 29,
+          "adopted": 3
+        },
+        "fintech": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 2,
+          "links_kept": 25,
+          "adopted": 3
+        },
+        "infra": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 2,
+            "country": 1
+          },
+          "researched": 3,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 32,
+          "adopted": 3
+        },
+        "enterprise": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 2,
+            "country": 1
+          },
+          "researched": 3,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 43,
+          "adopted": 4
+        },
+        "consumer": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 32,
+          "adopted": 2
+        },
+        "ai": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 8,
+          "adopted": 1
+        }
+      },
+      "yc": {
+        "leads": 10,
+        "accepted": 8,
+        "researched": 8,
+        "research_failed": 0,
+        "links_dropped": 1,
+        "links_kept": 61,
+        "adopted": 8
+      }
+    },
+    {
       "date": "2026-11-21",
       "cost_usd": 0.8775,
       "budget_stops": 0,

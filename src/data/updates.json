@@ -925,6 +925,43 @@
         "source_name": "Tempus AI Investor Relations",
         "found": "2026-11-21"
       }
+    ],
+    "doctor-now-2026": [
+      {
+        "date": "2026-07",
+        "kind": "shutdown",
+        "title_ko": "일본 법인 청산",
+        "title_en": "Liquidates Japanese Subsidiary",
+        "detail_ko": "닥터나우가 유일한 해외 거점인 일본 법인을 2026년 7월에 청산하고 국내 사업에 집중하기로 했다.",
+        "detail_en": "Doctornow liquidated its only overseas subsidiary in Japan in July 2026 to focus on the domestic market.",
+        "source_url": "https://www.hankyung.com/article/202608263832i",
+        "source_name": "한국경제",
+        "found": "2026-11-22"
+      }
+    ],
+    "glean-2026": [
+      {
+        "date": "2026-10-08",
+        "kind": "product",
+        "title_ko": "활동 기반 메모리 및 Power BI 커넥터 GA 출시",
+        "title_en": "Activity-Based Memory and Power BI Connector GA Released",
+        "detail_ko": "Glean이 활동 기반 메모리 기능을 출시하여 사용자의 작업 맥락을 자동으로 학습하고, Power BI 커넥터를 정식 일반 공급(GA)하여 사용자가 검색 및 어시스턴트에서 라이브 Power BI 데이터를 조회할 수 있게 했습니다.",
+        "detail_en": "Glean launched activity-based memory to learn from user work context automatically, and made the Power BI connector generally available, enabling live Power BI data queries in search and Assistant.",
+        "source_url": "https://docs.glean.com/release-notes/releases/2026-10-08-october-release",
+        "source_name": "Glean Documentation",
+        "found": "2026-11-22"
+      },
+      {
+        "date": "2026-08-26",
+        "kind": "product",
+        "title_ko": "Glean Tau 데스크톱 워크스페이스 출시",
+        "title_en": "Glean Tau Desktop Workspace Launched",
+        "detail_ko": "Glean이 Glean:GO 컨퍼런스에서 기업 컨텍스트와 로컬 파일, 애플리케이션, 코드를 통합한 새로운 데스크톱 환경 Glean Tau를 발표했습니다. 또한 Claude Cowork 대비 토큰 비용 81% 절감 및 78% 선호도 결과를 공개했습니다.",
+        "detail_en": "At the Glean:GO conference, Glean unveiled Glean Tau, a new desktop experience integrating enterprise context with local files, applications, and code, and reported an 81% token cost reduction and 78% preference over Claude Cowork.",
+        "source_url": "https://www.businesswire.com/news/home/20260826281578/en/Glean-Takes-On-Enterprise-AIs-Biggest-Bottlenecks-Context-Gaps-Rising-Costs-and-AI-Sprawl",
+        "source_name": "Business Wire",
+        "found": "2026-11-22"
+      }
     ]
   },
   "checked": {
@@ -975,6 +1012,8 @@
     "exa-2026": "2026-11-20",
     "plenty-2026": "2026-11-20",
     "recursion-pharma-2026": "2026-11-21",
-    "stytch-2026": "2026-11-21"
+    "stytch-2026": "2026-11-21",
+    "doctor-now-2026": "2026-11-22",
+    "glean-2026": "2026-11-22"
   }
 }

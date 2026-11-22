@@ -1,9 +1,9 @@
 {
-  "last_issue_date": "2026-11-21",
-  "issue_count": 44,
-  "generated_at": "2026-11-21T01:25:30.099Z",
+  "last_issue_date": "2026-11-22",
+  "issue_count": 45,
+  "generated_at": "2026-11-22T00:29:04.047Z",
   "models": [
     "deepseek/deepseek-v4-flash"
   ],
-  "pool_size": 33
+  "pool_size": 32
 }
