@@ -962,6 +962,87 @@
         "source_name": "Business Wire",
         "found": "2026-11-22"
       }
+    ],
+    "helsing-2026": [
+      {
+        "date": "2026-11-11",
+        "kind": "product",
+        "title_ko": "군사 정보 플랫폼 Clarity 공개",
+        "title_en": "Clarity military intelligence platform unveiled",
+        "detail_ko": "헬싱이 에이전틱 인텔리전스 플랫폼 'Clarity'를 공개, 대규모 데이터를 실시간 분석해 군사 자산 탐지 및 표적 추천을 수행한다.",
+        "detail_en": "Helsing unveiled Clarity, an agentic intelligence platform that processes vast volumes of military data in real time to detect assets and recommend targets.",
+        "source_url": "https://helsing.ai/newsroom/helsing-unveils-clarity-a-sovereign-software-platform-for-military-intelligence",
+        "source_name": "Helsing",
+        "found": "2026-11-23"
+      },
+      {
+        "date": "2026-10-26",
+        "kind": "product",
+        "title_ko": "대공 방어 시스템 Contra 공개",
+        "title_en": "Contra autonomous air defense system unveiled",
+        "detail_ko": "헬싱이 AI 기반 자율 대공 방어 시스템 'Contra'와 함께 요격 미사일 AD-1 Inferno, AD-2 Ambush를 공개했다.",
+        "detail_en": "Helsing unveiled Contra, an AI-controlled autonomous air defense system, along with two interceptor missiles: AD-1 Inferno and AD-2 Ambush.",
+        "source_url": "https://helsing.ai/newsroom/helsing-unveils-contra-autonomous-air-defence-alongside-missile-interceptors-ad-1-inferno-and-ad-2-ambush",
+        "source_name": "Helsing",
+        "found": "2026-11-23"
+      },
+      {
+        "date": "2026-07-13",
+        "kind": "funding",
+        "title_ko": "시리즈 E 18억 달러 유치",
+        "title_en": "Series E $1.8 billion raised",
+        "detail_ko": "헬싱이 18억 달러 규모의 시리즈 E 투자를 유치했으며, 기업가치는 180억 달러로 평가받았다. Dragoneer, Lightspeed 등 주요 투자자가 참여했다.",
+        "detail_en": "Helsing raised $1.8 billion in Series E funding at an $18 billion valuation, with participation from Dragoneer, Lightspeed, and other investors.",
+        "source_url": "https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e",
+        "source_name": "Helsing",
+        "found": "2026-11-23"
+      }
+    ],
+    "lablup-2026": [
+      {
+        "date": "2026-11-19",
+        "kind": "product",
+        "title_ko": "3분기 실적 및 토큰팩토리 전략 발표",
+        "title_en": "Q3 Results and Token Factory Strategy Announced",
+        "detail_ko": "래블업이 상장 후 첫 분기 실적을 발표하며, Backend.AI에 Continuum Router·Continuum Hub를 결합한 '토큰팩토리' 전략을 공개했다. 3분기 누적 매출은 69억9,000만원, 영업이익은 9억원이다.",
+        "detail_en": "Lablup announced its first quarterly results since listing, revealing the 'Token Factory' strategy integrating Continuum Router and Continuum Hub with Backend.AI. Cumulative Q3 revenue was KRW 6.99 billion, operating profit KRW 900 million.",
+        "source_url": "https://vsbrief.com/articles/1130140",
+        "source_name": "VS Brief",
+        "found": "2026-11-23"
+      },
+      {
+        "date": "2026-11-03",
+        "kind": "ipo",
+        "title_ko": "코스닥 상장",
+        "title_en": "KOSDAQ Listing",
+        "detail_ko": "래블업이 11월 3일 코스닥에 상장했다. 공모가는 1만9,000원, 공모금액은 414억원이다.",
+        "detail_en": "Lablup was listed on KOSDAQ on November 3. The IPO price was KRW 19,000 per share, raising a total of KRW 41.4 billion.",
+        "source_url": "https://venturedaily.kr/articles/1123545",
+        "source_name": "Venture Daily",
+        "found": "2026-11-23"
+      },
+      {
+        "date": "2026-10-19",
+        "kind": "product",
+        "title_ko": "Continuum Suite 및 AI:GO 공개",
+        "title_en": "Continuum Suite and AI:GO Unveiled",
+        "detail_ko": "래블업이 기업설명회에서 다중 모델 라우팅과 토큰 관리를 위한 'Continuum Suite'와 PC·워크스테이션 환경을 위한 'AI:GO'를 공개했다. Continuum Suite는 Continuum Router와 Continuum Hub로 구성된다.",
+        "detail_en": "At a corporate briefing, Lablup unveiled 'Continuum Suite' for multi-model routing and token management, and 'AI:GO' for PC/workstation environments. Continuum Suite consists of Continuum Router and Continuum Hub.",
+        "source_url": "https://www.lablup.com/ko/press/2026-10-lablup-ipo-global-expansion",
+        "source_name": "Lablup",
+        "found": "2026-11-23"
+      },
+      {
+        "date": "2026-07-30",
+        "kind": "product",
+        "title_ko": "코스닥 상장 예비심사 통과",
+        "title_en": "Preliminary KOSDAQ Listing Approval Received",
+        "detail_ko": "래블업이 한국거래소로부터 코스닥 상장 예비심사를 통과했다. 심사 승인까지 영업일 기준 45일이 소요되어 2026년 코스닥 기술특례상장 기업 중 최단 기간이다.",
+        "detail_en": "Lablup received preliminary approval for KOSDAQ listing from the Korea Exchange. The approval took 45 business days, the shortest among KOSDAQ technology special listing companies in 2026.",
+        "source_url": "https://www.lablup.com/press/2026-07-lablup-kosdaq-listing-preliminary-review-approved",
+        "source_name": "Lablup",
+        "found": "2026-11-23"
+      }
     ]
   },
   "checked": {
@@ -1014,6 +1095,8 @@
     "recursion-pharma-2026": "2026-11-21",
     "stytch-2026": "2026-11-21",
     "doctor-now-2026": "2026-11-22",
-    "glean-2026": "2026-11-22"
+    "glean-2026": "2026-11-22",
+    "helsing-2026": "2026-11-23",
+    "lablup-2026": "2026-11-23"
   }
 }
