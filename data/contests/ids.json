@@ -606,6 +606,8 @@
   "contestkorea:202611130039": "7ff223e990",
   "contestkorea:202611130051": "6883be0993",
   "contestkorea:202611130052": "ef9e639b57",
+  "contestkorea:202611140003": "458dd09473",
+  "contestkorea:202611140005": "8273539053",
   "contestkorea:202611140023": "1122e23d18",
   "contestkorea:202611150001": "410503c096",
   "contestkorea:202611150003": "d2b2a99879",
@@ -1377,6 +1379,7 @@
   "thinkcontest:111456": "b8b92b82d9",
   "thinkcontest:111460": "edd52a5bdf",
   "thinkcontest:111482": "88300989d0",
+  "thinkcontest:111507": "46f236deb7",
   "thinkcontest:111512": "84993b85ec",
   "thinkcontest:111515": "f385ec825e",
   "thinkcontest:111538": "b661e16c56",
@@ -1764,6 +1767,7 @@
   "thinkcontest:113124": "53e53c20b3",
   "thinkcontest:113131": "9937eb6086",
   "thinkcontest:113133": "791f339b37",
+  "thinkcontest:113151": "28f3caa554",
   "wevity:103817": "0317dea023",
   "wevity:104065": "a36242a6a3",
   "wevity:104233": "9cd5c21d94",
@@ -2282,6 +2286,9 @@
   "wevity:112486": "75d8a6ba44",
   "wevity:112487": "6c81d16d45",
   "wevity:112496": "8f2b4993b6",
-  "wevity:112498": "815d6d8e16"
+  "wevity:112498": "815d6d8e16",
+  "wevity:112499": "7c8598eb61",
+  "wevity:112500": "7a13f42289",
+  "wevity:112502": "102f2e70bf"
  }
 }
