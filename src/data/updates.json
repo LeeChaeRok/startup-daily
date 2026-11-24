@@ -1043,6 +1043,30 @@
         "source_name": "Lablup",
         "found": "2026-11-23"
       }
+    ],
+    "liquid-ai-2026": [
+      {
+        "date": "2026-11-16",
+        "kind": "product",
+        "title_ko": "d1.2 옴니모달 결정 모델 출시",
+        "title_en": "d1.2: State-of-the-Art Omnimodal Decision Models",
+        "detail_ko": "리퀴드 AI가 텍스트, 비전, 오디오를 모두 처리하는 최신 옴니모달 결정 모델 d1.2를 출시했습니다.",
+        "detail_en": "Liquid AI released d1.2, its latest omnimodal decision model handling text, vision, and audio.",
+        "source_url": "https://www.liquid.ai/news",
+        "source_name": "Liquid AI News",
+        "found": "2026-11-24"
+      },
+      {
+        "date": "2026-10-22",
+        "kind": "product",
+        "title_ko": "실시간 추론 엔진 RIPL 출시",
+        "title_en": "RIPL: Real-time Intelligence When Every Millisecond Counts",
+        "detail_ko": "리퀴드 AI가 초저지연 실시간 추론 엔진 'RIPL(Real-time Inference Pipeline)'을 출시했습니다. RIPL은 LFM을 검색, 광고, 추천, 결제 등 실시간 워크로드의 요청 경로에 직접 연결하며, 지연 시간을 50ms 미만으로 줄입니다.",
+        "detail_en": "Liquid AI launched RIPL (Real-time Inference Pipeline), an ultra-low-latency inference engine that puts LFMs directly in the request path of real-time workloads (search, ads, recommendations, payments) with <50ms latency.",
+        "source_url": "https://www.aitimes.com/news/articleView.html?idxno=216627",
+        "source_name": "AI타임스",
+        "found": "2026-11-24"
+      }
     ]
   },
   "checked": {
@@ -1097,6 +1121,8 @@
     "doctor-now-2026": "2026-11-22",
     "glean-2026": "2026-11-22",
     "helsing-2026": "2026-11-23",
-    "lablup-2026": "2026-11-23"
+    "lablup-2026": "2026-11-23",
+    "liquid-ai-2026": "2026-11-24",
+    "mathpresso-qanda-2026": "2026-11-24"
   }
 }

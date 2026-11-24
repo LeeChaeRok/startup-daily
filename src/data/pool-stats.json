@@ -1,6 +1,127 @@
 {
   "days": [
     {
+      "date": "2026-11-24",
+      "cost_usd": 0.8942,
+      "budget_stops": 0,
+      "pool": 27,
+      "featured": [
+        "everful-2026",
+        "sereact-2026",
+        "chosen-by-dermatology-2026",
+        "mosaico-2026",
+        "elysian-aircraft-2026"
+      ],
+      "pool_merges": {
+        "ai": "infra",
+        "consumer": "enterprise"
+      },
+      "sectors": {
+        "health": {
+          "leads": 6,
+          "rejected": {
+            "country": 2
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 18,
+          "adopted": 3
+        },
+        "robotics": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 31,
+          "adopted": 3
+        },
+        "mobility": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 24,
+          "adopted": 3
+        },
+        "climate": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 36,
+          "adopted": 3
+        },
+        "fintech": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 20,
+          "adopted": 3
+        },
+        "infra": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 1
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 1,
+          "links_kept": 33,
+          "adopted": 5
+        },
+        "enterprise": {
+          "leads": 6,
+          "rejected": {
+            "incomplete": 6
+          },
+          "researched": 0,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 44,
+          "adopted": 4
+        },
+        "consumer": {
+          "leads": 6,
+          "rejected": {},
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 5,
+          "links_kept": 24,
+          "adopted": 2
+        },
+        "ai": {
+          "leads": 6,
+          "rejected": {
+            "duplicate": 2
+          },
+          "researched": 4,
+          "research_failed": 0,
+          "links_dropped": 0,
+          "links_kept": 12,
+          "adopted": 1
+        }
+      },
+      "yc": {
+        "leads": 10,
+        "accepted": 9,
+        "researched": 9,
+        "research_failed": 0,
+        "links_dropped": 0,
+        "links_kept": 71,
+        "adopted": 9
+      }
+    },
+    {
       "date": "2026-11-23",
       "cost_usd": 0.938,
       "budget_stops": 0,
