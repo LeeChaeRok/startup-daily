@@ -1,40 +1,40 @@
 {
  "checked": {
-  "링커리어": "2026-11-25",
-  "씽굿": "2026-11-25",
-  "올콘": "2026-11-25",
-  "위비티": "2026-11-25",
-  "콘테스트코리아": "2026-11-25"
+  "링커리어": "2026-11-26",
+  "씽굿": "2026-11-26",
+  "올콘": "2026-11-26",
+  "위비티": "2026-11-26",
+  "콘테스트코리아": "2026-11-26"
  },
- "date": "2026-11-25",
- "exported": 476,
+ "date": "2026-11-26",
+ "exported": 470,
  "sites": {
   "allcon": {
-   "calls": 17,
-   "changed": 1,
+   "calls": 10,
+   "changed": 0,
    "error": null,
    "extended": 0,
    "failed": 0,
    "failed_days": 0,
-   "listed": 112,
+   "listed": 105,
    "missing": 0,
-   "new": 4,
+   "new": 0,
    "rechecked": 0,
-   "tries": 18,
+   "tries": 11,
    "unparsed": 0
   },
   "contestkorea": {
-   "calls": 65,
-   "changed": 1,
+   "calls": 73,
+   "changed": 0,
    "error": null,
-   "extended": 1,
+   "extended": 0,
    "failed": 0,
    "failed_days": 0,
    "listed": 48,
    "missing": 0,
    "new": 6,
-   "rechecked": 55,
-   "tries": 66,
+   "rechecked": 63,
+   "tries": 74,
    "unparsed": 0
   },
   "linkareer": {
@@ -44,9 +44,9 @@
    "extended": 1,
    "failed": 0,
    "failed_days": 0,
-   "listed": 388,
-   "missing": 1,
-   "new": 12,
+   "listed": 392,
+   "missing": 0,
+   "new": 23,
    "rechecked": 0,
    "tries": 9,
    "unparsed": 0
@@ -67,18 +67,18 @@
    "unparsed": 0
   },
   "wevity": {
-   "calls": 115,
-   "changed": 1,
+   "calls": 125,
+   "changed": 0,
    "error": null,
    "extended": 0,
    "failed": 0,
    "failed_days": 0,
-   "listed": 405,
+   "listed": 420,
    "missing": 0,
-   "new": 8,
-   "rechecked": 78,
-   "tries": 116,
-   "unparsed": 2
+   "new": 19,
+   "rechecked": 77,
+   "tries": 126,
+   "unparsed": 1
   }
  }
 }
