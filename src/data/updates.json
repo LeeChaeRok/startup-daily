@@ -1067,6 +1067,76 @@
         "source_name": "AI타임스",
         "found": "2026-11-24"
       }
+    ],
+    "rebellions-2026": [
+      {
+        "date": "2026-09-15",
+        "kind": "product",
+        "title_ko": "일본 ai&와 파트너십",
+        "title_en": "Partners with ai& in Japan",
+        "detail_ko": "일본 AI 기업 ai&와 파트너십을 체결하고, 도쿄 데이터센터에 최대 100대의 RebelRack을 배포할 계획입니다.",
+        "detail_en": "Partnered with ai& to deploy up to 100 RebelRack units at its Tokyo data center for energy-efficient AI inference infrastructure in Japan.",
+        "source_url": "https://rebellions.ai/newsroom/rebellions-and-ai-partner-to-bring-energy-efficient-ai-inference-infrastructure-to-japan/",
+        "source_name": "Rebellions",
+        "found": "2026-11-26"
+      },
+      {
+        "date": "2026-07-08",
+        "kind": "ipo",
+        "title_ko": "내년 상장 목표 발표",
+        "title_en": "Targets IPO Next Year",
+        "detail_ko": "공동창업자이자 CEO인 박성현이 내년 상반기 한국 시장에 상장한 후 미국에도 ADR 방식으로 상장할 계획이라고 밝혔습니다.",
+        "detail_en": "CEO Park Sunghyun announced plans to list on the Korean market in the first half of next year, followed by a potential U.S. listing via ADR.",
+        "source_url": "https://www.reuters.com/world/asia-pacific/s-koreas-rebellions-targets-ipo-next-year-followed-by-potential-us-listing-ceo-2026-07-08/",
+        "source_name": "Reuters",
+        "found": "2026-11-26"
+      },
+      {
+        "date": "2026-06-30",
+        "kind": "acquired",
+        "title_ko": "SqueezeBits 인수",
+        "title_en": "Acquires SqueezeBits",
+        "detail_ko": "AI 추론 최적화 스타트업 SqueezeBits를 인수했습니다. 이를 통해 NPU 하드웨어, 소프트웨어 최적화, 추론 서빙을 하나의 플랫폼으로 통합하는 종합 AI 인프라 기업으로 전환을 가속화합니다.",
+        "detail_en": "Acquired SqueezeBits, an AI inference optimization startup, to integrate NPU hardware, software optimization, and inference serving into a single platform.",
+        "source_url": "https://rebellions.ai/newsroom/rebellions_squeezebits_acquisition_260630/",
+        "source_name": "Rebellions",
+        "found": "2026-11-26"
+      },
+      {
+        "date": "2026-05-27",
+        "kind": "product",
+        "title_ko": "KB금융과 전략적 제휴",
+        "title_en": "Strategic Partnership with KB Financial Group",
+        "detail_ko": "KB금융그룹과 '차세대 AI·금융 생태계 구축'을 위한 전략적 업무 제휴 협약을 체결했습니다. 국산 NPU 기반으로 KB 금융 차세대 추론 인프라 및 AI서비스를 구축합니다.",
+        "detail_en": "Signed a strategic partnership with KB Financial Group to build next-generation AI inference infrastructure and AI services based on domestic NPU.",
+        "source_url": "https://kr.rebellions.ai/newsroom/rebellions_kb_mou_260527/",
+        "source_name": "Rebellions",
+        "found": "2026-11-26"
+      }
+    ],
+    "standigm-2026": [
+      {
+        "date": "2026-09-21",
+        "kind": "product",
+        "title_ko": "Curacle과 IPF AI신약 공동개발 착수",
+        "title_en": "Joint AI drug development for IPF with Curacle launched",
+        "detail_ko": "Curacle과 공동으로 특발성 폐섬유증(IPF) 치료제 CU72를 개발하며, STELLA 플랫폼으로 리드 식별 주도. 정부 과제로 선정되어 2년간 10억 원 지원",
+        "detail_en": "Joint program with Curacle for IPF therapy CU72; Standigm leads lead identification with STELLA platform. Selected for government program with KRW 1B funding over 2 years.",
+        "source_url": "https://www.standigm.com/about/news-event/125",
+        "source_name": "Standigm",
+        "found": "2026-11-26"
+      },
+      {
+        "date": "2026-08-31",
+        "kind": "product",
+        "title_ko": "KHIDI GPA 프로그램 선정",
+        "title_en": "Selected for KHIDI's 2026 GPA program",
+        "detail_ko": "한국보건산업진흥원 2026 GPA 1기 기업으로 선정, STELLA 플랫폼과 TNIK 저해제 MP103을 기반으로 글로벌 제약사와 파트너링 논의 가속",
+        "detail_en": "Selected for KHIDI 2026 Growth-Stage Technology Collaboration Acceleration Program Phase 1; partnering discussions around STELLA and TNIK inhibitor MP103.",
+        "source_url": "https://www.linkedin.com/posts/standigm_aidrugdiscovery-drugdiscovery-khidi-activity-7500072111944896512-nuO-",
+        "source_name": "LinkedIn (Standigm)",
+        "found": "2026-11-26"
+      }
     ]
   },
   "checked": {
@@ -1123,6 +1193,8 @@
     "helsing-2026": "2026-11-23",
     "lablup-2026": "2026-11-23",
     "liquid-ai-2026": "2026-11-24",
-    "mathpresso-qanda-2026": "2026-11-24"
+    "mathpresso-qanda-2026": "2026-11-24",
+    "rebellions-2026": "2026-11-26",
+    "standigm-2026": "2026-11-26"
   }
 }
