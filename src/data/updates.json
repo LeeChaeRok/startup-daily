@@ -1137,6 +1137,76 @@
         "source_name": "LinkedIn (Standigm)",
         "found": "2026-11-26"
       }
+    ],
+    "sword-health-2026": [
+      {
+        "date": "2026-09-29",
+        "kind": "product",
+        "title_ko": "메뉴라이프 캐나다와 AI 물리치료 파트너십",
+        "title_en": "Partners with Manulife Canada on AI physiotherapy",
+        "detail_ko": "Sword Health가 메뉴라이프 캐나다와 협력하여 장애 상태에 있는 그룹 혜택 회원에게 AI 기반 물리치료 솔루션을 제공한다. 1단계는 장애 회원을 대상으로 하며, 2027년에 모든 회원으로 확대된다.",
+        "detail_en": "Sword Health partnered with Manulife Canada to offer AI-enabled physiotherapy to eligible Group Benefits members on disability. The first phase targets members on disability, with expansion to all members in 2027.",
+        "source_url": "https://sword.com/newsroom/Manulife",
+        "source_name": "Sword Health",
+        "found": "2026-11-27"
+      },
+      {
+        "date": "2026-09-28",
+        "kind": "product",
+        "title_ko": "브라질 공공 의료 시스템 SUS와 AI 솔루션 계약",
+        "title_en": "Signs AI agreement for Brazil's SUS",
+        "detail_ko": "Sword Health가 브라질의 공공 의료 시스템 SUS(통일 의료 시스템)와 AI 솔루션 개발 및 테스트를 위한 기술 협력 계약을 체결했다. 이 시스템은 2억 1000만 명 이상의 인구를 대상으로 한다.",
+        "detail_en": "Sword Health signed a Technology Cooperation Agreement to develop and test AI solutions across Brazil's SUS (Sistema Único de Saúde), serving more than 210 million people.",
+        "source_url": "https://sword.com/newsroom",
+        "source_name": "Sword Health Newsroom",
+        "found": "2026-11-27"
+      },
+      {
+        "date": "2026-06-18",
+        "kind": "product",
+        "title_ko": "포르투갈 NHS와 전국적 MSK 케어 파트너십",
+        "title_en": "Becomes Portugal's leading MSK care provider via NHS",
+        "detail_ko": "Sword Health가 포르투갈 국민 건강 서비스(NHS)와 전국적 파트너십을 체결하여 1000만 명 이상의 환자에게 AI 근골격계(MSK) 케어 솔루션을 제공한다. 대기 시간이 97% 감소할 것으로 예상된다.",
+        "detail_en": "Sword Health announced a national partnership with Portugal's National Health Service (NHS) to make its AI MSK care solution available to over 10 million patients, with waiting times projected to fall by 97%.",
+        "source_url": "https://sword.com/newsroom/sword-joins-the-nhs-ai-physiotherapy-now-available-to-patients-across-portugal",
+        "source_name": "Sword Health",
+        "found": "2026-11-27"
+      }
+    ],
+    "tractian-2026": [
+      {
+        "date": "2026-11-20",
+        "kind": "product",
+        "title_ko": "AI 기반 SOP 자동 생성 기능 출시",
+        "title_en": "AI auto-generated SOPs feature launched",
+        "detail_ko": "Tractian이 설비 고장 검사에 표준 운영 절차(SOP)를 자동으로 생성하고 할당할 수 있는 AI 기능을 출시했다.",
+        "detail_en": "Tractian launched an AI feature that auto-generates Standard Operating Procedures (SOPs) and assigns them to failure inspections.",
+        "source_url": "https://tractian.com/en/blog/auto-generated-sop-with-ai-release",
+        "source_name": "Tractian Blog",
+        "found": "2026-11-27"
+      },
+      {
+        "date": "2026-10-22",
+        "kind": "funding",
+        "title_ko": "시리즈 D 1억 3,000만 달러 유치",
+        "title_en": "Series D $130M raised",
+        "detail_ko": "Tractian이 Sapphire Ventures 주도로 1억 3,000만 달러(약 1,300억 원)의 시리즈 D 투자를 유치했으며, 기업 가치는 14억 달러(약 1조 4,000억 원)로 평가받아 유니콘에 올랐다.",
+        "detail_en": "Tractian raised $130M in Series D funding led by Sapphire Ventures, achieving a valuation of $1.4B and becoming a unicorn.",
+        "source_url": "https://www.bloomberglinea.com.br/startups/tractian-capta-us-130-milhoes-e-se-torna-o-mais-novo-unicornio-de-ia-brasileiro/",
+        "source_name": "Bloomberg Línea",
+        "found": "2026-11-27"
+      },
+      {
+        "date": "2026-08-04",
+        "kind": "funding",
+        "title_ko": "BNDES 산업 로봇 R&D 자금 1억 2,010만 헤알 승인",
+        "title_en": "BNDES approves R$120.1M for industrial robotics R&D",
+        "detail_ko": "브라질 개발은행(BNDES)이 Tractian에 산업용 로봇 검사 및 예지 보전 솔루션 연구개발을 위해 1억 2,010만 헤알(약 242억 원)의 자금을 승인했다.",
+        "detail_en": "Brazil's development bank BNDES approved R$120.1M in financing to Tractian for R&D of robotic inspection and predictive maintenance solutions.",
+        "source_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-aprova-R$-1201-mi-para-projeto-de-robotica-industrial-da-Tractian/",
+        "source_name": "Agência BNDES de Notícias",
+        "found": "2026-11-27"
+      }
     ]
   },
   "checked": {
@@ -1195,6 +1265,8 @@
     "liquid-ai-2026": "2026-11-24",
     "mathpresso-qanda-2026": "2026-11-24",
     "rebellions-2026": "2026-11-26",
-    "standigm-2026": "2026-11-26"
+    "standigm-2026": "2026-11-26",
+    "sword-health-2026": "2026-11-27",
+    "tractian-2026": "2026-11-27"
   }
 }
