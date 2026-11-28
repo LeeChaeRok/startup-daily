@@ -1207,6 +1207,76 @@
         "source_name": "Agência BNDES de Notícias",
         "found": "2026-11-27"
       }
+    ],
+    "cartesia-2026": [
+      {
+        "date": "2026-10-29",
+        "kind": "product",
+        "title_ko": "매니지드 에이전트 플랫폼 출시",
+        "title_en": "Managed Agents Platform Launch",
+        "detail_ko": "카르테시아가 종단간 음성 에이전트 플랫폼 '매니지드 에이전트'를 출시했다. 인공지능 분석 스피치 에이전트 아레나에서 1위를 차지했다.",
+        "detail_en": "Cartesia launched Managed Agents, an end-to-end voice agent platform ranking #1 on Artificial Analysis's Speech Agent Arena.",
+        "source_url": "https://www.cartesia.ai/blog/managed-agents",
+        "source_name": "Cartesia",
+        "found": "2026-11-28"
+      },
+      {
+        "date": "2026-09-23",
+        "kind": "product",
+        "title_ko": "다국어 보이스 서비스 출시",
+        "title_en": "Multilingual Voices Launch",
+        "detail_ko": "카르테시아가 50개 이상의 라이브러리 음성이 최대 25개 언어를 네이티브로 구사하는 '다국어 보이스' 서비스를 출시했다.",
+        "detail_en": "Cartesia launched Multilingual Voices, offering 50+ library voices that speak up to 25 languages natively.",
+        "source_url": "https://www.cartesia.ai/blog/multilingual-voices",
+        "source_name": "Cartesia",
+        "found": "2026-11-28"
+      },
+      {
+        "date": "2026-08-27",
+        "kind": "product",
+        "title_ko": "소닉-3.6 음성 모델 출시",
+        "title_en": "Sonic-3.6 Voice Model Launch",
+        "detail_ko": "카르테시아가 새로운 TTS 모델 '소닉-3.6'을 출시했다. 이 모델은 44개 언어를 지원하며 인공지능 분석 리더보드 1위를 차지했다.",
+        "detail_en": "Cartesia released Sonic-3.6, a new TTS model supporting 44 languages, ranking #1 on the Artificial Analysis leaderboard.",
+        "source_url": "https://www.cartesia.ai/blog/sonic-3.6",
+        "source_name": "Cartesia",
+        "found": "2026-11-28"
+      },
+      {
+        "date": "2026-07-09",
+        "kind": "product",
+        "title_ko": "잉크-2 STT 모델 출시",
+        "title_en": "Ink-2 STT Model Launch",
+        "detail_ko": "카르테시아가 실시간 음성 에이전트용 STT 모델 '잉크-2'를 출시했다. 인공지능 분석 스트리밍 리더보드에서 1위를 차지했다.",
+        "detail_en": "Cartesia launched Ink-2, a speech-to-text model for real-time voice agents, ranked #1 on Artificial Analysis's streaming leaderboard.",
+        "source_url": "https://www.cartesia.ai/blog/ink-2",
+        "source_name": "Cartesia",
+        "found": "2026-11-28"
+      }
+    ],
+    "crusoe-energy-2026": [
+      {
+        "date": "2026-10-21",
+        "kind": "product",
+        "title_ko": "크루소 스파크 리퀴드 모듈형 AI 팩토리 출시",
+        "title_en": "Crusoe Spark Liquid modular AI factory launched",
+        "detail_ko": "차세대 모듈형 AI 팩토리 '크루소 스파크 리퀴드' 발표. 최대 3.5MW 컴퓨팅, NVIDIA GB300 NVL72 및 Vera Rubin NVL72 지원.",
+        "detail_en": "Crusoe introduced Crusoe Spark Liquid, the sixth-generation modular AI factory, supporting up to 3.5MW per unit with direct liquid cooling for NVIDIA GB300 NVL72 and Vera Rubin NVL72.",
+        "source_url": "https://www.crusoe.ai/resources/newsroom/crusoe-introduces-crusoe-spark-liquid",
+        "source_name": "Crusoe Newsroom",
+        "found": "2026-11-28"
+      },
+      {
+        "date": "2026-09-17",
+        "kind": "funding",
+        "title_ko": "시리즈 F 39억 달러 유치",
+        "title_en": "Series F $3.9B at $30.9B valuation",
+        "detail_ko": "AI 인프라 기업 크루소가 시리즈 F 라운드에서 39억 달러를 조달, 평가액 309억 달러. Atreides Management, Mubadala Capital, Valor Equity Partners 공동주도.",
+        "detail_en": "Crusoe raised $3.9 billion in Series F funding at a $30.9 billion post-money valuation, co-led by Atreides Management, Mubadala Capital, and Valor Equity Partners.",
+        "source_url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding",
+        "source_name": "Crusoe Newsroom",
+        "found": "2026-11-28"
+      }
     ]
   },
   "checked": {
@@ -1267,6 +1337,8 @@
     "rebellions-2026": "2026-11-26",
     "standigm-2026": "2026-11-26",
     "sword-health-2026": "2026-11-27",
-    "tractian-2026": "2026-11-27"
+    "tractian-2026": "2026-11-27",
+    "cartesia-2026": "2026-11-28",
+    "crusoe-energy-2026": "2026-11-28"
   }
 }
